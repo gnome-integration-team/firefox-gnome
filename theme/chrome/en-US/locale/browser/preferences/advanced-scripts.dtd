@@ -1,0 +1,14 @@
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - ***** END LICENSE BLOCK ***** -->
+
+<!ENTITY advancedJSDialog.title         "Advanced JavaScript Settings">
+<!ENTITY window.width                   "37em">
+
+<!ENTITY allowScripts.label             "Allow scripts to:">
+
+<!ENTITY moveResizeWindows.label        "Move or resize existing windows">
+<!ENTITY moveResizeWindows.accesskey    "M">
+<!ENTITY raiseLowerWindows.label        "Raise or lower windows">
+<!ENTITY raiseLowerWindows.accesskey    "R">
+<!ENTITY disableContextMenus.label      "Disable or replace context menus">
+<!ENTITY disableContextMenus.accesskey  "D">

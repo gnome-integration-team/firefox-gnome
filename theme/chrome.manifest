@@ -1,0 +1,4 @@
+manifest components/interfaces.manifest
+manifest components/components.manifest
+manifest chrome/nonlocalized.manifest
+manifest chrome/localized.manifest

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<?xul-overlay href="chrome://browser/content/baseMenuOverlay.xul"?>
+
+<overlay id="viewSourceOverlay"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<window id="viewSource">
+  <commandset id="baseMenuCommandSet"/>
+  <keyset id="baseMenuKeyset"/>
+  <stringbundleset id="stringbundleset"/>
+</window>
+
+<menubar id="viewSource-main-menubar">
+  <menu id="helpMenu"/>
+</menubar>
+
+</overlay>

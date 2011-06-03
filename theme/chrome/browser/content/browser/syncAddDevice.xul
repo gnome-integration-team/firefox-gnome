@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://browser/skin/syncSetup.css" type="text/css"?>
+<?xml-stylesheet href="chrome://browser/skin/syncCommon.css" type="text/css"?>
+
+<!DOCTYPE window [
+<!ENTITY % brandDTD SYSTEM "chrome://branding/locale/brand.dtd">
+<!ENTITY % syncBrandDTD SYSTEM "chrome://browser/locale/syncBrand.dtd">
+<!ENTITY % syncSetupDTD SYSTEM "chrome://browser/locale/syncSetup.dtd">
+%brandDTD;
+%syncBrandDTD;
+%syncSetupDTD;
+]>
+<wizard xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        id="wizard"
+        title="&addDevice.title.label;"
+        windowtype="Sync:AddDevice"
+        onwizardnext="return gSyncAddDevice.onWizardAdvance();"
+        onwizardback="return gSyncAddDevice.onWizardBack();"
+        onwizardcancel="gSyncAddDevice.onWizardCancel();"
+        onload="gSyncAddDevice.init();">
+
+  <script type="application/javascript"
+          src="chrome://browser/content/syncAddDevice.js"/>
+  <script type="application/javascript"
+          src="chrome://browser/content/syncUtils.js"/>
+  <script type="application/javascript"
+          src="chrome://browser/content/utilityOverlay.js"/>
+  <script type="application/javascript"
+          src="chrome://global/content/printUtils.js"/>
+
+  <wizardpage id="addDevicePage"
+              label="&addDevice.title.label;"
+              onpageshow="gSyncAddDevice.onPageShow();">
+    <description>
+      &addDevice.dialog.description.label;
+      <label class="text-link"
+             value="&addDevice.showMeHow.label;"
+             href="https://services.mozilla.com/sync/help/add-device"/>
+    </description>
+    <spacer flex="1"/>
+    <description>
+      &addDevice.dialog.enterCode.label;
+    </description>
+    <spacer flex="1"/>
+    <vbox align="center">
+      <textbox id="pin1"
+               class="pin"
+               oninput="gSyncAddDevice.onTextBoxInput(this);"
+               onfocus="this.select();"
+               />
+      <textbox id="pin2"
+               class="pin"
+               oninput="gSyncAddDevice.onTextBoxInput(this);"
+               onfocus="this.select();"
+               />
+      <textbox id="pin3"
+               class="pin"
+               oninput="gSyncAddDevice.onTextBoxInput(this);"
+               onfocus="this.select();" 
+              />
+    </vbox>
+    <spacer flex="1"/>
+    <vbox id="add-device-throbber" align="center" hidden="true">
+      <image/>
+    </vbox>
+    <hbox id="errorRow" pack="center" hidden="true">
+      <image class="statusIcon" status="error"/>
+      <label class="status"
+             value="&addDevice.dialog.tryAgain.label;"/>
+    </hbox>
+    <spacer flex="3"/>
+    <label class="text-link"
+           value="&addDevice.dontHaveDevice.label;"
+           onclick="gSyncAddDevice.goToSyncKeyPage();"/>
+  </wizardpage>
+
+  <!-- Need a non-empty label here, otherwise we get a default label on Mac -->
+  <wizardpage id="syncKeyPage"
+              label=" "
+              onpageshow="gSyncAddDevice.onPageShow();">
+    <description>
+      &addDevice.dialog.syncKey.label;
+    </description>
+    <spacer/>
+
+    <groupbox>
+      <label value="&syncKeyEntry.label;"
+             accesskey="&syncKeyEntry.accesskey;"
+             control="weavePassphrase"/>
+      <textbox id="weavePassphrase"
+               readonly="true"/>
+    </groupbox>
+
+    <groupbox align="center">
+      <description>&syncKeyBackup.description;</description>
+      <hbox>
+        <button id="printSyncKeyButton"
+                label="&button.syncKeyBackup.print.label;"
+                accesskey="&button.syncKeyBackup.print.accesskey;"
+                oncommand="gSyncUtils.passphrasePrint('weavePassphrase');"/>
+        <button id="saveSyncKeyButton"
+                label="&button.syncKeyBackup.save.label;"
+                accesskey="&button.syncKeyBackup.save.accesskey;"
+                oncommand="gSyncUtils.passphraseSave('weavePassphrase');"/>
+      </hbox>
+    </groupbox>
+  </wizardpage>
+
+  <wizardpage id="deviceConnectedPage"
+              label="&addDevice.dialog.connected.label;"
+              onpageshow="gSyncAddDevice.onPageShow();">
+    <vbox align="center">
+      <image id="successPageIcon"/>
+    </vbox>
+    <separator/>
+    <description class="normal">
+      &addDevice.dialog.successful.label;
+    </description>
+  </wizardpage>
+
+</wizard>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE overlay [
+<!ENTITY % brandDTD SYSTEM "chrome://branding/locale/brand.dtd">
+%brandDTD;
+<!ENTITY % tabsDTD SYSTEM "chrome://browser/locale/preferences/tabs.dtd">
+%tabsDTD;
+]>
+
+<overlay id="TabsPaneOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <prefpane id="paneTabs"
+            helpTopic="prefs-tabs">
+
+    <preferences id="tabsPreferences">
+      <preference id="browser.link.open_newwindow"     name="browser.link.open_newwindow"     type="int"/>
+      <preference id="browser.tabs.autoHide"           name="browser.tabs.autoHide"           type="bool" inverted="true"/>
+      <preference id="browser.tabs.loadInBackground"   name="browser.tabs.loadInBackground"   type="bool" inverted="true"/>
+      <preference id="browser.tabs.warnOnClose"        name="browser.tabs.warnOnClose"        type="bool"/>
+      <preference id="browser.tabs.warnOnOpen"         name="browser.tabs.warnOnOpen"         type="bool"/>
+    </preferences>
+    
+    <script type="application/javascript" src="chrome://browser/content/preferences/tabs.js"/>
+
+    <!-- XXX flex below is a hack because wrapping checkboxes don't reflow
+             properly; see bug 349098 -->
+    <vbox id="tabPrefsBox" align="start" flex="1">
+      <checkbox id="linkTargeting" label="&newWindowsAsTabs.label;"
+                accesskey="&newWindowsAsTabs.accesskey;"
+                preference="browser.link.open_newwindow"
+                onsyncfrompreference="return gTabsPane.readLinkTarget();"
+                onsynctopreference="return gTabsPane.writeLinkTarget();"/>
+      <checkbox id="warnCloseMultiple" label="&warnCloseMultipleTabs.label;"
+                accesskey="&warnCloseMultipleTabs.accesskey;"
+                preference="browser.tabs.warnOnClose"/>
+      <checkbox id="warnOpenMany" label="&warnOpenManyTabs.label;"
+                accesskey="&warnOpenManyTabs.accesskey;"
+                preference="browser.tabs.warnOnOpen"/>
+      <checkbox id="showTabBar" label="&showTabBar.label;"
+                accesskey="&showTabBar.accesskey;"
+                preference="browser.tabs.autoHide"/>
+      <checkbox id="switchToNewTabs" label="&switchToNewTabs.label;"
+                accesskey="&switchToNewTabs.accesskey;"
+                preference="browser.tabs.loadInBackground"/>
+    </vbox>
+
+  </prefpane>
+
+</overlay>

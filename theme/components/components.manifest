@@ -1,0 +1,98 @@
+# nsSafebrowsingApplication.manifest
+component {c64d0bcb-8270-4ca7-a0b3-3380c8ffecb5} nsSafebrowsingApplication.js
+contract @mozilla.org/safebrowsing/application;1 {c64d0bcb-8270-4ca7-a0b3-3380c8ffecb5}
+
+# BrowserPlaces.manifest
+component {6bcb9bde-9018-4443-a071-c32653469597} PlacesProtocolHandler.js
+contract @mozilla.org/network/protocol;1?name=place {6bcb9bde-9018-4443-a071-c32653469597}
+
+# BrowserFeeds.manifest
+component {229fa115-9412-4d32-baf3-2fc407f76fb1} FeedConverter.js
+contract @mozilla.org/streamconv;1?from=application/vnd.mozilla.maybe.feed&to=*/* {229fa115-9412-4d32-baf3-2fc407f76fb1}
+contract @mozilla.org/streamconv;1?from=application/vnd.mozilla.maybe.video.feed&to=*/* {229fa115-9412-4d32-baf3-2fc407f76fb1}
+contract @mozilla.org/streamconv;1?from=application/vnd.mozilla.maybe.audio.feed&to=*/* {229fa115-9412-4d32-baf3-2fc407f76fb1}
+component {2376201c-bbc6-472f-9b62-7548040a61c6} FeedConverter.js
+contract @mozilla.org/browser/feeds/result-service;1 {2376201c-bbc6-472f-9b62-7548040a61c6}
+component {4f91ef2e-57ba-472e-ab7a-b4999e42d6c0} FeedConverter.js
+contract @mozilla.org/network/protocol;1?name=feed {4f91ef2e-57ba-472e-ab7a-b4999e42d6c0}
+component {1c31ed79-accd-4b94-b517-06e0c81999d5} FeedConverter.js
+contract @mozilla.org/network/protocol;1?name=pcast {1c31ed79-accd-4b94-b517-06e0c81999d5}
+component {49bb6593-3aff-4eb3-a068-2712c28bd58e} FeedWriter.js
+contract @mozilla.org/browser/feeds/result-writer;1 {49bb6593-3aff-4eb3-a068-2712c28bd58e}
+category JavaScript-global-constructor BrowserFeedWriter @mozilla.org/browser/feeds/result-writer;1
+component {792a7e82-06a0-437c-af63-b2d12e808acc} WebContentConverter.js
+contract @mozilla.org/embeddor.implemented/web-content-handler-registrar;1 {792a7e82-06a0-437c-af63-b2d12e808acc}
+category app-startup WebContentConverter service,@mozilla.org/embeddor.implemented/web-content-handler-registrar;1
+# BrowserComponents.manifest
+component {5d0ce354-df01-421a-83fb-7ead0990c24e} nsBrowserContentHandler.js application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+contract @mozilla.org/browser/clh;1 {5d0ce354-df01-421a-83fb-7ead0990c24e} application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+component {47cd0651-b1be-4a0f-b5c4-10e5a573ef71} nsBrowserContentHandler.js application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+contract @mozilla.org/browser/final-clh;1 {47cd0651-b1be-4a0f-b5c4-10e5a573ef71} application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+contract @mozilla.org/uriloader/content-handler;1?type=text/html {5d0ce354-df01-421a-83fb-7ead0990c24e} application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+contract @mozilla.org/uriloader/content-handler;1?type=application/vnd.mozilla.xul+xml {5d0ce354-df01-421a-83fb-7ead0990c24e} application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+contract @mozilla.org/uriloader/content-handler;1?type=image/svg+xml {5d0ce354-df01-421a-83fb-7ead0990c24e} application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+contract @mozilla.org/uriloader/content-handler;1?type=text/rdf {5d0ce354-df01-421a-83fb-7ead0990c24e} application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+contract @mozilla.org/uriloader/content-handler;1?type=text/xml {5d0ce354-df01-421a-83fb-7ead0990c24e} application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+contract @mozilla.org/uriloader/content-handler;1?type=application/xhtml+xml {5d0ce354-df01-421a-83fb-7ead0990c24e} application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+contract @mozilla.org/uriloader/content-handler;1?type=text/css {5d0ce354-df01-421a-83fb-7ead0990c24e} application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+contract @mozilla.org/uriloader/content-handler;1?type=text/plain {5d0ce354-df01-421a-83fb-7ead0990c24e} application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+contract @mozilla.org/uriloader/content-handler;1?type=image/gif {5d0ce354-df01-421a-83fb-7ead0990c24e} application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+contract @mozilla.org/uriloader/content-handler;1?type=image/jpeg {5d0ce354-df01-421a-83fb-7ead0990c24e} application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+contract @mozilla.org/uriloader/content-handler;1?type=image/jpg {5d0ce354-df01-421a-83fb-7ead0990c24e} application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+contract @mozilla.org/uriloader/content-handler;1?type=image/png {5d0ce354-df01-421a-83fb-7ead0990c24e} application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+contract @mozilla.org/uriloader/content-handler;1?type=image/bmp {5d0ce354-df01-421a-83fb-7ead0990c24e} application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+contract @mozilla.org/uriloader/content-handler;1?type=image/x-icon {5d0ce354-df01-421a-83fb-7ead0990c24e} application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+contract @mozilla.org/uriloader/content-handler;1?type=image/vnd.microsoft.icon {5d0ce354-df01-421a-83fb-7ead0990c24e} application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+contract @mozilla.org/uriloader/content-handler;1?type=application/http-index-format {5d0ce354-df01-421a-83fb-7ead0990c24e} application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+category command-line-handler m-browser @mozilla.org/browser/clh;1 application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+category command-line-handler x-default @mozilla.org/browser/final-clh;1 application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+category command-line-validator b-browser @mozilla.org/browser/clh;1 application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+
+component {eab9012e-5f74-4cbc-b2b5-a590235513cc} nsBrowserGlue.js
+contract @mozilla.org/browser/browserglue;1 {eab9012e-5f74-4cbc-b2b5-a590235513cc}
+category app-startup nsBrowserGlue service,@mozilla.org/browser/browserglue;1
+component {d8903bf6-68d5-4e97-bcd1-e4d3012f721a} nsBrowserGlue.js
+contract @mozilla.org/content-permission/prompt;1 {d8903bf6-68d5-4e97-bcd1-e4d3012f721a}
+
+# SyncComponents.manifest
+# Weave.js
+component {74b89fb0-f200-4ae8-a3ec-dd164117f6de} Weave.js
+contract @mozilla.org/weave/service;1 {74b89fb0-f200-4ae8-a3ec-dd164117f6de}
+category app-startup WeaveService service,@mozilla.org/weave/service;1
+component {d28f8a0b-95da-48f4-b712-caf37097be41} Weave.js
+contract @mozilla.org/network/protocol/about;1?what=sync-log {d28f8a0b-95da-48f4-b712-caf37097be41}
+component {a08ee179-df50-48e0-9c87-79e4dd5caeb1} Weave.js
+contract @mozilla.org/network/protocol/about;1?what=sync-log.1 {a08ee179-df50-48e0-9c87-79e4dd5caeb1}
+
+# nsSetDefaultBrowser.manifest
+component {F57899D0-4E2C-4ac6-9E29-50C736103B0C} nsSetDefaultBrowser.js
+contract @mozilla.org/browser/default-browser-clh;1 {F57899D0-4E2C-4ac6-9E29-50C736103B0C}
+category command-line-handler m-setdefaultbrowser @mozilla.org/browser/default-browser-clh;1
+
+# nsSidebar.manifest
+component {22117140-9c6e-11d3-aaf1-00805f8a4905} nsSidebar.js
+contract @mozilla.org/sidebar;1 {22117140-9c6e-11d3-aaf1-00805f8a4905}
+category JavaScript-global-property sidebar @mozilla.org/sidebar;1
+category JavaScript-global-property external @mozilla.org/sidebar;1
+
+# fuelApplication.manifest
+component {fe74cf80-aa2d-11db-abbd-0800200c9a66} fuelApplication.js
+contract @mozilla.org/fuel/application;1 {fe74cf80-aa2d-11db-abbd-0800200c9a66}
+category JavaScript-global-privileged-property Application @mozilla.org/fuel/application;1
+
+# nsSessionStore.manifest
+component {5280606b-2510-4fe0-97ef-9b5a22eafe6b} nsSessionStore.js
+contract @mozilla.org/browser/sessionstore;1 {5280606b-2510-4fe0-97ef-9b5a22eafe6b}
+component {ec7a6c20-e081-11da-8ad9-0800200c9a66} nsSessionStartup.js
+contract @mozilla.org/browser/sessionstartup;1 {ec7a6c20-e081-11da-8ad9-0800200c9a66}
+category app-startup nsSessionStartup service,@mozilla.org/browser/sessionstartup;1
+
+# nsPrivateBrowsingService.manifest
+component {c31f4883-839b-45f6-82ad-a6a9bc5ad599} nsPrivateBrowsingService.js
+contract @mozilla.org/privatebrowsing;1 {c31f4883-839b-45f6-82ad-a6a9bc5ad599}
+category command-line-handler m-privatebrowsing @mozilla.org/privatebrowsing;1
+category app-startup nsPrivateBrowsingService service,@mozilla.org/privatebrowsing;1
+
+# components.manifest
+#binary-component libbrowsercomps.so
+

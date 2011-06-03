@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+
+<bindings id="organizerBindings"
+          xmlns="http://www.mozilla.org/xbl"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+          xmlns:xbl="http://www.mozilla.org/xbl">
+
+  <binding id="toolbarbutton-dropdown"
+           extends="chrome://global/content/bindings/menu.xml#menu-base">
+    <content>
+      <xul:image class="menubar-left" xbl:inherits="src=image"/>
+      <xul:label class="menubar-text" xbl:inherits="value=label,accesskey,crop" crop="right"/>
+      <xul:hbox class="menubar-right"/>
+      <children includes="menupopup"/>
+    </content>
+  </binding>
+</bindings>

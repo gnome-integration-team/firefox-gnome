@@ -1,0 +1,324 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE overlay [
+<!ENTITY % brandDTD SYSTEM "chrome://branding/locale/brand.dtd">
+%brandDTD;
+<!ENTITY % advancedDTD SYSTEM "chrome://browser/locale/preferences/advanced.dtd">
+%advancedDTD;
+<!ENTITY % privacyDTD SYSTEM "chrome://browser/locale/preferences/privacy.dtd">
+%privacyDTD;
+]>
+
+<overlay id="AdvancedPaneOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <prefpane id="paneAdvanced" onpaneload="gAdvancedPane.init();">
+
+    <preferences id="advancedPreferences">
+      <preference id="browser.preferences.advanced.selectedTabIndex"
+                  name="browser.preferences.advanced.selectedTabIndex"
+                  type="int"/>
+
+      <!--XXX button prefs -->
+
+      <!-- General tab -->
+      <preference id="accessibility.browsewithcaret"   name="accessibility.browsewithcaret"   type="bool"/>
+      <preference id="accessibility.typeaheadfind"     name="accessibility.typeaheadfind"     type="bool"/>
+      <preference id="accessibility.blockautorefresh"  name="accessibility.blockautorefresh"  type="bool"/>
+
+      <preference id="general.autoScroll"              name="general.autoScroll"              type="bool"/>
+      <preference id="general.smoothScroll"            name="general.smoothScroll"            type="bool"/>
+      <preference id="layers.acceleration.disabled"    name="layers.acceleration.disabled"    type="bool"   inverted="true"
+                  onchange="gAdvancedPane.updateHardwareAcceleration()"/>
+      <preference id="layout.spellcheckDefault"        name="layout.spellcheckDefault"        type="int"/>
+
+      <preference id="browser.shell.checkDefaultBrowser"
+                  name="browser.shell.checkDefaultBrowser"
+                  type="bool"/>
+
+      <preference id="pref.general.disable_button.default_browser"
+                  name="pref.general.disable_button.default_browser"
+                  type="bool"/>
+
+      <!-- Network tab -->
+      <preference id="browser.cache.disk.capacity"     name="browser.cache.disk.capacity"     type="int"/>
+      <preference id="browser.offline-apps.notify"     name="browser.offline-apps.notify"     type="bool"/>
+ 
+      <preference id="browser.cache.disk.smart_size.enabled"
+                  name="browser.cache.disk.smart_size.enabled"
+                  inverted="true"
+                  type="bool"/>
+ 
+     <!-- Update tab -->
+
+      <preference id="extensions.update.enabled"       name="extensions.update.enabled"       type="bool"
+                  onchange="gAdvancedPane.updateAddonUpdateUI();"/>
+      <preference id="browser.search.update"           name="browser.search.update"           type="bool"/>
+
+      <!-- Encryption tab -->
+      <preference id="security.enable_ssl3"            name="security.enable_ssl3"            type="bool"/>
+      <preference id="security.enable_tls"             name="security.enable_tls"             type="bool"/>
+
+      <preference id="security.default_personal_cert"  name="security.default_personal_cert"  type="string"/>
+
+      <preference id="security.disable_button.openCertManager"
+                  name="security.disable_button.openCertManager"
+                  type="bool"/>
+      <preference id="security.OCSP.disable_button.managecrl"
+                  name="security.OCSP.disable_button.managecrl"
+                  type="bool"/>
+      <preference id="security.disable_button.openDeviceManager"
+                  name="security.disable_button.openDeviceManager"
+                  type="bool"/>
+      <preference id="privacy.donottrackheader.enabled"
+                  name="privacy.donottrackheader.enabled"
+                  type="bool"/>
+    </preferences>
+    
+    <stringbundle id="bundleShell" src="chrome://browser/locale/shellservice.properties"/>
+    <stringbundle id="bundleBrand" src="chrome://branding/locale/brand.properties"/>
+
+    <script type="application/javascript" src="chrome://browser/content/preferences/advanced.js"/>
+
+    <tabbox id="advancedPrefs" flex="1"
+            onselect="gAdvancedPane.tabSelectionChanged();">
+
+      <tabs id="tabsElement">
+        <tab id="generalTab" label="&generalTab.label;" helpTopic="prefs-advanced-general"/>
+        <tab id="networkTab" label="&networkTab.label;" helpTopic="prefs-advanced-network"/>
+        <tab id="updateTab" label="&updateTab.label;"  helpTopic="prefs-advanced-update"/>
+        <tab id="encryptionTab" label="&encryptionTab.label;" helpTopic="prefs-advanced-encryption"/>
+      </tabs>
+
+      <tabpanels flex="1">
+
+        <!-- General -->
+        <tabpanel id="generalPanel" orient="vertical">
+
+          <!-- Accessibility -->
+          <groupbox id="accessibilityGroup" align="start">
+            <caption label="&accessibility.label;"/>
+
+            <checkbox id="useCursorNavigation"
+                      label="&useCursorNavigation.label;"
+                      accesskey="&useCursorNavigation.accesskey;"
+                      preference="accessibility.browsewithcaret"/>
+            <checkbox id="searchStartTyping"
+                      label="&searchStartTyping.label;"
+                      accesskey="&searchStartTyping.accesskey;"
+                      preference="accessibility.typeaheadfind"/>
+            <checkbox id="blockAutoRefresh"
+                      label="&blockAutoRefresh.label;"
+                      accesskey="&blockAutoRefresh.accesskey;"
+                      preference="accessibility.blockautorefresh"/>
+          </groupbox>
+
+          <!-- Browsing -->
+          <groupbox id="browsingGroup" align="start">
+            <caption label="&browsing.label;"/>
+
+            <checkbox id="useAutoScroll"
+                      label="&useAutoScroll.label;"
+                      accesskey="&useAutoScroll.accesskey;"
+                      preference="general.autoScroll"/>
+            <checkbox id="useSmoothScrolling"
+                      label="&useSmoothScrolling.label;"
+                      accesskey="&useSmoothScrolling.accesskey;"
+                      preference="general.smoothScroll"/>
+            <checkbox id="allowHWAccel"
+                      label="&allowHWAccel.label;"
+                      accesskey="&allowHWAccel.accesskey;"
+                      preference="layers.acceleration.disabled"/>
+            <checkbox id="checkSpelling"
+                      label="&checkSpelling.label;"
+                      accesskey="&checkSpelling.accesskey;"
+                      onsyncfrompreference="return gAdvancedPane.readCheckSpelling();"
+                      onsynctopreference="return gAdvancedPane.writeCheckSpelling();"
+                      preference="layout.spellcheckDefault"/>
+            <checkbox id="privacyDoNotTrackPrefs"
+                      label="&doNotTrack.label;"
+                      accesskey="&doNotTrack.accesskey;"
+                      preference="privacy.donottrackheader.enabled"/>
+          </groupbox>
+
+          <!-- System Defaults -->
+          <groupbox id="systemDefaultsGroup" orient="vertical">
+            <caption label="&systemDefaults.label;"/>
+
+            <hbox id="checkDefaultBox" align="center" flex="1">      
+              <checkbox id="alwaysCheckDefault" preference="browser.shell.checkDefaultBrowser"
+                        label="&alwaysCheckDefault.label;" accesskey="&alwaysCheckDefault.accesskey;"
+                        flex="1"/>
+              <button id="checkDefaultButton"
+                      label="&checkNow.label;" accesskey="&checkNow.accesskey;"
+                      oncommand="gAdvancedPane.checkNow()"
+                      preference="pref.general.disable_button.default_browser"/>
+            </hbox>
+          </groupbox>
+        </tabpanel>
+
+        <!-- Network -->
+        <tabpanel id="networkPanel" orient="vertical">
+
+          <!-- Connection -->
+          <groupbox id="connectionGroup">
+            <caption label="&connection.label;"/>
+
+            <hbox align="center">
+              <description flex="1" control="connectionSettings">&connectionDesc.label;</description>
+              <button id="connectionSettings" icon="network" label="&connectionSettings.label;"
+                      accesskey="&connectionSettings.accesskey;"
+                      oncommand="gAdvancedPane.showConnections();"/>
+            </hbox>
+          </groupbox>
+
+          <!-- Cache/Offline apps -->
+          <groupbox id="offlineGroup">
+            <caption label="&offlineStorage.label;"/>
+ 
+            <hbox align="center">
+              <label id="actualCacheSize" flex="1"/>
+              <button id="clearCacheButton" icon="clear"
+                      label="&clearCacheNow.label;" accesskey="&clearCacheNow.accesskey;"
+                      oncommand="gAdvancedPane.clearCache();"/>
+            </hbox>
+            <checkbox preference="browser.cache.disk.smart_size.enabled"
+                      id="allowSmartSize" flex="1"
+                      onsyncfrompreference="return gAdvancedPane.readSmartSizeEnabled();"
+                      label="&overrideSmartCacheSize.label;" 
+                      accesskey="&overrideSmartCacheSize.accesskey;"/>
+            <hbox align="center" class="indent">
+              <label id="useCacheBefore" control="cacheSize"
+                     accesskey="&limitCacheSizeBefore.accesskey;" 
+                     value="&limitCacheSizeBefore.label;"/>
+              <textbox id="cacheSize" type="number" size="4" max="1024"
+                       preference="browser.cache.disk.capacity"
+                       onsyncfrompreference="return gAdvancedPane.readCacheSize();"
+                       onsynctopreference="return gAdvancedPane.writeCacheSize();"
+                       aria-labelledby="useCacheBefore cacheSize useCacheAfter"/>
+              <label id="useCacheAfter" flex="1">&limitCacheSizeAfter.label;</label>
+            </hbox>
+            <hbox align="center">
+              <checkbox id="offlineNotify" flex="1"
+                        label="&offlineNotify.label;" accesskey="&offlineNotify.accesskey;"
+                        preference="browser.offline-apps.notify"
+                        onsyncfrompreference="return gAdvancedPane.readOfflineNotify();"/>
+              <button id="offlineNotifyExceptions"
+                      label="&offlineNotifyExceptions.label;"
+                      accesskey="&offlineNotifyExceptions.accesskey;"
+                      oncommand="gAdvancedPane.showOfflineExceptions();"/>
+            </hbox>
+            <hbox>
+              <vbox flex="1">
+                <label id="offlineAppsListLabel">&offlineAppsList.label;</label>
+                <listbox id="offlineAppsList"
+                         style="height: &offlineAppsList.height;;"
+                         flex="1"
+                         aria-labelledby="offlineAppsListLabel"
+                         onselect="gAdvancedPane.offlineAppSelected(event);">
+                </listbox>
+              </vbox>
+              <vbox pack="end">
+                <button id="offlineAppsListRemove"
+                        disabled="true"
+                        label="&offlineAppsListRemove.label;"
+                        accesskey="&offlineAppsListRemove.accesskey;" 
+                        oncommand="gAdvancedPane.removeOfflineApp();"/>
+              </vbox>
+            </hbox>
+          </groupbox>
+        </tabpanel>
+
+        <!-- Update -->
+        <tabpanel id="updatePanel" orient="vertical" align="start">
+          <label control="autoUpdateGroup">&autoCheck.label;</label>
+          <vbox class="indent" id="autoUpdateGroup" role="group">
+            <checkbox id="enableAddonUpdate"
+                      label="&enableAddonsUpdate2.label;"
+                      accesskey="&enableAddonsUpdate2.accesskey;"
+                      preference="extensions.update.enabled"/>
+            <checkbox id="enableSearchUpdate"
+                      label="&enableSearchUpdate.label;"
+                      accesskey="&enableSearchUpdate.accesskey;"
+                      preference="browser.search.update"/>
+          </vbox>
+
+        </tabpanel>
+
+        <!-- Encryption -->
+        <tabpanel id="encryptionPanel" orient="vertical">
+
+          <!-- Protocols -->
+          <groupbox id="protocolsGroup">
+            <caption label="&protocols.label;"/>
+
+            <grid>
+              <columns>
+                <column flex="1"/>
+                <column flex="1"/>
+              </columns>
+              <rows>
+                <row>
+                  <hbox>
+                    <checkbox id="useSSL3" label="&useSSL3.label;"
+                              accesskey="&useSSL3.accesskey;"
+                              preference="security.enable_ssl3"/>
+                  </hbox>
+                  <hbox>
+                    <checkbox id="useTLS1" label="&useTLS1.label;"
+                              accesskey="&useTLS1.accesskey;"
+                              preference="security.enable_tls"/>
+                  </hbox>
+                </row>
+              </rows>
+            </grid>
+          </groupbox>
+
+          <!-- Certificates -->
+          <groupbox id="certificatesGroup">
+            <caption id="CertGroupCaption" label="&certificates.label;"/>
+
+            <description id="CertSelectionDesc" control="certSelection">&certSelection.description;</description>
+
+            <!--
+              The values on these radio buttons may look like l12y issues, but
+              they're not - this preference uses *those strings* as its values.
+              I KID YOU NOT.
+            -->
+            <radiogroup id="certSelection" orient="horizontal" preftype="string"
+                        preference="security.default_personal_cert"
+                        aria-labelledby="CertGroupCaption CertSelectionDesc">
+              <radio label="&certs.auto;" accesskey="&certs.auto.accesskey;" 
+                     value="Select Automatically"/>
+              <radio label="&certs.ask;" accesskey="&certs.ask.accesskey;" 
+                     value="Ask Every Time"/>
+            </radiogroup>
+
+            <separator/>
+
+            <hbox>
+              <button id="viewCertificatesButton"
+                      label="&viewCerts.label;" accesskey="&viewCerts.accesskey;" 
+                      oncommand="gAdvancedPane.showCertificates();"
+                      preference="security.disable_button.openCertManager"/>
+              <button id="viewCRLButton"
+                      label="&viewCRLs.label;" accesskey="&viewCRLs.accesskey;" 
+                      oncommand="gAdvancedPane.showCRLs();"
+                      preference="security.OCSP.disable_button.managecrl"/>
+              <button id="verificationButton"
+                      label="&verify2.label;" accesskey="&verify2.accesskey;" 
+                      oncommand="gAdvancedPane.showOCSP();"/>
+              <button id="viewSecurityDevicesButton"
+                      label="&viewSecurityDevices.label;" accesskey="&viewSecurityDevices.accesskey;"
+                      oncommand="gAdvancedPane.showSecurityDevices();"
+                      preference="security.disable_button.openDeviceManager"/>
+            </hbox>
+          </groupbox>
+        </tabpanel>
+
+      </tabpanels>
+    </tabbox>
+  </prefpane>
+
+</overlay>

@@ -1,0 +1,13 @@
+# browser.manifest
+overlay chrome://global/content/viewPartialSource.xul chrome://browser/content/viewSourceOverlay.xul
+skin browser classic/1.0 browser/skin/classic/browser/
+override chrome://global/skin/icons/warning-16.png moz-icon://stock/gtk-dialog-warning?size=menu
+overlay chrome://global/content/viewSource.xul chrome://browser/content/viewSourceOverlay.xul
+style chrome://global/content/customizeToolbar.xul chrome://browser/content/browser.css
+overlay chrome://browser/content/browser.xul         chrome://browser/content/safebrowsing/report-phishing-overlay.xul
+content branding browser/content/branding/ contentaccessible=yes
+override chrome://global/content/license.html chrome://browser/content/license.html
+content browser browser/content/browser/ contentaccessible=yes
+style chrome://global/content/customizeToolbar.xul chrome://browser/skin/
+skin communicator classic/1.0 browser/skin/classic/communicator/
+

@@ -1,0 +1,122 @@
+
+/* Toolbar */
+#placesToolbar {
+  border: none;
+}
+
+/* back button */
+
+#back-button {
+  list-style-image: url("moz-icon://stock/gtk-go-back-ltr?size=toolbar");
+}
+#back-button[disabled="true"] {
+  list-style-image: url("moz-icon://stock/gtk-go-back-ltr?size=toolbar&state=disabled");
+}
+
+#back-button:-moz-locale-dir(rtl) {
+  list-style-image: url("moz-icon://stock/gtk-go-back-rtl?size=toolbar");
+}
+#back-button[disabled="true"]:-moz-locale-dir(rtl) {
+  list-style-image: url("moz-icon://stock/gtk-go-back-rtl?size=toolbar&state=disabled");
+}
+
+/* forward button */
+
+#forward-button {
+  list-style-image: url("moz-icon://stock/gtk-go-forward-ltr?size=toolbar");
+}
+#forward-button[disabled="true"] {
+  list-style-image: url("moz-icon://stock/gtk-go-forward-ltr?size=toolbar&state=disabled");
+}
+
+#forward-button:-moz-locale-dir(rtl) {
+  list-style-image: url("moz-icon://stock/gtk-go-forward-rtl?size=toolbar");
+}
+#forward-button[disabled="true"]:-moz-locale-dir(rtl) {
+  list-style-image: url("moz-icon://stock/gtk-go-forward-rtl?size=toolbar&state=disabled");
+}
+
+/* Menu */
+#placesMenu {
+  -moz-appearance: none;
+  border: none;
+}
+
+#placesMenu > menu {
+  -moz-padding-start: 4px;
+  -moz-binding: url("chrome://browser/skin/places/organizer.xml#toolbarbutton-dropdown");
+  -moz-appearance: toolbarbutton;
+  color: -moz-DialogText;
+}
+
+#placesMenu > menu:hover:not(:active):not([open="true"]) {
+  color: -moz-buttonhovertext;
+}
+
+#placesMenu > menu > .menubar-right {
+  -moz-appearance: toolbarbutton-dropdown;
+  width: 12px;
+  height: 12px;
+}
+
+/* Root View */
+#placesView {
+  background-color: Window;
+}
+
+/* Place List, Place Content */
+.placesTree {
+  margin: 0px;
+}
+
+#placesList {
+  margin: 0px;
+  border: none;
+  padding: 0;
+}
+
+#placeContent {
+  border: 0px;
+}
+
+#infoPaneBox {
+  padding: 5px;
+}
+
+.small, .small[disabled="true"] {
+  min-width: 0px;
+  padding: 0px 4px 0px 4px;
+  margin: 0px;  
+  border: 0px;
+}
+
+.small .button-text,
+.small .button-box {
+  padding: 0px;
+  border: 0px;
+}
+
+#infoBoxExpanderLabel {
+  -moz-padding-start: 2px;
+}
+
+#searchModifiers {
+  padding-right: 3px;
+}
+
+#saveSearch {
+  list-style-image: url("moz-icon://stock/gtk-save?size=menu");
+}
+
+/**** menuitem stock icons ****/
+#orgClose {
+  list-style-image: url("moz-icon://stock/gtk-close?size=menu");
+}
+
+#fileImport {
+  list-style-image: url("moz-icon://stock/gtk-revert-to-saved?size=menu");
+}
+
+#fileExport {
+  list-style-image: url("moz-icon://stock/gtk-save-as?size=menu");
+}

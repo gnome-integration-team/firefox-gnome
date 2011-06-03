@@ -1,0 +1,54 @@
+
+#errorPageContainer {
+  background-image: url("moz-icon://stock/gtk-dialog-warning?size=dialog");
+}
+
+#tabList {
+  width: 100%;
+  height: 12em;
+}
+
+treechildren::-moz-tree-image(icon),
+treechildren::-moz-tree-image(noicon) {
+  padding-right: 2px;
+  margin: 0px 2px;
+  width: 16px;
+  height: 16px;
+}
+
+treechildren::-moz-tree-image(noicon) {
+  list-style-image: url("moz-icon://stock/gtk-file?size=menu");
+}
+treechildren::-moz-tree-image(container, noicon) {
+  list-style-image: url("chrome://browser/skin/aboutSessionRestore-window-icon.png");
+}
+treechildren::-moz-tree-image(checked) {
+  list-style-image: url("chrome://global/skin/checkbox/cbox-check.gif");
+}
+treechildren::-moz-tree-image(partial) {
+  list-style-image: url("chrome://global/skin/checkbox/cbox-check-dis.gif");
+}
+
+/* undo odd row highlighting from tree.css */
+treechildren::-moz-tree-row(odd) {
+  background-color: transparent;
+}
+treechildren::-moz-tree-row(odd, selected, focus) {
+  background-color: Highlight;
+}
+
+/* highlight "windows" instead */
+treechildren::-moz-tree-row(alternate) {
+  background-color: -moz-oddtreerow;
+}
+treechildren::-moz-tree-row(alternate, selected) {
+  background-color: Highlight;
+}
+
+#buttons {
+  -moz-margin-start: 80px; /* same as #errorLongContent in netError.css */
+}
+#buttons > button {
+  margin-top: 2em;
+  -moz-margin-start: 5px;
+}
