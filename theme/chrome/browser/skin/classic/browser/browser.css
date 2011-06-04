@@ -1356,8 +1356,15 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
     -moz-linear-gradient(bottom, rgba(0,0,0,.3) 1px, rgba(0,0,0,.05) 1px, transparent 50%);
 }
 
+.tabs-newtab-button
+{
+  margin-left: 5px; /* put some space between the newtab-button and regular tabs */
+}
+
+/*
 .tabbrowser-tab,
-.tabs-newtab-button {
+.tabs-newtab-button { */
+.tabbrowser-tab {
   position: relative; /* static doesn't work with overlapping tabs (wrong z-index of the selected tab) */
   -moz-appearance: none;
   /*
@@ -1403,23 +1410,31 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   color: inherit;
 }
 
+/*
 .tabbrowser-tab:-moz-lwtheme-brighttext:not([selected="true"]),
-.tabs-newtab-button:-moz-lwtheme-brighttext {
+.tabs-newtab-button:-moz-lwtheme-brighttext { */
+.tabbrowser-tab:-moz-lwtheme-brighttext:not([selected="true"])
   background-image: -moz-linear-gradient(hsla(0,0%,60%,.6), hsla(0,0%,40%,.6) 4px, hsla(0,0%,30%,.6) 80%);
 }
 
+/*
 .tabbrowser-tab:-moz-lwtheme-brighttext:not([selected="true"]):hover,
-.tabs-newtab-button:-moz-lwtheme-brighttext:hover {
+.tabs-newtab-button:-moz-lwtheme-brighttext:hover { */
+.tabbrowser-tab:-moz-lwtheme-brighttext:not([selected="true"]):hover
   background-image: -moz-linear-gradient(hsla(0,0%,80%,.6), hsla(0,0%,60%,.6) 4px, hsla(0,0%,45%,.6) 80%);
 }
 
+/*
 .tabbrowser-tab:-moz-lwtheme-darktext:not([selected="true"]),
-.tabs-newtab-button:-moz-lwtheme-darktext {
+.tabs-newtab-button:-moz-lwtheme-darktext { */
+.tabbrowser-tab:-moz-lwtheme-darktext:not([selected="true"])
   background-image: -moz-linear-gradient(hsla(0,0%,100%,.5), hsla(0,0%,60%,.5) 4px, hsla(0,0%,45%,.5) 80%);
 }
 
+/*
 .tabbrowser-tab:-moz-lwtheme-darktext:not([selected="true"]):hover,
-.tabs-newtab-button:-moz-lwtheme-darktext:hover {
+.tabs-newtab-button:-moz-lwtheme-darktext:hover { */
+.tabbrowser-tab:-moz-lwtheme-darktext:not([selected="true"]):hover
   background-image: -moz-linear-gradient(hsla(0,0%,100%,.5), hsla(0,0%,80%,.5) 4px, hsla(0,0%,60%,.5) 80%);
 }
 
