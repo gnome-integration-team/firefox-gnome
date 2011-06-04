@@ -34,6 +34,9 @@
 #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
   padding-top: 1px;
   padding-bottom: 1px;
+  height: 48px; /* height of adwaita toolbars */
+  background: url("chrome://browser/skin/adwaita_toolbar_gradient.png") repeat;
+  margin-bottom: 3px; /* margin between toolbar and tabs */
 }
 
 #nav-bar:not(:-moz-lwtheme),
