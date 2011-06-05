@@ -36,7 +36,7 @@
   padding-bottom: 1px;
   height: 48px; /* height of adwaita toolbars */
   background: url("chrome://browser/skin/adwaita_toolbar_gradient.png") repeat;
-  margin-bottom: 3px; /* margin between toolbar and tabs */
+  margin-bottom: 4px; /* margin between toolbar and tabs */
 }
 
 #nav-bar:not(:-moz-lwtheme),
@@ -1376,9 +1376,12 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   */
   color: inherit;
   /* margin: 0; */
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
   margin-right: -5px; /* overlaping tabs */
   padding: 0; 
-  -moz-border-image: url(tabbrowser/adwaita_tab_unselected.png) 0 6 0 6 / 0px 6px 0px 6px repeat stretch;
+  -moz-border-image: url(tabbrowser/adwaita_tab_unselected.png) 3 6 1 6 / 3px 6px 1px 6px repeat stretch;
   border-radius: 35px 35px 0 0; /* hide overlapping tab background */
   min-height: 25px; /* reserve space for the sometimes hidden close button */
 }
@@ -1395,7 +1398,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   background-image: -moz-linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%),
                     -moz-linear-gradient(-moz-dialog, -moz-dialog);
 */
-  -moz-border-image: url(tabbrowser/adwaita_tab.png) 0 6 0 6 / 0px 6px 0px 6px repeat stretch;
+  -moz-border-image: url(tabbrowser/adwaita_tab.png) 3 6 1 6 / 3px 6px 1px 6px repeat stretch;
   color: -moz-dialogtext;
 }
 
