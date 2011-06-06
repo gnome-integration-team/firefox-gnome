@@ -1379,7 +1379,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
-  margin-right: -5px; /* overlaping tabs */
+  margin-right: -6px; /* overlaping tabs */
   padding: 0; 
   -moz-border-image: url(tabbrowser/adwaita_tab_unselected.png) 3 6 1 6 / 3px 6px 1px 6px repeat stretch;
   border-radius: 35px 35px 0 0; /* hide overlapping tab background */
