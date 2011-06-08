@@ -860,11 +860,23 @@ toolbar[iconsize="small"] #feed-button {
 }
 
 /* Location bar */
+/*
 #urlbar {
   width: 7em;
   min-width: 7em;
   -moz-appearance: textfield;
   padding: 0;
+}
+*/
+
+/* remove ugly white border around location and searchbars */
+#urlbar, 
+.searchbar-textbox {
+ -moz-appearance: none;
+  border: 1px solid rgba(0,0,0,0.45);
+  border-radius: 3px;
+  background: #FFFFFF;
+  padding: 1px;
 }
 
 .urlbar-textbox-container {
