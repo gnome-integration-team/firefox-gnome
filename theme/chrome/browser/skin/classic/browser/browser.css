@@ -36,7 +36,6 @@
   padding-bottom: 6px;
   height: 48px; /* height of adwaita toolbars */
   background: url("chrome://browser/skin/adwaita_toolbar_gradient.png") repeat;
-  margin-bottom: 4px; /* margin between toolbar and tabs */
 }
 
 #nav-bar:not(:-moz-lwtheme),
@@ -1366,6 +1365,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #TabsToolbar[tabsontop=false] {
   background-image:
     -moz-linear-gradient(bottom, rgba(0,0,0,.3) 1px, rgba(0,0,0,.05) 1px, transparent 50%);
+  margin-top: 4px; /* margin between tabs and browser bar */
 }
 
 .tabs-newtab-button
