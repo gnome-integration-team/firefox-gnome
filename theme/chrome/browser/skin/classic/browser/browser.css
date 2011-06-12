@@ -20,9 +20,11 @@
   border-top: none;
 }
 
+/*
 #main-window:not([disablechrome]) #navigator-toolbox[tabsontop=true] {
   border-bottom: 1px solid ThreeDShadow;
 }
+*/
 
 #navigator-toolbox[tabsontop=true] > toolbar:not(:-moz-lwtheme):not(#toolbar-menubar):not(#TabsToolbar),
 #navigator-toolbox[tabsontop=false] > toolbar:not(:-moz-lwtheme):not(#toolbar-menubar) {
