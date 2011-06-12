@@ -40,6 +40,13 @@
   background: url("chrome://browser/skin/adwaita_toolbar_gradient.png") repeat;
 }
 
+
+#navigator-toolbox[tabsontop=true] > #nav-bar
+{
+  /* override the generic adwaita toolbar style for the navigation bar if tabs are on tob */
+  background: url("chrome://browser/skin/adwaita_toolbar_gradient_top.png") repeat !important;
+}
+
 /*
 #nav-bar:not(:-moz-lwtheme),
 #nav-bar[collapsed="true"] + toolbar:not(:-moz-lwtheme),
@@ -1359,7 +1366,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme) {
   -moz-appearance: menubar;
   color: -moz-menubartext;
-  box-shadow: 0 -1px 0 rgba(0,0,0,.1) inset;
+  box-shadow: 0 -1px 0 #878786 inset;
 }
 
 #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme):-moz-system-metric(menubar-drag) {
@@ -1397,9 +1404,17 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   margin-left: 0px;
   margin-right: -6px; /* overlaping tabs */
   padding: 0; 
-  -moz-border-image: url(tabbrowser/adwaita_tab_unselected.png) 3 6 1 6 / 3px 6px 1px 6px repeat stretch;
+  /*-moz-border-image: url(tabbrowser/adwaita_tab_unselected.png) 3 6 1 6 / 3px 6px 1px 6px repeat stretch; */
   border-radius: 35px 35px 0 0; /* hide overlapping tab background */
   min-height: 25px; /* reserve space for the sometimes hidden close button */
+}
+
+#main-window[tabsontop=true] .tabbrowser-tab:not([selected="true"]) {
+  -moz-border-image: url(tabbrowser/adwaita_tab_unselected_top.png) 3 6 1 6 / 3px 6px 1px 6px repeat stretch;
+}
+
+#main-window[tabsontop=false] .tabbrowser-tab:not([selected="true"]) {
+  -moz-border-image: url(tabbrowser/adwaita_tab_unselected.png) 3 6 1 6 / 3px 6px 1px 6px repeat stretch;
 }
 
 /*
@@ -1409,11 +1424,20 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 */
 
-.tabbrowser-tab[selected="true"] {
 /*
+.tabbrowser-tab[selected="true"] {
   background-image: -moz-linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%),
                     -moz-linear-gradient(-moz-dialog, -moz-dialog);
+  color: -moz-dialogtext;
+}
 */
+
+#main-window[tabsontop=true] .tabbrowser-tab[selected="true"] {
+  -moz-border-image: url(tabbrowser/adwaita_tab_top.png) 3 6 1 6 / 3px 6px 1px 6px repeat stretch;
+  color: -moz-dialogtext;
+}
+
+#main-window[tabsontop=false] .tabbrowser-tab[selected="true"] {
   -moz-border-image: url(tabbrowser/adwaita_tab.png) 3 6 1 6 / 3px 6px 1px 6px repeat stretch;
   color: -moz-dialogtext;
 }
