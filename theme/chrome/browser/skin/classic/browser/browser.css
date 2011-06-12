@@ -1416,11 +1416,13 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   color: -moz-dialogtext;
 }
 
+/*
 #main-window[tabsontop=false]:not([disablechrome]) .tabbrowser-tab[selected=true]:not(:-moz-lwtheme) {
   background-image: -moz-linear-gradient(bottom, rgba(0,0,0,.3) 1px, transparent 1px),
                     -moz-linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%),
                     -moz-linear-gradient(-moz-dialog, -moz-dialog);
 }
+*/
 
 .tabbrowser-tab[selected="true"]:-moz-lwtheme {
   background-image: -moz-linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%);
