@@ -1402,7 +1402,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
-  margin-right: -6px; /* overlaping tabs */
+  margin-right: -8px; /* overlaping tabs */
   padding-top: 0px;
   padding-bottom: 0px;
   padding-left: 6px;
