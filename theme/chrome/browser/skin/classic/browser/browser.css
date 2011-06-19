@@ -1409,7 +1409,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   padding-left: 6px;
   padding-right: 6px;
   /*-moz-border-image: url(tabbrowser/adwaita_tab_unselected.png) 3 6 1 6 / 3px 6px 1px 6px repeat stretch; */
-  border-radius: 35px 35px 0 0; /* hide overlapping tab background */
+  border-radius: 25px 25px 0 0; /* hide overlapping tab background */
   min-height: 25px; /* reserve space for the sometimes hidden close button */
 }
 
