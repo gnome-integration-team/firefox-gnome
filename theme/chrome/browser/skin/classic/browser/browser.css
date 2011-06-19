@@ -1381,7 +1381,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 .tabs-newtab-button
 {
-  margin-left: 5px; /* put some space between the newtab-button and regular tabs */
+  margin-left: 8px; /* put some space between the newtab-button and regular tabs */
 }
 
 /*
