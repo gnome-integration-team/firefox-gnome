@@ -20,12 +20,6 @@
   border-top: none;
 }
 
-/*
-#main-window:not([disablechrome]) #navigator-toolbox[tabsontop=true] {
-  border-bottom: 1px solid ThreeDShadow;
-}
-*/
-
 #navigator-toolbox[tabsontop=true] > toolbar:not(:-moz-lwtheme):not(#toolbar-menubar):not(#TabsToolbar),
 #navigator-toolbox[tabsontop=false] > toolbar:not(:-moz-lwtheme):not(#toolbar-menubar) {
   -moz-appearance: none;
@@ -34,17 +28,29 @@
 }
 
 #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
-  padding-top: 6px;
-  padding-bottom: 6px;
-  height: 48px; /* height of adwaita toolbars */
-  background: url("chrome://browser/skin/adwaita_toolbar_gradient.png") repeat;
+  background: url("chrome://browser/skin/adwaita_toolbar_gradient.png") repeat-x bottom;
+  background-size: 100% 100%;
 }
 
+#navigator-toolbox[tabsontop=false] > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
+  border-bottom: 1px solid #cececd;
+}
+
+#navigator-toolbox[tabsontop=false] > #nav-bar {
+  border-top: 1px solid #90908c !important;
+}
 
 #navigator-toolbox[tabsontop=true] > #nav-bar
 {
+  /*
+  background-size: 100% 100%;
+  */
   /* override the generic adwaita toolbar style for the navigation bar if tabs are on tob */
-  background: url("chrome://browser/skin/adwaita_toolbar_gradient_top.png") repeat !important;
+  /*
+  background: url("chrome://browser/skin/adwaita_toolbar_gradient_top.png") repeat-x bottom !important;
+  */
+  background: -moz-linear-gradient(top, #fff, #f3f3f3) !important;
+  box-shadow: 0 -1px 0 #a6a6a6 inset;
 }
 
 /*
@@ -1366,7 +1372,13 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme) {
   -moz-appearance: menubar;
   color: -moz-menubartext;
-  box-shadow: 0 -1px 0 #878786 inset;
+  box-shadow: 0 -1px 0 #a7a7a7 inset,
+              -12px -12px 12px 0 rgba(0,0,0, 0.12) inset;
+              /* Second line is for the shadow gradient */
+  padding-left: 3px;
+  /* The following is a hack to make inset not show up on the right */
+  margin-right: -12px;
+  padding-right: 12px;
 }
 
 #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme):-moz-system-metric(menubar-drag) {
@@ -1397,26 +1409,27 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   background-size: 100% -moz-calc(100% - 2px);
   background-repeat: no-repeat;
   */
+/*
   background-color: -moz-dialog;
+  */
+  background-color: transparent;
   color: inherit;
-  /* margin: 0; */
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: -8px; /* overlaping tabs */
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 6px;
-  padding-right: 6px;
-  /*-moz-border-image: url(tabbrowser/adwaita_tab_unselected.png) 3 6 1 6 / 3px 6px 1px 6px repeat stretch; */
+  margin: 0 -9px 0 0; /* Negative for overlapping tabs */
+  padding: 1px 6px 0;
   border-radius: 25px 25px 0 0; /* hide overlapping tab background */
   min-height: 25px; /* reserve space for the sometimes hidden close button */
 }
+.tabbrowser-tab[selected="true"] {
+  padding-top: 0; /* Make text bump up a little on the selected tab */
+}
 
+/*
 #main-window[tabsontop=true] .tabbrowser-tab:not([selected="true"]) {
   -moz-border-image: url(tabbrowser/adwaita_tab_unselected_top.png) 3 6 1 6 / 3px 6px 1px 6px repeat stretch;
 }
+*/
 
+#main-window[tabsontop=true] .tabbrowser-tab:not([selected="true"]),
 #main-window[tabsontop=false] .tabbrowser-tab:not([selected="true"]) {
   -moz-border-image: url(tabbrowser/adwaita_tab_unselected.png) 3 6 1 6 / 3px 6px 1px 6px repeat stretch;
 }
@@ -1436,11 +1449,14 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 */
 
+/*
 #main-window[tabsontop=true] .tabbrowser-tab[selected="true"] {
   -moz-border-image: url(tabbrowser/adwaita_tab_top.png) 3 6 1 6 / 3px 6px 1px 6px repeat stretch;
   color: -moz-dialogtext;
 }
+*/
 
+#main-window[tabsontop=true] .tabbrowser-tab[selected="true"],
 #main-window[tabsontop=false] .tabbrowser-tab[selected="true"] {
   -moz-border-image: url(tabbrowser/adwaita_tab.png) 3 6 1 6 / 3px 6px 1px 6px repeat stretch;
   color: -moz-dialogtext;
@@ -1564,7 +1580,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   list-style-image: url("moz-icon://stock/gtk-close?size=menu");
   margin-top: -1px;
   margin-bottom: -1px;
-  -moz-margin-end: -1px;
+  -moz-margin-end: -5px;
 }
 
 /* Tabstrip new tab button */
