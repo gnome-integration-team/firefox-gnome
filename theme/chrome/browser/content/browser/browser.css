@@ -26,21 +26,23 @@ tabbrowser {
 
 .tabbrowser-tab:not([pinned]) {
   -moz-box-flex: 100;
-  max-width: 250px;
-  min-width: 100px;
+  max-width: 12em;
+  min-width: 24px;
   width: 0;
-  -moz-transition: min-width 200ms ease-out,
-                   max-width 250ms ease-out,
-                   opacity 50ms ease-out 20ms /* hide the tab for the first 20ms of the max-width transition */;
+  -moz-transition: min-width 50ms ease-out,
+                   max-width 50ms ease-out,
+                   opacity 100ms ease-out 100ms
+                   /* hide the tab for the first 100ms of the max-width transition */;
 }
 
 .tabbrowser-tab:not([pinned]):not([fadein]) {
   max-width: 0.1px;
   min-width: 0.1px;
   opacity: 0 !important;
-  -moz-transition: min-width 200ms ease-out,
-                   max-width 250ms ease-out,
-                   opacity 50ms ease-out 100ms /* hide the tab for the last 100ms of the max-width transition */;
+  -moz-transition: min-width 100ms ease-in,
+                   max-width 100ms ease-in,
+                   opacity 50ms ease-in 100ms
+                   /* hide the tab for the last 100ms of the max-width transition */;
 }
 
 .tab-throbber:not([fadein]):not([pinned]),
