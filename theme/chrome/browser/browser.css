@@ -868,7 +868,7 @@ toolbar[iconsize="small"] #feed-button {
 */
 
 /* remove ugly white border around location and searchbars */
-#urlbar, 
+#urlbar,
 .searchbar-textbox {
  -moz-appearance: none;
   border: 1px solid rgba(0,0,0,0.45);
@@ -1388,7 +1388,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   color: inherit;
   margin: 0 -9px 0 0; /* Negative for overlapping tabs */
   padding: 1px 6px 0;
-  border-radius: 25px 25px 0 0; /* hide overlapping tab background */
   min-height: 25px; /* reserve space for the sometimes hidden close button */
 }
 .tabbrowser-tab[selected="true"] {
