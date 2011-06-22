@@ -28,7 +28,7 @@
 }
 
 #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
-  background: url("chrome://browser/skin/adwaita_toolbar_gradient.png") repeat-x bottom;
+  background: url("chrome://browser/skin/adwaita-toolbar-gradient.png") repeat-x bottom;
   background-size: 100% 100%;
 }
 
@@ -1397,18 +1397,18 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 #main-window[tabsontop=true] .tabbrowser-tab:not([selected="true"]),
 #main-window[tabsontop=false] .tabbrowser-tab:not([selected="true"]) {
-  -moz-border-image: url(tabbrowser/adwaita_tab_unselected.png) 3 6 1 6 / 3px 6px 1px 6px stretch;
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected.png) 3 6 1 6 / 3px 6px 1px 6px stretch;
 }
 
 #main-window[tabsontop=true] .tabbrowser-tab[selected="true"],
 #main-window[tabsontop=false] .tabbrowser-tab[selected="true"] {
-  -moz-border-image: url(tabbrowser/adwaita_tab.png) 3 6 1 6 / 3px 6px 1px 6px stretch;
+  -moz-border-image: url(tabbrowser/adwaita-tab.png) 3 6 1 6 / 3px 6px 1px 6px stretch;
   color: -moz-dialogtext;
 }
 
 /* All the tabs after the selected tab (hack) */
 .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab {
-  -moz-border-image: url(tabbrowser/adwaita_tab_unselected_right.png) 3 6 1 6 / 3px 6px 1px 6px stretch !important;
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected_right.png) 3 6 1 6 / 3px 6px 1px 6px stretch !important;
 }
 
 .tabbrowser-tab[selected="true"]:-moz-lwtheme {
