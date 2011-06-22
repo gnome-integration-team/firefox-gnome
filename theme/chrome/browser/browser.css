@@ -1806,3 +1806,21 @@ panel[dimmed="true"] {
   border-top-left-radius: .3em;
   margin-left: 1em;
 }
+
+/* Override the tab animations */
+.tabbrowser-tab:not([pinned]) {
+  max-width: 12em;
+  min-width: 24px;
+  width: 0;
+  -moz-transition: min-width 50ms ease-out,
+    max-width 50ms ease-out,
+    opacity 100ms ease-out 100ms
+    /* hide the tab for the first 100ms of the max-width transition */;
+}
+
+.tabbrowser-tab:not([pinned]):not([fadein]) {
+  -moz-transition: min-width 100ms ease-in,
+    max-width 100ms ease-in,
+    opacity 50ms ease-in 100ms
+    /* hide the tab for the last 100ms of the max-width transition */;
+}
