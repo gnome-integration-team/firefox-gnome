@@ -15,8 +15,8 @@
    id="svg3779"
    version="1.1"
    inkscape:version="0.48.1 r9760"
-   sodipodi:docname="tab-unfocused.svg"
-   inkscape:export-filename="/home/garrett/Documents/tab-unfocused.png"
+   sodipodi:docname="tab-unfocused-new.svg"
+   inkscape:export-filename="/home/garrett/Documents/tab-unfocused-new.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -24,39 +24,18 @@
     <linearGradient
        id="linearGradient3873">
       <stop
-         style="stop-color:#eeeeee;stop-opacity:1"
+         style="stop-color:#feebc6;stop-opacity:1;"
          offset="0"
          id="stop3875" />
       <stop
-         id="stop3008"
-         offset="0.5"
-         style="stop-color:#f5f5f5;stop-opacity:1;" />
+         id="stop3029"
+         offset="0.48390022"
+         style="stop-color:#fff6c5;stop-opacity:1;" />
       <stop
-         style="stop-color:#fcfcfc;stop-opacity:1"
+         style="stop-color:#fffefb;stop-opacity:1;"
          offset="1"
          id="stop3877" />
     </linearGradient>
-    <linearGradient
-       id="linearGradient4791">
-      <stop
-         style="stop-color:#babdb6;stop-opacity:1;"
-         offset="0"
-         id="stop4793" />
-      <stop
-         style="stop-color:#a6a6a6;stop-opacity:1;"
-         offset="1"
-         id="stop4795" />
-    </linearGradient>
-    <linearGradient
-       y2="280.36218"
-       x2="404.67053"
-       y1="256.14551"
-       x1="404.67053"
-       gradientTransform="matrix(0.63117873,0,0,-1.1292484,-85.382011,400.56472)"
-       gradientUnits="userSpaceOnUse"
-       id="linearGradient3777"
-       xlink:href="#linearGradient4791"
-       inkscape:collect="always" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient3873"
@@ -76,8 +55,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="10.683094"
-     inkscape:cy="6.77525"
+     inkscape:cx="200.00164"
+     inkscape:cy="74.759639"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -98,7 +77,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -108,17 +87,19 @@
      id="layer1"
      transform="translate(-82.433609,-82.03125)">
     <path
-       style="fill:url(#linearGradient3879);fill-opacity:1;stroke:url(#linearGradient3777);stroke-width:0.99999994000000003;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;enable-background:new"
+       style="fill:url(#linearGradient3879);fill-opacity:1;stroke:#fb990d;stroke-width:0.99999994000000003;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;enable-background:new"
        d="m 179.93361,111.03514 -3,-23.924688 c -0.4381,-1.926313 -1.7883,-2.575312 -3.3125,-2.575312 l -84.375001,0 c -1.5242,0 -2.8744,0.648999 -3.3125,2.575312 l -3,23.924688"
        id="path13726"
        sodipodi:nodetypes="cccccc"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       mask="none" />
     <rect
-       style="color:#000000;fill:#a7a7a7;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect3900"
-       width="98"
-       height="1"
+       y="108.03514"
        x="82.433609"
-       y="108.03514" />
+       height="1"
+       width="98"
+       id="rect3031"
+       style="color:#000000;fill:#deb06f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       mask="none" />
   </g>
 </svg>
