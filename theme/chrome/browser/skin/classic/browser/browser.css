@@ -1408,7 +1408,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 /* All the tabs after the selected tab (hack) */
 .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected_right.png) 3 6 1 6 / 3px 6px 1px 6px stretch !important;
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right.png) 3 6 1 6 / 3px 6px 1px 6px stretch !important;
 }
 
 .tabbrowser-tab[selected="true"]:-moz-lwtheme {
