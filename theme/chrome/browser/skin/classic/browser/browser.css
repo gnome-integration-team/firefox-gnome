@@ -20,12 +20,6 @@
   border-top: none;
 }
 
-/*
-#main-window:not([disablechrome]) #navigator-toolbox[tabsontop=true] {
-  border-bottom: 1px solid ThreeDShadow;
-}
-*/
-
 #navigator-toolbox[tabsontop=true] > toolbar:not(:-moz-lwtheme):not(#toolbar-menubar):not(#TabsToolbar),
 #navigator-toolbox[tabsontop=false] > toolbar:not(:-moz-lwtheme):not(#toolbar-menubar) {
   -moz-appearance: none;
@@ -34,29 +28,23 @@
 }
 
 #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
-  padding-top: 6px;
-  padding-bottom: 6px;
-  height: 48px; /* height of adwaita toolbars */
-  background: url("chrome://browser/skin/adwaita_toolbar_gradient.png") repeat;
+  background: url("chrome://browser/skin/adwaita_toolbar_gradient.png") repeat-x bottom;
+  background-size: 100% 100%;
 }
 
+#navigator-toolbox[tabsontop=false] > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
+  border-bottom: 1px solid #cececd;
+}
+
+#navigator-toolbox[tabsontop=false] > #nav-bar {
+  border-top: 1px solid #90908c !important;
+}
 
 #navigator-toolbox[tabsontop=true] > #nav-bar
 {
-  /* override the generic adwaita toolbar style for the navigation bar if tabs are on tob */
-  background: url("chrome://browser/skin/adwaita_toolbar_gradient_top.png") repeat !important;
+  background: -moz-linear-gradient(top, #fff, #f3f3f3) !important;
+  box-shadow: 0 -1px 0 #a6a6a6 inset;
 }
-
-/*
-#nav-bar:not(:-moz-lwtheme),
-#nav-bar[collapsed="true"] + toolbar:not(:-moz-lwtheme),
-#nav-bar[collapsed="true"] + #customToolbars + #PersonalToolbar:not(:-moz-lwtheme),
-#navigator-toolbox[tabsontop="true"] > #nav-bar,
-#navigator-toolbox[tabsontop="true"]:not([customizing]) > #nav-bar[collapsed="true"] + toolbar,
-#navigator-toolbox[tabsontop="true"]:not([customizing]) > #nav-bar[collapsed="true"] + #customToolbars + #PersonalToolbar {
-  background-image: -moz-linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
-}
-*/
 
 #personal-bookmarks {
   min-height: 29px;
@@ -1366,7 +1354,13 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme) {
   -moz-appearance: menubar;
   color: -moz-menubartext;
-  box-shadow: 0 -1px 0 #878786 inset;
+  box-shadow: 0 -1px 0 #a7a7a7 inset,
+              -12px -12px 12px 0 rgba(0,0,0, 0.12) inset;
+              /* Second line is for the shadow gradient */
+  padding-left: 3px;
+  /* The following is a hack to make inset not show up on the right */
+  margin-right: -12px;
+  padding-right: 12px;
 }
 
 #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme):-moz-system-metric(menubar-drag) {
@@ -1390,101 +1384,36 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tabbrowser-tab {
   position: relative; /* static doesn't work with overlapping tabs (wrong z-index of the selected tab) */
   -moz-appearance: none;
-  /*
-  background: -moz-linear-gradient(hsla(0,0%,100%,.2), hsla(0,0%,45%,.2) 2px, hsla(0,0%,32%,.2) 80%);
-  background-origin: border-box;
-  background-position: 1px 2px;
-  background-size: 100% -moz-calc(100% - 2px);
-  background-repeat: no-repeat;
-  */
-  background-color: -moz-dialog;
+  background-color: transparent;
   color: inherit;
-  /* margin: 0; */
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: -8px; /* overlaping tabs */
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 6px;
-  padding-right: 6px;
-  /*-moz-border-image: url(tabbrowser/adwaita_tab_unselected.png) 3 6 1 6 / 3px 6px 1px 6px repeat stretch; */
+  margin: 0 -9px 0 0; /* Negative for overlapping tabs */
+  padding: 1px 6px 0;
   border-radius: 25px 25px 0 0; /* hide overlapping tab background */
   min-height: 25px; /* reserve space for the sometimes hidden close button */
 }
-
-#main-window[tabsontop=true] .tabbrowser-tab:not([selected="true"]) {
-  -moz-border-image: url(tabbrowser/adwaita_tab_unselected_top.png) 3 6 1 6 / 3px 6px 1px 6px repeat stretch;
-}
-
-#main-window[tabsontop=false] .tabbrowser-tab:not([selected="true"]) {
-  -moz-border-image: url(tabbrowser/adwaita_tab_unselected.png) 3 6 1 6 / 3px 6px 1px 6px repeat stretch;
-}
-
-/*
-.tabbrowser-tab:hover,
-.tabs-newtab-button:hover {
-  background-image: -moz-linear-gradient(hsla(0,0%,100%,.6), hsla(0,0%,100%,.2) 4px, hsla(0,0%,75%,.2) 80%);
-}
-*/
-
-/*
 .tabbrowser-tab[selected="true"] {
-  background-image: -moz-linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%),
-                    -moz-linear-gradient(-moz-dialog, -moz-dialog);
-  color: -moz-dialogtext;
-}
-*/
-
-#main-window[tabsontop=true] .tabbrowser-tab[selected="true"] {
-  -moz-border-image: url(tabbrowser/adwaita_tab_top.png) 3 6 1 6 / 3px 6px 1px 6px repeat stretch;
-  color: -moz-dialogtext;
+  padding-top: 0; /* Make text bump up a little on the selected tab */
 }
 
+#main-window[tabsontop=true] .tabbrowser-tab:not([selected="true"]),
+#main-window[tabsontop=false] .tabbrowser-tab:not([selected="true"]) {
+  -moz-border-image: url(tabbrowser/adwaita_tab_unselected.png) 3 6 1 6 / 3px 6px 1px 6px stretch;
+}
+
+#main-window[tabsontop=true] .tabbrowser-tab[selected="true"],
 #main-window[tabsontop=false] .tabbrowser-tab[selected="true"] {
-  -moz-border-image: url(tabbrowser/adwaita_tab.png) 3 6 1 6 / 3px 6px 1px 6px repeat stretch;
+  -moz-border-image: url(tabbrowser/adwaita_tab.png) 3 6 1 6 / 3px 6px 1px 6px stretch;
   color: -moz-dialogtext;
 }
 
-/*
-#main-window[tabsontop=false]:not([disablechrome]) .tabbrowser-tab[selected=true]:not(:-moz-lwtheme) {
-  background-image: -moz-linear-gradient(bottom, rgba(0,0,0,.3) 1px, transparent 1px),
-                    -moz-linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%),
-                    -moz-linear-gradient(-moz-dialog, -moz-dialog);
+/* All the tabs after the selected tab (hack) */
+.tabbrowser-tab[selected="true"] ~ .tabbrowser-tab {
+  -moz-border-image: url(tabbrowser/adwaita_tab_unselected_right.png) 3 6 1 6 / 3px 6px 1px 6px stretch !important;
 }
-*/
 
 .tabbrowser-tab[selected="true"]:-moz-lwtheme {
   background-image: -moz-linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%);
   color: inherit;
-}
-
-/*
-.tabbrowser-tab:-moz-lwtheme-brighttext:not([selected="true"]),
-.tabs-newtab-button:-moz-lwtheme-brighttext { */
-.tabbrowser-tab:-moz-lwtheme-brighttext:not([selected="true"])
-  background-image: -moz-linear-gradient(hsla(0,0%,60%,.6), hsla(0,0%,40%,.6) 4px, hsla(0,0%,30%,.6) 80%);
-}
-
-/*
-.tabbrowser-tab:-moz-lwtheme-brighttext:not([selected="true"]):hover,
-.tabs-newtab-button:-moz-lwtheme-brighttext:hover { */
-.tabbrowser-tab:-moz-lwtheme-brighttext:not([selected="true"]):hover
-  background-image: -moz-linear-gradient(hsla(0,0%,80%,.6), hsla(0,0%,60%,.6) 4px, hsla(0,0%,45%,.6) 80%);
-}
-
-/*
-.tabbrowser-tab:-moz-lwtheme-darktext:not([selected="true"]),
-.tabs-newtab-button:-moz-lwtheme-darktext { */
-.tabbrowser-tab:-moz-lwtheme-darktext:not([selected="true"])
-  background-image: -moz-linear-gradient(hsla(0,0%,100%,.5), hsla(0,0%,60%,.5) 4px, hsla(0,0%,45%,.5) 80%);
-}
-
-/*
-.tabbrowser-tab:-moz-lwtheme-darktext:not([selected="true"]):hover,
-.tabs-newtab-button:-moz-lwtheme-darktext:hover { */
-.tabbrowser-tab:-moz-lwtheme-darktext:not([selected="true"]):hover
-  background-image: -moz-linear-gradient(hsla(0,0%,100%,.5), hsla(0,0%,80%,.5) 4px, hsla(0,0%,60%,.5) 80%);
 }
 
 .tabbrowser-tab[pinned][titlechanged]:not([selected="true"]) {
@@ -1564,7 +1493,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   list-style-image: url("moz-icon://stock/gtk-close?size=menu");
   margin-top: -1px;
   margin-bottom: -1px;
-  -moz-margin-end: -1px;
+  -moz-margin-end: -5px;
 }
 
 /* Tabstrip new tab button */
