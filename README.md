@@ -18,4 +18,4 @@ Tabs on top:
 
 Taps on bottom:
 
-![Screenshot](adwaita-firefox/raw/master/screenshots/screenshot-tabs-on-top.png)
+![Screenshot](adwaita-firefox/raw/master/screenshots/screenshot-tabs-on-bottom.png)
