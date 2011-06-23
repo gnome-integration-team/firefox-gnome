@@ -1810,9 +1810,7 @@ panel[dimmed="true"] {
 
 /* Override the tab animations */
 .tabbrowser-tab:not([pinned]) {
-  max-width: 12em;
-  min-width: 24px;
-  width: 0;
+  max-width: 14em;
   -moz-transition: min-width 50ms ease-out,
     max-width 50ms ease-out,
     opacity 100ms ease-out 100ms
