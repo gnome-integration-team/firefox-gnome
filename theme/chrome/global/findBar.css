@@ -1,0 +1,71 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.findbar-closebutton {
+  list-style-image: url("moz-icon://stock/gtk-close?size=menu");
+}
+
+findbar {
+  border-top: 2px solid;
+  -moz-border-top-colors: ThreeDShadow ThreeDHighlight;
+  padding-bottom: 1px;
+  min-width: 1px;
+}
+
+/* find-next button */
+
+.findbar-find-next > .toolbarbutton-icon {
+  -moz-appearance: button-arrow-next;
+}
+
+/* find-previous button */
+
+.findbar-find-previous > .toolbarbutton-icon {
+  -moz-appearance: button-arrow-previous;
+}
+
+/* highlight button */
+
+.findbar-highlight {
+  list-style-image: url("chrome://global/skin/icons/find.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+.findbar-highlight[disabled="true"] {
+  -moz-image-region: rect(16px, 16px, 32px, 0px);
+}
+
+.find-status-icon {
+  list-style-image: none;
+  margin-top: 2px;
+  margin-bottom: 0;
+  -moz-margin-start: 12px;
+  -moz-margin-end: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.findbar-find-status {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  -moz-margin-start: 3px !important;
+  -moz-margin-end: 0 !important;
+  padding: 2px !important;
+}
+
+.find-status-icon[status="notfound"] {
+  list-style-image: url("moz-icon://stock/gtk-dialog-error?size=menu");
+}
+
+.findbar-textbox[status="notfound"] {
+  box-shadow: 0 0 0 1em #f66 inset;
+  color: white;
+}
+
+.findbar-textbox[flash="true"] {
+  box-shadow: 0 0 0 1em yellow inset;
+  color: black;
+}
+
+.find-status-icon[status="wrapped"] {
+  list-style-image: url("chrome://global/skin/icons/wrap.png");
+}
