@@ -1,0 +1,68 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+notification {
+  background-color: InfoBackground;
+  color: InfoText;
+  text-shadow: none;
+}
+
+notification[type="info"] {
+  background-color: -moz-Dialog;
+  color: -moz-DialogText;
+}
+
+notification[type="critical"] {
+  background-color: red;
+  color: white;
+}
+
+.notification-inner {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.messageText {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.messageImage {
+  width: 16px;
+  height: 16px;
+  -moz-margin-start: 6px;
+  -moz-margin-end: 1px;
+}
+
+/* Default icons for notifications */
+
+notification[type="info"] .messageImage {
+  list-style-image: url("moz-icon://stock/gtk-dialog-info?size=menu");
+}
+
+notification[type="warning"] .messageImage {
+  list-style-image: url("moz-icon://stock/gtk-dialog-warning?size=menu");
+}
+
+notification[type="critical"] .messageImage {
+  list-style-image: url("moz-icon://stock/gtk-dialog-error?size=menu");
+}
+
+.messageCloseButton {
+  list-style-image: url("moz-icon://stock/gtk-close?size=menu");
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Popup notification */
+
+.popup-notification-description {
+  max-width: 248px;
+}
+
+.popup-notification-button-container {
+  margin-top: 17px;
+}
+
+.popup-notification-closeitem {
+  list-style-image: url("moz-icon://stock/gtk-close?size=menu");
+}
