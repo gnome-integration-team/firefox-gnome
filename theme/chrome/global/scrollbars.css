@@ -55,7 +55,6 @@ scrollbar[orient="vertical"] {
    width:18px;
    padding: 7px 2px 7px 2px;
    background-color: #d1d1d1;
-   /*background: url("chrome://global/skin/scrollbar/vertical-background.png") no-repeat bottom right scrollbar;*/
 }
 
 /* ::::: borders for thumb and buttons ::::: */
@@ -64,7 +63,6 @@ scrollbar[orient="horizontal"] {
    height:18px;
    padding: 2px 0px 2px 7px;
    background-color: #d1d1d1;
-   /*background: url("chrome://global/skin/scrollbar/horizontal-background.png") no-repeat bottom right scrollbar;*/
 }
 
 /* ::::: thumb (horizontal) ::::: */
@@ -75,39 +73,41 @@ thumb {
 
 thumb, thumb[height]:not([width]) {
    min-height: 32px;
-   /*background:url("chrome://global/skin/scrollbar/thumb-topcap.png") no-repeat top left;*/
-   border: 1px solid #a7aba7;
+   border: 1px solid #acaea7;
    border-radius: 4px;
    background-color: #fff;
 }
 
-/* ::::: scrollbar button ::::: */
-
-thumb:hover, thumb[height]:not([width]) {
-   min-height: 32px;
-   /*background:url("chrome://global/skin/scrollbar/thumb-topcap-hover.png") no-repeat top left;*/
-   border: 1px solid #858a85;
+thumb:hover, thumb[height]:not([width]):hover {
+   border-color: #8a8d85;
+}
+thumb:active, thumb[height]:not([width]):active {
+   border-color: #4d93df;
 }
 
 gripper{
    -moz-box-flex: 1;
 }
 
-/* ::::: square at the corner of two scrollbars ::::: */
-
-/* :: scrollbar button :: */
+/* ::::: scrollbar button ::::: */
 
 scrollbarbutton {
-   border: 1px solid #a7aba7;
+   background: #8d8d85 url("chrome://global/skin/scrollbar/button-mask.png") no-repeat center;
+   border: 1px solid #acaea7;
    border-radius: 4px;
-   background-color: #fff;
    min-height: 18px;
-   background-repeat: no-repeat;
    min-width: 18px;
 }
 
 scrollbarbutton:hover {
-   border: 1px solid #858a85;
+   background-color: #2e3232;
+   border-color: #8a8d85;
+}
+
+scrollbarbutton[disabled],
+scrollbarbutton[disabled]:hover {
+   background-color #b5b5ae;
+   border-color: #acaea7;
 }
 
 
@@ -117,18 +117,6 @@ scrollbarbutton:hover {
 
 scrollbarbutton[type="increment"] {
    margin: 0px 2px 0px 1px;
-   background: url("chrome://global/skin/scrollbar/button.png");
-   background-color: #fff;
-   background-repeat: no-repeat;
-   background-position: 4px 5px;
-   -moz-transform: rotate(90deg);
-}
-
-scrollbarbutton[type="increment"]:hover {
-   background: url("chrome://global/skin/scrollbar/button-active.png");
-   background-color: #fff;
-   background-repeat: no-repeat;
-   background-position: 4px 5px;
    -moz-transform: rotate(90deg);
 }
 
@@ -136,18 +124,6 @@ scrollbarbutton[type="increment"]:hover {
 
 scrollbar[orient="vertical"] > scrollbarbutton[type="increment"] {
    margin: 1px 0px -5px 0px;
-   background: url("chrome://global/skin/scrollbar/button.png");
-   background-color: #fff;
-   background-repeat: no-repeat;
-   background-position: 4px 5px;
-   -moz-transform: rotate(180deg);
-}
-
-scrollbar[orient="vertical"] > scrollbarbutton[type="increment"]:hover {
-   background: url("chrome://global/skin/scrollbar/button-active.png");
-   background-color: #fff;
-   background-repeat: no-repeat;
-   background-position: 4px 5px;
    -moz-transform: rotate(180deg);
 }
 
@@ -156,18 +132,6 @@ scrollbar[orient="vertical"] > scrollbarbutton[type="increment"]:hover {
 
 scrollbarbutton[type="decrement"] {
    margin: 0px 1px 0px -5px;
-   background: url("chrome://global/skin/scrollbar/button.png");
-   background-color: #fff;
-   background-repeat: no-repeat;
-   background-position: 4px 5px;
-   -moz-transform: rotate(-90deg);
-}
-
-scrollbarbutton[type="decrement"]:hover {
-   background: url("chrome://global/skin/scrollbar/button-active.png");
-   background-color: #fff;
-   background-repeat: no-repeat;
-   background-position: 4px 5px;
    -moz-transform: rotate(-90deg);
 }
 
@@ -175,20 +139,10 @@ scrollbarbutton[type="decrement"]:hover {
 
 scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"] {
    margin: -5px 0px 1px 0px;
-   background: url("chrome://global/skin/scrollbar/button.png");
-   background-color: #fff;
-   background-repeat: no-repeat;
-   background-position: 4px 5px;
    -moz-transform: rotate(0deg);
 }
 
-scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"]:hover {
-   background: url("chrome://global/skin/scrollbar/button-active.png");
-   background-color: #fff;
-   background-repeat: no-repeat;
-   background-position: 4px 5px;
-   -moz-transform: rotate(0deg);
-}
+/* ::::: square at the corner of two scrollbars ::::: */
 
 scrollcorner {
    background-color: #fff;
