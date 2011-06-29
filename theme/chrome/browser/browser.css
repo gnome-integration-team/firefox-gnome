@@ -1409,6 +1409,11 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right.png) 3 6 1 6 / 3px 6px 1px 6px stretch !important;
 }
+/* Revert tab style if it is the first after an app tab in overflow */
+.tabbrowser-tabs[overflow] .tabbrowser-tab[selected] ~ .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned]),
+.tabbrowser-tabs[overflow] .tabbrowser-tab[selected][pinned] + .tabbrowser-tab:not([pinned]) {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected.png) 3 6 1 6 / 3px 6px 1px 6px stretch !important;
+}
 
 .tabbrowser-tab[selected="true"]:-moz-lwtheme {
   background-image: -moz-linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%);
