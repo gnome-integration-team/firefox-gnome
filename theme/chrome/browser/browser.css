@@ -1824,19 +1824,47 @@ panel[dimmed="true"] {
   margin-left: 1em;
 }
 
-/* Override the tab animations */
+/* Override the tab sizes & animations */
 .tabbrowser-tab:not([pinned]) {
-  min-width: 16px !important; /* Prevent tab overflow */
+  min-width: 34px; /* Prevent tab overflow */
+  min-width: 42px; /* This is a compromise between 34 (icon only) and 58 (icon + X) */
   max-width: 14em;
-  -moz-transition: min-width 50ms ease-out,
-    max-width 50ms ease-out,
-    opacity 100ms ease-out 100ms
+  -moz-transition: min-width 50ms linear,
+    max-width 50ms linear,
+    opacity 100ms linear 100ms
     /* hide the tab for the first 100ms of the max-width transition */;
+}
+.tabbrowser-tab:not([pinned]) .tab-content {
+  min-width: 16px;
+}
+.tabbrowser-tab:not([pinned])[selected] .tab-content {
+  min-width: 34px;
+}
+
+.tabbrowser-tab:not([pinned])[selected] {
+  /*
+  min-width: 58px;
+  */
+}
+.tabbrowser-tabs[overflow] .tabbrowser-tab:not([pinned])[selected] {
+  min-width: 58px;
+  /*
+  */
+}
+.tabbrowser-tabs[overflow] .tabbrowser-tab:not([pinned]) {
+}
+/*
+.tabbrowser-tabs[overflow] .tabbrowser-tab:not([pinned]):hover .tab-content {
+  min-width: 6em !important;
+}
+*/
+.tabbrowser-tabs[overflow] .tabbrowser-tab:not([pinned]):hover {
+  min-width: 8em !important;
 }
 
 .tabbrowser-tab:not([pinned]):not([fadein]) {
-  -moz-transition: min-width 100ms ease-in,
-    max-width 100ms ease-in,
-    opacity 50ms ease-in 100ms
+  -moz-transition: min-width 100ms linear,
+    max-width 100ms linear,
+    opacity 50ms linear 100ms
     /* hide the tab for the last 100ms of the max-width transition */;
 }
