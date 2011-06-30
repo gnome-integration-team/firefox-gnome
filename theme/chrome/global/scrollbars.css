@@ -52,36 +52,39 @@ scrollbar {
 }
 
 scrollbar[orient="vertical"] {
-   width:18px;
+   width: 22px;
    padding: 7px 2px 7px 2px;
+   background-color: #d1d1d1;
+}
+
+scrollbar[orient="horizontal"] {
+   height: 22px;
+   padding: 2px 0px 2px 7px;
    background-color: #d1d1d1;
 }
 
 /* ::::: borders for thumb and buttons ::::: */
 
-scrollbar[orient="horizontal"] {
-   height:18px;
-   padding: 2px 0px 2px 7px;
-   background-color: #d1d1d1;
-}
-
 /* ::::: thumb (horizontal) ::::: */
 
 thumb {
    -moz-binding: url("chrome://global/content/bindings/scrollbar.xml#thumb");
-}
-
-thumb, thumb[height]:not([width]) {
-   min-height: 32px;
    border: 1px solid #acaea7;
    border-radius: 4px;
    background-color: #fff;
 }
 
-thumb:hover, thumb[height]:not([width]):hover {
+thumb[orient="vertical"], thumb[height]:not([width]) {
+   min-height: 32px;
+}
+thumb[orient="horizontal"], thumb[width]:not([height]) {
+   min-width: 32px;
+}
+
+thumb:hover {
    border-color: #8a8d85;
 }
-thumb:active, thumb[height]:not([width]):active {
+thumb:active {
    border-color: #4d93df;
 }
 
