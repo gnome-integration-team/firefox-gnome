@@ -1,0 +1,239 @@
+Generated File. Do not edit.
+
+[HEADER]
+Version:0.15:$
+Arch:x86_64-gcc3:$
+
+[PLUGINS]
+IcedTeaPlugin.so:$
+/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/IcedTeaPlugin.so:$
+:$
+1308002255000:1:1:$
+The <a href="http://icedtea.classpath.org/wiki/IcedTea-Web">IcedTea-Web Plugin</a> executes Java applets.:$
+IcedTea-Web Plugin (using IcedTea-Web 1.0.3 (fedora-1.fc15-x86_64)):$
+34
+0:application/x-java-vm:IcedTea:class,jar:$
+1:application/x-java-applet:IcedTea:class,jar:$
+2:application/x-java-applet;version=1.1:IcedTea:class,jar:$
+3:application/x-java-applet;version=1.1.1:IcedTea:class,jar:$
+4:application/x-java-applet;version=1.1.2:IcedTea:class,jar:$
+5:application/x-java-applet;version=1.1.3:IcedTea:class,jar:$
+6:application/x-java-applet;version=1.2:IcedTea:class,jar:$
+7:application/x-java-applet;version=1.2.1:IcedTea:class,jar:$
+8:application/x-java-applet;version=1.2.2:IcedTea:class,jar:$
+9:application/x-java-applet;version=1.3:IcedTea:class,jar:$
+10:application/x-java-applet;version=1.3.1:IcedTea:class,jar:$
+11:application/x-java-applet;version=1.4:IcedTea:class,jar:$
+12:application/x-java-applet;version=1.4.1:IcedTea:class,jar:$
+13:application/x-java-applet;version=1.4.2:IcedTea:class,jar:$
+14:application/x-java-applet;version=1.5:IcedTea:class,jar:$
+15:application/x-java-applet;version=1.6:IcedTea:class,jar:$
+16:application/x-java-applet;jpi-version=1.6.0_50:IcedTea:class,jar:$
+17:application/x-java-bean:IcedTea:class,jar:$
+18:application/x-java-bean;version=1.1:IcedTea:class,jar:$
+19:application/x-java-bean;version=1.1.1:IcedTea:class,jar:$
+20:application/x-java-bean;version=1.1.2:IcedTea:class,jar:$
+21:application/x-java-bean;version=1.1.3:IcedTea:class,jar:$
+22:application/x-java-bean;version=1.2:IcedTea:class,jar:$
+23:application/x-java-bean;version=1.2.1:IcedTea:class,jar:$
+24:application/x-java-bean;version=1.2.2:IcedTea:class,jar:$
+25:application/x-java-bean;version=1.3:IcedTea:class,jar:$
+26:application/x-java-bean;version=1.3.1:IcedTea:class,jar:$
+27:application/x-java-bean;version=1.4:IcedTea:class,jar:$
+28:application/x-java-bean;version=1.4.1:IcedTea:class,jar:$
+29:application/x-java-bean;version=1.4.2:IcedTea:class,jar:$
+30:application/x-java-bean;version=1.5:IcedTea:class,jar:$
+31:application/x-java-bean;version=1.6:IcedTea:class,jar:$
+32:application/x-java-bean;jpi-version=1.6.0_50:IcedTea:class,jar:$
+33:application/x-java-vm-npruntime:::$
+nswrapper_64_64.libflashplayer.so:$
+/usr/lib64/mozilla/plugins-wrapped/nswrapper_64_64.libflashplayer.so:$
+:$
+1307610440000:1:1:$
+Shockwave Flash 10.3 d162:$
+Shockwave Flash:$
+2
+0:application/x-shockwave-flash:Shockwave Flash:swf:$
+1:application/futuresplash:FutureSplash Player:spl:$
+librhythmbox-itms-detection-plugin.so:$
+/usr/lib64/mozilla/plugins/librhythmbox-itms-detection-plugin.so:$
+:$
+1306351888000:1:1:$
+This plug-in detects the presence of iTunes when opening iTunes Store URLs in a web page with Firefox.:$
+iTunes Application Detector:$
+1
+0:application/itunes-plugin:::$
+libtotem-narrowspace-plugin.so:$
+/usr/lib64/mozilla/plugins/libtotem-narrowspace-plugin.so:$
+:$
+1304825176000:1:1:$
+The <a href="http://www.gnome.org/projects/totem/">Totem</a> 3.0.1 plugin handles video and audio streams.:$
+QuickTime Plug-in 7.6.6:$
+5
+0:video/quicktime:QuickTime video:mov:$
+1:video/mp4:MPEG-4 video:mp4:$
+2:image/x-macpaint:MacPaint Bitmap image:pntg:$
+3:image/x-quicktime:Macintosh Quickdraw/PICT drawing:pict, pict1, pict2:$
+4:video/x-m4v:MPEG-4 video:m4v:$
+libtotem-mully-plugin.so:$
+/usr/lib64/mozilla/plugins/libtotem-mully-plugin.so:$
+:$
+1304825176000:1:1:$
+DivX Web Player version 1.4.0.233:$
+DivX® Web Player:$
+1
+0:video/divx:AVI video:divx:$
+libtotem-gmp-plugin.so:$
+/usr/lib64/mozilla/plugins/libtotem-gmp-plugin.so:$
+:$
+1304825176000:1:1:$
+The <a href="http://www.gnome.org/projects/totem/">Totem</a> 3.0.1 plugin handles video and audio streams.:$
+Windows Media Player Plug-in 10 (compatible; Totem):$
+13
+0:application/x-mplayer2:AVI video:avi, wma, wmv:$
+1:video/x-ms-asf-plugin:ASF video:asf, wmv:$
+2:video/x-msvideo:AVI video:asf, wmv:$
+3:video/x-ms-asf:ASF video:asf:$
+4:video/x-ms-wmv:Windows Media video:wmv:$
+5:video/x-wmv:Windows Media video:wmv:$
+6:video/x-ms-wvx:Windows Media video:wmv:$
+7:video/x-ms-wm:Windows Media video:wmv:$
+8:video/x-ms-wmp:Windows Media video:wmv:$
+9:application/x-ms-wms:Windows Media video:wms:$
+10:application/x-ms-wmp:Windows Media video:wmp:$
+11:application/asx:Microsoft ASX playlist:asx:$
+12:audio/x-ms-wma:Windows Media audio:wma:$
+libtotem-cone-plugin.so:$
+/usr/lib64/mozilla/plugins/libtotem-cone-plugin.so:$
+:$
+1304825176000:1:1:$
+The <a href="http://www.gnome.org/projects/totem/">Totem</a> 3.0.1 plugin handles video and audio streams.:$
+VLC Multimedia Plugin (compatible Totem 3.0.1):$
+21
+0:application/x-vlc-plugin:VLC Multimedia Plugin::$
+1:application/vlc:VLC Multimedia Plugin::$
+2:video/x-google-vlc-plugin:VLC Multimedia Plugin::$
+3:application/x-ogg:Ogg multimedia file:ogg:$
+4:application/ogg:Ogg multimedia file:ogg:$
+5:audio/ogg:Ogg Audio:oga:$
+6:audio/x-ogg:Ogg Audio:ogg:$
+7:video/ogg:Ogg Video:ogv:$
+8:video/x-ogg:Ogg Video:ogg:$
+9:application/annodex:Annodex exchange format:anx:$
+10:audio/annodex:Annodex Audio:axa:$
+11:video/annodex:Annodex Video:axv:$
+12:video/mpeg:MPEG video:mpg, mpeg, mpe:$
+13:audio/wav:WAV audio:wav:$
+14:audio/x-wav:WAV audio:wav:$
+15:audio/mpeg:MP3 audio:mp3:$
+16:application/x-nsv-vp3-mp3:NullSoft video:nsv:$
+17:video/flv:Flash video:flv:$
+18:video/webm:WebM video:webm:$
+19:application/x-totem-plugin:Totem Multimedia plugin::$
+20:audio/midi:MIDI audio:mid, midi:$
+npwrapper.so:$
+/usr/lib64/nspluginwrapper/npwrapper.so:$
+:$
+1304499969000:1:1:$
+<a href="http://gwenole.beauchesne.info/projects/nspluginwrapper/">nspluginwrapper</a>  is a cross-platform NPAPI plugin viewer, in particular for linux/i386 plugins.<br>This <b>beta</b> software is available under the terms of the GNU General Public License.<br>:$
+NPAPI Plugins Wrapper 1.3.2:$
+1
+0:unknown/mime-type:Do not open:none:$
+libflashplayer.so:$
+/usr/lib64/flash-plugin/libflashplayer.so:$
+:$
+1305267802000:1:9:$
+Shockwave Flash 10.3 d162:$
+Shockwave Flash:$
+2
+0:application/x-shockwave-flash:Shockwave Flash:swf:$
+1:application/futuresplash:FutureSplash Player:spl:$
+librhythmbox-itms-detection-plugin.so:$
+/home/leighton/.mozilla/plugins/librhythmbox-itms-detection-plugin.so:$
+:$
+1307776924000:1:9:$
+This plug-in detects the presence of iTunes when opening iTunes Store URLs in a web page with Firefox.:$
+iTunes Application Detector:$
+1
+0:application/itunes-plugin:::$
+libtotem-narrowspace-plugin.so:$
+/home/leighton/.mozilla/plugins/libtotem-narrowspace-plugin.so:$
+:$
+1307776917000:1:9:$
+The <a href="http://www.gnome.org/projects/totem/">Totem</a> 3.0.1 plugin handles video and audio streams.:$
+QuickTime Plug-in 7.6.6:$
+5
+0:video/quicktime:QuickTime video:mov:$
+1:video/mp4:MPEG-4 video:mp4:$
+2:image/x-macpaint:MacPaint Bitmap image:pntg:$
+3:image/x-quicktime:Macintosh Quickdraw/PICT drawing:pict, pict1, pict2:$
+4:video/x-m4v:MPEG-4 video:m4v:$
+libtotem-mully-plugin.so:$
+/home/leighton/.mozilla/plugins/libtotem-mully-plugin.so:$
+:$
+1307776909000:1:9:$
+DivX Web Player version 1.4.0.233:$
+DivX® Web Player:$
+1
+0:video/divx:AVI video:divx:$
+libtotem-gmp-plugin.so:$
+/home/leighton/.mozilla/plugins/libtotem-gmp-plugin.so:$
+:$
+1307776902000:1:9:$
+The <a href="http://www.gnome.org/projects/totem/">Totem</a> 3.0.1 plugin handles video and audio streams.:$
+Windows Media Player Plug-in 10 (compatible; Totem):$
+13
+0:application/x-mplayer2:AVI video:avi, wma, wmv:$
+1:video/x-ms-asf-plugin:ASF video:asf, wmv:$
+2:video/x-msvideo:AVI video:asf, wmv:$
+3:video/x-ms-asf:ASF video:asf:$
+4:video/x-ms-wmv:Windows Media video:wmv:$
+5:video/x-wmv:Windows Media video:wmv:$
+6:video/x-ms-wvx:Windows Media video:wmv:$
+7:video/x-ms-wm:Windows Media video:wmv:$
+8:video/x-ms-wmp:Windows Media video:wmv:$
+9:application/x-ms-wms:Windows Media video:wms:$
+10:application/x-ms-wmp:Windows Media video:wmp:$
+11:application/asx:Microsoft ASX playlist:asx:$
+12:audio/x-ms-wma:Windows Media audio:wma:$
+libtotem-cone-plugin.so:$
+/home/leighton/.mozilla/plugins/libtotem-cone-plugin.so:$
+:$
+1307776893000:1:9:$
+The <a href="http://www.gnome.org/projects/totem/">Totem</a> 3.0.1 plugin handles video and audio streams.:$
+VLC Multimedia Plugin (compatible Totem 3.0.1):$
+21
+0:application/x-vlc-plugin:VLC Multimedia Plugin::$
+1:application/vlc:VLC Multimedia Plugin::$
+2:video/x-google-vlc-plugin:VLC Multimedia Plugin::$
+3:application/x-ogg:Ogg multimedia file:ogg:$
+4:application/ogg:Ogg multimedia file:ogg:$
+5:audio/ogg:Ogg Audio:oga:$
+6:audio/x-ogg:Ogg Audio:ogg:$
+7:video/ogg:Ogg Video:ogv:$
+8:video/x-ogg:Ogg Video:ogg:$
+9:application/annodex:Annodex exchange format:anx:$
+10:audio/annodex:Annodex Audio:axa:$
+11:video/annodex:Annodex Video:axv:$
+12:video/mpeg:MPEG video:mpg, mpeg, mpe:$
+13:audio/wav:WAV audio:wav:$
+14:audio/x-wav:WAV audio:wav:$
+15:audio/mpeg:MP3 audio:mp3:$
+16:application/x-nsv-vp3-mp3:NullSoft video:nsv:$
+17:video/flv:Flash video:flv:$
+18:video/webm:WebM video:webm:$
+19:application/x-totem-plugin:Totem Multimedia plugin::$
+20:audio/midi:MIDI audio:mid, midi:$
+npwrapper.libflashplayer.so:$
+/home/leighton/.mozilla/plugins/npwrapper.libflashplayer.so:$
+:$
+1307610432000:1:9:$
+Shockwave Flash 10.3 d162:$
+Shockwave Flash:$
+2
+0:application/x-shockwave-flash:Shockwave Flash:swf:$
+1:application/futuresplash:FutureSplash Player:spl:$
+
+[INVALID]
+/usr/lib64/flash-plugin/flashplugin-lahf-fix.so:$
+1305267803000:$
