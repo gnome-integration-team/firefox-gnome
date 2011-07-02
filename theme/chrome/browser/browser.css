@@ -1390,13 +1390,29 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   padding: 1px 6px 0;
   min-height: 25px; /* reserve space for the sometimes hidden close button */
 }
+/* Swapped overlap for RTL locales */
+.tabbrowser-tab:-moz-locale-dir(rtl) {
+  position: relative; /* static doesn't work with overlapping tabs (wrong z-index of the selected tab) */
+  -moz-appearance: none;
+  background-color: transparent;
+  color: inherit;
+  margin: 0 0 0 -9px; /* Negative for overlapping tabs */
+  padding: 1px 6px 0;
+  min-height: 25px; /* reserve space for the sometimes hidden close button */
+}
+
 .tabbrowser-tab[selected="true"] {
   padding-top: 0; /* Make text bump up a little on the selected tab */
 }
 
 #main-window[tabsontop=true] .tabbrowser-tab:not([selected="true"]),
 #main-window[tabsontop=false] .tabbrowser-tab:not([selected="true"]) {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected.png) 3 6 1 6 / 3px 6px 1px 6px stretch;
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-left.png) 3 6 1 6 / 3px 6px 1px 6px stretch;
+}
+
+#main-window[tabsontop=true] .tabbrowser-tab:not([selected="true"]):-moz-locale-dir(rtl),
+#main-window[tabsontop=false] .tabbrowser-tab:not([selected="true"]):-moz-locale-dir(rtl) {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right.png) 3 6 1 6 / 3px 6px 1px 6px stretch;
 }
 
 #main-window[tabsontop=true] .tabbrowser-tab[selected="true"],
@@ -1410,6 +1426,11 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right.png) 3 6 1 6 / 3px 6px 1px 6px stretch !important;
 }
 
+/* All the tabs after the selected tab (hack) for RTL locales */
+.tabbrowser-tab[selected="true"] ~ .tabbrowser-tab:-moz-locale-dir(rtl) {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-left.png) 3 6 1 6 / 3px 6px 1px 6px stretch !important;
+}
+
 .tabbrowser-tab[selected="true"]:-moz-lwtheme {
   background-image: -moz-linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%);
   color: inherit;
@@ -1417,12 +1438,17 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 /* Updated tabs (in the background) */
 .tabbrowser-tab[titlechanged]:not([selected="true"]) {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new.png) 3 6 1 6 / 3px 6px 1px 6px stretch !important;
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-left.png) 3 6 1 6 / 3px 6px 1px 6px stretch !important;
 }
 
 /* All the updated tabs after the selected tab (hack) */
 .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged] {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right.png) 3 6 1 6 / 3px 6px 1px 6px stretch !important;
+}
+
+/* All the updated tabs after the selected tab (hack) for RTL locales */
+.tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged]:-moz-locale-dir(rtl) {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-left.png) 3 6 1 6 / 3px 6px 1px 6px stretch !important;
 }
 
 /* Floating pinned/app tabs */
