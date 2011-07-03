@@ -1373,9 +1373,17 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   margin-top: 4px; /* margin between tabs and browser bar */
 }
 
+/* put some space between the newtab-button and regular tabs */
 .tabs-newtab-button
 {
-  margin-left: 8px; /* put some space between the newtab-button and regular tabs */
+  margin-left: 9px; 
+}
+
+/* put some space between the newtab-button and regular tabs 
+   (swapped for RTL locales) */
+.tabs-newtab-button:-moz-locale-dir(rtl)
+{
+  margin-right: 9px;
 }
 
 /*
@@ -1390,6 +1398,12 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   padding: 1px 6px 0;
   min-height: 25px; /* reserve space for the sometimes hidden close button */
 }
+
+/* swapped overlap for RTL locales */
+.tabbrowser-tab:-moz-locale-dir(rtl) {
+  margin: 0 0 0 -9px; /* Negative for overlapping tabs */
+}
+
 .tabbrowser-tab[selected="true"] {
   padding-top: 0; /* Make text bump up a little on the selected tab */
 }
@@ -1410,6 +1424,12 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right.png) 3 6 1 6 / 3px 6px 1px 6px stretch !important;
 }
 
+/* All the tabs after the selected tab (hack) 
+   (image mirrored for RTL locales) */
+.tabbrowser-tab[selected="true"] ~ .tabbrowser-tab:-moz-locale-dir(rtl) {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right-rtl.png) 3 6 1 6 / 3px 6px 1px 6px stretch !important;
+}
+
 .tabbrowser-tab[selected="true"]:-moz-lwtheme {
   background-image: -moz-linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%);
   color: inherit;
@@ -1423,6 +1443,12 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 /* All the updated tabs after the selected tab (hack) */
 .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged] {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right.png) 3 6 1 6 / 3px 6px 1px 6px stretch !important;
+}
+
+/* All the updated tabs after the selected tab (hack) 
+   (image mirrored for RTL locales) */
+.tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged]:-moz-locale-dir(rtl) {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right-rtl.png) 3 6 1 6 / 3px 6px 1px 6px stretch !important;
 }
 
 /* Floating pinned/app tabs */
