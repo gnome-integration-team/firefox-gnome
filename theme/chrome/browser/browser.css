@@ -1355,12 +1355,12 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-appearance: menubar;
   color: -moz-menubartext;
   box-shadow: 0 -1px 0 #a7a7a7 inset,
-              -12px -12px 12px 0 rgba(0,0,0, 0.12) inset;
+              -12px -12px 12px 0 rgba(0,0,0, 0.1) inset;
               /* Second line is for the shadow gradient */
   padding-left: 3px;
   /* The following is a hack to make inset not show up on the right */
-  margin-right: -12px;
-  padding-right: 12px;
+  margin-right: -16px;
+  padding-right: 16px;
 }
 
 #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme):-moz-system-metric(menubar-drag) {
