@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.48.1 r9760"
    sodipodi:docname="tab-unfocused.svg"
-   inkscape:export-filename="/home/garrett/Documents/tab-unfocused.png"
+   inkscape:export-filename="../theme/chrome/browser/tabbrowser/adwaita-tab-unselected.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -27,10 +27,6 @@
          style="stop-color:#eeeeee;stop-opacity:1"
          offset="0"
          id="stop3875" />
-      <stop
-         id="stop3008"
-         offset="0.5"
-         style="stop-color:#f5f5f5;stop-opacity:1;" />
       <stop
          style="stop-color:#fcfcfc;stop-opacity:1"
          offset="1"
@@ -62,9 +58,9 @@
        xlink:href="#linearGradient3873"
        id="linearGradient3879"
        x1="144.72472"
-       y1="108.86684"
+       y1="107.93073"
        x2="144.72472"
-       y2="81.678177"
+       y2="82.789749"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(0,2)" />
   </defs>
@@ -76,8 +72,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="10.683094"
-     inkscape:cy="6.77525"
+     inkscape:cx="72.89154"
+     inkscape:cy="8.7956189"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -98,7 +94,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
