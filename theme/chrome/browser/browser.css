@@ -522,11 +522,10 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 .toolbarbutton-1:not([type="menu-button"]),
 .toolbarbutton-1 > .toolbarbutton-menubutton-button {
-  padding: 5px;
 }
 
 .toolbarbutton-1[checked="true"] {
-  padding: 5px !important;
+  padding: 3px !important;
 }
 
 /* 24px primary toolbar buttons */
@@ -1346,20 +1345,15 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 /* Tabstrip */
 
 #TabsToolbar {
+  -moz-appearance: none;
   min-height: 0;
-  padding: 0;
+  padding: 0 0 0 3px;
+  background-image: -moz-linear-gradient(transparent, transparent 10%, rgba(0, 0, 0, 0.1));
+  box-shadow: 0 -1px 0 #a7a7a7 inset;
 }
 
 #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme) {
-  -moz-appearance: menubar;
   color: -moz-menubartext;
-  box-shadow: 0 -1px 0 #a7a7a7 inset,
-              -12px -12px 12px 0 rgba(0,0,0, 0.1) inset;
-              /* Second line is for the shadow gradient */
-  padding-left: 3px;
-  /* The following is a hack to make inset not show up on the right */
-  margin-right: -16px;
-  padding-right: 16px;
 }
 
 #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme):-moz-system-metric(menubar-drag) {
@@ -1367,9 +1361,9 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 #TabsToolbar[tabsontop=false] {
-  background-image:
-    -moz-linear-gradient(bottom, rgba(0,0,0,.3) 1px, rgba(0,0,0,.05) 1px, transparent 50%);
   margin-top: 4px; /* margin between tabs and browser bar */
+  border-bottom: 3px solid red !important;
+  -moz-border-bottom-colors: #a7a7a7 #fff #fff;
 }
 
 /* put some space between the newtab-button and regular tabs */
@@ -1385,17 +1379,14 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   margin-right: 9px;
 }
 
-/*
-.tabbrowser-tab,
-.tabs-newtab-button { */
 .tabbrowser-tab {
   position: relative; /* static doesn't work with overlapping tabs (wrong z-index of the selected tab) */
   -moz-appearance: none;
   background-color: transparent;
   color: inherit;
   margin: 0 -9px 0 0; /* Negative for overlapping tabs */
-  padding: 0 3px 2px;
-  min-height: 25px; /* reserve space for the sometimes hidden close button */
+  padding: 1px 2px 3px;
+  min-height: 26px; /* reserve space for the sometimes hidden close button */
 }
 
 /* swapped overlap for RTL locales */
@@ -1404,7 +1395,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 .tabbrowser-tab[selected="true"] {
-  padding: 0 3px 3px; /* Make text bump up a little on the selected tab */
+  padding: 0 2px 4px; /* Make text bump up a little on the selected tab */
 }
 
 #main-window[tabsontop=true] .tabbrowser-tab:not([selected="true"]),
@@ -1452,17 +1443,15 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 /* Floating pinned/app tabs */
 #tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] {
-  min-height: 18px; /* corresponds to the max. height of non-textual tab contents, i.e. the tab close button */
+  min-height: 16px; /* corresponds to the max. height of non-textual tab contents, i.e. the tab close button */
 }
 
 /* Make the pinned/app tabs not appear to float */
 #tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] .tab-icon-image,
 #tabbrowser-tabs[positionpinnedtabs] .tab-throbber[pinned] {
-  margin: 4px 0 3px;
 }
 #tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned][selected=true] .tab-icon-image,
 #tabbrowser-tabs[positionpinnedtabs] .tab-throbber[pinned][selected] {
-  margin: 4px 0;
 }
 
 .tabbrowser-tab:focus > .tab-stack {
@@ -1526,11 +1515,17 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 .tab-close-button {
-  padding: 0;
   list-style-image: url("moz-icon://stock/gtk-close?size=menu");
-  margin-top: -1px;
-  margin-bottom: -1px;
   -moz-margin-end: -5px;
+  padding: 3px 4px 3px 3px;
+}
+.tab-close-button:hover {
+  background: none;
+}
+.tab-close-button:active {
+  border: none;
+  background: none;
+  padding: 4px 4px 2px 2px;
 }
 
 /* Tabstrip new tab button */
@@ -1859,4 +1854,9 @@ panel[dimmed="true"] {
     max-width 100ms ease-in,
     opacity 50ms ease-in 100ms
     /* hide the tab for the last 100ms of the max-width transition */;
+}
+
+/** Overrides for extensions **/
+#fixer-menu-button > #appmenu-toolbar-button, #fixer-menu-button > #appmenu-button {
+  border: none !important;
 }
