@@ -28,8 +28,7 @@
 }
 
 #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
-  background: url("chrome://browser/skin/adwaita-toolbar-gradient.png") repeat-x bottom;
-  background-size: 100% 100%;
+  background: -moz-linear-gradient(top, #ababa0, #bbbbb3 13%, #d8d8d6 92%, #e2e2df);
 }
 
 #navigator-toolbox[tabsontop=false] > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
