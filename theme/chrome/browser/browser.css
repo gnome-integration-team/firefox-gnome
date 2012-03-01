@@ -20,10 +20,6 @@
   border-top: none;
 }
 
-#main-window:not([disablechrome]) #navigator-toolbox[tabsontop=true] {
-  border-bottom: 1px solid ThreeDShadow;
-}
-
 #navigator-toolbox[tabsontop=true] > toolbar:not(:-moz-lwtheme):not(#toolbar-menubar):not(#TabsToolbar),
 #navigator-toolbox[tabsontop=false] > toolbar:not(:-moz-lwtheme):not(#toolbar-menubar) {
   -moz-appearance: none;
@@ -32,17 +28,21 @@
 }
 
 #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
-  padding-top: 1px;
-  padding-bottom: 1px;
+  background: -moz-linear-gradient(top, #ababa0, #bbbbb3 13%, #d8d8d6 92%, #e2e2df);
 }
 
-#nav-bar:not(:-moz-lwtheme),
-#nav-bar[collapsed="true"] + toolbar:not(:-moz-lwtheme),
-#nav-bar[collapsed="true"] + #customToolbars + #PersonalToolbar:not(:-moz-lwtheme),
-#navigator-toolbox[tabsontop="true"] > #nav-bar,
-#navigator-toolbox[tabsontop="true"]:not([customizing]) > #nav-bar[collapsed="true"] + toolbar,
-#navigator-toolbox[tabsontop="true"]:not([customizing]) > #nav-bar[collapsed="true"] + #customToolbars + #PersonalToolbar {
-  background-image: -moz-linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+#navigator-toolbox[tabsontop=false] > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
+  border-bottom: 1px solid #cececd;
+}
+
+#navigator-toolbox[tabsontop=false] > #nav-bar {
+  border-top: 1px solid #90908c !important;
+}
+
+#navigator-toolbox[tabsontop=true] > #nav-bar
+{
+  background: -moz-linear-gradient(top, #fff, #f3f3f3) !important;
+  box-shadow: 0 -1px 0 #a6a6a6 inset;
 }
 
 #personal-bookmarks {
@@ -531,11 +531,10 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 .toolbarbutton-1:not([type="menu-button"]),
 .toolbarbutton-1 > .toolbarbutton-menubutton-button {
-  padding: 5px;
 }
 
 .toolbarbutton-1[checked="true"] {
-  padding: 5px !important;
+  padding: 3px !important;
 }
 
 /* 24px primary toolbar buttons */
@@ -880,11 +879,23 @@ toolbar[iconsize="small"] #feed-button {
 }
 
 /* Location bar */
+/*
 #urlbar {
   width: 7em;
   min-width: 7em;
   -moz-appearance: textfield;
   padding: 0;
+}
+*/
+
+/* remove ugly white border around location and searchbars */
+#urlbar,
+.searchbar-textbox {
+ -moz-appearance: none;
+  border: 1px solid rgba(0,0,0,0.45);
+  border-radius: 3px;
+  background: #FFFFFF;
+  padding: 1px;
 }
 
 .urlbar-textbox-container {
@@ -1417,14 +1428,15 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 /* Tabstrip */
 
 #TabsToolbar {
+  -moz-appearance: none;
   min-height: 0;
-  padding: 0;
+  padding: 0 0 0 3px;
+  background-image: -moz-linear-gradient(transparent, transparent 10%, rgba(0, 0, 0, 0.1));
+  box-shadow: 0 -1px 0 #a7a7a7 inset;
 }
 
 #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme) {
-  -moz-appearance: menubar;
   color: -moz-menubartext;
-  box-shadow: 0 -1px 0 rgba(0,0,0,.1) inset;
 }
 
 #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme):-moz-system-metric(menubar-drag) {
@@ -1432,42 +1444,70 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 #TabsToolbar[tabsontop=false] {
-  background-image:
-    -moz-linear-gradient(bottom, rgba(0,0,0,.3) 1px, rgba(0,0,0,.05) 1px, transparent 50%);
+  margin-top: 4px; /* margin between tabs and browser bar */
+  border-bottom: 3px solid red !important;
+  -moz-border-bottom-colors: #a7a7a7 #fff #fff;
 }
 
-.tabbrowser-tab,
-.tabs-newtab-button {
-  position: static;
+/* put some space between the newtab-button and regular tabs */
+.tabs-newtab-button
+{
+  margin-left: 9px; 
+}
+
+/* put some space between the newtab-button and regular tabs 
+   (swapped for RTL locales) */
+.tabs-newtab-button:-moz-locale-dir(rtl)
+{
+  margin-right: 9px;
+}
+
+.tabbrowser-tab {
+  position: relative; /* static doesn't work with overlapping tabs (wrong z-index of the selected tab) */
   -moz-appearance: none;
-  background: -moz-linear-gradient(hsla(0,0%,100%,.2), hsla(0,0%,45%,.2) 2px, hsla(0,0%,32%,.2) 80%);
-  background-origin: border-box;
-  background-position: 1px 2px;
-  background-size: 100% -moz-calc(100% - 2px);
-  background-repeat: no-repeat;
+  background-color: transparent;
   color: inherit;
+/*
   margin: 0;
   padding: 0;
   -moz-border-image: url(tabbrowser/tab.png) 4 5 3 6 / 4px 5px 3px 6px repeat stretch;
   border-radius: 10px 8px 0 0;
+*/
   min-height: 25px; /* reserve space for the sometimes hidden close button */
+  margin: 0 -9px 0 0; /* Negative for overlapping tabs */
+  padding: 1px 2px 3px;
+  min-height: 26px; /* reserve space for the sometimes hidden close button */
 }
 
-.tabbrowser-tab:hover,
-.tabs-newtab-button:hover {
-  background-image: -moz-linear-gradient(hsla(0,0%,100%,.6), hsla(0,0%,100%,.2) 4px, hsla(0,0%,75%,.2) 80%);
+/* swapped overlap for RTL locales */
+.tabbrowser-tab:-moz-locale-dir(rtl) {
+  margin: 0 0 0 -9px; /* Negative for overlapping tabs */
 }
 
 .tabbrowser-tab[selected="true"] {
-  background-image: -moz-linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%),
-                    -moz-linear-gradient(-moz-dialog, -moz-dialog);
+  padding: 0 2px 4px; /* Make text bump up a little on the selected tab */
+}
+
+#main-window[tabsontop=true] .tabbrowser-tab:not([selected="true"]),
+#main-window[tabsontop=false] .tabbrowser-tab:not([selected="true"]) {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected.png) 6 9 1 9 / 6px 9px 1px 9px stretch;
+}
+
+#main-window[tabsontop=true] .tabbrowser-tab[selected="true"],
+#main-window[tabsontop=false] .tabbrowser-tab[selected="true"] {
+  -moz-border-image: url(tabbrowser/adwaita-tab.png) 6 9 1 9 / 6px 9px 1px 9px stretch;
   color: -moz-dialogtext;
 }
 
-#main-window[tabsontop=false]:not([disablechrome]) .tabbrowser-tab[selected=true]:not(:-moz-lwtheme) {
-  background-image: -moz-linear-gradient(bottom, rgba(0,0,0,.3) 1px, transparent 1px),
-                    -moz-linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%),
-                    -moz-linear-gradient(-moz-dialog, -moz-dialog);
+/* All the tabs after the selected tab (hack) */
+.tabbrowser-tab[selected="true"] ~ .tabbrowser-tab {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right.png) 6 9 1 9 / 6px 9px 1px 9px stretch !important;
+}
+
+/* All the tabs after the selected tab (hack) 
+   (image mirrored for RTL locales) */
+.tabbrowser-tab[selected="true"] ~ .tabbrowser-tab:-moz-locale-dir(rtl) {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right-rtl.png) 6 9 1 9 / 6px 9px 1px 9px stretch !important;
 }
 
 .tabbrowser-tab[selected="true"]:-moz-lwtheme {
@@ -1495,16 +1535,33 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   background-image: -moz-linear-gradient(hsla(0,0%,100%,.5), hsla(0,0%,80%,.5) 4px, hsla(0,0%,60%,.5) 80%);
 }
 
-.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]) {
-  background-image: -moz-radial-gradient(center 3px, circle cover, rgba(233,242,252,1) 3%, rgba(172,206,255,.75) 40%, rgba(87,151,201,.5) 80%, rgba(87,151,201,0));
-}
-.tabbrowser-tab[pinned][titlechanged]:not([selected="true"]):hover {
-  background-image: -moz-linear-gradient(hsla(0,0%,100%,.8), hsla(0,0%,100%,.6) 2px, hsla(0,0%,75%,.2) 80%),
-                    -moz-radial-gradient(center 3px, circle cover, rgba(233,242,252,1) 3%, rgba(172,206,255,.75) 40%, rgba(87,151,201,.5) 80%, rgba(87,151,201,0));
+/* Updated tabs (in the background) */
+.tabbrowser-tab[titlechanged]:not([selected="true"]) {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new.png) 6 9 1 9 / 6px 9px 1px 9px stretch !important;
 }
 
+/* All the updated tabs after the selected tab (hack) */
+.tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged] {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right.png) 6 9 1 9 / 6px 9px 1px 9px stretch !important;
+}
+
+/* All the updated tabs after the selected tab (hack) 
+   (image mirrored for RTL locales) */
+.tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged]:-moz-locale-dir(rtl) {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right-rtl.png) 6 9 1 9 / 6px 9px 1px 9px stretch !important;
+}
+
+/* Floating pinned/app tabs */
 #tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] {
-  min-height: 18px; /* corresponds to the max. height of non-textual tab contents, i.e. the tab close button */
+  min-height: 16px; /* corresponds to the max. height of non-textual tab contents, i.e. the tab close button */
+}
+
+/* Make the pinned/app tabs not appear to float */
+#tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] .tab-icon-image,
+#tabbrowser-tabs[positionpinnedtabs] .tab-throbber[pinned] {
+}
+#tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned][selected=true] .tab-icon-image,
+#tabbrowser-tabs[positionpinnedtabs] .tab-throbber[pinned][selected] {
 }
 
 .tabbrowser-tab:focus > .tab-stack {
@@ -1568,11 +1625,17 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 .tab-close-button {
-  padding: 0;
   list-style-image: url("moz-icon://stock/gtk-close?size=menu");
-  margin-top: -1px;
-  margin-bottom: -1px;
-  -moz-margin-end: -1px;
+  -moz-margin-end: -5px;
+  padding: 3px 4px 3px 3px;
+}
+.tab-close-button:hover {
+  background: none;
+}
+.tab-close-button:active {
+  border: none;
+  background: none;
+  padding: 4px 4px 2px 2px;
 }
 
 /* Tabstrip new tab button */
@@ -2267,4 +2330,37 @@ panel[dimmed="true"] {
 .inspector-breadcrumbs-button[siblings-menu-open]:last-of-type[checked]:-moz-locale-dir(rtl),
 .inspector-breadcrumbs-button:last-of-type[checked]:hover:active:-moz-locale-dir(rtl) {
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-end-selected-pressed.png") 1 13 2 13 stretch;
+}
+
+/* Highlighter toolbar - HTML Tree */
+
+#inspector-tree-splitter {
+  -moz-appearance: none;
+  border-top: 1px solid black;
+  border-bottom-width: 0;
+  min-height: 3px;
+  height: 3px;
+  margin-bottom: -3px;
+  position: relative;
+
+/* Override the tab animations */
+.tabbrowser-tab:not([pinned]) {
+  min-width: 16px !important; /* Prevent tab overflow */
+  max-width: 14em;
+  -moz-transition: min-width 50ms ease-out,
+    max-width 50ms ease-out,
+    opacity 100ms ease-out 100ms
+    /* hide the tab for the first 100ms of the max-width transition */;
+}
+
+.tabbrowser-tab:not([pinned]):not([fadein]) {
+  -moz-transition: min-width 100ms ease-in,
+    max-width 100ms ease-in,
+    opacity 50ms ease-in 100ms
+    /* hide the tab for the last 100ms of the max-width transition */;
+}
+
+/** Overrides for extensions **/
+#fixer-menu-button > #appmenu-toolbar-button, #fixer-menu-button > #appmenu-button {
+  border: none !important;
 }
