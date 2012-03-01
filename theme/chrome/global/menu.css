@@ -77,7 +77,7 @@ menuitem[disabled="true"],
 }
 
 menubar > menu {
-  padding: 2px 5px;
+  padding: 0px 4px;
   color: -moz-menubartext;
 }
 
