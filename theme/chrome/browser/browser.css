@@ -1472,7 +1472,10 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 */
   min-height: 25px; /* reserve space for the sometimes hidden close button */
   margin: 0 -9px 0 0; /* Negative for overlapping tabs */
+  /*
   padding: 1px 2px 3px;
+  */
+  padding: 4px 9px 3px 6px;
   min-height: 26px; /* reserve space for the sometimes hidden close button */
   background-clip: padding-box;
 }
@@ -1483,7 +1486,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 .tabbrowser-tab[selected="true"] {
-  padding: 0 2px 4px; /* Make text bump up a little on the selected tab */
+  padding: 4px 9px 4px 6px; /* Make text bump up a little on the selected tab */
 }
 
 #main-window[tabsontop=true] .tabbrowser-tab:not([selected="true"]),
