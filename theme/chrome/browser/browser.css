@@ -1488,24 +1488,24 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 #main-window[tabsontop=true] .tabbrowser-tab:not([selected="true"]),
 #main-window[tabsontop=false] .tabbrowser-tab:not([selected="true"]) {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected.png) 6 9 1 9 / 6px 9px 1px 9px stretch;
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch;
 }
 
 #main-window[tabsontop=true] .tabbrowser-tab[selected="true"],
 #main-window[tabsontop=false] .tabbrowser-tab[selected="true"] {
-  -moz-border-image: url(tabbrowser/adwaita-tab.png) 6 9 1 9 / 6px 9px 1px 9px stretch;
+  -moz-border-image: url(tabbrowser/adwaita-tab.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch;
   color: -moz-dialogtext;
 }
 
 /* All the tabs after the selected tab (hack) */
 .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right.png) 6 9 1 9 / 6px 9px 1px 9px stretch !important;
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch !important;
 }
 
 /* All the tabs after the selected tab (hack) 
    (image mirrored for RTL locales) */
 .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab:-moz-locale-dir(rtl) {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right-rtl.png) 6 9 1 9 / 6px 9px 1px 9px stretch !important;
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right-rtl.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch !important;
 }
 
 .tabbrowser-tab[selected="true"]:-moz-lwtheme {
@@ -1535,18 +1535,18 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 /* Updated tabs (in the background) */
 .tabbrowser-tab[titlechanged]:not([selected="true"]) {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new.png) 6 9 1 9 / 6px 9px 1px 9px stretch !important;
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch !important;
 }
 
 /* All the updated tabs after the selected tab (hack) */
 .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged] {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right.png) 6 9 1 9 / 6px 9px 1px 9px stretch !important;
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch !important;
 }
 
 /* All the updated tabs after the selected tab (hack) 
    (image mirrored for RTL locales) */
 .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged]:-moz-locale-dir(rtl) {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right-rtl.png) 6 9 1 9 / 6px 9px 1px 9px stretch !important;
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right-rtl.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch !important;
 }
 
 /* Floating pinned/app tabs */
