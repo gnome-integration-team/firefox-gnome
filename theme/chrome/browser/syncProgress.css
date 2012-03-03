@@ -11,15 +11,15 @@
  * for the specific language governing rights and limitations under the
  * License.
  *
- * The Original Code is Mozilla Communicator client code, released
- * March 31, 1998.
+ * The Original Code is Firefox Sync.
  *
  * The Initial Developer of the Original Code is
- * Netscape Communications Corporation.
- * Portions created by the Initial Developer are Copyright (C) 1998-1999
+ * the Mozilla Foundation.
+ * Portions created by the Initial Developer are Copyright (C) 2011
  * the Initial Developer. All Rights Reserved.
  *
  * Contributor(s):
+ *   Allison Naaktgeboren <ally@mozilla.com>
  *
  * Alternatively, the contents of this file may be used under the terms of
  * either the GNU General Public License Version 2 or later (the "GPL"), or
@@ -34,47 +34,46 @@
  * the terms of any one of the MPL, the GPL or the LGPL.
  *
  * ***** END LICENSE BLOCK ***** */
+@import url(chrome://global/skin/inContentUI.css);
 
-/* ===== colorpicker.css ================================================
-  == Styles used by the XUL colorpicker element.
-  ======================================================================= */
-
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
-/* ::::: colorpicker button ::::: */
- 
-/* colorpicker button */
-
-colorpicker[type="button"] {
-  -moz-appearance: button;
-  width: 38px;
-  height: 24px;
+:root {
+  height: 100%;
+  width: 100%;
+  padding: 0;
 }
 
-.colorpicker-button-colorbox {
-  border: 1px solid #000000;
+body {
+  margin: 0;
+  padding: 0 2em;
 }
 
-/* ::::: colorpicker tiles ::::: */
-
-.colorpickertile {
-  width: 20px;
-  height: 20px;
-  margin: 1px;
-  border-left: 1px solid ThreeDShadow;
-  border-top: 1px solid ThreeDShadow;
-  border-right: 1px solid ThreeDHighlight;
-  border-bottom: 1px solid ThreeDHighlight;
+#floatingBox {
+  margin: 4em auto;
+  max-width: 40em;
+  min-width: 23em;
+  padding: 1em 1.5em;
+  position: relative;
+  text-align: center;
 }
 
-.colorpickertile[selected="true"] {
-  border: 2px outset #C0C0C0;
+#successLogo {
+  margin: 1em 2em;
 }
 
-.colorpickertile[hover="true"] {
-  border: 2px dotted #FFFFFF;
+#loadingText {
+  margin: 2em 6em;
 }
 
-.cp-light[hover="true"] {
-  border: 2px dotted #909090;
+#progressBar {
+  margin: 2em 10em;
+}
+
+#uploadProgressBar{
+  width: 100%;
+}
+
+#bottomRow {
+  margin-top: 2em;
+  padding: 0;
+  text-align: end;
 }
