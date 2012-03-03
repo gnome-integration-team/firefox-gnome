@@ -1475,7 +1475,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   /*
   padding: 1px 2px 3px;
   */
-  padding: 4px 9px 3px 6px;
+  padding: 4px 9px 3px 9px;
   min-height: 26px; /* reserve space for the sometimes hidden close button */
   background-clip: padding-box;
 }
@@ -1486,7 +1486,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 .tabbrowser-tab[selected="true"] {
-  padding: 4px 9px 4px 6px; /* Make text bump up a little on the selected tab */
+  padding-bottom: 4px; /* Make text bump up a little on the selected tab */
 }
 
 #main-window[tabsontop=true] .tabbrowser-tab:not([selected="true"]),
