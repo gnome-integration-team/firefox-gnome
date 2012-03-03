@@ -23,7 +23,7 @@ treechildren::-moz-tree-image(title) {
   margin: 0px 2px;
   width: 16px;
   height: 16px;
-  list-style-image: url("moz-icon://stock/gtk-file?size=menu");
+  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
 }
 
 treechildren::-moz-tree-image(title, livemarkItem) {
@@ -70,6 +70,11 @@ treechildren::-moz-tree-image(title, query) {
   list-style-image: url("chrome://browser/skin/places/query.png");
 }
 
+treechildren::-moz-tree-image(query, OrganizerQuery_Downloads) {
+  list-style-image: url("chrome://browser/skin/places/downloads.png");
+  -moz-image-region: auto;
+}
+
 treechildren::-moz-tree-image(title, query, tagContainer),
 treechildren::-moz-tree-image(query, OrganizerQuery_Tags) {
   list-style-image: url("chrome://mozapps/skin/places/tagContainerIcon.png");
@@ -99,13 +104,12 @@ treechildren::-moz-tree-image(title, query, folder) {
   list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
 }
 
-treechildren::-moz-tree-row(session-start) {
-  border-top:1px dotted ThreeDShadow;
-  font-weight: bold;
+treechildren::-moz-tree-image(cutting) {
+  opacity: 0.5;
 }
 
-treechildren::-moz-tree-cell-text(date, session-continue) {
-  color: -moz-Field;
+treechildren::-moz-tree-cell-text(cutting) {
+  opacity: 0.7;
 }
 
 /**** menuitem stock icons ****/
@@ -198,7 +202,6 @@ menuitem[command="placesCmd_show:info"] {
   list-style-image: url("moz-icon://stock/gtk-properties?size=menu");
 }
 
-#placesContext_reload,
-#placesContext_reloadMicrosummary {
+#placesContext_reload {
   list-style-image: url("moz-icon://stock/gtk-refresh?size=menu");
 }
