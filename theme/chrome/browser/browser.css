@@ -873,12 +873,17 @@ toolbar[iconsize="small"] #feed-button {
 
 #minimize-button {
   list-style-image: url("chrome://global/skin/icons/Minimize.gif");
+  display: none;
 }
 #restore-button {
+  /*
   list-style-image: url("chrome://global/skin/icons/Restore.gif");
+  */
+  list-style-image: url("moz-icon://stock/gtk-leave-fullscreen?size=menu");
 }
 #close-button {
   list-style-image: url("chrome://global/skin/icons/Close.gif");
+  display: none;
 }
 
 /* Location bar */
