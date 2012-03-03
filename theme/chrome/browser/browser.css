@@ -1470,19 +1470,18 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-border-image: url(tabbrowser/tab.png) 4 5 3 6 fill repeat stretch;
   border-radius: 10px 8px 0 0;
 */
-  min-height: 25px; /* reserve space for the sometimes hidden close button */
-  margin: 0 -9px 0 0; /* Negative for overlapping tabs */
+  margin: 0 -8px 0 0; /* Negative for overlapping tabs */
   /*
   padding: 1px 2px 3px;
   */
-  padding: 4px 9px 3px 9px;
+  padding: 4px 9px 3px 7px;
   min-height: 26px; /* reserve space for the sometimes hidden close button */
   background-clip: padding-box;
 }
 
 /* swapped overlap for RTL locales */
 .tabbrowser-tab:-moz-locale-dir(rtl) {
-  margin: 0 0 0 -9px; /* Negative for overlapping tabs */
+  margin: 0 0 0 -8px; /* Negative for overlapping tabs */
 }
 
 .tabbrowser-tab[selected="true"] {
@@ -1502,13 +1501,13 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 /* All the tabs after the selected tab (hack) */
 .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch !important;
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right.png) 6 9 1 8 fill / 6px 9px 1px 8px stretch !important;
 }
 
 /* All the tabs after the selected tab (hack) 
    (image mirrored for RTL locales) */
 .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab:-moz-locale-dir(rtl) {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right-rtl.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch !important;
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right-rtl.png) 6 8 1 9 fill / 6px 9px 1px 8px stretch !important;
 }
 
 .tabbrowser-tab[selected="true"]:-moz-lwtheme {
@@ -1573,7 +1572,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tab-icon-image {
   width: 16px;
   height: 16px;
-  -moz-margin-end: 3px;
+  -moz-margin-end: 6px;
   list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
 }
 
