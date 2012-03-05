@@ -47,13 +47,17 @@
 menu,
 menuitem,
 .splitmenu-menuitem {
+  /*
   -moz-appearance: menuitem;
+  */
   -moz-box-align: center;
   max-width: 42em;
   color: MenuText;
+  background-color: Menu;
   font: menu;
   list-style-image: none;
   -moz-image-region: auto;
+  padding: 3px;
 }
 
 menuitem[default="true"] {
@@ -63,14 +67,19 @@ menuitem[default="true"] {
 menu[_moz-menuactive="true"],
 menuitem[_moz-menuactive="true"],
 .splitmenu-menuitem[_moz-menuactive="true"] {
+  /*
   color: -moz-menuhovertext;
   background-color: -moz-menuhover;
+  */
+  color: white;
+  background-color: #4a90d9;
 }
 
 menu[disabled="true"],
 menuitem[disabled="true"],
 .splitmenu-menuitem[disabled="true"] {
   color: GrayText;
+  background-color: Menu;
 }
 
 menubar > menu {
@@ -210,10 +219,15 @@ menuitem[type="radio"] {
 /* ::::: menuseparator ::::: */
 
 menuseparator {
+  /*
   -moz-appearance: menuseparator !important;
   margin: 2px 0;
   border-top: 1px solid ThreeDShadow;
   border-bottom: 1px solid ThreeDHighlight;
+  */
+  margin: 3px 4px;
+  border: 1px solid #eee;
+  border-width: 1px 0 0;
 }
 
 menulist > menupopup > menuseparator,
