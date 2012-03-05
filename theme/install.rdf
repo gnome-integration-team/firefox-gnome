@@ -5,14 +5,14 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>{451500c0-902c-11e0-91e4-0800200c9a66}</em:id>
-    <em:version>3.1.2</em:version>
+    <em:version>4.0pre</em:version>
 
     <!-- Target Application this extension can install into,
          with minimum and maximum supported versions. -->
     <em:targetApplication>
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
-        <em:minVersion>4.0b12pre</em:minVersion>
+        <em:minVersion>10.0</em:minVersion>
         <em:maxVersion>19.0a1</em:maxVersion>
       </Description>
     </em:targetApplication>
