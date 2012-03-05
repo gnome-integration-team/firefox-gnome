@@ -2288,6 +2288,7 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
   height: 3px;
   margin-bottom: -3px;
   position: relative;
+}
 
 /* Override the tab animations */
 .tabbrowser-tab:not([pinned]) {
