@@ -1505,13 +1505,15 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 /* All the tabs after the selected tab (hack) */
-.tabbrowser-tab[selected="true"] ~ .tabbrowser-tab {
+.tabbrowser-tabs[overflow] > .tabbrowser-tab[selected="true"]:not([pinned]) ~ .tabbrowser-tab:not([pinned]),
+.tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right.png) 6 9 1 8 fill / 6px 9px 1px 8px stretch !important;
 }
 
 /* All the tabs after the selected tab (hack) 
    (image mirrored for RTL locales) */
-.tabbrowser-tab[selected="true"] ~ .tabbrowser-tab:-moz-locale-dir(rtl) {
+.tabbrowser-tabs[overflow] > .tabbrowser-tab[selected="true"]:not([pinned]) ~ .tabbrowser-tab:-moz-locale-dir(rtl):not([pinned]),
+.tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[selected="true"]:not([pinned]) ~ .tabbrowser-tab:-moz-locale-dir(rtl):not([pinned]) {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right-rtl.png) 6 8 1 9 fill / 6px 9px 1px 8px stretch !important;
 }
 
