@@ -16,13 +16,13 @@
         <em:maxVersion>12.0a1</em:maxVersion>
       </Description>
     </em:targetApplication>
-   
+
     <!-- Front End MetaData -->
     <em:name>Adwaita</em:name>
-    <em:description>GNOME 3 Adwaita theme for Firefox</em:description>
-    <em:creator>Adwaita Firefox Team</em:creator>
+    <em:description>GNOME 3 Adwaita theme Fork for Firefox </em:description>
+    <em:creator>Adwaita Firefox Team, Forked by Reda Lazri</em:creator>
     <em:contributor>Adwaita Firefox Team</em:contributor>
-    <em:internalName>Adwaita</em:internalName>
+    <em:internalName>Adwaita Fork</em:internalName>
 
-  </Description>     
+  </Description>
 </RDF>
