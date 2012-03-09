@@ -189,7 +189,7 @@ menuitem.bookmark-item {
 }
 
 .bookmark-item[container][query] {
-  list-style-image: url("chrome://browser/skin/places/query.png");
+  list-style-image: url("chrome://browser/skin/places/query.svg");
 }
 
 .bookmark-item[query][tagContainer] {
@@ -1751,7 +1751,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #TabsToolbar > #wrapper-new-tab-button > #new-tab-button {
   list-style-image: url(chrome://browser/skin/tabbrowser/tab-new.svg);
   -moz-image-region: auto;
-  opacity: 0.7,
+  opacity: 0.7;
 }
 
 /* Tabstrip close button */
