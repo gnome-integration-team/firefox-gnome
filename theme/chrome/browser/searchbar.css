@@ -54,8 +54,13 @@
 
 .search-go-button {
   padding: 1px;
-  list-style-image: url(moz-icon://stock/gtk-find?size=menu);
+  list-style-image: url("chrome://browser/skin/symbolic/edit-find-symbolic.svg");
   cursor: pointer;
+  opacity: 0.5;
+}
+
+.search-go-button:hover {
+  opacity: 1;
 }
 
 menuitem[cmd="cmd_clearhistory"] {
