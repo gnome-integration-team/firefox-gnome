@@ -45,6 +45,20 @@
   box-shadow: 0 -1px 0 #a6a6a6 inset;
 }
 
+/* Restyle bookmark bars -- tabs on top */
+#navigator-toolbox[tabsontop=true] #PersonalToolbar {
+  background: -moz-linear-gradient(bottom , #999999, #eee 1px, #f4f4f4) !important;
+  margin-top: -1px;
+  padding-top: 0;
+}
+
+/* Restyle bookmark bars -- tabs on bottom */
+#navigator-toolbox[tabsontop=false] #PersonalToolbar {
+  background: none !important;
+  border: none !important;
+  padding-bottom: 0;
+}
+
 #personal-bookmarks {
   min-height: 29px;
 }
