@@ -1222,6 +1222,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   border-radius: 2.5px 0 0 2.5px;
   border-width: 0 8px 0 0;
   border-style: solid;
+  -moz-border-image: url("chrome://browser/skin/urlbar-arrow.png") 0 8 0 0 / 0 8px 0 0;
   -moz-border-image: url("chrome://browser/skin/urlbar-arrow.png") 0 8 0 0 fill;
   -moz-margin-end: -8px;
   margin-top: -1px;
@@ -1520,11 +1521,13 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 #main-window[tabsontop=true] .tabbrowser-tab:not([selected="true"]),
 #main-window[tabsontop=false] .tabbrowser-tab:not([selected="true"]) {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected.png) 6 9 1 9 / 6px 9px 1px 9px stretch;
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch;
 }
 
 #main-window[tabsontop=true] .tabbrowser-tab[selected="true"],
 #main-window[tabsontop=false] .tabbrowser-tab[selected="true"] {
+  -moz-border-image: url(tabbrowser/adwaita-tab.png) 6 9 1 9 / 6px 9px 1px 9px stretch;
   -moz-border-image: url(tabbrowser/adwaita-tab.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch;
   color: -moz-dialogtext;
 }
@@ -1532,6 +1535,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 /* All the tabs after the selected tab (hack) */
 .tabbrowser-tabs[overflow] > .tabbrowser-tab[selected="true"]:not([pinned]) ~ .tabbrowser-tab:not([pinned]),
 .tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right.png) 6 9 1 9 / 6px 9px 1px 9px stretch !important;
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right.png) 6 9 1 8 fill / 6px 9px 1px 8px stretch !important;
 }
 
@@ -1539,6 +1543,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
    (image mirrored for RTL locales) */
 .tabbrowser-tabs[overflow] > .tabbrowser-tab[selected="true"]:not([pinned]) ~ .tabbrowser-tab:-moz-locale-dir(rtl):not([pinned]),
 .tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[selected="true"]:not([pinned]) ~ .tabbrowser-tab:-moz-locale-dir(rtl):not([pinned]) {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right-rtl.png) 6 9 1 9 / 6px 9px 1px 9px stretch !important;
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right-rtl.png) 6 8 1 9 fill / 6px 9px 1px 8px stretch !important;
 }
 
@@ -1569,17 +1574,20 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 /* Updated tabs (in the background) */
 .tabbrowser-tab[titlechanged]:not([selected="true"]) {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new.png) 6 9 1 9 / 6px 9px 1px 9px stretch !important;
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch !important;
 }
 
 /* All the updated tabs after the selected tab (hack) */
 .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged] {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right.png) 6 9 1 9 / 6px 9px 1px 9px stretch !important;
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch !important;
 }
 
 /* All the updated tabs after the selected tab (hack) 
    (image mirrored for RTL locales) */
 .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged]:-moz-locale-dir(rtl) {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right-rtl.png) 6 9 1 9 / 6px 9px 1px 9px stretch !important;
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right-rtl.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch !important;
 }
 
@@ -1747,6 +1755,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled]):-moz-locale-dir(rtl) {
   border-width: 0 2px 0 0;
   border-style: solid;
+  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 / 0 2px 0 0;
   -moz-border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill;
 }
 
@@ -1754,6 +1763,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled]):-moz-locale-dir(rtl) {
   border-width: 0 0 0 2px;
   border-style: solid;
+  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 / 0 0 0 2px;
   -moz-border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill;
 }
 
@@ -2229,56 +2239,68 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
 }
 
 .inspector-breadcrumbs-button {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[siblings-menu-open]:not([checked]),
 .inspector-breadcrumbs-button:not([checked]):hover:active {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle-pressed.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle-pressed.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[checked] {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle-selected.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle-selected.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[checked][siblings-menu-open],
 .inspector-breadcrumbs-button[checked]:hover:active {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle-selected-pressed.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle-selected-pressed.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button:first-of-type {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-start.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-start.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[siblings-menu-open]:first-of-type:not([checked]),
 .inspector-breadcrumbs-button:first-of-type:not([checked]):hover:active {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-start-pressed.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-start-pressed.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button:first-of-type[checked] {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-start-selected.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-start-selected.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[siblings-menu-open]:first-of-type[checked],
 .inspector-breadcrumbs-button:first-of-type[checked]:hover:active {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-start-selected-pressed.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-start-selected-pressed.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button:last-of-type {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-end.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-end.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[siblings-menu-open]:last-of-type:not([checked]),
 .inspector-breadcrumbs-button:last-of-type:not([checked]):hover:active {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-end-pressed.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-end-pressed.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button:last-of-type[checked] {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-end-selected.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-end-selected.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[siblings-menu-open]:last-of-type[checked],
 .inspector-breadcrumbs-button:last-of-type[checked]:hover:active {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-end-selected-pressed.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-end-selected-pressed.png") 1 13 2 13 fill stretch;
 }
 
@@ -2289,56 +2311,68 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
 }
 
 .inspector-breadcrumbs-button:-moz-locale-dir(rtl) {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-middle.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-middle.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[siblings-menu-open]:not([checked]):-moz-locale-dir(rtl),
 .inspector-breadcrumbs-button:not([checked]):hover:active:-moz-locale-dir(rtl) {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-middle-pressed.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-middle-pressed.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[checked]:-moz-locale-dir(rtl) {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-middle-selected.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-middle-selected.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[checked][siblings-menu-open]:-moz-locale-dir(rtl),
 .inspector-breadcrumbs-button[checked]:hover:active:-moz-locale-dir(rtl) {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-middle-selected-pressed.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-middle-selected-pressed.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button:first-of-type:-moz-locale-dir(rtl) {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-start.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-start.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[siblings-menu-open]:first-of-type:not([checked]):-moz-locale-dir(rtl),
 .inspector-breadcrumbs-button:first-of-type:not([checked]):hover:active:-moz-locale-dir(rtl) {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-start-pressed.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-start-pressed.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button:first-of-type[checked]:-moz-locale-dir(rtl) {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-start-selected.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-start-selected.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[siblings-menu-open]:first-of-type[checked]:-moz-locale-dir(rtl),
 .inspector-breadcrumbs-button:first-of-type[checked]:hover:active:-moz-locale-dir(rtl) {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-start-selected-pressed.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-start-selected-pressed.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button:last-of-type:-moz-locale-dir(rtl) {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-end.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-end.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[siblings-menu-open]:last-of-type:not([checked]):-moz-locale-dir(rtl),
 .inspector-breadcrumbs-button:last-of-type:not([checked]):hover:active:-moz-locale-dir(rtl) {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-end-pressed.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-end-pressed.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button:last-of-type[checked]:-moz-locale-dir(rtl) {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-end-selected.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-end-selected.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[siblings-menu-open]:last-of-type[checked]:-moz-locale-dir(rtl),
 .inspector-breadcrumbs-button:last-of-type[checked]:hover:active:-moz-locale-dir(rtl) {
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-end-selected-pressed.png") 1 13 2 13 stretch;
   -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-end-selected-pressed.png") 1 13 2 13 fill stretch;
 }
 
