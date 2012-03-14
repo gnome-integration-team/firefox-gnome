@@ -70,7 +70,7 @@
 }
 
 .hud-msg-node {
-  list-style-image: url(chrome://global/skin/icons/webconsole.png);
+  list-style-image: url(chrome://browser/skin/devtools/webconsole.png);
   -moz-image-region: rect(0, 1px, 0, 0);
 }
 
@@ -155,10 +155,14 @@
   display: none;
 }
 
+.webconsole-filter-button {
+  margin: 0 3px;
+}
+
 .webconsole-filter-button > .toolbarbutton-menubutton-button,
 .webconsole-filter-button:not([type="menu-button"]) {
   -moz-box-orient: horizontal;
-  list-style-image: url("chrome://global/skin/icons/webconsole.png");
+  list-style-image: url("chrome://browser/skin/devtools/webconsole.png");
 }
 
 /* Network styles */
@@ -209,7 +213,7 @@
 }
 
 /* Web Developer styles */
-.webconsole-filter-button[category="webdev"] {
+.webconsole-filter-button[category="logging"] {
   -moz-image-region: rect(24px, 8px, 32px, 0);
 }
 

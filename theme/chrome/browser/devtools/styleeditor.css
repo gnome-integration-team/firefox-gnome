@@ -1,0 +1,160 @@
+/* vim:set ts=2 sw=2 sts=2 et: */
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1/GPL 2.0/LGPL 2.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is Style Editor code.
+ *
+ * The Initial Developer of the Original Code is Mozilla Foundation.
+ * Portions created by the Initial Developer are Copyright (C) 2011
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ *   Cedric Vivier <cedricv@neonux.com> (original author)
+ *   Paul Rouget <paul@mozilla.com>
+ *
+ * Alternatively, the contents of this file may be used under the terms of
+ * either the GNU General Public License Version 2 or later (the "GPL"), or
+ * the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+ * in which case the provisions of the GPL or the LGPL are applicable instead
+ * of those above. If you wish to allow use of your version of this file only
+ * under the terms of either the GPL or the LGPL, and not to allow others to
+ * use your version of this file under the terms of the MPL, indicate your
+ * decision by deleting the provisions above and replace them with the notice
+ * and other provisions required by the GPL or the LGPL. If you do not delete
+ * the provisions above, a recipient may use your version of this file under
+ * the terms of any one of the MPL, the GPL or the LGPL.
+ *
+ * ***** END LICENSE BLOCK ***** */
+
+#style-editor-chrome {
+  background-color: hsl(208,11%,27%);
+}
+
+.stylesheet-title,
+.stylesheet-name {
+  text-decoration: none;
+  color: hsl(207,17%,88%);
+}
+
+.stylesheet-name {
+  font-size: 13px;
+}
+
+.stylesheet-rule-count,
+.stylesheet-saveButton {
+  color: hsl(211,12%,60%);
+}
+
+.stylesheet-saveButton {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.splitview-active .stylesheet-title,
+.splitview-active .stylesheet-name {
+  color: hsl(0,0%,100%);
+}
+
+.splitview-active .stylesheet-rule-count,
+.splitview-active .stylesheet-saveButton {
+  color: hsl(200,66%,70%);
+}
+
+.splitview-nav:focus {
+  outline: 0; /* focus ring is on the stylesheet name */
+}
+
+.splitview-nav > li.unsaved > hgroup .stylesheet-name {
+  font-style: italic;
+}
+
+.splitview-nav:-moz-locale-dir(ltr) > li.unsaved > hgroup .stylesheet-name:before,
+.splitview-nav:-moz-locale-dir(rtl) > li.unsaved > hgroup .stylesheet-name:after {
+  font-style: italic;
+}
+
+.stylesheet-enabled {
+  padding: 8px 0;
+  margin: 0 8px;
+  background-image: url(itemToggle.png);
+  background-repeat: no-repeat;
+  background-clip: content-box;
+  background-position: 0 8px;
+  width: 24px;
+  height: 40px;
+}
+
+.disabled > .stylesheet-enabled {
+  background-position: -24px 8px;
+}
+
+.splitview-nav > li > .stylesheet-enabled:focus,
+.splitview-nav > li:hover > .stylesheet-enabled {
+  outline: 0;
+}
+
+.stylesheet-error-message {
+  color: red;
+}
+
+.stylesheet-more > h3 {
+  font-size: 11px;
+  -moz-margin-end: 2px;
+}
+
+.devtools-searchinput {
+  max-width: 25ex;
+  font-size: 11px;
+}
+
+.placeholder {
+  color: white;
+}
+
+.placeholder a {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+  font-size: inherit;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+/* portrait mode */
+@media (max-width: 550px) {
+  .splitview-nav {
+    box-shadow: none;
+  }
+
+  .splitview-nav > li.splitview-active {
+    background-size: 0 0, 0 0, auto;
+  }
+
+  .stylesheet-enabled {
+    padding: 0;
+    background-position: 0 0;
+    height: 24px;
+  }
+
+  .disabled > .stylesheet-enabled {
+    background-position: -24px 0;
+  }
+
+  .splitview-nav > li > hgroup.stylesheet-info {
+    -moz-box-align: baseline;
+  }
+}
