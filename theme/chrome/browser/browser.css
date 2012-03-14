@@ -20,6 +20,10 @@
   border-top: none;
 }
 
+#toolbar-menubar {
+  -moz-appearance: none;
+}
+
 #navigator-toolbox[tabsontop=true] > toolbar:not(:-moz-lwtheme):not(#toolbar-menubar):not(#TabsToolbar),
 #navigator-toolbox[tabsontop=false] > toolbar:not(:-moz-lwtheme):not(#toolbar-menubar) {
   -moz-appearance: none;
@@ -1876,7 +1880,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   margin-bottom: -2px !important;
 }
 #appmenuSecondaryPane {
-  -moz-border-start: 1px solid ThreeDShadow;
+  -moz-border-start: 1px solid #ebebeb;
 }
 #appmenuSecondaryPane-spacer {
   min-height: 1em;
