@@ -1353,6 +1353,11 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   list-style-image: url("chrome://browser/skin/Go-arrow.png");
 }
 
+#urlbar-go-button {
+  list-style-image: url("chrome://browser/skin/Go-arrow.png");
+  list-style-image: url("chrome://browser/skin/symbolic/media-playback-start-symbolic.svg");
+}
+
 #go-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
 #urlbar-go-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
   -moz-transform: scaleX(-1);
@@ -1360,10 +1365,27 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 #urlbar-reload-button {
   list-style-image: url("moz-icon://stock/gtk-refresh?size=menu");
+  list-style-image: url("chrome://browser/skin/symbolic/view-refresh-symbolic.svg");
 }
 
 #urlbar-stop-button {
   list-style-image: url("moz-icon://stock/gtk-stop?size=menu");
+  list-style-image: url("chrome://browser/skin/symbolic/process-stop-symbolic.svg");
+}
+
+#urlbar-go-button,
+#urlbar-stop-button {
+  opacity: 0.6;
+}
+
+#urlbar-reload-button {
+  opacity: 0.5;
+}
+
+#urlbar-go-button:hover,
+#urlbar-reload-button:hover,
+#urlbar-stop-button:hover {
+  opacity: 1;
 }
 
 /* Popup blocker button */
@@ -1375,10 +1397,12 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #star-button {
   padding: 1px;
   list-style-image: url("chrome://browser/skin/places/starPage.png");
+  list-style-image: url("chrome://browser/skin/symbolic/bookmark-new-symbolic.svg");
 }
 
 #star-button[starred="true"] {
   list-style-image: url("chrome://browser/skin/places/pageStarred.png");
+  list-style-image: url("chrome://browser/skin/symbolic/bookmark-saved-symbolic.svg");
 }
 
 /* Bookmarking panel */
