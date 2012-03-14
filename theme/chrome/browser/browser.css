@@ -1453,7 +1453,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-appearance: none;
   min-height: 0;
   padding: 0 0 0 3px;
-  background-image: -moz-linear-gradient(transparent, transparent 10%, rgba(0, 0, 0, 0.1));
   box-shadow: 0 -1px 0 #a7a7a7 inset;
 }
 
@@ -1497,11 +1496,11 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-border-image: url(tabbrowser/tab.png) 4 5 3 6 fill repeat stretch;
   border-radius: 10px 8px 0 0;
 */
-  margin: 0 -8px 0 0; /* Negative for overlapping tabs */
+  margin: 0 -9px 0 0; /* Negative for overlapping tabs */
   /*
   padding: 1px 2px 3px;
   */
-  padding: 4px 9px 3px 7px;
+  padding: 1px 11px 0 8px;
   min-height: 26px; /* reserve space for the sometimes hidden close button */
   background-clip: padding-box;
 }
@@ -1512,7 +1511,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 .tabbrowser-tab[selected="true"] {
-  padding-bottom: 4px; /* Make text bump up a little on the selected tab */
+  padding-bottom: 1px; /* Make text bump up a little on the selected tab */
 }
 
 #main-window[tabsontop=true] .tabbrowser-tab:not([selected="true"]),
@@ -1580,9 +1579,15 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right-rtl.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch !important;
 }
 
+.tabbrowser-tab[pinned] {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
 /* Floating pinned/app tabs */
 #tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] {
   min-height: 16px; /* corresponds to the max. height of non-textual tab contents, i.e. the tab close button */
+  padding: 4px 9px;
 }
 
 /* Make the pinned/app tabs not appear to float */
@@ -1616,8 +1621,8 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tab-throbber[pinned],
 .tab-icon-image[pinned],
 .tabs-newtab-button > .toolbarbutton-icon {
-  -moz-margin-start: 2px;
-  -moz-margin-end: 2px;
+  -moz-margin-start: 0px;
+  -moz-margin-end: 0px;
 }
 
 #context_reloadTab {
@@ -1650,21 +1655,36 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tab-close-button > .toolbarbutton-icon {
   /* XXX Buttons have padding in widget/ that we don't want here but can't override with good CSS, so we must
      use evil CSS to give the impression of smaller content */
-  margin: -4px;
+  margin: -2px;
 }
 
 .tab-close-button {
+  /*
   list-style-image: url("moz-icon://stock/gtk-close?size=menu");
+  */
+  list-style-image: url(chrome://browser/skin/tabbrowser/close-normal.png);
   -moz-margin-end: -5px;
-  padding: 3px 4px 3px 3px;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid transparent;
 }
 .tab-close-button:hover {
+  list-style-image: url(chrome://browser/skin/tabbrowser/close-hover.png);
   background: none;
+  border-color: rgba(0, 0, 0, 0.1);
 }
 .tab-close-button:active {
-  border: none;
-  background: none;
+  list-style-image: url(chrome://browser/skin/tabbrowser/close-active.png);
+  /*
+  background: -moz-linear-gradient(top, #dadada 1px, #e6e6e6 2px, #e8e8e8 100%)
+  background: rgba(0, 0, 0, 0.1);
+  */
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.13) 1px, rgba(0, 0, 0, 0.08) 2px, rgba(0, 0, 0, 0.07) 100%);
+  /*
   padding: 4px 4px 2px 2px;
+  */
+  border-color: rgba(0, 0, 0, 0.12);
+  border-color-top: rgba(0, 0, 0, 0.27);
 }
 
 /* Tabstrip new tab button */
@@ -1677,7 +1697,16 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 /* Tabstrip close button */
 .tabs-closebutton {
+  /*
   list-style-image: url("moz-icon://stock/gtk-close?size=menu");
+  */
+  list-style-image: url(chrome://browser/skin/tabbrowser/close-normal.png);
+}
+.tabs-closebutton:hover {
+  list-style-image: url(chrome://browser/skin/tabbrowser/close-hover.png);
+}
+.tabs-closebutton:active {
+  list-style-image: url(chrome://browser/skin/tabbrowser/close-active.png);
 }
 
 .tabs-closebutton > .toolbarbutton-icon {
@@ -2323,7 +2352,7 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
 
 /* Override the tab animations */
 .tabbrowser-tab:not([pinned]) {
-  min-width: 16px !important; /* Prevent tab overflow */
+  min-width: 52px !important; /* Prevent tab overflow */
   max-width: 14em;
   -moz-transition: min-width 50ms ease-out,
     max-width 50ms ease-out,
