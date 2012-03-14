@@ -915,10 +915,18 @@ toolbar[iconsize="small"] #feed-button {
 #urlbar,
 .searchbar-textbox {
  -moz-appearance: none;
-  border: 1px solid rgba(0,0,0,0.45);
+  border: 1px solid rgba(0,0,0,0.3);
   border-radius: 3px;
   background: #FFFFFF;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.6), inset 0 1px 1px 0 rgba(0,0,0,0.15);
   padding: 1px;
+}
+
+#urlbar[focused="true"],
+.searchbar-textbox[focused="true"] {
+  border-color: rgba(0, 87, 179, 0.5);
+  border-color: #729fcf;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.6), inset 0 1px 2px 0 rgba(0,106,221,0.3);
 }
 
 .urlbar-textbox-container {
