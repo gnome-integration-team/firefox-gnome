@@ -109,7 +109,7 @@ scrollbarbutton:hover {
 
 scrollbarbutton[disabled],
 scrollbarbutton[disabled]:hover {
-   background-color #b5b5ae;
+   background-color: #b5b5ae;
    border-color: #acaea7;
 }
 
@@ -164,7 +164,7 @@ scrollcorner {
     background: url("chrome://global/skin/scrollbar/slider.gif") scrollbar;
   }
 
-  html|div scrollbar[orient="vertical"] 
+  html|div scrollbar[orient="vertical"]
   {
      -moz-appearance: scrollbartrack-vertical;
   }
