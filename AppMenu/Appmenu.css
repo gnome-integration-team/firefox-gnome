@@ -16,7 +16,7 @@ toolbar:not([mode="text"]) #appmenu-toolbar-button > .toolbarbutton-menu-dropmar
 #appmenu-toolbar-button {
   display: inherit !important;
   margin: 0 6px 0 6px !important;
-  background: url("chrome://browser/skin/gear.svg") !important;
+  background: url("chrome://browser/skin/symbolic/gear.svg") !important;
   background-repeat: no-repeat !important;
   background-position: center center !important;
   padding: 0px 7px!important;
