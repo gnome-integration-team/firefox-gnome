@@ -586,8 +586,9 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   -moz-transition-duration: 150ms;
   -moz-transition-timing-function: ease;
   border: 1px solid;
-  border-color: rgba(0,0,0,.35);
-  box-shadow: 0 1px 0 white inset,
+  border-color: rgba(0,0,0,.2);
+  border-right: 0;
+  box-shadow: 0 1px 0 white,
               0 1px rgba(255,255,255,.10),
               0 0 0 1px hsla(0,0%,100%,.27) inset;
 margin-right: -21px;
@@ -606,8 +607,9 @@ margin-right: -21px;
   -moz-transition-duration: 150ms;
   -moz-transition-timing-function: ease;
   border: 1px solid;
-  border-color: rgba(0,0,0,.35);
-  box-shadow: 0 1px 0 white inset,
+  border-left: 1px solid rgba(0,0,0,.05);
+  border-color: rgba(0,0,0,.2);
+  box-shadow: 0 1px 0 white,
               0 1px rgba(255,255,255,.10),
               0 0 0 1px hsla(0,0%,100%,.27) inset;
 	margin-right: -4px;
@@ -620,11 +622,11 @@ margin-right: -21px;
 }
 
 #back-button[disabled="true"] {
-  opacity: 0.3;
+
 }
 
 #back-button:-moz-locale-dir(rtl) {
-  list-style-image: url("moz-icon://stock/gtk-go-back-rtl?size=toolbar");
+  list-style-image: url("chrome://browser/skin/symbolic/forward-button.svg");
 }
 
 #back-button[disabled="true"]:-moz-locale-dir(rtl) {
@@ -638,16 +640,16 @@ margin-right: -21px;
 }
 
 #forward-button:-moz-locale-dir(rtl) {
-  list-style-image: url("moz-icon://stock/gtk-go-forward-rtl?size=toolbar");
+  list-style-image: url("chrome://browser/skin/symbolic/back-button.svg");
 }
 
 #forward-button[disabled] {
-  opacity: 0.3;
+
     -moz-padding-end: 50px !important;
 }
 
 #forward-button[disabled]:-moz-locale-dir(rtl) {
-  opacity: 0.3;
+
 }
 
 #reload-button {
@@ -1418,7 +1420,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 #urlbar-go-button {
-  list-style-image: url("chrome://browser/skin/symbolic/media-playback-start-symbolic.svg");
+  list-style-image: url("chrome://browser/skin/symbolic/Go.svg");
 }
 
 #go-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
@@ -1427,11 +1429,11 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 #urlbar-reload-button {
-  list-style-image: url("chrome://browser/skin/symbolic/view-refresh-symbolic.svg");
+  list-style-image: url("chrome://browser/skin/symbolic/refresh.svg");
 }
 
 #urlbar-stop-button {
-  list-style-image: url("chrome://browser/skin/symbolic/process-stop-symbolic.svg");
+  list-style-image: url("chrome://browser/skin/symbolic/stop.svg");
 }
 
 #urlbar-go-button,
@@ -1451,12 +1453,12 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 /* Star button */
 #star-button {
   padding: 1px;
-  list-style-image: url("chrome://browser/skin/symbolic/bookmark-new-symbolic.svg");
+  list-style-image: url("chrome://browser/skin/symbolic/add-bookamrk.svg");
   opacity: 0.5;
 }
 
 #star-button[starred="true"] {
-  list-style-image: url("chrome://browser/skin/symbolic/bookmark-saved-symbolic.svg");
+  list-style-image: url("chrome://browser/skin/symbolic/added-bookmark.svg");
   opacity: 0.7;
 }
 
