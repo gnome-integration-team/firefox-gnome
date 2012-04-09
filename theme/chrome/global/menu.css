@@ -47,13 +47,20 @@
 menu,
 menuitem,
 .splitmenu-menuitem {
+  /*
   -moz-appearance: menuitem;
+  */
   -moz-box-align: center;
   max-width: 42em;
+  /*
   color: MenuText;
+  */
+  color: #2e3436;
+  background-color: Menu;
   font: menu;
   list-style-image: none;
   -moz-image-region: auto;
+  padding: 3px;
 }
 
 menuitem[default="true"] {
@@ -63,19 +70,28 @@ menuitem[default="true"] {
 menu[_moz-menuactive="true"],
 menuitem[_moz-menuactive="true"],
 .splitmenu-menuitem[_moz-menuactive="true"] {
+  /*
   color: -moz-menuhovertext;
   background-color: -moz-menuhover;
+  */
+  color: white;
+  background-color: #4a90d9;
 }
 
 menu[disabled="true"],
 menuitem[disabled="true"],
 .splitmenu-menuitem[disabled="true"] {
   color: GrayText;
+  background-color: Menu;
 }
 
 menubar > menu {
-  padding: 2px 5px;
+  padding: 3px 7px;
+  /*
   color: -moz-menubartext;
+  */
+  color: #2e3436;
+  background: transparent;
 }
 
 menubar:-moz-lwtheme > menu {
@@ -88,12 +104,21 @@ menubar:-moz-lwtheme > menu:not([open="true"]) {
 }
 
 menubar > menu[_moz-menuactive="true"]:not([open]):not([disabled="true"]):not(:-moz-lwtheme) {
+  /*
   color: -moz-menubartext;
+  */
+  color: #2e3436;
+  background: transparent;
 }
 
 menubar > menu[open] {
+  /*
   color: -moz-menubarhovertext;
   background-color: -moz-menuhover;
+  */
+  color: #2e3436;
+  background-color: Menu;
+  border-radius: 3px 3px 0 0;
 }
 menuitem.spell-suggestion {
   font-weight:bold;
@@ -194,26 +219,58 @@ menulist > menupopup > menu > .menu-iconic-left {
 /* ::::: checkbox menuitem ::::: */
 
 menuitem[checked="true"] {
+  /*
   -moz-appearance: checkmenuitem !important;
+  */
+  list-style-image: url("chrome://global/skin/menu/menuitem-checkbox-checked.png");
+}
+
+menuitem[_moz-menuactive="true"][checked="true"] {
+  list-style-image: url("chrome://global/skin/menu/menuitem-checkbox-checked-selected.png");
+}
+
+menuitem[disabled="true"][checked="true"] {
+  list-style-image: url("chrome://global/skin/menu/menuitem-checkbox-checked-insensitive.png");
 }
 
 menuitem[type="checkbox"] {
+  /*
   -moz-appearance: checkmenuitem !important;
+  */
 }
 
 /* ::::: radio menuitem ::::: */
 
 menuitem[type="radio"] {
+  /*
   -moz-appearance: radiomenuitem !important;
+  */
+}
+
+menuitem[type="radio"][checked="true"] {
+  list-style-image: url("chrome://global/skin/menu/menuitem-radio-checked.png");
+}
+
+menuitem[type="radio"][_moz-menuactive="true"][checked="true"] {
+  list-style-image: url("chrome://global/skin/menu/menuitem-radio-checked-selected.png");
+}
+
+menuitem[type="radio"][disabled="true"][checked="true"] {
+  list-style-image: url("chrome://global/skin/menu/menuitem-radio-checked-insensitive.png");
 }
 
 /* ::::: menuseparator ::::: */
 
 menuseparator {
+  /*
   -moz-appearance: menuseparator !important;
   margin: 2px 0;
   border-top: 1px solid ThreeDShadow;
   border-bottom: 1px solid ThreeDHighlight;
+  */
+  margin: 3px 4px;
+  border: 1px solid #eee;
+  border-width: 1px 0 0;
 }
 
 menulist > menupopup > menuseparator,

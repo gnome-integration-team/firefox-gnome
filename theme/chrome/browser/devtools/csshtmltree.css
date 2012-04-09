@@ -23,6 +23,7 @@
  *   Mihai Șucan <mihai.sucan@gmail.com>
  *   Michael Ratcliffe <mratcliffe@mozilla.com>
  *   Dão Gottwald <dao@mozilla.com>
+ *   Rob Campbell <rcampbell@mozilla.com>
  *
  * Alternatively, the contents of this file may be used under the terms of
  * either the GNU General Public License Version 2 or later (the "GPL"), or
@@ -44,23 +45,10 @@
   color: -moz-FieldText;
 }
 
-#root {
-  display: -moz-box;
-}
-
-
 .property-header {
-  padding: 4px;
-  -moz-padding-start: 0;
-  -moz-padding-end: 5px;
-}
-
-.rule-unmatched {
-  cursor: pointer;
-  padding: 2px;
-  -moz-padding-start: 4px;
-  -moz-padding-end: 0;
+  padding: 5px 0;
   white-space: nowrap;
+  vertical-align: text-top;
 }
 
 /* Take away these two :visited rules to get a core dumper     */
@@ -75,84 +63,74 @@
 .helplink:visited {
   text-decoration: none;
 }
-
-.helplink-container {
-  position: relative;
-  top: 2px;
+.link:hover {
+  text-decoration: underline;
 }
 
 .helplink {
-  display: block;
   height: 14px;
   width: 0;
   overflow: hidden;
   -moz-padding-start: 14px;
   background-image: url("chrome://browser/skin/devtools/goto-mdn.png");
   -moz-margin-end: 2px;
+  cursor: pointer;
 }
 
-.property-header:not(:hover) > .helplink-container {
+.property-view:not(:hover) > .helplink-container {
   visibility: hidden;
-}
-
-.unmatchedSelectorTable {
-  -moz-margin-start: 15px;
 }
 
 .rulelink {
   color: -moz-dialogtext;
-  -moz-margin-start: 12px;
+  padding: 0;
 }
 
 .expander {
   -moz-appearance: treetwisty;
-  -moz-margin-start: 10px;
+  padding-top: 12px;
+  -moz-margin-start: 5px;
   -moz-margin-end: 5px;
+  vertical-align: middle;
 }
 
 .expander[open] {
   -moz-appearance: treetwistyopen;
 }
 
-.expandable {
-  cursor: pointer;
-}
-
 .match {
   visibility: hidden;
 }
 
-.expandable > .match {
+.expandable {
+  cursor: pointer;
   visibility: visible;
-}
-
-.only-unmatched {
-  -moz-margin-start: 0;
 }
 
 .property-name {
   font-size: 12px;
   color: -moz-FieldText;
-  width: 220px;
 }
 .property-value {
+  padding: 0;
   font-size: 10px;
   color: grey;
-}
-
-.property-view-hidden {
-  display: none;
+  vertical-align: text-top;
+  width: 100%;
 }
 
 .rule-link {
   text-align: end;
   -moz-padding-start: 10px;
+  cursor: pointer;
 }
 
 /* This rule is necessary because Templater.jsm breaks LTR TDs in RTL docs */
 .rule-text {
   direction: ltr;
-  -moz-padding-start: 15px;
+  padding: 0;
+  -moz-padding-start: 20px;
+  vertical-align: text-bottom;
 }
 
 .bestmatch {
@@ -164,15 +142,9 @@
 .parentmatch {
   color: #666;
 }
-.unmatched {
-  color: brown;
-}
 
 #propertyContainer {
-  display: -moz-box;
-  -moz-box-orient: vertical;
-  -moz-box-flex: 1;
-  overflow-y: auto;
+  border-collapse: collapse;
 }
 
 .darkrow {
@@ -188,20 +160,11 @@
 .headerControls {
   color: -moz-dialogtext;
   background-color: -moz-dialog;
-  padding-top: 5px;
 }
 
 .onlyuserstyles {
   cursor: pointer;
   font-size: 11px;
-}
-
-.searchfield {
-  -moz-margin-start: 10px;
-}
-
-.styleinspector-legend {
-  -moz-margin-start: 12px;
 }
 
 #footer {
@@ -222,11 +185,34 @@
 
 .ruleview-rule-source {
   background-color: -moz-dialog;
+  color: -moz-dialogText;
   padding: 2px 5px;
+  cursor: pointer;
+}
+
+.ruleview-rule-source:hover {
+  text-decoration: underline;
 }
 
 .ruleview-code {
   padding: 2px 5px;
+}
+
+.ruleview-warning {
+  background: url("chrome://browser/skin/devtools/alerticon-warning.png");
+  -moz-margin-start: 5px;
+  vertical-align: middle;
+  width: 13px;
+  height: 12px;
+}
+
+.ruleview-ruleopen {
+  -moz-padding-end: 5px;
+}
+
+.ruleview-ruleclose {
+  width: -moz-min-content;
+  padding-right: 20px;
 }
 
 .ruleview-propertylist {
@@ -243,17 +229,12 @@
 }
 
 .ruleview-expander {
-  display: inline-block;
   width: 8px;
   height: 8px;
   background: url("chrome://browser/skin/devtools/arrows.png") 24px 0;
   cursor: pointer;
   -moz-margin-start: 2px;
   -moz-margin-end: 5px;
-}
-
-.ruleview-expander:-moz-locale-dir(rtl) {
-  background-position: 16px 0;
 }
 
 .ruleview-expander.styleinspector-open {
@@ -266,7 +247,6 @@
 }
 
 .ruleview-propertyname {
-  display: inline-block;
   padding: 1px 0;
   cursor: text;
   color: #0060C0;
@@ -294,5 +274,5 @@
 .styleinspector-propertyeditor {
   border: 1px solid #CCC;
   padding: 0;
-  -moz-box-shadow: 2px 2px 2px #CCC;
+  box-shadow: 2px 2px 2px #CCC;
 }

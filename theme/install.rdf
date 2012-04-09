@@ -5,7 +5,7 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>{451500c0-902c-11e0-91e4-0800200c9a66}</em:id>
-    <em:version>4.0</em:version>
+    <em:version>11.1</em:version>
 
     <!-- Target Application this extension can install into,
          with minimum and maximum supported versions. -->
@@ -13,16 +13,16 @@
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
         <em:minVersion>6.0</em:minVersion>
-        <em:maxVersion>12.0a1</em:maxVersion>
+        <em:maxVersion>19.0a1</em:maxVersion>
       </Description>
     </em:targetApplication>
-
+   
     <!-- Front End MetaData -->
     <em:name>Adwaita</em:name>
-    <em:description>GNOME 3 Adwaita theme Fork for Firefox </em:description>
+    <em:description>GNOME 3 Adwaita theme for Firefox</em:description>
     <em:creator>Adwaita Firefox Team</em:creator>
     <em:contributor>Adwaita Firefox Team</em:contributor>
     <em:internalName>Adwaita</em:internalName>
 
-  </Description>
+  </Description>     
 </RDF>

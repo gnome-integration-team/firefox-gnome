@@ -18,7 +18,7 @@
   margin-right: -22px; /* 1/2 of scrubber thumb width, for overhang. */
   position: relative; /* Trick to work around negative margin interfering with clicking on the button. */
 }
-.playButton[paused="true"] {
+.playButton[paused] {
   background: url(chrome://global/skin/media/playButton.png) no-repeat center;
 }
 
@@ -32,8 +32,22 @@
   min-width: 33px;
   border: none;
 }
-.muteButton[muted="true"] {
+.muteButton[muted] {
   background: url(chrome://global/skin/media/unmuteButton.png) no-repeat center;
+}
+
+.fullscreenButton {
+  background: -moz-image-rect(url("chrome://global/skin/media/fullscreenButton.png"), 0, 16, 16, 0) no-repeat center;
+  -moz-appearance: none;
+  margin: 0;
+  padding: 0;
+  min-height: 28px;
+  min-width: 28px;
+  border: none;
+}
+
+.fullscreenButton[fullscreened] {
+  background-image: -moz-image-rect(url("chrome://global/skin/media/fullscreenButton.png"), 0, 32, 16, 16);
 }
 
 .volumeStack {
@@ -65,9 +79,8 @@
   /* margin left/right: make bar 8px wide (control width = 28, minus 2 * 10 margin) */
   margin: 0 10px;
   background-color: rgba(255,255,255,.5);
-  border-radius: 4px 4px;
+  border-radius: 2.5px;
 }
-
 
 .durationBox {
   -moz-box-pack: center;
@@ -91,7 +104,7 @@
   /* margin left/right: 1/2 of scrubber thumb width, for overhang. */
   margin: 10px 22px;
   background-color: rgba(255,255,255,.5);
-  border-radius: 4px;
+  border-radius: 2.5px;
 }
 
 .bufferBar,
@@ -114,13 +127,13 @@
    * compositing gives it a different visual appearance.
    */
   background-color: rgba(255,255,255,.5);
-  border-radius: 4px;
+  border-radius: 2.5px;
   -moz-appearance: none;
 }
 
 .progressBar .progress-bar {
   background-color: white;
-  border-radius: 4px 0 0 4px;
+  border-radius: 2.5px;
   -moz-appearance: none;
 }
 
@@ -163,7 +176,7 @@
   font-size: 10px;
   font-family: Arial, sans-serif;
   text-shadow: rgba(0,0,0,.3) 0 1px;
-  padding-top: 2px;
+  padding-top: 5px;
 }
 
 .statusOverlay {
@@ -190,6 +203,24 @@
   background: url(chrome://global/skin/media/error.png) no-repeat center;
 }
 
+/* Overlay Play button */
+.clickToPlay {
+  width: 64px;
+  height: 64px;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  opacity: 0.7;
+  background-image: url(chrome://global/skin/media/clicktoplay-bgtexture.png),
+                    url(chrome://global/skin/media/videoClickToPlayButton.svg);
+  background-repeat: repeat, no-repeat;
+  background-position: center, center;
+  background-size: auto, 64px 64px;
+  background-color: hsla(0,0%,10%,.5);
+}
+.clickToPlay:hover {
+  opacity: 1;
+}
+
 /* Statistics formatting */
 html|*.statsDiv {
   position: relative;
@@ -200,7 +231,7 @@ html|td {
   padding: 0 2px;
 }
 html|table {
-  font-family: Helvetica, Ariel, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 11px;
   color: white;
   text-shadow:
@@ -216,6 +247,18 @@ html|table {
 }
 
 /* CSS Transitions */
+.clickToPlay {
+  -moz-transition-property: opacity, background-size;
+  -moz-transition-duration: 400ms, 400ms;
+}
+.clickToPlay[fadeout] {
+  background-size: auto, 192px 192px;
+  opacity: 0;
+}
+.clickToPlay[fadeout][immediate] {
+  -moz-transition-property: opacity, background-size;
+  -moz-transition-duration: 0s, 0s;
+}
 .controlBar:not([immediate]) {
   -moz-transition-property: opacity;
   -moz-transition-duration: 200ms;
@@ -238,4 +281,18 @@ html|table {
 }
 .statusOverlay[fadeout] {
   opacity: 0;
+}
+
+/* Error description formatting */
+.errorLabel {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  color: #bbb;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  padding: 0 10px;
+  text-align: center;
 }
