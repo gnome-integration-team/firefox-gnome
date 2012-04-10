@@ -399,7 +399,7 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
 #placesContext_reload,
 #context-reload,
 #context-reloadframe {
-  list-style-image: url("chrome://browser/skin/symbolic/view-refresh-symbolic.svg");
+  list-style-image: url("chrome://browser/skin/symbolic/refresh.svg");
 }
 
 #menu_reload[disabled],
@@ -571,6 +571,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   -moz-padding-start:1px !important;
   -moz-padding-end: 2px!important;
 }
+
 #navigator-toolbox[iconsize=large][mode=icons] > #nav-bar #back-button > .toolbarbutton-icon {
 
   -moz-appearance: none;
@@ -580,24 +581,14 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   color: black;
   opacity: 1;
   text-shadow: 0 0 2px white;
-<<<<<<< HEAD
   background-image: -moz-linear-gradient(#F5F5F5, #DCDCDC);
-=======
-	background-image: -moz-linear-gradient(#F5F5F5, #DCDCDC);
->>>>>>> f00e4cc09af7fc8b83c7ed2350063d9b8dc49b93
   -moz-transition-property: background-color, border-color, box-shadow;
   -moz-transition-duration: 150ms;
   -moz-transition-timing-function: ease;
   border: 1px solid;
-<<<<<<< HEAD
   border-color: rgba(0,0,0,.2);
   border-right: 0;
   box-shadow: 0 1px 0 white,
-=======
-  border-right: 0;
-  border-color: rgba(0,0,0,.2);
-  box-shadow: 0 1px 0 rgba(255,255,255,.5),
->>>>>>> f00e4cc09af7fc8b83c7ed2350063d9b8dc49b93
               0 1px rgba(255,255,255,.10),
               0 0 0 1px hsla(0,0%,100%,.27) inset;
 margin-right: -21px;
@@ -616,17 +607,10 @@ margin-right: -21px;
   -moz-transition-duration: 150ms;
   -moz-transition-timing-function: ease;
   border: 1px solid;
-<<<<<<< HEAD
   border-left: 1px solid rgba(0,0,0,.05);
   border-color: rgba(0,0,0,.2);
   box-shadow: 0 1px 0 white,
               0 1px rgba(255,255,255,.1),
-=======
-  border-color: rgba(0,0,0,.2);
-  border-left: 1px solid rgba(0,0,0,.1);
-  box-shadow: 0 1px 0 rgba(255,255,255,.5) ,
-              0 1px rgba(255,255,255,.10),
->>>>>>> f00e4cc09af7fc8b83c7ed2350063d9b8dc49b93
               0 0 0 1px hsla(0,0%,100%,.27) inset;
 	margin-right: -4px;
 }
@@ -646,7 +630,7 @@ margin-right: -21px;
 }
 
 #back-button[disabled="true"]:-moz-locale-dir(rtl) {
-
+  list-style-image: url("moz-icon://stock/gtk-go-back-rtl?size=toolbar&state=disabled");
 }
 
 #forward-button {
@@ -660,12 +644,8 @@ margin-right: -21px;
 }
 
 #forward-button[disabled] {
-<<<<<<< HEAD
 
     -moz-padding-end: 50px !important;
-=======
-    -moz-padding-end: 45px !important;
->>>>>>> f00e4cc09af7fc8b83c7ed2350063d9b8dc49b93
 }
 
 #forward-button[disabled]:-moz-locale-dir(rtl) {
@@ -674,10 +654,6 @@ margin-right: -21px;
 
 #reload-button {
   list-style-image: url("chrome://browser/skin/symbolic/refresh.svg");
-<<<<<<< HEAD
-=======
-  opacity: 0.3;
->>>>>>> f00e4cc09af7fc8b83c7ed2350063d9b8dc49b93
 }
 
 #reload-button[disabled="true"] {
