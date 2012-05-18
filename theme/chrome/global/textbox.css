@@ -1,0 +1,191 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1/GPL 2.0/LGPL 2.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is Mozilla Communicator client code, released
+ * March 31, 1998.
+ *
+ * The Initial Developer of the Original Code is
+ * Netscape Communications Corporation.
+ * Portions created by the Initial Developer are Copyright (C) 1998-2001
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ *   Joe Hewitt (hewitt@netscape.com)
+ *
+ * Alternatively, the contents of this file may be used under the terms of
+ * either the GNU General Public License Version 2 or later (the "GPL"), or
+ * the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+ * in which case the provisions of the GPL or the LGPL are applicable instead
+ * of those above. If you wish to allow use of your version of this file only
+ * under the terms of either the GPL or the LGPL, and not to allow others to
+ * use your version of this file under the terms of the MPL, indicate your
+ * decision by deleting the provisions above and replace them with the notice
+ * and other provisions required by the GPL or the LGPL. If you do not delete
+ * the provisions above, a recipient may use your version of this file under
+ * the terms of any one of the MPL, the GPL or the LGPL.
+ *
+ * ***** END LICENSE BLOCK ***** */
+
+/* ===== textbox.css ==================================================
+  == Styles used by the XUL textbox element.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+/* ::::: textbox ::::: */
+
+textbox {
+ -moz-appearance: none;
+  border: 1px solid rgba(0,0,0,.25);
+  border-radius: 3px;
+  background-image: -moz-linear-gradient(top, #f2f2f2, #fdfdfd);
+  padding: 3px;
+  box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15),
+  		    0px 1px 0 0 rgba(255,255,255,0.89);
+  margin: 4px;
+    color: rgba(0,0,0,0.9);
+}
+
+textbox[focused="true"],
+.searchbar-textbox[focused="true"] {
+  border-color: rgba(0, 87, 179, 0.5);
+  border-color: #729fcf;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.6), inset 0 1px 2px 0 rgba(0,106,221,0.3);
+}
+
+
+html|*.textbox-input, 
+html|*.textbox-textarea {
+  margin: 0px !important;
+  border: none !important;
+  padding: 0px !important;
+  background-color: inherit;
+  color: inherit;
+  font: inherit;
+}
+
+html|*.textbox-input:-moz-placeholder,
+html|*.textbox-textarea:-moz-placeholder {
+  color: GrayText;
+}
+
+.textbox-contextmenu {
+  cursor: default;
+}
+
+/* ..... readonly state ..... */
+
+textbox[readonly="true"] {
+  background-color: -moz-Dialog;
+  color: -moz-DialogText;
+  border: none;
+  border-radius: 0px;
+  background-image: none;
+  padding: 0px;
+  box-shadow: none;
+}
+
+/* ..... disabled state ..... */
+
+textbox[disabled="true"] {
+  cursor: default;
+  background-color: -moz-Dialog;
+  color: GrayText;
+}
+
+/* ::::: plain textbox ::::: */
+
+textbox.plain {
+  -moz-appearance: none !important;
+  background-color: transparent;
+  padding: 0px !important;
+  margin: 0px !important;
+  border: none !important;
+}
+
+/* ::::: search textbox ::::: */
+
+.textbox-search-icon {
+  list-style-image: url("chrome://browser/skin/symbolic-icons/search.svg");
+}
+
+.textbox-search-clear {
+  list-style-image: url("chrome://browser/skin/symbolic-icons/clear.svg");
+}
+
+.textbox-search-icon[searchbutton]:not([disabled]) ,
+.textbox-search-clear:not([disabled]) {
+  cursor: pointer;
+}
+
+/* ::::: textboxes inside toolbarpaletteitems ::::: */
+
+toolbarpaletteitem > toolbaritem > textbox > .textbox-input-box > html|*.textbox-input {
+  visibility: hidden;
+}
+
+/* ::::: context menu ::::: */
+
+menuitem:not([type]) {
+  -moz-binding: url("chrome://global/content/bindings/menu.xml#menuitem-iconic");
+}
+
+menuitem[cmd="cmd_undo"] {
+  list-style-image: url("moz-icon://stock/gtk-undo?size=menu");
+}
+
+menuitem[cmd="cmd_undo"][disabled] {
+  list-style-image: url("moz-icon://stock/gtk-undo?size=menu&state=disabled");
+}
+
+menuitem[cmd="cmd_cut"] {
+  list-style-image: url("moz-icon://stock/gtk-cut?size=menu");
+}
+
+menuitem[cmd="cmd_cut"][disabled] {
+  list-style-image: url("moz-icon://stock/gtk-cut?size=menu&state=disabled");
+}
+
+menuitem[cmd="cmd_copy"] {
+  list-style-image: url("moz-icon://stock/gtk-copy?size=menu");
+}
+
+menuitem[cmd="cmd_copy"][disabled] {
+  list-style-image: url("moz-icon://stock/gtk-copy?size=menu&state=disabled");
+}
+
+menuitem[cmd="cmd_paste"] {
+  list-style-image: url("moz-icon://stock/gtk-paste?size=menu");
+}
+
+menuitem[cmd="cmd_paste"][disabled] {
+  list-style-image: url("moz-icon://stock/gtk-paste?size=menu&state=disabled");
+}
+
+menuitem[cmd="cmd_delete"] {
+  list-style-image: url("moz-icon://stock/gtk-delete?size=menu");
+}
+
+menuitem[cmd="cmd_delete"][disabled] {
+  list-style-image: url("moz-icon://stock/gtk-delete?size=menu&state=disabled");
+}
+
+menuitem[cmd="cmd_selectAll"] {
+  list-style-image: url("moz-icon://stock/gtk-select-all?size=menu");
+}
+
+menuitem[cmd="cmd_selectAll"][disabled] {
+  list-style-image: url("moz-icon://stock/gtk-select-all?size=menu&state=disabled");
+}
+

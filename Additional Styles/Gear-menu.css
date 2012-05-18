@@ -1,0 +1,52 @@
+#appmenu-toolbar-button > dropmarker{
+    display: none !important;
+}
+
+toolbar:not([mode="text"]) #appmenu-toolbar-button > .toolbarbutton-icon,
+toolbar:not([mode="text"]) #appmenu-button > .button-box .button-icon {
+
+      list-style-image: url("chrome://browser/skin/symbolic-icons/gear.png") !important ;
+}
+
+#appmenu-toolbar-button{
+  margin-left: 5px!important;
+  margin-right: -5px!important;
+  
+}
+
+
+#appmenu-toolbar-button:hover{
+  background:transparent !important;
+}
+
+#appmenu-toolbar-button:active{
+  background:transparent !important;
+}
+
+#appmenu-toolbar-buttonfocus {
+  border-color: #729fcf;
+}
+
+#appmenu-toolbar-button > image{
+    border-radius: 3px!important;
+  border: 1px solid!important;
+  border-color: rgba(0,0,0,.2)!important;
+  box-shadow: 0 1px 0 rgba(255,255,255,1)inset ,
+              0 1px rgba(255,255,255,1)!important;
+  background-image: -moz-linear-gradient(top, #F5F5F5, #DCDCDC)!important;
+  padding: 4px 7px!important ;
+  -moz-transition-property: border!important;
+  -moz-transition-duration: 500ms!important;
+}
+
+#appmenu-toolbar-button:hover > image{
+  border-color: rgba(0,0,0,.25)!important;
+}
+
+#appmenu-toolbar-button:active > image{
+  box-shadow: none!important;
+  background-image: none!important;
+  border-color: white!important ;
+  background-color: white!important;
+  border-radius: 3px 3px 0 0 !important;
+}

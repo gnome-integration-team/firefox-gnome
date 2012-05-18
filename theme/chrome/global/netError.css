@@ -1,0 +1,172 @@
+html {
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+	font: 11pt cantarell;
+	color: #2e3436;
+	padding: 20px 20px 0 20px;
+	background-color: #f6f6f4;
+	background-image: -moz-linear-gradient(top, #eeeeec, #f6f6f4);
+	background-size: 100% 5em;
+	background-repeat: no-repeat;
+}
+
+h1 {
+  color: #babdb6;
+  text-shadow: 0 1px 0 white;
+  margin: 0 0 .3em 0;
+  font-size: 160%;
+}
+
+ul, ol {
+  margin: 0;
+  -moz-margin-start: 1.5em;
+  padding: 0;
+}
+
+ul > li, ol > li {
+  margin-bottom: .5em;
+}
+
+ul {
+  list-style: square;
+}
+
+#errorPageContainer {
+  position: relative;
+  min-width: 13em;
+  max-width: 65em;
+  margin: auto;
+  padding: 3em;
+  -moz-padding-start: 5emx;
+  text-align: left;
+  color: #2e3436;
+}
+
+#errorPageContainer > #errorLongContent{
+   padding-left: 80px ;
+}
+
+#errorPageContainer  h1{
+   padding-left: 80px ;
+}
+
+
+#errorPageContainer.certerror {
+  background-image: url("chrome://global/skin/icons/sslWarning.png");
+}
+
+body[dir="rtl"] #errorPageContainer {
+  background-position: right 0;
+}
+
+#errorTitle {
+  -moz-margin-start: 80px;
+}
+
+#errorLongContent {
+  -moz-margin-start: 80px;
+}
+
+#errorShortDesc > p {
+  overflow: auto;
+  padding-bottom: 1em;
+  font-size: 110%;
+  white-space: pre-wrap;
+
+}
+
+#errorLongDesc {
+  -moz-padding-end: 3em;
+  font-size: 100%;
+
+}
+
+#errorLongDesc > p {
+  padding-bottom: 1em;
+}
+
+#errorTryAgain {
+  margin-top: 2em;
+  -moz-appearance: none;
+  border-radius: 3px;
+  border: 1px solid;
+   margin-left: 14em;
+  border-color: rgba(0,0,0,.2);
+  border-left: 1px solid rgba(0,0,0,.15) ;
+  box-shadow: 0 1px 0 rgba(255,255,255,1)inset ,
+              0 1px rgba(255,255,255,1);
+  background-image: -moz-linear-gradient(#F5F5F5, #DCDCDC);
+  padding: 4px 9px ;
+    -moz-transition-property: color, border, box-shadow, background-image;
+  -moz-transition-duration: 300ms;
+}
+
+#errorTryAgain:hover{
+		color: rgba(0,0,0,0.75);
+	  border-color: rgba(0,0,0,0.5);
+}
+
+#errorTryAgain:active{
+  color: rgba(0,0,0,0.75);
+  border-color: rgba(0,0,0,0.3);
+  box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.2) inset ,
+              0 1px rgba(255,255,255,1);
+  background-image: -moz-linear-gradient(top, #F5F5F5, #DCDCDC);
+  text-shadow: 0px 1px 0px rgba(255,255,255,0.6);
+}
+#brand {
+  position: absolute;
+  right: 0;
+  bottom: -1.5em;
+  -moz-margin-end: 10px;
+  opacity: .4;
+}
+
+body[dir="rtl"] #brand {
+  right: auto;
+  left: 0;
+}
+
+#brand > p {
+  margin: 0;
+}
+
+#errorContainer {
+  display: none;
+}
+
+#securityOverrideDiv {
+  padding-top: 10px;
+}
+
+#securityOverrideContent {
+  background-color: InfoBackground;
+  color: InfoText;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Custom styling for 'blacklist' error class */
+:root.blacklist #errorTitle, :root.blacklist #errorLongContent,
+:root.blacklist #errorShortDesc, :root.blacklist #errorLongDesc,
+:root.blacklist a {
+  background-color: #722; /* Dark red */
+  color: white;
+}
+
+:root.blacklist #errorPageContainer {
+  background-image: url("chrome://global/skin/icons/blacklist_large.png");
+  background-color: #722;
+}
+
+:root.blacklist {
+  background: #333;
+}
+
+:root.blacklist #errorTryAgain {
+  display: none;
+}

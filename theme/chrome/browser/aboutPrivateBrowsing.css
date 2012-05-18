@@ -1,0 +1,48 @@
+
+body.private > #errorPageContainer {
+
+}
+
+body.normal > #errorPageContainer {
+
+}
+
+#clearRecentHistoryDesc {
+  margin-top: 2em;
+}
+
+#clearRecentHistoryDesc > p {
+  font-size: 110%; /* to match the value set in chrome://global/skin/netError.css */
+}
+
+#startPrivateBrowsingDesc > button {
+  -moz-margin-start: 0;
+}
+
+#footerDesc > p {
+  font-size: 100%; /* to match the value set in chrome://global/skin/netError.css */
+}
+
+#moreInfo {
+  font-size: 100%; /* to match the value set in chrome://global/skin/netError.css */
+  -moz-padding-start: 25px;
+  background: url("chrome://browser/skin/symbolic-icons/important.svg") no-repeat top left;
+}
+
+body[dir="rtl"] #moreInfo {
+  background-position: top right;
+}
+
+#moreInfoText {
+  margin-bottom: 0;
+}
+
+#moreInfoLinkContainer {
+  margin-top: 0.1em;
+}
+
+a#moreInfoLink
+{
+  color: rgb(46,52,54);
+  font-size: 100%;
+}
