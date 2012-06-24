@@ -28,15 +28,13 @@
 #navigator-toolbox[tabsontop=false] > toolbar:not(:-moz-lwtheme):not(#toolbar-menubar) {
   -moz-appearance: none;
   border-style: none;
-  background-color: -moz-Dialog;
+  background-color: #ededed; /* -moz-Dialog;  ? */
 }
 
 #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
-  background: -moz-linear-gradient(top, #ababa0, #bbbbb3 13%, #d8d8d6 92%, #e2e2df);
 }
 
 #navigator-toolbox[tabsontop=false] > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
-  border-bottom: 1px solid #cececd;
 }
 
 #navigator-toolbox[tabsontop=false] > #nav-bar {
