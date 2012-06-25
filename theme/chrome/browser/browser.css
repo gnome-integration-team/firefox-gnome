@@ -38,7 +38,9 @@
 }
 
 #navigator-toolbox[tabsontop=false] > #nav-bar {
+  /*
   border-top: 1px solid #90908c !important;
+  */
 }
 
 #navigator-toolbox[tabsontop=true] > #nav-bar
