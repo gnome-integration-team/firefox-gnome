@@ -622,6 +622,7 @@ margin-right: -21px;
 
 /* 24px primary toolbar buttons */
 #back-button {
+  background: none;
   list-style-image: url("chrome://browser/skin/symbolic-icons/back-button.svg");
   padding-right: 15px !important;
   -moz-padding-start: 6px !important;
@@ -640,6 +641,7 @@ margin-right: -21px;
 }
 
 #forward-button {
+  background: none;
 /*  padding-right: 10px; */
   list-style-image: url("chrome://browser/skin/symbolic-icons/forward-button.svg");
   -moz-padding-end: 9px !important;

@@ -82,19 +82,23 @@ toolbarbutton:not([disabled]):hover,
 #navigator-toolbox[tabsontop="false"] toolbarbutton:not([disabled]):hover:active,
 #navigator-toolbox[tabsontop="false"] toolbarbutton:not([disabled]):active {
 	background-color: white;
-    border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
 }
 
 toolbarbutton:not([disabled]):hover:active,
 toolbarbutton:not([disabled]):active {
+  /*
   padding: 4px 2px 2px 4px;
+  */
 }
 
 toolbarbutton:active,
 toolbarbutton[open="true"] {
+  /*
   padding: 4px 2px 2px 4px;
   -moz-padding-start: 4px;
   -moz-padding-end: 2px;
+  */
   color: ButtonText;
 }
 
