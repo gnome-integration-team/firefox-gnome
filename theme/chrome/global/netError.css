@@ -1,25 +1,23 @@
-/*
- *  This defines the look-and-feel styling of the error pages.
- *  (see: netError.xhtml)
- *
- *  Original styling by William Price <bugzilla@mob.rice.edu>
- *  Updated by: Michael Ventnor <m.ventnor@gmail.com>
- */
-
 html {
-  background: -moz-Dialog;
+
 }
 
 body {
   margin: 0;
-  padding: 0 1em;
-  color: -moz-FieldText;
-  font: message-box;
+  padding: 0;
+	font: 11pt cantarell;
+	color: #2e3436;
+	padding: 20px 20px 0 20px;
+	background-color: #f6f6f4;
+	background-image: -moz-linear-gradient(top, #eeeeec, #f6f6f4);
+	background-size: 100% 5em;
+	background-repeat: no-repeat;
 }
 
 h1 {
-  margin: 0 0 .6em 0;
-  border-bottom: 1px solid ThreeDLightShadow;
+  color: #babdb6;
+  text-shadow: 0 1px 0 white;
+  margin: 0 0 .3em 0;
   font-size: 160%;
 }
 
@@ -40,15 +38,23 @@ ul {
 #errorPageContainer {
   position: relative;
   min-width: 13em;
-  max-width: 52em;
-  margin: 4em auto;
-  border: 1px solid ThreeDShadow;
-  border-radius: 10px;
-  padding: 3em;
-  -moz-padding-start: 30px;
-  background: url("moz-icon://stock/gtk-dialog-warning?size=dialog") left 0 no-repeat -moz-Field;
-  background-origin: content-box;
+  max-width: 65em;
+  margin: auto;
+  padding: 3em 0;
+  -moz-padding-start: 5emx;
+  text-align: left;
+  color: #2e3436;
+  background: none !important;
 }
+
+#errorPageContainer > #errorLongContent{
+   padding-left: 80px ;
+}
+
+#errorPageContainer  h1{
+   padding-left: 80px ;
+}
+
 
 #errorPageContainer.certerror {
   background-image: url("chrome://global/skin/icons/sslWarning.png");
@@ -68,25 +74,51 @@ body[dir="rtl"] #errorPageContainer {
 
 #errorShortDesc > p {
   overflow: auto;
-  border-bottom: 1px solid ThreeDLightShadow;
   padding-bottom: 1em;
-  font-size: 130%;
+  font-size: 110%;
   white-space: pre-wrap;
+
 }
 
 #errorLongDesc {
   -moz-padding-end: 3em;
-  font-size: 110%;
+  font-size: 100%;
+
 }
 
 #errorLongDesc > p {
+  padding-bottom: 1em;
 }
 
 #errorTryAgain {
   margin-top: 2em;
-  -moz-margin-start: 80px;
+  -moz-appearance: none;
+  border-radius: 3px;
+  border: 1px solid;
+   margin-left: 14em;
+  border-color: rgba(0,0,0,.2);
+  border-left: 1px solid rgba(0,0,0,.15) ;
+  box-shadow: 0 1px 0 rgba(255,255,255,1)inset ,
+              0 1px rgba(255,255,255,1);
+  background-image: -moz-linear-gradient(#F5F5F5, #DCDCDC);
+  padding: 4px 9px ;
+    -moz-transition-property: color, border, box-shadow, background-image;
+  -moz-transition-duration: 300ms;
 }
 
+#errorTryAgain:hover{
+		color: rgba(0,0,0,0.75);
+	  border-color: rgba(0,0,0,0.5);
+}
+
+#errorTryAgain:active{
+  color: rgba(0,0,0,0.75);
+  border-color: rgba(0,0,0,0.3);
+  box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.2) inset ,
+              0 1px rgba(255,255,255,1);
+  background-image: -moz-linear-gradient(top, #F5F5F5, #DCDCDC);
+  text-shadow: 0px 1px 0px rgba(255,255,255,0.6);
+}
 #brand {
   position: absolute;
   right: 0;
