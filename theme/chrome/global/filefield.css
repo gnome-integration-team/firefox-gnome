@@ -39,9 +39,18 @@
 */
 
 /* File Field Widget */
+
 filefield {
   margin: 2px 4px;
-  -moz-appearance: textfield;
+  -moz-appearance: none;
+  border: 1px solid rgba(0,0,0,.25);
+  border-radius: 3px;
+  background-image: -moz-linear-gradient(top, #f2f2f2, #fdfdfd);
+  padding: 3px;
+  box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15),
+  		    0px 1px 0 0 rgba(255,255,255,0.89);
+  margin: 4px;
+  background: none;
 }
 
 .fileFieldContentBox {
@@ -62,6 +71,7 @@ filefield {
 }
 
 .fileFieldLabel {
+  color: rgba(0,0,0,0.9);
   -moz-appearance: none;
   background-color: transparent;
   border: none;
