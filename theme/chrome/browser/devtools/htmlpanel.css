@@ -59,7 +59,7 @@ body {
   overflow: auto;
   font-family: Lucida Grande, sans-serif;
   font-size: 11px;
-  border-top: 1px solid #BBB9BA;
+  padding-top: 5px;
 }
 
 h1 {
@@ -157,9 +157,7 @@ code {
 .twisty {
   position: absolute;
   left: 0px;
-  top: 0px;
-  width: 14px;
-  height: 14px;
+  padding: 8px;
 }
 
 .nodeChildBox {
@@ -202,6 +200,8 @@ code {
 
 .docType {
   position: absolute;
+  /* position DOCTYPE element above/outside the "nodeBox" that contains it */
+  /* Note: to be fixed in Bug #688439 */
   top: -16px;
   font-family: Menlo, Andale Mono, monospace;
   padding-left: 8px;
@@ -211,7 +211,9 @@ code {
 }
 
 .htmlNodeBox {
-  top: 16px;
+  /* make room for DOCTYPE element to be rendered above/outside "nodeBox" */
+  /* Note: to be fixed in Bug #688439 */
+  margin-top: 16px;
 }
 
 .nodeWhiteSpace {
@@ -374,4 +376,27 @@ code {
 
 .nodeBox.highlighted > .nodeLabel {
   border-color: #3875d7 !important;
+}
+
+.editingAttributeValue {
+  background-color: #492;
+}
+
+#attribute-editor {
+  visibility: hidden;
+  position: absolute;
+  z-index: 5000;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+#attribute-editor.editing {
+  visibility: visible;
+}
+
+#attribute-editor-input {
+  border: none;
+  padding: 2px 5px;
+  font-family: Menlo, Andale Mono, monospace;
+  font-size: 11px;
 }
