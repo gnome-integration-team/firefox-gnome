@@ -60,8 +60,17 @@ checkbox {
    mark. */
 
 .checkbox-spacer-box {
-  -moz-appearance: checkbox;
+  -moz-appearance: none;
   -moz-box-align: center;
+  margin: 2px;
+  border-right: 2px solid transparent;
+}
+
+.checkbox-spacer-box >image {
+  -moz-appearance: none;
+  list-style-image: url("chrome://global/skin/checkbox/checkbox-unchecked.png");
+  -moz-box-align: center;
+  background: none;
   margin: 2px;
   border-right: 2px solid transparent;
 }
@@ -101,14 +110,14 @@ checkbox[disabled="true"] {
 /* ::::: checkmark image ::::: */
 
 .checkbox-check {
-  border: 2px solid;
+ /* border: 2px solid;
   -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
   -moz-border-right-colors: ThreeDHighlight ThreeDLightShadow;
   -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
   -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow;
   min-width: 13px;
   min-height: 13px;
-  background: -moz-Field no-repeat 50% 50%;
+  background: -moz-Field no-repeat 50% 50%; */
 }
 
 checkbox:not([disabled="true"]):hover {
@@ -123,10 +132,11 @@ checkbox:hover:active > .checkbox-spacer-box > .checkbox-check {
 /* ..... checked state ..... */
 
 checkbox[checked="true"] > .checkbox-spacer-box > .checkbox-check {
-  background-image: url("chrome://global/skin/checkbox/cbox-check.gif");
+  list-style-image: url("chrome://global/skin/checkbox/checkbox-checked.png");
 }
 
+
 checkbox[checked="true"][disabled="true"] > .checkbox-spacer-box > .checkbox-check {
-  background-image: url("chrome://global/skin/checkbox/cbox-check-dis.gif") !important
+  list-style-image: url("chrome://global/skin/checkbox/checkbox-checked-insensitive.png");
 }
 
