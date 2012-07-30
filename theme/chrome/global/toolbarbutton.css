@@ -81,7 +81,8 @@ toolbarbutton:not([disabled]):hover,
 
 #navigator-toolbox[tabsontop="false"] toolbarbutton:not([disabled]):hover:active,
 #navigator-toolbox[tabsontop="false"] toolbarbutton:not([disabled]):active {
-  background: -moz-linear-gradient(top, rgb(152,150,136), rgb(157,155,140) 4%, rgb(174,172,159) 26%, rgb(195,193,185) 59%, rgb(199,197,190) 70%, rgb(207,206,199) 81%, rgb(209,208,203) 93%, rgb(207,206,201));
+	background-color: white;
+    border-radius: 3px 3px 0 0;
 }
 
 toolbarbutton:not([disabled]):hover:active,
