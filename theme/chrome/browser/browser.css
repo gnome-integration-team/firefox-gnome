@@ -623,6 +623,7 @@ margin-right: -21px;
 #back-button {
   list-style-image: url("chrome://browser/skin/symbolic-icons/back-button.svg");
   padding-right: 15px !important;
+  -moz-padding-start: 6px !important;
 }
 
 #back-button[disabled="true"] {
@@ -640,7 +641,7 @@ margin-right: -21px;
 #forward-button {
 /*  padding-right: 10px; */
   list-style-image: url("chrome://browser/skin/symbolic-icons/forward-button.svg");
-  -moz-padding-end: 14px!important;
+  -moz-padding-end: 9px !important;
 }
 
 #forward-button:-moz-locale-dir(rtl) {
@@ -649,7 +650,9 @@ margin-right: -21px;
 
 #forward-button[disabled] {
   list-style-image: url("chrome://browser/skin/symbolic-icons/forward-button-disabled.svg");
+  /*
     -moz-padding-end: 50px !important;
+  */
 }
 
 #forward-button[disabled]:-moz-locale-dir(rtl) {
@@ -1120,12 +1123,14 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 /* Identity indicator */
 #identity-box {
+  /*
   background-image: -moz-linear-gradient(hsl(0,0%,98%), hsl(0,0%,92%));
   box-shadow: 0 1px 0 hsla(0,0%,0%,.05) inset;
   -moz-border-end: 1px solid rgba(0,0,0,.1);
   padding: 1px;
   margin: -1px;
   -moz-margin-end: 0;
+  */
 }
 
 #identity-box:-moz-locale-dir(ltr) {
@@ -1504,6 +1509,9 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   border: none;
   cursor: pointer;
   width: 22px;
+  margin-left: 4px;
+  padding: 2px 4px 2px 6px;
+  border: 1px solid rgba(0,0,0,0.1)
 }
 
 #go-button {
@@ -1541,7 +1549,9 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 #urlbar-reload-button {
   opacity: 0.5;
+  /*
   list-style-image: url("moz-icon://stock/gtk-stop?size=menu");
+  */
 }
 
 /* Popup blocker button */
