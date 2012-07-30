@@ -48,11 +48,11 @@ ul {
 }
 
 #errorPageContainer > #errorLongContent{
-   padding-left: 80px ;
+   padding: 0 24px;
 }
 
 #errorPageContainer  h1{
-   padding-left: 80px ;
+   padding: 0 24px;
 }
 
 
