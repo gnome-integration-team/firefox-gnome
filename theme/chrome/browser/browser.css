@@ -1198,6 +1198,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   box-shadow: 0 1px 0 hsla(215,54%,33%,.05) inset;
   -moz-border-end-color: hsla(215,54%,33%,.2);
   color: hsl(215,54%,33%);
+  margin-right: 3px;
 }
 
 #identity-box.verifiedDomain:hover:active,
@@ -1659,9 +1660,8 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 #TabsToolbar[tabsontop=false] {
   margin-top: 4px; /* margin between tabs and browser bar */
-  /* border-bottom: 3px solid red !important;
+  border-bottom: 3px solid red !important;
   -moz-border-bottom-colors: #a7a7a7 #fff #fff;
-  */
 }
 
 /* put some space between the newtab-button and regular tabs */
