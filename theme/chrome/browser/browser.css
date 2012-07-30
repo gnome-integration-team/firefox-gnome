@@ -1512,6 +1512,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   padding-left: 2px!important;
   cursor: pointer !important;
   width: 24px !important;
+  margin-left: 3px;
 }
 
 #go-button {
