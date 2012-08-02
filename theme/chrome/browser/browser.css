@@ -1,6 +1,8 @@
 
 @import url("chrome://global/skin/");
 
+@import url("chrome://app_version/skin/browser.css");
+
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
 
@@ -1695,7 +1697,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   /*
   padding: 1px 2px 3px;
   */
-  padding: 0 4px 2px 3px;
   min-height: 26px; /* reserve space for the sometimes hidden close button */
   background-clip: padding-box;
 }
@@ -1706,7 +1707,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 .tabbrowser-tab[selected="true"] {
-  padding-bottom: 3px; /* Make text bump up a little on the selected tab */
 }
 
 #main-window[tabsontop=true] .tabbrowser-tab:not([selected="true"]),
