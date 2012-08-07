@@ -1,7 +1,7 @@
 ## GNOME 3 Adwaita theme for Firefox
 
-An easy-to-install version of this theme is available at:
-[Mozilla's ADD-ONS site](https://addons.mozilla.org/en-US/firefox/addon/adwaita)
+An easy-to-install version of this theme is available at 
+[Mozilla's ADD-ONS site](https://addons.mozilla.org/en-US/firefox/addon/adwaita).
 
 We recommend [Htitle](https://addons.mozilla.org/en-US/firefox/addon/htitle) 
 for the full GNOME 3 experience.
