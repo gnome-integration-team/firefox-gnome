@@ -3,7 +3,7 @@
 An easy-to-install version of this theme is available at 
 [Mozilla's ADD-ONS site](https://addons.mozilla.org/en-US/firefox/addon/adwaita).
 
-We recommend [Htitle](https://addons.mozilla.org/en-US/firefox/addon/htitle) 
+We recommend [HTitle](https://addons.mozilla.org/en-US/firefox/addon/htitle) 
 for the full GNOME 3 experience.
 
 For current issues please see the 
