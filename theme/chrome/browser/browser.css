@@ -1671,15 +1671,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 /* put some space between the newtab-button and regular tabs */
 .tabs-newtab-button
 {
-
-  margin-left: 10px; 
-}
-
-/* put some space between the newtab-button and regular tabs 
-   (swapped for RTL locales) */
-.tabs-newtab-button:-moz-locale-dir(rtl)
-{
-  margin-right: 10px;
+  -moz-margin-start: 10px;
 }
 
 .tabbrowser-tab {
