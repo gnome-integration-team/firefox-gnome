@@ -23,6 +23,13 @@
     <em:creator>Adwaita Firefox Team</em:creator>
     <em:contributor>Adwaita Firefox Team</em:contributor>
     <em:internalName>Adwaita</em:internalName>
+    
+    <em:localized>
+      <Description em:locale="ru-RU">
+        <em:name>Adwaita</em:name>
+        <em:description>Тема GNOME 3 Adwaita для Firefox</em:description>
+      </Description>
+    </em:localized>
 
   </Description>     
 </RDF>
