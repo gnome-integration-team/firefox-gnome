@@ -2738,3 +2738,9 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
 #fixer-menu-button > #appmenu-toolbar-button, #fixer-menu-button > #appmenu-button {
   border: none !important;
 }
+
+/** Color for URL bar, from Evandro (efg) on #gnome-design **/
+.ac-url-text {
+  font-size: 90% !important;
+  color: gray !important;
+}
