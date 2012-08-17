@@ -42,9 +42,8 @@
 
 menupopup,
 panel {
-  -moz-appearance: menupopup;
   /*
-  background-color: white;
+  -moz-appearance: menupopup;
   */
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25);
   min-width: 1px;
@@ -52,7 +51,7 @@ panel {
 }
 
 menupopup {
-  background-color: Menu;
+  background-color: white;
 }
 
 /* ::::: arrow panel ::::: */
