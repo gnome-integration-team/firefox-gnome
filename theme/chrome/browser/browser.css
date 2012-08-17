@@ -1158,9 +1158,11 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #identity-box:hover:active,
 #identity-box[open="true"] {
+  /*
   background-image: -moz-linear-gradient(hsl(0,0%,92%), hsl(0,0%,82%));
-  box-shadow: 0 1px 1px hsla(0,0%,0%,.3) inset,
-              0 1px 3px hsla(0,0%,0%,.3) inset;
+  */
+  box-shadow: 0 1px 1px hsla(0,0%,0%,.1) inset,
+              0 1px 3px hsla(0,0%,0%,.1) inset;
 }
 
 #identity-box:hover:active > #identity-box-inner > #page-proxy-stack > #page-proxy-favicon,
@@ -1201,35 +1203,51 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 
 #identity-box.verifiedDomain {
+  /*
   background-image: -moz-linear-gradient(hsl(215,60%,92%), hsl(215,58%,88%));
   box-shadow: 0 1px 0 hsla(215,54%,33%,.05) inset;
   -moz-border-end-color: hsla(215,54%,33%,.2);
   color: hsl(215,54%,33%);
+  */
+  background: rgba(114, 159, 207, 0.2);
+  border-right: 1px solid rgba(114, 159, 207, 0.3);
+  color: #3465a4;
   margin-right: 3px;
 }
 
 #identity-box.verifiedDomain:hover:active,
 #identity-box.verifiedDomain[open="true"] {
+  /*
   background-image: -moz-linear-gradient(hsl(215,80%,80%), hsl(215,67%,65%));
   box-shadow: 0 1px 1px hsla(215,54%,33%,.7) inset,
               0 1px 3px 1px hsla(215,54%,33%,.5) inset;
+  */
 }
 
 #identity-box.verifiedIdentity {
+  /*
   background-image: -moz-linear-gradient(hsl(91,70%,90%), hsl(93,60%,81%));
   box-shadow: 0 1px 0 hsla(92,81%,16%,.05) inset;
   -moz-border-end-color: hsla(92,81%,16%,.2);
   color: hsl(92,81%,16%);
+  */
+  background: rgba(115, 210, 22, 0.15);
+  border-right: 1px solid rgba(115, 210, 22, 0.25);
+  color: #4e9a06;
+  margin-right: 3px;
 }
 
 #identity-box.verifiedIdentity:hover:active,
 #identity-box.verifiedIdentity[open="true"] {
+  /*
   background-image: -moz-linear-gradient(hsl(92,65%,70%), hsl(92,40%,48%));
   box-shadow: 0 1px 1px hsla(92,81%,16%,.6) inset,
               0 1px 3px 1px hsla(92,81%,16%,.5) inset;
+              */
 }
 
 #identity-box.verifiedIdentity {
+  /*
   background-color: #fff;
   color: hsl(92,100%,30%);
   -moz-margin-end: 4px;
@@ -1237,6 +1255,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
                                          hsla(92,81%,16%,.2) 25%,
                                          hsla(92,81%,16%,.2) 75%,
                                          hsla(92,81%,16%,0));
+  */
   background-position: right;
   background-size: 1px;
   background-repeat: no-repeat;
@@ -1244,7 +1263,6 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #identity-box.verifiedIdentity:-moz-locale-dir(rtl) {
   background-position: left;
->>>>>>> vanilla
 }
 
 /* Identity popup icons */
@@ -2398,7 +2416,6 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
 
 /* Highlighter - Node Infobar - box & arrow */
 
->>>>>>> vanilla
 .highlighter-nodeinfobar-arrow {
   width: 14px;
   height: 14px;
