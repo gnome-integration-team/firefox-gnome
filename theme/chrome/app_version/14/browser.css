@@ -1,0 +1,7 @@
+.tabbrowser-tab {
+  padding: 0 4px 2px 3px;
+}
+
+.tabbrowser-tab[selected="true"] {
+  padding-bottom: 3px; /* Make text bump up a little on the selected tab */
+}
