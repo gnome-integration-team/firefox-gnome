@@ -44,19 +44,27 @@
 
 /* :::::::::: button :::::::::: */
 
+
+ 
 button {
-  -moz-appearance: button;
+  -moz-appearance: none;
   margin: 1px 5px 2px 5px;
   min-width: 6.3em;
-  border: 3px solid;
-  -moz-border-top-colors: transparent ThreeDHighlight ThreeDLightShadow;
-  -moz-border-right-colors: transparent ThreeDDarkShadow ThreeDShadow;
-  -moz-border-bottom-colors: transparent ThreeDDarkShadow ThreeDShadow;
-  -moz-border-left-colors: transparent ThreeDHighlight ThreeDLightShadow;
-  background-color: ThreeDFace;
-  color: ButtonText;
-  text-shadow: none;
+  color: rgba(0,0,0,0.65);
+  text-shadow: 0px 1px 0px rgba(255,255,255,0.6);
+    border-radius: 3px;
+  border: 1px solid;
+  border-color: rgba(0,0,0,.2);
+  box-shadow: 0 1px 0 rgba(255,255,255,1)inset ,
+              0 1px rgba(255,255,255,1);
+  background-image: -moz-linear-gradient(top, #F5F5F5, #DCDCDC);
+  padding: 4px 7px ;
+  -moz-transition-property: color, border, box-shadow, background-image;
+  -moz-transition-duration: 300ms;
 }
+
+
+
 
 .button-box {
   -moz-appearance: button-focus;
@@ -79,42 +87,41 @@ button {
 /* .......... focused state .......... */
 
 button:focus {
-  -moz-border-top-colors: ThreeDDarkShadow ThreeDHighlight transparent;
-  -moz-border-right-colors: ThreeDDarkShadow ThreeDDarkShadow ThreeDShadow;
-  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDDarkShadow ThreeDShadow;
-  -moz-border-left-colors: ThreeDDarkShadow ThreeDHighlight transparent;
+  border-color: #729fcf;
 }
 
 button:focus > .button-box {
-  border: 1px dotted ThreeDDarkShadow;
+/*  border: 1px dotted ThreeDDarkShadow;*/
 }
 
 /* .......... default state .......... */
 
 button[default="true"] {
-  -moz-border-top-colors: ThreeDDarkShadow ThreeDHighlight ThreeDLightShadow;
+/* -moz-border-top-colors: ThreeDDarkShadow ThreeDHighlight ThreeDLightShadow;
   -moz-border-right-colors: ThreeDDarkShadow ThreeDDarkShadow ThreeDShadow;
   -moz-border-bottom-colors: ThreeDDarkShadow ThreeDDarkShadow ThreeDShadow;
-  -moz-border-left-colors: ThreeDDarkShadow ThreeDHighlight ThreeDLightShadow;
+  -moz-border-left-colors: ThreeDDarkShadow ThreeDHighlight ThreeDLightShadow;*/
 }
 
 /* .......... hover state .......... */
 
-button:hover {
-  color: -moz-buttonhovertext;
-  background-color: -moz-buttonhoverface;
+button:hover{
+	  color: rgba(0,0,0,0.75);
+	  border-color: rgba(0,0,0,0.5);
 }
+
 
 /* .......... active/open/checked state .......... */
 
 button:hover:active,
 button[open="true"],
 button[checked="true"] {
-  -moz-border-top-colors: ThreeDDarkShadow ThreeDShadow transparent;
-  -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow transparent;
-  -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow transparent;
-  -moz-border-left-colors: ThreeDDarkShadow ThreeDShadow transparent;
-  color: ButtonText;
+  color: rgba(0,0,0,0.75);
+  border-color: rgba(0,0,0,0.3);
+  box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.2) inset ,
+              0 1px rgba(255,255,255,1);
+  background-image: -moz-linear-gradient(top, #F5F5F5, #DCDCDC);
+  text-shadow: 0px 1px 0px rgba(255,255,255,0.6);
 }
 
 button:hover:active > .button-box,
@@ -130,11 +137,11 @@ button[checked="true"] > .button-box {
 
 button[disabled="true"],
 button[disabled="true"]:hover:active {
-  -moz-border-top-colors: transparent ThreeDHighlight ThreeDLightShadow !important;
-  -moz-border-right-colors: transparent ThreeDDarkShadow ThreeDShadow !important;
-  -moz-border-bottom-colors: transparent ThreeDDarkShadow ThreeDShadow !important;
-  -moz-border-left-colors: transparent ThreeDHighlight ThreeDLightShadow !important;
+  border-color: rgba(0,0,0,.15)!important;
+  box-shadow: 0 0px 0 rgba(255,255,255,0)inset ,
+              0 0px rgba(255,255,255,0);
   color: GrayText;
+  background-image: -moz-linear-gradient(top, #F5F5F5, #F5F5F5)!important;
 }
 
 button[disabled="true"] > .button-box {
