@@ -134,6 +134,24 @@ toolbarbutton:-moz-lwtheme:not(:hover):not([checked="true"]):not([open="true"]):
   text-shadow: inherit;
 }
 
+/* ::::: toolbarbutton radio buttons ::::: */
+
+toolbarbutton[type="radio"] {
+  -moz-appearance: none;
+  border: none;
+  border-radius: 3px;
+  color: rgba(0,0,0,0.65);
+  padding: 4px 7px !important;
+  text-shadow: 0px 1px 0px rgba(255,255,255,0.6);
+}
+
+toolbarbutton[type="radio"][checked="true"] {
+  background-image: -moz-linear-gradient(top, #a7aba7, #e1e1e1);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.6) , 0 0 0 1px rgba(0, 10, 0, 0.2) inset !important;
+  color: white !important;
+  text-shadow: 0.5px 0 0.5px rgba(255, 255, 255, 0.6), 0.5px 1px 0 rgba(0, 0, 0, 0.4);
+}
+
 /* ::::: toolbarbutton menu ::::: */
 
 .toolbarbutton-menu-dropmarker {
