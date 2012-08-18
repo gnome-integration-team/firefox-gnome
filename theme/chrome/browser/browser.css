@@ -999,7 +999,7 @@ toolbar[iconsize="small"] #feed-button {
   -moz-transition-duration: 300ms;
 }
 .searchbar-textbox {
-  padding: 1px 3px 1px 1px;
+  -moz-padding-end: 3px;
 }
 
 #urlbar[focused="true"],
@@ -2528,7 +2528,7 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
 
 .inspector-breadcrumbs-button {
   -moz-appearance: none;
-  background-color: transparent;
+  background: transparent;
   border-width: 1px 13px 2px 13px;
   color: hsl(210,30%,85%);
   max-width: 85px;
@@ -2539,6 +2539,7 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
 
   margin: 0 -11px 0 0;
   padding: 0 9px;
+  box-shadow: none;
 }
 
 .inspector-breadcrumbs-button:-moz-focusring > label {
