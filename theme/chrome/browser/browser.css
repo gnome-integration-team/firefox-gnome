@@ -999,7 +999,7 @@ toolbar[iconsize="small"] #feed-button {
   -moz-transition-duration: 300ms;
 }
 .searchbar-textbox {
-  padding: 1px 3px 1px 1px;
+  -moz-padding-end: 3px;
 }
 
 #urlbar[focused="true"],

@@ -29,7 +29,9 @@
   -moz-appearance: none;
   min-width: 0;
   margin: 0;
-  padding: 3px 2px 3px 0;
+  padding: 3px;
+  -moz-padding-start: 0;
+  -moz-padding-end: 2px;
   border: 0;
   -moz-box-align: center;
   background: transparent;
