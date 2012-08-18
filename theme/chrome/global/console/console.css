@@ -41,6 +41,17 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+#ToolbarMode,
+#ToolbarEval {
+  -moz-appearance: none;
+  background: #ededed;
+  border: none;
+}
+
+#ToolbarEval {
+  border-bottom: 1px solid #a7aba7;
+}
+
 .console-box {
   background-color: -moz-Field;
   color: -moz-FieldText;
