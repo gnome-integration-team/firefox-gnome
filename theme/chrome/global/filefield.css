@@ -57,10 +57,6 @@ filefield {
   background-color: -moz-Dialog;
 }
 
-.fileFieldIcon[disabled="true"] {
-  opacity: 0.4;
-}
-
 .fileFieldIcon {
   width: 16px;
   height: 16px;
@@ -68,6 +64,11 @@ filefield {
   margin-bottom: 1px;
   -moz-margin-start: 1px;
   -moz-margin-end: 4px;
+  background: url("moz-icon://stock/gtk-directory?size=menu") center no-repeat;
+}
+
+.fileFieldIcon[disabled="true"] {
+  background-image: url("moz-icon://stock/gtk-directory?size=menu&state=disabled");
 }
 
 .fileFieldLabel {
