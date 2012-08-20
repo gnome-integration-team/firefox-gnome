@@ -1738,7 +1738,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 #TabsToolbar[tabsontop=false] {
   margin-top: 4px; /* margin between tabs and browser bar */
-  border-bottom: 3px solid red !important;
+  border-bottom: 3px solid transparent !important;
   -moz-border-bottom-colors: #a7a7a7 #fff #fff;
 }
 
@@ -2810,4 +2810,26 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
 .ac-url-text {
   font-size: 90% !important;
   color: gray !important;
+}
+
+/** Tree style tabs **/
+tabs[orient="vertical"] .tabbrowser-tab {
+  -moz-background-image: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+tabs:not([treestyletab-tabbar-position="top"]) .tabbrowser-tab:not([pinned])[selected="true"] {
+  background: #519ef0 !important;
+  color: white !important;
+}
+
+.treestyletab-tabbar-toolbar[treestyletab-mode="vertical"] > *:not(toolbarpaletteitem) {
+  background: none !important;
+  border: none !important;
+}
+
+.tabbrowser-strip[treestyletab-tabbar-position="left"]:not([treestyletab-tabbar-transparent="full"]), .treestyletab-tabbar-toolbar[treestyletab-tabbar-position="left"]:not([treestyletab-tabbar-transparent="full"]) {
+  background: #fafdff !important;
 }
