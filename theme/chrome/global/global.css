@@ -336,3 +336,8 @@ notification > button {
 .autoscroller[scrolldir="EW"] {
   background-position: center bottom;
 }
+
+/* about:addons */
+#addons-page .button-link {
+  box-shadow: none !important;
+}
