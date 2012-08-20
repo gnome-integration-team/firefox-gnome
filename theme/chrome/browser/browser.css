@@ -181,7 +181,7 @@ menuitem.bookmark-item {
 }
 
 .bookmark-item[container] {
-  list-style-image: url("chrome://browser/skin/folder.png");
+  list-style-image: url("chrome://browser/skin/symbolic-icons/folder.svg");
 }
 
 .bookmark-item[container][livemark] { 
