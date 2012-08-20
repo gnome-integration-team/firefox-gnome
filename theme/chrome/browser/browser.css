@@ -1909,7 +1909,8 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tabs-newtab-button,
 #TabsToolbar > #new-tab-button ,
 #TabsToolbar > #wrapper-new-tab-button > #new-tab-button {
-  list-style-image: url("moz-icon://stock/gtk-add?size=menu");
+/*  list-style-image: url("moz-icon://stock/gtk-add?size=menu");*/
+  list-style-image: url(chrome://browser/skin/symbolic-icons/tab-new-tp.svg);
   -moz-image-region: auto;
 }
 
