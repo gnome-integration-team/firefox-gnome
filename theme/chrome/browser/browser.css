@@ -745,7 +745,8 @@ margin-right: -21px;
 }
 
 #new-tab-button {
-  -moz-image-region: rect(0px 96px 24px 72px);
+/*  -moz-image-region: rect(0px 96px 24px 72px);*/
+  list-style-image: url(chrome://browser/skin/symbolic-icons/tab-new.svg);
 }
 
 #new-window-button {
@@ -901,7 +902,8 @@ toolbar[iconsize="small"] #print-button[disabled="true"] {
 }
 
 toolbar[iconsize="small"] #new-tab-button {
-  -moz-image-region: rect(0px 64px 16px 48px);
+/*  -moz-image-region: rect(0px 64px 16px 48px);*/
+  list-style-image: url(chrome://browser/skin/symbolic-icons/tab-new.svg);
 }
 
 toolbar[iconsize="small"] #new-window-button {
