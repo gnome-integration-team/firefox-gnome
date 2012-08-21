@@ -185,7 +185,7 @@ menuitem.bookmark-item {
 }
 
 .bookmark-item[container][livemark] { 
-  list-style-image: url("chrome://browser/skin/feeds/feedIcon16.png");
+  list-style-image: url("chrome://browser/skin/symbolic-icons/rss.svg");
 }
 
 .bookmark-item[container][livemark] .bookmark-item {
@@ -198,7 +198,7 @@ menuitem.bookmark-item {
 }
 
 .bookmark-item[container][query] {
-  list-style-image: url("chrome://browser/skin/places/query.png");
+  list-style-image: url("chrome://browser/skin/symbolic-icons/folder-saved-search.svg");
 }
 
 .bookmark-item[query][tagContainer] {
@@ -210,11 +210,11 @@ menuitem.bookmark-item {
 }
 
 .bookmark-item[query][hostContainer] {
-  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
+  list-style-image: url("chrome://browser/skin/symbolic-icons/folder.svg");
 }
 
 .bookmark-item[query][hostContainer][open] {
-  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
+  list-style-image: url("chrome://browser/skin/symbolic-icons/folder.svg");
 }
 
 .bookmark-item[cutting] > .toolbarbutton-icon,
