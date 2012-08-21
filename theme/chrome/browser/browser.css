@@ -754,24 +754,24 @@ margin-right: -21px;
 }
 
 #cut-button {
-  list-style-image: url("moz-icon://stock/gtk-cut?size=toolbar");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/cut.svg);
 }
 #cut-button[disabled="true"] {
-  list-style-image: url("moz-icon://stock/gtk-cut?size=toolbar&state=disabled");
+  opacity: 0.5;
 }
 
 #copy-button {
-  list-style-image: url("moz-icon://stock/gtk-copy?size=toolbar");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/copy.svg);
 }
 #copy-button[disabled="true"] {
-  list-style-image: url("moz-icon://stock/gtk-copy?size=toolbar&state=disabled");
+  opacity: 0.5;
 }
 
 #paste-button {
-  list-style-image: url("moz-icon://stock/gtk-paste?size=toolbar");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/paste.svg);
 }
 #paste-button[disabled="true"] {
-  list-style-image: url("moz-icon://stock/gtk-paste?size=toolbar&state=disabled");
+  opacity: 0.5;
 }
 
 #fullscreen-button {
@@ -789,15 +789,33 @@ margin-right: -21px;
 }
 
 #sync-button {
-  -moz-image-region: rect(0px 144px 24px 120px);
+  list-style-image: url("chrome://browser/skin/symbolic-icons/sync.svg");
 }
-#sync-button[status="active"] {
-  list-style-image: url("chrome://browser/skin/sync-24-throbber.png");
-  -moz-image-region: rect(0px 24px 24px 0px);
+
+/* Sync button (active) */
+@-moz-keyframes rotate { /* For Fx 15 */
+  from { -moz-transform: rotate(0deg); }
+  to   { -moz-transform: rotate(360deg); }
+}
+@keyframes rotate {
+  from { -moz-transform: rotate(0deg); }
+  to   { -moz-transform: rotate(360deg); }
+}
+#sync-button[status="active"] > .toolbarbutton-icon {
+  /* For Fx 15 */
+  -moz-animation-name:             rotate;
+  -moz-animation-duration:         30s;
+  -moz-transition-timing-function: linear;
+  -moz-animation-iteration-count:  infinite;
+  
+  animation-name:             rotate;
+  animation-duration:         30s;
+  transition-timing-function: linear;
+  animation-iteration-count:  infinite;
 }
 
 #feed-button {
-  -moz-image-region: rect(0px 168px 24px 144px);
+  list-style-image: url("chrome://browser/skin/symbolic-icons/rss.svg");
 }
 
 #feed-button[disabled="true"] > .toolbarbutton-icon {
@@ -815,6 +833,7 @@ toolbar[iconsize="small"] .toolbarbutton-1[type="menu-button"] {
   border: 0 !important;
 }
 
+/*
 toolbar[iconsize="small"] #back-button {
   list-style-image: url("chrome://browser/skin/symbolic-icons/back-button.svg");
 }
@@ -834,7 +853,9 @@ toolbar[iconsize="small"] #back-button:-moz-locale-dir(rtl) {
 toolbar[iconsize="small"] #back-button[disabled="true"]:-moz-locale-dir(rtl) {
   list-style-image: url("moz-icon://stock/gtk-go-back-rtl?size=menu&state=disabled");
 }
+*/
 
+/*
 toolbar[iconsize=small] #forward-button,
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=small],#nav-bar:not([currentset])[mode=icons][iconsize=small]) > #unified-back-forward-button > #forward-button {
   list-style-image: url("chrome://browser/skin/symbolic-icons/forward-button.svg");
@@ -856,21 +877,27 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 toolbar[iconsize=small] #forward-button[disabled]:-moz-locale-dir(rtl) {
   list-style-image: url("moz-icon://stock/gtk-go-forward-rtl?size=menu&state=disabled");
 }
+*/
 
+/*
 toolbar[iconsize="small"] #stop-button {
   list-style-image: url("chrome://browser/skin/symbolic-icons/stop.svg");
 }
 toolbar[iconsize="small"] #stop-button[disabled="true"] {
   opacity: 0.5;
 }
+*/
 
+/*
 toolbar[iconsize="small"] #reload-button {a
   list-style-image: url("chrome://browser/skin/symbolic-icons/refresh.svg");
 }
 toolbar[iconsize="small"] #reload-button[disabled="true"] {
   opacity: 0.5;
 }
+*/
 
+/*
 toolbar[iconsize="small"] #home-button,
 #home-button.bookmark-item {
   list-style-image: url("chrome://browser/skin/symbolic-icons/home.svg");
@@ -879,7 +906,9 @@ toolbar[iconsize="small"] #home-button[disabled="true"],
 #home-button.bookmark-item[disabled="true"] {
   opacity: 0.5;
 }
+*/
 
+/*
 toolbar[iconsize="small"] #downloads-button {
   -moz-image-region: rect(0px 16px 16px 0px);
 }
@@ -887,74 +916,94 @@ toolbar[iconsize="small"] #downloads-button {
 toolbar[iconsize="small"] #history-button {
   -moz-image-region: rect(0px 32px 16px 16px);
 }
+*/
 
+/*
 toolbar[iconsize="small"] #bookmarks-button,
 toolbar[iconsize="small"] #bookmarks-menu-button,
 #bookmarks-menu-button.bookmark-item {
   list-style-image: url("chrome://browser/skin/symbolic-icons/bookmarks.svg");
 }
+*/
 
+/*
 toolbar[iconsize="small"] #print-button {
   list-style-image: url("moz-icon://stock/gtk-print?size=menu");
 }
 toolbar[iconsize="small"] #print-button[disabled="true"] {
   list-style-image: url("moz-icon://stock/gtk-print?size=menu&state=disabled");
 }
+*/
 
+/*
 toolbar[iconsize="small"] #new-tab-button {
-/*  -moz-image-region: rect(0px 64px 16px 48px);*/
   list-style-image: url(chrome://browser/skin/symbolic-icons/tab-new.svg);
 }
+*/
 
+/*
 toolbar[iconsize="small"] #new-window-button {
   -moz-image-region: rect(0px 80px 16px 64px);
 }
+*/
 
+/*
 toolbar[iconsize="small"] #cut-button {
   list-style-image: url("moz-icon://stock/gtk-cut?size=menu");
 }
 toolbar[iconsize="small"] #cut-button[disabled="true"] {
   list-style-image: url("moz-icon://stock/gtk-cut?size=menu&state=disabled");
 }
+*/
 
+/*
 toolbar[iconsize="small"] #copy-button {
   list-style-image: url("moz-icon://stock/gtk-copy?size=menu");
 }
 toolbar[iconsize="small"] #copy-button[disabled="true"] {
   list-style-image: url("moz-icon://stock/gtk-copy?size=menu&state=disabled");
 }
+*/
 
+/*
 toolbar[iconsize="small"] #paste-button {
   list-style-image: url("moz-icon://stock/gtk-paste?size=menu");
 }
 toolbar[iconsize="small"] #paste-button[disabled="true"] {
   list-style-image: url("moz-icon://stock/gtk-paste?size=menu&state=disabled");
 }
+*/
 
+/*
 toolbar[iconsize="small"] #fullscreen-button {
   list-style-image: url("chrome://browser/skin/symbolic-icons/fulscreen.svg");
 }
+*/
 
+/*
 toolbar[iconsize="small"] #zoom-out-button {
   list-style-image: url("chrome://browser/skin/symbolic-icons/zoom-out.svg");
 }
-
 toolbar[iconsize="small"] #zoom-in-button {
   list-style-image: url("chrome://browser/skin/symbolic-icons/zoom-in.svg");
 }
+*/
 
+/*
 toolbar[iconsize="small"] #sync-button {
   -moz-image-region: rect(0px 96px 16px 80px);
 }
-
 toolbar[iconsize="small"] #sync-button[status="active"] {
   list-style-image: url("chrome://browser/skin/sync-16-throbber.png");
   -moz-image-region: rect(0px 16px 16px 0px);
 }
+*/
 
+/*
 toolbar[iconsize="small"] #feed-button {
   -moz-image-region: rect(0px 112px 16px 96px);
 }
+*/
 
 /* Fullscreen window controls */
 #window-controls {
