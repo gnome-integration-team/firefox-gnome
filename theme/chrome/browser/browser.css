@@ -724,13 +724,9 @@ margin-right: -21px;
 }
 
 #bookmarks-button,
-#bookmarks-menu-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/bookmarks.svg");
-
-}
-
+#bookmarks-menu-button,
 #bookmarks-menu-button.bookmark-item {
-  list-style-image: url("chrome://browser/skin/Toolbar-small.png");
+  list-style-image: url("chrome://browser/skin/symbolic-icons/bookmarks.svg");
 }
 
 #bookmarks-menu-button.toolbarbutton-1 {
