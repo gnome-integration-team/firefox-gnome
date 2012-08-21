@@ -1,0 +1,69 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] {
+  background: Window !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar .tabbrowser-arrowscrollbox {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .scrollbox-innerbox,
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabs-newtab-button {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"].tabbrowser-tabs {
+  border-color: #a7a7a7 !important;
+  margin-top: -1px !important;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabs-newtab-button {
+  border-top: 1px solid #a7a7a7 !important;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] #new-tab-button:hover,
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabs-newtab-button:hover {
+  background: transparent !important;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[selected="true"] {
+  background: #4a90d9 !important;
+  color: #ffffff !important;
+}
+
+.treestyletab-splitter {
+  -moz-appearance: none !important;
+  background: transparent !important;
+  border-right: 1px solid #a7aba7 !important;
+  min-width: 4px !important;
+  width: 4px !important;
+}
+
+.treestyletab-splitter:hover {
+  background: transparent !important;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] #new-tab-button,
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabs-newtab-button,
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab {
+  min-height: 26px !important;
+  height: 26px !important;
+  min-width: 26px !important;
+  padding: 0 !important;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[pinned] {
+  padding: 5px !important;
+}

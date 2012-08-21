@@ -3,6 +3,8 @@
 
 @import url("chrome://app_version/skin/browser.css");
 
+@import url("chrome://browser/skin/extensions/extensions.css");
+
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
 
@@ -2810,26 +2812,4 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
 .ac-url-text {
   font-size: 90% !important;
   color: gray !important;
-}
-
-/** Tree style tabs **/
-tabs[orient="vertical"] .tabbrowser-tab {
-  -moz-background-image: none !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-
-tabs:not([treestyletab-tabbar-position="top"]) .tabbrowser-tab:not([pinned])[selected="true"] {
-  background: #519ef0 !important;
-  color: white !important;
-}
-
-.treestyletab-tabbar-toolbar[treestyletab-mode="vertical"] > *:not(toolbarpaletteitem) {
-  background: none !important;
-  border: none !important;
-}
-
-.tabbrowser-strip[treestyletab-tabbar-position="left"]:not([treestyletab-tabbar-transparent="full"]), .treestyletab-tabbar-toolbar[treestyletab-tabbar-position="left"]:not([treestyletab-tabbar-transparent="full"]) {
-  background: #fafdff !important;
 }
