@@ -746,7 +746,7 @@ margin-right: -21px;
 }
 
 #new-window-button {
-  -moz-image-region: rect(0px 120px 24px 96px);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/new-window.svg);
 }
 
 #cut-button {
@@ -939,7 +939,7 @@ toolbar[iconsize="small"] #new-tab-button {
 
 /*
 toolbar[iconsize="small"] #new-window-button {
-  -moz-image-region: rect(0px 80px 16px 64px);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/new-window.svg);
 }
 */
 
@@ -2034,7 +2034,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 #alltabs-button > .toolbarbutton-icon {
-  list-style-image: url("chrome://browser/skin/tabbrowser/alltabs.png");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/alltabs.svg);
   margin: 2px 0 1px;
 }
 
