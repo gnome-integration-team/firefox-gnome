@@ -1,0 +1,8 @@
+/* FxButton
+ * id: {c6448328-31f7-4b12-a2e0-5c39d0290307}
+ * URL: https://addons.mozilla.org/firefox/addon/fxbutton/ */
+
+#fx-button {
+/*  list-style-image: url("chrome://browser/skin/symbolic-icons/gear.svg") !important;*/
+  list-style-image: url("chrome://browser/skin/symbolic-icons/firefox.svg") !important;
+}

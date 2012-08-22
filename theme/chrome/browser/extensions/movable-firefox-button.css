@@ -1,0 +1,8 @@
+/* Movable Firefox Button
+ * id: movableAppButton@Merci.chao
+ * URL: https://addons.mozilla.org/firefox/addon/movable-firefox-button/ */
+
+#appmenu-toolbar-button[removable="true"] > .toolbarbutton-icon {
+/*  list-style-image: url("chrome://browser/skin/symbolic-icons/gear.svg") !important;*/
+  list-style-image: url("chrome://browser/skin/symbolic-icons/firefox.svg") !important;
+}
