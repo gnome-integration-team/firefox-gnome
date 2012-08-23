@@ -580,7 +580,6 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   background-image: -moz-linear-gradient(to bottom, #f7f7f7, #dbdbdb); /* For Fx 15 */
   background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb);
   border: 1px solid rgba(0,0,0,.25);
-  border-radius: 3px;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1), inset 1px 0 0 rgba(255,255,255,0.4), inset -1px 0 0 rgba(255,255,255,0.4) !important;
   color: #2e3436;
   margin: 3px 4px;
@@ -613,20 +612,46 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   color: #ffffff !important;
 }
 
-/*
 #nav-bar > toolbarbutton[disabled="true"],
 #nav-bar :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button)[disabled="true"] {
-  background: transparent !important;
+/*  background: transparent !important;*/
+  background: Window !important;
   border-color: rgba(0,0,0,.25) !important;
   box-shadow: none !important;
+  opacity: 1;
 }
-*/
+
+#nav-bar > toolbarbutton[disabled="true"] > .toolbarbutton-icon,
+#nav-bar :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button)[disabled="true"] > .toolbarbutton-icon {
+  opacity: .5;
+}
 
 #nav-bar > #unified-back-forward-button > #back-button,
 #nav-bar > #zoom-controls > #zoom-out-button {
   -moz-margin-end: -1px;
   -moz-border-end: none !important;
 }
+
+/* Experimental view */
+
+#nav-bar toolbarbutton {
+  border-radius: 0px 3px 3px 0px; /* Right */
+  -moz-margin-start: -2px;
+  -moz-margin-end: 0;
+}
+
+#nav-bar :-moz-any(toolbarseparator, toolbaritem, toolbarspring, toolbarspacer) + toolbarbutton,
+#nav-bar toolbarbutton:first-child {
+  border-radius: 3px 3px 3px 3px;
+  min-width: 33px;
+  -moz-margin-start: 0px;
+}
+
+#nav-bar toolbarbutton:last-child {
+  -moz-margin-end: 0px;
+}
+
+/*
 #nav-bar:not(:-moz-locale-dir(rtl)) > #unified-back-forward-button > #back-button,
 #nav-bar:not(:-moz-locale-dir(rtl)) > #zoom-controls > #zoom-out-button {
   border-radius: 3px 0px 0px 3px;
@@ -649,6 +674,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #nav-bar:-moz-locale-dir(rtl) > #zoom-controls > #zoom-in-button {
   border-radius: 3px 0px 0px 3px;
 }
+*/
 
 #nav-bar:not(:-moz-locale-dir(rtl)) > #unified-back-forward-button > #back-button,
 #nav-bar:-moz-locale-dir(rtl) > #unified-back-forward-button > #forward-button {
