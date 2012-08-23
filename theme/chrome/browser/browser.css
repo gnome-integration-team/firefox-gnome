@@ -573,56 +573,91 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   padding: 3px !important;
 }
 
-
-/* Back & Forward button style */
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar {
-  -moz-padding-start:1px !important;
-  -moz-padding-end: 2px!important;
-}
-
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar #back-button > .toolbarbutton-icon {
-
+/* Buttons on nav bar */
+#nav-bar > toolbarbutton,
+#nav-bar :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button) {
   -moz-appearance: none;
-  padding: 4px 7px;
-  background-clip: padding-box;
-  border-radius: 3px 0 0 3px;
-  color: black;
-  opacity: 1;
-  text-shadow: 0 0 2px white;
-  background-image: -moz-linear-gradient(#F5F5F5, #DCDCDC);
-  -moz-transition-property: background-color, border-color, box-shadow;
-  -moz-transition-duration: 150ms;
-  -moz-transition-timing-function: ease;
-  border: 1px solid;
-  border-color: rgba(0,0,0,.2);
-  border-right: 0;
-  box-shadow: 0 1px 0 white,
-              0 1px rgba(255,255,255,.10),
-              0 0 0 1px hsla(0,0%,100%,.27) inset;
-margin-right: -21px;
+  background-image: -moz-linear-gradient(to bottom, #f7f7f7, #dbdbdb); /* For Fx 15 */
+  background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb);
+  border: 1px solid rgba(0,0,0,.25);
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1), inset 1px 0 0 rgba(255,255,255,0.4), inset -1px 0 0 rgba(255,255,255,0.4) !important;
+  color: #2e3436;
+  margin: 3px 4px;
+  min-height: 28px;
+  min-width: 32px;
+  padding: 0px !important;
 }
 
-#navigator-toolbox[iconsize=large][mode=icons] > #nav-bar #forward-button > .toolbarbutton-icon{
-    -moz-appearance: none;
-  padding: 4px 7px;
-  background-clip: padding-box;
-  border-radius: 0 3px 3px 0;
-  color: black;
-  opacity: 1;
-  text-shadow: 0 0 2px white;
-  background-image: -moz-linear-gradient(#F5F5F5, #DCDCDC);
-  -moz-transition-property: background-color, border-color, box-shadow;
-  -moz-transition-duration: 150ms;
-  -moz-transition-timing-function: ease;
-  border: 1px solid;
-  border-left: 1px solid rgba(0,0,0,.05);
-  border-color: rgba(0,0,0,.2);
-  box-shadow: 0 1px 0 white,
-              0 1px rgba(255,255,255,.1),
-              0 0 0 1px hsla(0,0%,100%,.27) inset;
-	margin-right: -4px;
+#nav-bar > toolbarbutton:hover,
+#nav-bar :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button):hover {
+  filter: none !important;
 }
 
+#nav-bar > toolbarbutton:not([disabled="true"]):hover,
+#nav-bar :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button):not([disabled="true"]):hover {
+  background-image: -moz-linear-gradient(to bottom, #ffffff, #ebebeb); /* For Fx 15 */
+  background-image: linear-gradient(to bottom, #ffffff, #ebebeb);
+}
+
+#nav-bar > toolbarbutton:not([disabled="true"]):active,
+#nav-bar :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button):not([disabled="true"]):active,
+#nav-bar > toolbarbutton[checked="true"],
+#nav-bar :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button)[checked="true"],
+#nav-bar > toolbarbutton[open="true"],
+#nav-bar :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button)[open="true"] {
+  background-image: -moz-linear-gradient(to bottom, #a7aba7, #ededed) !important; /* For Fx 15 */
+  background-image: linear-gradient(to bottom, #a7aba7, #ededed) !important;
+  border-color: rgba(114,160,207,1) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
+  color: #ffffff !important;
+}
+
+/*
+#nav-bar > toolbarbutton[disabled="true"],
+#nav-bar :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button)[disabled="true"] {
+  background: transparent !important;
+  border-color: rgba(0,0,0,.25) !important;
+  box-shadow: none !important;
+}
+*/
+
+#nav-bar > #unified-back-forward-button > #back-button,
+#nav-bar > #zoom-controls > #zoom-out-button {
+  -moz-margin-end: -1px;
+  -moz-border-end: none !important;
+}
+#nav-bar:not(:-moz-locale-dir(rtl)) > #unified-back-forward-button > #back-button,
+#nav-bar:not(:-moz-locale-dir(rtl)) > #zoom-controls > #zoom-out-button {
+  border-radius: 3px 0px 0px 3px;
+}
+#nav-bar:-moz-locale-dir(rtl) > #unified-back-forward-button > #back-button,
+#nav-bar:-moz-locale-dir(rtl) > #zoom-controls > #zoom-out-button {
+  border-radius: 0px 3px 3px 0px;
+}
+
+#nav-bar > #unified-back-forward-button > #forward-button,
+#nav-bar > #zoom-controls > #zoom-in-button {
+  -moz-margin-start: 0px;
+  -moz-border-start: 1px solid rgba(0,0,0,.05) !important;
+}
+#nav-bar:not(:-moz-locale-dir(rtl)) > #unified-back-forward-button > #forward-button,
+#nav-bar:not(:-moz-locale-dir(rtl)) > #zoom-controls > #zoom-in-button {
+  border-radius: 0px 3px 3px 0px;
+}
+#nav-bar:-moz-locale-dir(rtl) > #unified-back-forward-button > #forward-button,
+#nav-bar:-moz-locale-dir(rtl) > #zoom-controls > #zoom-in-button {
+  border-radius: 3px 0px 0px 3px;
+}
+
+#nav-bar:not(:-moz-locale-dir(rtl)) > #unified-back-forward-button > #back-button,
+#nav-bar:-moz-locale-dir(rtl) > #unified-back-forward-button > #forward-button {
+  min-width: 30px;
+}
+#nav-bar:not(:-moz-locale-dir(rtl)) > #unified-back-forward-button > #forward-button,
+#nav-bar:-moz-locale-dir(rtl) > #unified-back-forward-button > #back-button {
+  min-width: 31px;
+}
 
 /* 24px primary toolbar buttons */
 #back-button {
@@ -1035,15 +1070,15 @@ toolbar[iconsize="small"] #feed-button {
 */
 
 /* remove ugly white border around location and searchbars */
-#urlbar,
-.searchbar-textbox {
+#urlbar, .searchbar-textbox {
  -moz-appearance: none;
   border: 1px solid rgba(0,0,0,.25);
   border-radius: 3px;
   background-image: -moz-linear-gradient(top, #f2f2f2, #fdfdfd);
   padding: 1px;
-  box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15),
-  		    0px 1px 0 0 rgba(255,255,255,0.89);
+  box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 0 0 rgba(255,255,255,0.89);
+  min-height: 28px;
+  margin: 3px 4px;
   -moz-transition-property: border, box-shadow;
   -moz-transition-duration: 300ms;
 }
@@ -1077,6 +1112,7 @@ toolbar[iconsize="small"] #feed-button {
 }
 
 /* Issue 80 */
+/*
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button #forward-button:-moz-locale-dir(ltr) {
   -moz-transition: margin-left 200ms ease-out,
                    opacity 300ms ease-in,
@@ -1116,6 +1152,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   border-radius: 3px !important;
   border-left: 1px solid rgba(0,0,0,.2) !important;
 }
+*/
 
 #urlbar-icons {
   -moz-box-align: center;
