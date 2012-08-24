@@ -510,26 +510,26 @@ html[dir=rtl] .iq-resizable-se {
   height: 16px;
   -moz-margin-end: 8px;
   margin-top: 5px;
-  background-image: -moz-image-rect(url(chrome://browser/skin/tabview/tabview.png), 0, 80, 16, 64);
+  background-image: url(chrome://browser/skin/symbolic-icons/tabview.svg);
   background-attachment: scroll;
   background-repeat: no-repeat;
   border: none;
 }
 
 #exit-button[groups="0"] {
-  background-image: -moz-image-rect(url(chrome://browser/skin/tabview/tabview.png), 0, 16, 16, 0);
+  background-image: url(chrome://browser/skin/symbolic-icons/tabview-0.svg);
 }
 
 #exit-button[groups="1"] {
-  background-image: -moz-image-rect(url(chrome://browser/skin/tabview/tabview.png), 0, 32, 16, 16);
+  background-image: url(chrome://browser/skin/symbolic-icons/tabview-1.svg);
 }
 
 #exit-button[groups="2"] {
-  background-image: -moz-image-rect(url(chrome://browser/skin/tabview/tabview.png), 0, 48, 16, 32);
+  background-image: url(chrome://browser/skin/symbolic-icons/tabview-2.svg);
 }
 
 #exit-button[groups="3"] {
-  background-image: -moz-image-rect(url(chrome://browser/skin/tabview/tabview.png), 0, 64, 16, 48);
+  background-image: url(chrome://browser/skin/symbolic-icons/tabview-3.svg);
 }
 
 /* Search
@@ -578,7 +578,7 @@ html[dir=rtl] #actions {
 }
 
 #actions #searchbutton{
-  background: transparent url(chrome://browser/skin/tabview/search.png) no-repeat;
+  background: transparent url(chrome://browser/skin/symbolic-icons/search.svg) no-repeat;
   border: none;
   width: 20px;
   height: 20px;
