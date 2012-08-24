@@ -55,7 +55,8 @@
 
 /* Restyle bookmark bars -- tabs on top */
 #navigator-toolbox[tabsontop=true] #PersonalToolbar {
-  background: -moz-linear-gradient(bottom , #999999, #eee 1px, #f4f4f4) !important;
+  background: -moz-linear-gradient(to bottom, #f4f4f4, #eee) !important;
+  border-bottom: 1px solid #c3c3c3 !important;
   margin-top: -1px;
   padding-top: 0;
 }
@@ -603,23 +604,27 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 #nav-bar[iconsize=large] > toolbarbutton:not([disabled="true"]):active,
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button):not([disabled="true"]):active,
+#nav-bar[iconsize=large] > toolbarbutton:not([disabled="true"]):active:hover,
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button):not([disabled="true"]):active:hover,
 #nav-bar[iconsize=large] > toolbarbutton[checked="true"],
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button)[checked="true"],
+#nav-bar[iconsize=large] > toolbarbutton[checked="true"]:hover,
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button)[checked="true"]:hover,
 #nav-bar[iconsize=large] > toolbarbutton[open="true"],
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button)[open="true"] {
-  background-image: -moz-linear-gradient(to bottom, #a7aba7, #ededed) !important; /* For Fx 15 */
-  background-image: linear-gradient(to bottom, #a7aba7, #ededed) !important;
-  border-color: rgba(114,160,207,1) !important;
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button)[open="true"],
+#nav-bar[iconsize=large] > toolbarbutton[open="true"]:hover,
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button)[open="true"]:hover {
+  background-image: -moz-linear-gradient(to bottom, #c7cbc7, #e3e8e3) !important; /* For Fx 15 */
+  background-image: linear-gradient(to bottom, #c7cbc7, #e3e8e3) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
   color: #ffffff !important;
 }
 
 #nav-bar[iconsize=large] > toolbarbutton[disabled="true"],
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button)[disabled="true"] {
-  background: transparent !important;
-/*  background: Window !important;*/
+/*  background: transparent !important;*/
   border-color: rgba(0,0,0,.25) !important;
-  box-shadow: none !important;
+/*  box-shadow: none !important;*/
   opacity: 1;
 }
 
@@ -665,44 +670,21 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   -moz-margin-end: 4px;
 }
 
-/*
-#nav-bar:not(:-moz-locale-dir(rtl)) > #unified-back-forward-button > #back-button,
-#nav-bar:not(:-moz-locale-dir(rtl)) > #zoom-controls > #zoom-out-button {
-  border-radius: 3px 0px 0px 3px;
-}
-#nav-bar:-moz-locale-dir(rtl) > #unified-back-forward-button > #back-button,
-#nav-bar:-moz-locale-dir(rtl) > #zoom-controls > #zoom-out-button {
-  border-radius: 0px 3px 3px 0px;
+/* Buttons on addon-bar */
+
+#addon-bar > toolbarbutton {
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-radius: 0px;
+  box-shadow: none;
 }
 
-#nav-bar > #unified-back-forward-button > #forward-button,
-#nav-bar > #zoom-controls > #zoom-in-button {
-  -moz-margin-start: 0px;
-  -moz-border-start: 1px solid rgba(0,0,0,.05) !important;
+#addon-bar > toolbarbutton:not([disabled="true"]):active,
+#addon-bar > toolbarbutton:not([disabled="true"]):active:hover,
+#addon-bar > toolbarbutton[open="true"],
+#addon-bar > toolbarbutton[checked="true"] {
+  border-color: #c3c3c3 !important;
 }
-#nav-bar:not(:-moz-locale-dir(rtl)) > #unified-back-forward-button > #forward-button,
-#nav-bar:not(:-moz-locale-dir(rtl)) > #zoom-controls > #zoom-in-button {
-  border-radius: 0px 3px 3px 0px;
-}
-#nav-bar:-moz-locale-dir(rtl) > #unified-back-forward-button > #forward-button,
-#nav-bar:-moz-locale-dir(rtl) > #zoom-controls > #zoom-in-button {
-  border-radius: 3px 0px 0px 3px;
-}
-
-#nav-bar:not(:-moz-locale-dir(rtl)) > #unified-back-forward-button > #back-button,
-#nav-bar:-moz-locale-dir(rtl) > #unified-back-forward-button > #forward-button {
-  min-width: 30px;
-}
-#nav-bar:not(:-moz-locale-dir(rtl)) > #unified-back-forward-button > #forward-button,
-#nav-bar:-moz-locale-dir(rtl) > #unified-back-forward-button > #back-button {
-  min-width: 31px;
-}
-#nav-bar > #unified-back-forward-button > #back-button,
-#nav-bar > #zoom-controls > #zoom-out-button {
-  -moz-margin-end: -1px;
-  -moz-border-end: none !important;
-}
-*/
 
 /* 24px primary toolbar buttons */
 #back-button {
@@ -2324,9 +2306,14 @@ panel[dimmed="true"] {
 /* Add-on bar */
 
 #addon-bar {
-  box-shadow: 0 1px 0 rgba(0,0,0,.15) inset;
+/*  box-shadow: 0 1px 0 rgba(0,0,0,.15) inset;*/
+/*  box-shadow: 0 1px 0 #a6a6a6 inset;*/
   padding: 0;
   min-height: 20px;
+}
+
+#browser-bottombox {
+  border-top: 1px solid #c3c3c3 !important;
 }
 
 #status-bar {
