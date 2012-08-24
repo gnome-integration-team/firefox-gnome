@@ -1516,6 +1516,10 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   list-style-image: url(chrome://mozapps/skin/plugins/pluginGeneric-16.png);
 }
 
+#plugins-notification-icon {
+  list-style-image: url(chrome://mozapps/skin/plugins/pluginGeneric-16.png);
+}
+
 #treecolAutoCompleteImage {
   max-width : 36px;
 }
