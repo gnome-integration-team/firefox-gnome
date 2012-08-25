@@ -641,7 +641,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 /* Small */
 
 #nav-bar[iconsize=small] > toolbarbutton,
-#nav-bar[iconsize=small] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button) {
+#nav-bar[iconsize=small] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button) {
   -moz-appearance: none;
   margin: 3px 2px;
   min-height: 28px;
@@ -1075,10 +1075,16 @@ toolbar[iconsize="small"] #feed-button {
   padding: 1px;
   box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 0 0 rgba(255,255,255,0.89);
   min-height: 28px;
-  margin: 3px 4px;
   -moz-transition-property: border, box-shadow;
   -moz-transition-duration: 300ms;
 }
+#nav-bar[iconsize=large] :-moz-any(#urlbar, .searchbar-textbox) {
+  margin: 3px 4px;
+}
+#nav-bar[iconsize=small] :-moz-any(#urlbar, .searchbar-textbox) {
+  margin: 3px 2px;
+}
+
 .searchbar-textbox {
   -moz-padding-end: 3px;
 }
