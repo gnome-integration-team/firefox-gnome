@@ -2061,6 +2061,8 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 /*  list-style-image: url("moz-icon://stock/gtk-add?size=menu");*/
   list-style-image: url(chrome://browser/skin/symbolic-icons/tab-new-tp.svg);
   -moz-image-region: auto;
+  background: transparent !important;
+  border-color: transparent !important;
 }
 
 /* Tabstrip close button */
@@ -2088,6 +2090,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tabbrowser-arrowscrollbox > .scrollbutton-down {
   -moz-appearance: none;
   margin: 0;
+  background: transparent !important;
 }
 
 .tabbrowser-arrowscrollbox > .scrollbutton-up {
