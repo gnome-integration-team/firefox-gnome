@@ -541,16 +541,26 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #nav-bar[iconsize=large] > toolbarbutton,
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button) {
   -moz-appearance: none;
+  border-radius: 3px;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  color: #2e3436;
+  margin: 3px 2px;
+  min-height: 28px;
+  min-width: 26px;
+  padding: 0px 3px !important;
+}
+
+/*
+#nav-bar[iconsize=large] > toolbarbutton,
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button) {
+*/
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button) {
   background-image: -moz-linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important; /* For Fx 15 */
   background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
   border: 1px solid rgba(0,0,0,.25) !important;
-  border-radius: 3px;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1), inset 1px 0 0 rgba(255,255,255,0.4), inset -1px 0 0 rgba(255,255,255,0.4) !important;
-  color: #2e3436;
-  margin: 3px 4px;
-  min-height: 28px;
   min-width: 32px;
-  padding: 0px 3px !important;
 }
 
 #nav-bar[iconsize=large] > toolbarbutton toolbarbutton {
@@ -559,17 +569,11 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   box-shadow: none !important;
 }
 
-/*
-#nav-bar[iconsize=large] > toolbarbutton:hover,
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button):hover {
-  filter: none !important;
-}
-*/
-
 #nav-bar[iconsize=large] > toolbarbutton:not([disabled="true"]):hover,
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button):not([disabled="true"]):hover {
   background-image: -moz-linear-gradient(to bottom, #ffffff, #ebebeb) !important; /* For Fx 15 */
   background-image: linear-gradient(to bottom, #ffffff, #ebebeb) !important;
+  border: 1px solid rgba(0,0,0,.25) !important;
 }
 
 #nav-bar[iconsize=large] > toolbarbutton:not([disabled="true"]):active,
@@ -584,6 +588,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button)[open="true"]:hover {
   background-image: -moz-linear-gradient(to bottom, #c7cbc7, #e3e8e3) !important; /* For Fx 15 */
   background-image: linear-gradient(to bottom, #c7cbc7, #e3e8e3) !important;
+  border: 1px solid rgba(0,0,0,.25) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
   color: #ffffff !important;
 }
@@ -591,7 +596,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #nav-bar[iconsize=large] > toolbarbutton[disabled="true"],
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button)[disabled="true"] {
 /*  background: transparent !important;*/
-  border-color: rgba(0,0,0,.25) !important;
+/*  border-color: rgba(0,0,0,.25) !important;*/
 /*  box-shadow: none !important;*/
   opacity: 1;
 }
