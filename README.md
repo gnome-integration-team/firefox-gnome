@@ -11,8 +11,6 @@ For current issues please see the
 
 Help & feedback are both appreciated! ;-)
 
----
-
 ### Screenshots
 
 Tabs on top:
