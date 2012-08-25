@@ -60,7 +60,6 @@
 /* Bottom toolbox */
 #browser-bottombox {
   background-color: transparent !important;
-  border-top: 1px solid #a7aba7 !important;
 }
 
 /* Places toolbar */
@@ -2287,8 +2286,10 @@ panel[dimmed="true"] {
 /* Add-on bar */
 
 #addon-bar {
+  -moz-appearance: none;
   padding: 0;
   min-height: 20px;
+  border-top: 1px solid #a7aba7 !important;
 }
 
 #status-bar {
