@@ -539,7 +539,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 /* Buttons on nav bar */
 
 #nav-bar[iconsize=large] > toolbarbutton,
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button) {
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button) {
   -moz-appearance: none;
   background-image: -moz-linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important; /* For Fx 15 */
   background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
@@ -550,32 +550,38 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   margin: 3px 4px;
   min-height: 28px;
   min-width: 32px;
-  padding: 0px !important;
+  padding: 0px 3px !important;
 }
 
+#nav-bar[iconsize=large] > toolbarbutton toolbarbutton {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/*
 #nav-bar[iconsize=large] > toolbarbutton:hover,
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button):hover {
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button):hover {
   filter: none !important;
 }
+*/
 
 #nav-bar[iconsize=large] > toolbarbutton:not([disabled="true"]):hover,
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button):not([disabled="true"]):hover {
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button):not([disabled="true"]):hover {
   background-image: -moz-linear-gradient(to bottom, #ffffff, #ebebeb) !important; /* For Fx 15 */
   background-image: linear-gradient(to bottom, #ffffff, #ebebeb) !important;
 }
 
 #nav-bar[iconsize=large] > toolbarbutton:not([disabled="true"]):active,
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button):not([disabled="true"]):active,
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button):not([disabled="true"]):active,
 #nav-bar[iconsize=large] > toolbarbutton:not([disabled="true"]):active:hover,
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button):not([disabled="true"]):active:hover,
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button):not([disabled="true"]):active:hover,
 #nav-bar[iconsize=large] > toolbarbutton[checked="true"],
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button)[checked="true"],
 #nav-bar[iconsize=large] > toolbarbutton[checked="true"]:hover,
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button)[checked="true"]:hover,
 #nav-bar[iconsize=large] > toolbarbutton[open="true"],
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button)[open="true"],
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button)[open="true"],
 #nav-bar[iconsize=large] > toolbarbutton[open="true"]:hover,
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button)[open="true"]:hover {
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button)[open="true"]:hover {
   background-image: -moz-linear-gradient(to bottom, #c7cbc7, #e3e8e3) !important; /* For Fx 15 */
   background-image: linear-gradient(to bottom, #c7cbc7, #e3e8e3) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
@@ -583,7 +589,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 #nav-bar[iconsize=large] > toolbarbutton[disabled="true"],
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button)[disabled="true"] {
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button)[disabled="true"] {
 /*  background: transparent !important;*/
   border-color: rgba(0,0,0,.25) !important;
 /*  box-shadow: none !important;*/
@@ -632,12 +638,36 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   -moz-margin-end: 4px;
 }
 
+/* Small */
+
+#nav-bar[iconsize=small] > toolbarbutton,
+#nav-bar[iconsize=small] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button) {
+  -moz-appearance: none;
+  margin: 3px 2px;
+  min-height: 28px;
+  padding: 1px 4px !important;
+}
+
+#nav-bar[iconsize=small] > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton {
+  border-radius: 0px;
+  -moz-margin-start: -1px;
+  -moz-margin-end: 0px;
+}
+
+#nav-bar[iconsize=small]:not(:-moz-locale-dir(rtl)) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type,
+#nav-bar[iconsize=small]:-moz-locale-dir(rtl) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type {
+  border-radius: 3px 0px 0px 3px;
+  -moz-margin-start: 2px;
+}
+#nav-bar[iconsize=small]:not(:-moz-locale-dir(rtl)) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type,
+#nav-bar[iconsize=small]:-moz-locale-dir(rtl) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type {
+  border-radius: 0px 3px 3px 0px;
+  -moz-margin-end: 2px;
+}
+
 /* 24px primary toolbar buttons */
 #back-button {
-  background: none;
   list-style-image: url("chrome://browser/skin/symbolic-icons/back-button.svg");
-  padding-right: 15px !important;
-  -moz-padding-start: 6px !important;
 }
 
 #back-button[disabled="true"] {
@@ -653,10 +683,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 #forward-button {
-  background: none;
-/*  padding-right: 10px; */
   list-style-image: url("chrome://browser/skin/symbolic-icons/forward-button.svg");
-  -moz-padding-end: 9px !important;
 }
 
 #forward-button:-moz-locale-dir(rtl) {
@@ -665,9 +692,6 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 #forward-button[disabled] {
   list-style-image: url("chrome://browser/skin/symbolic-icons/forward-button-disabled.svg");
-  /*
-    -moz-padding-end: 50px !important;
-  */
 }
 
 #forward-button[disabled]:-moz-locale-dir(rtl) {
@@ -1059,8 +1083,7 @@ toolbar[iconsize="small"] #feed-button {
   -moz-padding-end: 3px;
 }
 
-#urlbar[focused="true"],
-.searchbar-textbox[focused="true"] {
+#urlbar[focused="true"], .searchbar-textbox[focused="true"] {
   border-color: rgba(0, 87, 179, 0.5);
   border-color: #729fcf;
   box-shadow: 0 1px 0 rgba(255,255,255,0.6), inset 0 1px 2px 0 rgba(0,106,221,0.3);
@@ -1076,7 +1099,7 @@ toolbar[iconsize="small"] #feed-button {
 }
 
 .urlbar-history-dropmarker {
-	display: none;
+  display: none;
 }
 
 #urlbar-container {
@@ -1085,47 +1108,50 @@ toolbar[iconsize="small"] #feed-button {
 }
 
 /* Issue 80 */
-/*
+
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button #forward-button:-moz-locale-dir(ltr) {
-  -moz-transition: margin-left 200ms ease-out,
-                   opacity 300ms ease-in,
+  -moz-transition: margin-right 200ms ease-out,
+                   opacity 200ms ease-in,
                    visibility 200ms ease-out;
+  margin-right: 4px;
 }
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] #forward-button:-moz-locale-dir(ltr) {
+  -moz-transition: margin-right 200ms ease-out,
+                   opacity 200ms ease-out,
+                   visibility 200ms ease-out;
+  opacity: 0 !important;
+  margin-right: -28px;
+  visibility:hidden;
+}
+
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=small], #nav-bar:not([currentset])[mode=icons][iconsize=small]) > #unified-back-forward-button[forwarddisabled] #forward-button:-moz-locale-dir(ltr) {
+  margin-right: -23px;
+}
+
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button #forward-button:-moz-locale-dir(rtl) {
+  -moz-transition: margin-left 200ms ease-out,
+                   opacity 100ms ease-in,
+                   visibility 200ms ease-out;
+  margin-left: 4px;
+}
+
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] #forward-button:-moz-locale-dir(rtl) {
   -moz-transition: margin-left 200ms ease-out,
                    opacity 100ms ease-out,
                    visibility 200ms ease-out;
   opacity: 0 !important;
-  margin-left: -32px;
+  margin-left: -28px;
   visibility:hidden;
 }
 
-window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button #forward-button:-moz-locale-dir(rtl) {
-  -moz-transition: margin-right 200ms ease-out,
-                   opacity 300ms ease-in,
-                   visibility 200ms ease-out;
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=small], #nav-bar:not([currentset])[mode=icons][iconsize=small]) > #unified-back-forward-button[forwarddisabled] #forward-button:-moz-locale-dir(rtl) {
+  margin-left: -23px;
 }
 
-window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] #forward-button:-moz-locale-dir(rtl) {
-  -moz-transition: margin-right 200ms ease-out,
-                   opacity 100ms ease-out,
-                   visibility 200ms ease-out;
-  opacity: 0 !important;
-  margin-right: -32px;
-  visibility:hidden;
-}
-
-window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=large], #nav-bar:not([currentset])[mode=icons][iconsize=large]) > #unified-back-forward-button[forwarddisabled] #back-button:-moz-locale-dir(ltr) > .toolbarbutton-icon {
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] #back-button {
   border-radius: 3px !important;
-  border-right: 1px solid rgba(0,0,0,.2) !important;
 }
-
-window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=large], #nav-bar:not([currentset])[mode=icons][iconsize=large]) > #unified-back-forward-button[forwarddisabled] #back-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
-  border-radius: 3px !important;
-  border-left: 1px solid rgba(0,0,0,.2) !important;
-}
-*/
 
 #urlbar-icons {
   -moz-box-align: center;
@@ -1142,7 +1168,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   -moz-margin-start: -4px;
 }
 
-#urlbar-search-splitter + #urlbar-container > #urlbar ,
+#urlbar-search-splitter + #urlbar-container > #urlbar,
 #urlbar-search-splitter + #search-container > #searchbar > .searchbar-textbox {
   -moz-margin-start: 0;
 }
@@ -1598,8 +1624,11 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 #urlbar > toolbarbutton {
   -moz-appearance: none !important;
+  background: transparent !important;
   border: none !important;
-  border-left: 1px solid rgba(0,0,0,0.2)!important;
+  border-left: 1px solid rgba(0,0,0,0.2) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
   padding: 3px 3px 3px 4px;
   cursor: pointer !important;
   width: 24px !important;
@@ -2317,22 +2346,17 @@ panel[dimmed="true"] {
 
 /* Buttons on addon-bar */
 
-#addon-bar > toolbarbutton,
-#addon-bar > :-moz-any(#personal-bookmarks, #bookmarks-menu-button-container) toolbarbutton {
+#addon-bar toolbarbutton {
   border-top-width: 0;
   border-bottom-width: 0;
   border-radius: 0px;
   box-shadow: none;
 }
 
-#addon-bar > toolbarbutton:not([disabled="true"]):active,
-#addon-bar > toolbarbutton:not([disabled="true"]):active:hover,
-#addon-bar > :-moz-any(#personal-bookmarks, #bookmarks-menu-button-container) toolbarbutton:not([disabled="true"]):active,
-#addon-bar > :-moz-any(#personal-bookmarks, #bookmarks-menu-button-container) toolbarbutton:not([disabled="true"]):active:hover,
-#addon-bar > toolbarbutton[open="true"],
-#addon-bar > :-moz-any(#personal-bookmarks, #bookmarks-menu-button-container) toolbarbutton[open="true"],
-#addon-bar > toolbarbutton[checked="true"],
-#addon-bar > :-moz-any(#personal-bookmarks, #bookmarks-menu-button-container) toolbarbutton[checked="true"], {
+#addon-bar toolbarbutton:not([disabled="true"]):active,
+#addon-bar toolbarbutton:not([disabled="true"]):active:hover,
+#addon-bar toolbarbutton[open="true"],
+#addon-bar toolbarbutton[checked="true"] {
   border-color: #a7aba7 !important;
 }
 
