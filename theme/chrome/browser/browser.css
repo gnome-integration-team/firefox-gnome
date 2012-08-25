@@ -1853,8 +1853,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 .tabbrowser-tab[pinned] {
-  padding-left: 9px;
-  padding-right: 9px;
+  /* padding in app_version/browser.css */
 }
 
 /* Floating pinned/app tabs */

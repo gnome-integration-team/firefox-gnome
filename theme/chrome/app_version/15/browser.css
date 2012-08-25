@@ -5,3 +5,8 @@
 .tabbrowser-tab[selected="true"] {
   padding-bottom: 4px; /* Make text bump up a little on the selected tab */
 }
+
+.tabbrowser-tab[pinned] {
+  padding-left: 16px;
+  padding-right: 16px;
+}
