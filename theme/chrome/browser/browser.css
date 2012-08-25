@@ -1113,46 +1113,55 @@ toolbar[iconsize="small"] #feed-button {
   -moz-box-align: stretch;
 }
 
-/* Issue 80 */
+/* Autohide forward button */
 
-window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button #forward-button:-moz-locale-dir(ltr) {
-  -moz-transition: margin-right 200ms ease-out,
-                   opacity 200ms ease-in,
-                   visibility 200ms ease-out;
-  margin-right: 4px;
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button + #urlbar-container {
+  -moz-padding-start: 32px;
+  -moz-margin-start: -32px;
+  position: relative;
+  pointer-events: none;
 }
 
-window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] #forward-button:-moz-locale-dir(ltr) {
-  -moz-transition: margin-right 200ms ease-out,
-                   opacity 200ms ease-out,
-                   visibility 200ms ease-out;
-  opacity: 0 !important;
-  margin-right: -28px;
-  visibility:hidden;
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=small], #nav-bar:not([currentset])[mode=icons][iconsize=small]) > #unified-back-forward-button + #urlbar-container {
+  -moz-padding-start: 24px;
+  -moz-margin-start: -24px;
 }
 
-window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=small], #nav-bar:not([currentset])[mode=icons][iconsize=small]) > #unified-back-forward-button[forwarddisabled] #forward-button:-moz-locale-dir(ltr) {
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button, urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button + #urlbar-container > #urlbar {
+  pointer-events: all;
+}
+
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button:not([switchingtabs]) + #urlbar-container > #urlbar {
+  -moz-transition: margin-left 200ms ease-out,
+                   margin-right 200ms ease-out;
+}
+
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] + #urlbar-container > #urlbar:-moz-locale-dir(ltr) {
+  margin-left: -27px;
+}
+
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] + #urlbar-container > #urlbar:-moz-locale-dir(rtl) {
+  margin-right: -27px;
+}
+
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=small], #nav-bar:not([currentset])[mode=icons][iconsize=small]) > #unified-back-forward-button[forwarddisabled] + #urlbar-container > #urlbar:-moz-locale-dir(ltr) {
+  margin-left: -23px;
+}
+
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=small], #nav-bar:not([currentset])[mode=icons][iconsize=small]) > #unified-back-forward-button[forwarddisabled] + #urlbar-container > #urlbar:-moz-locale-dir(rtl) {
   margin-right: -23px;
 }
 
-window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button #forward-button:-moz-locale-dir(rtl) {
-  -moz-transition: margin-left 200ms ease-out,
-                   opacity 100ms ease-in,
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button #forward-button:-moz-locale-dir(ltr) {
+  -moz-transition: opacity 200ms ease-in,
                    visibility 200ms ease-out;
-  margin-left: 4px;
 }
 
-window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] #forward-button:-moz-locale-dir(rtl) {
-  -moz-transition: margin-left 200ms ease-out,
-                   opacity 100ms ease-out,
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] #forward-button:-moz-locale-dir(ltr) {
+  -moz-transition: opacity 200ms ease-out,
                    visibility 200ms ease-out;
   opacity: 0 !important;
-  margin-left: -28px;
   visibility:hidden;
-}
-
-window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=small], #nav-bar:not([currentset])[mode=icons][iconsize=small]) > #unified-back-forward-button[forwarddisabled] #forward-button:-moz-locale-dir(rtl) {
-  margin-left: -23px;
 }
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] #back-button {
