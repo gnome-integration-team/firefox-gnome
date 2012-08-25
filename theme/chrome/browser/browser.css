@@ -8,8 +8,6 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
 
-
-
 #menubar-items {
   -moz-box-orient: vertical; /* for flex hack */
 }
@@ -20,76 +18,49 @@
 
 #navigator-toolbox {
   -moz-appearance: none;
-  background-color: transparent;
+  background-color: Window;
   border-top: none;
+  border-bottom: 1px solid #a7aba7 !important;
 }
 
-#toolbar-menubar {
+/* Toolbars */
+#navigator-toolbox > toolbar {
   -moz-appearance: none;
 }
-
-#navigator-toolbox[tabsontop=true] > toolbar:not(:-moz-lwtheme):not(#toolbar-menubar):not(#TabsToolbar),
-#navigator-toolbox[tabsontop=false] > toolbar:not(:-moz-lwtheme):not(#toolbar-menubar) {
-  -moz-appearance: none;
-  border-style: none;
-  background-color: #ededed; /* -moz-Dialog;  ? */
+#navigator-toolbox[tabsontop=false] > toolbar,
+#navigator-toolbox[tabsontop=true] > :-moz-any(#toolbar-menubar, #TabsToolbar) {
+  background: transparent !important;
+}
+#navigator-toolbox[tabsontop=true] > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
+  border-top: 1px solid #a7aba7 !important;
+}
+#navigator-toolbox[tabsontop=true] > toolbar:not(#toolbar-menubar):not(#TabsToolbar)[collapsed="false"] ~ toolbar {
+  border-top: 0 !important;
 }
 
-#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
-}
-
-#navigator-toolbox[tabsontop=false] > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
-}
-
-#navigator-toolbox[tabsontop=false] > #nav-bar {
-  /*
-  border-top: 1px solid #90908c !important;
-  */
-}
-
-#navigator-toolbox[tabsontop=true] > #nav-bar
-{
+/* Navigation toolbar */
+#navigator-toolbox[tabsontop=true] > #nav-bar {
   background: -moz-linear-gradient(top, #fff, #f3f3f3) !important;
-  box-shadow: 0 -1px 0 #a6a6a6 inset;
 }
 
-/* Restyle bookmark bars -- tabs on top */
-#navigator-toolbox[tabsontop=true] #PersonalToolbar {
+/* Custom toolbars */
+#navigator-toolbox[tabsontop=true] > toolbar[id*="custom"] {
+  background: #f4f4f4 !important;
+}
+
+/* Bookmarks toolbar */
+#navigator-toolbox[tabsontop=true] > #PersonalToolbar {
   background: -moz-linear-gradient(to bottom, #f4f4f4, #eee) !important;
-  border-bottom: 1px solid #c3c3c3 !important;
-  margin-top: -1px;
-  padding-top: 0;
 }
-
-/* Restyle bookmark bars -- tabs on bottom */
-#navigator-toolbox[tabsontop=false] #PersonalToolbar {
-  background: none !important;
-  border: none !important;
-  padding-bottom: 0;
-}
-/*
-#nav-bar:not(:-moz-lwtheme),
-#nav-bar[collapsed=true] + toolbar:not(:-moz-lwtheme),
-#nav-bar[collapsed=true] + #customToolbars + #PersonalToolbar:not(:-moz-lwtheme),
-#nav-bar[tabsontop=true],
-#nav-bar[tabsontop=true][collapsed=true]:not([customizing]) + toolbar,
-#nav-bar[tabsontop=true][collapsed=true]:not([customizing]) + #customToolbars + #PersonalToolbar {
-  background-image: -moz-linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
-}
-*/
 
 #personal-bookmarks {
   min-height: 29px;
 }
 
+/* Bottom toolbox */
 #browser-bottombox {
-  /* opaque for layers optimization */
-  background-color: -moz-Dialog;
-}
-
-#urlbar:-moz-lwtheme:not([focused="true"]),
-.searchbar-textbox:-moz-lwtheme:not([focused="true"]) {
-  opacity: .85;
+  background-color: transparent !important;
+  border-top: 1px solid #a7aba7 !important;
 }
 
 /* Places toolbar */
@@ -97,14 +68,6 @@ toolbarbutton.bookmark-item {
   margin: 0;
   padding: 2px 3px;
 }
-
-/*toolbarbutton.bookmark-item:hover:active,
-toolbarbutton.bookmark-item[open="true"] {
-  padding-top: 3px;
-  padding-bottom: 1px;
-  -moz-padding-start: 4px;
-  -moz-padding-end: 2px;
-}*/
 
 .bookmark-item > .toolbarbutton-icon {
   width: 16px;
@@ -668,22 +631,6 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #nav-bar[iconsize=large]:-moz-locale-dir(rtl) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type {
   border-radius: 0px 3px 3px 0px;
   -moz-margin-end: 4px;
-}
-
-/* Buttons on addon-bar */
-
-#addon-bar > toolbarbutton {
-  border-top-width: 0;
-  border-bottom-width: 0;
-  border-radius: 0px;
-  box-shadow: none;
-}
-
-#addon-bar > toolbarbutton:not([disabled="true"]):active,
-#addon-bar > toolbarbutton:not([disabled="true"]):active:hover,
-#addon-bar > toolbarbutton[open="true"],
-#addon-bar > toolbarbutton[checked="true"] {
-  border-color: #c3c3c3 !important;
 }
 
 /* 24px primary toolbar buttons */
@@ -1772,7 +1719,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 #sidebar-splitter {
   -moz-appearance: none;
-  border-right: 1px solid #c3c3c3;
+  border-right: 1px solid #a7aba7;
   min-width: 4px !important;
   width: 4px !important;
 }
@@ -1827,7 +1774,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-appearance: none;
   min-height: 0;
   padding: 0 0 0 3px;
-  box-shadow: 0 -1px 0 #a7a7a7 inset;
+  margin-bottom: -1px;
 }
 
 #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme) {
@@ -1840,8 +1787,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 #TabsToolbar[tabsontop=false] {
   margin-top: 4px; /* margin between tabs and browser bar */
-  border-bottom: 3px solid red !important;
-  -moz-border-bottom-colors: #a7a7a7 #fff #fff;
 }
 
 /* put some space between the newtab-button and regular tabs */
@@ -2342,14 +2287,8 @@ panel[dimmed="true"] {
 /* Add-on bar */
 
 #addon-bar {
-/*  box-shadow: 0 1px 0 rgba(0,0,0,.15) inset;*/
-/*  box-shadow: 0 1px 0 #a6a6a6 inset;*/
   padding: 0;
   min-height: 20px;
-}
-
-#browser-bottombox {
-  border-top: 1px solid #c3c3c3 !important;
 }
 
 #status-bar {
@@ -2369,6 +2308,22 @@ panel[dimmed="true"] {
 #status-bar > statusbarpanel {
   border-width: 0;
   -moz-appearance: none;
+}
+
+/* Buttons on addon-bar */
+
+#addon-bar > toolbarbutton {
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+#addon-bar > toolbarbutton:not([disabled="true"]):active,
+#addon-bar > toolbarbutton:not([disabled="true"]):active:hover,
+#addon-bar > toolbarbutton[open="true"],
+#addon-bar > toolbarbutton[checked="true"] {
+  border-color: #c3c3c3 !important;
 }
 
 #addonbar-closebutton {
