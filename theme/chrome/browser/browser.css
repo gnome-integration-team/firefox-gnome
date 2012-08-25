@@ -2310,9 +2310,14 @@ panel[dimmed="true"] {
   -moz-appearance: none;
 }
 
+#addon-bar[iconsize="small"] #personal-bookmarks {
+  min-height: 0;
+}
+
 /* Buttons on addon-bar */
 
-#addon-bar > toolbarbutton {
+#addon-bar > toolbarbutton,
+#addon-bar > :-moz-any(#personal-bookmarks, #bookmarks-menu-button-container) toolbarbutton {
   border-top-width: 0;
   border-bottom-width: 0;
   border-radius: 0px;
@@ -2321,9 +2326,13 @@ panel[dimmed="true"] {
 
 #addon-bar > toolbarbutton:not([disabled="true"]):active,
 #addon-bar > toolbarbutton:not([disabled="true"]):active:hover,
+#addon-bar > :-moz-any(#personal-bookmarks, #bookmarks-menu-button-container) toolbarbutton:not([disabled="true"]):active,
+#addon-bar > :-moz-any(#personal-bookmarks, #bookmarks-menu-button-container) toolbarbutton:not([disabled="true"]):active:hover,
 #addon-bar > toolbarbutton[open="true"],
-#addon-bar > toolbarbutton[checked="true"] {
-  border-color: #c3c3c3 !important;
+#addon-bar > :-moz-any(#personal-bookmarks, #bookmarks-menu-button-container) toolbarbutton[open="true"],
+#addon-bar > toolbarbutton[checked="true"],
+#addon-bar > :-moz-any(#personal-bookmarks, #bookmarks-menu-button-container) toolbarbutton[checked="true"], {
+  border-color: #a7aba7 !important;
 }
 
 #addonbar-closebutton {
