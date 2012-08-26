@@ -44,7 +44,7 @@ ul {
   -moz-padding-start: 5emx;
   text-align: left;
   color: #2e3436;
-  background: none !important;
+  background: none ;
 }
 
 #errorPageContainer > #errorLongContent{
@@ -95,7 +95,7 @@ body[dir="rtl"] #errorPageContainer {
   -moz-appearance: none;
   border-radius: 3px;
   border: 1px solid;
-   margin-left: 14em;
+   margin-left: 8em;
   border-color: rgba(0,0,0,.2);
   border-left: 1px solid rgba(0,0,0,.15) ;
   box-shadow: 0 1px 0 rgba(255,255,255,1)inset ,
@@ -103,7 +103,8 @@ body[dir="rtl"] #errorPageContainer {
   background-image: -moz-linear-gradient(#F5F5F5, #DCDCDC);
   padding: 4px 9px ;
     -moz-transition-property: color, border, box-shadow, background-image;
-  -moz-transition-duration: 300ms;
+  -moz-transition-duration: 200ms;
+}
 }
 
 #errorTryAgain:hover{
