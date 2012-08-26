@@ -6,7 +6,6 @@ body.private > #errorPageContainer {
 body.normal > #errorPageContainer {
   background-image: url("moz-icon://stock/gtk-dialog-question?size=dialog");
 }
-
 #clearRecentHistoryDesc {
   margin-top: 2em;
 }
@@ -20,13 +19,16 @@ body.normal > #errorPageContainer {
 }
 
 #footerDesc > p {
-  font-size: 110%; /* to match the value set in chrome://global/skin/netError.css */
+  font-size: 100%; /* to match the value set in chrome://global/skin/netError.css */
 }
 
 #moreInfo {
-  font-size: 110%; /* to match the value set in chrome://global/skin/netError.css */
+  font-size: 100%; /* to match the value set in chrome://global/skin/netError.css */
   -moz-padding-start: 25px;
-  background: url("moz-icon://stock/gtk-dialog-info?size=menu") no-repeat top left;
+  -moz-padding-end: 70px;
+  margin-top: 30px;
+  color: grey;
+  background: url("chrome://browser/skin/symbolic-icons/information.svg") no-repeat top left;
 }
 
 body[dir="rtl"] #moreInfo {
@@ -39,4 +41,8 @@ body[dir="rtl"] #moreInfo {
 
 #moreInfoLinkContainer {
   margin-top: 0.5em;
+}
+
+#moreInfoLink{
+  color: grey  !important;
 }
