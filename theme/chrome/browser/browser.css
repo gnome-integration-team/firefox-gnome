@@ -2034,7 +2034,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tabs-newtab-button,
 #TabsToolbar > #new-tab-button,
 #TabsToolbar > #wrapper-new-tab-button > #new-tab-button {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/tab-new-tp.svg);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/add.svg);
   -moz-image-region: auto;
   background: transparent !important;
   border-color: transparent !important;
