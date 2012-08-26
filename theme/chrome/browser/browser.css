@@ -540,11 +540,6 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 #nav-bar[iconsize=large] > toolbarbutton,
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button) {
-  -moz-appearance: none;
-  border-radius: 3px;
-  background: transparent !important;
-  border: 1px solid transparent !important;
-  color: #2e3436;
   margin: 3px 2px;
   min-height: 28px;
   min-width: 26px;
@@ -556,11 +551,19 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button) {
 */
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button) {
+  min-width: 32px;
+}
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button):not(:hover):not(:active) {
   background-image: -moz-linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important; /* For Fx 15 */
   background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
   border: 1px solid rgba(0,0,0,.25) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1), inset 1px 0 0 rgba(255,255,255,0.4), inset -1px 0 0 rgba(255,255,255,0.4) !important;
-  min-width: 32px;
+}
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button)[disabled="true"] {
+  background-image: -moz-linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important; /* For Fx 15 */
+  background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
+  border: 1px solid rgba(0,0,0,.25) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1), inset 1px 0 0 rgba(255,255,255,0.4), inset -1px 0 0 rgba(255,255,255,0.4) !important;
 }
 
 #nav-bar[iconsize=large] > toolbarbutton toolbarbutton {
@@ -569,35 +572,20 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   box-shadow: none !important;
 }
 
-#nav-bar[iconsize=large] > toolbarbutton:not([disabled="true"]):hover,
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button):not([disabled="true"]):hover {
-  background-image: -moz-linear-gradient(to bottom, #ffffff, #ebebeb) !important; /* For Fx 15 */
-  background-image: linear-gradient(to bottom, #ffffff, #ebebeb) !important;
-  border: 1px solid rgba(0,0,0,.25) !important;
-}
 
-#nav-bar[iconsize=large] > toolbarbutton:not([disabled="true"]):active,
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button):not([disabled="true"]):active,
-#nav-bar[iconsize=large] > toolbarbutton:not([disabled="true"]):active:hover,
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button):not([disabled="true"]):active:hover,
-#nav-bar[iconsize=large] > toolbarbutton[checked="true"],
-#nav-bar[iconsize=large] > toolbarbutton[checked="true"]:hover,
 #nav-bar[iconsize=large] > toolbarbutton[open="true"],
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button)[open="true"],
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #bookmarks-menu-button)[open="true"],
 #nav-bar[iconsize=large] > toolbarbutton[open="true"]:hover,
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button)[open="true"]:hover {
-  background-image: -moz-linear-gradient(to bottom, #c7cbc7, #e3e8e3) !important; /* For Fx 15 */
-  background-image: linear-gradient(to bottom, #c7cbc7, #e3e8e3) !important;
-  border: 1px solid rgba(0,0,0,.25) !important;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
-  color: #ffffff !important;
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #bookmarks-menu-button)[open="true"]:hover,
+#nav-bar[iconsize=large] > toolbarbutton[open="true"]:active,
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #bookmarks-menu-button)[open="true"]:active,
+#nav-bar[iconsize=large] > toolbarbutton[open="true"]:active:hover,
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #bookmarks-menu-button)[open="true"]:active:hover {
+  border-radius: 3px 3px 0 0 !important;
 }
 
 #nav-bar[iconsize=large] > toolbarbutton[disabled="true"],
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button)[disabled="true"] {
-/*  background: transparent !important;*/
-/*  border-color: rgba(0,0,0,.25) !important;*/
-/*  box-shadow: none !important;*/
   opacity: 1;
 }
 
@@ -647,26 +635,17 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 #nav-bar[iconsize=small] > toolbarbutton,
 #nav-bar[iconsize=small] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button) {
-  -moz-appearance: none;
   margin: 3px 2px;
   min-height: 28px;
   padding: 1px 4px !important;
 }
 
-#nav-bar[iconsize=small] > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton {
-  border-radius: 0px;
-  -moz-margin-start: -1px;
-  -moz-margin-end: 0px;
-}
-
 #nav-bar[iconsize=small]:not(:-moz-locale-dir(rtl)) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type,
 #nav-bar[iconsize=small]:-moz-locale-dir(rtl) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type {
-  border-radius: 3px 0px 0px 3px;
   -moz-margin-start: 2px;
 }
 #nav-bar[iconsize=small]:not(:-moz-locale-dir(rtl)) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type,
 #nav-bar[iconsize=small]:-moz-locale-dir(rtl) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type {
-  border-radius: 0px 3px 3px 0px;
   -moz-margin-end: 2px;
 }
 
@@ -676,15 +655,11 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 #back-button[disabled="true"] {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/back-button-disabled.svg");
+  opacity: 0.3;
 }
 
 #back-button:-moz-locale-dir(rtl) {
   list-style-image: url("chrome://browser/skin/symbolic-icons/forward-button.svg");
-}
-
-#back-button[disabled="true"]:-moz-locale-dir(rtl) {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/forward-button-disabled.svg");
 }
 
 #forward-button {
@@ -696,11 +671,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 #forward-button[disabled] {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/forward-button-disabled.svg");
-}
-
-#forward-button[disabled]:-moz-locale-dir(rtl) {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/back-button-disabled.svg");
+  opacity: 0.3;
 }
 
 #reload-button {
@@ -1821,7 +1792,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #TabsToolbar {
   -moz-appearance: none;
   min-height: 0;
-  padding: 0 0 0 3px;
+  padding: 0 3px 0 3px;
   margin-bottom: -1px;
 }
 
@@ -1837,9 +1808,13 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   margin-top: 4px; /* margin between tabs and browser bar */
 }
 
+#TabsToolbar > toolbarbutton,
+#TabsToolbar :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button) {
+  margin: 0px 2px 3px 2px;
+}
+
 /* put some space between the newtab-button and regular tabs */
-.tabs-newtab-button
-{
+.tabs-newtab-button {
   -moz-margin-start: 10px;
 }
 
@@ -2034,35 +2009,47 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   padding: 5px;
   border-radius: 3px;
   border: 1px solid transparent;
+  box-shadow: none !important;
 }
 .tab-close-button:hover {
   list-style-image: url(chrome://browser/skin/tabbrowser/close-hover.png);
-  background: none;
-  border-color: rgba(0, 0, 0, 0.1);
+  background: none !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  box-shadow: none !important;
 }
 .tab-close-button:active {
   list-style-image: url(chrome://browser/skin/tabbrowser/close-active.png);
-  /*
-  background: -moz-linear-gradient(top, #dadada 1px, #e6e6e6 2px, #e8e8e8 100%)
-  background: rgba(0, 0, 0, 0.1);
-  */
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.13) 1px, rgba(0, 0, 0, 0.08) 2px, rgba(0, 0, 0, 0.07) 100%);
-  /*
-  padding: 4px 4px 2px 2px;
-  */
-  border-color: rgba(0, 0, 0, 0.12);
-  border-color-top: rgba(0, 0, 0, 0.27);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.13) 1px, rgba(0, 0, 0, 0.08) 2px, rgba(0, 0, 0, 0.07) 100%) !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  border-color-top: rgba(0, 0, 0, 0.27) !important;
+  box-shadow: none !important;
 }
 
 /* Tabstrip new tab button */
 .tabs-newtab-button,
-#TabsToolbar > #new-tab-button ,
+#TabsToolbar > #new-tab-button,
 #TabsToolbar > #wrapper-new-tab-button > #new-tab-button {
-/*  list-style-image: url("moz-icon://stock/gtk-add?size=menu");*/
   list-style-image: url(chrome://browser/skin/symbolic-icons/tab-new-tp.svg);
   -moz-image-region: auto;
   background: transparent !important;
   border-color: transparent !important;
+  box-shadow: none !important;
+  opacity: .7;
+}
+
+.tabs-newtab-button:hover,
+#TabsToolbar > #new-tab-button:hover,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button:hover {
+  opacity: .9;
+}
+
+.tabs-newtab-button:active,
+#TabsToolbar > #new-tab-button:active,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button:active,
+.tabs-newtab-button:active:hover,
+#TabsToolbar > #new-tab-button:active:hover,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button:active:hover {
+  opacity: 1;
 }
 
 /* Tabstrip close button */
@@ -2091,6 +2078,8 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-appearance: none;
   margin: 0;
   background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
 }
 
 .tabbrowser-arrowscrollbox > .scrollbutton-up {
@@ -2370,10 +2359,10 @@ panel[dimmed="true"] {
 /* Buttons on addon-bar */
 
 #addon-bar toolbarbutton {
-  border-top-width: 0;
-  border-bottom-width: 0;
-  border-radius: 0px;
-  box-shadow: none;
+  border-top-width: 0 !important;
+  border-bottom-width: 0 !important;
+  border-radius: 0;
+  box-shadow: none !important;
 }
 
 #addon-bar toolbarbutton:not([disabled="true"]):active,
