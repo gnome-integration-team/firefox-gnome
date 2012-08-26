@@ -11,16 +11,19 @@
 /* ::::: toolbarbutton ::::: */
 
 toolbarbutton {
+  -moz-appearance: none;
   -moz-box-align: center;
   -moz-box-pack: center;
-  margin: 0;
-  border: 1px solid transparent;
+  background: transparent !important;
+  border: 1px solid transparent !important;
   border-radius: 3px;
-  padding: 3px;
-  background-color: transparent;
 /*  color: -moz-DialogText;*/
   color: #2e3436;
+  padding: 3px;
+  margin: 0;
   text-shadow: none;
+  -moz-transition-property: color, border, box-shadow, background;
+  -moz-transition-duration: 300ms;
 }
 
 .toolbarbutton-icon[label]:not([label=""]),
@@ -39,24 +42,31 @@ toolbarbutton.tabbable {
 
 toolbarbutton:not([disabled]):hover,
 .toolbarbutton-menubutton-dropmarker:hover {
-  background-image: -moz-linear-gradient(to bottom, #ffffff, #ebebeb); /* For Fx 15 */
-  background-image: linear-gradient(to bottom, #ffffff, #ebebeb);
-  border: 1px solid rgba(0,0,0,.25);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.89);
+  background-image: -moz-linear-gradient(to bottom, #ffffff, #ebebeb) !important; /* For Fx 15 */
+  background-image: linear-gradient(to bottom, #ffffff, #ebebeb) !important;
+  border: 1px solid rgba(0,0,0,.25) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
 }
 
 toolbarbutton:not([disabled]):active,
 toolbarbutton:not([disabled]):active:hover,
 toolbarbutton[checked="true"],
-toolbarbutton[checked="true"]:hover,
-toolbarbutton[open="true"],
-toolbarbutton[open="true"]:hover {
-  background-image: -moz-linear-gradient(to bottom, #c7cbc7, #e3e8e3); /* For Fx 15 */
-  background-image: linear-gradient(to bottom, #c7cbc7, #e3e8e3);
+toolbarbutton[checked="true"]:hover {
+  background-image: -moz-linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important; /* For Fx 15 */
+  background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important;
 /*  border-color: #72a0cf;*/
-  border: 1px solid rgba(0,0,0,.25);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.89);
-/*  color: #ffffff;*/
+  border: 1px solid rgba(0,0,0,.25) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
+}
+
+toolbarbutton[open="true"],
+toolbarbutton[open="true"]:hover,
+toolbarbutton[open="true"]:active,
+toolbarbutton[open="true"]:active:hover {
+  background: #ffffff !important;
+  border: 1px solid #ffffff !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
+  border-radius: 3px 3px 0 0;
 }
 
 /* ::::: toolbarbutton menu ::::: */
