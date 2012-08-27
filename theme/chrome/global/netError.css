@@ -41,10 +41,10 @@ ul {
   max-width: 65em;
   margin: auto;
   padding: 3em 0;
-  -moz-padding-start: 5emx;
+  -moz-padding-start: 5em;
   text-align: left;
   color: #2e3436;
-  background: none ;
+
 }
 
 #errorPageContainer > #errorLongContent{
@@ -88,6 +88,7 @@ body[dir="rtl"] #errorPageContainer {
 
 #errorLongDesc > p {
   padding-bottom: 1em;
+  color: grey;
 }
 
 #errorTryAgain {
@@ -104,7 +105,6 @@ body[dir="rtl"] #errorPageContainer {
   padding: 4px 9px ;
     -moz-transition-property: color, border, box-shadow, background-image;
   -moz-transition-duration: 200ms;
-}
 }
 
 #errorTryAgain:hover{
@@ -156,17 +156,15 @@ body[dir="rtl"] #brand {
 :root.blacklist #errorTitle, :root.blacklist #errorLongContent,
 :root.blacklist #errorShortDesc, :root.blacklist #errorLongDesc,
 :root.blacklist a {
-  background-color: #722; /* Dark red */
-  color: white;
+
 }
 
 :root.blacklist #errorPageContainer {
-  background-image: url("chrome://global/skin/icons/blacklist_large.png");
-  background-color: #722;
+
 }
 
 :root.blacklist {
-  background: #333;
+
 }
 
 :root.blacklist #errorTryAgain {
