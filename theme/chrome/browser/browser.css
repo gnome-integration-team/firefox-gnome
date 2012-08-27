@@ -1646,7 +1646,8 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 /* Popup blocker button */
 #page-report-button {
-  list-style-image: url("chrome://browser/skin/Info.png");
+list-style-image: url("chrome://browser/skin/symbolic-icons/info.svg");
+opacity: 0.5;
 }
 
 /* Star button */
