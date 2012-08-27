@@ -1607,11 +1607,11 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #urlbar > toolbarbutton {
   -moz-appearance: none !important;
   border: none !important;
-  border-left: 1px solid rgba(0,0,0,0.2)!important;
+  -moz-border-start: 1px solid rgba(0,0,0,0.2)!important;
   padding: 3px 3px 3px 4px;
   cursor: pointer !important;
   width: 24px !important;
-  margin-left: 3px;
+  -moz-margin-start: 3px;
 }
 
 #go-button {
