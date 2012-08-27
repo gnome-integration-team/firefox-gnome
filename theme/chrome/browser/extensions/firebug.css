@@ -1,0 +1,29 @@
+/* Firebug
+ * id: firebug@software.joehewitt.com
+ * URL: https://addons.mozilla.org/firefox/addon/firebug/ */
+
+#firebug-button {
+  filter: none !important;
+  list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/firebug.svg") !important;
+  -moz-image-region: rect(16px, 16px, 32px, 0) !important;
+}
+
+#firebug-button > .fb-toolbarbutton {
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-image: url(chrome://browser/skin/symbolic-icons/extensions/firebug.svg) !important;
+  opacity: 0.5;
+}
+
+#firebug-button[firebugActive="true"] > .fb-toolbarbutton {
+  background-image: url(chrome://browser/skin/symbolic-icons/extensions/firebug.svg) !important;
+  opacity: 1;
+}
+
+#firebug-button .badge > .label {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #242b33 !important;
+  text-shadow: none !important;
+}
