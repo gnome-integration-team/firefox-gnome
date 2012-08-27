@@ -7,6 +7,7 @@
 }
 
 #ghostery-toolbar-button[condition="grey"] > .toolbarbutton-icon {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery-grayscale.svg) !important;
   opacity: 0.5;
 }
 
@@ -30,6 +31,7 @@
   background-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery.svg) !important;
 }
 #ghostery-status > #ghostery-status-icon[src*="off"] {
+  background-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery-grayscale.svg) !important;
   opacity: 0.5;
 }
 
