@@ -18,7 +18,7 @@ toolbarbutton {
   border: 1px solid transparent !important;
   border-radius: 3px;
 /*  color: -moz-DialogText;*/
-  color: #2e3436;
+  color: #2e3436 !important;
   padding: 3px;
   margin: 0;
   text-shadow: none;
