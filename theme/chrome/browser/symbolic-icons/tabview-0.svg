@@ -31,10 +31,10 @@
      showgrid="true"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
-     inkscape:window-width="1280"
-     inkscape:window-height="995"
+     inkscape:window-width="1366"
+     inkscape:window-height="712"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
@@ -57,9 +57,9 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer">
     <path
-       style="fill:#4d4d4d;fill-opacity:1;stroke:none"
+       inkscape:connector-curvature="0"
+       id="path6125"
        d="M 2,1 C 1.446,1 1,1.446 1,2 L 1,6 C 1,6.554 1.446,7 2,7 L 8,7 C 8.554,7 9,6.554 9,6 L 9,2 C 9,1.446 8.554,1 8,1 L 2,1 z m 10,0 c -0.554,0 -1,0.446 -1,1 l 0,4 c 0,0.554 0.446,1 1,1 l 2,0 c 0.554,0 1,-0.446 1,-1 L 15,2 C 15,1.446 14.554,1 14,1 L 12,1 z M 2,9 C 1.446,9 1,9.446 1,10 l 0,3 c 0,0.554 0.446,1 1,1 l 3,0 c 0.554,0 1,-0.446 1,-1 L 6,10 C 6,9.446 5.554,9 5,9 L 2,9 z M 9,9 C 8.446,9 8,9.446 8,10 l 0,3 c 0,0.554 0.446,1 1,1 l 5,0 c 0.554,0 1,-0.446 1,-1 l 0,-3 C 15,9.446 14.554,9 14,9 L 9,9 z"
-       id="rect5875"
-       inkscape:connector-curvature="0" />
+       style="fill:#4d4d4d;fill-opacity:1;stroke:none" />
   </g>
 </svg>
