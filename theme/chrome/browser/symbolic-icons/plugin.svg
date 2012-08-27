@@ -14,7 +14,7 @@
    id="svg3341"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="New document 6">
+   sodipodi:docname="plugin.svg">
   <defs
      id="defs3343" />
   <sodipodi:namedview
@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="22.197802"
-     inkscape:cx="2.2336633"
-     inkscape:cy="8"
+     inkscape:zoom="15.696216"
+     inkscape:cx="9.9884794"
+     inkscape:cy="6.6859997"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:grid-bbox="true"
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -57,10 +57,9 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer">
     <path
-       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
-       d="m 5.555548,1.9999999 -2.0063239,1.1465 2.4362499,3.8535 -4.9835939,0 0,1.9985001 4.9835939,0 -2.4362499,3.855 L 5.555548,14 7.991797,10.145 10.428046,14 12.43437,12.8535 9.99812,8.9985001 l 5,0 L 14.99812,7 9.9981199,7 12.43437,3.1465 10.428046,2 7.9917969,5.5590999 6.2372569,2.9959 z"
-       id="path3029"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccccccccccccccccc" />
+       style="fill:#4d4d4d;fill-opacity:1;stroke:none"
+       d="M 3,2 3,4 7,4 7,2 3,2 z M 7,4 7,5 7,6 6,6 6,5 4,5 4,6 3,6 3,5 3,4 2,4 1,7 15,7 14,4 13,4 13,5 13,6 12,6 12,5 10,5 10,6 9,6 9,5 9,4 7,4 z m 2,0 4,0 0,-2 -4,0 0,2 z m -7.9375,4 0,6 14,0 0,-6 -14,0 z"
+       id="path3292"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
