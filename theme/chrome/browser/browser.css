@@ -1492,6 +1492,11 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 .notification-anchor-icon {
   width: 16px;
   height: 16px;
+  opacity: 0.5;
+}
+
+.notification-anchor-icon:hover {
+  opacity: 1;
 }
 
 .notification-anchor-icon:-moz-focusring {
@@ -1499,23 +1504,23 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 
 #default-notification-icon {
-  list-style-image: url(chrome://global/skin/icons/information-16.png);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/information.svg);
 }
 
 #geo-notification-icon {
-  list-style-image: url(chrome://browser/skin/Geolocation-16.png);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/geolocation.svg);
 }
 
 #addons-notification-icon {
-  list-style-image: url(chrome://mozapps/skin/extensions/extensionGeneric-16.png);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/addon.svg);
 }
 
 #indexedDB-notification-icon {
-  list-style-image: url(chrome://global/skin/icons/question-16.png);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/question.svg);
 }
 
 #password-notification-icon {
-  list-style-image: url(chrome://mozapps/skin/passwordmgr/key-16.png);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/key.svg);
 }
 
 #webapps-notification-icon {
@@ -1523,11 +1528,11 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   /*
   list-style-image: url(chrome://browser/skin/webapps-16.png);
   */
-  list-style-image: url(chrome://mozapps/skin/plugins/pluginGeneric-16.png);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/plugin.svg);
 }
 
 #plugins-notification-icon {
-  list-style-image: url(chrome://mozapps/skin/plugins/pluginGeneric-16.png);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/plugin.svg);
 }
 
 #treecolAutoCompleteImage {
