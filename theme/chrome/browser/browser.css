@@ -1773,7 +1773,8 @@ opacity: 0.5;
   position: relative; /* static doesn't work with overlapping tabs (wrong z-index of the selected tab) */
   -moz-appearance: none;
   background-color: transparent;
-  color: inherit;
+/*  color: inherit;*/
+  color: #2e3436;
 /*
   margin: 0;
   padding: 0;
@@ -1806,7 +1807,8 @@ opacity: 0.5;
 #main-window[tabsontop=false] .tabbrowser-tab[selected="true"] {
   -moz-border-image: url(tabbrowser/adwaita-tab.png) 6 9 1 9 / 6px 9px 1px 9px stretch;
   -moz-border-image: url(tabbrowser/adwaita-tab.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch;
-  color: -moz-dialogtext;
+/*  color: -moz-dialogtext;*/
+  color: #2e3436;
 }
 
 /* All the tabs after the selected tab (hack) */
@@ -1826,7 +1828,6 @@ opacity: 0.5;
 
 .tabbrowser-tab[selected="true"]:-moz-lwtheme {
   background-image: -moz-linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%);
-  color: inherit;
 }
 
 .tabbrowser-tab:-moz-lwtheme-brighttext:not([selected="true"]),
