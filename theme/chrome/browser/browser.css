@@ -540,9 +540,16 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 #nav-bar[iconsize=large] > toolbarbutton,
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button) {
-  margin: 3px 2px;
+  margin: 3px 4px;
   min-height: 28px;
   min-width: 26px;
+  padding: 0px 3px !important;
+}
+
+#nav-bar[iconsize=small] > toolbarbutton,
+#nav-bar[iconsize=small] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button) {
+  margin: 3px 2px;
+  min-height: 28px;
   padding: 0px 3px !important;
 }
 
@@ -572,25 +579,24 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   box-shadow: none !important;
 }
 
-
-#nav-bar[iconsize=large] > toolbarbutton[open="true"],
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #bookmarks-menu-button)[open="true"],
-#nav-bar[iconsize=large] > toolbarbutton[open="true"]:hover,
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #bookmarks-menu-button)[open="true"]:hover,
-#nav-bar[iconsize=large] > toolbarbutton[open="true"]:active,
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #bookmarks-menu-button)[open="true"]:active,
-#nav-bar[iconsize=large] > toolbarbutton[open="true"]:active:hover,
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #bookmarks-menu-button)[open="true"]:active:hover {
+#nav-bar > toolbarbutton[open="true"],
+#nav-bar :-moz-any(#back-button, #forward-button, #bookmarks-menu-button)[open="true"],
+#nav-bar > toolbarbutton[open="true"]:hover,
+#nav-bar :-moz-any(#back-button, #forward-button, #bookmarks-menu-button)[open="true"]:hover,
+#nav-bar > toolbarbutton[open="true"]:active,
+#nav-bar :-moz-any(#back-button, #forward-button, #bookmarks-menu-button)[open="true"]:active,
+#nav-bar > toolbarbutton[open="true"]:active:hover,
+#nav-bar :-moz-any(#back-button, #forward-button, #bookmarks-menu-button)[open="true"]:active:hover {
   border-radius: 3px 3px 0 0 !important;
 }
 
-#nav-bar[iconsize=large] > toolbarbutton[disabled="true"],
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button)[disabled="true"] {
+#nav-bar > toolbarbutton[disabled="true"],
+#nav-bar :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button)[disabled="true"] {
   opacity: 1;
 }
 
-#nav-bar[iconsize=large] > toolbarbutton[disabled="true"] > .toolbarbutton-icon,
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button)[disabled="true"] > .toolbarbutton-icon {
+#nav-bar > toolbarbutton[disabled="true"] > .toolbarbutton-icon,
+#nav-bar :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button)[disabled="true"] > .toolbarbutton-icon {
   opacity: .5;
 }
 
@@ -614,30 +620,22 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 */
 
-#nav-bar[iconsize=large] > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton {
+#nav-bar[iconsize=large] > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton,
+#nav-bar[iconsize=small] > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton {
   border-radius: 0px;
   -moz-margin-start: -1px;
   -moz-margin-end: 0px;
 }
 
-#nav-bar[iconsize=large]:not(:-moz-locale-dir(rtl)) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type,
-#nav-bar[iconsize=large]:-moz-locale-dir(rtl) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type {
+#nav-bar:not(:-moz-locale-dir(rtl)) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type,
+#nav-bar:-moz-locale-dir(rtl) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type {
   border-radius: 3px 0px 0px 3px;
   -moz-margin-start: 4px;
 }
-#nav-bar[iconsize=large]:not(:-moz-locale-dir(rtl)) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type,
-#nav-bar[iconsize=large]:-moz-locale-dir(rtl) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type {
+#nav-bar:not(:-moz-locale-dir(rtl)) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type,
+#nav-bar:-moz-locale-dir(rtl) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type {
   border-radius: 0px 3px 3px 0px;
   -moz-margin-end: 4px;
-}
-
-/* Small */
-
-#nav-bar[iconsize=small] > toolbarbutton,
-#nav-bar[iconsize=small] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button) {
-  margin: 3px 2px;
-  min-height: 28px;
-  padding: 1px 4px !important;
 }
 
 #nav-bar[iconsize=small]:not(:-moz-locale-dir(rtl)) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type,
