@@ -1,11 +1,15 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 notification {
-  background: -moz-linear-gradient(top, #D4D4D4,#ECECEC);
-  color: rgba(0,0,0,0.8)!important;
+  background: -moz-linear-gradient(to bottom, #D4D4D4, #ECECEC);
+  color: rgba(0,0,0,0.8) !important;
   box-shadow: 0 3px 5px rgba(0,0,0,0.2) inset;
   text-shadow: none;
 
+  /* FIXME */
+  width: -moz-calc(100% + 2px);
+  -moz-margin-start: -1px;
+  margin-top: -1px;
 }
 
 notification[type="info"] {
@@ -42,15 +46,29 @@ notification[type="info"] .messageImage {
 }
 
 notification[type="warning"] .messageImage {
-	list-style-image: url("chrome://browser/skin/symbolic-icons/important.svg");
+  list-style-image: url("chrome://browser/skin/symbolic-icons/important.svg");
 }
 
 notification[type="critical"] .messageImage {
-	list-style-image: url("chrome://browser/skin/symbolic-icons/critical.svg");
+  list-style-image: url("chrome://browser/skin/symbolic-icons/critical.svg");
+}
+
+/* Replace Icon.png */
+
+notification[value="popup-blocked"] .messageImage,
+notification[value="refresh-blocked"] .messageImage,
+notification[value="offline-app-usage"] .messageImage,
+notification[value*="offline-app-requested-"] .messageImage {
+  background: url(chrome://browser/skin/symbolic-icons/info.svg) no-repeat center !important;
+  min-width: 16px !important;
+  max-width: 16px !important;
+  min-height: 16px !important;
+  -moz-padding-start: 16px !important;
+  overflow: hidden !important;
 }
 
 .messageCloseButton {
-	list-style-image: url("chrome://browser/skin/tabbrowser/close-normal.png");
+  list-style-image: url("chrome://browser/skin/tabbrowser/close-normal.png");
 
   margin-top: 0;
   margin-bottom: 0;
@@ -68,5 +86,5 @@ notification[type="critical"] .messageImage {
 }
 
 .popup-notification-closeitem {
-	list-style-image: url("chrome://browser/skin/tabbrowser/close-normal.png");
+  list-style-image: url("chrome://browser/skin/tabbrowser/close-normal.png");
 }
