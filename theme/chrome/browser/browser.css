@@ -1051,8 +1051,8 @@ toolbar[iconsize="small"] #feed-button {
   border-radius: 3px;
   background-image: -moz-linear-gradient(top, #f2f2f2, #fdfdfd);
   padding: 1px;
-  box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15),
-  		    0px 1px 0 0 rgba(255,255,255,0.89);
+  box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 0 0 rgba(255,255,255,0.89);
+  min-height: 26px;
   -moz-transition-property: border, box-shadow;
   -moz-transition-duration: 300ms;
 }
