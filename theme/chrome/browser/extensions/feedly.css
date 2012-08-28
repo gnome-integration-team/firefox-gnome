@@ -3,9 +3,5 @@
  * URL: https://addons.mozilla.org/firefox/addon/feedly/ */
 
 #feedly-toolbar-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/feedly-grayscale.svg") !important;
-}
-
-#feedly-toolbar-button:hover {
   list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/feedly.svg") !important;
 }
