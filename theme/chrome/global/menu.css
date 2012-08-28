@@ -54,9 +54,9 @@ menuitem[disabled="true"],
 menubar > menu {
   padding: 3px 7px;
   color: -moz-menubartext;
+/*  color: #2e3436;*/
   background: transparent;
 }
-
 
 menubar:-moz-lwtheme > menu {
   text-shadow: none;
@@ -69,13 +69,16 @@ menubar:-moz-lwtheme > menu:not([open="true"]) {
 
 menubar > menu[_moz-menuactive="true"]:not([open]):not([disabled="true"]):not(:-moz-lwtheme) {
   color: -moz-menubartext;
+/*  color: #2e3436;*/
   background: transparent;
 }
 
 menubar > menu[open] {
+
   color: -moz-menubarhovertext;
   background-color: -moz-menuhover;
-  background-color: Menu;
+/*  color: #2e3436;*/
+/*  background-color: Menu;*/
   border-radius: 3px 3px 0 0;
 }
 
@@ -99,30 +102,30 @@ menulist > menupopup > menu {
 .menu-text,
 .menu-iconic-left,
 .menu-iconic-text {
-  margin-top: 0px ;
-  margin-bottom: 0px ;
-  -moz-margin-start: 0px ;
-  -moz-margin-end: 2px ;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  -moz-margin-start: 0px !important;
+  -moz-margin-end: 2px !important;
   color: inherit;
 }
 
 .menu-text {
   /* This is (18 + the size of end-padding on .menu-iconic-left)px */
-  -moz-margin-start: 21px ;
+  -moz-margin-start: 21px !important;
   font-weight: inherit;
 }
 
 .menu-description {
   font-style: italic;
   color: GrayText;
-  -moz-margin-start: 1ex ;
+  -moz-margin-start: 1ex !important;
 }
 
 .menu-accel,
 .menu-iconic-accel {
-  margin-top: 0px ;
-  margin-bottom: 0px ;
-  -moz-margin-start: 7px ;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  -moz-margin-start: 7px !important;
   color: inherit;
 }
 
@@ -133,7 +136,7 @@ menulist > menupopup > menu {
 .menu-iconic-left {
   width: 16px;
   /* We can only hardcode this, to make the default GTK icon<->label spacing */
-  -moz-padding-end: 3px ;
+  -moz-padding-end: 3px !important;
 }
 
 .menu-iconic-icon {
@@ -163,7 +166,7 @@ menulist > menupopup > menu {
 }
 
 .menubar-text {
-  margin: 0 1px ;
+  margin: 0 1px !important;
   color: inherit;
 }
 
@@ -179,7 +182,7 @@ menulist > menupopup > menu > .menu-iconic-left {
 
 menuitem[checked="true"] {
   /*
-  -moz-appearance: checkmenuitem ;
+  -moz-appearance: checkmenuitem !important;
   */
   list-style-image: url("chrome://global/skin/menu/menuitem-checkbox-checked.png");
 }
@@ -194,7 +197,7 @@ menuitem[disabled="true"][checked="true"] {
 
 menuitem[type="checkbox"] {
   /*
-  -moz-appearance: checkmenuitem ;
+  -moz-appearance: checkmenuitem !important;
   */
 }
 
@@ -202,7 +205,7 @@ menuitem[type="checkbox"] {
 
 menuitem[type="radio"] {
   /*
-  -moz-appearance: radiomenuitem ;
+  -moz-appearance: radiomenuitem !important;
   */
 }
 
@@ -222,7 +225,7 @@ menuitem[type="radio"][disabled="true"][checked="true"] {
 
 menuseparator {
   /*
-  -moz-appearance: menuseparator ;
+  -moz-appearance: menuseparator !important;
   margin: 2px 0;
   border-top: 1px solid ThreeDShadow;
   border-bottom: 1px solid ThreeDHighlight;
@@ -241,7 +244,7 @@ menulist > menupopup > menuseparator,
 /* ::::: autocomplete ::::: */
 
 .autocomplete-history-popup > menuitem {
-  max-width: none ;
+  max-width: none !important;
   font: message-box;
 }
 
