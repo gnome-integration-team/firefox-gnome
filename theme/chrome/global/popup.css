@@ -50,6 +50,10 @@ panel {
   color: MenuText;
 }
 
+panel {
+  -moz-appearance: menupopup;
+}
+
 menupopup {
   background-color: white;
 }
