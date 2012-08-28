@@ -53,8 +53,8 @@ menuitem[disabled="true"],
 
 menubar > menu {
   padding: 3px 7px;
-  color: -moz-menubartext;
-/*  color: #2e3436;*/
+/*  color: -moz-menubartext;*/
+  color: #2e3436;
   background: transparent;
 }
 
@@ -68,17 +68,17 @@ menubar:-moz-lwtheme > menu:not([open="true"]) {
 }
 
 menubar > menu[_moz-menuactive="true"]:not([open]):not([disabled="true"]):not(:-moz-lwtheme) {
-  color: -moz-menubartext;
-/*  color: #2e3436;*/
+/*  color: -moz-menubartext;*/
+  color: #2e3436;
   background: transparent;
 }
 
 menubar > menu[open] {
 
-  color: -moz-menubarhovertext;
-  background-color: -moz-menuhover;
-/*  color: #2e3436;*/
-/*  background-color: Menu;*/
+/*  color: -moz-menubarhovertext;*/
+/*  background-color: -moz-menuhover;*/
+  color: #2e3436;
+  background-color: Menu;
   border-radius: 3px 3px 0 0;
 }
 
