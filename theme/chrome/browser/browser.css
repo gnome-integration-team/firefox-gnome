@@ -1850,8 +1850,9 @@ opacity: 0.5;
 #TabsToolbar {
   -moz-appearance: none;
   min-height: 0;
-  padding: 0 3px 0 3px;
-  margin-bottom: -1px;
+/*  padding: 0 0 0 3px;*/
+  padding: 0;
+  box-shadow: 0 -1px 0 #a7a7a7 inset;
 }
 
 #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme) {
@@ -1866,137 +1867,77 @@ opacity: 0.5;
   margin-top: 4px; /* margin between tabs and browser bar */
 }
 
-#TabsToolbar > toolbarbutton,
-#TabsToolbar :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button) {
-  margin: 0px 2px 3px 2px;
-}
-
 /* put some space between the newtab-button and regular tabs */
 .tabs-newtab-button {
-  -moz-margin-start: 10px;
+/*  -moz-margin-start: 10px;*/
 }
 
 .tabbrowser-tab {
-  position: relative; /* static doesn't work with overlapping tabs (wrong z-index of the selected tab) */
   -moz-appearance: none;
-  background-color: transparent;
+  background: transparent;
+  border: none;
 /*  color: inherit;*/
   color: #2e3436;
-/*
   margin: 0;
-  padding: 0;
-  border-width: 4px 5px 3px 6px;
-  border-style: solid;
-  -moz-border-image: url(tabbrowser/tab.png) 4 5 3 6 fill repeat stretch;
-  border-radius: 10px 8px 0 0;
-*/
-  margin: 0 -9px 0 0; /* Negative for overlapping tabs */
-  /*
-  padding: 1px 2px 3px;
-  */
-  min-height: 26px; /* reserve space for the sometimes hidden close button */
-  background-clip: padding-box;
+  padding: 0px;
 }
 
-/* swapped overlap for RTL locales */
-.tabbrowser-tab:-moz-locale-dir(rtl) {
-  margin: 0 0 0 -8px; /* Negative for overlapping tabs */
+.tabbrowser-tab > .tab-stack {
+  margin: 0;
+  -moz-margin-start: -9px;
+  min-height: 26px;
+}
+
+.tabbrowser-tab:first-of-type > .tab-stack {
+  -moz-margin-start: 0px;
+}
+
+.tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned]) > .tab-stack {
+  -moz-margin-start: 0px;
 }
 
 .tabbrowser-tab[selected="true"] {
 }
 
-#main-window[tabsontop=true] .tabbrowser-tab:not([selected="true"]),
-#main-window[tabsontop=false] .tabbrowser-tab:not([selected="true"]) {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected.png) 6 9 1 9 / 6px 9px 1px 9px stretch;
+#main-window .tabbrowser-tab:not([selected="true"]) > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch;
 }
 
-#main-window[tabsontop=true] .tabbrowser-tab[selected="true"],
-#main-window[tabsontop=false] .tabbrowser-tab[selected="true"] {
-  -moz-border-image: url(tabbrowser/adwaita-tab.png) 6 9 1 9 / 6px 9px 1px 9px stretch;
+#main-window .tabbrowser-tab[selected="true"] > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch;
-/*  color: -moz-dialogtext;*/
-  color: #2e3436;
 }
 
 /* All the tabs after the selected tab (hack) */
-.tabbrowser-tabs[overflow] > .tabbrowser-tab[selected="true"]:not([pinned]) ~ .tabbrowser-tab:not([pinned]),
-.tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right.png) 6 9 1 9 / 6px 9px 1px 9px stretch !important;
+.tabbrowser-tabs[overflow] > .tabbrowser-tab[selected="true"]:not([pinned]) ~ .tabbrowser-tab:not([pinned]) > .tab-stack,
+.tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right.png) 6 9 1 8 fill / 6px 9px 1px 8px stretch !important;
 }
 
 /* All the tabs after the selected tab (hack)
    (image mirrored for RTL locales) */
-.tabbrowser-tabs[overflow] > .tabbrowser-tab[selected="true"]:not([pinned]) ~ .tabbrowser-tab:-moz-locale-dir(rtl):not([pinned]),
-.tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[selected="true"]:not([pinned]) ~ .tabbrowser-tab:-moz-locale-dir(rtl):not([pinned]) {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right-rtl.png) 6 9 1 9 / 6px 9px 1px 9px stretch !important;
+.tabbrowser-tabs[overflow] > .tabbrowser-tab[selected="true"]:not([pinned]) ~ .tabbrowser-tab:-moz-locale-dir(rtl):not([pinned]) > .tab-stack,
+.tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[selected="true"]:not([pinned]) ~ .tabbrowser-tab:-moz-locale-dir(rtl):not([pinned]) > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right-rtl.png) 6 8 1 9 fill / 6px 9px 1px 8px stretch !important;
 }
 
-.tabbrowser-tab[selected="true"]:-moz-lwtheme {
-  background-image: -moz-linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%);
-}
-
-.tabbrowser-tab:-moz-lwtheme-brighttext:not([selected="true"]),
-.tabs-newtab-button:-moz-lwtheme-brighttext {
-  background-image: -moz-linear-gradient(hsla(0,0%,60%,.6), hsla(0,0%,40%,.6) 4px, hsla(0,0%,30%,.6) 80%);
-}
-
-.tabbrowser-tab:-moz-lwtheme-brighttext:not([selected="true"]):hover,
-.tabs-newtab-button:-moz-lwtheme-brighttext:hover {
-  background-image: -moz-linear-gradient(hsla(0,0%,80%,.6), hsla(0,0%,60%,.6) 4px, hsla(0,0%,45%,.6) 80%);
-}
-
-.tabbrowser-tab:-moz-lwtheme-darktext:not([selected="true"]),
-.tabs-newtab-button:-moz-lwtheme-darktext {
-  background-image: -moz-linear-gradient(hsla(0,0%,100%,.5), hsla(0,0%,60%,.5) 4px, hsla(0,0%,45%,.5) 80%);
-}
-
-.tabbrowser-tab:-moz-lwtheme-darktext:not([selected="true"]):hover,
-.tabs-newtab-button:-moz-lwtheme-darktext:hover {
-  background-image: -moz-linear-gradient(hsla(0,0%,100%,.5), hsla(0,0%,80%,.5) 4px, hsla(0,0%,60%,.5) 80%);
-}
-
 /* Updated tabs (in the background) */
-.tabbrowser-tab[titlechanged]:not([selected="true"]) {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new.png) 6 9 1 9 / 6px 9px 1px 9px stretch !important;
+.tabbrowser-tab[titlechanged]:not([selected="true"]) > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch !important;
 }
 
 /* All the updated tabs after the selected tab (hack) */
-.tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged] {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right.png) 6 9 1 9 / 6px 9px 1px 9px stretch !important;
+.tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged] > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch !important;
 }
 
 /* All the updated tabs after the selected tab (hack)
    (image mirrored for RTL locales) */
-.tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged]:-moz-locale-dir(rtl) {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right-rtl.png) 6 9 1 9 / 6px 9px 1px 9px stretch !important;
+.tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged]:-moz-locale-dir(rtl) > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right-rtl.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch !important;
 }
 
-.tabbrowser-tab[pinned] {
+.tabbrowser-tab[pinned] > .tab-stack {
   /* padding in app_version/browser.css */
-}
-
-/* Floating pinned/app tabs */
-#tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] {
-  min-height: 16px; /* corresponds to the max. height of non-textual tab contents, i.e. the tab close button */
-}
-
-/* Make the pinned/app tabs not appear to float */
-#tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] .tab-icon-image,
-#tabbrowser-tabs[positionpinnedtabs] .tab-throbber[pinned] {
-}
-#tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned][selected=true] .tab-icon-image,
-#tabbrowser-tabs[positionpinnedtabs] .tab-throbber[pinned][selected] {
-}
-
-.tabbrowser-tab:focus > .tab-stack {
-  outline: 1px dotted;
 }
 
 .tab-throbber,

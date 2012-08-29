@@ -1,12 +1,8 @@
-.tabbrowser-tab {
+.tabbrowser-tab > .tab-stack {
   padding: 0 4px 2px 3px;
 }
 
-.tabbrowser-tab[selected="true"] {
-  padding-bottom: 3px; /* Make text bump up a little on the selected tab */
-}
-
-.tabbrowser-tab[pinned] {
+.tabbrowser-tab[pinned] > .tab-stack {
   padding-left: 9px;
   padding-right: 9px;
 }
