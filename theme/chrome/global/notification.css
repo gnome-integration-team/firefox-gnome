@@ -83,8 +83,8 @@ notification[value="missing-plugins"] .messageImage {
 }
 
 .messageCloseButton {
-  list-style-image: url("chrome://browser/skin/tabbrowser/close-normal.png");
-
+/*  list-style-image: url("chrome://browser/skin/tabbrowser/close-normal.png");*/
+  list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
   margin-top: 0;
   margin-bottom: 0;
   margin-right: 1em ;
@@ -101,5 +101,6 @@ notification[value="missing-plugins"] .messageImage {
 }
 
 .popup-notification-closeitem {
-  list-style-image: url("chrome://browser/skin/tabbrowser/close-normal.png");
+/*  list-style-image: url("chrome://browser/skin/tabbrowser/close-normal.png");*/
+  list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
 }

@@ -91,7 +91,7 @@ html[dir=rtl] .favicon {
   width: 16px;
   height: 16px;
   opacity: 0.2;
-  background: url("moz-icon://stock/gtk-close?size=menu") no-repeat;
+  background: url(chrome://browser/skin/symbolic-icons/close.svg) no-repeat;
 }
 
 html[dir=rtl] .close {
