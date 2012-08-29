@@ -57,18 +57,30 @@ notification[type="critical"] {
   list-style-image: url("chrome://browser/skin/symbolic-icons/critical.svg");
 }
 
-/* Replace Icon.png */
+/* Replace icons */
+
+notification[value="popup-blocked"] .messageImage,
+notification[value="refresh-blocked"] .messageImage,
+notification[value="offline-app-usage"] .messageImage,
+notification[value*="offline-app-requested-"] .messageImage,
+notification[value="missing-plugins"] .messageImage {
+  min-width: 16px !important;
+  max-width: 16px !important;
+  min-height: 16px !important;
+  -moz-padding-start: 16px !important;
+  overflow: hidden !important;
+}
 
 notification[value="popup-blocked"] .messageImage,
 notification[value="refresh-blocked"] .messageImage,
 notification[value="offline-app-usage"] .messageImage,
 notification[value*="offline-app-requested-"] .messageImage {
   background: url(chrome://browser/skin/symbolic-icons/info.svg) no-repeat center !important;
-  min-width: 16px !important;
-  max-width: 16px !important;
-  min-height: 16px !important;
-  -moz-padding-start: 16px !important;
-  overflow: hidden !important;
+}
+
+notification[value="missing-plugins"] .messageImage {
+  background: url(chrome://browser/skin/symbolic-icons/plugin.svg) no-repeat center !important;
+}
 
 .messageCloseButton {
   list-style-image: url("chrome://browser/skin/tabbrowser/close-normal.png");
