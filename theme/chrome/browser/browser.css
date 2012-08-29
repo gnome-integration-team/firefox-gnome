@@ -540,6 +540,49 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   padding: 3px !important;
 }
 
+/* Buttons */
+
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton {
+  -moz-appearance: none;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  border-radius: 3px;
+  color: #2e3436 !important;
+  padding: 3px;
+  text-shadow: none;
+  -moz-transition-property: color, border, box-shadow, background;
+  -moz-transition-duration: 300ms;
+}
+
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton:not([disabled]):hover,
+:-moz-any(#navigator-toolbox, #addon-bar) .toolbarbutton-menubutton-dropmarker:hover {
+  background-image: -moz-linear-gradient(to bottom, #ffffff, #ebebeb) !important; /* For Fx 15 */
+  background-image: linear-gradient(to bottom, #ffffff, #ebebeb) !important;
+  border: 1px solid rgba(0,0,0,.25) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
+}
+
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton:not([disabled]):active,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton:not([disabled]):active:hover,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[checked="true"],
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[checked="true"]:hover {
+  background-image: -moz-linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important; /* For Fx 15 */
+  background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important;
+/*  border-color: #72a0cf;*/
+  border: 1px solid rgba(0,0,0,.25) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
+}
+
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[open="true"],
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[open="true"]:hover,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[open="true"]:active,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[open="true"]:active:hover {
+  background: #ffffff !important;
+  border: 1px solid #ffffff !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
+  border-radius: 3px 3px 0 0;
+}
+
 /* Buttons on nav bar */
 
 #nav-bar[iconsize=large] > toolbarbutton,
@@ -2039,7 +2082,7 @@ opacity: 0.5;
 }
 
 /* Tabstrip new tab button */
-.tabs-newtab-button,
+#TabsToolbar .tabs-newtab-button,
 #TabsToolbar > #new-tab-button,
 #TabsToolbar > #wrapper-new-tab-button > #new-tab-button {
   list-style-image: url(chrome://browser/skin/symbolic-icons/add.svg);
@@ -2050,13 +2093,13 @@ opacity: 0.5;
   opacity: .7;
 }
 
-.tabs-newtab-button:hover,
+#TabsToolbar .tabs-newtab-button:hover,
 #TabsToolbar > #new-tab-button:hover,
 #TabsToolbar > #wrapper-new-tab-button > #new-tab-button:hover {
   opacity: .9;
 }
 
-.tabs-newtab-button:active,
+#TabsToolbar .tabs-newtab-button:active,
 #TabsToolbar > #new-tab-button:active,
 #TabsToolbar > #wrapper-new-tab-button > #new-tab-button:active,
 .tabs-newtab-button:active:hover,
@@ -2083,8 +2126,8 @@ opacity: 0.5;
 }
 
 /* Tabbrowser arrowscrollbox arrows */
-.tabbrowser-arrowscrollbox > .scrollbutton-up,
-.tabbrowser-arrowscrollbox > .scrollbutton-down {
+#TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-up,
+#TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-down {
   -moz-appearance: none;
   margin: 0;
   background: transparent !important;
