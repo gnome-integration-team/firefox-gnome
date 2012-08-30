@@ -62,7 +62,7 @@
 
 .search-go-button {
   padding: 1px;
-  list-style-image: url("chrome://browser/skin/symbolic/edit-find-symbolic.svg");
+  list-style-image: url("chrome://browser/skin/symbolic-icons/search.svg");
   cursor: pointer;
   opacity: 0.5;
 }
