@@ -810,6 +810,7 @@ margin-right: -21px;
 }
 #sync-button[status="active"] > .toolbarbutton-icon {
   /* For Fx 15 */
+  list-style-image: url("chrome://browser/skin/symbolic-icons/sync-working.svg");
   -moz-animation-name:             rotate;
   -moz-animation-duration:         2s;
   -moz-transition-timing-function: linear;
