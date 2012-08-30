@@ -2379,6 +2379,72 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   color: gray !important;
 }
 
+/*** Inactive window ***/
+
+#main-window:-moz-window-inactive {
+/*  opacity: 0.5;*/
+}
+
+#main-window:-moz-window-inactive toolbarbutton {
+  background: transparent !important;
+  color: #a7aba7 !important;
+}
+
+#main-window:-moz-window-inactive #nav-bar :-moz-any(#back-button, #forward-button) {
+  background: transparent !important;
+  border-color: #a7aba7 !important;
+  box-shadow: none !important;
+}
+
+#main-window:-moz-window-inactive toolbarbutton > .toolbarbutton-icon {
+  opacity: 0.6;
+}
+
+#main-window:-moz-window-inactive textbox {
+  background: #f8f8f6 !important;
+  border-color: #a7aba7 !important;
+  box-shadow: none !important;
+  color: #6a6f6e !important;
+}
+
+#main-window:-moz-window-inactive .tabbrowser-tab {
+  color: #a7aba7 !important;
+}
+
+#main-window:-moz-window-inactive .tabbrowser-tab[selected="true"] > .tab-stack {
+  -moz-border-image: url(tabbrowser/adwaita-tab-inactive.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch;
+}
+
+/*
+#main-window:-moz-window-inactive .tabbrowser-tab:not([selected="true"]) > .tab-stack {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-inactive.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch;
+}
+#main-window:-moz-window-inactive .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab > .tab-stack {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right-inactive.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
+}
+#main-window:-moz-window-inactive .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab:-moz-locale-dir(rtl) > .tab-stack {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right-rtl-inactive.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
+}
+#main-window:-moz-window-inactive .tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned]) > .tab-stack {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-inactive.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
+}
+*/
+
+/*
+#main-window:-moz-window-inactive .tabbrowser-tab[titlechanged]:not([selected="true"]) > .tab-stack {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-inactive.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
+}
+#main-window:-moz-window-inactive .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged] > .tab-stack {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right-inactive.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
+}
+#main-window:-moz-window-inactive .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged]:-moz-locale-dir(rtl) > .tab-stack {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right-rtl-inactive.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
+}
+#main-window:-moz-window-inactive .tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned])[titlechanged] > .tab-stack {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-inactive.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
+}
+*/
+
 /*** Dev Tools ***/
 
 /* Inspector / Highlighter */
