@@ -6,8 +6,15 @@
   list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery.svg) !important;
 }
 
-#ghostery-toolbar-button[condition="grey"] > .toolbarbutton-icon {
+#ghostery-toolbar-button[showTrackers="true"] {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery-showtrackers.svg) !important;
+}
+
+#ghostery-toolbar-button[condition="grey"] {
   list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery-grayscale.svg) !important;
+}
+
+#ghostery-toolbar-button[condition="grey"] > .toolbarbutton-icon {
   opacity: 0.5;
 }
 
@@ -28,7 +35,7 @@
 #ghostery-status > #ghostery-status-icon {
   background-position: center !important;
   background-repeat: no-repeat !important;
-  background-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery.svg) !important;
+  background-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery-showtrackers.svg) !important;
 }
 #ghostery-status > #ghostery-status-icon[src*="off"] {
   background-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery-grayscale.svg) !important;
