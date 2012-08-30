@@ -11,7 +11,6 @@
 /* ::::: toolbarbutton ::::: */
 
 toolbarbutton {
-  -moz-appearance: toolbarbutton;
   -moz-box-align: center;
   -moz-box-pack: center;
   margin: 0;
@@ -37,16 +36,34 @@ toolbarbutton.tabbable {
   -moz-user-focus: normal !important;
 }
 
-toolbarbutton:hover {
+toolbarbutton:not([disabled]):hover,
+.toolbarbutton-menubutton-dropmarker:hover {
   color: -moz-buttonhovertext;
+  background: -moz-linear-gradient(top, rgba(246,247,246,0), rgba(246,247,246,0) 3%, rgba(246,247,246,0.09) 14%, rgba(246,247,246,0.39) 54%, rgba(246,247,246,0.09) 89%, rgba(246,247,246,0) 97%, rgba(246,247,246,0));
+  filter:url(filter.svg#brighten);
 }
 
-toolbarbutton:hover:active,
+#navigator-toolbox[tabsontop="false"] toolbarbutton:not([disabled]):hover:active,
+#navigator-toolbox[tabsontop="false"] toolbarbutton:not([disabled]):active {
+	background-color: white;
+  border-radius: 3px 3px 0 0;
+}
+
+toolbarbutton:not([disabled]):hover:active,
+toolbarbutton:not([disabled]):active {
+  /*
+  padding: 4px 2px 2px 4px;
+  */
+}
+
+toolbarbutton:active,
 toolbarbutton[open="true"] {
+  /*
   padding-top: 4px;
   padding-bottom: 2px;
   -moz-padding-start: 4px;
   -moz-padding-end: 2px;
+  */
   color: ButtonText;
 }
 
@@ -67,6 +84,24 @@ toolbarbutton:-moz-lwtheme:not(:hover):not([checked="true"]):not([open="true"]):
   text-shadow: inherit;
 }
 
+/* ::::: toolbarbutton radio buttons ::::: */
+
+toolbarbutton[type="radio"] {
+  -moz-appearance: none;
+  border: none;
+  border-radius: 3px;
+  color: rgba(0,0,0,0.65);
+  padding: 4px 7px !important;
+  text-shadow: 0px 1px 0px rgba(255,255,255,0.6);
+}
+
+toolbarbutton[type="radio"][checked="true"] {
+  background-image: -moz-linear-gradient(top, #a7aba7, #e1e1e1);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.6) , 0 0 0 1px rgba(0, 10, 0, 0.2) inset !important;
+  color: white !important;
+  text-shadow: 0.5px 0 0.5px rgba(255, 255, 255, 0.6), 0.5px 1px 0 rgba(0, 0, 0, 0.4);
+}
+
 /* ::::: toolbarbutton menu ::::: */
 
 .toolbarbutton-menu-dropmarker {
@@ -85,8 +120,10 @@ toolbarbutton:-moz-lwtheme:not(:hover):not([checked="true"]):not([open="true"]):
 
 toolbarbutton[type="menu-button"] {
   -moz-box-align: stretch;
-  -moz-appearance: dualbutton;
   -moz-box-orient: horizontal !important;
+  background: none !important;
+}
+toolbarbutton[type="menu-button"] > toolbarbutton:hover {
 }
 
 toolbarbutton[type="menu-button"],
@@ -108,8 +145,14 @@ toolbarbutton[type="menu-button"][disabled="true"]:hover:active {
 /* .......... dropmarker .......... */
 
 .toolbarbutton-menubutton-dropmarker {
+  -moz-appearance: none;
+  /*
   padding: 3px;
   -moz-appearance: toolbarbutton-dropdown !important;
+  */
   list-style-image: none;
   -moz-image-region: auto;
+}
+.dropmarker-icon {
+  -moz-appearance: toolbarbutton-dropdown;
 }
