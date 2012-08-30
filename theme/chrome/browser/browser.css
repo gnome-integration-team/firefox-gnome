@@ -855,6 +855,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 #sync-button[status="active"] > .toolbarbutton-icon {
   /* For Fx 15 */
+  list-style-image: url("chrome://browser/skin/symbolic-icons/sync-working.svg");
   -moz-animation-name:             rotate;
   -moz-animation-duration:         2s;
   -moz-transition-timing-function: linear;
@@ -1527,6 +1528,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   border-radius: 2.5px 0 0 2.5px;
   border-width: 0 8px 0 0;
   border-style: solid;
+  border-color: #fff;
   -moz-border-image: url("chrome://browser/skin/urlbar-arrow.png") 0 8 0 0 fill;
   -moz-margin-end: -8px;
   margin-top: -1px;

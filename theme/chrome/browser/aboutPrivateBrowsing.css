@@ -1,10 +1,10 @@
 
 body.private > #errorPageContainer {
-  background-image: url("chrome://browser/skin/Privacy-48.png");
+/*  background-image: url("chrome://browser/skin/Privacy-48.png");*/
 }
 
 body.normal > #errorPageContainer {
-  background-image: url("moz-icon://stock/gtk-dialog-question?size=dialog");
+/*  background-image: url("moz-icon://stock/gtk-dialog-question?size=dialog");*/
 }
 #clearRecentHistoryDesc {
   margin-top: 2em;
