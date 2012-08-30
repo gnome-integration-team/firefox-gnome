@@ -7,8 +7,8 @@
   -moz-image-region: auto !important;
 }
 
-#abp-toolbarbutton[abpstate="disabled"],
-#abp-toolbarbutton[abpstate="whitelisted"] {
+#abp-toolbarbutton[abpstate="disabled"] .toolbarbutton-icon,
+#abp-toolbarbutton[abpstate="whitelisted"] .toolbarbutton-icon {
   opacity: 0.5 !important;
   -moz-image-region: auto !important;
 }
