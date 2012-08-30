@@ -587,7 +587,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 #nav-bar[iconsize=large] > toolbarbutton,
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button) {
-  margin: 3px 4px;
+  margin: 3px 3px;
   min-height: 28px;
   min-width: 26px;
   padding: 0px 3px !important;
@@ -677,12 +677,12 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #nav-bar:not(:-moz-locale-dir(rtl)) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type,
 #nav-bar:-moz-locale-dir(rtl) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type {
   border-radius: 3px 0px 0px 3px;
-  -moz-margin-start: 4px;
+  -moz-margin-start: 3px;
 }
 #nav-bar:not(:-moz-locale-dir(rtl)) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type,
 #nav-bar:-moz-locale-dir(rtl) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type {
   border-radius: 0px 3px 3px 0px;
-  -moz-margin-end: 4px;
+  -moz-margin-end: 3px;
 }
 
 #nav-bar[iconsize=small]:not(:-moz-locale-dir(rtl)) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type,
@@ -875,12 +875,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 /* 16px primary toolbar buttons */
 toolbar[iconsize="small"] .toolbarbutton-1:not([type="menu-button"]) {
   -moz-box-orient: vertical;
-  min-width: 0;
   list-style-image: url("chrome://browser/skin/Toolbar-small.png");
-}
-
-toolbar[iconsize="small"] .toolbarbutton-1[type="menu-button"] {
-  border: 0 !important;
 }
 
 /*
@@ -1077,14 +1072,6 @@ toolbar[iconsize="small"] #feed-button {
 }
 
 /* Location bar */
-/*
-#urlbar {
-  width: 7em;
-  min-width: 7em;
-  -moz-appearance: textfield;
-  padding: 0;
-}
-*/
 
 /* remove ugly white border around location and searchbars */
 #urlbar, .searchbar-textbox {
@@ -1099,7 +1086,7 @@ toolbar[iconsize="small"] #feed-button {
   -moz-transition-duration: 300ms;
 }
 #nav-bar[iconsize=large] :-moz-any(#urlbar, .searchbar-textbox) {
-  margin: 3px 4px;
+  margin: 3px 3px;
 }
 #nav-bar[iconsize=small] :-moz-any(#urlbar, .searchbar-textbox) {
   margin: 3px 2px;
@@ -1136,15 +1123,15 @@ toolbar[iconsize="small"] #feed-button {
 /* Autohide forward button */
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button + #urlbar-container {
-  -moz-padding-start: 32px;
-  -moz-margin-start: -32px;
+  -moz-padding-start: 28px;
+  -moz-margin-start: -28px;
   position: relative;
   pointer-events: none;
 }
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=small], #nav-bar:not([currentset])[mode=icons][iconsize=small]) > #unified-back-forward-button + #urlbar-container {
-  -moz-padding-start: 24px;
-  -moz-margin-start: -24px;
+  -moz-padding-start: 21px;
+  -moz-margin-start: -21px;
 }
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button + #urlbar-container > #urlbar {
@@ -1157,19 +1144,19 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] + #urlbar-container > #urlbar:-moz-locale-dir(ltr) {
-  margin-left: -27px;
+  margin-left: -28px;
 }
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] + #urlbar-container > #urlbar:-moz-locale-dir(rtl) {
-  margin-right: -27px;
+  margin-right: -28px;
 }
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=small], #nav-bar:not([currentset])[mode=icons][iconsize=small]) > #unified-back-forward-button[forwarddisabled] + #urlbar-container > #urlbar:-moz-locale-dir(ltr) {
-  margin-left: -23px;
+  margin-left: -21px;
 }
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=small], #nav-bar:not([currentset])[mode=icons][iconsize=small]) > #unified-back-forward-button[forwarddisabled] + #urlbar-container > #urlbar:-moz-locale-dir(rtl) {
-  margin-right: -23px;
+  margin-right: -21px;
 }
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button #forward-button:-moz-locale-dir(ltr) {
@@ -1199,14 +1186,17 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #urlbar-search-splitter {
   -moz-appearance: none;
-  width: 8px;
-  -moz-margin-start: -4px;
+  -moz-margin-start: -3px;
+  -moz-margin-end: -3px;
+  width: 6px;
 }
 
+/*
 #urlbar-search-splitter + #urlbar-container > #urlbar,
 #urlbar-search-splitter + #search-container > #searchbar > .searchbar-textbox {
   -moz-margin-start: 0;
 }
+*/
 
 #urlbar-display-box {
   margin-top: -1px;
@@ -1850,6 +1840,7 @@ opacity: 0.5;
 #TabsToolbar {
   -moz-appearance: none;
   min-height: 0;
+  margin-bottom: -1px;
 /*  padding: 0 0 0 3px;*/
   padding: 0;
   box-shadow: 0 -1px 0 #a7a7a7 inset;
@@ -2022,6 +2013,11 @@ opacity: 0.5;
   box-shadow: none !important;
 }
 
+/* Tabstrip buttons */
+#TabsToolbar toolbarbutton {
+  margin-bottom: 2px;
+}
+
 /* Tabstrip new tab button */
 #TabsToolbar .tabs-newtab-button,
 #TabsToolbar > #new-tab-button,
@@ -2107,12 +2103,14 @@ opacity: 0.5;
   -moz-border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill;
 }
 
+/*
 #TabsToolbar .toolbarbutton-1 > .toolbarbutton-icon,
 #TabsToolbar .toolbarbutton-1 > .toolbarbutton-menu-dropmarker,
 #TabsToolbar .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-icon {
   margin-top: -2px;
   margin-bottom: -2px;
 }
+*/
 
 #alltabs-button > .toolbarbutton-icon {
   list-style-image: url(chrome://browser/skin/symbolic-icons/alltabs.svg);
