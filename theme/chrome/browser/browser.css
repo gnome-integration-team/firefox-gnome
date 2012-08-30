@@ -27,31 +27,32 @@
 #navigator-toolbox > toolbar {
   -moz-appearance: none;
 }
-#navigator-toolbox[tabsontop=false] > toolbar,
-#navigator-toolbox[tabsontop=true] > :-moz-any(#toolbar-menubar, #TabsToolbar) {
-  background: transparent !important;
-}
-#navigator-toolbox[tabsontop=true] > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
+
+#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
   border-top: 1px solid #a7aba7 !important;
 }
-#navigator-toolbox[tabsontop=true] > toolbar:not(#toolbar-menubar):not(#TabsToolbar)[collapsed="false"] ~ toolbar {
+#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar)[collapsed="false"] ~ toolbar {
+  border-top: 0 !important;
+}
+#navigator-toolbox[tabsontop="false"] > toolbar {
   border-top: 0 !important;
 }
 
-/* Navigation toolbar */
-#navigator-toolbox[tabsontop=true] > #nav-bar {
+#navigator-toolbox > #nav-bar {
   background: -moz-linear-gradient(top, #fff, #f3f3f3) !important;
 }
-
-/* Custom toolbars */
-#navigator-toolbox[tabsontop=true] > toolbar[id*="custom"] {
+#navigator-toolbox > toolbar[id*="custom"] {
   background: #f4f4f4 !important;
 }
-
-/* Bookmarks toolbar */
-#navigator-toolbox[tabsontop=true] > #PersonalToolbar {
+#navigator-toolbox > #PersonalToolbar {
   background: -moz-linear-gradient(to bottom, #f4f4f4, #eee) !important;
 }
+#navigator-toolbox > :-moz-any(#toolbar-menubar, #TabsToolbar),
+#navigator-toolbox[tabsontop="false"] > toolbar {
+  background: transparent !important;
+}
+
+
 
 #personal-bookmarks {
   min-height: 29px;
@@ -1847,15 +1848,11 @@ opacity: 0.5;
   box-shadow: 0 -1px 0 #a7a7a7 inset;
 }
 
-#TabsToolbar[tabsontop=true]:not(:-moz-lwtheme) {
-  color: -moz-menubartext;
-}
-
-#TabsToolbar[tabsontop=true]:not(:-moz-lwtheme):-moz-system-metric(menubar-drag) {
+#TabsToolbar:-moz-system-metric(menubar-drag) {
   -moz-binding: url("chrome://global/content/bindings/toolbar.xml#toolbar-drag");
 }
 
-#TabsToolbar[tabsontop=false] {
+#TabsToolbar[tabsontop="false"] {
   margin-top: 4px; /* margin between tabs and browser bar */
 }
 
