@@ -548,6 +548,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   border: 1px solid transparent !important;
   border-radius: 3px;
   color: #2e3436 !important;
+  filter: none;
   padding: 3px;
   text-shadow: none;
   -moz-transition-property: color, border, box-shadow, background;
@@ -2329,7 +2330,8 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 }
 
 #addonbar-closebutton {
-  list-style-image: url(chrome://browser/skin/tabbrowser/close-normal.png);
+/*  list-style-image: url(chrome://browser/skin/tabbrowser/close-normal.png);*/
+  list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
 }
 
 #addonbar-closebutton > .toolbarbutton-icon {
