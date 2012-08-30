@@ -52,8 +52,6 @@
   background: transparent !important;
 }
 
-
-
 #personal-bookmarks {
   min-height: 29px;
 }
@@ -543,7 +541,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 /* Buttons */
 
-:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton {
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton {
   -moz-appearance: none;
   background: transparent !important;
   border: 1px solid transparent !important;
@@ -556,18 +554,18 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   -moz-transition-duration: 300ms;
 }
 
-:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton:not([disabled]):hover,
-:-moz-any(#navigator-toolbox, #addon-bar) .toolbarbutton-menubutton-dropmarker:hover {
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:not([disabled]):hover,
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) .toolbarbutton-menubutton-dropmarker:hover {
   background-image: -moz-linear-gradient(to bottom, #ffffff, #ebebeb) !important; /* For Fx 15 */
   background-image: linear-gradient(to bottom, #ffffff, #ebebeb) !important;
   border: 1px solid rgba(0,0,0,.25) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
 }
 
-:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton:not([disabled]):active,
-:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton:not([disabled]):active:hover,
-:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[checked="true"],
-:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[checked="true"]:hover {
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:not([disabled]):active,
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:not([disabled]):active:hover,
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[checked="true"],
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[checked="true"]:hover {
   background-image: -moz-linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important; /* For Fx 15 */
   background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important;
 /*  border-color: #72a0cf;*/
@@ -575,10 +573,10 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
 }
 
-:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[open="true"],
-:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[open="true"]:hover,
-:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[open="true"]:active,
-:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[open="true"]:active:hover {
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[open="true"],
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[open="true"]:hover,
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[open="true"]:active,
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[open="true"]:active:hover {
   background: #ffffff !important;
   border: 1px solid #ffffff !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
@@ -588,7 +586,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 /* Buttons on nav bar */
 
 #nav-bar[iconsize=large] > toolbarbutton,
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button) {
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button, #restore-button) {
   margin: 3px 3px;
   min-height: 28px;
   min-width: 26px;
@@ -596,7 +594,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 #nav-bar[iconsize=small] > toolbarbutton,
-#nav-bar[iconsize=small] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button) {
+#nav-bar[iconsize=small] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button, #restore-button) {
   margin: 3px 2px;
   min-height: 28px;
   padding: 0px 3px !important;
@@ -1055,8 +1053,8 @@ toolbar[iconsize="small"] #feed-button {
 
 /* Fullscreen window controls */
 #window-controls {
-  -moz-box-align: start;
-  -moz-margin-start: 10px;
+/*  -moz-box-align: start;*/
+/*  -moz-margin-start: 10px;*/
 }
 
 #minimize-button {
@@ -1064,10 +1062,8 @@ toolbar[iconsize="small"] #feed-button {
   display: none;
 }
 #restore-button {
-  /*
-  list-style-image: url("chrome://global/skin/icons/Restore.gif");
-  */
-  list-style-image: url("moz-icon://stock/gtk-leave-fullscreen?size=menu");
+/*  list-style-image: url(moz-icon://stock/gtk-leave-fullscreen?size=menu);*/
+  list-style-image: url(chrome://browser/skin/symbolic-icons/restore-window.svg);
 }
 #close-button {
   list-style-image: url("chrome://global/skin/icons/Close.gif");
