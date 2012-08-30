@@ -1859,6 +1859,11 @@ opacity: 0.5;
   margin-top: 4px; /* margin between tabs and browser bar */
 }
 
+/* Tabstrip buttons */
+#TabsToolbar toolbarbutton {
+  margin-bottom: 2px;
+}
+
 /* put some space between the newtab-button and regular tabs */
 .tabs-newtab-button {
 /*  -moz-margin-start: 10px;*/
@@ -1877,7 +1882,7 @@ opacity: 0.5;
 .tabbrowser-tab > .tab-stack {
   margin: 0;
   -moz-margin-start: -9px;
-  min-height: 26px;
+  min-height: 28px;
 }
 
 .tabbrowser-tab:first-of-type > .tab-stack {
@@ -1892,40 +1897,46 @@ opacity: 0.5;
 }
 
 #main-window .tabbrowser-tab:not([selected="true"]) > .tab-stack {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch;
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch;
 }
 
 #main-window .tabbrowser-tab[selected="true"] > .tab-stack {
-  -moz-border-image: url(tabbrowser/adwaita-tab.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch;
+  -moz-border-image: url(tabbrowser/adwaita-tab.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch;
 }
 
 /* All the tabs after the selected tab (hack) */
-.tabbrowser-tabs[overflow] > .tabbrowser-tab[selected="true"]:not([pinned]) ~ .tabbrowser-tab:not([pinned]) > .tab-stack,
-.tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab > .tab-stack {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right.png) 6 9 1 8 fill / 6px 9px 1px 8px stretch !important;
+.tabbrowser-tab[selected="true"] ~ .tabbrowser-tab > .tab-stack {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
 /* All the tabs after the selected tab (hack)
    (image mirrored for RTL locales) */
-.tabbrowser-tabs[overflow] > .tabbrowser-tab[selected="true"]:not([pinned]) ~ .tabbrowser-tab:-moz-locale-dir(rtl):not([pinned]) > .tab-stack,
-.tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[selected="true"]:not([pinned]) ~ .tabbrowser-tab:-moz-locale-dir(rtl):not([pinned]) > .tab-stack {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right-rtl.png) 6 8 1 9 fill / 6px 9px 1px 8px stretch !important;
+.tabbrowser-tab[selected="true"] ~ .tabbrowser-tab:-moz-locale-dir(rtl) > .tab-stack {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right-rtl.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
+}
+
+.tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned]) > .tab-stack {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
 /* Updated tabs (in the background) */
 .tabbrowser-tab[titlechanged]:not([selected="true"]) > .tab-stack {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch !important;
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
 /* All the updated tabs after the selected tab (hack) */
 .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged] > .tab-stack {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch !important;
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
 /* All the updated tabs after the selected tab (hack)
    (image mirrored for RTL locales) */
 .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged]:-moz-locale-dir(rtl) > .tab-stack {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right-rtl.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch !important;
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right-rtl.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
+}
+
+.tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned])[titlechanged] > .tab-stack {
+  -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
 .tabbrowser-tab[pinned] > .tab-stack {
@@ -1936,11 +1947,7 @@ opacity: 0.5;
 .tab-icon-image {
   width: 16px;
   height: 16px;
-  -moz-margin-end: 6px;
-  /** FIXME **/
-  /*
-  -moz-margin-end: 3px;
-  */
+  -moz-margin-end: 4px;
   list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
 }
 
@@ -1989,34 +1996,30 @@ opacity: 0.5;
 .tab-close-button > .toolbarbutton-icon {
   /* XXX Buttons have padding in widget/ that we don't want here but can't override with good CSS, so we must
      use evil CSS to give the impression of smaller content */
-  margin: -2px;
+/*  margin: -2px;*/
 }
 
-.tab-close-button {
+#TabsToolbar .tab-close-button {
   list-style-image: url(chrome://browser/skin/tabbrowser/close-normal.png);
-  -moz-margin-end: -5px;
-  padding: 5px;
+  -moz-margin-end: -1px !important;
+  margin-bottom: -1px !important;
+  padding: 3px;
   border-radius: 3px;
-  border: 1px solid transparent;
+  border: 1px solid transparent !important;
   box-shadow: none !important;
 }
-.tab-close-button:hover {
+#TabsToolbar .tab-close-button:hover {
   list-style-image: url(chrome://browser/skin/tabbrowser/close-hover.png);
   background: none !important;
   border-color: rgba(0, 0, 0, 0.1) !important;
   box-shadow: none !important;
 }
-.tab-close-button:active {
+#TabsToolbar .tab-close-button:active {
   list-style-image: url(chrome://browser/skin/tabbrowser/close-active.png);
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.13) 1px, rgba(0, 0, 0, 0.08) 2px, rgba(0, 0, 0, 0.07) 100%) !important;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.13) 1px, rgba(0, 0, 0, 0.08) 2px, rgba(0, 0, 0, 0.07) 100%) !important;
   border-color: rgba(0, 0, 0, 0.12) !important;
   border-color-top: rgba(0, 0, 0, 0.27) !important;
   box-shadow: none !important;
-}
-
-/* Tabstrip buttons */
-#TabsToolbar toolbarbutton {
-  margin-bottom: 2px;
 }
 
 /* Tabstrip new tab button */
@@ -2044,23 +2047,6 @@ opacity: 0.5;
 #TabsToolbar > #new-tab-button:active:hover,
 #TabsToolbar > #wrapper-new-tab-button > #new-tab-button:active:hover {
   opacity: 1;
-}
-
-/* Tabstrip close button */
-.tabs-closebutton {
-  list-style-image: url(chrome://browser/skin/tabbrowser/close-normal.png);
-}
-.tabs-closebutton:hover {
-  list-style-image: url(chrome://browser/skin/tabbrowser/close-hover.png);
-}
-.tabs-closebutton:active {
-  list-style-image: url(chrome://browser/skin/tabbrowser/close-active.png);
-}
-
-.tabs-closebutton > .toolbarbutton-icon {
-  /* XXX Buttons have padding in widget/ that we don't want here but can't override with good CSS, so we must
-     use evil CSS to give the impression of smaller content */
-  margin: -2px;
 }
 
 /* Tabbrowser arrowscrollbox arrows */

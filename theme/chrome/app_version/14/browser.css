@@ -1,5 +1,5 @@
 .tabbrowser-tab > .tab-stack {
-  padding: 0 4px 2px 3px;
+  padding: 0 4px 2px 4px;
 }
 
 .tabbrowser-tab[pinned] > .tab-stack {
