@@ -1,8 +1,0 @@
-.tabbrowser-tab > .tab-stack {
-  padding: 0 4px 2px 4px;
-}
-
-.tabbrowser-tab[pinned] > .tab-stack {
-  padding-left: 9px;
-  padding-right: 9px;
-}

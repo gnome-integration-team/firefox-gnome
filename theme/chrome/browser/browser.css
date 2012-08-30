@@ -1883,6 +1883,7 @@ opacity: 0.5;
   margin: 0;
   -moz-margin-start: -9px;
   min-height: 28px;
+  padding: 4px 11px 3px 11px;
 }
 
 .tabbrowser-tab:first-of-type > .tab-stack {
@@ -1940,7 +1941,8 @@ opacity: 0.5;
 }
 
 .tabbrowser-tab[pinned] > .tab-stack {
-  /* padding in app_version/browser.css */
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .tab-throbber,
