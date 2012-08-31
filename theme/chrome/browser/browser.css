@@ -1222,7 +1222,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   -moz-padding-end: 5px;
 }
 
-#identity-box.verifiedDomain {
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain {
   background: rgba(114, 159, 207, 0.2);
   border-right: 1px solid rgba(114, 159, 207, 0.3);
   color: #3465a4;
