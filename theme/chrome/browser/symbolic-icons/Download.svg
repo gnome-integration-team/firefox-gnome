@@ -97,24 +97,24 @@
        inkscape:connector-curvature="0"
        d="m 82.40625,657 c -0.127329,0.0284 -0.24224,0.10883 -0.3125,0.21875 l -1,1.5 c -0.198077,0.20845 -0.158562,0.59191 0.07786,0.75559 0.236423,0.16368 0.609253,0.0657 0.73464,-0.19309 l 1,-1.5 c 0.229461,-0.32261 -0.110942,-0.85449 -0.5,-0.78125 z m 11,0 c -0.32726,0.0631 -0.505954,0.50985 -0.3125,0.78125 l 1,1.5 c 0.125387,0.25877 0.498217,0.35677 0.73464,0.19309 0.236422,-0.16368 0.275937,-0.54714 0.07786,-0.75559 l -1,-1.5 c -0.105642,-0.16084 -0.310179,-0.25032 -0.5,-0.21875 z"
        id="rect4390-9"
-       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#bebebe;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#bebebe;fill:#2e3436;fill-opacity:1;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
        sodipodi:nodetypes="cccsccccccsccc" />
     <g
        transform="translate(-80,110)"
        id="g4555"
-       style="fill:#4d4d4d;fill-opacity:1">
+       style="fill:#2e3436;fill-opacity:1">
       <path
          inkscape:connector-curvature="0"
          d="m 167,539 0,5.5625 -1.28125,-1.28125 C 165.53059,543.0931 165.2653,543.00001 165,543 l -1,0 0,1 c 1e-5,0.2653 0.0931,0.53058 0.28125,0.71875 l 3,3 0.28125,0.28125 0.875,0 0.28125,-0.28125 3,-3 C 171.90694,544.53058 171.99999,544.2653 172,544 l 0,-1 -1,0 c -0.2653,10e-6 -0.53059,0.0931 -0.71875,0.28125 L 169,544.5625 169,539 z"
          id="path3613"
          sodipodi:nodetypes="ccccccccccccccccccc"
-         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;color:#000000;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans" />
+         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;color:#000000;fill:#2e3436;fill-opacity:1;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans" />
       <path
          inkscape:connector-curvature="0"
          d="m 161,549 0,4 14,0 0,-4 z m 4.34375,1.4375 c 0.0208,-10e-4 0.0417,-10e-4 0.0625,0 0.29096,-0.0556 0.59898,0.20383 0.59375,0.5 l 0,0.0625 4,0 0,-0.0625 c -0.004,-0.26416 0.23582,-0.50712 0.5,-0.50712 0.26418,0 0.50373,0.24296 0.5,0.50712 L 171,551 c 0,0.54535 -0.45465,1 -1,1 l -4,0 c -0.54535,0 -1,-0.45465 -1,-1 l 0,-0.0625 c -0.0108,-0.21706 0.13723,-0.43234 0.34375,-0.5 z"
          id="rect11668-7-5"
          sodipodi:nodetypes="ccccccsccccsccccccc"
-         style="color:#000000;fill:#4d4d4d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+         style="color:#000000;fill:#2e3436;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
     </g>
   </g>
   <g

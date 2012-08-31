@@ -22,9 +22,9 @@
       
     </g>
     <g inkscape:label='Layer 1' transform='translate(142,338)' id='layer1-6'>
-      <path inkscape:connector-curvature='0' d='M 2,4 C 1.5,4 1,4.5 1,5 l 0,4 c 0,0.5 0.5,1 1,1 l 1,0 0,-2 10,0 0,2 1,0 c 0.5,0 1,-0.5 1,-1 L 15,5 C 15,4.5 14.5,4 14,4 L 2,4 z' id='path3520' sodipodi:nodetypes='ccccccccccccc' style='fill:#4d4d4d;fill-opacity:1;stroke:none'/>
-      <path inkscape:connector-curvature='0' d='M 4,1 4,3 12,3 12,1 4,1 z' id='path4804' sodipodi:nodetypes='ccccc' style='fill:#4d4d4d;fill-opacity:1;stroke:none'/>
-      <path inkscape:connector-curvature='0' d='M 4,9.0000001 4,14 l 8,0 0,-5 -8,10e-8 z M 5,10 l 6,0 0,1 -6,0 0,-1 z m 0,2 5,0 0,1 -5,0 0,-1 z' id='path4806' sodipodi:nodetypes='ccccccccccccccc' style='fill:#4d4d4d;fill-opacity:1;stroke:none'/>
+      <path inkscape:connector-curvature='0' d='M 2,4 C 1.5,4 1,4.5 1,5 l 0,4 c 0,0.5 0.5,1 1,1 l 1,0 0,-2 10,0 0,2 1,0 c 0.5,0 1,-0.5 1,-1 L 15,5 C 15,4.5 14.5,4 14,4 L 2,4 z' id='path3520' sodipodi:nodetypes='ccccccccccccc' style='fill:#2e3436;fill-opacity:1;stroke:none'/>
+      <path inkscape:connector-curvature='0' d='M 4,1 4,3 12,3 12,1 4,1 z' id='path4804' sodipodi:nodetypes='ccccc' style='fill:#2e3436;fill-opacity:1;stroke:none'/>
+      <path inkscape:connector-curvature='0' d='M 4,9.0000001 4,14 l 8,0 0,-5 -8,10e-8 z M 5,10 l 6,0 0,1 -6,0 0,-1 z m 0,2 5,0 0,1 -5,0 0,-1 z' id='path4806' sodipodi:nodetypes='ccccccccccccccc' style='fill:#2e3436;fill-opacity:1;stroke:none'/>
     </g>
   </g>
   <g inkscape:label='apps' transform='translate(-142,-338)' inkscape:groupmode='layer' id='layer11'/>

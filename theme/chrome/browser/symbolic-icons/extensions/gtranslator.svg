@@ -63,7 +63,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer">
     <g
-       style="font-size:6.27398013999999993px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono Bold;opacity:0.75"
+       style="font-size:6.27398013999999993px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#2e3436;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono Bold;opacity:0.75"
        id="text3084"
        transform="translate(0,1)">
       <path
@@ -73,7 +73,7 @@
          sodipodi:nodetypes="cccccccccccccccccccccccsccscccccccccc" />
     </g>
     <g
-       style="font-size:10.73619652px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1;stroke:none;font-family:Source Sans Pro;-inkscape-font-specification:Source Sans Pro Bold"
+       style="font-size:10.73619652px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#2e3436;fill-opacity:1;stroke:none;font-family:Source Sans Pro;-inkscape-font-specification:Source Sans Pro Bold"
        id="text3076"
        transform="matrix(0.95368114,0,0,1,0.60897117,0)">
       <path
@@ -92,15 +92,15 @@
            sodipodi:nodetypes="ccc"
            id="path4516-1"
            d="M -3.98852,21.01944 -1.96577,19.05467 0,21"
-           style="fill:none;stroke:#4d4d4d;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+           style="fill:none;stroke:#2e3436;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
         <path
            sodipodi:nodetypes="cssc"
            inkscape:connector-curvature="0"
            id="path3991-4"
            d="M -7.0001771,25 -4.00927,25.0547 C -2.9039117,25.07492 -2.00961,24.10369 -2.00001,23 l 0.0343,-3.94533"
-           style="fill:none;stroke:#4d4d4d;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+           style="fill:none;stroke:#2e3436;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
         <rect
-           style="color:#000000;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           style="color:#000000;fill:#2e3436;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            id="rect4723-8"
            width="0.99614793"
            height="0.99778008"
@@ -108,7 +108,7 @@
            y="-4.697032"
            transform="matrix(-0.01374324,0.99990556,0.99990617,0.0136983,0,0)" />
         <rect
-           style="color:#000000;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           style="color:#000000;fill:#2e3436;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            id="rect4723-0-9"
            width="0.99614793"
            height="0.99778008"

@@ -82,12 +82,12 @@
     <path
        d="m 346,260 c -2.74958,0 -5,2.25042 -5,5 0,2.74958 2.25042,5 5,5 1.58622,0 2.90336,-0.84459 3.8125,-2 l 4.84375,0 0.75,0 0.21875,-0.75 1.03125,-4 0.3125,-1.25 -1.28125,0 -5.875,0 c -0.90914,-1.15541 -2.22628,-2 -3.8125,-2 z m 0,2 c 1.11585,0 2.03788,0.59507 2.5625,1.5 l 0.3125,0.5 0.5625,0 4.96875,0 -0.53125,2 -4.4375,0 -0.5625,0 -0.3125,0.5 c -0.52462,0.90493 -1.44665,1.5 -2.5625,1.5 -1.66868,0 -3,-1.33132 -3,-3 0,-1.66868 1.33132,-3 3,-3 z"
        id="path19754"
-       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;color:#000000;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:2.00000023999999987;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans" />
+       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;color:#000000;fill:#2e3436;fill-opacity:1;stroke:none;stroke-width:2.00000023999999987;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans" />
     <path
        inkscape:connector-curvature="0"
        d="M 355.49794,265 350,265 349.43744,266.99994 355,267 z"
        id="path19764"
-       style="opacity:0.34999999999999998;color:#000000;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+       style="opacity:0.34999999999999998;color:#000000;fill:#2e3436;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
     <path
        sodipodi:cy="265"
        sodipodi:type="arc"
@@ -96,7 +96,7 @@
        sodipodi:rx="1"
        sodipodi:ry="1"
        sodipodi:cx="345"
-       style="color:#000000;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+       style="color:#000000;fill:#2e3436;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
   </g>
   <g
      transform="translate(-340.99994,-257)"
