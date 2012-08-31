@@ -2338,7 +2338,6 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   -moz-border-image: url(tabbrowser/adwaita-tab-inactive.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch;
 }
 
-/*
 #main-window:-moz-window-inactive .tabbrowser-tab:not([selected="true"]) > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-inactive.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch;
 }
@@ -2351,7 +2350,6 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 #main-window:-moz-window-inactive .tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned]) > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-inactive.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
-*/
 
 /*
 #main-window:-moz-window-inactive .tabbrowser-tab[titlechanged]:not([selected="true"]) > .tab-stack {
