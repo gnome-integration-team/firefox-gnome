@@ -1,3 +1,4 @@
 skin    browser         Adwaita     chrome/browser/
 skin    communicator    Adwaita     chrome/communicator/
 skin    global          Adwaita     chrome/global/
+skin    mozapps         Adwaita     chrome/mozapps/
