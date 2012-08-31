@@ -1233,20 +1233,20 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   -moz-image-region: rect(0, 16px, 16px, 0);
 }
 
-.verifiedDomain > #page-proxy-favicon[pageproxystate="valid"] {
+.verifiedDomain #page-proxy-favicon[pageproxystate="valid"] {
   list-style-image: url(chrome://browser/skin/identity-icons-https.png);
 }
 
-.verifiedIdentity > #page-proxy-favicon[pageproxystate="valid"] {
+.verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
   list-style-image: url(chrome://browser/skin/identity-icons-https-ev.png);
 }
 
-#identity-box:hover > #page-proxy-favicon {
+#identity-box:hover #page-proxy-favicon {
   -moz-image-region: rect(0, 32px, 16px, 16px);
 }
 
-#identity-box:hover:active > #page-proxy-favicon,
-#identity-box[open=true] > #page-proxy-favicon {
+#identity-box:hover:active #page-proxy-favicon,
+#identity-box[open=true] #page-proxy-favicon {
   -moz-image-region: rect(0, 48px, 16px, 32px);
 }
 
@@ -1282,7 +1282,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   -moz-padding-end: 5px;
 }
 
-#identity-box.verifiedDomain {
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain {
   background: rgba(114, 159, 207, 0.2);
   border-right: 1px solid rgba(114, 159, 207, 0.3);
   color: #3465a4;
