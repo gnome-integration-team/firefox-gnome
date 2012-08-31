@@ -52,6 +52,13 @@
   background: transparent !important;
 }
 
+#nav-bar[iconsize="large"] {
+  padding: 4px 3px !important;
+}
+#nav-bar[iconsize="small"] {
+  padding: 3px 2px !important;
+}
+
 #personal-bookmarks {
   min-height: 29px;
 }
@@ -587,7 +594,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 #nav-bar[iconsize=large] > toolbarbutton,
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button, #restore-button) {
-  margin: 3px 3px;
+  margin: 0px 3px;
   min-height: 28px;
   min-width: 26px;
   padding: 0px 3px !important;
@@ -595,8 +602,8 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 #nav-bar[iconsize=small] > toolbarbutton,
 #nav-bar[iconsize=small] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button, #restore-button) {
-  margin: 3px 2px;
-  min-height: 28px;
+  margin: 0px 2px;
+  min-height: 26px;
   padding: 0px 3px !important;
 }
 
@@ -1082,15 +1089,16 @@ toolbar[iconsize="small"] #feed-button {
   background-image: -moz-linear-gradient(top, #f2f2f2, #fdfdfd);
   padding: 1px;
   box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 0 0 rgba(255,255,255,0.89);
-  min-height: 28px;
   -moz-transition-property: border, box-shadow;
   -moz-transition-duration: 300ms;
 }
 #nav-bar[iconsize=large] :-moz-any(#urlbar, .searchbar-textbox) {
-  margin: 3px 3px;
+  margin: 0px 3px;
+  min-height: 28px;
 }
 #nav-bar[iconsize=small] :-moz-any(#urlbar, .searchbar-textbox) {
-  margin: 3px 2px;
+  margin: 0px 2px;
+  min-height: 26px;
 }
 
 .searchbar-textbox {
@@ -2071,7 +2079,6 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   list-style-image: url("chrome://browser/skin/Toolbar-small.png");
   -moz-image-region: rect(0px 16px 16px 0px);
 }
-
 
 /* ::::: Keyboard UI Panel ::::: */
 
