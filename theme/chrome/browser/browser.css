@@ -1217,74 +1217,28 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 #page-proxy-favicon {
   width: 16px;
   height: 16px;
-  /*
-  margin: 2px 4px;
-  */
-}
-
-#page-proxy-favicon:not([src]) {
-  /** FIXME **/
-  /*
-  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
   margin-top: 2px;
   margin-bottom: 2px;
-  */
   -moz-margin-start: 4px;
   -moz-margin-end: 3px;
   list-style-image: url(chrome://browser/skin/identity-icons-generic.png);
   -moz-image-region: rect(0, 16px, 16px, 0);
 }
 
-.verifiedDomain > #identity-box-inner > #page-proxy-stack > #page-proxy-favicon[pageproxystate="valid"] {
+.verifiedDomain > #page-proxy-favicon[pageproxystate="valid"] {
   list-style-image: url(chrome://browser/skin/identity-icons-https.png);
 }
 
-.verifiedIdentity > #identity-box-inner > #page-proxy-stack > #page-proxy-favicon[pageproxystate="valid"] {
+.verifiedIdentity > #page-proxy-favicon[pageproxystate="valid"] {
   list-style-image: url(chrome://browser/skin/identity-icons-https-ev.png);
 }
 
-#identity-box:hover > #identity-box-inner > #page-proxy-stack > #page-proxy-favicon {
+#identity-box:hover > #page-proxy-favicon {
   -moz-image-region: rect(0, 32px, 16px, 16px);
 }
 
-/* Identity indicator */
-#identity-box {
-  /*
-  background-image: -moz-linear-gradient(hsl(0,0%,98%), hsl(0,0%,92%));
-  box-shadow: 0 1px 0 hsla(0,0%,0%,.05) inset;
-  -moz-border-end: 1px solid rgba(0,0,0,.1);
-  padding: 1px;
-  margin: -1px;
-  -moz-margin-end: 0;
-  */
-}
-
-#identity-box:-moz-locale-dir(ltr) {
-  border-top-left-radius: 2.5px;
-  border-bottom-left-radius: 2.5px;
-}
-
-#identity-box:-moz-locale-dir(rtl) {
-  border-top-right-radius: 2.5px;
-  border-bottom-right-radius: 2.5px;
-}
-
-#identity-box:-moz-focusring {
-  outline: 1px dotted #000;
-  outline-offset: -3px;
-}
-
-#identity-box:hover:active,
-#identity-box[open="true"] {
-  /*
-  background-image: -moz-linear-gradient(hsl(0,0%,92%), hsl(0,0%,82%));
-  */
-  box-shadow: 0 1px 1px hsla(0,0%,0%,.1) inset,
-              0 1px 3px hsla(0,0%,0%,.1) inset;
-}
-
-#identity-box:hover:active > #identity-box-inner > #page-proxy-stack > #page-proxy-favicon,
-#identity-box[open=true] > #identity-box-inner > #page-proxy-stack > #page-proxy-favicon {
+#identity-box:hover:active > #page-proxy-favicon,
+#identity-box[open=true] > #page-proxy-favicon {
   -moz-image-region: rect(0, 48px, 16px, 32px);
 }
 
@@ -1321,66 +1275,23 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 
 #identity-box.verifiedDomain {
-  /*
-  background-image: -moz-linear-gradient(hsl(215,60%,92%), hsl(215,58%,88%));
-  box-shadow: 0 1px 0 hsla(215,54%,33%,.05) inset;
-  -moz-border-end-color: hsla(215,54%,33%,.2);
-  color: hsl(215,54%,33%);
-  */
   background: rgba(114, 159, 207, 0.2);
   border-right: 1px solid rgba(114, 159, 207, 0.3);
   color: #3465a4;
   margin-right: 3px;
 }
 
-#identity-box.verifiedDomain:hover:active,
-#identity-box.verifiedDomain[open="true"] {
-  /*
-  background-image: -moz-linear-gradient(hsl(215,80%,80%), hsl(215,67%,65%));
-  box-shadow: 0 1px 1px hsla(215,54%,33%,.7) inset,
-              0 1px 3px 1px hsla(215,54%,33%,.5) inset;
-  */
-}
-
-#identity-box.verifiedIdentity {
-  /*
-  background-image: -moz-linear-gradient(hsl(91,70%,90%), hsl(93,60%,81%));
-  box-shadow: 0 1px 0 hsla(92,81%,16%,.05) inset;
-  -moz-border-end-color: hsla(92,81%,16%,.2);
-  color: hsl(92,81%,16%);
-  */
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity {
   background: rgba(115, 210, 22, 0.15);
   border-right: 1px solid rgba(115, 210, 22, 0.25);
   color: #4e9a06;
   margin-right: 3px;
 }
 
-#identity-box.verifiedIdentity:hover:active,
-#identity-box.verifiedIdentity[open="true"] {
-  /*
-  background-image: -moz-linear-gradient(hsl(92,65%,70%), hsl(92,40%,48%));
-  box-shadow: 0 1px 1px hsla(92,81%,16%,.6) inset,
-              0 1px 3px 1px hsla(92,81%,16%,.5) inset;
-              */
-}
-
-#identity-box.verifiedIdentity {
-  /*
-  background-color: #fff;
-  color: hsl(92,100%,30%);
-  -moz-margin-end: 4px;
-  background-image: -moz-linear-gradient(hsla(92,81%,16%,0),
-                                         hsla(92,81%,16%,.2) 25%,
-                                         hsla(92,81%,16%,.2) 75%,
-                                         hsla(92,81%,16%,0));
-  */
-  background-position: right;
-  background-size: 1px;
-  background-repeat: no-repeat;
-}
-
-#identity-box.verifiedIdentity:-moz-locale-dir(rtl) {
-  background-position: left;
+#identity-box:hover:active,
+#identity-box[open="true"] {
+  box-shadow: 0 1px 1px hsla(0,0%,0%,.1) inset,
+              0 1px 3px hsla(0,0%,0%,.1) inset;
 }
 
 /* Identity popup icons */
