@@ -1786,6 +1786,10 @@ opacity: 0.5;
   box-shadow: none !important;
 }
 
+* + .tabbrowser-tabs {
+  -moz-margin-start: 2px;
+}
+
 /* put some space between the newtab-button and regular tabs */
 .tabs-newtab-button {
 /*  -moz-margin-start: 10px;*/
@@ -2154,19 +2158,24 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 
 /* Application button menu */
 
+#appmenu-toolbar-button {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/firefox.svg);
+}
+#appmenu-toolbar-button:not(:hover):not([open]) {
+  color: #2e3436;
+}
+#appmenu-toolbar-button > .toolbarbutton-text {
+  margin-top: -2px !important;
+  margin-bottom: -2px !important;
+}
+#appmenu-toolbar-button > .toolbarbutton-menu-dropmarker {
+  display: none;
+}
+
 .splitmenu-menuitem {
   -moz-margin-end: 1px;
 }
 
-#appmenu-toolbar-button:not(:hover):not([open]):not(:-moz-lwtheme) {
-  color: inherit;
-}
-
-#appmenu-toolbar-button > .toolbarbutton-text,
-#appmenu-toolbar-button > .toolbarbutton-menu-dropmarker {
-  margin-top: -2px !important;
-  margin-bottom: -2px !important;
-}
 #appmenuSecondaryPane {
   -moz-border-start: 1px solid #ebebeb;
 }
