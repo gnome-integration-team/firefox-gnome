@@ -28,17 +28,17 @@
   -moz-appearance: none;
 }
 
-#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
+#navigator-toolbox:not([tabsontop="false"]) > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
   border-top: 1px solid #a7aba7 !important;
 }
-#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar)[collapsed="false"] ~ toolbar {
+#navigator-toolbox:not([tabsontop="false"]) > toolbar:not(#toolbar-menubar):not(#TabsToolbar)[collapsed="false"] ~ toolbar {
   border-top: 0 !important;
 }
 #navigator-toolbox[tabsontop="false"] > toolbar {
   border-top: 0 !important;
 }
 
-#navigator-toolbox > #nav-bar {
+#navigator-toolbox:not([tabsontop="false"]) > #nav-bar {
   background: -moz-linear-gradient(top, #fff, #f3f3f3) !important;
 }
 #navigator-toolbox > toolbar[id*="custom"] {
@@ -607,12 +607,14 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button) {
   min-width: 32px;
 }
+
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button):not(:hover):not(:active) {
   background-image: -moz-linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important; /* For Fx 15 */
   background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
   border: 1px solid rgba(0,0,0,.25) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1), inset 1px 0 0 rgba(255,255,255,0.4), inset -1px 0 0 rgba(255,255,255,0.4) !important;
 }
+
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button)[disabled="true"] {
   background-image: -moz-linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important; /* For Fx 15 */
   background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
@@ -1846,7 +1848,7 @@ opacity: 0.5;
   box-shadow: 0 -1px 0 #a7a7a7 inset;
 }
 
-#TabsToolbar:-moz-system-metric(menubar-drag) {
+#TabsToolbar[tabsontop="true"]:-moz-system-metric(menubar-drag) {
   -moz-binding: url("chrome://global/content/bindings/toolbar.xml#toolbar-drag");
 }
 
@@ -1857,6 +1859,12 @@ opacity: 0.5;
 /* Tabstrip buttons */
 #TabsToolbar toolbarbutton {
   margin-bottom: 2px;
+}
+
+#TabsToolbar > toolbarbutton toolbarbutton {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* put some space between the newtab-button and regular tabs */
@@ -2387,7 +2395,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   color: #a7aba7 !important;
 }
 
-#main-window:-moz-window-inactive #nav-bar :-moz-any(#back-button, #forward-button) {
+#main-window:-moz-window-inactive #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button) {
   background: transparent !important;
   border-color: #a7aba7 !important;
   box-shadow: none !important;
