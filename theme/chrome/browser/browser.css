@@ -1084,13 +1084,15 @@ toolbar[iconsize="small"] #feed-button {
 /* remove ugly white border around location and searchbars */
 #urlbar, .searchbar-textbox {
  -moz-appearance: none;
+  background: -moz-linear-gradient(to bottom, #f2f2f2, #fdfdfd); /* For Fx 15 */
+  background: linear-gradient(to bottom, #f2f2f2, #fdfdfd);
   border: 1px solid rgba(0,0,0,.25);
   border-radius: 3px;
-  background-image: -moz-linear-gradient(top, #f2f2f2, #fdfdfd);
-  padding: 1px;
   box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 0 0 rgba(255,255,255,0.89);
+  color: #2e3436;
+  overflow: hidden;
   -moz-transition-property: border, box-shadow;
-  -moz-transition-duration: 300ms;
+  -moz-transition-duration: 200ms;
 }
 #nav-bar[iconsize=large] :-moz-any(#urlbar, .searchbar-textbox) {
   margin: 0px 3px;
@@ -1101,12 +1103,7 @@ toolbar[iconsize="small"] #feed-button {
   min-height: 26px;
 }
 
-.searchbar-textbox {
-  -moz-padding-end: 3px;
-}
-
 #urlbar[focused="true"], .searchbar-textbox[focused="true"] {
-  border-color: rgba(0, 87, 179, 0.5);
   border-color: #729fcf;
   box-shadow: 0 1px 0 rgba(255,255,255,0.6), inset 0 1px 2px 0 rgba(0,106,221,0.3);
 }
@@ -1186,11 +1183,30 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #urlbar-icons {
   -moz-box-align: center;
+  -moz-border-end: 1px solid #e1e1e1;
+  -moz-margin-end: -1px;
 }
 
 .urlbar-icon {
-  cursor: pointer;
-  padding: 0 3px;
+  height: 22px;
+  padding: 3px;
+  min-width: 22px;
+}
+#nav-bar[iconsize=large] #urlbar .urlbar-icon {
+  height: 26px;
+  padding: 5px;
+  min-width: 26px;
+}
+#nav-bar[iconsize=small] #urlbar .urlbar-icon {
+  height: 24px;
+  padding: 4px;
+  min-width: 24px;
+}
+
+.urlbar-icon:not([disabled="true"]):active {
+  background-image: -moz-linear-gradient(to bottom, #d1d1d1, #fff); /* For Fx 15 */
+  background-image: linear-gradient(to bottom, #d1d1d1, #fff);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.6), inset 0 1px 1px 0 rgba(0,0,0,0.15);
 }
 
 #urlbar-search-splitter {
@@ -1199,13 +1215,6 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   -moz-margin-end: -3px;
   width: 6px;
 }
-
-/*
-#urlbar-search-splitter + #urlbar-container > #urlbar,
-#urlbar-search-splitter + #search-container > #searchbar > .searchbar-textbox {
-  -moz-margin-start: 0;
-}
-*/
 
 #urlbar-display-box {
   margin-top: -1px;
@@ -1448,8 +1457,8 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   border-color: #fff;
   -moz-border-image: url("chrome://browser/skin/urlbar-arrow.png") 0 8 0 0 fill;
   -moz-margin-end: -8px;
-  margin-top: -1px;
-  margin-bottom: -1px;
+/*  margin-top: -1px;*/
+/*  margin-bottom: -1px;*/
 }
 
 #notification-popup-box:not([hidden]) + #identity-box {
@@ -1570,22 +1579,61 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 /* Combined go/reload/stop button in location bar */
 
-#go-button {
-  padding-top: 2px;
-  padding-bottom: 2px;
-}
-
-#urlbar > toolbarbutton {
-  -moz-appearance: none !important;
+#urlbar > toolbarbutton,
+#urlbar-icons > box {
+  -moz-appearance: none;
   background: transparent !important;
   border: none !important;
-  -moz-border-start: 1px solid rgba(0,0,0,0.2)!important;
   border-radius: 0 !important;
   box-shadow: none !important;
-  padding: 3px 3px 3px 4px;
-  cursor: pointer !important;
-  width: 24px !important;
-  -moz-margin-start: 3px;
+  padding: 3px;
+  min-height: 22px;
+  min-width: 22px;
+}
+#nav-bar[iconsize=large] #urlbar > toolbarbutton,
+#nav-bar[iconsize=large] #urlbar-icons > box {
+  min-height: 26px;
+  padding: 5px;
+  min-width: 26px;
+}
+#nav-bar[iconsize=small] #urlbar > toolbarbutton,
+#nav-bar[iconsize=small] #urlbar-icons > box {
+  min-height: 24px;
+  padding: 4px;
+  min-width: 24px;
+}
+
+#urlbar-icons > box {
+  -moz-border-end: 1px solid #e1e1e1;
+  -moz-margin-end: -1px;
+  min-width: 23px;
+}
+#nav-bar[iconsize=large] #urlbar-icons > box {
+  min-width: 27px;
+}
+#nav-bar[iconsize=small] #urlbar-icons > box {
+  min-width: 25px;
+}
+
+#urlbar-go-button, #urlbar-stop-button, #urlbar-reload-button {
+  -moz-margin-start: 1px;
+}
+
+#star-button {
+/*  -moz-border-start: 1px solid transparent;*/
+  -moz-margin-start: 1px;
+}
+
+#urlbar > toolbarbutton:hover,
+#urlbar-icons > box:hover {
+  background: transparent !important;
+}
+
+#urlbar > toolbarbutton:not([disabled="true"]):active,
+#urlbar-icons > box:not([disabled="true"]):active {
+  background: -moz-linear-gradient(to bottom, #d1d1d1, #fff) !important; /* For Fx 15 */
+  background: linear-gradient(to bottom, #d1d1d1, #fff) !important;
+  box-shadow:  inset 0 1px 1px 0 rgba(0,0,0,0.15) !important;
 }
 
 #go-button {
@@ -1618,15 +1666,9 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   opacity: 0.5;
 }
 
-/* Popup blocker button */
-#page-report-button {
-list-style-image: url("chrome://browser/skin/symbolic-icons/info.svg");
-opacity: 0.5;
-}
-
 /* Star button */
 #star-button {
-  padding: 1px;
+/*  padding: 1px;*/
   list-style-image: url("chrome://browser/skin/symbolic-icons/add-bookmark.svg");
   opacity: 0.5;
 }
@@ -1642,6 +1684,12 @@ opacity: 0.5;
 #urlbar-stop-button:hover,
 #star-button:hover {
   opacity: 1;
+}
+
+/* Popup blocker button */
+#page-report-button {
+  list-style-image: url("chrome://browser/skin/symbolic-icons/info.svg");
+  opacity: 0.5;
 }
 
 /* Bookmarking panel */
