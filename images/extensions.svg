@@ -3,7 +3,7 @@
 
 <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="16" height="16" id="svg2" version="1.1" inkscape:version="0.48.3.1 r9886" sodipodi:docname="extensions.svg">
    <defs id="defs4" />
-   <sodipodi:namedview id="base" pagecolor="#454545" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="1" inkscape:pageshadow="2" inkscape:zoom="1" inkscape:cx="171.40547" inkscape:cy="103.5361" inkscape:document-units="px" inkscape:current-layer="g3166" showgrid="false" showborder="true" inkscape:showpageshadow="false" inkscape:snap-global="true" inkscape:window-width="1366" inkscape:window-height="741" inkscape:window-x="0" inkscape:window-y="-2" inkscape:window-maximized="1" showguides="true" inkscape:guide-bbox="true" inkscape:object-nodes="true">
+   <sodipodi:namedview id="base" pagecolor="#454545" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="1" inkscape:pageshadow="2" inkscape:zoom="2.8284271" inkscape:cx="142.54582" inkscape:cy="158.95635" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="true" showborder="true" inkscape:showpageshadow="false" inkscape:snap-global="true" inkscape:window-width="1366" inkscape:window-height="741" inkscape:window-x="0" inkscape:window-y="-2" inkscape:window-maximized="1" showguides="true" inkscape:guide-bbox="true" inkscape:object-nodes="true">
       <inkscape:grid type="xygrid" id="grid2985" empspacing="5" visible="true" enabled="true" snapvisiblegridlinesonly="true" />
       <sodipodi:guide orientation="0,1" position="21,15" id="guide3003" />
       <sodipodi:guide orientation="0,1" position="8,2" id="guide3005" />
@@ -164,6 +164,10 @@
             <rect y="1044.3622" x="5" height="1" width="1.5" id="rect3142" style="fill:white;fill-opacity:1;stroke:none" />
             <rect style="fill:white;fill-opacity:1;stroke:none" id="rect3150" width="1.5" height="1" x="9.5" y="1039.3622" />
          </g>
+      </g>
+      <g id="g3145" transform="translate(154,-122)">
+         <rect ry="2" rx="2" transform="translate(0,1036.3622)" y="1" x="1" height="13" width="14" id="rect3143" style="fill:#f57900;fill-opacity:1;stroke:none" />
+         <path sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" inkscape:connector-curvature="0" id="path3124" d="m 3,1038.3622 0,11 1,0 1,0 1,0 4,0 1,0 1,0 1,0 0,-11 -3,0 -4,0 z m 3,1 4,0 0,2 -4,0 z m -2,0 1,0 0,1 -1,0 z m 7,0 1,0 0,1 -1,0 z m -7,2 1,0 0,1 -1,0 z m 2,1 1,0 2,0 1,0 0,3 -1,0 -2,0 -1,0 z m 5,-1 1,0 0,1 -1,0 z m -7,2 1,0 0,1 -1,0 z m 7,0 1,0 0,1 -1,0 z m -7,2 1,0 0,1 -1,0 z m 2,1 1,0 2,0 1,0 0,2 -4,0 z m 5,-1 1,0 0,1 -1,0 z m -7,2 1,0 0,1 -1,0 z m 7,0 1,0 0,1 -1,0 z" style="fill:white;fill-opacity:1;stroke:none" />
       </g>
    </g>
 </svg>
