@@ -2,36 +2,36 @@
  * id: {c6448328-31f7-4b12-a2e0-5c39d0290307}
  * URL: https://addons.mozilla.org/firefox/addon/fxbutton/ */
 
-#fx-button {
+#fxbutton {
 /*  list-style-image: url("chrome://browser/skin/symbolic-icons/gear.svg") !important;*/
   list-style-image: url("chrome://browser/skin/symbolic-icons/firefox.svg") !important;
 }
 
 /* ... */
 
-#search-container + #fx-button {
+#search-container + #fxbutton {
   list-style-image: url("chrome://browser/skin/symbolic-icons/gear.svg") !important;
 }
 
-#nav-bar[iconsize=large] #search-container + #fx-button {
+#nav-bar[iconsize=large] #search-container + #fxbutton {
   min-width: 32px;
 }
 
-#nav-bar[iconsize=large] #search-container + #fx-button:not(:hover):not(:active) {
+#nav-bar[iconsize=large] #search-container + #fxbutton:not(:hover):not(:active) {
   background-image: -moz-linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important; /* For Fx 15 */
   background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
   border: 1px solid rgba(0,0,0,.25) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1), inset 1px 0 0 rgba(255,255,255,0.4), inset -1px 0 0 rgba(255,255,255,0.4) !important;
 }
 
-#nav-bar[iconsize=large] #search-container + #fx-button[disabled="true"] {
+#nav-bar[iconsize=large] #search-container + #fxbutton[disabled="true"] {
   background-image: -moz-linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important; /* For Fx 15 */
   background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
   border: 1px solid rgba(0,0,0,.25) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1), inset 1px 0 0 rgba(255,255,255,0.4), inset -1px 0 0 rgba(255,255,255,0.4) !important;
 }
 
-#main-window:-moz-window-inactive #nav-bar[iconsize=large] #search-container + #fx-button {
+#main-window:-moz-window-inactive #nav-bar[iconsize=large] #search-container + #fxbutton {
   background: transparent !important;
   border-color: #a7aba7 !important;
   box-shadow: none !important;
