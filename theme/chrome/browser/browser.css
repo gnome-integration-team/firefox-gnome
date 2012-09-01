@@ -788,7 +788,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 #downloads-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/Download.svg");
+  list-style-image: url("chrome://browser/skin/symbolic-icons/download.svg");
 }
 
 #history-button {
