@@ -2387,6 +2387,15 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   color: #6a6f6e !important;
 }
 
+#main-window:-moz-window-inactive #urlbar-icons,
+#main-window:-moz-window-inactive #urlbar-icons > box,
+#main-window:-moz-window-inactive .searchbar-engine-button {
+  -moz-border-end-color: transparent !important;
+}
+#main-window:-moz-window-inactive .search-go-container {
+  -moz-border-start-color: transparent !important;
+}
+
 #main-window:-moz-window-inactive .tabbrowser-tab {
   color: #a7aba7 !important;
 }
