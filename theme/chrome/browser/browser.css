@@ -2038,41 +2038,32 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-up,
 #TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-down {
   -moz-appearance: none;
-  margin: 0;
+  margin: 0 !important;
   background: transparent !important;
   border-color: transparent !important;
   box-shadow: none !important;
 }
 
-.tabbrowser-arrowscrollbox > .scrollbutton-up {
-  -moz-border-start: 0;
-  -moz-border-end: 2px solid transparent;
+#TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-up {
+  -moz-border-start: 0 !important;
+  -moz-border-end: 2px solid transparent !important;
 }
 
-.tabbrowser-arrowscrollbox > .scrollbutton-down {
-  -moz-border-start: 2px solid transparent;
-  -moz-border-end: 0;
+#TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-down {
+  -moz-border-start: 2px solid transparent !important;
+  -moz-border-end: 0 !important;
   -moz-transition: 1s box-shadow ease-out;
   border-radius: 4px;
 }
 
-.tabbrowser-arrowscrollbox > .scrollbutton-down[notifybgtab] {
-  box-shadow: 0 0 5px 5px Highlight inset;
+#TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-down[notifybgtab] {
+  box-shadow: 0 0 5px 5px Highlight inset !important;
   -moz-transition: none;
 }
 
-.tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled]):-moz-locale-dir(ltr),
-.tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled]):-moz-locale-dir(rtl) {
-  border-width: 0 2px 0 0;
-  border-style: solid;
-  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill;
-}
-
-.tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled]):-moz-locale-dir(ltr),
-.tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled]):-moz-locale-dir(rtl) {
-  border-width: 0 0 0 2px;
-  border-style: solid;
-  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill;
+#TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled]),
+#TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled]) {
+  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill !important;
 }
 
 /*
