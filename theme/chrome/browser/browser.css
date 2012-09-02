@@ -44,7 +44,7 @@
 #navigator-toolbox > toolbar[id*="custom"] {
   background: #f4f4f4 !important;
 }
-#navigator-toolbox > #PersonalToolbar {
+#navigator-toolbox > toolbar[id="PersonalToolbar"] {
   background: -moz-linear-gradient(to bottom, #f4f4f4, #eee) !important;
 }
 #navigator-toolbox > :-moz-any(#toolbar-menubar, #TabsToolbar),
