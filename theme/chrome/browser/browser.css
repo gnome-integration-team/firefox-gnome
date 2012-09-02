@@ -2035,6 +2035,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 /* Tabbrowser arrowscrollbox arrows */
+
 #TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-up,
 #TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-down {
   -moz-appearance: none;
@@ -2042,6 +2043,23 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   background: transparent !important;
   border-color: transparent !important;
   box-shadow: none !important;
+}
+
+#TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-up > .toolbarbutton-icon,
+#TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-down > .toolbarbutton-icon {
+  opacity: .7;
+}
+
+#TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-up:hover > .toolbarbutton-icon,
+#TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-down:hover > .toolbarbutton-icon {
+  opacity: .9;
+}
+
+#TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-up:active > .toolbarbutton-icon,
+#TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-down:active > .toolbarbutton-icon,
+#TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-up:active:hover > .toolbarbutton-icon,
+#TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-down:active:hover > .toolbarbutton-icon {
+  opacity: 1;
 }
 
 #TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-up {
