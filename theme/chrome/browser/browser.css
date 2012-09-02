@@ -2028,7 +2028,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #TabsToolbar .tabs-newtab-button:active,
 #TabsToolbar > #new-tab-button:active,
 #TabsToolbar > #wrapper-new-tab-button > #new-tab-button:active,
-.tabs-newtab-button:active:hover,
+#TabsToolbar .tabs-newtab-button:active:hover,
 #TabsToolbar > #new-tab-button:active:hover,
 #TabsToolbar > #wrapper-new-tab-button > #new-tab-button:active:hover {
   opacity: 1;
@@ -2075,6 +2075,8 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 */
 
+/* All tabs button */
+
 #alltabs-button > .toolbarbutton-icon {
   list-style-image: url(chrome://browser/skin/symbolic-icons/alltabs.svg);
   margin: 2px 0 1px;
@@ -2086,6 +2088,22 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 #alltabs-button[type="menu"] > .toolbarbutton-icon {
   display: none;
+}
+
+#TabsToolbar #new-tab-button + #alltabs-button {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  opacity: .7;
+}
+
+#TabsToolbar #new-tab-button + #alltabs-button:hover {
+  opacity: .9;
+}
+
+#TabsToolbar #new-tab-button + #alltabs-button:active,
+#TabsToolbar #new-tab-button + #alltabs-button:active:hover {
+  opacity: 1;
 }
 
 /* All tabs menupopup */
