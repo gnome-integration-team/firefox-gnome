@@ -756,7 +756,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #home-button {
   list-style-image: url("chrome://browser/skin/symbolic-icons/home.svg");
 }
-#home-button[disabled="true"] {
+#home-button[disabled="true"] > .toolbarbutton-icon {
   opacity: 0.5;
 }
 
@@ -788,17 +788,17 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 #downloads-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/download.svg");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/download.svg);
 }
 
 #history-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/History.png");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/history.svg);
 }
 
 #bookmarks-button,
 #bookmarks-menu-button,
 #bookmarks-menu-button.bookmark-item {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/bookmarks.svg");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/bookmarks.svg);
 }
 
 #bookmarks-menu-button.toolbarbutton-1 {
@@ -806,14 +806,13 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 #print-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/print.svg");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/print.svg);
 }
-#print-button[disabled="true"] {
-  list-style-image: url("moz-icon://stock/gtk-print?size=toolbar&state=disabled");
+#print-button[disabled="true"] > .toolbarbutton-icon {
+  opacity: 0.5;
 }
 
 #new-tab-button {
-/*  -moz-image-region: rect(0px 96px 24px 72px);*/
   list-style-image: url(chrome://browser/skin/symbolic-icons/tab-new.svg);
 }
 
@@ -824,40 +823,38 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #cut-button {
   list-style-image: url(chrome://browser/skin/symbolic-icons/cut.svg);
 }
-#cut-button[disabled="true"] {
+#cut-button[disabled="true"] > .toolbarbutton-icon {
   opacity: 0.5;
 }
 
 #copy-button {
   list-style-image: url(chrome://browser/skin/symbolic-icons/copy.svg);
 }
-#copy-button[disabled="true"] {
+#copy-button[disabled="true"] > .toolbarbutton-icon {
   opacity: 0.5;
 }
 
 #paste-button {
   list-style-image: url(chrome://browser/skin/symbolic-icons/paste.svg);
 }
-#paste-button[disabled="true"] {
+#paste-button[disabled="true"] > .toolbarbutton-icon {
   opacity: 0.5;
 }
 
 #fullscreen-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/fullscreen.svg");
-
+  list-style-image: url(chrome://browser/skin/symbolic-icons/fullscreen.svg);
 }
 
 #zoom-out-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/zoom-out.svg");
-
+  list-style-image: url(chrome://browser/skin/symbolic-icons/zoom-out.svg);
 }
 
 #zoom-in-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/zoom-in.svg");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/zoom-in.svg);
 }
 
 #sync-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/sync.svg");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/sync.svg);
 }
 
 /* Sync button (active) */
@@ -871,7 +868,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 #sync-button[status="active"] > .toolbarbutton-icon {
   /* For Fx 15 */
-  list-style-image: url("chrome://browser/skin/symbolic-icons/sync-working.svg");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/sync-working.svg);
   -moz-animation-name:             rotate;
   -moz-animation-duration:         2s;
   -moz-transition-timing-function: linear;
@@ -884,7 +881,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 #feed-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/rss.svg");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/rss.svg);
 }
 
 #feed-button[disabled="true"] > .toolbarbutton-icon {
@@ -1629,7 +1626,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 #star-button {
-/*  -moz-border-start: 1px solid transparent;*/
   -moz-margin-start: 1px;
 }
 
@@ -1646,11 +1642,11 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 #go-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/Go.png");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/go.svg);
 }
 
 #urlbar-go-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/Go.png");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/go.svg);
 }
 
 #go-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
@@ -1659,16 +1655,16 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 #urlbar-reload-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/refresh.svg");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/refresh.svg);
 }
 
 #urlbar-stop-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/stop.svg");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/stop.svg);
 }
 
 #urlbar-go-button,
 #urlbar-stop-button {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 #urlbar-reload-button {
@@ -1677,13 +1673,12 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 /* Star button */
 #star-button {
-/*  padding: 1px;*/
-  list-style-image: url("chrome://browser/skin/symbolic-icons/add-bookmark.svg");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/add-bookmark.svg);
   opacity: 0.5;
 }
 
 #star-button[starred="true"] {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/added-bookmark.svg");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/added-bookmark.svg);
   opacity: 0.7;
 }
 
@@ -1697,7 +1692,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 /* Popup blocker button */
 #page-report-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/info.svg");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/info.svg);
   opacity: 0.5;
 }
 
