@@ -1123,10 +1123,6 @@ toolbar[iconsize="small"] #feed-button {
   -moz-margin-start: 0;
 }
 
-.urlbar-history-dropmarker {
-  display: none;
-}
-
 #urlbar-container {
   -moz-box-orient: horizontal;
   -moz-box-align: stretch;
@@ -1586,7 +1582,8 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 /* Combined go/reload/stop button in location bar */
 
 #urlbar > toolbarbutton,
-#urlbar-icons > box {
+#urlbar-icons > box,
+#urlbar .urlbar-history-dropmarker {
   -moz-appearance: none;
   background: transparent !important;
   border: none !important;
@@ -1597,13 +1594,15 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   min-width: 22px;
 }
 #nav-bar[iconsize=large] #urlbar > toolbarbutton,
-#nav-bar[iconsize=large] #urlbar-icons > box {
+#nav-bar[iconsize=large] #urlbar-icons > box,
+#nav-bar[iconsize=large] #urlbar .urlbar-history-dropmarker {
   min-height: 26px;
   padding: 5px;
   min-width: 26px;
 }
 #nav-bar[iconsize=small] #urlbar > toolbarbutton,
-#nav-bar[iconsize=small] #urlbar-icons > box {
+#nav-bar[iconsize=small] #urlbar-icons > box,
+#nav-bar[iconsize=small] #urlbar .urlbar-history-dropmarker {
   min-height: 24px;
   padding: 4px;
   min-width: 24px;
@@ -1621,6 +1620,12 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   min-width: 25px;
 }
 
+#urlbar .urlbar-history-dropmarker {
+  -moz-border-end: 1px solid #e1e1e1 !important;
+  -moz-margin-end: -1px;
+  -moz-margin-start: 1px;
+}
+
 #urlbar-go-button, #urlbar-stop-button, #urlbar-reload-button {
   -moz-margin-start: 1px;
 }
@@ -1635,7 +1640,9 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 #urlbar > toolbarbutton:not([disabled="true"]):active,
-#urlbar-icons > box:not([disabled="true"]):active {
+#urlbar-icons > box:not([disabled="true"]):active,
+#urlbar .urlbar-history-dropmarker:not([disabled="true"]):active,
+#urlbar .urlbar-history-dropmarker[open="true"] {
   background: -moz-linear-gradient(to bottom, #d1d1d1, #fff) !important; /* For Fx 15 */
   background: linear-gradient(to bottom, #d1d1d1, #fff) !important;
   box-shadow:  inset 0 1px 1px 0 rgba(0,0,0,0.15) !important;
@@ -1662,12 +1669,15 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   list-style-image: url(chrome://browser/skin/symbolic-icons/stop.svg);
 }
 
-#urlbar-go-button,
-#urlbar-stop-button {
-  opacity: 0.5;
+.urlbar-history-dropmarker {
+  display: none;
+  list-style-image: url(chrome://browser/skin/symbolic-icons/down.svg);
 }
 
-#urlbar-reload-button {
+#urlbar-go-button,
+#urlbar-stop-button,
+#urlbar-reload-button,
+.urlbar-history-dropmarker image {
   opacity: 0.5;
 }
 
@@ -1686,7 +1696,9 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #urlbar-go-button:hover,
 #urlbar-reload-button:hover,
 #urlbar-stop-button:hover,
-#star-button:hover {
+#star-button:hover,
+.urlbar-history-dropmarker:hover image,
+.urlbar-history-dropmarker[open="true"] image {
   opacity: 1;
 }
 
@@ -2420,7 +2432,8 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 
 #main-window:-moz-window-inactive #urlbar-icons,
 #main-window:-moz-window-inactive #urlbar-icons > box,
-#main-window:-moz-window-inactive .searchbar-engine-button {
+#main-window:-moz-window-inactive .searchbar-engine-button,
+#main-window:-moz-window-inactive #urlbar .urlbar-history-dropmarker {
   -moz-border-end-color: transparent !important;
 }
 #main-window:-moz-window-inactive .search-go-container {
