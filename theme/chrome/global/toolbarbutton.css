@@ -43,9 +43,13 @@ toolbarbutton:not([disabled]):hover,
   filter:url(filter.svg#brighten);
 }
 
-#navigator-toolbox[tabsontop="false"] toolbarbutton:not([disabled]):hover:active,
-#navigator-toolbox[tabsontop="false"] toolbarbutton:not([disabled]):active {
-	background-color: white;
+#navigator-toolbox[tabsontop="false"] toolbarbutton:not([disabled]):active,
+#navigator-toolbox[tabsontop="false"] toolbarbutton:not([disabled]):active:hover,
+#navigator-toolbox[tabsontop="false"] toolbarbutton[open="true"],
+#navigator-toolbox[tabsontop="false"] toolbarbutton[open="true"]:hover,
+#navigator-toolbox[tabsontop="false"] toolbarbutton[open="true"]:active,
+#navigator-toolbox[tabsontop="false"] toolbarbutton[open="true"]:active:hover {
+  background-color: white;
   border-radius: 3px 3px 0 0;
 }
 

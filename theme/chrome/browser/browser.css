@@ -1522,14 +1522,14 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 .ac-result-type-bookmark,
 .autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage) {
-  list-style-image: url("chrome://browser/skin/places/pageStarred.png");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/added-bookmark.svg);
   width: 16px;
   height: 16px;
 }
 
 .ac-result-type-keyword,
 .autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage) {
-  list-style-image: url(moz-icon://stock/gtk-find?size=menu);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/search.svg);
   width: 16px;
   height: 16px;
 }
