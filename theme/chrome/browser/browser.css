@@ -1670,7 +1670,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 .urlbar-history-dropmarker {
-  display: none;
+/*  display: none;*/
   list-style-image: url(chrome://browser/skin/symbolic-icons/down.svg);
 }
 
