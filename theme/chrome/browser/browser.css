@@ -1536,6 +1536,11 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-margin-start: 3px;
 }
 
+#urlbar > toolbarbutton:not([disabled]):active,
+#urlbar > toolbarbutton:not([disabled]):active:hover {
+  background: none;
+}
+
 #go-button {
   list-style-image: url("chrome://browser/skin/symbolic-icons/Go.png");
 }
