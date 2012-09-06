@@ -14,6 +14,13 @@
     <em:internalName>Adwaita</em:internalName>
     
     <em:localized>
+      <Description em:locale="pl">
+        <em:name>Adwaita</em:name>
+        <em:description>Motyw GNOME 3 Adwaita dla Firefoksa</em:description>
+      </Description>
+    </em:localized>
+    
+    <em:localized>
       <Description em:locale="ru-RU">
         <em:name>Adwaita</em:name>
         <em:description>Тема GNOME 3 Adwaita для Firefox</em:description>
