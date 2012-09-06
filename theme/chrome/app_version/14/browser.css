@@ -1,9 +1,10 @@
 .tabbrowser-tab {
-  padding: 0 4px 2px 3px;
+  padding: 1px 4px 2px 3px;
 }
 
 .tabbrowser-tab[selected="true"] {
-  padding-bottom: 3px; /* Make text bump up a little on the selected tab */
+  padding-bottom: 3px;
+  padding-top: 0px;
 }
 
 .tabbrowser-tab[pinned] {
