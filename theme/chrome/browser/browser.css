@@ -1536,7 +1536,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 .ac-result-type-tag,
 .autocomplete-treebody::-moz-tree-image(tag, treecolAutoCompleteImage) {
-  list-style-image: url("chrome://browser/skin/places/tag.png");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/tag.svg);
   width: 16px;
   height: 16px;
 }
@@ -1549,13 +1549,24 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   font-size: inherit;
 }
 
+/** Color for URL bar, from Evandro (efg) on #gnome-design **/
 .ac-url-text,
 .ac-action-text {
-  color: -moz-nativehyperlinktext;
+  font-size: 90%;
+  color: gray;
+}
+
+richlistitem {
+  margin-top: -1px;
+  padding-bottom: 2px;
+}
+
+richlistitem[selected="true"] {
+  background-color: #4a90d9 !important;
 }
 
 richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-icon {
-  list-style-image: url("chrome://browser/skin/actionicon-tab.png");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/actionicon-tab.svg);
   padding: 0 3px;
 }
 
@@ -1566,7 +1577,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .ac-comment[selected="true"],
 .ac-url-text[selected="true"],
 .ac-action-text[selected="true"] {
-  color: inherit !important;
+  color: #ffffff !important;
 }
 
 .autocomplete-treebody::-moz-tree-cell-text(suggesthint, treecolAutoCompleteComment),
@@ -2394,12 +2405,6 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 /** Overrides for extensions **/
 #fixer-menu-button > #appmenu-toolbar-button, #fixer-menu-button > #appmenu-button {
   border: none !important;
-}
-
-/** Color for URL bar, from Evandro (efg) on #gnome-design **/
-.ac-url-text {
-  font-size: 90% !important;
-  color: gray !important;
 }
 
 /*** Inactive window ***/
