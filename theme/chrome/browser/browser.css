@@ -1690,7 +1690,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #urlbar-reload-button,
 .urlbar-history-dropmarker image,
 #star-button {
-  opacity: 0.55;
+  opacity: 0.35;
 }
 
 /* Star button */
