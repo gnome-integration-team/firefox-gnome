@@ -1641,7 +1641,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-margin-start: 1px;
 }
 
-#star-button {
+#urlbar #star-button {
   -moz-margin-start: 1px;
 }
 
@@ -1688,14 +1688,14 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #urlbar-go-button,
 #urlbar-stop-button,
 #urlbar-reload-button,
-.urlbar-history-dropmarker image {
-  opacity: 0.5;
+.urlbar-history-dropmarker image,
+#star-button {
+  opacity: 0.55;
 }
 
 /* Star button */
 #star-button {
   list-style-image: url(chrome://browser/skin/symbolic-icons/add-bookmark.svg);
-  opacity: 0.5;
 }
 
 #star-button[starred="true"] {
@@ -1707,7 +1707,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #urlbar-go-button:hover,
 #urlbar-reload-button:hover,
 #urlbar-stop-button:hover,
-#star-button:hover,
+#urlbar #star-button:hover,
 .urlbar-history-dropmarker:hover image,
 .urlbar-history-dropmarker[open="true"] image {
   opacity: 1;
@@ -2424,9 +2424,11 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   box-shadow: none !important;
 }
 
+/*
 #main-window:-moz-window-inactive toolbarbutton > .toolbarbutton-icon {
   opacity: 0.6;
 }
+*/
 
 #main-window:-moz-window-inactive textbox {
   background: #f8f8f6 !important;

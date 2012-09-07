@@ -88,7 +88,7 @@
   height: 22px;
   padding: 3px;
   min-width: 22px;
-  opacity: 0.5;
+  opacity: 0.55;
 }
 #nav-bar[iconsize=large] .searchbar-textbox .search-go-button {
   height: 26px;
