@@ -3,7 +3,7 @@
 
 <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="16" height="16" id="svg2" version="1.1" inkscape:version="0.48.3.1 r9886" sodipodi:docname="extensions.svg">
    <defs id="defs4" />
-   <sodipodi:namedview id="base" pagecolor="#454545" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="1" inkscape:pageshadow="2" inkscape:zoom="1" inkscape:cx="4.2919764" inkscape:cy="116.31085" inkscape:document-units="px" inkscape:current-layer="g3145" showgrid="false" showborder="true" inkscape:showpageshadow="false" inkscape:snap-global="false" inkscape:window-width="1366" inkscape:window-height="743" inkscape:window-x="0" inkscape:window-y="-4" inkscape:window-maximized="1" showguides="false" inkscape:guide-bbox="true" inkscape:object-nodes="true">
+   <sodipodi:namedview id="base" pagecolor="#454545" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="1" inkscape:pageshadow="2" inkscape:zoom="1" inkscape:cx="181.1594" inkscape:cy="102.5764" inkscape:document-units="px" inkscape:current-layer="g3185" showgrid="false" showborder="true" inkscape:showpageshadow="false" inkscape:snap-global="true" inkscape:window-width="1366" inkscape:window-height="741" inkscape:window-x="0" inkscape:window-y="-2" inkscape:window-maximized="1" showguides="false" inkscape:guide-bbox="true" inkscape:object-nodes="true">
       <inkscape:grid type="xygrid" id="grid2985" empspacing="5" visible="true" enabled="true" snapvisiblegridlinesonly="true" />
       <sodipodi:guide orientation="0,1" position="16,15" id="guide3003" />
       <sodipodi:guide orientation="0,1" position="8,2" id="guide3005" />
@@ -150,19 +150,11 @@
       </g>
       <g id="g3166" transform="translate(172,-95)">
          <g id="g3185" transform="translate(6,0)">
-            <path style="fill:white;fill-opacity:1;stroke:none" d="m 13,1047.3622 -2,0 0,-1 -6,0 0,1 -2,0 5,4 z" id="path3107" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" />
-            <rect style="opacity:0.35;fill:white;fill-opacity:1;stroke:none" id="rect3112" width="1.5" height="1" x="5" y="1045.3622" />
-            <rect y="1045.3622" x="6.5" height="1" width="1.5" id="rect3114" style="fill:white;fill-opacity:1;stroke:none" />
-            <rect style="fill:white;fill-opacity:1;stroke:none" id="rect3116" width="1.5" height="1" x="8" y="1045.3622" />
-            <rect y="1044.3622" x="9.5" height="1" width="1.5" id="rect3118" style="fill:white;fill-opacity:1;stroke:none" />
-            <rect style="opacity:0.75;fill:white;fill-opacity:1;stroke:none" id="rect3120" width="1.5" height="1" x="9.5" y="1045.3622" />
-            <rect style="fill:white;fill-opacity:1;stroke:none" id="rect3124" width="1.5" height="1" x="6.5" y="1044.3622" />
-            <rect y="1043.3622" x="8" height="1" width="1.5" id="rect3126" style="fill:white;fill-opacity:1;stroke:none" />
-            <rect y="1043.3622" x="9.5" height="1" width="1.5" id="rect3128" style="fill:white;fill-opacity:1;stroke:none" />
-            <path inkscape:connector-curvature="0" id="rect3134" d="m 5,1038.3622 0,2 0,2 3,0 1.5,0 0,-1 1.5,0 0,-1 -1.5,0 -1.5,0 0,-2 -3,0 z" style="fill:white;fill-opacity:1;stroke:none" />
-            <rect style="opacity:0.25;fill:white;fill-opacity:1;stroke:none" id="rect3136" width="1.5" height="1" x="9.5" y="1042.3622" />
-            <rect y="1044.3622" x="5" height="1" width="1.5" id="rect3142" style="fill:white;fill-opacity:1;stroke:none" />
-            <rect style="fill:white;fill-opacity:1;stroke:none" id="rect3150" width="1.5" height="1" x="9.5" y="1039.3622" />
+            <path style="fill:white;fill-opacity:1;stroke:none" d="m 13,1047.3622 -2,0 0,-1 -6,0 0,1 -2,0 5,3 z" id="path3107" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" />
+            <rect y="1044.3622" x="5" height="1.9999826" width="6" id="rect3138" style="opacity:0.8;fill:white;fill-opacity:1;stroke:none" />
+            <rect style="opacity:0.5;fill:white;fill-opacity:1;stroke:none" id="rect3140" width="6" height="1.9999826" x="5" y="1042.3622" />
+            <rect y="1040.3622" x="5" height="1.9998302" width="6" id="rect3142" style="opacity:0.2;fill:white;fill-opacity:1;stroke:none" />
+            <rect style="opacity:0.1;fill:white;fill-opacity:1;stroke:none" id="rect3144" width="6" height="1.9998302" x="5" y="1038.3622" />
          </g>
       </g>
       <g id="g3145" transform="translate(154,-122)">
