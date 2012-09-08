@@ -1690,11 +1690,13 @@ opacity: 0.5;
   -moz-border-bottom-colors: #a7a7a7 #fff #fff;
 }
 
-/* put some space between the newtab-button and regular tabs */
+/* put some space between the newtab-button and regular tabs and align it vetically with the close button*/
 .tabs-newtab-button
 {
   -moz-margin-start: 10px;
+  margin-top: 2px;
 }
+
 
 .tabbrowser-tab {
   position: relative; /* static doesn't work with overlapping tabs (wrong z-index of the selected tab) */
