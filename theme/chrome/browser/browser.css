@@ -2468,7 +2468,6 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-inactive.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
-/*
 #main-window:-moz-window-inactive .tabbrowser-tab[titlechanged]:not([selected="true"]) > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-inactive.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
@@ -2481,7 +2480,6 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 #main-window:-moz-window-inactive .tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned])[titlechanged] > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-inactive.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
-*/
 
 /*** Dev Tools ***/
 
