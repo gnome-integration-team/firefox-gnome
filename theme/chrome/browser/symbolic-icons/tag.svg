@@ -1,66 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="16px"
-   height="16px"
-   id="svg3135"
-   version="1.1"
-   inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="New document 2">
-  <defs
-     id="defs3137" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="22.197802"
-     inkscape:cx="8"
-     inkscape:cy="8"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     inkscape:grid-bbox="true"
-     inkscape:document-units="px"
-     inkscape:window-width="1366"
-     inkscape:window-height="712"
-     inkscape:window-x="0"
-     inkscape:window-y="27"
-     inkscape:window-maximized="1">
-    <inkscape:grid
-       type="xygrid"
-       id="grid3143" />
-  </sodipodi:namedview>
-  <metadata
-     id="metadata3140">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     id="layer1"
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer">
-    <path
-       style="fill:#2e3436;fill-opacity:1;stroke:none"
-       d="m 1.7287074,4.6617927 c -0.4062,0.4062 -0.18158,0.9215 -3e-5,1.4666 l 1.46666,2.9331 5.13296,5.1331003 c 0.40615,0.4062 1.06034,0.4062 1.46654,0 L 14.194618,9.7947931 c 0.40615,-0.4062004 0.40622,-1.0603004 -4e-5,-1.4666004 l -5.1330306,-5.1329 -2.93312,-1.4665 c -0.54506,-0.1817 -1.06036,-0.4063 -1.46655,0 z m 1.89054,-1.0425 c 0.57583,-0.576 1.50929,-0.5761 2.08532,0 0.57578,0.5758 0.57578,1.5094 0,2.0852 -0.57583,0.576 -1.50949,0.576 -2.08532,0 -0.57597,-0.5759 -0.57595,-1.5094 0,-2.0852 z m 1.79886,4.6861 1.02053,-1.0207 3.6664106,3.6664003 -1.0205506,1.0206 z m 2.62373,-1.1573 1.04263,-1.0425 2.9331406,2.933 -1.04265,1.0426003 z"
-       id="rect3381"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccssscccccccccccccccccccc" />
-  </g>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="16px" height="16px" id="svg3135" version="1.1" inkscape:version="0.48.3.1 r9886" sodipodi:docname="tag.svg">
+   <defs id="defs3137" />
+   <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="31.392433" inkscape:cx="6.8960603" inkscape:cy="8.3363459" inkscape:current-layer="layer1" showgrid="true" inkscape:grid-bbox="true" inkscape:document-units="px" inkscape:window-width="1366" inkscape:window-height="741" inkscape:window-x="0" inkscape:window-y="-2" inkscape:window-maximized="1" inkscape:snap-global="true">
+      <inkscape:grid type="xygrid" id="grid3143" />
+   </sodipodi:namedview>
+   <metadata id="metadata3140">
+      <rdf:RDF>
+         <cc:Work rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <dc:title />
+         </cc:Work>
+      </rdf:RDF>
+   </metadata>
+   <g id="layer1" inkscape:label="Layer 1" inkscape:groupmode="layer">
+      <path sodipodi:nodetypes="cccssscccccccccc" inkscape:connector-curvature="0" id="rect3381" d="M 5.5,2 C 4.92554,2 4.68299,2.4862 4.42593,3 l -1.42594,3 -0.037,6.9631 C 2.95999,13.5375 3.42555,13.997 4,14.0001 l 6.96298,0.037 C 11.53738,14.0371 11.99997,13.5746 12,13 L 12,6 10.5,3 C 10.22759,2.4552 10.07451,1.9999 9.5,2 z M 7.49988,2.9984 C 8.61324,2.9983 9.51562,3.8938 9.51555,4.9993 9.51553,6.1043 8.61311,7 7.5,7 6.38664,7.0001 5.48417,6.1043 5.48433,4.9992 5.48427,3.8939 6.3866,2.9983 7.49988,2.9984 z" style="fill:#4d4d4d;fill-opacity:1;stroke:none" />
+   </g>
 </svg>
