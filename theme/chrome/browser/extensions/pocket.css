@@ -1,0 +1,106 @@
+/* Pocket
+ * id: {xxxx-xxx-xxxx}
+ * URL: https://addons.mozilla.org/en-US/firefox/addon/read-it-later */
+
+/* --- Checkmark in Location Bar --- */
+
+/*#RIL_urlbar_mark-share {*/
+/*	width:6px;*/
+/*	padding:1px 3px 1px 0px;*/
+/*	list-style-image: url("chrome://isreaditlater/skin/x_share_16.png");*/
+
+/*}*/
+
+#RIL_urlbar_add,
+#RIL_urlbar_mark {
+    padding: 0px 2px 0px 4px;
+    list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/pocket.svg") !important;
+    opacity: 0.35 !important;
+}
+/*#RIL_urlbar_add:hover { list-style-image: url("chrome://isreaditlater/skin/urlbar-plus-hover.png"); }*/
+
+#RIL_urlbar_mark {
+		list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/pocket-added.svg") !important;
+		opacity: 1 !important;
+}
+
+
+
+/* --- Main toolbar button --- */
+
+.RIL_drop
+{
+    padding: 20px 0px 0px 0px;
+}
+.RIL_FF4 .RIL_drop
+{
+    width: auto;
+    height: 5px;
+    padding: 0px;
+    background: url("chrome://isreaditlater/skin/arrow-dn.gif") center no-repeat;
+}
+
+.RIL_unread_count
+{
+    padding: 10px 0px 0px 0px;
+    font-size: 9px;
+}
+.RIL_FF4 .RIL_unread_count
+{
+    margin: 0px 0px 0px 0px !important;
+    padding: 0px !important;
+    font-size: 8px;
+    text-align: center;
+}
+
+#navigator-toolbox[iconsize="small"] #nav-bar #RIL_toolbar_button.RIL_FF3 .RIL_drop
+{
+	padding: 13px 0px 0px 0px;
+	margin:0px 3px 0px 0px;
+}
+.RIL_FF3 RIL_unread_count,
+#navigator-toolbox[iconsize="small"] #nav-bar #RIL_toolbar_button.RIL_FF3 .RIL_unread_count
+{
+	margin: 0px 3px 0px 0px;
+	padding: 5px 0px 0px 0px;
+	font-size: 8px;
+}
+
+
+#main-window #RIL_toolbar_button.RIL_show_count.RIL_FF3
+{
+	-moz-binding: url("chrome://isreaditlater/content/bindings3.xml#toolbarbutton");
+}
+#main-window .RIL_FF3 .RIL_list_drop
+{
+	-moz-binding: url("chrome://isreaditlater/content/bindings3.xml#RIL_list_drop");
+}
+
+#main-window #RIL_toolbar_button.RIL_show_count.RIL_FF4  {
+	-moz-binding: url("chrome://isreaditlater/content/bindings.xml#toolbarbutton");
+}
+#main-window .RIL_FF4 .RIL_list_drop {
+	-moz-binding: url("chrome://isreaditlater/content/bindings.xml#RIL_list_drop");
+}
+
+
+/* -- Default Theme -- */
+
+#RIL_toolbar_button,
+#navigator-toolbox[iconsize="small"] #nav-bar #RIL_toolbar_button,
+#nav-bar #RIL_toolbar_button
+{
+		list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/pocket.svg") !important;
+}
+
+/*#RIL_toolbar_button.RIL_FF3,*/
+/*#navigator-toolbox[iconsize="small"] #nav-bar #RIL_toolbar_button.RIL_FF3*/
+/*{*/
+/*		height: 20px;*/
+/*		list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/pocket.svg") !important;*/
+/*}*/
+
+#nav-bar #RIL_toolbar_button.RIL_FF3
+{
+		list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/pocket.svg") !important;
+}
