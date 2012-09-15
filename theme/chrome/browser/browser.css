@@ -1593,10 +1593,9 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 /* Combined go/reload/stop button in location bar */
 
 #urlbar > toolbarbutton,
-#urlbar-icons > box,
+#urlbar-icons > *,
 #urlbar .urlbar-history-dropmarker {
   -moz-appearance: none;
-  background: transparent !important;
   border: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
@@ -1605,14 +1604,14 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   min-width: 22px;
 }
 #nav-bar[iconsize=large] #urlbar > toolbarbutton,
-#nav-bar[iconsize=large] #urlbar-icons > box,
+#nav-bar[iconsize=large] #urlbar-icons > *,
 #nav-bar[iconsize=large] #urlbar .urlbar-history-dropmarker {
   min-height: 26px;
   padding: 5px;
   min-width: 26px;
 }
 #nav-bar[iconsize=small] #urlbar > toolbarbutton,
-#nav-bar[iconsize=small] #urlbar-icons > box,
+#nav-bar[iconsize=small] #urlbar-icons > *,
 #nav-bar[iconsize=small] #urlbar .urlbar-history-dropmarker {
   min-height: 24px;
   padding: 4px;
@@ -1646,12 +1645,12 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 #urlbar > toolbarbutton:hover,
-#urlbar-icons > box:hover {
+#urlbar-icons > *:hover {
   background: transparent !important;
 }
 
 #urlbar > toolbarbutton:not([disabled="true"]):active,
-#urlbar-icons > box:not([disabled="true"]):active,
+#urlbar-icons > *:not([disabled="true"]):active,
 #urlbar .urlbar-history-dropmarker:not([disabled="true"]):active,
 #urlbar .urlbar-history-dropmarker[open="true"] {
   background: -moz-linear-gradient(to bottom, #d1d1d1, #fff) !important; /* For Fx 15 */
