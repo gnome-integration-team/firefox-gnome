@@ -2122,6 +2122,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 #alltabs-button[type="menu"] > .toolbarbutton-menu-dropmarker {
   margin-bottom: -2px;
+  list-style-image: url(chrome://browser/skin/symbolic-icons/down.svg);
 }
 
 #alltabs-button[type="menu"] > .toolbarbutton-icon {
