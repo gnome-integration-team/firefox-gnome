@@ -109,8 +109,12 @@ toolbarbutton[type="radio"][checked="true"] {
 /* ::::: toolbarbutton menu ::::: */
 
 .toolbarbutton-menu-dropmarker {
+  /*
   -moz-appearance: toolbarbutton-dropdown !important;
   list-style-image: none;
+  */
+  -moz-appearance: none !important;
+  list-style-image: url(chrome://browser/skin/symbolic-icons/dropmarker.svg);
   -moz-image-region: auto;
   padding: 0;
   margin: 0;
@@ -156,7 +160,4 @@ toolbarbutton[type="menu-button"][disabled="true"]:hover:active {
   */
   list-style-image: none;
   -moz-image-region: auto;
-}
-.dropmarker-icon {
-  -moz-appearance: toolbarbutton-dropdown;
 }

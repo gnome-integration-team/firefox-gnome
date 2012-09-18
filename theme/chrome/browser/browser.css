@@ -659,6 +659,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 #nav-bar > toolbarbutton[disabled="true"] > .toolbarbutton-icon,
+#nav-bar > toolbarbutton[disabled="true"] > .toolbarbutton-menu-dropmarker,
 #nav-bar :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button)[disabled="true"] > .toolbarbutton-icon {
   opacity: .5;
 }
