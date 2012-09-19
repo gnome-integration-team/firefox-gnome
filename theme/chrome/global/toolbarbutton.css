@@ -118,6 +118,7 @@ toolbarbutton[type="radio"][checked="true"] {
   -moz-image-region: auto;
   padding: 0;
   margin: 0;
+  display: none;
 }
 
 .toolbarbutton-menu-dropmarker[disabled="true"] {
