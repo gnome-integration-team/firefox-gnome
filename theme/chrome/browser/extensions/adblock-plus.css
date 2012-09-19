@@ -8,9 +8,7 @@
 }
 
 #abp-toolbarbutton[abpstate="disabled"] .toolbarbutton-icon,
-#abp-toolbarbutton[abpstate="disabled"] .toolbarbutton-menu-dropmarker,
-#abp-toolbarbutton[abpstate="whitelisted"] .toolbarbutton-icon,
-#abp-toolbarbutton[abpstate="whitelisted"] .toolbarbutton-menu-dropmarker {
+#abp-toolbarbutton[abpstate="whitelisted"] .toolbarbutton-icon {
   opacity: 0.5 !important;
   -moz-image-region: auto !important;
 }

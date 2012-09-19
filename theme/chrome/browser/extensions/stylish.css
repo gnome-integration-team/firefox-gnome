@@ -5,7 +5,6 @@
 #stylish-toolbar-button {
   list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/stylish.svg) !important;
 }
-#stylish-toolbar-button:not([styles-applied~="site"]) > .toolbarbutton-icon,
-#stylish-toolbar-button:not([styles-applied~="site"]) > .toolbarbutton-menu-dropmarker {
+#stylish-toolbar-button:not([styles-applied~="site"]) > .toolbarbutton-icon {
   opacity: .5;
 }
