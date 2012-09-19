@@ -805,6 +805,9 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #bookmarks-menu-button.toolbarbutton-1 {
   -moz-box-orient: horizontal;
 }
+#bookmarks-menu-button > .toolbarbutton-menu-dropmarker {
+  display: block;
+}
 
 #print-button {
   list-style-image: url(chrome://browser/skin/symbolic-icons/print.svg);
