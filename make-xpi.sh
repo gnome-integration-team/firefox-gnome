@@ -1,5 +1,5 @@
 #!/bin/bash
 
 cd theme
-zip -r ../adwaita-firefox.xpi *
+zip -FS -r ../adwaita-firefox.xpi *
 cd -
