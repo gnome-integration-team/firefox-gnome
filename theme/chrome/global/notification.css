@@ -1,19 +1,29 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 notification {
-  background-color: InfoBackground;
-  color: InfoText;
+  background: -moz-linear-gradient(to bottom, #D4D4D4, #ECECEC);
+  color: rgba(0,0,0,0.8) !important;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2) inset;
   text-shadow: none;
+
+  /* FIXME */
+  width: -moz-calc(100% + 2px);
+  -moz-margin-start: -1px;
+  margin-top: -1px;
 }
 
 notification[type="info"] {
-  background-color: -moz-Dialog;
-  color: -moz-DialogText;
+/*  background-color: -moz-Dialog;*/
+/*  color: -moz-DialogText;*/
 }
 
 notification[type="critical"] {
-  background-color: red;
-  color: white;
+/*  background-color: red;*/
+/*  color: white;*/
 }
 
 .notification-inner {
@@ -22,35 +32,62 @@ notification[type="critical"] {
 }
 
 .messageText {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .messageImage {
   width: 16px;
   height: 16px;
-  -moz-margin-start: 6px;
+  -moz-margin-start: 1em;
   -moz-margin-end: 1px;
 }
 
 /* Default icons for notifications */
 
-notification[type="info"] .messageImage {
-  list-style-image: url("moz-icon://stock/gtk-dialog-info?size=menu");
+.messageImage[type="info"] {
+  list-style-image: url("chrome://browser/skin/symbolic-icons/information.svg");
 }
 
-notification[type="warning"] .messageImage {
-  list-style-image: url("moz-icon://stock/gtk-dialog-warning?size=menu");
+.messageImage[type="warning"] {
+  list-style-image: url("chrome://browser/skin/symbolic-icons/important.svg");
 }
 
-notification[type="critical"] .messageImage {
-  list-style-image: url("moz-icon://stock/gtk-dialog-error?size=menu");
+.messageImage[type="critical"] {
+  list-style-image: url("chrome://browser/skin/symbolic-icons/critical.svg");
+}
+
+/* Replace icons */
+
+notification[value="popup-blocked"] .messageImage,
+notification[value="refresh-blocked"] .messageImage,
+notification[value="offline-app-usage"] .messageImage,
+notification[value*="offline-app-requested-"] .messageImage,
+notification[value="missing-plugins"] .messageImage {
+  min-width: 16px !important;
+  max-width: 16px !important;
+  min-height: 16px !important;
+  -moz-padding-start: 16px !important;
+  overflow: hidden !important;
+}
+
+notification[value="popup-blocked"] .messageImage,
+notification[value="refresh-blocked"] .messageImage,
+notification[value="offline-app-usage"] .messageImage,
+notification[value*="offline-app-requested-"] .messageImage {
+  background: url(chrome://browser/skin/symbolic-icons/info.svg) no-repeat center !important;
+}
+
+notification[value="missing-plugins"] .messageImage {
+  background: url(chrome://browser/skin/symbolic-icons/plugin.svg) no-repeat center !important;
 }
 
 .messageCloseButton {
-  list-style-image: url("moz-icon://stock/gtk-close?size=menu");
+  list-style-image: url("chrome://browser/skin/tabbrowser/close-normal.png");
+
   margin-top: 0;
   margin-bottom: 0;
+  margin-right: 1em ;
 }
 
 /* Popup notification */
@@ -64,5 +101,5 @@ notification[type="critical"] .messageImage {
 }
 
 .popup-notification-closeitem {
-  list-style-image: url("moz-icon://stock/gtk-close?size=menu");
+  list-style-image: url("chrome://browser/skin/tabbrowser/close-normal.png");
 }

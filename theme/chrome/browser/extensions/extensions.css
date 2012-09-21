@@ -1,5 +1,19 @@
+/* Custom icons (for the toolbar) */
 @import url("chrome://browser/skin/extensions/adblock-plus.css");
+@import url("chrome://browser/skin/extensions/clearly.css");
 @import url("chrome://browser/skin/extensions/feedly.css");
+@import url("chrome://browser/skin/extensions/firebug.css");
+@import url("chrome://browser/skin/extensions/flashblock.css");
+@import url("chrome://browser/skin/extensions/foxtophone.css");
 @import url("chrome://browser/skin/extensions/fxbutton.css");
+@import url("chrome://browser/skin/extensions/ghostery.css");
+@import url("chrome://browser/skin/extensions/greasemonkey.css");
+@import url("chrome://browser/skin/extensions/gtranslator.css");
+@import url("chrome://browser/skin/extensions/lastpass-password-manager.css");
 @import url("chrome://browser/skin/extensions/movable-firefox-button.css");
+@import url("chrome://browser/skin/extensions/pocket.css");
+@import url("chrome://browser/skin/extensions/stylish.css");
+@import url("chrome://browser/skin/extensions/xmarks-sync.css");
+
+/* Extension support */
 @import url("chrome://browser/skin/extensions/tree-style-tab.css");

@@ -94,7 +94,17 @@
 /* Places toolbar */
 toolbarbutton.bookmark-item {
   margin: 0;
-  padding: 2px 3px;
+  padding: 2px 6px;
+}
+
+.toolbarbutton-icon[label]:not([label=""]),
+.toolbarbutton-icon[type="menu"] {
+  -moz-margin-end: 4px;
+  vertical-align: middle;
+}
+
+.bookmark-item[container][livemark] .toolbarbutton-icon {
+  -moz-margin-end: 0;
 }
 
 /*toolbarbutton.bookmark-item:hover:active,
@@ -800,6 +810,7 @@ margin-right: -21px;
 }
 #sync-button[status="active"] > .toolbarbutton-icon {
   /* For Fx 15 */
+  list-style-image: url("chrome://browser/skin/symbolic-icons/sync-working.svg");
   -moz-animation-name:             rotate;
   -moz-animation-duration:         2s;
   -moz-transition-timing-function: linear;
@@ -1041,8 +1052,8 @@ toolbar[iconsize="small"] #feed-button {
   border-radius: 3px;
   background-image: -moz-linear-gradient(top, #f2f2f2, #fdfdfd);
   padding: 1px;
-  box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15),
-  		    0px 1px 0 0 rgba(255,255,255,0.89);
+  box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 0 0 rgba(255,255,255,0.89);
+  min-height: 26px;
   -moz-transition-property: border, box-shadow;
   -moz-transition-duration: 300ms;
 }
@@ -1154,74 +1165,28 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 #page-proxy-favicon {
   width: 16px;
   height: 16px;
-  /*
-  margin: 2px 4px;
-  */
-}
-
-#page-proxy-favicon:not([src]) {
-  /** FIXME **/
-  /*
-  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
   margin-top: 2px;
   margin-bottom: 2px;
-  */
   -moz-margin-start: 4px;
   -moz-margin-end: 3px;
   list-style-image: url(chrome://browser/skin/identity-icons-generic.png);
   -moz-image-region: rect(0, 16px, 16px, 0);
 }
 
-.verifiedDomain > #identity-box-inner > #page-proxy-stack > #page-proxy-favicon {
+.verifiedDomain #page-proxy-favicon[pageproxystate="valid"] {
   list-style-image: url(chrome://browser/skin/identity-icons-https.png);
 }
 
-.verifiedIdentity > #identity-box-inner > #page-proxy-stack > #page-proxy-favicon {
+.verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
   list-style-image: url(chrome://browser/skin/identity-icons-https-ev.png);
 }
 
-#identity-box:hover > #identity-box-inner > #page-proxy-stack > #page-proxy-favicon {
+#identity-box:hover #page-proxy-favicon {
   -moz-image-region: rect(0, 32px, 16px, 16px);
 }
 
-/* Identity indicator */
-#identity-box {
-  /*
-  background-image: -moz-linear-gradient(hsl(0,0%,98%), hsl(0,0%,92%));
-  box-shadow: 0 1px 0 hsla(0,0%,0%,.05) inset;
-  -moz-border-end: 1px solid rgba(0,0,0,.1);
-  padding: 1px;
-  margin: -1px;
-  -moz-margin-end: 0;
-  */
-}
-
-#identity-box:-moz-locale-dir(ltr) {
-  border-top-left-radius: 2.5px;
-  border-bottom-left-radius: 2.5px;
-}
-
-#identity-box:-moz-locale-dir(rtl) {
-  border-top-right-radius: 2.5px;
-  border-bottom-right-radius: 2.5px;
-}
-
-#identity-box:-moz-focusring {
-  outline: 1px dotted #000;
-  outline-offset: -3px;
-}
-
-#identity-box:hover:active,
-#identity-box[open="true"] {
-  /*
-  background-image: -moz-linear-gradient(hsl(0,0%,92%), hsl(0,0%,82%));
-  */
-  box-shadow: 0 1px 1px hsla(0,0%,0%,.1) inset,
-              0 1px 3px hsla(0,0%,0%,.1) inset;
-}
-
-#identity-box:hover:active > #identity-box-inner > #page-proxy-stack > #page-proxy-favicon,
-#identity-box[open=true] > #identity-box-inner > #page-proxy-stack > #page-proxy-favicon {
+#identity-box:hover:active #page-proxy-favicon,
+#identity-box[open=true] #page-proxy-favicon {
   -moz-image-region: rect(0, 48px, 16px, 32px);
 }
 
@@ -1257,67 +1222,24 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   -moz-padding-end: 5px;
 }
 
-#identity-box.verifiedDomain {
-  /*
-  background-image: -moz-linear-gradient(hsl(215,60%,92%), hsl(215,58%,88%));
-  box-shadow: 0 1px 0 hsla(215,54%,33%,.05) inset;
-  -moz-border-end-color: hsla(215,54%,33%,.2);
-  color: hsl(215,54%,33%);
-  */
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain {
   background: rgba(114, 159, 207, 0.2);
   border-right: 1px solid rgba(114, 159, 207, 0.3);
   color: #3465a4;
   margin-right: 3px;
 }
 
-#identity-box.verifiedDomain:hover:active,
-#identity-box.verifiedDomain[open="true"] {
-  /*
-  background-image: -moz-linear-gradient(hsl(215,80%,80%), hsl(215,67%,65%));
-  box-shadow: 0 1px 1px hsla(215,54%,33%,.7) inset,
-              0 1px 3px 1px hsla(215,54%,33%,.5) inset;
-  */
-}
-
-#identity-box.verifiedIdentity {
-  /*
-  background-image: -moz-linear-gradient(hsl(91,70%,90%), hsl(93,60%,81%));
-  box-shadow: 0 1px 0 hsla(92,81%,16%,.05) inset;
-  -moz-border-end-color: hsla(92,81%,16%,.2);
-  color: hsl(92,81%,16%);
-  */
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity {
   background: rgba(115, 210, 22, 0.15);
   border-right: 1px solid rgba(115, 210, 22, 0.25);
   color: #4e9a06;
   margin-right: 3px;
 }
 
-#identity-box.verifiedIdentity:hover:active,
-#identity-box.verifiedIdentity[open="true"] {
-  /*
-  background-image: -moz-linear-gradient(hsl(92,65%,70%), hsl(92,40%,48%));
-  box-shadow: 0 1px 1px hsla(92,81%,16%,.6) inset,
-              0 1px 3px 1px hsla(92,81%,16%,.5) inset;
-              */
-}
-
-#identity-box.verifiedIdentity {
-  /*
-  background-color: #fff;
-  color: hsl(92,100%,30%);
-  -moz-margin-end: 4px;
-  background-image: -moz-linear-gradient(hsla(92,81%,16%,0),
-                                         hsla(92,81%,16%,.2) 25%,
-                                         hsla(92,81%,16%,.2) 75%,
-                                         hsla(92,81%,16%,0));
-  */
-  background-position: right;
-  background-size: 1px;
-  background-repeat: no-repeat;
-}
-
-#identity-box.verifiedIdentity:-moz-locale-dir(rtl) {
-  background-position: left;
+#identity-box:hover:active,
+#identity-box[open="true"] {
+  box-shadow: 0 1px 1px hsla(0,0%,0%,.1) inset,
+              0 1px 3px hsla(0,0%,0%,.1) inset;
 }
 
 /* Identity popup icons */
@@ -1463,7 +1385,8 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   border-radius: 2.5px 0 0 2.5px;
   border-width: 0 8px 0 0;
   border-style: solid;
-  -moz-border-image: url("chrome://browser/skin/urlbar-arrow.png") 0 8 0 0 / 0 8px 0 0;
+  border-color: #fff;
+  -moz-border-image: url("chrome://browser/skin/urlbar-arrow.png") 0 8 0 0 fill;
   -moz-margin-end: -8px;
   margin-top: -1px;
   margin-bottom: -1px;
@@ -1482,6 +1405,8 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 .notification-anchor-icon {
   width: 16px;
   height: 16px;
+  opacity: 0.5;
+  margin: 0 2px;
 }
 
 .notification-anchor-icon:-moz-focusring {
@@ -1489,23 +1414,23 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 
 #default-notification-icon {
-  list-style-image: url(chrome://global/skin/icons/information-16.png);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/information.svg);
 }
 
 #geo-notification-icon {
-  list-style-image: url(chrome://browser/skin/Geolocation-16.png);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/geolocation.svg);
 }
 
 #addons-notification-icon {
-  list-style-image: url(chrome://mozapps/skin/extensions/extensionGeneric-16.png);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/addon.svg);
 }
 
 #indexedDB-notification-icon {
-  list-style-image: url(chrome://global/skin/icons/question-16.png);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/question.svg);
 }
 
 #password-notification-icon {
-  list-style-image: url(chrome://mozapps/skin/passwordmgr/key-16.png);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/key.svg);
 }
 
 #webapps-notification-icon {
@@ -1513,11 +1438,11 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   /*
   list-style-image: url(chrome://browser/skin/webapps-16.png);
   */
-  list-style-image: url(chrome://mozapps/skin/plugins/pluginGeneric-16.png);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/plugin.svg);
 }
 
 #plugins-notification-icon {
-  list-style-image: url(chrome://mozapps/skin/plugins/pluginGeneric-16.png);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/plugin.svg);
 }
 
 #treecolAutoCompleteImage {
@@ -1526,21 +1451,21 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 .ac-result-type-bookmark,
 .autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage) {
-  list-style-image: url("chrome://browser/skin/places/pageStarred.png");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/added-bookmark.svg);
   width: 16px;
   height: 16px;
 }
 
 .ac-result-type-keyword,
 .autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage) {
-  list-style-image: url(moz-icon://stock/gtk-find?size=menu);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/search.svg);
   width: 16px;
   height: 16px;
 }
 
 .ac-result-type-tag,
 .autocomplete-treebody::-moz-tree-image(tag, treecolAutoCompleteImage) {
-  list-style-image: url("chrome://browser/skin/places/tag.png");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/tag.svg);
   width: 16px;
   height: 16px;
 }
@@ -1553,13 +1478,25 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   font-size: inherit;
 }
 
+/** Color for URL bar, from Evandro (efg) on #gnome-design **/
 .ac-url-text,
 .ac-action-text {
-  color: -moz-nativehyperlinktext;
+  font-size: 90%;
+  color: gray;
+}
+
+richlistitem {
+  margin-top: -1px;
+  padding-bottom: 2px;
+}
+
+richlistitem[selected="true"] {
+  background-color: #4a90d9 !important;
 }
 
 richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-icon {
-  list-style-image: url("chrome://browser/skin/actionicon-tab.png");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/actionicon-tab.svg);
+  padding: 0 3px;
 }
 
 .autocomplete-treebody::-moz-tree-cell-text(treecolAutoCompleteComment) {
@@ -1569,7 +1506,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .ac-comment[selected="true"],
 .ac-url-text[selected="true"],
 .ac-action-text[selected="true"] {
-  color: inherit !important;
+  color: #ffffff !important;
 }
 
 .autocomplete-treebody::-moz-tree-cell-text(suggesthint, treecolAutoCompleteComment),
@@ -1592,11 +1529,16 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #urlbar > toolbarbutton {
   -moz-appearance: none !important;
   border: none !important;
-  border-left: 1px solid rgba(0,0,0,0.2)!important;
+  -moz-border-start: 1px solid rgba(0,0,0,0.2)!important;
   padding: 3px 3px 3px 4px;
   cursor: pointer !important;
   width: 24px !important;
-  margin-left: 3px;
+  -moz-margin-start: 3px;
+}
+
+#urlbar > toolbarbutton:not([disabled]):active,
+#urlbar > toolbarbutton:not([disabled]):active:hover {
+  background: none;
 }
 
 #go-button {
@@ -1631,7 +1573,8 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 /* Popup blocker button */
 #page-report-button {
-  list-style-image: url("chrome://browser/skin/Info.png");
+list-style-image: url("chrome://browser/skin/symbolic-icons/info.svg");
+opacity: 0.5;
 }
 
 /* Star button */
@@ -1747,28 +1690,22 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-border-bottom-colors: #a7a7a7 #fff #fff;
 }
 
-/* put some space between the newtab-button and regular tabs */
+/* put some space between the newtab-button and regular tabs and align it vetically with the close button*/
 .tabs-newtab-button
 {
   -moz-margin-start: 10px;
+  margin-top: 2px;
 }
+
 
 .tabbrowser-tab {
   position: relative; /* static doesn't work with overlapping tabs (wrong z-index of the selected tab) */
   -moz-appearance: none;
   background-color: transparent;
-  color: inherit;
-/*
-  margin: 0;
-  padding: 0;
-  -moz-border-image: url(tabbrowser/tab.png) 4 5 3 6 / 4px 5px 3px 6px repeat stretch;
-  border-radius: 10px 8px 0 0;
-*/
+/*  color: inherit;*/
+  color: #2e3436;
   margin: 0 -9px 0 0; /* Negative for overlapping tabs */
-  /*
-  padding: 1px 2px 3px;
-  */
-  min-height: 26px; /* reserve space for the sometimes hidden close button */
+  min-height: 28px; /* reserve space for the sometimes hidden close button */
   background-clip: padding-box;
 }
 
@@ -1790,7 +1727,8 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #main-window[tabsontop=false] .tabbrowser-tab[selected="true"] {
   -moz-border-image: url(tabbrowser/adwaita-tab.png) 6 9 1 9 / 6px 9px 1px 9px stretch;
   -moz-border-image: url(tabbrowser/adwaita-tab.png) 6 9 1 9 fill / 6px 9px 1px 9px stretch;
-  color: -moz-dialogtext;
+/*  color: -moz-dialogtext;*/
+  color: #2e3436;
 }
 
 /* All the tabs after the selected tab (hack) */
@@ -1810,7 +1748,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 .tabbrowser-tab[selected="true"]:-moz-lwtheme {
   background-image: -moz-linear-gradient(rgba(255,255,255,.8) 1px, rgba(255,255,255,.5) 3px, rgba(255,255,255,.3) 32%);
-  color: inherit;
 }
 
 .tabbrowser-tab:-moz-lwtheme-brighttext:not([selected="true"]),
@@ -2020,14 +1957,14 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled]):-moz-locale-dir(rtl) {
   border-width: 0 2px 0 0;
   border-style: solid;
-  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 / 0 2px 0 0;
+  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill;
 }
 
 .tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled]):-moz-locale-dir(ltr),
 .tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled]):-moz-locale-dir(rtl) {
   border-width: 0 0 0 2px;
   border-style: solid;
-  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 / 0 0 0 2px;
+  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill;
 }
 
 #TabsToolbar .toolbarbutton-1 > .toolbarbutton-icon,
@@ -2065,7 +2002,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 .alltabs-item[tabIsVisible] {
   /* box-shadow instead of background-color to work around native styling */
-  box-shadow: inset 0 0 0 2em hsla(0,0%,50%,.15);
+  box-shadow: inset -5px 0 ThreeDShadow;
 }
 
 /* Sidebar */
@@ -2216,31 +2153,6 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   opacity: .3;
 }
 
-/* Inspector / Highlighter */
-
-#highlighter-panel {
-  -moz-appearance: none;
-  -moz-window-shadow: none;
-  background: -moz-linear-gradient(top -1deg, #ffdd88, #ffeeaa);
-  border: none;
-  opacity: 0.35;
-}
-
-listitem.style-selector {
-  background-color: DarkGray;
-  color: white;
-}
-
-listitem.style-section {
-  background-color: LightGray;
-  color: black;
-  font-weight: bold;
-}
-
-panel[dimmed="true"] {
-  opacity: 0.5;
-}
-
 /* Add-on bar */
 
 #addon-bar {
@@ -2303,22 +2215,59 @@ panel[dimmed="true"] {
   margin-left: 1em;
 }
 
+/* Override the tab animations */
+.tabbrowser-tab:not([pinned]) {
+  min-width: 52px !important; /* Prevent tab overflow */
+  max-width: 14em;
+  -moz-transition: min-width 50ms ease-out,
+    max-width 50ms ease-out,
+    opacity 100ms ease-out 100ms
+    /* hide the tab for the first 100ms of the max-width transition */;
+}
+
+.tabbrowser-tab:not([pinned]):not([fadein]) {
+  -moz-transition: min-width 100ms ease-in,
+    max-width 100ms ease-in,
+    opacity 50ms ease-in 100ms
+    /* hide the tab for the last 100ms of the max-width transition */;
+}
+
+/** Overrides for extensions **/
+#fixer-menu-button > #appmenu-toolbar-button, #fixer-menu-button > #appmenu-button {
+  border: none !important;
+}
+
+/*** Dev Tools ***/
+
+/* Inspector / Highlighter */
+
+#highlighter-panel {
+  -moz-appearance: none;
+  -moz-window-shadow: none;
+  background: -moz-linear-gradient(top -1deg, #ffdd88, #ffeeaa);
+  border: none;
+  opacity: 0.35;
+}
+
+listitem.style-selector {
+  background-color: DarkGray;
+  color: white;
+}
+
+listitem.style-section {
+  background-color: LightGray;
+  color: black;
+  font-weight: bold;
+}
+
+panel[dimmed="true"] {
+  opacity: 0.5;
+}
+
 /* Highlighter */
 
 .highlighter-veil {
   background-color: rgba(25, 25, 25, 0.5);
-}
-
-#highlighter-closebutton {
-  list-style-image: url(chrome://browser/skin/tabbrowser/close-normal.png);
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-#highlighter-closebutton > .toolbarbutton-icon {
-  /* XXX Buttons have padding in widget/ that we don't want here but can't override with good CSS, so we must
-     use evil CSS to give the impression of smaller content */
-  margin: -4px;
 }
 
 #highlighter-veil-transparentbox {
@@ -2339,16 +2288,26 @@ panel[dimmed="true"] {
   -moz-image-region: rect(0px 16px 16px 0px);
 }
 
-#inspector-inspect-toolbutton[checked] {
+#inspector-inspect-toolbutton[checked=true] {
   -moz-image-region: rect(0px 32px 16px 16px);
 }
 
-#inspector-toolbar {
-  border-top: 1px solid hsla(210, 8%, 5%, .65);
+#inspector-option-toolbarbutton {
+  -moz-appearance: none;
+  -moz-margin-end: 6px;
+  -moz-padding-start: 7px;
+  list-style-image: url("chrome://browser/skin/devtools/inspector-option-icon.png");
+  -moz-image-region: rect(0px 16px 16px 0px);
+  border: none;
 }
 
-#inspector-toolbar[treepanel-open] {
-  padding-top: 0;
+#inspector-option-toolbarbutton[open] {
+  -moz-image-region: rect(0px 32px 16px 16px);
+}
+
+#inspector-toolbar,
+#developer-toolbar {
+  border-top: 1px solid hsla(210, 8%, 5%, .65);
 }
 
 #devtools-side-splitter {
@@ -2364,40 +2323,6 @@ panel[dimmed="true"] {
 
 #devtools-sidebar-box {
   background-color: -moz-Field;
-}
-
-/* Highlighter - toolbar resizer */
-
-#inspector-top-resizer {
-  -moz-appearance: none;
-  cursor: n-resize;
-  background: none;
-  height: 4px;
-}
-
-/* Highlighter - Node Infobar */
-
-/* Highlighter - Node Infobar - text */
-
-#highlighter-nodeinfobar-tagname {
-  color: white;
-}
-
-#highlighter-nodeinfobar-id {
-  color: hsl(90, 79%, 52%);
-}
-
-.highlighter-nodeinfobar-class {
-  color: hsl(200, 100%, 65%);
-}
-
-/* Highlighter - Node Infobar - box & arrow */
-
-#highlighter-nodeinfobar {
-  border: 1px solid hsla(210, 19%, 63%, .5);
-  border-radius: 3px;
-  padding: 8px 16px;
-  background: -moz-linear-gradient(hsl(209, 18%, 30%), hsl(210, 24%, 16%)) no-repeat padding-box;
 }
 
 /* Highlighter - Node Infobar */
@@ -2513,7 +2438,6 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
 #full-screen-warning-message {
   background-color: hsl(0,0%,15%);
   color: white;
-  font-size: 32px;
   border-radius: 8px;
   margin-top: 30px;
   padding: 30px 50px;
@@ -2521,19 +2445,25 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
 }
 
 #full-screen-warning-container[obscure-browser] {
-  background-color: rgba(0,0,0,0.75);
+  background-color: rgba(0,0,0,0.3);
 }
 
-#full-screen-warning-container[stop-obscuring-browser] {
-  -moz-transition-property: background-color;
-  -moz-transition-duration: 500ms;
-  background-color: rgba(0,0,0,0);
+.full-screen-description {
+  font-size: 150%;
+}
+
+#full-screen-domain-text {
+  font-size: 300%;
+}
+
+.full-screen-approval-button,
+#full-screen-remember-decision {
+  font-size: 120%;
 }
 
 /* Highlighter toolbar - breadcrumbs */
 
 #inspector-breadcrumbs {
-  padding: 0 3px;
   -moz-margin-end: 3px;
   /* A fake 1px-shadow is included in the border-images of the
      inspector-breadcrumbs-buttons, to match toolbar-buttons style.
@@ -2587,10 +2517,10 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
 
 .inspector-breadcrumbs-button {
   -moz-appearance: none;
-  background: transparent;
+  background-color: transparent;
+  border-style: solid;
   border-width: 1px 13px 2px 13px;
   color: hsl(210,30%,85%);
-  max-width: 85px;
   width: 85px; /* Can't use max-width. See bug 723132 */
   /* The content of the button can be larger than the button */
   overflow: hidden;
@@ -2598,7 +2528,6 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
 
   margin: 0 -11px 0 0;
   padding: 0 9px;
-  box-shadow: none;
 }
 
 .inspector-breadcrumbs-button:-moz-focusring > label {
@@ -2634,43 +2563,43 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
 }
 
 .inspector-breadcrumbs-button {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[siblings-menu-open]:not([checked]),
 .inspector-breadcrumbs-button:not([checked]):hover:active {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle-pressed.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle-pressed.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[checked] {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle-selected.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle-selected.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[checked][siblings-menu-open],
 .inspector-breadcrumbs-button[checked]:hover:active {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle-selected-pressed.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle-selected-pressed.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button:first-of-type {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-start.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-start.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[siblings-menu-open]:first-of-type:not([checked]),
 .inspector-breadcrumbs-button:first-of-type:not([checked]):hover:active {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-start-pressed.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-start-pressed.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button:first-of-type[checked] {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-start-selected.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-start-selected.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[siblings-menu-open]:first-of-type[checked],
 .inspector-breadcrumbs-button:first-of-type[checked]:hover:active {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-start-selected-pressed.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-start-selected-pressed.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button:last-of-type {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-end.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-end.png") 1 13 2 13 fill stretch;
 }
 
 #inspector-breadcrumbs[overflows] > .inspector-breadcrumbs-button:-moz-locale-dir(ltr):last-of-type {
@@ -2679,16 +2608,16 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
 
 .inspector-breadcrumbs-button[siblings-menu-open]:last-of-type:not([checked]),
 .inspector-breadcrumbs-button:last-of-type:not([checked]):hover:active {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-end-pressed.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-end-pressed.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button:last-of-type[checked] {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-end-selected.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-end-selected.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[siblings-menu-open]:last-of-type[checked],
 .inspector-breadcrumbs-button:last-of-type[checked]:hover:active {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-end-selected-pressed.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-end-selected-pressed.png") 1 13 2 13 fill stretch;
 }
 
 /* Highlighter toolbar - breadcrumbs - RTL */
@@ -2699,43 +2628,43 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
 }
 
 .inspector-breadcrumbs-button:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-middle.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-middle.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[siblings-menu-open]:not([checked]):-moz-locale-dir(rtl),
 .inspector-breadcrumbs-button:not([checked]):hover:active:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-middle-pressed.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-middle-pressed.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[checked]:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-middle-selected.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-middle-selected.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[checked][siblings-menu-open]:-moz-locale-dir(rtl),
 .inspector-breadcrumbs-button[checked]:hover:active:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-middle-selected-pressed.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-middle-selected-pressed.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button:first-of-type:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-start.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-start.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[siblings-menu-open]:first-of-type:not([checked]):-moz-locale-dir(rtl),
 .inspector-breadcrumbs-button:first-of-type:not([checked]):hover:active:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-start-pressed.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-start-pressed.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button:first-of-type[checked]:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-start-selected.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-start-selected.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[siblings-menu-open]:first-of-type[checked]:-moz-locale-dir(rtl),
 .inspector-breadcrumbs-button:first-of-type[checked]:hover:active:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-start-selected-pressed.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-start-selected-pressed.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button:last-of-type:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-end.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-end.png") 1 13 2 13 fill stretch;
 }
 
 #inspector-breadcrumbs[overflows] > .inspector-breadcrumbs-button:last-of-type:-moz-locale-dir(rtl) {
@@ -2744,16 +2673,16 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
 
 .inspector-breadcrumbs-button[siblings-menu-open]:last-of-type:not([checked]):-moz-locale-dir(rtl),
 .inspector-breadcrumbs-button:last-of-type:not([checked]):hover:active:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-end-pressed.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-end-pressed.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button:last-of-type[checked]:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-end-selected.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-end-selected.png") 1 13 2 13 fill stretch;
 }
 
 .inspector-breadcrumbs-button[siblings-menu-open]:last-of-type[checked]:-moz-locale-dir(rtl),
 .inspector-breadcrumbs-button:last-of-type[checked]:hover:active:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-end-selected-pressed.png") 1 13 2 13 stretch;
+  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-end-selected-pressed.png") 1 13 2 13 fill stretch;
 }
 
 /* Highlighter toolbar - HTML Tree */
@@ -2778,40 +2707,142 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
   border-radius: 0 3px 3px 0;
 }
 
-#inspector-tree-splitter {
+/* Highlight toolbar - Option menu */
+
+#inspector-option-toolbarbutton:-moz-focusring {
+  outline: 1px dotted hsla(210,30%,85%,0.4);
+  outline-offset: -2px;
+}
+
+html|*#gcli-tooltip-frame,
+html|*#gcli-output-frame {
+  padding: 0;
+  border-width: 0;
+  background-color: transparent;
+}
+
+#gcli-output,
+#gcli-tooltip {
+  border-width: 0;
+  background-color: transparent;
+  margin-bottom: -2px;
+}
+
+.gclitoolbar-input-node,
+.gclitoolbar-complete-node,
+.gclitoolbar-prompt {
+  margin: 0;
+  -moz-margin-end: 3px;
+  -moz-box-align: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 4px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  text-shadow: none;
+}
+
+.gclitoolbar-input-node {
+  padding-left: 20px;
+  background-color: transparent;
   -moz-appearance: none;
-  border-top: 1px solid black;
-  border-bottom-width: 0;
-  min-height: 3px;
-  height: 3px;
-  margin-bottom: -3px;
-  position: relative;
+  border-color: hsl(210,11%,10%);
+  color: hsl(210,30%,85%);
+  text-shadow: 0 -1px 0 hsla(210,8%,5%,.45);
+  box-shadow: 0 1px 1px hsla(210,8%,5%,.3) inset,
+              0 0 0 1px hsla(210,16%,76%,.1) inset,
+              0 1px 0 hsla(210,16%,76%,.15);
 }
 
-/* Override the tab animations */
-.tabbrowser-tab:not([pinned]) {
-  min-width: 52px !important; /* Prevent tab overflow */
-  max-width: 14em;
-  -moz-transition: min-width 50ms ease-out,
-    max-width 50ms ease-out,
-    opacity 100ms ease-out 100ms
-    /* hide the tab for the first 100ms of the max-width transition */;
+.gclitoolbar-complete-node {
+  padding-left: 21px;
+  background-color: transparent;
+  color: transparent;
 }
 
-.tabbrowser-tab:not([pinned]):not([fadein]) {
-  -moz-transition: min-width 100ms ease-in,
-    max-width 100ms ease-in,
-    opacity 50ms ease-in 100ms
-    /* hide the tab for the last 100ms of the max-width transition */;
+.gclitoolbar-prompt {
+  padding-left: 4px;
+  padding-bottom: 2px;
+  font-size: 150%;
+  font-weight: bold;
+  color: hsl(210,30%,85%);
+  background-color: hsl(210,11%,16%);
 }
 
-/** Overrides for extensions **/
-#fixer-menu-button > #appmenu-toolbar-button, #fixer-menu-button > #appmenu-button {
-  border: none !important;
+.gclitoolbar-prompt-label,
+.gcli-in-incomplete,
+.gcli-in-error,
+.gcli-in-ontab,
+.gcli-in-todo,
+.gcli-in-closebrace,
+.gcli-in-param,
+.gcli-in-valid {
+  margin: 0;
+  padding: 0;
 }
 
-/** Color for URL bar, from Evandro (efg) on #gnome-design **/
-.ac-url-text {
-  font-size: 90% !important;
-  color: gray !important;
+.gcli-in-incomplete {
+  border-bottom: 2px dotted #999;
+}
+
+.gcli-in-error {
+  border-bottom: 2px dotted #F00;
+}
+
+.gcli-in-ontab {
+  color: hsl(210,0%,35%);
+}
+
+.gcli-in-todo {
+  color: hsl(210,50%,35%);
+}
+
+.gcli-in-closebrace {
+  color: hsl(0,0%,80%);
+}
+
+/* Responsive Mode */
+
+vbox[anonid=browserContainer][responsivemode] {
+  background: #2a3643 url("chrome://browser/skin/devtools/responsive-background.png");
+  box-shadow: 0 0 7px black inset;
+  padding: 0 20px 20px 20px;
+}
+
+stack[anonid=browserStack][responsivemode] {
+  box-shadow: 0 0 7px black;
+}
+
+.devtools-responsiveui-toolbar {
+  background: transparent;
+  margin: 10px 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.devtools-responsiveui-toolbar > menulist,
+.devtools-responsiveui-toolbar > toolbarbutton {
+  min-width: 22px;
+  border-radius: 0;
+}
+
+.devtools-responsiveui-toolbar:-moz-locale-dir(ltr) > *:first-child,
+.devtools-responsiveui-toolbar:-moz-locale-dir(rtl) > *:last-child {
+  margin-left: 0;
+}
+
+.devtools-responsiveui-resizebar {
+  width: 7px;
+  height: 24px;
+  cursor: ew-resize;
+  -moz-transform: translate(12px, -12px);
+  background-image: url("chrome://browser/skin/devtools/responsive-vertical-resizer.png");
+}
+
+.devtools-responsiveui-resizehandle {
+  width: 16px;
+  height: 16px;
+  cursor: se-resize;
+  -moz-transform: translate(12px, 12px);
+  background-image: url("chrome://browser/skin/devtools/responsive-se-resizer.png");
 }

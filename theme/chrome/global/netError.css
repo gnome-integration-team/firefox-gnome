@@ -1,3 +1,15 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/*
+ *  This defines the look-and-feel styling of the error pages.
+ *  (see: netError.xhtml)
+ *
+ *  Original styling by William Price <bugzilla@mob.rice.edu>
+ *  Updated by: Michael Ventnor <m.ventnor@gmail.com>
+ */
+
 html {
 
 }
@@ -41,10 +53,10 @@ ul {
   max-width: 65em;
   margin: auto;
   padding: 3em 0;
-  -moz-padding-start: 5emx;
+  -moz-padding-start: 5em;
   text-align: left;
   color: #2e3436;
-  background: none !important;
+
 }
 
 #errorPageContainer > #errorLongContent{
@@ -88,6 +100,7 @@ body[dir="rtl"] #errorPageContainer {
 
 #errorLongDesc > p {
   padding-bottom: 1em;
+  color: grey;
 }
 
 #errorTryAgain {
@@ -95,7 +108,7 @@ body[dir="rtl"] #errorPageContainer {
   -moz-appearance: none;
   border-radius: 3px;
   border: 1px solid;
-   margin-left: 14em;
+   margin-left: 8em;
   border-color: rgba(0,0,0,.2);
   border-left: 1px solid rgba(0,0,0,.15) ;
   box-shadow: 0 1px 0 rgba(255,255,255,1)inset ,
@@ -103,7 +116,7 @@ body[dir="rtl"] #errorPageContainer {
   background-image: -moz-linear-gradient(#F5F5F5, #DCDCDC);
   padding: 4px 9px ;
     -moz-transition-property: color, border, box-shadow, background-image;
-  -moz-transition-duration: 300ms;
+  -moz-transition-duration: 200ms;
 }
 
 #errorTryAgain:hover{
@@ -155,19 +168,24 @@ body[dir="rtl"] #brand {
 :root.blacklist #errorTitle, :root.blacklist #errorLongContent,
 :root.blacklist #errorShortDesc, :root.blacklist #errorLongDesc,
 :root.blacklist a {
-  background-color: #722; /* Dark red */
-  color: white;
+
 }
 
 :root.blacklist #errorPageContainer {
-  background-image: url("chrome://global/skin/icons/blacklist_large.png");
-  background-color: #722;
+
 }
 
 :root.blacklist {
-  background: #333;
+
 }
 
 :root.blacklist #errorTryAgain {
   display: none;
+}
+
+/*Remove out-of place images in about:robots*/
+
+#errorPageContainer > img {
+	display: none;
+
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="16px" height="16px" id="svg3135" version="1.1" inkscape:version="0.48.3.1 r9886" sodipodi:docname="tag.svg">
+   <defs id="defs3137" />
+   <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="31.392433" inkscape:cx="6.8960603" inkscape:cy="8.3363459" inkscape:current-layer="layer1" showgrid="true" inkscape:grid-bbox="true" inkscape:document-units="px" inkscape:window-width="1366" inkscape:window-height="741" inkscape:window-x="0" inkscape:window-y="-2" inkscape:window-maximized="1" inkscape:snap-global="true">
+      <inkscape:grid type="xygrid" id="grid3143" />
+   </sodipodi:namedview>
+   <metadata id="metadata3140">
+      <rdf:RDF>
+         <cc:Work rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <dc:title />
+         </cc:Work>
+      </rdf:RDF>
+   </metadata>
+   <g id="layer1" inkscape:label="Layer 1" inkscape:groupmode="layer">
+      <path sodipodi:nodetypes="cccssscccccccccc" inkscape:connector-curvature="0" id="rect3381" d="M 5.5,2 C 4.92554,2 4.68299,2.4862 4.42593,3 l -1.42594,3 -0.037,6.9631 C 2.95999,13.5375 3.42555,13.997 4,14.0001 l 6.96298,0.037 C 11.53738,14.0371 11.99997,13.5746 12,13 L 12,6 10.5,3 C 10.22759,2.4552 10.07451,1.9999 9.5,2 z M 7.49988,2.9984 C 8.61324,2.9983 9.51562,3.8938 9.51555,4.9993 9.51553,6.1043 8.61311,7 7.5,7 6.38664,7.0001 5.48417,6.1043 5.48433,4.9992 5.48427,3.8939 6.3866,2.9983 7.49988,2.9984 z" style="fill:#4d4d4d;fill-opacity:1;stroke:none" />
+   </g>
+</svg>

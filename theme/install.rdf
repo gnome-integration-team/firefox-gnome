@@ -7,11 +7,25 @@
     <em:id>{451500c0-902c-11e0-91e4-0800200c9a66}</em:id>
     <em:type>4</em:type>
     <em:name>Adwaita</em:name>
-    <em:version>11.1</em:version>
+    <em:version>15.1</em:version>
     <em:description>GNOME 3 Adwaita theme for Firefox</em:description>
     <em:creator>Adwaita Firefox Team</em:creator>
     <em:contributor>Adwaita Firefox Team</em:contributor>
     <em:internalName>Adwaita</em:internalName>
+    
+    <em:localized>
+      <Description em:locale="cs">
+        <em:name>Adwaita</em:name>
+        <em:description>Motiv GNOME 3 Adwaita pro Firefox</em:description>
+      </Description>
+    </em:localized>
+    
+    <em:localized>
+      <Description em:locale="pl">
+        <em:name>Adwaita</em:name>
+        <em:description>Motyw GNOME 3 Adwaita dla Firefoksa</em:description>
+      </Description>
+    </em:localized>
     
     <em:localized>
       <Description em:locale="ru-RU">
@@ -23,7 +37,7 @@
     <em:targetApplication>
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
-        <em:minVersion>6.0</em:minVersion>
+        <em:minVersion>14.0</em:minVersion>
         <em:maxVersion>18.0a1</em:maxVersion>
       </Description>
     </em:targetApplication>

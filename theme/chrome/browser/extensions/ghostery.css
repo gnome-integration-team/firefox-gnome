@@ -1,0 +1,45 @@
+/* Ghostery
+ * id: firefox@ghostery.com
+ * URL: https://addons.mozilla.org/firefox/addon/ghostery/ */
+
+#ghostery-toolbar-button {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery.svg) !important;
+}
+
+#ghostery-toolbar-button[condition="grey"] > .toolbarbutton-icon {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery-grayscale.svg) !important;
+  opacity: 0.5;
+}
+
+#ghostery-toolbar-button .badge > .label {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #242b33 !important;
+  text-shadow: none !important;
+}
+
+/* On status bar */
+
+#ghostery-status {
+  text-decoration: none !important;
+}
+
+#ghostery-status > #ghostery-status-icon {
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery.svg) !important;
+}
+#ghostery-status > #ghostery-status-icon[src*="off"] {
+  background-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery-grayscale.svg) !important;
+  opacity: 0.5;
+}
+
+#ghostery-status > #ghostery-status-icon {
+   -moz-appearance: none !important;
+  min-width: 16px !important;
+  max-width: 16px !important;
+  min-height: 16px !important;
+  -moz-padding-start: 16px !important;
+  overflow: hidden !important;
+}
