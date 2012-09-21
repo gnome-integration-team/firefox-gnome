@@ -2638,6 +2638,7 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
   -moz-appearance: none !important;
   list-style-image: url("chrome://browser/skin/devtools/dropmarker.png");
   -moz-box-align: center;
+  display: block;
   -moz-margin-start: -1px;
 }
 
