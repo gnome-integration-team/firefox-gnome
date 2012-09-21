@@ -2120,16 +2120,9 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 #alltabs-button > .toolbarbutton-icon {
   list-style-image: url(chrome://browser/skin/symbolic-icons/alltabs.svg);
-  margin: 2px 0 1px;
 }
-
-#alltabs-button[type="menu"] > .toolbarbutton-menu-dropmarker {
-  margin-bottom: -2px;
-  list-style-image: url(chrome://browser/skin/symbolic-icons/down.svg);
-}
-
 #alltabs-button[type="menu"] > .toolbarbutton-icon {
-  display: none;
+  list-style-image: url(chrome://browser/skin/symbolic-icons/down.svg);
 }
 
 #TabsToolbar #new-tab-button + #alltabs-button {
