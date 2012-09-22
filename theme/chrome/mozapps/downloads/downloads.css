@@ -9,31 +9,35 @@
 /* Download View */
 #downloadView {
   -moz-appearance: none !important;
-  background-color: Window;
+  background-color: #ffffff;
   margin: 0;
+  border-top: 1px solid #a7aba7;
+  border-bottom: 1px solid #a7aba7;
 }
 
 /* Download View Items */
 richlistitem[type="download"] {
-  padding: 4px;
+  padding: 7px;
+  -moz-padding-start: 4px;
   -moz-padding-end: 8px;
   min-height: 46px;
 }
 
-richlistitem[type="download"][selected="true"] {
-  background-image: url(chrome://mozapps/skin/extensions/itemEnabledFader.png);
-}
-
-richlistitem[type="download"]:not([selected="true"]):nth-child(odd) {
-  background-color: -moz-oddtreerow;
-}
-
 richlistitem[type="download"] .name {
   font-size: larger;
+  margin-bottom: 5px;
 }
 
 richlistitem[type="download"] .dateTime {
   font-size: smaller;
+}
+
+richlistitem[type="download"] .status {
+  font-size: smaller;
+}
+
+richlistitem[type="download"] progressmeter {
+  margin-bottom: 5px;
 }
 
 .mini-button {
@@ -107,8 +111,10 @@ menuitem:not([type]) {
 .downloadTypeIcon {
   min-height: 32px;
   min-width: 32px;
+  padding: 8px;
 }
 
+/*
 #clearListButton {
   list-style-image: url(moz-icon://stock/gtk-clear?size=button);
   margin-top: 3px;
@@ -117,3 +123,4 @@ menuitem:not([type]) {
 #clearListButton[disabled="true"] {
   list-style-image: url(moz-icon://stock/gtk-clear?size=button&state=disabled);
 }
+*/
