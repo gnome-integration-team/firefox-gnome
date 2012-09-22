@@ -3,20 +3,20 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 #downloadManager {
-  background-color: ThreeDFace;
+  background-color: Window;
 }
 
 /* Download View */
 #downloadView {
   -moz-appearance: none !important;
+  background-color: Window;
   margin: 0;
-  border-bottom: 2px solid;
-  -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
 }
 
 /* Download View Items */
 richlistitem[type="download"] {
-  padding: 4px 8px 4px 4px;
+  padding: 4px;
+  -moz-padding-end: 8px;
   min-height: 46px;
 }
 
@@ -56,42 +56,45 @@ menuitem:not([type]) {
 
 .cancel,
 #menuitem_cancel {
-  list-style-image: url("moz-icon://stock/gtk-cancel?size=menu");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/playback-stop.svg);
 }
 
 #menuitem_open {
-  list-style-image: url("moz-icon://stock/gtk-open?size=menu");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/open.svg);
 }
 #menuitem_open[disabled="true"] {
-  list-style-image: url("moz-icon://stock/gtk-open?size=menu&state=disabled");
+  opacity: 0.5;
 }
 
 .pause,
 #menuitem_pause {
-  list-style-image: url("moz-icon://stock/gtk-media-pause?size=menu");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/playback-pause.svg);
 }
-
 .pause[disabled="true"],
 #menuitem_pause[disabled="true"] {
-  list-style-image: url("moz-icon://stock/gtk-media-pause?size=menu&state=disabled");
+  opacity: 0.5;
 }
 
 .resume,
 #menuitem_resume {
-  list-style-image: url("moz-icon://stock/gtk-media-play?size=menu");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/playback-start.svg);
 }
 
 .retry,
 #menuitem_retry {
-  list-style-image: url("moz-icon://stock/gtk-redo?size=menu");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/redo.svg);
+}
+.retry:-moz-locale-dir(rtl),
+#menuitem_retry:-moz-locale-dir(rtl) {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/redo-rtl.svg);
 }
 
 #menuitem_removeFromList {
-  list-style-image: url("moz-icon://stock/gtk-remove?size=menu");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/remove.svg);
 }
 
 #menuitem_copyLocation {
-  list-style-image: url("moz-icon://stock/gtk-copy?size=menu");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/copy.svg);
 }
 
 .blockedIcon {
