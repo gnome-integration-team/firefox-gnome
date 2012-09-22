@@ -4,6 +4,6 @@
 
 #fx-button, /* Fix for older (< 1.1) version */
 #fxbutton {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/gear.png) !important;
+  list-style-image: url(chrome://browser/skin/symbolic-icons/gear.svg) !important;
 /*  list-style-image: url(chrome://browser/skin/symbolic-icons/firefox.svg) !important;*/
 }

@@ -5,14 +5,11 @@
 /* Toolbar buttons */
 /* TODO: Add icons for all buttons */
 
-#foxmarks-toolbar-my {
+#foxmarks-toolbar-my > .toolbarbutton-icon {
+  -moz-appearance: none !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-image: url(chrome://browser/skin/symbolic-icons/extensions/xmarks-sync-grayscale.svg) !important;
-}
-
-#foxmarks-toolbar-my > .toolbarbutton-icon {
-   -moz-appearance: none !important;
   min-width: 16px !important;
   max-width: 16px !important;
   min-height: 16px !important;

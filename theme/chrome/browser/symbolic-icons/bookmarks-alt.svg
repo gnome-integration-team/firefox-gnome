@@ -21,9 +21,9 @@
   <g transform='translate(-42.000004,-781.99998)' id='layer14'/>
   <g transform='translate(-42.000004,-781.99998)' id='layer15'>
     <g transform='translate(-304.1907,-181.17812)' id='g14245'>
-      <path transform='matrix(0.4714045,0,0,0.4973059,442.35737,762.975)' d='m -187.02975,412.62958 a 8.485281,8.0433397 0 1 1 -16.97056,0 8.485281,8.0433397 0 1 1 16.97056,0 z' id='path4002' style='fill:#4d4d4d;fill-opacity:1;stroke:none'/>
-      <path transform='matrix(0.4714045,0,0,0.4973059,450.35737,762.975)' d='m -187.02975,412.62958 a 8.485281,8.0433397 0 1 1 -16.97056,0 8.485281,8.0433397 0 1 1 16.97056,0 z' id='path4004' style='fill:#4d4d4d;fill-opacity:1;stroke:none'/>
-      <path inkscape:connector-curvature='0' d='m 346.95444,970.4591 7.3697,-2.1428 6.8501,2.536 -7.02688,7.357 -7.19292,-7.7502 z' id='rect4006' style='fill:#4d4d4d;fill-opacity:1;stroke:none'/>
+      <path transform='matrix(0.4714045,0,0,0.4973059,442.35737,762.975)' d='m -187.02975,412.62958 a 8.485281,8.0433397 0 1 1 -16.97056,0 8.485281,8.0433397 0 1 1 16.97056,0 z' id='path4002' style='fill:#2e3436;fill-opacity:1;stroke:none'/>
+      <path transform='matrix(0.4714045,0,0,0.4973059,450.35737,762.975)' d='m -187.02975,412.62958 a 8.485281,8.0433397 0 1 1 -16.97056,0 8.485281,8.0433397 0 1 1 16.97056,0 z' id='path4004' style='fill:#2e3436;fill-opacity:1;stroke:none'/>
+      <path inkscape:connector-curvature='0' d='m 346.95444,970.4591 7.3697,-2.1428 6.8501,2.536 -7.02688,7.357 -7.19292,-7.7502 z' id='rect4006' style='fill:#2e3436;fill-opacity:1;stroke:none'/>
       
     </g>
   </g>

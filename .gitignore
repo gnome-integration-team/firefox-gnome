@@ -1,2 +1,4 @@
 *.jar
 *.xpi
+
+.tmp

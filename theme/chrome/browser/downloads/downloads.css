@@ -160,41 +160,37 @@ richlistitem[type="download"][state="1"] > .downloadInfo:hover {
 }
 
 #downloads-indicator-anchor {
-  min-width: 18px;
-  min-height: 18px;
+  min-width: 16px;
+  min-height: 16px;
   /* Makes the outermost stack element positioned, so that its contents are
      rendered over the main browser window in the Z order.  This is required by
      the animated event notification. */
   position: relative;
+  margin: -3px 0;
 }
 
 /*** Main indicator icon ***/
 
-#downloads-indicator-icon {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-small.png"),
-                              0, 16, 16, 0) center no-repeat;
+#downloads-indicator-icon > #downloads-indicator-anchor {
+  background: -moz-image-rect(url(chrome://browser/skin/symbolic-icons/download.svg), 0, 16, 16, 0) center no-repeat;
 }
 
-#downloads-indicator-icon:-moz-lwtheme-brighttext {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"),
-                              0, 16, 16, 0) center no-repeat;
+#downloads-indicator[counter] > #downloads-indicator-anchor {
+  background: -moz-image-rect(url(chrome://browser/skin/symbolic-icons/download-noarrow.svg), 0, 16, 16, 0) center no-repeat;
 }
 
-#downloads-indicator[attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
-  background: -moz-image-rect(url("chrome://browser/skin/downloads/download-glow.png"),
-                              16, 32, 32, 16) center no-repeat;
+#downloads-indicator:not([counter]) > #downloads-indicator-anchor {
+  background: -moz-image-rect(url(chrome://browser/skin/symbolic-icons/download-empty.svg), 0, 16, 16, 0) center no-repeat;
 }
 
-#downloads-indicator:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-small.png"),
-                              0, 16, 16, 0) center no-repeat;
-  background-size: 12px;
+#downloads-indicator[attention] > #downloads-indicator-anchor {
+  background: -moz-image-rect(url(chrome://browser/skin/symbolic-icons/download-glow.svg), 0, 16, 16, 0) center no-repeat;
 }
 
-#downloads-indicator:not([counter])[attention] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
-  background-image: -moz-image-rect(url("chrome://browser/skin/downloads/download-glow.png"),
-                                    16, 32, 32, 16);
+#downloads-indicator:not([counter])[attention] > #downloads-indicator-anchor {
+  background-image: -moz-image-rect(url(chrome://browser/skin/symbolic-icons/download-glow.svg), 0, 16, 16, 0) center no-repeat;
 }
+
 
 /*** Event notification ***/
 
@@ -229,51 +225,48 @@ richlistitem[type="download"][state="1"] > .downloadInfo:hover {
 /*** Progress bar and text ***/
 
 #downloads-indicator-counter {
-  height: 12px;
+  height: 16px;
   margin: 0;
   color: hsl(0,0%,30%);
   text-shadow: 0 1px 0 hsla(0,0%,100%,.5);
   font-size: 10px;
   line-height: 10px;
   text-align: center;
+  -moz-box-ordinal-group: 10;
 }
 
 #downloads-indicator-progress {
+  background: transparent;
   width: 24px;
-  height: 4px;
+  height: 7px;
   min-width: 0;
   min-height: 0;
-  margin-top: 1px;
-  margin-bottom: 2px;
-  border-radius: 2px;
-  box-shadow: 0 1px 0 hsla(0,0%,100%,.4);
+  border: 3px solid transparent;
+  border-left-width: 7px;
+  border-right-width: 7px;
+  margin-top: 9px !important;
+  -moz-box-ordinal-group: 1;
 }
 
 #downloads-indicator-progress > .progress-bar {
   -moz-appearance: none;
   min-width: 0;
   min-height: 0;
-  background-image: -moz-linear-gradient(#41a0ff, #2090ff);
-  border: 1px solid;
-  border-color: hsla(0,0%,0%,.6) hsla(0,0%,0%,.2) hsla(0,0%,0%,.2);
-  border-radius: 2px 0 0 2px;
+  background-color: #73d216;
 }
 
 #downloads-indicator-progress > .progress-remainder {
   -moz-appearance: none;
   min-width: 0;
   min-height: 0;
-  background-image: -moz-linear-gradient(#9a9a9a, #a1a1a1);
-  border: 1px solid;
-  border-color: hsla(0,0%,0%,.4) hsla(0,0%,0%,.3) hsla(0,0%,0%,.2);
+  background-color: transparent;
   -moz-border-start: none;
-  border-radius: 0 2px 2px 0;
 }
 
 #downloads-indicator[paused] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-progress > .progress-bar {
-  background-image: -moz-linear-gradient(#a0a000, #909000);
+  background-color: #d25116;
 }
 
 #downloads-indicator[paused] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-progress > .progress-remainder {
-  background-image: -moz-linear-gradient(#9a9a00, #a1a100);
+  background-color: #d25116;
 }

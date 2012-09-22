@@ -12,11 +12,11 @@
 }
 
 #RIL_urlbar_add {
-  opacity: .5;
+  opacity: 0.35;
 }
 
 #RIL_urlbar_mark {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 #RIL_urlbar_add:hover,

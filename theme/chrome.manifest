@@ -1,6 +1,4 @@
 skin    browser         Adwaita     chrome/browser/
 skin    communicator    Adwaita     chrome/communicator/
 skin    global          Adwaita     chrome/global/
-
-skin	app_version     Adwaita     chrome/app_version/14/ appversion<15a1
-skin	app_version     Adwaita     chrome/app_version/15/ appversion>=15a1
+skin    mozapps         Adwaita     chrome/mozapps/

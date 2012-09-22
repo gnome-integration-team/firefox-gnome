@@ -3,12 +3,12 @@
  * URL: https://addons.mozilla.org/firefox/addon/adblock-plus/ */
 
 #abp-toolbarbutton {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/adblock-plus.svg") !important;
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/adblock-plus.svg) !important;
   -moz-image-region: auto !important;
 }
 
-#abp-toolbarbutton[abpstate="disabled"],
-#abp-toolbarbutton[abpstate="whitelisted"] {
+#abp-toolbarbutton[abpstate="disabled"] .toolbarbutton-icon,
+#abp-toolbarbutton[abpstate="whitelisted"] .toolbarbutton-icon {
   opacity: 0.5 !important;
   -moz-image-region: auto !important;
 }
