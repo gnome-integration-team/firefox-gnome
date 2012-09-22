@@ -2429,11 +2429,15 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   box-shadow: none !important;
 }
 
-/*
-#main-window:-moz-window-inactive toolbarbutton > .toolbarbutton-icon {
-  opacity: 0.6;
+#main-window:-moz-window-inactive toolbarbutton > .toolbarbutton-icon,
+#main-window:-moz-window-inactive toolbarbutton > .toolbarbutton-dropmarker {
+  opacity: 0.5;
 }
-*/
+
+/* Fix for go/stop/reload buttons */
+#main-window:-moz-window-inactive #urlbar toolbarbutton > .toolbarbutton-icon {
+  opacity: 1;
+}
 
 #main-window:-moz-window-inactive textbox {
   background: #f8f8f6 !important;
