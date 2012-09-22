@@ -1669,11 +1669,11 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 #go-button {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/go.svg);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/playback-start.svg);
 }
 
 #urlbar-go-button {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/go.svg);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/playback-start.svg);
 }
 
 #go-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
