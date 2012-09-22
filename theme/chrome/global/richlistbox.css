@@ -16,8 +16,8 @@ richlistbox[disabled="true"] {
 }
 
 richlistitem[selected="true"] {
-  background-color: -moz-cellhighlight;
-  color: -moz-cellhighlighttext;
+  background-color: #4a90d9; /* -moz-cellhighlight */
+  color: #ffffff; /* -moz-cellhighlighttext */
 }
 
 richlistbox:focus > richlistitem[selected="true"] {
@@ -25,12 +25,20 @@ richlistbox:focus > richlistitem[selected="true"] {
   color: #ffffff; /* HighlightText */
 }
 
+window:-moz-window-inactive richlistitem[selected="true"] {
+  background: #e2e2e2 !important;
+  color: #2e3436 !important;
+}
+
+/*
 richlistbox[seltype="multiple"]:focus > richlistitem[current="true"] {
   outline: 1px dotted Highlight;
   outline-offset: -1px;
 }
+*/
 
+/* TODO: find a suitable system color */ /*
 richlistbox[seltype="multiple"]:focus > richlistitem[current="true"][selected="true"] {
-  outline: 1px dotted #F3D982; /* TODO: find a suitable system color */
+  outline: 1px dotted #F3D982;
 }
-
+*/
