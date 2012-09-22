@@ -2430,7 +2430,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 }
 
 #main-window:-moz-window-inactive toolbarbutton > .toolbarbutton-icon,
-#main-window:-moz-window-inactive toolbarbutton > .toolbarbutton-dropmarker {
+#main-window:-moz-window-inactive toolbarbutton > .toolbarbutton-menu-dropmarker {
   opacity: 0.5;
 }
 
