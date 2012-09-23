@@ -1887,11 +1887,13 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 /*  color: inherit;*/
   color: #2e3436;
   margin: 0;
-  padding: 0px;
+  padding: 0;
+  padding-top: 20px; /* Hack for support text scaling */
 }
 
 .tabbrowser-tab > .tab-stack {
   margin: 0;
+  margin-top: -20px; /* Hack for support text scaling */
   -moz-margin-start: -9px;
   min-height: 28px;
   padding: 4px 11px 3px 11px;
