@@ -1124,7 +1124,7 @@ toolbar[iconsize="small"] #feed-button {
 }
 
 .urlbar-input-box {
-  -moz-margin-start: 3px;
+  -moz-margin-start: 0;
 }
 
 #urlbar-container {
@@ -1189,8 +1189,6 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #urlbar-icons {
   -moz-box-align: center;
-  -moz-border-end: 1px solid #e1e1e1;
-  -moz-margin-end: -1px;
 }
 
 .urlbar-icon {
@@ -1274,14 +1272,13 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   padding: 1px;
   margin: 0;
   font-size: .9em;
-  -moz-border-end: 1px solid #e1e1e1;
-  min-width: 23px; /* FIXME */
+  min-width: 22px;
 }
 #nav-bar[iconsize=large] #identity-box {
-  min-width: 27px;
+  min-width: 26px;
 }
 #nav-bar[iconsize=small] #identity-box {
-  min-width: 25px;
+  min-width: 24px;
 }
 
 #identity-box:-moz-focusring {
@@ -1303,8 +1300,9 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain {
   background: rgba(114, 159, 207, 0.2);
-/*  border-right: 1px solid rgba(114, 159, 207, 0.3);*/
+  border-right: 1px solid rgba(114, 159, 207, 0.3);
   color: #3465a4;
+  -moz-margin-end: 3px;
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain:hover:active,
@@ -1314,8 +1312,9 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity {
   background: rgba(115, 210, 22, 0.15);
-/*  border-right: 1px solid rgba(115, 210, 22, 0.25);*/
+  border-right: 1px solid rgba(115, 210, 22, 0.25);
   color: #4e9a06;
+  -moz-margin-end: 3px;
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:hover:active,
@@ -1628,9 +1627,8 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   min-width: 24px;
 }
 
+/*
 #urlbar-icons > box {
-  -moz-border-end: 1px solid #e1e1e1;
-  -moz-margin-end: -1px;
   min-width: 23px;
 }
 #nav-bar[iconsize=large] #urlbar-icons > box {
@@ -1639,20 +1637,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #nav-bar[iconsize=small] #urlbar-icons > box {
   min-width: 25px;
 }
-
-#urlbar .urlbar-history-dropmarker {
-  -moz-border-end: 1px solid #e1e1e1 !important;
-  -moz-margin-end: -1px;
-  -moz-margin-start: 1px;
-}
-
-#urlbar-go-button, #urlbar-stop-button, #urlbar-reload-button {
-  -moz-margin-start: 1px;
-}
-
-#urlbar #star-button {
-  -moz-margin-start: 1px;
-}
+*/
 
 #urlbar > toolbarbutton:hover,
 #urlbar-icons > *:hover {
@@ -2444,17 +2429,6 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   border-color: #a7aba7 !important;
   box-shadow: none !important;
   color: #6a6f6e !important;
-}
-
-#main-window:-moz-window-inactive #identity-box,
-#main-window:-moz-window-inactive #urlbar-icons,
-#main-window:-moz-window-inactive #urlbar-icons > box,
-#main-window:-moz-window-inactive .searchbar-engine-button,
-#main-window:-moz-window-inactive #urlbar .urlbar-history-dropmarker {
-  -moz-border-end-color: transparent !important;
-}
-#main-window:-moz-window-inactive .search-go-container {
-  -moz-border-start-color: transparent !important;
 }
 
 #main-window:-moz-window-inactive .tabbrowser-tab {
