@@ -565,7 +565,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) .toolbarbutton-menubutton-dropmarker:hover {
   background-image: -moz-linear-gradient(to bottom, #ffffff, #ebebeb) !important; /* For Fx 15 */
   background-image: linear-gradient(to bottom, #ffffff, #ebebeb) !important;
-  border: 1px solid rgba(0,0,0,.25) !important;
+  border-color: rgba(0,0,0,.25) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
 }
 
@@ -575,8 +575,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[checked="true"]:hover {
   background-image: -moz-linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important; /* For Fx 15 */
   background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important;
-/*  border-color: #72a0cf;*/
-  border: 1px solid rgba(0,0,0,.25) !important;
+  border-color: rgba(0,0,0,.25) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
 }
 
@@ -585,7 +584,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[open="true"]:active,
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[open="true"]:active:hover {
   background: #ffffff !important;
-  border: 1px solid #ffffff !important;
+  border-color: #ffffff !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
   border-radius: 3px 3px 0 0;
 }
@@ -614,43 +613,34 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   padding: 0px 3px !important;
 }
 
+/* Back/forward buttons */
+
 /*
 #nav-bar[iconsize=large] > toolbarbutton,
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button) {
 */
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button) {
-  min-width: 32px;
+  min-width: 31px;
 }
 
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button):not(:hover):not(:active) {
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button):not(:hover):not(:active):not([open="true"]) {
   background-image: -moz-linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important; /* For Fx 15 */
   background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
-  border: 1px solid rgba(0,0,0,.25) !important;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1), inset 1px 0 0 rgba(255,255,255,0.4), inset -1px 0 0 rgba(255,255,255,0.4) !important;
+  border-color: rgba(0,0,0,.25) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1) !important;
 }
 
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button)[disabled="true"] {
   background-image: -moz-linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important; /* For Fx 15 */
   background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
-  border: 1px solid rgba(0,0,0,.25) !important;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1), inset 1px 0 0 rgba(255,255,255,0.4), inset -1px 0 0 rgba(255,255,255,0.4) !important;
+  border-color: rgba(0,0,0,.25) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1) !important;
 }
 
 #nav-bar[iconsize=large] > toolbarbutton toolbarbutton {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-}
-
-#nav-bar > toolbarbutton[open="true"],
-#nav-bar :-moz-any(#back-button, #forward-button, #bookmarks-menu-button)[open="true"],
-#nav-bar > toolbarbutton[open="true"]:hover,
-#nav-bar :-moz-any(#back-button, #forward-button, #bookmarks-menu-button)[open="true"]:hover,
-#nav-bar > toolbarbutton[open="true"]:active,
-#nav-bar :-moz-any(#back-button, #forward-button, #bookmarks-menu-button)[open="true"]:active,
-#nav-bar > toolbarbutton[open="true"]:active:hover,
-#nav-bar :-moz-any(#back-button, #forward-button, #bookmarks-menu-button)[open="true"]:active:hover {
-  border-radius: 3px 3px 0 0 !important;
 }
 
 #nav-bar > toolbarbutton[disabled="true"],
@@ -686,16 +676,24 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 #nav-bar[iconsize=large] > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton,
 #nav-bar[iconsize=small] > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton {
-  border-radius: 0px;
-  -moz-margin-start: -1px;
-  -moz-margin-end: 0px;
+  border-radius: 0;
+  -moz-margin-start: 0;
+  -moz-margin-end: 0;
+  -moz-border-end-width: 0 !important;
+  -moz-border-start-width: 0 !important;
+}
+#nav-bar[iconsize=large] > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:active:not([open="true"]),
+#nav-bar[iconsize=small] > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:active:not([open="true"]) {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89) inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1) !important;
 }
 
 #nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type {
   -moz-margin-start: 3px;
+  -moz-border-start-width: 1px !important;
 }
 #nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type {
   -moz-margin-end: 3px;
+  -moz-border-end-width: 1px !important;
 }
 #nav-bar[iconsize=small] > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type {
   -moz-margin-start: 2px;
@@ -711,6 +709,13 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #nav-bar:-moz-locale-dir(ltr) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type,
 #nav-bar:-moz-locale-dir(rtl) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type {
   border-radius: 0px 3px 3px 0px;
+}
+
+#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type:active:not([open="true"]) {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset -1px 0 0 rgba(0,0,0,.1) !important;
+}
+#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type:active:not([open="true"]) {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 1px 0 0 rgba(0,0,0,.1) !important;
 }
 
 /* 24px primary toolbar buttons */
@@ -1183,8 +1188,18 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   visibility: hidden;
 }
 
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button #back-button {
+  -moz-transition: box-shadow 0ms ease-in;
+}
+
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] #back-button {
   border-radius: 3px !important;
+  -moz-border-end-width: 1px !important;
+  min-width: 32px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1) !important;
+}
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] #back-button:not([disable="true"]):active:not([open="true"]) {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
 }
 
 #urlbar-icons {
