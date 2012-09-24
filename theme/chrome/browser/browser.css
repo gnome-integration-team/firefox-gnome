@@ -2485,6 +2485,12 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-inactive.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
+#main-window:-moz-window-inactive .tab-throbber,
+#main-window:-moz-window-inactive .tab-icon-image {
+  filter: url(chrome://mozapps/skin/extensions/extensions.svg#greyscale);
+  opacity: 0.5;
+}
+
 /*** Dev Tools ***/
 
 /* Inspector / Highlighter */
