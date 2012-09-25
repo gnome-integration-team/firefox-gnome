@@ -4,7 +4,6 @@
 
 @import url("chrome://global/skin/inContentUI.css");
 
-
 /*** global warnings ***/
 
 .global-warning-container {
@@ -51,7 +50,6 @@
   background-color: inherit;
   background-image: none;
 }
-
 
 /*** notification icons ***/
 
@@ -289,10 +287,6 @@
   border-bottom: 1px solid #a7a7a7;
 }
 
-
-
-
-
 #header toolbarbutton {
   -moz-appearance: none;
   background: transparent !important;
@@ -345,21 +339,6 @@
   color: #a7aba7 !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .nav-button {
   min-width: 0;
 }
@@ -407,13 +386,19 @@
   min-height: 28px;
 }
 
+/***  ***/
+
 .view-header {
   background-color: transparent;
   border-bottom: 1px solid ThreeDShadow;
   min-height: 41px;
   padding: 4px;
   margin: 0;
+}
+
+#list-view > hbox {
   -moz-margin-start: -8px;
+  padding: 4px;
 }
 
 /*** sorters ***/
@@ -431,7 +416,6 @@
   display: -moz-box;
   list-style-image: url("moz-icon://stock/gtk-sort-ascending?size=16");
 }
-
 
 /*** discover view ***/
 
@@ -681,7 +665,6 @@
   list-style-image: url("moz-icon://stock/gtk-go-up?size=16");
 }
 
-
 /*** search view ***/
 
 #search-filter {
@@ -890,7 +873,6 @@ setting[type="radio"] > radiogroup {
   margin-bottom: 1px;
 }
 
-
 /*** rating ***/
 
 .meta-rating {
@@ -913,7 +895,6 @@ setting[type="radio"] > radiogroup {
   list-style-image: url("chrome://mozapps/skin/extensions/rating-won.png");
   padding: 0 1px;
 }
-
 
 /*** download progress ***/
 
@@ -959,13 +940,11 @@ setting[type="radio"] > radiogroup {
   -moz-box-align: center;
 }
 
-
 /*** install status ***/
 
 .install-status {
   -moz-box-align: center;
 }
-
 
 /*** check for updates ***/
 
@@ -981,7 +960,6 @@ setting[type="radio"] > radiogroup {
 #update-selected {
   margin: 12px;
 }
-
 
 /*** buttons ***/
 
