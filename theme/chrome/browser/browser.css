@@ -52,6 +52,11 @@
   background: transparent !important;
 }
 
+/* Inactive styling of the tabstrip for tabs on top */
+#main-window:-moz-window-inactive #navigator-toolbox:not([tabsontop="false"]) > #nav-bar {
+  background: -moz-linear-gradient(top, #f8f8f6, #f8f8f6) !important;
+}
+
 #nav-bar[iconsize="large"] {
   padding: 4px 3px !important;
 }
@@ -1860,8 +1865,14 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 #TabsToolbar[tabsontop="false"] {
   margin-top: 4px; /* margin between tabs and browser bar */
-  border-bottom: 3px solid red !important;
+  /* Line underneath tabs on tabs-on-bottom mode */
+  border-bottom: 3px solid white !important;
   -moz-border-bottom-colors: #a7a7a7 #fff #fff;
+}
+
+/* Recolor tabstrip underline when the window is inactive */
+#main-window:-moz-window-inactive #TabsToolbar[tabsontop="false"] {
+  -moz-border-bottom-colors: #a7a7a7 #f8f8f6 #f8f8f6;
 }
 
 /* Tabstrip buttons */
