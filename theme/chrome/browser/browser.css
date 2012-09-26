@@ -1905,14 +1905,17 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   margin: 0;
   padding: 0;
   padding-top: 20px; /* Hack for support text scaling */
+
+  /* Uncomment it for test transition property */
+/*  -moz-transition-duration: 30s !important;*/ /* For Fx 15 */
+/*  transition-duration: 30s !important;*/
 }
 
 .tabbrowser-tab > .tab-stack {
   margin: 0;
   margin-top: -20px; /* Hack for support text scaling */
   -moz-margin-start: -9px;
-  min-height: 28px;
-  padding: 4px 11px 3px 11px;
+  padding: 6px 11px 4px 11px;
 }
 
 .tabbrowser-tab:first-of-type > .tab-stack {
@@ -1923,7 +1926,8 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-margin-start: 0px;
 }
 
-.tabbrowser-tab[selected="true"] {
+.tabbrowser-tab:not([pinned]):not([fadein]) .tab-stack {
+  display: block;
 }
 
 #main-window .tabbrowser-tab:not([selected="true"]) > .tab-stack {
@@ -2033,7 +2037,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 #TabsToolbar .tab-close-button {
   list-style-image: url(chrome://browser/skin/tabbrowser/close-normal.png);
-  -moz-margin-end: -1px !important;
+  -moz-margin-end: -3px !important;
   margin-bottom: -1px !important;
   padding: 3px;
   border-radius: 3px;
