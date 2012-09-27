@@ -1887,7 +1887,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 * + .tabbrowser-tabs {
-  -moz-margin-start: 2px;
+  -moz-padding-start: 2px;
 }
 
 /* put some space between the newtab-button and regular tabs and align it vetically with the close button*/
