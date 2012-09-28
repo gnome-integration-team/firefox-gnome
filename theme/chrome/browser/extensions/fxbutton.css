@@ -7,3 +7,10 @@
   list-style-image: url(chrome://browser/skin/symbolic-icons/gear.svg) !important;
 /*  list-style-image: url(chrome://browser/skin/symbolic-icons/firefox.svg) !important;*/
 }
+
+#TabsToolbar #appmenu-toolbar-button.fxbutton:not(:first-child) > .toolbarbutton-icon,
+toolbar:not(#TabsToolbar) #appmenu-toolbar-button.fxbutton > .toolbarbutton-icon {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/gear.svg) !important;
+/*  list-style-image: url(chrome://browser/skin/symbolic-icons/firefox.svg) !important;*/
+}
+
