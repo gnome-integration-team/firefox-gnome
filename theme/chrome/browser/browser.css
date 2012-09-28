@@ -2414,7 +2414,6 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 
 /* Override the tab animations */
 .tabbrowser-tab:not([pinned]) {
-  min-width: 52px !important; /* Prevent tab overflow */
   max-width: 14em;
   -moz-transition: min-width 50ms ease-out,
     max-width 50ms ease-out,
