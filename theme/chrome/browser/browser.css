@@ -1265,25 +1265,23 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   margin-bottom: 2px;
   -moz-margin-start: 4px;
   -moz-margin-end: 3px;
-  list-style-image: url(chrome://browser/skin/identity-icons-generic.png);
-  -moz-image-region: rect(0, 16px, 16px, 0);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/identity-icons-generic.svg);
+  opacity: 0.35;
 }
 
 .verifiedDomain #page-proxy-favicon[pageproxystate="valid"] {
-  list-style-image: url(chrome://browser/skin/identity-icons-https.png);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/identity-icons-https.svg);
 }
 
 .verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
-  list-style-image: url(chrome://browser/skin/identity-icons-https-ev.png);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/identity-icons-https-ev.svg);
+  opacity: 0.6;
 }
 
-#identity-box:hover #page-proxy-favicon {
-  -moz-image-region: rect(0, 32px, 16px, 16px);
-}
-
-#identity-box:hover:active #page-proxy-favicon,
-#identity-box[open=true] #page-proxy-favicon {
-  -moz-image-region: rect(0, 48px, 16px, 32px);
+#identity-box:hover #page-proxy-favicon,
+#identity-box:active #page-proxy-favicon,
+#identity-box[open="true"] #page-proxy-favicon {
+  opacity: 1;
 }
 
 #page-proxy-favicon[pageproxystate="invalid"] {
@@ -1330,19 +1328,21 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain:hover:active,
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain[open="true"] {
-/* TODO: Add background */
+  background: -moz-linear-gradient(to bottom, rgba(114, 159, 207, 0.35), rgba(114, 159, 207, 0.05)); /* For Fx 15 */
+  background: linear-gradient(to bottom, rgba(114, 159, 207, 0.35), rgba(114, 159, 207, 0.05));
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity {
   background: rgba(115, 210, 22, 0.15);
   border-right: 1px solid rgba(115, 210, 22, 0.25);
-  color: #4e9a06;
+  color: #00aa00;
   -moz-margin-end: 3px;
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:hover:active,
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity[open="true"] {
-/* TODO: Add background */
+  background: -moz-linear-gradient(to bottom, rgba(115, 210, 22, 0.25), rgba(115, 210, 22, 0.05)); /* For Fx 15 */
+  background: linear-gradient(to bottom, rgba(115, 210, 22, 0.25), rgba(115, 210, 22, 0.05));
 }
 
 /* Identity popup icons */
