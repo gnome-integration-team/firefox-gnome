@@ -568,8 +568,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:not([disabled="true"]):hover,
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) .toolbarbutton-menubutton-dropmarker:hover {
-  background-image: -moz-linear-gradient(to bottom, #ffffff, #ebebeb) !important; /* For Fx 15 */
-  background-image: linear-gradient(to bottom, #ffffff, #ebebeb) !important;
+  background-image: -moz-linear-gradient(to bottom, #ffffff, #ebebeb) !important;
   border-color: rgba(0,0,0,.25) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
 }
@@ -578,8 +577,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:not([disabled="true"]):active:hover,
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[checked="true"],
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[checked="true"]:hover {
-  background-image: -moz-linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important; /* For Fx 15 */
-  background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important;
+  background-image: -moz-linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important;
   border-color: rgba(0,0,0,.25) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
 }
@@ -629,15 +627,13 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button):not(:hover):not(:active):not([open="true"]) {
-  background-image: -moz-linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important; /* For Fx 15 */
-  background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
+  background-image: -moz-linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
   border-color: rgba(0,0,0,.25) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1) !important;
 }
 
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button)[disabled="true"] {
-  background-image: -moz-linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important; /* For Fx 15 */
-  background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
+  background-image: -moz-linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
   border-color: rgba(0,0,0,.25) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1) !important;
 }
@@ -689,7 +685,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 #nav-bar[iconsize=large] > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:active:not([open="true"]),
 #nav-bar[iconsize=small] > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:active:not([open="true"]) {
-  box-shadow: 0 1px 0 rgba(255,255,255,0.89) inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1) !important;
 }
 
 #nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type {
@@ -872,26 +868,16 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 /* Sync button (active) */
-@-moz-keyframes rotate { /* For Fx 15 */
-  from { -moz-transform: rotate(0deg); }
-  to   { -moz-transform: rotate(360deg); }
-}
-@keyframes rotate {
+@-moz-keyframes rotate {
   from { -moz-transform: rotate(0deg); }
   to   { -moz-transform: rotate(360deg); }
 }
 #sync-button[status="active"] > .toolbarbutton-icon {
-  /* For Fx 15 */
   list-style-image: url(chrome://browser/skin/symbolic-icons/sync-working.svg);
   -moz-animation-name:             rotate;
   -moz-animation-duration:         2s;
   -moz-transition-timing-function: linear;
   -moz-animation-iteration-count:  infinite;
-
-  animation-name:             rotate;
-  animation-duration:         2s;
-  transition-timing-function: linear;
-  animation-iteration-count:  infinite;
 }
 
 #feed-button {
@@ -907,178 +893,6 @@ toolbar[iconsize="small"] .toolbarbutton-1:not([type="menu-button"]) {
   -moz-box-orient: vertical;
   list-style-image: url("chrome://browser/skin/Toolbar-small.png");
 }
-
-/*
-toolbar[iconsize="small"] #back-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/back-button.svg");
-}
-.unified-nav-back[_moz-menuactive] {
-  list-style-image: url("moz-icon://stock/gtk-go-back-ltr?size=menu") !important;
-}
-toolbar[iconsize="small"] #back-button[disabled="true"] {
-  list-style-image: url("moz-icon://stock/gtk-go-back-ltr?size=menu&state=disabled");
-}
-
-toolbar[iconsize="small"] #back-button:-moz-locale-dir(rtl) {
-  list-style-image: url("moz-icon://stock/gtk-go-back-rtl?size=menu");
-}
-.unified-nav-back[_moz-menuactive]:-moz-locale-dir(rtl) {
-  list-style-image: url("moz-icon://stock/gtk-go-back-rtl?size=menu") !important;
-}
-toolbar[iconsize="small"] #back-button[disabled="true"]:-moz-locale-dir(rtl) {
-  list-style-image: url("moz-icon://stock/gtk-go-back-rtl?size=menu&state=disabled");
-}
-*/
-
-/*
-toolbar[iconsize=small] #forward-button,
-window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=small],#nav-bar:not([currentset])[mode=icons][iconsize=small]) > #unified-back-forward-button > #forward-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/forward-button.svg");
-}
-.unified-nav-forward[_moz-menuactive] {
-  list-style-image: url("moz-icon://stock/gtk-go-forward-ltr?size=menu") !important;
-}
-toolbar[iconsize=small] #forward-button[disabled] {
-  list-style-image: url("moz-icon://stock/gtk-go-forward-ltr?size=menu&state=disabled");
-}
-
-toolbar[iconsize=small] #forward-button:-moz-locale-dir(rtl),
-window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=small],#nav-bar:not([currentset])[mode=icons][iconsize=small]) > #unified-back-forward-button > #forward-button:-moz-locale-dir(rtl) {
-  list-style-image: url("moz-icon://stock/gtk-go-forward-rtl?size=menu");
-}
-.unified-nav-forward[_moz-menuactive]:-moz-locale-dir(rtl) {
-  list-style-image: url("moz-icon://stock/gtk-go-forward-rtl?size=menu") !important;
-}
-toolbar[iconsize=small] #forward-button[disabled]:-moz-locale-dir(rtl) {
-  list-style-image: url("moz-icon://stock/gtk-go-forward-rtl?size=menu&state=disabled");
-}
-*/
-
-/*
-toolbar[iconsize="small"] #stop-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/stop.svg");
-}
-toolbar[iconsize="small"] #stop-button[disabled="true"] {
-  opacity: 0.5;
-}
-*/
-
-/*
-toolbar[iconsize="small"] #reload-button {a
-  list-style-image: url("chrome://browser/skin/symbolic-icons/refresh.svg");
-}
-toolbar[iconsize="small"] #reload-button[disabled="true"] {
-  opacity: 0.5;
-}
-*/
-
-/*
-toolbar[iconsize="small"] #home-button,
-#home-button.bookmark-item {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/home.svg");
-}
-toolbar[iconsize="small"] #home-button[disabled="true"],
-#home-button.bookmark-item[disabled="true"] {
-  opacity: 0.5;
-}
-*/
-
-/*
-toolbar[iconsize="small"] #downloads-button {
-  -moz-image-region: rect(0px 16px 16px 0px);
-}
-
-toolbar[iconsize="small"] #history-button {
-  -moz-image-region: rect(0px 32px 16px 16px);
-}
-*/
-
-/*
-toolbar[iconsize="small"] #bookmarks-button,
-toolbar[iconsize="small"] #bookmarks-menu-button,
-#bookmarks-menu-button.bookmark-item {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/bookmarks.svg");
-}
-*/
-
-/*
-toolbar[iconsize="small"] #print-button {
-  list-style-image: url("moz-icon://stock/gtk-print?size=menu");
-}
-toolbar[iconsize="small"] #print-button[disabled="true"] {
-  list-style-image: url("moz-icon://stock/gtk-print?size=menu&state=disabled");
-}
-*/
-
-/*
-toolbar[iconsize="small"] #new-tab-button {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/tab-new.svg);
-}
-*/
-
-/*
-toolbar[iconsize="small"] #new-window-button {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/new-window.svg);
-}
-*/
-
-/*
-toolbar[iconsize="small"] #cut-button {
-  list-style-image: url("moz-icon://stock/gtk-cut?size=menu");
-}
-toolbar[iconsize="small"] #cut-button[disabled="true"] {
-  list-style-image: url("moz-icon://stock/gtk-cut?size=menu&state=disabled");
-}
-*/
-
-/*
-toolbar[iconsize="small"] #copy-button {
-  list-style-image: url("moz-icon://stock/gtk-copy?size=menu");
-}
-toolbar[iconsize="small"] #copy-button[disabled="true"] {
-  list-style-image: url("moz-icon://stock/gtk-copy?size=menu&state=disabled");
-}
-*/
-
-/*
-toolbar[iconsize="small"] #paste-button {
-  list-style-image: url("moz-icon://stock/gtk-paste?size=menu");
-}
-toolbar[iconsize="small"] #paste-button[disabled="true"] {
-  list-style-image: url("moz-icon://stock/gtk-paste?size=menu&state=disabled");
-}
-*/
-
-/*
-toolbar[iconsize="small"] #fullscreen-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/fulscreen.svg");
-}
-*/
-
-/*
-toolbar[iconsize="small"] #zoom-out-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/zoom-out.svg");
-}
-toolbar[iconsize="small"] #zoom-in-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/zoom-in.svg");
-}
-*/
-
-/*
-toolbar[iconsize="small"] #sync-button {
-  -moz-image-region: rect(0px 96px 16px 80px);
-}
-toolbar[iconsize="small"] #sync-button[status="active"] {
-  list-style-image: url("chrome://browser/skin/sync-16-throbber.png");
-  -moz-image-region: rect(0px 16px 16px 0px);
-}
-*/
-
-/*
-toolbar[iconsize="small"] #feed-button {
-  -moz-image-region: rect(0px 112px 16px 96px);
-}
-*/
 
 /* Fullscreen window controls */
 #window-controls {
@@ -1104,8 +918,7 @@ toolbar[iconsize="small"] #feed-button {
 /* remove ugly white border around location and searchbars */
 #urlbar, .searchbar-textbox {
  -moz-appearance: none;
-  background: -moz-linear-gradient(to bottom, #f2f2f2, #fdfdfd); /* For Fx 15 */
-  background: linear-gradient(to bottom, #f2f2f2, #fdfdfd);
+  background: -moz-linear-gradient(to bottom, #f2f2f2, #fdfdfd);
   border: 1px solid rgba(0,0,0,.25);
   border-radius: 3px;
   box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 0 0 rgba(255,255,255,0.89);
@@ -1231,8 +1044,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 
 .urlbar-icon:not([disabled="true"]):active {
-  background-image: -moz-linear-gradient(to bottom, #d1d1d1, #fff); /* For Fx 15 */
-  background-image: linear-gradient(to bottom, #d1d1d1, #fff);
+  background-image: -moz-linear-gradient(to bottom, #d1d1d1, #fff);
   box-shadow: 0 1px 0 rgba(255,255,255,0.6), inset 0 1px 1px 0 rgba(0,0,0,0.15);
 }
 
@@ -1314,8 +1126,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #identity-box:hover:active,
 #identity-box[open="true"] {
-  background: -moz-linear-gradient(to bottom, #d1d1d1, #fff); /* For Fx 15 */
-  background: linear-gradient(to bottom, #d1d1d1, #fff);
+  background: -moz-linear-gradient(to bottom, #d1d1d1, #fff);
   box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.15);
 }
 
@@ -1328,8 +1139,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain:hover:active,
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain[open="true"] {
-  background: -moz-linear-gradient(to bottom, rgba(114, 159, 207, 0.35), rgba(114, 159, 207, 0.05)); /* For Fx 15 */
-  background: linear-gradient(to bottom, rgba(114, 159, 207, 0.35), rgba(114, 159, 207, 0.05));
+  background: -moz-linear-gradient(to bottom, rgba(114, 159, 207, 0.35), rgba(114, 159, 207, 0.05));
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity {
@@ -1341,8 +1151,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:hover:active,
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity[open="true"] {
-  background: -moz-linear-gradient(to bottom, rgba(115, 210, 22, 0.25), rgba(115, 210, 22, 0.05)); /* For Fx 15 */
-  background: linear-gradient(to bottom, rgba(115, 210, 22, 0.25), rgba(115, 210, 22, 0.05));
+  background: -moz-linear-gradient(to bottom, rgba(115, 210, 22, 0.25), rgba(115, 210, 22, 0.05));
 }
 
 /* Identity popup icons */
@@ -1650,18 +1459,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   min-width: 24px;
 }
 
-/*
-#urlbar-icons > box {
-  min-width: 23px;
-}
-#nav-bar[iconsize=large] #urlbar-icons > box {
-  min-width: 27px;
-}
-#nav-bar[iconsize=small] #urlbar-icons > box {
-  min-width: 25px;
-}
-*/
-
 #urlbar > toolbarbutton:hover,
 #urlbar-icons > *:hover {
   background: transparent !important;
@@ -1671,8 +1468,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #urlbar-icons > *:not([disabled="true"]):active,
 #urlbar .urlbar-history-dropmarker:not([disabled="true"]):active,
 #urlbar .urlbar-history-dropmarker[open="true"] {
-  background: -moz-linear-gradient(to bottom, #d1d1d1, #fff) !important; /* For Fx 15 */
-  background: linear-gradient(to bottom, #d1d1d1, #fff) !important;
+  background: -moz-linear-gradient(to bottom, #d1d1d1, #fff) !important;
   box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.15) !important;
 }
 
@@ -1831,8 +1627,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 /* FIXME */
 #sidebar-header > .tabs-closebutton:hover {
-  background-image: -moz-linear-gradient(to bottom, #ffffff, #ebebeb); /* For Fx 15 */
-  background-image: linear-gradient(to bottom, #ffffff, #ebebeb);
+  background-image: -moz-linear-gradient(to bottom, #ffffff, #ebebeb);
   border-color: rgba(0,0,0,.25);
   box-shadow: 0 1px 0 rgba(255,255,255,0.89);
 }
@@ -1840,8 +1635,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 /* FIXME */
 #sidebar-header > .tabs-closebutton:active,
 #sidebar-header > .tabs-closebutton:active:hover {
-  background-image: -moz-linear-gradient(to bottom, #c9c9c9, #e4e4e4); /* For Fx 15 */
-  background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4);
+  background-image: -moz-linear-gradient(to bottom, #c9c9c9, #e4e4e4);
   border-color: rgba(0,0,0,.25);
   box-shadow: 0 1px 0 rgba(255,255,255,0.89);
 }
@@ -2078,7 +1872,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   list-style-image: url(chrome://browser/skin/tabbrowser/close-active.png);
   background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.13) 1px, rgba(0, 0, 0, 0.08) 2px, rgba(0, 0, 0, 0.07) 100%) !important;
   border-color: rgba(0, 0, 0, 0.12) !important;
-  border-color-top: rgba(0, 0, 0, 0.27) !important;
+  border-top-color: rgba(0, 0, 0, 0.27) !important;
   box-shadow: none !important;
 }
 
