@@ -563,7 +563,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   padding: 3px;
   text-shadow: none;
   -moz-transition-property: color, border, box-shadow, background;
-  -moz-transition-duration: 300ms;
+  -moz-transition-duration: 200ms;
 }
 
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:not([disabled="true"]):hover,
