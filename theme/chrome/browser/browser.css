@@ -1817,9 +1817,33 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 #sidebar-header > .tabs-closebutton {
+  -moz-appearance: none;
   list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
   margin-bottom: 0px !important;
-  padding: 3px;
+  padding: 2px;
+  
+  /* FIXME */
+  border: 1px solid transparent;
+  border-radius: 3px;
+  -moz-transition-property: border, box-shadow, background;
+  -moz-transition-duration: 200ms;
+}
+
+/* FIXME */
+#sidebar-header > .tabs-closebutton:hover {
+  background-image: -moz-linear-gradient(to bottom, #ffffff, #ebebeb); /* For Fx 15 */
+  background-image: linear-gradient(to bottom, #ffffff, #ebebeb);
+  border-color: rgba(0,0,0,.25);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89);
+}
+
+/* FIXME */
+#sidebar-header > .tabs-closebutton:active,
+#sidebar-header > .tabs-closebutton:active:hover {
+  background-image: -moz-linear-gradient(to bottom, #c9c9c9, #e4e4e4); /* For Fx 15 */
+  background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4);
+  border-color: rgba(0,0,0,.25);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89);
 }
 
 #sidebar-header > .tabs-closebutton > .toolbarbutton-icon {
