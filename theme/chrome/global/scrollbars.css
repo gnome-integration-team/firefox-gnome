@@ -253,3 +253,8 @@ scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"][disabled="true"
   }
 
 }
+
+/* Fix for Tree Style Tab extension */
+#TabsToolbar.treestyletab-tabbar-toolbar scrollbar {
+  display: none;
+}
