@@ -570,7 +570,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) .toolbarbutton-menubutton-dropmarker:hover {
   background-image: -moz-linear-gradient(to bottom, #ffffff, #ebebeb) !important;
   border-color: rgba(0,0,0,.25) !important;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89);
 }
 
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:not([disabled="true"]):active,
@@ -579,7 +579,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[checked="true"]:hover {
   background-image: -moz-linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important;
   border-color: rgba(0,0,0,.25) !important;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89);
 }
 
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[open="true"],
@@ -588,7 +588,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[open="true"]:active:hover {
   background: #ffffff !important;
   border-color: #ffffff !important;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89);
   border-radius: 3px 3px 0 0;
 }
 
@@ -597,6 +597,21 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[disabled="true"]:active,
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[disabled="true"]:active:hover {
   color: #a7aba7 !important;
+}
+
+/* Dropmarkers */
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) .toolbarbutton-menubutton-dropmarker {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/dropmarker.svg);
+  padding: 7px 3px;
+  -moz-padding-start: 0;
+  -moz-margin-start: -2px;
+}
+
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[type="menu-button"] toolbarbutton {
+  background: transparent !important;
+  border-width: 0 !important;
+  box-shadow: none !important;
+  margin: 0px !important;
 }
 
 /* Buttons on nav bar */
@@ -2276,7 +2291,8 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 }
 
 #main-window:-moz-window-inactive toolbarbutton > .toolbarbutton-icon,
-#main-window:-moz-window-inactive toolbarbutton > .toolbarbutton-menu-dropmarker {
+#main-window:-moz-window-inactive toolbarbutton > .toolbarbutton-menu-dropmarker,
+#main-window:-moz-window-inactive toolbarbutton > .toolbarbutton-menubutton-dropmarker {
   opacity: 0.5;
 }
 
