@@ -84,7 +84,7 @@
 /* ..... selected state ..... */
 
 .console-row[selected="true"] {
-    background-image: url("chrome://global/skin/console/itemSelected.png");
+  background: #abbfd1 url("chrome://global/skin/console/itemSelected.png") repeat-x top;
 }
 
 .console-row-code[selected="true"],
