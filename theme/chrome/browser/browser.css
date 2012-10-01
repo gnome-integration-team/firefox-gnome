@@ -1774,7 +1774,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right-rtl.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
-.tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned]) > .tab-stack {
+.tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned]):not([selected="true"]) > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
@@ -2309,7 +2309,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 #main-window:-moz-window-inactive .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab:-moz-locale-dir(rtl) > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right-rtl-inactive.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
-#main-window:-moz-window-inactive .tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned]) > .tab-stack {
+#main-window:-moz-window-inactive .tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned]):not([selected="true"]) > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-inactive.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
