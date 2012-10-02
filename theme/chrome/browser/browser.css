@@ -616,7 +616,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 /* Buttons on nav bar */
 
-#nav-bar[iconsize=large] > toolbarbutton,
+#nav-bar[iconsize=large] > toolbarbutton:not([type="menu-button"]),
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button, #restore-button) {
   margin: 0px 3px;
   min-height: 28px;
@@ -624,7 +624,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   padding: 0px 3px !important;
 }
 
-#nav-bar[iconsize=small] > toolbarbutton,
+#nav-bar[iconsize=small] > toolbarbutton:not([type="menu-button"]),
 #nav-bar[iconsize=small] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button, #restore-button) {
   margin: 0px 2px;
   min-height: 26px;
