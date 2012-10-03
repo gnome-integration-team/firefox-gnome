@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="svg7384" version="1.1" inkscape:version="0.48.3.1 r9886" height="16" sodipodi:docname="wrap.svg" width="16">
+   <metadata id="metadata90">
+      <rdf:RDF>
+         <cc:Work rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <dc:title>Gnome Symbolic Icon Theme</dc:title>
+         </cc:Work>
+      </rdf:RDF>
+   </metadata>
+   <sodipodi:namedview inkscape:cy="8.6584535" inkscape:current-layer="g7110" inkscape:window-width="1310" pagecolor="#555753" showborder="true" showguides="true" inkscape:snap-nodes="true" objecttolerance="10" showgrid="true" inkscape:object-nodes="true" inkscape:pageshadow="2" inkscape:guide-bbox="true" inkscape:window-x="54" inkscape:snap-bbox="true" bordercolor="#666666" id="namedview88" inkscape:window-maximized="0" inkscape:snap-global="true" inkscape:window-y="27" gridtolerance="10" inkscape:zoom="22.627417" inkscape:window-height="690" borderopacity="1" guidetolerance="10" inkscape:cx="2.3493481" inkscape:bbox-paths="false" inkscape:snap-grids="true" inkscape:pageopacity="1" inkscape:snap-to-guides="true">
+      <inkscape:grid visible="true" spacingx="1px" type="xygrid" spacingy="1px" id="grid4866" empspacing="2" enabled="true" snapvisiblegridlinesonly="true" />
+   </sodipodi:namedview>
+   <title id="title9167">Gnome Symbolic Icon Theme</title>
+   <defs id="defs7386" />
+   <g transform="translate(-120,-538)" inkscape:groupmode="layer" id="layer9" inkscape:label="status" style="display:inline" />
+   <g transform="translate(-120,-538)" inkscape:groupmode="layer" id="layer10" inkscape:label="devices" />
+   <g transform="translate(-120,-538)" inkscape:groupmode="layer" id="layer11" inkscape:label="apps" />
+   <g transform="translate(-120,-538)" inkscape:groupmode="layer" id="layer12" inkscape:label="actions">
+      <g id="g7110" transform="translate(19.12816,-0.56456)">
+         <g id="g7115">
+            <path style="fill:#2e3436;fill-opacity:1;stroke:none" d="m 101.87184,543.56456 0,7 2.03125,0 0,-7 z m 5.03125,0 0,7 c 2.98958,0 5.97917,0 8.96875,0 l 0,-7 -3,0 0,2 2,0 -3.5,5 -3.5,-5 2,0 0,-2 -1,0 z" id="rect6965" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccccccccccccc" />
+            <path sodipodi:nodetypes="ccccccccc" style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:black;fill:#2e3436;fill-opacity:1;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" d="m 104.875,540.56456 0,11.49794 0,0.5 0.5,0 4.49684,0 0,-1 -3.99684,0 0,-10.99794 z" id="path6967" inkscape:connector-curvature="0" />
+            <path inkscape:connector-curvature="0" style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:black;fill:#2e3436;fill-opacity:1;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" d="m 108.88779,541.56456 0,1 2,0 0,4 -1,0 1.5,2 1.5,-2 -1,0 0,-4.5 0,-0.5 -0.5,0 -2.5,0 z" id="path6977" />
+         </g>
+      </g>
+   </g>
+   <g transform="translate(-120,-538)" inkscape:groupmode="layer" id="layer13" inkscape:label="places" />
+   <g transform="translate(-120,-538)" inkscape:groupmode="layer" id="layer14" inkscape:label="mimetypes" />
+   <g transform="translate(-120,-538)" inkscape:groupmode="layer" id="layer15" inkscape:label="emblems" />
+</svg>
