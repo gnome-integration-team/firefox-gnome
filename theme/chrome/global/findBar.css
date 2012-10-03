@@ -71,7 +71,7 @@ border-color: rgba(0,0,0,0.2)!important;
 /* find-next button */
 
 .findbar-find-next > .toolbarbutton-icon {
-  -moz-appearance: none !important;
+/*  -moz-appearance: none !important;*/
   list-style-image: url("chrome://browser/skin/symbolic-icons/down.svg") !important;
 
 
@@ -80,8 +80,8 @@ border-color: rgba(0,0,0,0.2)!important;
 /* find-previous button */
 
 .findbar-find-previous > .toolbarbutton-icon {
-  -moz-appearance: none!important;
-list-style-image: url("chrome://browser/skin/symbolic-icons/up.svg") !important;
+/*  -moz-appearance: none!important;*/
+  list-style-image: url("chrome://browser/skin/symbolic-icons/up.svg") !important;
 }
 
 
@@ -89,11 +89,11 @@ list-style-image: url("chrome://browser/skin/symbolic-icons/up.svg") !important;
 /* highlight button */
 
 .findbar-highlight {
-list-style-image: url("chrome://browser/skin/symbolic-icons/highlight.svg") !important;
+  list-style-image: url("chrome://browser/skin/symbolic-icons/highlight.svg") !important;
 }
 
 .findbar-highlight[disabled="true"] {
-  -moz-image-region: rect(16px, 16px, 32px, 0px);
+  opacity: 0.5;
 }
 
 .find-status-icon {
@@ -130,7 +130,7 @@ list-style-image: url("chrome://browser/skin/symbolic-icons/highlight.svg") !imp
 }
 
 .find-status-icon[status="wrapped"] {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/wrap.svg")!important;
+  list-style-image: url("chrome://browser/skin/symbolic-icons/wrap.svg");
 }
 
 .findbar-closebutton {
