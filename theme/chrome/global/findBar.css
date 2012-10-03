@@ -4,41 +4,92 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-.findbar-closebutton {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
-}
 
 findbar {
-  background-color: Window;
-  border-top: 1px solid #a7aba7;
-  -moz-padding-start: 3px;
-  min-width: 10px;
+  border-top: 2px solid;
+  -moz-border-top-colors: ThreeDShadow ThreeDHighlight;
+  padding-bottom: 1px;
+  min-width: 1px;
+  background: -moz-linear-gradient(to bottom, #D4D4D4, #ECECEC);
+  color: rgba(0,0,0,0.8) !important;
+/*  box-shadow: 0 -3px 5px rgba(0,0,0,0.2) inset;*/
+  text-shadow: none;
 }
 
+/* Removing the labels, will look cleaner; I promise :) */
+
+findbar  .toolbarbutton-text{
+  display: none!important;
+}
+
+findbar toolbarbutton{
+
+  padding: 3px 6px!important;
+}
+
+.findbar-find-next{
+  margin-right: 5px!important;
+  border-radius: 0 3px 3px 0!important;
+}
+
+.findbar-find-previous{
+  margin-right: -1px!important;
+  margin-left: -5px!important;
+  border-radius: 0 !important;
+}
+
+.findbar-find-next,
+.findbar-find-previous{
+  border: 1px solid!important;
+  border-color: rgba(0,0,0,.2)!important;
+  box-shadow: 0 1px 0 rgba(255,255,255,.3)inset ,
+              0 2px 3px rgba(255,255,255,.2) inset!important;
+  background-image: -moz-linear-gradient(top, #F5F5F5, #DCDCDC)!important;
+
+/*
+
+White background
+
+border-color: rgba(0,0,0,0.2)!important;
+  box-shadow: 0 1px 2px rgba(0,0,0,.2) inset,
+              0 1px 0px rgba(255,255,255,0.8) !important;
+  background-color: #F8F8F7 !important;
+
+*/
+
+}
+
+.findbar-find-next:hover,
+.findbar-find-previous:hover{
+  border-color: rgba(0,0,0,0.3)!important;
+}
+
+
+.findbar-textbox{
+  border-radius: 3px 0 0 3px!important;
+}
 /* find-next button */
 
-.findbar-find-next {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/forward-button.svg);
-}
-.findbar-find-next[disabled="true"] {
-  opacity: 0.3;
+.findbar-find-next > .toolbarbutton-icon {
+  -moz-appearance: none !important;
+  list-style-image: url("chrome://browser/skin/symbolic-icons/down.svg") !important;
+
+
 }
 
 /* find-previous button */
 
-.findbar-find-previous {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/back-button.svg);
+.findbar-find-previous > .toolbarbutton-icon {
+  -moz-appearance: none!important;
+list-style-image: url("chrome://browser/skin/symbolic-icons/up.svg") !important;
 }
-.findbar-find-previous[disabled="true"] {
-  opacity: 0.3;
-}
+
 
 
 /* highlight button */
 
 .findbar-highlight {
-  list-style-image: url(chrome://global/skin/icons/find.png); /* FIXME */
-  -moz-image-region: rect(0px, 16px, 16px, 0px);
+list-style-image: url("chrome://browser/skin/symbolic-icons/highlight.svg") !important;
 }
 
 .findbar-highlight[disabled="true"] {
@@ -56,7 +107,7 @@ findbar {
 }
 
 .findbar-find-status {
-  margin-top: 0 !important;
+  margin-top: 1px !important;
   margin-bottom: 0 !important;
   -moz-margin-start: 3px !important;
   -moz-margin-end: 0 !important;
@@ -64,11 +115,12 @@ findbar {
 }
 
 .find-status-icon[status="notfound"] {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/error.svg);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/important.svg) !important;
 }
 
 .findbar-textbox[status="notfound"] {
-  box-shadow: 0 0 0 1em #f66 inset;
+  background-color:  #f66 !important;
+  border-color: #f66 !important;
   color: white;
 }
 
@@ -78,5 +130,20 @@ findbar {
 }
 
 .find-status-icon[status="wrapped"] {
-  list-style-image: url(chrome://global/skin/icons/wrap.png); /* FIXME */
+  list-style-image: url("chrome://browser/skin/symbolic-icons/wrap.svg")!important;
+}
+
+.findbar-closebutton {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
+  opacity: 0.5;
+  padding: 1px!important;
+
+}
+
+.findbar-closebutton:hover{
+  opacity: 1;
+}
+
+findbar  .checkbox-spacer-box {
+  margin-right: -6px!important;
 }
