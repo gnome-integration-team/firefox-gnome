@@ -104,12 +104,22 @@ toolbarbutton[type="menu-button"][disabled="true"]:hover:active {
   -moz-box-align: center;
   -moz-box-pack: center;
   -moz-box-orient: vertical;
+  background: transparent !important;
+  border-width: 0 !important;
+  box-shadow: none !important;
 }
 
 /* .......... dropmarker .......... */
 
 .toolbarbutton-menubutton-dropmarker {
   -moz-appearance: none;
-  list-style-image: none;
   -moz-image-region: auto;
+  list-style-image: none;
+/*  list-style-image: url(chrome://browser/skin/symbolic-icons/dropmarker.svg);*/
+  background: url(chrome://browser/skin/symbolic-icons/dropmarker.svg) no-repeat center;
+  padding: 0;
+  margin: 0;
+  -moz-margin-end: 3px;
+  -moz-margin-start: -5px;
+  width: 10px;
 }

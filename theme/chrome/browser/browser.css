@@ -599,35 +599,23 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   color: #a7aba7 !important;
 }
 
-/* Dropmarkers */
-:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) .toolbarbutton-menubutton-dropmarker {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/dropmarker.svg);
-  padding: 7px 3px;
-  -moz-padding-start: 0;
-  -moz-margin-start: -2px;
-}
-
-:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[type="menu-button"] toolbarbutton {
-  background: transparent !important;
-  border-width: 0 !important;
-  box-shadow: none !important;
-  margin: 0px !important;
-}
-
 /* Buttons on nav bar */
 
-#nav-bar[iconsize=large] > toolbarbutton:not([type="menu-button"]),
+#nav-bar[iconsize=large] > toolbarbutton,
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button, #restore-button) {
   margin: 0px 3px;
   min-height: 28px;
   min-width: 26px;
-  padding: 0px 3px !important;
 }
 
-#nav-bar[iconsize=small] > toolbarbutton:not([type="menu-button"]),
+#nav-bar[iconsize=small] > toolbarbutton,
 #nav-bar[iconsize=small] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button, #restore-button) {
   margin: 0px 2px;
   min-height: 26px;
+}
+
+#nav-bar[iconsize=large] > toolbarbutton:not([type="menu-button"]),
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button, #restore-button) {
   padding: 0px 3px !important;
 }
 
@@ -653,7 +641,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1) !important;
 }
 
-#nav-bar[iconsize=large] > toolbarbutton toolbarbutton {
+#nav-bar > toolbarbutton > .toolbarbutton-menubutton-button {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
