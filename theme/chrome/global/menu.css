@@ -150,7 +150,7 @@ menulist > menupopup > menu {
   -moz-margin-start: 6px;
   -moz-margin-end: 0px;
   width: 1ex;
-  height: 1ex;
+  height: 2ex;
   /* These next two rules are needed to prevent inheritance and thus ugliness */
   list-style-image: none;
   -moz-image-region: auto;
