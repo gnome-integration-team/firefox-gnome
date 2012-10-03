@@ -5,14 +5,15 @@
 :root {
   -moz-appearance: none;
   background-color: transparent;
+
 }
 
 /* SCROLLBOX */
 #newtab-scrollbox:not([page-disabled]) {
-  background-color: rgb(229,229,229);
+  background-color: rgb(229,229,229)!important;
   background-image: url(chrome://browser/skin/newtab/noise.png),
-                    -moz-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.2));
-  background-attachment: fixed;
+                    -moz-linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,.2))!important;
+  background-attachment: fixed!important;
 }
 
 /* TOGGLE */
@@ -25,72 +26,83 @@
 }
 
 #newtab-toggle[page-disabled] {
-  background-position: -232px 0;
+  background-position: -232px 0!important;
 }
 
 /* ROWS */
 .newtab-row {
-  margin-bottom: 20px;
+  margin-bottom: 20px!important;
 }
 
 .newtab-row:last-child {
-  margin-bottom: 0;
+  margin-bottom: 0!important;
 }
 
 /* CELLS */
 .newtab-cell {
-  -moz-margin-end: 20px;
-  background-color: rgba(255,255,255,.2);
-  border: 1px solid;
-  border-color: rgba(8,22,37,.12) rgba(8,22,37,.14) rgba(8,22,37,.16);
-  border-radius: 1px;
-  -moz-transition: border-color 100ms ease-out;
+  -moz-margin-end: 20px!important;
+  background-color: rgba(255,255,255,.2)!important;
+  border: 2px solid!important;
+  border-color: rgba(8,22,37,.12) rgba(8,22,37,.14) rgba(8,22,37,.16)!important;
+  border-radius: 5px!important;
+  -moz-transition: border-color 100ms ease-out!important;
 }
 
 .newtab-cell:empty {
-  border: 1px dashed;
-  border-color: rgba(8,22,37,.15) rgba(8,22,37,.17) rgba(8,22,37,.19);
+  border: 1px dashed!important;
+  border-color: rgba(8,22,37,.15) rgba(8,22,37,.17) rgba(8,22,37,.19)!important;
+}
+
+.newtab-cell:first-child {
+  -moz-margin-start: 150px!important;
 }
 
 .newtab-cell:last-child {
-  -moz-margin-end: 0;
+  -moz-margin-end: 150px!important;
 }
 
 .newtab-cell:hover:not(:empty) {
-  border-color: rgba(8,22,37,.25) rgba(8,22,37,.27) rgba(8,22,37,.3);
+  border-color: rgba(8,22,37,.25) rgba(8,22,37,.27) rgba(8,22,37,.3)!important;
 }
 
 /* SITES */
 .newtab-site {
-  text-decoration: none;
-  -moz-transition-property: top, left, opacity, box-shadow, background-color;
+  text-decoration: none!important;
+  -moz-transition-property: top, left, opacity, box-shadow, background-color!important;
 }
 
 .newtab-site:hover,
 .newtab-site[dragged] {
-  box-shadow: 0 0 10px rgba(8,22,37,.3);
+  box-shadow: 0 0 10px rgba(8,22,37,.3)!important;
 }
 
 .newtab-site[dragged] {
-  -moz-transition-property: box-shadow, background-color;
-  background-color: rgb(242,242,242);
+  -moz-transition-property: box-shadow, background-color!important;
+  background-color: rgb(242,242,242)!important;
 }
 
 /* THUMBNAILS */
 .newtab-thumbnail {
-  background-origin: padding-box;
-  background-clip: padding-box;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-origin: padding-box!important;
+  background-clip: padding-box!important;
+  background-repeat: no-repeat!important;
+  background-size: cover!important;
 }
 
 /* TITLES */
 .newtab-title {
-  padding: 0 8px;
-  background-color: rgba(248,249,251,.95);
-  color: #1f364c;
-  font-size: 12px;
-  line-height: 24px;
+  padding: 0 8px!important;
+  background-color: rgba(0,0,0,0)!important;
+  color: rgba(255,255,255,0)!important;
+  font-size: 100%!important;
+  line-height: 24px!important;
+  border-radius: 0 0 2px 2px !important;
+  text-align: center !important;
+}
+
+.newtab-title:hover{
+  background-color: rgba(0,0,0,.85)!important;
+  color: rgba(255,255,255,0.8)!important;
 }
 
 /* CONTROLS */
@@ -99,37 +111,49 @@
   height: 24px;
   padding: 1px 2px 3px;
   border: none;
-  background: transparent url(chrome://browser/skin/newtab/controls.png);
+/*  background: transparent url(chrome://browser/skin/newtab/controls.png);*/
 }
-
+.newtab-control-pin{
+  background: url(chrome://browser/skin/symbolic-icons/pin_white.svg)center center no-repeat;
+  background-color: rgba(0,0,0,0.25)!important;
+  border-radius: 70px;
+}
 .newtab-control-pin:hover {
-  background-position: -24px 0;
+/*  background-position: -24px 0!important;*/
 }
 
 .newtab-control-pin:active {
-  background-position: -48px 0;
+/*  background-position: -48px 0!important;*/
 }
 
 .newtab-control-pin[pinned] {
-  background-position: -72px 0;
+/*  background-position: -72px 0!important;*/
+  background: url(chrome://browser/skin/symbolic-icons/pin_white.svg)center center no-repeat;
+  background-color: rgba(0,0,0,0.25)!important;
+  border-radius: 70px;
 }
 
 .newtab-control-pin[pinned]:hover {
-  background-position: -96px 0;
+/*  background-position: -96px 0!important;*/
+  background-color: rgba(0,0,0,0.85)!important;
 }
 
 .newtab-control-pin[pinned]:active {
-  background-position: -120px 0;
+/*  background-position: -120px 0!important;*/
 }
 
 .newtab-control-block {
-  background-position: -144px 0;
+/*  background-position: -144px!important;*/
+  background: url(chrome://browser/skin/symbolic-icons/close_white.svg)center center no-repeat;
+  background-color: rgba(0,0,0,0.25)!important;
+  border-radius: 70px;
 }
 
 .newtab-control-block:hover {
-  background-position: -168px 0;
+/*  background-position: -168px 0!important;*/
+  background-color: rgba(0,0,0,0.85)!important;
 }
 
 .newtab-control-block:active {
-  background-position: -192px 0;
+/*  background-position: -192px 0!important;*/
 }
