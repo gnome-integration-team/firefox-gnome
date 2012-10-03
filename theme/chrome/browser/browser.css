@@ -573,7 +573,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
       window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons],                #nav-bar:not([currentset])[mode=icons])                 > #unified-back-forward-button:not([switchingtabs]) > #forward-button {
-  -moz-transition: 150ms ease-out;
+  transition: 150ms ease-out;
 }
 
       window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons],                #nav-bar:not([currentset])[mode=icons])                 > #unified-back-forward-button > #forward-button[disabled] {
@@ -925,8 +925,8 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 
       window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons],                #nav-bar:not([currentset])[mode=icons])                 > #unified-back-forward-button:not([switchingtabs]) + #urlbar-container > #urlbar {
-  -moz-transition: margin-left 150ms ease-out,
-                   margin-right 150ms ease-out;
+  transition: margin-left 150ms ease-out,
+              margin-right 150ms ease-out;
 }
 
       window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons],                #nav-bar:not([currentset])[mode=icons])                 > #unified-back-forward-button[forwarddisabled] + #urlbar-container > #urlbar:-moz-locale-dir(ltr) {
@@ -988,20 +988,20 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   -moz-image-region: rect(0, 16px, 16px, 0);
 }
 
-.verifiedDomain > #identity-box-inner > #page-proxy-stack > #page-proxy-favicon[pageproxystate="valid"] {
+.verifiedDomain > #page-proxy-favicon[pageproxystate="valid"] {
   list-style-image: url(chrome://browser/skin/identity-icons-https.png);
 }
 
-.verifiedIdentity > #identity-box-inner > #page-proxy-stack > #page-proxy-favicon[pageproxystate="valid"] {
+.verifiedIdentity > #page-proxy-favicon[pageproxystate="valid"] {
   list-style-image: url(chrome://browser/skin/identity-icons-https-ev.png);
 }
 
-#identity-box:hover > #identity-box-inner > #page-proxy-stack > #page-proxy-favicon {
+#identity-box:hover > #page-proxy-favicon {
   -moz-image-region: rect(0, 32px, 16px, 16px);
 }
 
-#identity-box:hover:active > #identity-box-inner > #page-proxy-stack > #page-proxy-favicon,
-#identity-box[open=true] > #identity-box-inner > #page-proxy-stack > #page-proxy-favicon {
+#identity-box:hover:active > #page-proxy-favicon,
+#identity-box[open=true] > #page-proxy-favicon {
   -moz-image-region: rect(0, 48px, 16px, 32px);
 }
 
@@ -1277,7 +1277,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 
 .ac-comment {
-  font-size: 1.15em;
+  font-size: 1.05em;
 }
 
 .ac-extra > .ac-comment {
@@ -1287,6 +1287,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 .ac-url-text,
 .ac-action-text {
   color: -moz-nativehyperlinktext;
+  font-size: 0.9em;
 }
 
 richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-icon {
@@ -1350,6 +1351,20 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 /* Popup blocker button */
 #page-report-button {
   list-style-image: url("chrome://browser/skin/Info.png");
+}
+
+/* social recommending panel */
+
+#share-button {
+  list-style-image: url(chrome://browser/skin/share-button.png);
+}
+
+#share-button:not([shared]):not([disabled]):hover {
+  list-style-image: url(chrome://browser/skin/share-button-active.png);
+}
+
+#share-button[shared] {
+  list-style-image: url(chrome://browser/skin/share-button-shared.png);
 }
 
 /* Star button */
@@ -1629,13 +1644,13 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tabbrowser-arrowscrollbox > .scrollbutton-down {
   -moz-border-start: 2px solid transparent;
   -moz-border-end: 0;
-  -moz-transition: 1s box-shadow ease-out;
+  transition: 1s box-shadow ease-out;
   border-radius: 4px;
 }
 
 .tabbrowser-arrowscrollbox > .scrollbutton-down[notifybgtab] {
   box-shadow: 0 0 5px 5px Highlight inset;
-  -moz-transition: none;
+  transition: none;
 }
 
 .tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled]):-moz-locale-dir(ltr),
@@ -2385,6 +2400,7 @@ html|*#gcli-output-frame {
 #gcli-tooltip {
   border-width: 0;
   background-color: transparent;
+  -moz-appearance: none;
   margin-bottom: -2px;
 }
 
@@ -2392,7 +2408,7 @@ html|*#gcli-output-frame {
 .gclitoolbar-complete-node,
 .gclitoolbar-prompt {
   margin: 0;
-  -moz-margin-end: 3px;
+  -moz-margin-end: 5px;
   -moz-box-align: center;
   padding-top: 0;
   padding-bottom: 0;
@@ -2505,4 +2521,58 @@ stack[anonid=browserStack][responsivemode] {
   cursor: se-resize;
   -moz-transform: translate(12px, 12px);
   background-image: url("chrome://browser/skin/devtools/responsive-se-resizer.png");
+}
+
+/* Developer Toolbar */
+
+.developer-toolbar-button {
+  -moz-appearance: none;
+  min-width: 78px;
+  min-height: 22px;
+  text-shadow: 0 -1px 0 hsla(210,8%,5%,.45);
+  border-radius: 3px;
+  color: inherit;
+  border: 1px solid transparent;
+  margin: 0 5px;
+  padding: 0 10px;
+  list-style-image: url("chrome://browser/skin/devtools/tools-icons-small.png");
+}
+
+.developer-toolbar-button:active:hover,
+.developer-toolbar-button[checked=true] {
+  border-color: hsla(210,8%,5%,.6);
+  background: rgba(0,0,0,.6);
+  box-shadow: 0 1px 2px rgba(0,0,0,.5) inset, 0 1px 0 hsla(210,16%,76%,.15);
+}
+
+.developer-toolbar-button[checked=true] {
+  color: hsl(208,100%,60%) !important;
+  background: rgba(0,0,0,.4);
+  text-shadow: 0 0 6px hsl(208,100%,60%);
+}
+
+#developer-toolbar-webconsole {
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+#developer-toolbar-inspector {
+  -moz-image-region: rect(16px, 16px, 32px, 0);
+}
+
+#developer-toolbar-styleeditor {
+  -moz-image-region: rect(32px, 16px, 48px, 0);
+}
+
+#developer-toolbar-debugger {
+  -moz-image-region: rect(48px, 16px, 64px, 0);
+}
+
+/* Error counter */
+
+#developer-toolbar-webconsole[error-count]:before {
+  color: #FDF3DE;
+  min-width: 16px;
+  text-shadow: none;
+  background-image: -moz-linear-gradient(top, #B4211B, #8A1915);
+  border-radius: 1px;
 }
