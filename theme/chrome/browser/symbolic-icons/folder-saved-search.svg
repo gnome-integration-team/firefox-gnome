@@ -1,35 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="16" height="16" id="svg7384">
-   <title id="title9167">Gnome Symbolic Icon Theme</title>
-   <metadata id="metadata90">
-      <rdf:RDF>
-         <cc:Work rdf:about="">
-            <dc:format>image/svg+xml</dc:format>
-            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-            <dc:title>Gnome Symbolic Icon Theme</dc:title>
-         </cc:Work>
-      </rdf:RDF>
-   </metadata>
-   <defs id="defs7386" />
-   <g transform="translate(-260,-518)" id="layer9" style="display:inline" />
-   <g transform="translate(-260,-518)" id="layer10" />
-   <g transform="translate(-260,-518)" id="layer11" />
-   <g transform="translate(-260,-518)" id="layer13" />
-   <g transform="translate(-260,-518)" id="layer14" />
-   <g transform="translate(-260,-518)" id="layer15" />
-   <g transform="translate(-227.9998,-997)" id="g5514" style="display:inline">
-      <g id="g5516">
-         <rect width="16" height="16" x="227.9998" y="996" id="rect5518" style="color:#bebebe;fill:none;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-      </g>
-   </g>
-   <g transform="translate(-207.9998,-997)" id="g4958" style="display:inline">
-      <path d="m 209.9998,999 c -1.00099,0 -0.94915,0.71087 -0.94915,1 l 0,10 c 0,0.9765 0.4641,1 1,1 l 11.94915,0 c 0.53589,0 1,-0.074 1,-1 l 0,-5 c 0,-1 -0.41426,-1 -1,-1 l -10,0 0,4 c 0,0.277 0.0508,1 -0.44915,1 -0.5,0 -0.5,-0.723 -0.5,-1 l -0.0508,-4 c 0,-1 0.44334,-1 1,-1 l 1.46875,0 7.53125,0 0,-1 c 0,-0.5984 0,-1 -1,-1 l -6,0 0,-1 c 0,-0.28915 -0.0244,-1 -1,-1 z" id="rect3845" style="fill:#2e3436;fill-opacity:1;stroke:none;display:inline" />
-      <rect width="16" height="16" x="207.9998" y="996" id="rect14152" style="color:#bebebe;fill:none;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-      <rect width="5.0000014" height="1" rx="0" ry="0" x="215.9998" y="1006" id="rect2996" style="fill:white;fill-opacity:1;stroke:none" />
-      <rect width="5.0000014" height="1" rx="0" ry="0" x="215.9998" y="1008" id="rect3766" style="fill:white;fill-opacity:1;stroke:none" />
-      <rect width="0.99999839" height="1" rx="0" ry="0" x="212.9998" y="1006" id="rect3770" style="fill:white;fill-opacity:1;stroke:none" />
-      <rect width="0.99999839" height="1" rx="0" ry="0" x="212.9998" y="1008" id="rect3772" style="fill:white;fill-opacity:1;stroke:none" />
-   </g>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="16" width="16" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title>Gnome Symbolic Icon Theme</title>
+<metadata>
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+<dc:title>Gnome Symbolic Icon Theme</dc:title>
+</cc:Work>
+</rdf:RDF>
+</metadata>
+<g transform="translate(-228 -997)">
+<rect style="color:#bebebe" height="16" width="16" y="996" x="228" fill="none"/>
+</g>
+<g transform="translate(-208 -997)">
+<path d="m210 999c-1.001 0-0.94915 0.71087-0.94915 1v10c0 0.9765 0.4641 1 1 1h11.949c0.53589 0 1-0.074 1-1v-5c0-1-0.41426-1-1-1h-10v4c0 0.277 0.0508 1-0.44915 1-0.5 0-0.5-0.723-0.5-1l-0.0508-4c0-1 0.44334-1 1-1h9v-1c0-0.5984 0-1-1-1h-6v-1c0-0.28915-0.0244-1-1-1z" fill="#2e3436"/>
+<rect style="color:#bebebe" height="16" width="16" y="996" x="208" fill="none"/>
+<rect rx="0" ry="0" height="1" width="5" y="1006" x="216" fill="#fff"/>
+<rect rx="0" ry="0" height="1" width="5" y="1008" x="216" fill="#fff"/>
+<rect rx="0" ry="0" height="1" width="1" y="1006" x="213" fill="#fff"/>
+<rect rx="0" ry="0" height="1" width="1" y="1008" x="213" fill="#fff"/>
+</g>
 </svg>

@@ -1,31 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="16.049694" height="16.062481" id="svg7384">
-   <title id="title9167">Gnome Symbolic Icon Theme</title>
-   <metadata id="metadata90">
-      <rdf:RDF>
-         <cc:Work rdf:about="">
-            <dc:format>image/svg+xml</dc:format>
-            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-            <dc:title>Gnome Symbolic Icon Theme</dc:title>
-         </cc:Work>
-      </rdf:RDF>
-   </metadata>
-   <defs id="defs7386" />
-   <g transform="translate(-501.95031,-381.9375)" id="layer9" style="display:inline" />
-   <g transform="translate(-501.95031,-381.9375)" id="layer10" />
-   <g transform="translate(-501.95031,-381.9375)" id="layer11" />
-   <g transform="translate(-501.95031,-381.9375)" id="layer12" />
-   <g transform="translate(-501.95031,-381.9375)" id="layer13" />
-   <g transform="translate(-501.95031,-381.9375)" id="layer14" />
-   <g transform="translate(-501.95031,-381.9375)" id="layer15" style="display:inline">
-      <g transform="translate(155.8093,-581.17812)" id="g14401" style="fill:#2e3436" />
-      <g transform="translate(425.85656,-583.36222)" id="g3129" style="fill:#2a7fff;fill-opacity:1">
-         <path d="m 84.09375,967.3622 c -2.964985,0 -5.431434,2.1652 -5.90625,5 l 2.0625,0 c 0.442278,-1.72878 1.970572,-3 3.84375,-3 1.873178,0 3.401472,1.27122 3.84375,3 l 2.0625,0 c -0.474816,-2.8348 -2.941265,-5 -5.90625,-5 z m -5.90625,7 c 0.474816,2.8348 2.941265,5 5.90625,5 2.964985,0 5.431434,-2.1652 5.90625,-5 l -2.0625,0 c -0.442278,1.72878 -1.970572,3 -3.84375,3 -1.873178,0 -3.401472,-1.27122 -3.84375,-3 l -2.0625,0 z" id="path3106" style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:black;fill:#2a7fff;fill-opacity:1;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
-         <path d="m 78.09375,974.3622 5,0 -5,5 z" id="path3114" style="fill:#2a7fff;fill-opacity:1;stroke:none" />
-         <path d="m 90.09375,972.3622 -5,0 5,-5 z" id="path3116" style="fill:#2a7fff;fill-opacity:1;stroke:none" />
-      </g>
-   </g>
-   <g transform="translate(-501.95031,-381.9375)" id="g4953" style="display:inline" />
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="16.062" width="16.05" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title>Gnome Symbolic Icon Theme</title>
+<metadata>
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+<dc:title>Gnome Symbolic Icon Theme</dc:title>
+</cc:Work>
+</rdf:RDF>
+</metadata>
+<g transform="translate(-501.95 -381.94)">
+<g transform="translate(425.86 -583.36)" fill="#2a7fff">
+<path style="block-progression:tb;color:black;text-transform:none;text-indent:0" d="m84.094 967.36c-2.965 0-5.4314 2.1652-5.9062 5h2.0625c0.44228-1.7288 1.9706-3 3.8438-3s3.4015 1.2712 3.8438 3h2.0625c-0.47482-2.8348-2.9413-5-5.9062-5zm-5.9062 7c0.47482 2.8348 2.9413 5 5.9062 5 2.965 0 5.4314-2.1652 5.9062-5h-2.0625c-0.44228 1.7288-1.9706 3-3.8438 3s-3.4015-1.2712-3.8438-3h-2.0625z"/>
+<path d="m78.094 974.36h5l-5 5z"/>
+<path d="m90.094 972.36h-5l5-5z"/>
+</g>
+</g>
 </svg>

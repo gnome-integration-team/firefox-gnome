@@ -1,65 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="16px"
-   height="16px"
-   id="svg3147"
-   version="1.1"
-   inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="pinboard-extension.svg">
-  <defs
-     id="defs3149" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="15.696216"
-     inkscape:cx="9.8005265"
-     inkscape:cy="4.1894417"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     inkscape:grid-bbox="true"
-     inkscape:document-units="px"
-     inkscape:window-width="1366"
-     inkscape:window-height="712"
-     inkscape:window-x="1280"
-     inkscape:window-y="27"
-     inkscape:window-maximized="1">
-    <inkscape:grid
-       type="xygrid"
-       id="grid3155" />
-  </sodipodi:namedview>
-  <metadata
-     id="metadata3152">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     id="layer1"
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer">
-    <path
-       style="fill:#2e3436;fill-opacity:1;stroke:none"
-       d="M 2.8076835,5.2928811 5.6361,2.4645074 5.6360791,3.8786432 9.8786977,6.707119 12,6 9.8786788,8.1212548 14.121338,13.778104 8.4644653,9.5354924 6.3431466,11.656849 7.0502707,9.5354924 4.2218708,5.2928811 z"
-       id="rect4049"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccccccccc" />
-  </g>
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" sodipodi:docname="pinboard-extension.svg" height="16px" width="16px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" inkscape:version="0.48.3.1 r9886" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd">
+<sodipodi:namedview bordercolor="#666666" inkscape:pageshadow="2" inkscape:window-y="27" pagecolor="#ffffff" inkscape:window-height="712" inkscape:grid-bbox="true" inkscape:window-maximized="1" inkscape:zoom="15.696216" inkscape:window-x="1280" showgrid="false" borderopacity="1.0" inkscape:current-layer="layer1" inkscape:cx="9.8005265" inkscape:cy="4.1894417" inkscape:window-width="1366" inkscape:pageopacity="0.0" inkscape:document-units="px">
+<inkscape:grid type="xygrid"/>
+</sodipodi:namedview>
+<metadata>
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+</cc:Work>
+</rdf:RDF>
+</metadata>
+<g inkscape:label="Layer 1" inkscape:groupmode="layer">
+<path d="m2.8077 5.2929 2.8284-2.8284v1.4141l4.2426 2.8285 2.1213-0.7071-2.1213 2.1213 4.2423 5.6567-5.6565-4.2425-2.1214 2.1215 0.7072-2.1215-2.8284-4.2426z" sodipodi:nodetypes="cccccccccccc" inkscape:connector-curvature="0" fill="#2e3436"/>
+</g>
 </svg>
