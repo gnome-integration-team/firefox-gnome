@@ -1743,7 +1743,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   margin: 0;
   margin-top: -20px; /* Hack for support text scaling */
   -moz-margin-start: -9px;
-  padding: 6px 11px 4px 11px;
+  padding: 6px 11px 3px 11px;
 }
 
 .tabbrowser-tab:first-of-type > .tab-stack {
@@ -1802,8 +1802,8 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 .tabbrowser-tab[pinned] > .tab-stack {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 13px;
+  padding-right: 13px;
 }
 
 .tab-throbber,
@@ -1871,6 +1871,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   border-radius: 3px;
   border: 1px solid transparent !important;
   box-shadow: none !important;
+  margin-top: -1px;
 }
 #TabsToolbar .tab-close-button:hover {
   list-style-image: url(chrome://browser/skin/tabbrowser/close-hover.png);
