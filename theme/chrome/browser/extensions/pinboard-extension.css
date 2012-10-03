@@ -1,0 +1,8 @@
+/* Pinboard Extension
+ * id: pinboardff@pinboard.in
+ * URL: https://addons.mozilla.org/firefox/addon/pinboard-extension/ */
+
+#pbff-pinmenu {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/pinboard-extension.svg) !important;
+}
+
