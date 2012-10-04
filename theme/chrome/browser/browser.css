@@ -1722,7 +1722,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 /* put some space between the newtab-button and regular tabs and align it vetically with the close button*/
 .tabs-newtab-button {
-/*  -moz-margin-start: 10px;*/
   margin-top: 2px;
 }
 
@@ -1734,8 +1733,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   color: #2e3436;
   margin: 0;
   padding: 0;
-  padding-top: 20px; /* Hack for support text scaling */
-
+  
   /* Uncomment it for test transition property */
 /*  -moz-transition-duration: 30s !important;*/ /* For Fx 15 */
 /*  transition-duration: 30s !important;*/
@@ -1743,17 +1741,16 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 .tabbrowser-tab > .tab-stack {
   margin: 0;
-  margin-top: -20px; /* Hack for support text scaling */
   -moz-margin-start: -9px;
-  padding: 6px 11px 3px 11px;
+  padding: 3px 11px 0 11px;
 }
 
 .tabbrowser-tab:first-of-type > .tab-stack {
-  -moz-margin-start: 0px;
+  -moz-margin-start: 0;
 }
 
 .tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned]) > .tab-stack {
-  -moz-margin-start: 0px;
+  -moz-margin-start: 0;
 }
 
 .tabbrowser-tab:not([pinned]):not([fadein]) .tab-stack {
@@ -1808,11 +1805,18 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   padding-right: 13px;
 }
 
+.tab-label {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  min-height: 25px;
+}
+
 .tab-throbber,
 .tab-icon-image {
   width: 16px;
   height: 16px;
   -moz-margin-end: 4px;
+  margin-bottom: 1px;
   list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
 }
 
@@ -1868,12 +1872,10 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #TabsToolbar .tab-close-button {
   list-style-image: url(chrome://browser/skin/tabbrowser/close-normal.png);
   -moz-margin-end: -3px !important;
-  margin-bottom: -1px !important;
   padding: 3px;
   border-radius: 3px;
   border: 1px solid transparent !important;
   box-shadow: none !important;
-  margin-top: -1px;
 }
 #TabsToolbar .tab-close-button:hover {
   list-style-image: url(chrome://browser/skin/tabbrowser/close-hover.png);
