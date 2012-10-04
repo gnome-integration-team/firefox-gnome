@@ -13,6 +13,7 @@ findbar {
   border-top: 2px solid;
   -moz-border-top-colors: ThreeDShadow ThreeDHighlight;
   -moz-padding-start: 3px;
+  padding-bottom: 1px;
   min-width: 10px;
   -moz-appearance: none !important;
 }
