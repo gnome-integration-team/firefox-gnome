@@ -115,9 +115,7 @@ findbar > * > * {
 }
 
 .findbar-textbox[status="notfound"] {
-  /*
   box-shadow: 0 0 0 1em #f66 inset;
-  */
   background: #f66;
   border-color: #f66;
   color: white;
