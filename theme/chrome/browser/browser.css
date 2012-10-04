@@ -960,6 +960,8 @@ toolbar[iconsize="small"] .toolbarbutton-1:not([type="menu-button"]) {
 
 .urlbar-input-box {
   -moz-margin-start: 0;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 #urlbar-container {
@@ -1036,7 +1038,9 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 
 #urlbar-icons {
+  /*
   -moz-box-align: center;
+  */
 }
 
 .urlbar-icon {
