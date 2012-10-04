@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" inkscape:version="0.48.3.1 r9886" height="16px" width="16px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" sodipodi:docname="tabview.svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd">
-<sodipodi:namedview bordercolor="#666666" inkscape:pageshadow="2" inkscape:window-y="27" pagecolor="#ffffff" inkscape:zoom="22.627417" inkscape:grid-bbox="true" inkscape:window-maximized="1" inkscape:window-x="0" showgrid="true" borderopacity="1.0" inkscape:current-layer="layer1" inkscape:cx="5.6636838" inkscape:cy="7.7438381" inkscape:window-height="712" inkscape:pageopacity="0.0" inkscape:window-width="1366" inkscape:document-units="px">
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" inkscape:version="0.48.3.1 r9886" height="16px" width="16px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" sodipodi:docname="tabview-0.svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd">
+<sodipodi:namedview bordercolor="#666666" inkscape:pageshadow="2" inkscape:window-y="27" pagecolor="#ffffff" inkscape:zoom="22.197802" inkscape:grid-bbox="true" inkscape:window-maximized="1" inkscape:window-x="0" showgrid="true" borderopacity="1.0" inkscape:current-layer="layer1" inkscape:cx="4.01316" inkscape:cy="11.26607" inkscape:window-height="712" inkscape:pageopacity="0.0" inkscape:window-width="1366" inkscape:document-units="px">
 <inkscape:grid type="xygrid"/>
 </sodipodi:namedview>
 <metadata>
@@ -13,11 +13,6 @@
 </rdf:RDF>
 </metadata>
 <g inkscape:label="Layer 1" inkscape:groupmode="layer">
-<g transform="translate(178 -1085.7)" fill="#a7aba7">
-<path opacity=".35" d="m-176 1086.7c-0.554 0-1 0.446-1 1v4c0 0.554 0.446 1 1 1h6c0.554 0 1-0.446 1-1v-4c0-0.554-0.446-1-1-1h-6z" inkscape:connector-curvature="0"/>
-<path opacity=".35" d="m-166 1086.7c-0.554 0-1 0.446-1 1v4c0 0.554 0.446 1 1 1h2c0.554 0 1-0.446 1-1v-4c0-0.554-0.446-1-1-1h-2z" inkscape:connector-curvature="0"/>
-<path opacity=".35" d="m-176 1094.7c-0.554 0-1 0.446-1 1v3c0 0.554 0.446 1 1 1h3c0.554 0 1-0.446 1-1v-3c0-0.554-0.446-1-1-1h-3z" inkscape:connector-curvature="0"/>
-<path opacity=".35" d="m-169 1094.7c-0.554 0-1 0.446-1 1v3c0 0.554 0.446 1 1 1h5c0.554 0 1-0.446 1-1v-3c0-0.554-0.446-1-1-1h-5z" inkscape:connector-curvature="0"/>
-</g>
+<path fill="#2e3436" d="m2 1c-0.554 0-1 0.446-1 1v4c0 0.554 0.446 1 1 1h6c0.554 0 1-0.446 1-1v-4c0-0.554-0.446-1-1-1h-6zm10 0c-0.554 0-1 0.446-1 1v4c0 0.554 0.446 1 1 1h2c0.554 0 1-0.446 1-1v-4c0-0.554-0.446-1-1-1h-2zm-10 8c-0.554 0-1 0.446-1 1v3c0 0.554 0.446 1 1 1h3c0.554 0 1-0.446 1-1v-3c0-0.554-0.446-1-1-1h-3zm7 0c-0.554 0-1 0.446-1 1v3c0 0.554 0.446 1 1 1h5c0.554 0 1-0.446 1-1v-3c0-0.554-0.446-1-1-1h-5z" inkscape:connector-curvature="0"/>
 </g>
 </svg>
