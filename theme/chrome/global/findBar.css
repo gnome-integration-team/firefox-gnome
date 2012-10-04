@@ -5,17 +5,27 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 findbar {
-/*  background-color: Window;*/
+  /*
+  background-color: Window;
+  */
   background: -moz-linear-gradient(to bottom, #d4d4d4, #ececec);
   /*
   border-top: 1px solid #a7aba7;
   */
   border-top: 2px solid;
   -moz-border-top-colors: ThreeDShadow ThreeDHighlight;
-  -moz-padding-start: 3px;
   padding-bottom: 1px;
   min-width: 10px;
   -moz-appearance: none !important;
+}
+
+window:-moz-window-inactive findbar {
+  background: #e0e0e0;
+}
+
+findbar > * > * {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .findbar-find-next,
@@ -29,7 +39,12 @@ findbar {
 .findbar-find-next .toolbarbutton-text,
 .findbar-find-previous .toolbarbutton-text {
 /*  display: none;*/
-  max-width: 0px; /* FIXME: Hack for support font scaling factor */
+  max-width: 0; /* FIXME: Hack for support font scaling factor */
+}
+
+.findbar-find-next .toolbarbutton-icon,
+.findbar-find-previous .toolbarbutton-icon {
+  margin: 0;
 }
 
 .findbar-find-next[disabled="true"] .toolbarbutton-icon,
@@ -49,13 +64,14 @@ findbar {
 .findbar-find-previous {
   list-style-image: url(chrome://browser/skin/symbolic-icons/up.svg);
   border-radius: 0 !important;
+  -moz-margin-end: 0;
 }
 
 /* highlight button */
 
 .findbar-highlight {
   list-style-image: url(chrome://browser/skin/symbolic-icons/highlight.svg);
-  -moz-margin-start: 6px;
+/*  -moz-margin-start: 6px;*/
 }
 
 .findbar-highlight[disabled="true"] {
@@ -76,19 +92,16 @@ findbar {
 
 .find-status-icon {
   list-style-image: none;
-/*  margin-top: 2px;*/
-/*  margin-bottom: 0;*/
-  -moz-margin-start: 12px;
   -moz-margin-end: 0;
   width: 16px;
   height: 16px;
 }
 
 .findbar-find-status {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  -moz-margin-start: 3px !important;
-  -moz-margin-end: 0 !important;
+  margin-top: 0;
+  margin-bottom: 0;
+  -moz-margin-start: 3px;
+  -moz-margin-end: 0;
   padding: 2px !important;
 }
 
@@ -117,4 +130,12 @@ findbar {
 
 .find-status-icon[status="wrapped"] {
   list-style-image: url(chrome://browser/skin/symbolic-icons/wrap.svg);
+}
+
+findbar checkbox > .checkbox-spacer-box > .checkbox-check {
+  -moz-margin-end: -4px;
+}
+
+findbar checkbox:hover:active > .checkbox-spacer-box > .checkbox-check {
+  background-color: transparent;
 }

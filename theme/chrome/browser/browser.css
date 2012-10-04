@@ -2275,7 +2275,8 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   color: #a7aba7 !important;
 }
 
-#main-window:-moz-window-inactive #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button) {
+#main-window:-moz-window-inactive #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button),
+#main-window:-moz-window-inactive #FindToolbar :-moz-any(.findbar-find-next, .findbar-find-previous) {
   background: transparent !important;
   border-color: #a7aba7 !important;
   box-shadow: none !important;
