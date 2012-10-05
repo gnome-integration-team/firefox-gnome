@@ -75,6 +75,11 @@
 /* Search go button */
 .search-go-container {
   -moz-box-align: center;
+  opacity: .35;
+}
+
+.search-go-container:hover {
+  opacity: 1;
 }
 
 .search-go-container:active {
@@ -87,7 +92,6 @@
   height: 22px;
   padding: 3px;
   min-width: 22px;
-  opacity: 0.35;
 }
 #nav-bar[iconsize=large] .searchbar-textbox .search-go-button {
   height: 26px;
@@ -98,10 +102,6 @@
   height: 24px;
   padding: 4px;
   min-width: 24px;
-}
-
-.search-go-container:hover > .search-go-button {
-  opacity: 1;
 }
 
 /* FIXME */
