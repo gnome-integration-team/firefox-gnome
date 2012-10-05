@@ -11,8 +11,14 @@
 #newtab-scrollbox:not([page-disabled]) {
   background-color: rgb(229,229,229);
   background-image: url(chrome://browser/skin/newtab/noise.png),
-                    -moz-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.2));
+                    -moz-linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,.2));
   background-attachment: fixed;
+}
+
+/* SIDE MARGIN */
+.newtab-side-margin {
+  width: 150px;
+  min-width: 10px;
 }
 
 /* TOGGLE */
@@ -41,9 +47,9 @@
 .newtab-cell {
   -moz-margin-end: 20px;
   background-color: rgba(255,255,255,.2);
-  border: 1px solid;
+  border: 2px solid;
   border-color: rgba(8,22,37,.12) rgba(8,22,37,.14) rgba(8,22,37,.16);
-  border-radius: 1px;
+  border-radius: 5px;
   -moz-transition: border-color 100ms ease-out;
 }
 
@@ -53,7 +59,7 @@
 }
 
 .newtab-cell:last-child {
-  -moz-margin-end: 0;
+  -moz-margin-end: 0px;
 }
 
 .newtab-cell:hover:not(:empty) {
@@ -87,10 +93,17 @@
 /* TITLES */
 .newtab-title {
   padding: 0 8px;
-  background-color: rgba(248,249,251,.95);
-  color: #1f364c;
-  font-size: 12px;
+  background-color: rgba(0,0,0,0);
+  color: rgba(255,255,255,0);
+  font-size: 100%;
   line-height: 24px;
+  border-radius: 0 0 2px 2px;
+  text-align: center;
+}
+
+.newtab-title:hover {
+  background-color: rgba(0,0,0,.85);
+  color: rgba(255,255,255,0.8);
 }
 
 /* CONTROLS */
@@ -99,37 +112,30 @@
   height: 24px;
   padding: 1px 2px 3px;
   border: none;
-  background: transparent url(chrome://browser/skin/newtab/controls.png);
 }
 
-.newtab-control-pin:hover {
-  background-position: -24px 0;
-}
-
-.newtab-control-pin:active {
-  background-position: -48px 0;
+.newtab-control-pin {
+  background: url(chrome://browser/skin/symbolic-icons/pin_white.svg) no-repeat center;
+  background-color: rgba(0,0,0,0.25);
+  border-radius: 70px;
 }
 
 .newtab-control-pin[pinned] {
-  background-position: -72px 0;
+  background: url(chrome://browser/skin/symbolic-icons/pin_white.svg) no-repeat center;
+  background-color: rgba(0,0,0,0.25);
+  border-radius: 70px;
 }
 
 .newtab-control-pin[pinned]:hover {
-  background-position: -96px 0;
-}
-
-.newtab-control-pin[pinned]:active {
-  background-position: -120px 0;
+  background-color: rgba(0,0,0,0.85);
 }
 
 .newtab-control-block {
-  background-position: -144px 0;
+  background: url(chrome://browser/skin/symbolic-icons/close_white.svg) no-repeat center;
+  background-color: rgba(0,0,0,0.25);
+  border-radius: 70px;
 }
 
 .newtab-control-block:hover {
-  background-position: -168px 0;
-}
-
-.newtab-control-block:active {
-  background-position: -192px 0;
+  background-color: rgba(0,0,0,0.85);
 }
