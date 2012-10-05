@@ -1753,6 +1753,14 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-margin-start: 0;
 }
 
+/* I Love Firefox! */
+.tabbrowser-tab:not([pinned])[hidden="true"] + .tabbrowser-tab:not([hidden="true"]) .tab-stack {
+  -moz-margin-start: 0;
+}
+.tabbrowser-tab:not([hidden="true"]) ~ .tabbrowser-tab[hidden="true"] + .tabbrowser-tab:not([hidden="true"]) .tab-stack {
+  -moz-margin-start: -9px;
+}
+
 .tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned]) > .tab-stack {
   -moz-margin-start: 0;
 }
