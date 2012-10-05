@@ -1754,7 +1754,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 /* I Love Firefox! */
-.tabbrowser-tab:not([pinned])[hidden="true"] + .tabbrowser-tab:not([hidden="true"]) .tab-stack {
+.tabbrowser-tab[hidden="true"] + .tabbrowser-tab:not([hidden="true"]) .tab-stack {
   -moz-margin-start: 0;
 }
 .tabbrowser-tab:not([hidden="true"]) ~ .tabbrowser-tab[hidden="true"] + .tabbrowser-tab:not([hidden="true"]) .tab-stack {
