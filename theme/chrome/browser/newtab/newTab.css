@@ -93,15 +93,15 @@
 /* TITLES */
 .newtab-title {
   padding: 0 8px;
-  background-color: rgba(0,0,0,0);
-  color: rgba(255,255,255,0);
+  background-color: transparent;
+  color: transparent;
   font-size: 100%;
   line-height: 24px;
   border-radius: 0 0 2px 2px;
   text-align: center;
 }
 
-.newtab-title:hover {
+.newtab-cell:hover .newtab-title {
   background-color: rgba(0,0,0,.85);
   color: rgba(255,255,255,0.8);
 }
