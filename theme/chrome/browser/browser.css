@@ -1761,8 +1761,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   padding: 0;
   
   /* Uncomment it for test transition property */
-/*  -moz-transition-duration: 30s !important;*/ /* For Fx 15 */
-/*  transition-duration: 30s !important;*/
+/*  -moz-transition-duration: 30s !important;*/
 }
 
 .tabbrowser-tab > .tab-stack {
@@ -1787,8 +1786,12 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-margin-start: 0;
 }
 
-.tabbrowser-tab:not([pinned]):not([fadein]) .tab-stack {
+.tabbrowser-tab:not([pinned]):not([fadein]) > .tab-stack {
   display: block;
+}
+.tabbrowser-tab:not([pinned]):not([fadein]) > .tab-stack .tab-label {
+  display: block !important;
+  color: transparent !important;
 }
 
 #main-window .tabbrowser-tab:not([selected="true"]) > .tab-stack {
