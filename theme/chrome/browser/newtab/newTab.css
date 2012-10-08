@@ -58,8 +58,10 @@
   border: 1px dashed;
   border-radius: 3px;
   border-color: rgba(8,22,37,.15) rgba(8,22,37,.17) rgba(8,22,37,.19);
+  /*
   background: center center url(chrome://browser/skin/symbolic-icons/identity-icons-generic.svg) no-repeat;
   background-size: 32px;
+  */
 }
 
 .newtab-cell:last-child {
@@ -75,6 +77,11 @@
   text-decoration: none;
   -moz-transition-property: top, left, opacity, box-shadow, background-color;
   -moz-transition-duration: 0.5s;
+  
+/* Consistency FTW, Comment out to go back to the madness */
+  background:  url(chrome://browser/skin/symbolic-icons/identity-icons-generic.svg) no-repeat;
+  background-size: 64px;
+  background-position: center center;
 }
 
 .newtab-site:hover,
@@ -93,12 +100,8 @@
   background-clip: padding-box;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 0 ;
-
-/* Consistency FTW, Comment out to go back to the madness */
-  background:  url(chrome://browser/skin/symbolic-icons/identity-icons-generic.svg) no-repeat !important;
-  background-size: 64px !important;
-  background-position: center center !important;
+  background-position: 0 0;
+  opacity: 1;
 }
 
 /* TITLES */
@@ -130,7 +133,6 @@
   padding: 1px 2px 3px;
   border: none;
 }
-
 
 .newtab-control-pin {
   background: url(chrome://browser/skin/symbolic-icons/pin_white.svg) no-repeat center;
