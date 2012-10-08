@@ -77,10 +77,10 @@
   text-decoration: none;
   -moz-transition-property: top, left, opacity, box-shadow, background-color;
   -moz-transition-duration: 0.5s;
-  
+
 /* Consistency FTW, Comment out to go back to the madness */
-  background:  url(chrome://browser/skin/symbolic-icons/identity-icons-generic.svg) no-repeat;
-  background-size: 64px;
+  background:  url(chrome://browser/skin/symbolic-icons/newtab-placeholder.svg) no-repeat;
+  background-size: 20%;
   background-position: 50% 42%;
 }
 
