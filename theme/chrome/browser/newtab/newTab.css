@@ -78,10 +78,10 @@
   -moz-transition-property: top, left, opacity, box-shadow, background-color;
   -moz-transition-duration: 0.5s;
 
-/* Consistency FTW, Comment out to go back to the madness */
+  /* Consistency FTW, Comment out to go back to the madness */
   background:  url(chrome://browser/skin/symbolic-icons/newtab-placeholder.svg) no-repeat;
-  background-size: 20%;
-  background-position: 50% 42%;
+  background-size: 96px;
+  background-position: 50% -moz-calc(50% - (24px / 2)); /* Need -moz prefix for pre-FF16 … half height, compensate for text title */
 }
 
 .newtab-site:hover,
