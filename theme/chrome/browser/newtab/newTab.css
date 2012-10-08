@@ -17,7 +17,8 @@
 
 /* SIDE MARGIN */
 .newtab-side-margin {
-  width: 150px;
+/*  width: 150px;*/
+  width: 350px; /* Should give a nice squarish thumbnails*/
   min-width: 10px;
 }
 
@@ -47,15 +48,18 @@
 .newtab-cell {
   -moz-margin-end: 20px;
   background-color: rgba(255,255,255,.2);
-  border: 2px solid;
+  border: 1px solid ;
   border-color: rgba(8,22,37,.12) rgba(8,22,37,.14) rgba(8,22,37,.16);
-  border-radius: 5px;
+  border-radius: 3px;
   -moz-transition: border-color 100ms ease-out;
 }
 
 .newtab-cell:empty {
   border: 1px dashed;
+  border-radius: 3px;
   border-color: rgba(8,22,37,.15) rgba(8,22,37,.17) rgba(8,22,37,.19);
+  background: center center url(chrome://browser/skin/symbolic-icons/identity-icons-generic.svg) no-repeat;
+  background-size: 32px;
 }
 
 .newtab-cell:last-child {
@@ -70,6 +74,7 @@
 .newtab-site {
   text-decoration: none;
   -moz-transition-property: top, left, opacity, box-shadow, background-color;
+  -moz-transition-duration: 0.5s;
 }
 
 .newtab-site:hover,
@@ -88,17 +93,28 @@
   background-clip: padding-box;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 0 !important;
+  background-position: 0 0 ;
+
+/* Consistency FTW, Comment out to go back to the madness */
+  background:  url(chrome://browser/skin/symbolic-icons/identity-icons-generic.svg) no-repeat !important;
+  background-size: 64px !important;
+  background-position: center center !important;
 }
 
 /* TITLES */
 .newtab-title {
   padding: 0 8px;
-  background-color: transparent;
-  color: transparent;
-  font-size: 100%;
+  background-color: rgb(229,229,229);
+  background-image: url(chrome://browser/skin/newtab/noise.png),
+                    -moz-linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,.2));
+  background-attachment: fixed;
+  color: rgba(0,0,0,0.8);
+  border-top: 1px solid;
+  border-color: rgba(8,22,37,.12) rgba(8,22,37,.14) rgba(8,22,37,.16);
+    font-size: 100%;
   line-height: 24px;
-  border-radius: 0 0 2px 2px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;
+  border-radius: 0;
   text-align: center;
 }
 
@@ -114,6 +130,7 @@
   padding: 1px 2px 3px;
   border: none;
 }
+
 
 .newtab-control-pin {
   background: url(chrome://browser/skin/symbolic-icons/pin_white.svg) no-repeat center;
@@ -139,4 +156,10 @@
 
 .newtab-control-block:hover {
   background-color: rgba(0,0,0,0.85);
+}
+
+.newtab-control-pin,
+.newtab-control-block{
+  -moz-transition-property: background-color;
+  -moz-transition-duration: 0.2s;
 }
