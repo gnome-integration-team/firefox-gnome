@@ -81,7 +81,7 @@
 /* Consistency FTW, Comment out to go back to the madness */
   background:  url(chrome://browser/skin/symbolic-icons/identity-icons-generic.svg) no-repeat;
   background-size: 64px;
-  background-position: center center;
+  background-position: 50% 42%;
 }
 
 .newtab-site:hover,
