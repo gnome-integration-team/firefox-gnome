@@ -111,25 +111,28 @@
   background-image: url(chrome://browser/skin/newtab/noise.png),
                     -moz-linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,.2));
   background-attachment: fixed;
-  color: rgba(0,0,0,0.8);
+  color: rgba(0,0,0,0.55);
+  text-shadow: 0 1px 0 rgba(255,255,255,1);
   border-top: 1px solid;
   border-color: rgba(8,22,37,.12) rgba(8,22,37,.14) rgba(8,22,37,.16);
-    font-size: 100%;
+  font-size: 100%;
   line-height: 24px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;
-  border-radius: 0;
+  border-radius: 0 0 2px 2px;
   text-align: center;
 }
 
 .newtab-cell:hover .newtab-title {
-  background-color: rgba(0,0,0,.85);
+  background-image: none;
+  background-color: rgba(0,0,0,0.8);
   color: rgba(255,255,255,0.8);
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
 }
 
 /* CONTROLS */
 .newtab-control {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   padding: 1px 2px 3px;
   border: none;
 }
@@ -161,7 +164,8 @@
 }
 
 .newtab-control-pin,
-.newtab-control-block{
-  -moz-transition-property: background-color;
-  -moz-transition-duration: 0.2s;
+.newtab-control-block,
+.newtab-title {
+  -moz-transition-property: background-color, color, text-shadow;
+  -moz-transition-duration: 0.4s;
 }
