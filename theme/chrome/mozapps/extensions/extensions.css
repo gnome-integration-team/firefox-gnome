@@ -134,7 +134,8 @@
   -moz-box-align: center;
   overflow: hidden;
   min-height: 0;
-  color: WindowText;
+  color: #606060;
+  margin: 5px 0;
 
 /*  border: 1px solid transparent;*/
   -moz-border-start: 1px solid transparent;
@@ -465,7 +466,7 @@
   border-top: 2px solid transparent;
   border-bottom: 2px solid;
   border-image: url(chrome://mozapps/skin/extensions/addon-border.png) 0 0 2 0 / 0px 0px 2px 0px stretch;
-  color: #414141;
+  color: #404040;
   padding: 5px;
 }
 
@@ -558,7 +559,13 @@
 }
 
 .description {
+  color: #979797;
+  font-size: 0.9em;
   margin: 0;
+}
+
+.addon .button-link {
+  font-size: 0.9em;
 }
 
 .warning,
@@ -1004,10 +1011,6 @@ setting[type="radio"] > radiogroup {
   -moz-transition-duration: 200ms;
 }
 
-.addon-control .button-icon {
-  -moz-margin-end: 0;
-}
-
 .addon-control:not([disabled="true"]):hover {
   background-image: -moz-linear-gradient(to bottom, #ffffff, #ebebeb) !important;
   border-color: rgba(0,0,0,.25) !important;
@@ -1037,7 +1040,21 @@ setting[type="radio"] > radiogroup {
   display: none;
 }
 
-.addon-control .button-text {
+.addon-control.enable .button-icon,
+.addon-control.disable .button-icon,
+.addon-control.remove .button-icon,
+.addon-control.preferences .button-icon,
+.addon-control.install .button-icon,
+.addon-control.update .button-icon {
+  -moz-margin-end: 0;
+}
+
+.addon-control.enable .button-text,
+.addon-control.disable .button-text,
+.addon-control.remove .button-text,
+.addon-control.preferences .button-text,
+.addon-control.install .button-text,
+.addon-control.update .button-text {
   display: none;
 }
 
@@ -1071,20 +1088,21 @@ setting[type="radio"] > radiogroup {
   background: transparent;
   border: none;
 /*  color: -moz-nativehyperlinktext;*/
-  color: #3b6aa7;
+  color: #4b4b4b;
   cursor: pointer;
   min-width: 0;
   margin: 0 6px;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .button-link:hover {
+  color: #3b6aa7;
   text-decoration: underline;
   box-shadow: none;
 }
 
 .button-link:active {
-  color: -moz-activehyperlinktext;
+/*  color: -moz-activehyperlinktext;*/
   text-decoration: underline;
   box-shadow: none;
 }
