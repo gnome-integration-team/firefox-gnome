@@ -15,6 +15,6 @@
 <title>Gnome Symbolic Icon Theme</title>
 <g inkscape:label="actions" transform="translate(-141 -667)" inkscape:groupmode="layer" fill="#2e3436">
 <path style="block-progression:tb;color:#000000;text-transform:none;text-indent:0" d="m146.5 673c-1.9212 0-3.5 1.5788-3.5 3.5s1.5788 3.5 3.5 3.5h0.5v-2h-0.5c-0.84027 0-1.5-0.65973-1.5-1.5s0.65973-1.5 1.5-1.5h6.5v-2h-6.5z" inkscape:connector-curvature="0"/>
-<path style="block-progression:tb;color:#bebebe;text-transform:none;text-indent:0" inkscape:connector-curvature="0" d="m150 670v1c0 0.25689 0.12983 0.52846 0.3125 0.71875l2.2812 2.2812-2.2812 2.2812c-0.18267 0.19029-0.3125 0.46186-0.3125 0.71875v1h1c0.30945 0 0.55232-0.0903 0.75-0.28125l3.66-3.72-3.66-3.72c-0.2-0.19-0.44-0.28-0.75-0.28z" sodipodi:nodetypes="ccccccccccccc"/>
+<path style="block-progression:tb;color:#2e3436;text-transform:none;text-indent:0" inkscape:connector-curvature="0" d="m150 670v1c0 0.25689 0.12983 0.52846 0.3125 0.71875l2.2812 2.2812-2.2812 2.2812c-0.18267 0.19029-0.3125 0.46186-0.3125 0.71875v1h1c0.30945 0 0.55232-0.0903 0.75-0.28125l3.66-3.72-3.66-3.72c-0.2-0.19-0.44-0.28-0.75-0.28z" sodipodi:nodetypes="ccccccccccccc"/>
 </g>
 </svg>

@@ -21,7 +21,8 @@
 }
 
 #addons-page {
-  background: #ffffff;
+  background: #ebebeb url(chrome://browser/skin/newtab/noise.png);
+  background-attachment: fixed;
   padding: 0;
 }
 
@@ -125,7 +126,7 @@
   position: relative;
   margin-top: 41px;
   -moz-margin-start: 0px;
-  -moz-margin-end: -8px;
+  -moz-margin-end: -12px;
 }
 
 .category {
@@ -135,13 +136,14 @@
   min-height: 0;
   color: WindowText;
 
-  border: 1px solid transparent;
+/*  border: 1px solid transparent;*/
+  -moz-border-start: 1px solid transparent;
   -moz-border-end-width: 0;
   border-radius: 0 !important;
 
-  padding: 0;
-  -moz-padding-start: 27px;
-  max-height: 30px;
+  padding: 5px 0 4px 0;
+  -moz-padding-start: 25px;
+/*  max-height: 30px;*/
 }
 
 .category:-moz-locale-dir(ltr) {
@@ -166,7 +168,7 @@
 }
 
 .category:not([disabled]) {
-  height: 30px;
+/*  height: 30px;*/
   -moz-transition-property: height, opacity; /* For Fx 15 */
   -moz-transition-duration: 1s, 0.8s; /* For Fx 15 */
   transition-property: height, opacity;
@@ -174,20 +176,18 @@
 }
 
 .category[selected] {
-  background: #3465a4;
+  background: #007fe1;
   background-clip: padding-box;
-  border: 1px solid #89a5c9;
-  -moz-border-start-width: 0;
-  -moz-border-end-width: 8px;
-  -moz-border-end-color: transparent;
+  -moz-border-start: 1px solid #99c6e8;
+  -moz-border-end: 12px solid transparent;
   color: #fff !important;
 }
 
 .category[selected]:-moz-locale-dir(ltr) {
-  border-image: url(chrome://mozapps/skin/extensions/addons-category-border.png) 0 8 0 0 / 0px 8px 0px 0px stretch;
+  border-image: url(chrome://mozapps/skin/extensions/addons-category-border.png) 0 12 0 0 / 0px 12px 0px 0px stretch;
 }
 .category[selected]:-moz-locale-dir(rtl) {
-  border-image: url(chrome://mozapps/skin/extensions/addons-category-border-rtl.png) 0 0 0 8 / 0px 0px 0px 8px stretch;
+  border-image: url(chrome://mozapps/skin/extensions/addons-category-border-rtl.png) 0 0 0 12 / 0px 0px 0px 12px stretch;
 }
 
 .category-name {
@@ -262,17 +262,19 @@
 /*** view-port-container ***/
 
 #view-port-container {
-  background: #f1f2f1;
+  background: #eeeeee;
   border: 0;
   border-radius: 0;
-  -moz-border-start: 5px solid;
-  -moz-padding-start: 4px;
+  -moz-border-start: 2px solid;
+  -moz-padding-start: 0;
 }
 #view-port-container:-moz-locale-dir(ltr) {
-  -moz-border-left-colors: #b8b8b8 #c2c3c2 #d0d1d0 #dfe0df #edeeed;
+  -moz-border-left-colors: #dbdbdb #fafafa;
+/*  -moz-border-left-colors: #b8b8b8 #c2c3c2 #d0d1d0 #dfe0df #edeeed;*/
 }
 #view-port-container:-moz-locale-dir(rtl) {
-  -moz-border-right-colors: #b8b8b8 #c2c3c2 #d0d1d0 #dfe0df #edeeed;
+  -moz-border-right-colors: #fafafa #dbdbdb;
+/*  -moz-border-right-colors: #b8b8b8 #c2c3c2 #d0d1d0 #dfe0df #edeeed;*/
 }
 
 /*** header ***/
@@ -390,14 +392,14 @@
 
 .view-header {
   background-color: transparent;
-  border-bottom: 1px solid ThreeDShadow;
+  border-bottom: 1px solid #dbdbdb;
   min-height: 41px;
   padding: 4px;
   margin: 0;
 }
 
 #list-view > hbox {
-  -moz-margin-start: -8px;
+  -moz-margin-start: -2px;
   padding: 4px;
 }
 
@@ -460,14 +462,31 @@
 }
 
 .addon {
-  border-bottom: 1px solid ThreeDLightShadow;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid;
+  border-image: url(chrome://mozapps/skin/extensions/addon-border.png) 0 0 2 0 / 0px 0px 2px 0px stretch;
+  color: #414141;
   padding: 5px;
 }
 
+.addon:first-child {
+  border-top: 0;
+}
+
+.addon[selected] {
+  background: #e4e4e4;
+  -moz-border-top-colors: #d1d1d1 #ebebeb;
+  -moz-border-bottom-colors: #d1d1d1 #ebebeb;
+  border-image: none;
+  color: #414141;
+}
+
+/*
 .addon[selected] .text-link,
 .addon[selected] .button-link {
   color: inherit;
 }
+*/
 
 .details {
   cursor: pointer;
@@ -515,6 +534,14 @@
   font-weight: bold;
   -moz-box-align: end;
   -moz-box-flex: 1;
+}
+
+.version {
+  background: #007fe1;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.8em;
+  padding: 1px 8px;
 }
 
 .creator {
@@ -963,24 +990,75 @@ setting[type="radio"] > radiogroup {
 
 /*** buttons ***/
 
+/* Buttons */
+
+.addon-control {
+  -moz-appearance: none;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  border-radius: 3px;
+  filter: none;
+  padding: 3px;
+  min-width: 32px;
+  -moz-transition-property: border, box-shadow, background;
+  -moz-transition-duration: 200ms;
+}
+
+.addon-control .button-icon {
+  -moz-margin-end: 0;
+}
+
+.addon-control:not([disabled="true"]):hover {
+  background-image: -moz-linear-gradient(to bottom, #ffffff, #ebebeb) !important;
+  border-color: rgba(0,0,0,.25) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.69);
+}
+
+.addon-control:not([disabled="true"]):active,
+.addon-control:not([disabled="true"]):active:hover,
+.addon-control[checked="true"],
+.addon-control[checked="true"]:hover {
+  background-image: -moz-linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important;
+  border-color: rgba(0,0,0,.25) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.69);
+}
+
+.addon-control[open="true"],
+.addon-control[open="true"]:hover,
+.addon-control[open="true"]:active,
+.addon-control[open="true"]:active:hover {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.69);
+  border-radius: 3px 3px 0 0;
+}
+
 .addon-control[disabled="true"] {
   display: none;
 }
 
+.addon-control .button-text {
+  display: none;
+}
+
 .addon-control.enable {
-  list-style-image: url("moz-icon://stock/gtk-yes?size=button");
+/*  list-style-image: url("moz-icon://stock/gtk-yes?size=button");*/
+  list-style-image: url(chrome://browser/skin/symbolic-icons/playback-start.svg);
 }
 
 .addon-control.disable {
-  list-style-image: url("moz-icon://stock/gtk-no?size=button");
+/*  list-style-image: url("moz-icon://stock/gtk-no?size=button");*/
+  list-style-image: url(chrome://browser/skin/symbolic-icons/unavailable.svg);
 }
 
 .addon-control.remove {
-  list-style-image: url("moz-icon://stock/gtk-remove?size=button");
+/*  list-style-image: url("moz-icon://stock/gtk-remove?size=button");*/
+  list-style-image: url(chrome://browser/skin/symbolic-icons/trash.svg);
 }
 
 .addon-control.preferences {
-  list-style-image: url("moz-icon://stock/gtk-preferences?size=button");
+/*  list-style-image: url("moz-icon://stock/gtk-preferences?size=button");*/
+  list-style-image: url(chrome://browser/skin/symbolic-icons/gear.svg);
 }
 
 .addon-control.install,
