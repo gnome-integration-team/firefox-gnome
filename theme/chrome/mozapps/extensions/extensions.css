@@ -192,7 +192,7 @@
 }
 
 .category-name {
-  font-size: 1em;
+  font-size: 1.03em;
 }
 
 /* Maximize the size of the viewport when the window is small */
@@ -530,7 +530,7 @@
 }
 
 .name-container {
-  font-size: 1em;
+  font-size: 1.05em;
   margin-bottom: 0;
   font-weight: bold;
   -moz-box-align: end;
@@ -539,7 +539,7 @@
 
 .version {
   background: #007fe1;
-  border-radius: 5px;
+  border-radius: 10px;
   color: white;
   font-size: 0.8em;
   padding: 1px 8px;
@@ -560,7 +560,7 @@
 
 .description {
   color: #979797;
-  font-size: 0.9em;
+  font-size: 1em;
   margin: 0;
 }
 
@@ -1125,4 +1125,3 @@ setting[type="radio"] > radiogroup {
 .header-button .toolbarbutton-text {
   display: none;
 }
-
