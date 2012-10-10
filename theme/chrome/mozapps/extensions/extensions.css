@@ -584,14 +584,19 @@
 }
 
 .addon .button-link {
-  font-size: 0.9em;
+  font-size: 1em;
+}
+
+.details.button-link {
+  -moz-margin-start: 10px!;
 }
 
 .warning,
 .pending,
 .error {
-  -moz-margin-start: 48px;
+  -moz-margin-start: 10px;
   -moz-box-align: center;
+  padding-bottom: 10px
 }
 
 .content-container,
