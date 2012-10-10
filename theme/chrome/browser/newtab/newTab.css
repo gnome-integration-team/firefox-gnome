@@ -76,9 +76,10 @@
 /* SITES */
 .newtab-site {
   text-decoration: none;
-  transition-property: top, left, opacity, box-shadow, background-color;
   -moz-transition-property: top, left, opacity, box-shadow, background-color;
+  transition-property: top, left, opacity, box-shadow, background-color;
   -moz-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 
   /* Consistency FTW, Comment out to go back to the madness */
   background:  url(chrome://browser/skin/symbolic-icons/newtab-placeholder.svg) no-repeat;
@@ -92,6 +93,7 @@
 }
 
 .newtab-site[dragged] {
+  -moz-transition-property: box-shadow, background-color;
   transition-property: box-shadow, background-color;
   background-color: rgb(242,242,242);
 }
@@ -169,5 +171,7 @@
 .newtab-control-block,
 .newtab-title {
   -moz-transition-property: background-color, color, text-shadow;
+  transition-property: background-color, color, text-shadow;
   -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }

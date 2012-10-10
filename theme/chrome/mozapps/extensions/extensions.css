@@ -163,16 +163,16 @@
   height: 0;
   opacity: 0;
   -moz-transition-property: height, opacity; /* For Fx 15 */
-  -moz-transition-duration: 1s, 0.8s; /* For Fx 15 */
   transition-property: height, opacity;
+  -moz-transition-duration: 1s, 0.8s; /* For Fx 15 */
   transition-duration: 1s, 0.8s;
 }
 
 .category:not([disabled]) {
 /*  height: 30px;*/
   -moz-transition-property: height, opacity; /* For Fx 15 */
-  -moz-transition-duration: 1s, 0.8s; /* For Fx 15 */
   transition-property: height, opacity;
+  -moz-transition-duration: 1s, 0.8s; /* For Fx 15 */
   transition-duration: 1s, 0.8s;
 }
 
@@ -303,7 +303,9 @@
   min-height: 28px;
   text-shadow: none;
   -moz-transition-property: color, border, box-shadow, background;
+  transition-property: color, border, box-shadow, background;
   -moz-transition-duration: 200ms;
+  transition-duration: 200ms;
 }
 
 #header toolbarbutton:not([disabled="true"]):hover,
@@ -670,16 +672,16 @@
   overflow: hidden;
   opacity: 0;
   -moz-transition-property: height, opacity;
-  -moz-transition-duration: 0.5s, 0.5s;
   transition-property: height, opacity;
+  -moz-transition-duration: 0.5s, 0.5s;
   transition-duration: 0.5s, 0.5s;
 }
 
 .addon[show-relnotes] .relnotes-container {
   opacity: 1;
   -moz-transition-property: height, opacity;
-  -moz-transition-duration: 0.5s, 0.5s;
   transition-property: height, opacity;
+  -moz-transition-duration: 0.5s, 0.5s;
   transition-duration: 0.5s, 0.5s;
 }
 
@@ -738,8 +740,8 @@
   -moz-box-pack: center;
   opacity: 1;
   -moz-transition-property: opacity;
-  -moz-transition-duration: 1s;
   transition-property: opacity;
+  -moz-transition-duration: 1s;
   transition-duration: 1s;
 }
 
@@ -1014,7 +1016,9 @@ setting[type="radio"] > radiogroup {
   padding: 3px;
   min-width: 32px;
   -moz-transition-property: border, box-shadow, background;
+  transition-property: border, box-shadow, background;
   -moz-transition-duration: 200ms;
+  transition-duration: 200ms;
 }
 
 .addon-control:not([disabled="true"]):hover {

@@ -592,11 +592,6 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   border-radius: 3px 3px 0 0;
 }
 
-/** Added in Firefox 16 **/
-window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons],                #nav-bar:not([currentset])[mode=icons])                 > #unified-back-forward-button:not([switchingtabs]) > #forward-button {
-  transition: 150ms ease-out;
-}
-
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[disabled="true"],
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[disabled="true"]:hover,
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[disabled="true"]:active,
@@ -976,6 +971,11 @@ toolbar[iconsize="small"] .toolbarbutton-1:not([type="menu-button"]) {
 
 /* Autohide forward button */
 
+/** Added in Firefox 16 **/
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons],                #nav-bar:not([currentset])[mode=icons])                 > #unified-back-forward-button:not([switchingtabs]) > #forward-button {
+  transition: 150ms ease-out;
+}
+
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button + #urlbar-container {
   -moz-padding-start: 28px;
   -moz-margin-start: -28px;
@@ -993,8 +993,10 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button:not([switchingtabs]) + #urlbar-container > #urlbar {
-  transition: margin-left 150ms ease-out,
-              margin-right 150ms ease-out;
+  -moz-transition: margin-left 200ms ease-out,
+                   margin-right 200ms ease-out;
+  transition: margin-left 200ms ease-out,
+              margin-right 200ms ease-out;
 }
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] + #urlbar-container > #urlbar:-moz-locale-dir(ltr) {
@@ -1016,11 +1018,15 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button #forward-button {
   -moz-transition: opacity 200ms ease-in,
                    visibility 200ms ease-out;
+  transition: opacity 200ms ease-in,
+              visibility 200ms ease-out;
 }
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] #forward-button {
   -moz-transition: opacity 200ms ease-out,
                    visibility 200ms ease-out;
+  transition: opacity 200ms ease-out,
+              visibility 200ms ease-out;
   opacity: 0 !important;
   visibility: hidden;
 }
@@ -1425,8 +1431,10 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 richlistitem {
   margin-top: -1px;
   padding-bottom: 2px;
+  /*
   color: -moz-nativehyperlinktext;
   font-size: 0.9em;
+  */
 }
 
 richlistitem[selected="true"] {
@@ -1791,8 +1799,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   /* Uncomment it for test transition property */
   /*  -moz-transition-duration: 30s !important;*/ /* For Fx 15 */
   /*  transition-duration: 30s !important;*/
-
-  /* min-height: 25px; */ /* reserve space for the sometimes hidden close button */
 }
 
 .tabbrowser-tab > .tab-stack {
@@ -2015,19 +2021,20 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 .tabbrowser-arrowscrollbox > .scrollbutton-up {
-  -moz-border-start: 0;
-  -moz-border-end: 2px solid transparent;
+  -moz-border-start: 0 !important; /* FIXME */
+  -moz-border-end: 2px solid transparent !important; /* FIXME */
 }
 
 .tabbrowser-arrowscrollbox > .scrollbutton-down {
-  -moz-border-start: 2px solid transparent;
-  -moz-border-end: 0;
+  -moz-border-start: 2px solid transparent !important; /* FIXME */
+  -moz-border-end: 0 !important; /* FIXME */
+  -moz-transition: 1s box-shadow ease-out;
   transition: 1s box-shadow ease-out;
   border-radius: 4px;
 }
 
 .tabbrowser-arrowscrollbox > .scrollbutton-down[notifybgtab] {
-  box-shadow: 0 0 5px 5px Highlight inset;
+  box-shadow: 0 0 5px 5px Highlight inset !important;
   transition: none;
 }
 
@@ -2035,14 +2042,14 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled]):-moz-locale-dir(rtl) {
   border-width: 0 2px 0 0;
   border-style: solid;
-  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill;
+  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill !important; /* FIXME */
 }
 
 .tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled]):-moz-locale-dir(ltr),
 .tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled]):-moz-locale-dir(rtl) {
   border-width: 0 0 0 2px;
   border-style: solid;
-  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill;
+  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill !important; /* FIXME */
 }
 
 /*
@@ -2095,17 +2102,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .alltabs-item[tabIsVisible] {
   /* box-shadow instead of background-color to work around native styling */
   box-shadow: inset -5px 0 ThreeDShadow;
-}
-
-/* Sidebar */
-#sidebar-header > .tabs-closebutton {
-  margin-bottom: 0px !important;
-  padding: 0px 2px 0px 2px !important;
-}
-
-#sidebar-throbber[loading="true"] {
-  list-style-image: url("chrome://global/skin/icons/loading_16.png");
-  -moz-margin-end: 4px;
 }
 
 toolbarbutton.chevron {
