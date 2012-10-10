@@ -459,6 +459,11 @@
 
 /*** list ***/
 
+.addon.addon-view {
+  -moz-padding-start: 20px;
+  -moz-padding-end: 20px;
+}
+
 .list {
   -moz-appearance: none;
   margin: 0;
