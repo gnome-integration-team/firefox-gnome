@@ -493,6 +493,10 @@
 }
 */
 
+.addon[active="false"] .version{
+    background: lightgray;
+}
+
 .details {
   cursor: pointer;
   margin: 0;
@@ -548,6 +552,7 @@
   font-size: 0.8em;
   padding: 1px 8px;
 }
+
 
 .creator {
   font-weight: bold;
