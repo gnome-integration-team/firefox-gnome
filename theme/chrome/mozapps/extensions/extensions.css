@@ -497,9 +497,11 @@
     background: lightgray;
 }
 
-.addon[active="false"] .details.button-link{
+.addon[active="false"] .details.button-link,
+.addon[active="false"] .name-container{
     color: gray;
 }
+
 
 .details {
   cursor: pointer;
