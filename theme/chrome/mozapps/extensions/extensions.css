@@ -497,6 +497,10 @@
     background: lightgray;
 }
 
+.addon[active="false"] .details.button-link{
+    color: gray;
+}
+
 .details {
   cursor: pointer;
   margin: 0;
