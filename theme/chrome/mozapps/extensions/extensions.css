@@ -1046,6 +1046,7 @@ setting[type="radio"] > radiogroup {
 .addon-control.preferences .button-icon,
 .addon-control.install .button-icon,
 .addon-control.update .button-icon {
+  display: block !important;
   -moz-margin-end: 0;
 }
 
