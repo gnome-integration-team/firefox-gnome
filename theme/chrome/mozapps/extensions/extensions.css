@@ -55,14 +55,14 @@
 /*** notification icons ***/
 
 .warning-icon {
-  list-style-image: url("moz-icon://stock/gtk-dialog-warning?size=menu");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/important.svg);
   width: 16px;
   height: 16px;
   margin: 3px 0;
 }
 
 .error-icon {
-  list-style-image: url("moz-icon://stock/gtk-dialog-error?size=menu");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/error.svg);
   width: 16px;
   height: 16px;
   margin: 3px 0;
@@ -70,7 +70,7 @@
 
 .pending-icon,
 .info-icon {
-  list-style-image: url("moz-icon://stock/gtk-dialog-info?size=menu");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/information.svg);
   width: 16px;
   height: 16px;
   margin: 3px 0;
