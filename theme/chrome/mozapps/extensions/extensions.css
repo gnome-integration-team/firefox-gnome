@@ -1026,6 +1026,7 @@ setting[type="radio"] > radiogroup {
   filter: none;
   padding: 3px;
   min-width: 32px;
+  opacity: 0.8;
   -moz-transition-property: border, box-shadow, background;
   transition-property: border, box-shadow, background;
   -moz-transition-duration: 200ms;
