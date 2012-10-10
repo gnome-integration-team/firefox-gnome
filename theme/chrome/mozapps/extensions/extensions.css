@@ -502,6 +502,9 @@
     color: gray;
 }
 
+.addon[active="false"] .addon-control {
+	opacity: 0.4;
+}
 
 .details {
   cursor: pointer;
