@@ -1099,11 +1099,11 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   opacity: 0.35;
 }
 
-.verifiedDomain > #page-proxy-favicon[pageproxystate="valid"] {
+.verifiedDomain #page-proxy-favicon[pageproxystate="valid"] {
   list-style-image: url(chrome://browser/skin/symbolic-icons/identity-icons-https.svg);
 }
 
-.verifiedIdentity > #page-proxy-favicon[pageproxystate="valid"] {
+.verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
   list-style-image: url(chrome://browser/skin/symbolic-icons/identity-icons-https-ev.svg);
   opacity: 0.6;
 }
