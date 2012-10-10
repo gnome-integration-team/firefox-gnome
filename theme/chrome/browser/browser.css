@@ -1166,13 +1166,6 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   border-right: 1px solid rgba(115, 210, 22, 0.25);
   color: #00aa00;
   -moz-margin-end: 3px;
-  background-image: -moz-linear-gradient(hsla(92,81%,16%,0),
-                                         hsla(92,81%,16%,.2) 25%,
-                                         hsla(92,81%,16%,.2) 75%,
-                                         hsla(92,81%,16%,0));
-  background-position: right;
-  background-size: 1px;
-  background-repeat: no-repeat;
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:hover:active,
