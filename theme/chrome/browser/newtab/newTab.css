@@ -52,6 +52,7 @@
   border-color: rgba(8,22,37,.12) rgba(8,22,37,.14) rgba(8,22,37,.16);
   border-radius: 3px;
   -moz-transition: border-color 100ms ease-out;
+  transition: border-color 100ms ease-out;
 }
 
 .newtab-cell:empty {
@@ -68,13 +69,14 @@
   -moz-margin-end: 0px;
 }
 
-.newtab-cell:hover:not(:empty) {
+.newtab-cell:hover:not(:empty):not([dragged]) {
   border-color: rgba(8,22,37,.25) rgba(8,22,37,.27) rgba(8,22,37,.3);
 }
 
 /* SITES */
 .newtab-site {
   text-decoration: none;
+  transition-property: top, left, opacity, box-shadow, background-color;
   -moz-transition-property: top, left, opacity, box-shadow, background-color;
   -moz-transition-duration: 0.5s;
 
@@ -90,7 +92,7 @@
 }
 
 .newtab-site[dragged] {
-  -moz-transition-property: box-shadow, background-color;
+  transition-property: box-shadow, background-color;
   background-color: rgb(242,242,242);
 }
 

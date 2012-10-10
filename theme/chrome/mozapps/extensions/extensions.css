@@ -671,12 +671,16 @@
   opacity: 0;
   -moz-transition-property: height, opacity;
   -moz-transition-duration: 0.5s, 0.5s;
+  transition-property: height, opacity;
+  transition-duration: 0.5s, 0.5s;
 }
 
 .addon[show-relnotes] .relnotes-container {
   opacity: 1;
   -moz-transition-property: height, opacity;
   -moz-transition-duration: 0.5s, 0.5s;
+  transition-property: height, opacity;
+  transition-duration: 0.5s, 0.5s;
 }
 
 .addon .relnotes-header {
@@ -735,6 +739,8 @@
   opacity: 1;
   -moz-transition-property: opacity;
   -moz-transition-duration: 1s;
+  transition-property: opacity;
+  transition-duration: 1s;
 }
 
 .detail-view-container {
