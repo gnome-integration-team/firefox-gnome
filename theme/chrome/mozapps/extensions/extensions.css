@@ -1037,9 +1037,9 @@ setting[type="radio"] > radiogroup {
 }
 
 .addon-control:not([disabled="true"]):hover {
-  background-image: -moz-linear-gradient(to bottom, #ffffff, #ebebeb) !important;
   border-color: rgba(0,0,0,.25) !important;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.69);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.69),
+              0 1px 0 rgba(255,255,255,0.69) inset;
 }
 
 .addon-control:not([disabled="true"]):active,
