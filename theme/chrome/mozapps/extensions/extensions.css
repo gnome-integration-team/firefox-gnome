@@ -402,6 +402,8 @@
 #list-view > hbox {
   -moz-margin-start: -2px;
   padding: 4px;
+  border-top-color: #dbdbdb;
+  border-bottom-color: #dbdbdb;
 }
 
 /*** sorters ***/
@@ -464,7 +466,7 @@
 
 .addon {
   border-top: 2px solid transparent;
-  border-bottom: 2px solid;
+  border-bottom: 2px solid transparent;
   border-image: url(chrome://mozapps/skin/extensions/addon-border.png) 0 0 2 0 / 0px 0px 2px 0px stretch;
   color: #404040;
   padding: 5px;
@@ -997,8 +999,6 @@ setting[type="radio"] > radiogroup {
 
 /*** buttons ***/
 
-/* Buttons */
-
 .addon-control {
   -moz-appearance: none;
   background: transparent !important;
@@ -1080,7 +1080,8 @@ setting[type="radio"] > radiogroup {
 
 .addon-control.install,
 .addon-control.update {
-  list-style-image: url("moz-icon://stock/gtk-save?size=button");
+/*  list-style-image: url("moz-icon://stock/gtk-save?size=button");*/
+  list-style-image: url(chrome://browser/skin/symbolic-icons/download.svg);
 }
 
 .button-link {
