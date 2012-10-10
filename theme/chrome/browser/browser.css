@@ -971,11 +971,6 @@ toolbar[iconsize="small"] .toolbarbutton-1:not([type="menu-button"]) {
 
 /* Autohide forward button */
 
-/** Added in Firefox 16 **/
-window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons],                #nav-bar:not([currentset])[mode=icons])                 > #unified-back-forward-button:not([switchingtabs]) > #forward-button {
-  transition: 150ms ease-out;
-}
-
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button + #urlbar-container {
   -moz-padding-start: 28px;
   -moz-margin-start: -28px;
