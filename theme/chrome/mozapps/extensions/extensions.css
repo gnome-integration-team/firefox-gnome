@@ -1034,8 +1034,8 @@ setting[type="radio"] > radiogroup {
 
 .addon-control {
   -moz-appearance: none;
-  background: transparent !important;
-  border: 1px solid transparent !important;
+  background: transparent ;
+  border: 1px solid transparent;
   border-radius: 3px;
   filter: none;
   padding: 3px;
@@ -1057,8 +1057,8 @@ setting[type="radio"] > radiogroup {
 .addon-control:not([disabled="true"]):active:hover,
 .addon-control[checked="true"],
 .addon-control[checked="true"]:hover {
-  background-image: -moz-linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important;
-  border-color: rgba(0,0,0,.25) !important;
+  background-image: -moz-linear-gradient(to bottom, #c9c9c9, #e4e4e4);
+  border-color: rgba(0,0,0,.25);
   box-shadow: 0 1px 0 rgba(255,255,255,0.69);
 }
 
@@ -1117,7 +1117,8 @@ setting[type="radio"] > radiogroup {
   box-shadow: none !important;
 }
 
-.addon[active="false"] .addon-control.enable{
+.addon[active="false"] .addon-control.enable,
+.addon[active="false"] .addon-control.disable{
   opacity: 1;
 }
 
