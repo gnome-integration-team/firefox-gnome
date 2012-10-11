@@ -39,7 +39,9 @@ html|a {
 :-moz-type-unsupported .icon[status="ready"] {
   background-image: url(chrome://mozapps/skin/plugins/contentPluginDownload.png);
 }
-:-moz-handler-clicktoplay .icon,
+:-moz-handler-clicktoplay .icon {
+  background-image: url(chrome://mozapps/skin/plugins/contentPluginClickToPlay.png);
+}
 :-moz-handler-vulnerable-updatable .icon,
 :-moz-handler-vulnerable-no-update .icon {
   background-image: url(chrome://mozapps/skin/plugins/contentPluginClickToPlay.png);
