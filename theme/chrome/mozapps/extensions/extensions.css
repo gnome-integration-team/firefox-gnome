@@ -1095,14 +1095,30 @@ setting[type="radio"] > radiogroup {
   display: none;
 }
 
+   /*  Switches*/
+
 .addon-control.enable {
 /*  list-style-image: url("moz-icon://stock/gtk-yes?size=button");*/
-  list-style-image: url(chrome://browser/skin/symbolic-icons/playback-start.svg);
+  list-style-image: url(chrome://mozapps/skin/extensions/off.png);
 }
 
 .addon-control.disable {
 /*  list-style-image: url("moz-icon://stock/gtk-no?size=button");*/
-  list-style-image: url(chrome://browser/skin/symbolic-icons/unavailable.svg);
+  list-style-image: url(chrome://mozapps/skin/extensions/on.png);
+}
+
+.addon-control.enable:hover,
+.addon-control.disable:hover,
+.addon-control.enable:active,
+.addon-control.disable:active{
+  border-color: transparent !important;
+  background: none !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.addon[active="false"] .addon-control.enable{
+  opacity: 1;
 }
 
 .addon-control.remove {
