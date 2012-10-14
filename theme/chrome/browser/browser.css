@@ -2919,6 +2919,8 @@ html|*#gcli-output-frame {
   border: 1px solid transparent;
   border-radius: 3px;
   text-shadow: none;
+  /* The dev command line needs a background set somehow, else it'll be blank */
+  background: red;
 }
 
 .gclitoolbar-input-node {
