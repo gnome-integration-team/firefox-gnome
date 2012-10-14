@@ -1,4 +1,6 @@
-## GNOME 3 Adwaita theme for Firefox
+## GNOME theme for Firefox
+
+(This is the theme previously known as "Adwaita".)
 
 An easy-to-install version of this theme is available at 
 [Mozilla's ADD-ONS site](https://addons.mozilla.org/en-US/firefox/addon/adwaita).
