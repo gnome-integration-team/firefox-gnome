@@ -28,7 +28,7 @@
   background-image: url(chrome://browser/skin/symbolic-icons/extensions/xmarks-sync-grayscale.svg) !important;
 }
 #foxmarks-statusbarpanel > #foxmarks-statusimage[src*="dirty"] {
-  background-image: url(chrome://browser/skin/symbolic-icons/extensions/xmarks-sync-warning.svg) !important;
+  background-image: url(chrome://browser/skin/symbolic-icons/extensions/xmarks-sync-syncing.svg) !important;
 }
 #foxmarks-statusbarpanel > #foxmarks-statusimage[src*="wheel"] {
   background-image: url(chrome://browser/skin/symbolic-icons/extensions/xmarks-sync.svg) !important;
