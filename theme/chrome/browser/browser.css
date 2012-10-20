@@ -238,7 +238,7 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
 }
 
 #menu_close {
-  list-style-image: url(chrome://browser/skin/tabbrowser/close-normal.png);
+    list-style-image: url("moz-icon://stock/gtk-close?size=menu");
 }
 
 #context-media-play {
@@ -262,14 +262,14 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
 
 #appmenu_printPreview,
 #menu_printPreview {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/print.svg");
+  list-style-image: url("moz-icon://stock/gtk-print-preview?size=menu");
 }
 
 #appmenu_print,
 #appmenu_print_popup,
 #menu_print,
 #context-printframe {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/print.svg");
+  list-style-image: url("moz-icon://stock/gtk-print?size=menu");
 }
 
 #appmenu-quit,
@@ -384,7 +384,7 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
 #placesContext_reload,
 #context-reload,
 #context-reloadframe {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/refresh.svg");
+  list-style-image: url("moz-icon://stock/gtk-refresh?size=menu");
 }
 
 #menu_reload[disabled],
@@ -393,15 +393,15 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
 }
 
 #menu_zoomEnlarge {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/zoom-in.svg");
+  list-style-image: url("moz-icon://stock/gtk-zoom-in?size=menu");
 }
 
 #menu_zoomReduce {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/zoom-out.svg");
+  list-style-image: url("moz-icon://stock/gtk-zoom-out?size=menu");
 }
 
 #menu_zoomReset {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/zoom-original.svg");
+  list-style-image: url("moz-icon://stock/gtk-zoom-100?size=menu");
 }
 
 #historyMenuBack,
@@ -445,7 +445,8 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
 }
 
 #historyMenuHome {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/home.svg");}
+  list-style-image: url("moz-icon://stock/gtk-home?size=menu");
+}
 
 #appmenu_history,
 #appmenu_showAllHistory,
