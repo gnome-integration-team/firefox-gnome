@@ -39,13 +39,13 @@
 }
 
 #navigator-toolbox:not([tabsontop="false"]) > #nav-bar {
-  background: -moz-linear-gradient(top, #fff, #f3f3f3) !important;
+  background: linear-gradient(to bottom, #fff, #f3f3f3) !important;
 }
 #navigator-toolbox > toolbar[id*="custom"] {
   background: #f4f4f4 !important;
 }
 #navigator-toolbox > toolbar[id="PersonalToolbar"] {
-  background: -moz-linear-gradient(to bottom, #f4f4f4, #eee) !important;
+  background: linear-gradient(to bottom, #f4f4f4, #eee) !important;
 }
 #navigator-toolbox > :-moz-any(#toolbar-menubar, #TabsToolbar),
 #navigator-toolbox[tabsontop="false"] > toolbar {
@@ -54,7 +54,7 @@
 
 /* Inactive styling of the tabstrip for tabs on top */
 #main-window:-moz-window-inactive #navigator-toolbox:not([tabsontop="false"]) > #nav-bar {
-  background: -moz-linear-gradient(top, #f8f8f6, #f8f8f6) !important;
+  background: linear-gradient(to bottom, #f8f8f6, #f8f8f6) !important;
 }
 
 #nav-bar[iconsize="large"] {
@@ -562,13 +562,13 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   filter: none;
   padding: 3px;
   text-shadow: none;
-  -moz-transition-property: color, border, box-shadow, background;
-  -moz-transition-duration: 200ms;
+  transition-property: color, border, box-shadow, background;
+  transition-duration: 200ms;
 }
 
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:not([disabled="true"]):hover,
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) .toolbarbutton-menubutton-dropmarker:hover {
-  background-image: -moz-linear-gradient(to bottom, #ffffff, #ebebeb) !important;
+  background-image: linear-gradient(to bottom, #ffffff, #ebebeb) !important;
   border-color: rgba(0,0,0,.25) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89);
 }
@@ -577,7 +577,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:not([disabled="true"]):active:hover,
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[checked="true"],
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[checked="true"]:hover {
-  background-image: -moz-linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important;
+  background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important;
   border-color: rgba(0,0,0,.25) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89);
 }
@@ -631,14 +631,14 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button):not(:hover):not(:active):not([open="true"]),
 #FindToolbar :-moz-any(.findbar-find-next, .findbar-find-previous):not(:hover):not(:active):not([open="true"]) {
-  background-image: -moz-linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
+  background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
   border-color: rgba(0,0,0,.25) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1) !important;
 }
 
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button)[disabled="true"],
 #FindToolbar :-moz-any(.findbar-find-next, .findbar-find-previous)[disabled="true"] {
-  background-image: -moz-linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
+  background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
   border-color: rgba(0,0,0,.25) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1) !important;
 }
@@ -881,15 +881,15 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 /* Sync button (active) */
 @-moz-keyframes rotate {
-  from { -moz-transform: rotate(0deg); }
-  to   { -moz-transform: rotate(360deg); }
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 #sync-button[status="active"] > .toolbarbutton-icon {
   list-style-image: url(chrome://browser/skin/symbolic-icons/sync-working.svg);
-  -moz-animation-name:             rotate;
-  -moz-animation-duration:         2s;
-  -moz-transition-timing-function: linear;
-  -moz-animation-iteration-count:  infinite;
+  animation-name:             rotate;
+  animation-duration:         2s;
+  transition-timing-function: linear;
+  animation-iteration-count:  infinite;
 }
 
 #feed-button {
@@ -930,14 +930,14 @@ toolbar[iconsize="small"] .toolbarbutton-1:not([type="menu-button"]) {
 /* remove ugly white border around location and searchbars */
 #urlbar, .searchbar-textbox {
  -moz-appearance: none;
-  background: -moz-linear-gradient(to bottom, #f2f2f2, #fdfdfd);
+  background: linear-gradient(to bottom, #f2f2f2, #fdfdfd);
   border: 1px solid rgba(0,0,0,.25);
   border-radius: 3px;
   box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 0 0 rgba(255,255,255,0.89);
   color: #2e3436;
   overflow: hidden;
-  -moz-transition-property: border, box-shadow;
-  -moz-transition-duration: 200ms;
+  transition-property: border, box-shadow;
+  transition-duration: 200ms;
 }
 #nav-bar[iconsize=large] :-moz-any(#urlbar, .searchbar-textbox) {
   margin: 0px 3px;
@@ -988,8 +988,6 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button:not([switchingtabs]) + #urlbar-container > #urlbar {
-  -moz-transition: margin-left 200ms ease-out,
-                   margin-right 200ms ease-out;
   transition: margin-left 200ms ease-out,
               margin-right 200ms ease-out;
 }
@@ -1011,15 +1009,11 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button #forward-button {
-  -moz-transition: opacity 200ms ease-in,
-                   visibility 200ms ease-out;
   transition: opacity 200ms ease-in,
               visibility 200ms ease-out;
 }
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] #forward-button {
-  -moz-transition: opacity 200ms ease-out,
-                   visibility 200ms ease-out;
   transition: opacity 200ms ease-out,
               visibility 200ms ease-out;
   opacity: 0 !important;
@@ -1027,7 +1021,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button #back-button {
-  -moz-transition: box-shadow 0ms ease-in;
+  transition: box-shadow 0ms ease-in;
 }
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] #back-button {
@@ -1145,7 +1139,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #identity-box:hover:active,
 #identity-box[open="true"] {
-  background: -moz-linear-gradient(to bottom, #d1d1d1, #fff);
+  background: linear-gradient(to bottom, #d1d1d1, #fff);
   box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.15);
 }
 
@@ -1158,7 +1152,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain:hover:active,
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain[open="true"] {
-  background: -moz-linear-gradient(to bottom, rgba(114, 159, 207, 0.35), rgba(114, 159, 207, 0.05));
+  background: linear-gradient(to bottom, rgba(114, 159, 207, 0.35), rgba(114, 159, 207, 0.05));
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity {
@@ -1170,7 +1164,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:hover:active,
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity[open="true"] {
-  background: -moz-linear-gradient(to bottom, rgba(115, 210, 22, 0.25), rgba(115, 210, 22, 0.05));
+  background: linear-gradient(to bottom, rgba(115, 210, 22, 0.25), rgba(115, 210, 22, 0.05));
 }
 
 /* Identity popup icons */
@@ -1330,7 +1324,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #notification-popup-box:-moz-locale-dir(rtl),
 .notification-anchor-icon:-moz-locale-dir(rtl) {
-  -moz-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .notification-anchor-icon {
@@ -1489,7 +1483,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 #urlbar > toolbarbutton:not([disabled="true"]):active {
 /*#urlbar-icons > :-moz-any(box, image, menupopup):not([disabled="true"]):active {*/
-  background: -moz-linear-gradient(to bottom, #d1d1d1, #fff) !important;
+  background: linear-gradient(to bottom, #d1d1d1, #fff) !important;
   box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.15) !important;
 }
 
@@ -1503,7 +1497,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 #go-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
 #urlbar-go-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
-  -moz-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 #urlbar-reload-button {
@@ -1525,7 +1519,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .urlbar-history-dropmarker:not([disabled="true"]):active,
 .urlbar-history-dropmarker[open="true"] {
   background: url(chrome://browser/skin/symbolic-icons/down.svg) no-repeat center,
-               -moz-linear-gradient(to bottom, #d1d1d1, #fff) !important;
+              linear-gradient(to bottom, #d1d1d1, #fff) !important;
   box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.15) !important;
 }
 */
@@ -1561,7 +1555,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 /*
 #urlbar-icons > #star-button:not([disabled="true"]):active {
   background: url(chrome://browser/skin/symbolic-icons/add-bookmark.svg) no-repeat center,
-               -moz-linear-gradient(to bottom, #d1d1d1, #fff) !important;
+              linear-gradient(to bottom, #d1d1d1, #fff) !important;
 }
 */
 
@@ -1574,7 +1568,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 /*
 #urlbar-icons > #star-button[starred="true"]:not([disabled="true"]):active {
   background: url(chrome://browser/skin/symbolic-icons/added-bookmark.svg) no-repeat center,
-               -moz-linear-gradient(to bottom, #d1d1d1, #fff) !important;
+              linear-gradient(to bottom, #d1d1d1, #fff) !important;
 }
 */
 
@@ -1623,7 +1617,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   margin: 8px -10px -10px -10px;
   padding: 8px 10px;
   border-top: 1px solid ThreeDShadow;
-  background-image: -moz-linear-gradient(hsla(0,0%,0%,.15), hsla(0,0%,0%,.08) 6px);
+  background-image: linear-gradient(hsla(0,0%,0%,.15), hsla(0,0%,0%,.08) 6px);
 }
 
 .panel-promo-icon {
@@ -1683,13 +1677,13 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   /* FIXME */
   border: 1px solid transparent;
   border-radius: 3px;
-  -moz-transition-property: border, box-shadow, background;
-  -moz-transition-duration: 200ms;
+  transition-property: border, box-shadow, background;
+  transition-duration: 200ms;
 }
 
 /* FIXME */
 #sidebar-header > .tabs-closebutton:hover {
-  background-image: -moz-linear-gradient(to bottom, #ffffff, #ebebeb);
+  background-image: linear-gradient(to bottom, #ffffff, #ebebeb);
   border-color: rgba(0,0,0,.25);
   box-shadow: 0 1px 0 rgba(255,255,255,0.89);
 }
@@ -1697,7 +1691,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 /* FIXME */
 #sidebar-header > .tabs-closebutton:active,
 #sidebar-header > .tabs-closebutton:active:hover {
-  background-image: -moz-linear-gradient(to bottom, #c9c9c9, #e4e4e4);
+  background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4);
   border-color: rgba(0,0,0,.25);
   box-shadow: 0 1px 0 rgba(255,255,255,0.89);
 }
@@ -1785,7 +1779,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   padding: 0;
   
   /* Uncomment it for test transition property */
-  /*  -moz-transition-duration: 30s !important;*/ /* For Fx 15 */
   /*  transition-duration: 30s !important;*/
 }
 
@@ -1947,7 +1940,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 #TabsToolbar .tab-close-button:active {
   list-style-image: url(chrome://browser/skin/tabbrowser/close-active.png);
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.13) 1px, rgba(0, 0, 0, 0.08) 2px, rgba(0, 0, 0, 0.07) 100%) !important;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.13) 1px, rgba(0, 0, 0, 0.08) 2px, rgba(0, 0, 0, 0.07) 100%) !important;
   border-color: rgba(0, 0, 0, 0.12) !important;
   border-top-color: rgba(0, 0, 0, 0.27) !important;
   box-shadow: none !important;
@@ -2016,7 +2009,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tabbrowser-arrowscrollbox > .scrollbutton-down {
   -moz-border-start: 2px solid transparent !important; /* FIXME */
   -moz-border-end: 0 !important; /* FIXME */
-  -moz-transition: 1s box-shadow ease-out;
   transition: 1s box-shadow ease-out;
   border-radius: 4px;
 }
@@ -2097,7 +2089,7 @@ toolbarbutton.chevron {
 }
 
 toolbarbutton.chevron:-moz-locale-dir(rtl) > .toolbarbutton-icon {
-  -moz-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 toolbarbutton.chevron > .toolbarbutton-text,
@@ -2187,7 +2179,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 }
 
 .allTabs-preview-label {
-  -moz-transform: translate(0, 2px);
+  transform: translate(0, 2px);
 }
 
 /* Application button menu */
@@ -2296,7 +2288,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 .statuspanel-label {
   margin: 0;
   padding: 2px 4px;
-  background: -moz-linear-gradient(white, #ddd);
+  background: linear-gradient(to bottom, white, #ddd);
   border: 1px none #ccc;
   border-top-style: solid;
   color: #333;
@@ -2320,14 +2312,14 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 /* Override the tab animations */
 .tabbrowser-tab:not([pinned]) {
   max-width: 14em;
-  -moz-transition: min-width 50ms ease-out,
+  transition: min-width 50ms ease-out,
     max-width 50ms ease-out,
     opacity 100ms ease-out 100ms
     /* hide the tab for the first 100ms of the max-width transition */;
 }
 
 .tabbrowser-tab:not([pinned]):not([fadein]) {
-  -moz-transition: min-width 100ms ease-in,
+  transition: min-width 100ms ease-in,
     max-width 100ms ease-in,
     opacity 50ms ease-in 100ms
     /* hide the tab for the last 100ms of the max-width transition */;
@@ -2421,7 +2413,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 #highlighter-panel {
   -moz-appearance: none;
   -moz-window-shadow: none;
-  background: -moz-linear-gradient(top -1deg, #ffdd88, #ffeeaa);
+  background: linear-gradient(to bottom, #ffdd88, #ffeeaa);
   border: none;
   opacity: 0.35;
 }
@@ -2508,14 +2500,14 @@ panel[dimmed="true"] {
   color: hsl(200, 100%, 65%);
   border: 1px solid hsla(210, 19%, 63%, .5);
   border-radius: 3px;
-  background: -moz-linear-gradient(hsl(209, 18%, 30%), hsl(210, 24%, 16%)) no-repeat padding-box;
+  background: linear-gradient(to bottom, hsl(209, 18%, 30%), hsl(210, 24%, 16%)) no-repeat padding-box;
 }
 
 /* Highlighter - Node Infobar - text */
 
 #highlighter-nodeinfobar-text {
   /* 100% - size of the buttons and margins */
-  max-width: -moz-calc(100% - 2 * (26px + 6px));
+  max-width: calc(100% - 2 * (26px + 6px));
   padding-bottom: 1px;
 }
 
@@ -2581,8 +2573,8 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
 .highlighter-nodeinfobar-arrow {
   width: 14px;
   height: 14px;
-  -moz-margin-start: -moz-calc(50% - 7px);
-  -moz-transform: rotate(-45deg);
+  -moz-margin-start: calc(50% - 7px);
+  transform: rotate(-45deg);
   border: 1px solid transparent;
   background-clip: padding-box;
   background-repeat: no-repeat;
@@ -2593,7 +2585,7 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
   margin-top: 8px;
   border-right-color: hsla(210, 19%, 63%, .5);
   border-top-color: hsla(210, 19%, 63%, .5);
-  background-image: -moz-linear-gradient(bottom left, transparent 50%, hsl(209, 18%, 30%) 50%);
+  background-image: linear-gradient(to top right, transparent 50%, hsl(209, 18%, 30%) 50%);
 }
 
 #highlighter-nodeinfobar-arrow-bottom {
@@ -2601,7 +2593,7 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
   margin-bottom: 8px;
   border-left-color: hsla(210, 19%, 63%, .5);
   border-bottom-color: hsla(210, 19%, 63%, .5);
-  background-image: -moz-linear-gradient(top right, transparent 50%, hsl(210, 24%, 16%) 50%);
+  background-image: linear-gradient(to bottom left, transparent 50%, hsl(210, 24%, 16%) 50%);
 }
 
 #highlighter-nodeinfobar-container[position="top"] > #highlighter-nodeinfobar,
@@ -2654,7 +2646,7 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
 #inspector-breadcrumbs > .scrollbutton-down {
   -moz-appearance: none;
   border: 1px solid hsla(210,8%,5%,.45);
-  background: -moz-linear-gradient(hsla(212,7%,57%,.35), hsla(212,7%,57%,.1)) padding-box;
+  background: linear-gradient(to bottom, hsla(212,7%,57%,.35), hsla(212,7%,57%,.1)) padding-box;
   box-shadow: 0 1px 0 hsla(210,16%,76%,.15) inset, 0 0 0 1px hsla(210,16%,76%,.15) inset, 0 1px 0 hsla(210,16%,76%,.15);
   margin: 0 0 1px;
 }
@@ -2666,7 +2658,7 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
 #inspector-breadcrumbs > .scrollbutton-up:not([disabled]):active:hover,
 #inspector-breadcrumbs > .scrollbutton-down:not([disabled]):active:hover {
   border-color: hsla(210,8%,5%,.6);
-  background: -moz-linear-gradient(hsla(220,6%,10%,.3), hsla(212,7%,57%,.15) 65%, hsla(212,7%,57%,.3));
+  background: linear-gradient(to bottom, hsla(220,6%,10%,.3), hsla(212,7%,57%,.15) 65%, hsla(212,7%,57%,.3));
   box-shadow: 0 0 3px hsla(210,8%,5%,.25) inset, 0 1px 3px hsla(210,8%,5%,.25) inset, 0 1px 0 hsla(210,16%,76%,.15);
 }
 
@@ -2690,7 +2682,7 @@ html|*#highlighter-nodeinfobar-pseudo-classes {
 
 #inspector-breadcrumbs > .scrollbutton-up > .toolbarbutton-icon:-moz-locale-dir(rtl),
 #inspector-breadcrumbs > .scrollbutton-down > .toolbarbutton-icon:-moz-locale-dir(ltr) {
-  -moz-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .inspector-breadcrumbs-button {
@@ -3014,7 +3006,7 @@ stack[anonid=browserStack][responsivemode] {
   width: 7px;
   height: 24px;
   cursor: ew-resize;
-  -moz-transform: translate(12px, -12px);
+  transform: translate(12px, -12px);
   background-image: url("chrome://browser/skin/devtools/responsive-vertical-resizer.png");
 }
 
@@ -3022,7 +3014,7 @@ stack[anonid=browserStack][responsivemode] {
   width: 16px;
   height: 16px;
   cursor: se-resize;
-  -moz-transform: translate(12px, 12px);
+  transform: translate(12px, 12px);
   background-image: url("chrome://browser/skin/devtools/responsive-se-resizer.png");
 }
 
@@ -3086,6 +3078,6 @@ stack[anonid=browserStack][responsivemode] {
   color: #FDF3DE;
   min-width: 16px;
   text-shadow: none;
-  background-image: -moz-linear-gradient(top, #B4211B, #8A1915);
+  background-image: linear-gradient(to bottom, #B4211B, #8A1915);
   border-radius: 1px;
 }

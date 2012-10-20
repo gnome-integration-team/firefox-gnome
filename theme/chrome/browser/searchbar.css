@@ -61,7 +61,7 @@
 }
 
 .searchbar-engine-button:active, .searchbar-engine-button[open="true"] {
-  background-image: -moz-linear-gradient(top, #d1d1d1, #ffffff) !important;
+  background-image: linear-gradient(to bottom, #d1d1d1, #ffffff) !important;
   box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.15) !important;
 }
 
@@ -83,7 +83,7 @@
 }
 
 .search-go-container:active {
-  background-image: -moz-linear-gradient(top, #d1d1d1, #ffffff) !important;
+  background-image: linear-gradient(to bottom, #d1d1d1, #ffffff) !important;
   box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.15) !important;
 }
 

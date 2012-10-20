@@ -21,7 +21,7 @@ body {
 	color: #2e3436;
 	padding: 20px 20px 0 20px;
 	background-color: #f6f6f4;
-	background-image: -moz-linear-gradient(top, #eeeeec, #f6f6f4);
+	background-image: linear-gradient(to bottom, #eeeeec, #f6f6f4);
 	background-size: 100% 5em;
 	background-repeat: no-repeat;
 }
@@ -113,10 +113,10 @@ body[dir="rtl"] #errorPageContainer {
   border-left: 1px solid rgba(0,0,0,.15) ;
   box-shadow: 0 1px 0 rgba(255,255,255,1)inset ,
               0 1px rgba(255,255,255,1);
-  background-image: -moz-linear-gradient(#F5F5F5, #DCDCDC);
+  background-image: linear-gradient(to bottom, #f5f5f5, #dcdcdc);
   padding: 4px 9px ;
-    -moz-transition-property: color, border, box-shadow, background-image;
-  -moz-transition-duration: 200ms;
+  transition-property: color, border, box-shadow, background-image;
+  transition-duration: 200ms;
 }
 
 #errorTryAgain:hover{
@@ -129,7 +129,7 @@ body[dir="rtl"] #errorPageContainer {
   border-color: rgba(0,0,0,0.3);
   box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.2) inset ,
               0 1px rgba(255,255,255,1);
-  background-image: -moz-linear-gradient(top, #F5F5F5, #DCDCDC);
+  background-image: linear-gradient(to bottom, #F5F5F5, #DCDCDC);
   text-shadow: 0px 1px 0px rgba(255,255,255,0.6);
 }
 #brand {

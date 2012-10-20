@@ -162,17 +162,13 @@
   border-bottom: 0;
   height: 0;
   opacity: 0;
-  -moz-transition-property: height, opacity; /* For Fx 15 */
   transition-property: height, opacity;
-  -moz-transition-duration: 1s, 0.8s; /* For Fx 15 */
   transition-duration: 1s, 0.8s;
 }
 
 .category:not([disabled]) {
 /*  height: 30px;*/
-  -moz-transition-property: height, opacity; /* For Fx 15 */
   transition-property: height, opacity;
-  -moz-transition-duration: 1s, 0.8s; /* For Fx 15 */
   transition-duration: 1s, 0.8s;
 }
 
@@ -285,7 +281,6 @@
   margin: 0;
   padding: 0 2px;
   height: 37px;
-  background: -moz-linear-gradient(to bottom, #fff, #f3f3f3); /* For Fx 15 */
   background: linear-gradient(to bottom, #fff, #f3f3f3);
   border-bottom: 1px solid #a7a7a7;
 }
@@ -302,15 +297,12 @@
   min-width: 32px;
   min-height: 28px;
   text-shadow: none;
-  -moz-transition-property: color, border, box-shadow, background;
   transition-property: color, border, box-shadow, background;
-  -moz-transition-duration: 200ms;
   transition-duration: 200ms;
 }
 
 #header toolbarbutton:not([disabled="true"]):hover,
 #header .toolbarbutton-menubutton-dropmarker:hover {
-  background-image: -moz-linear-gradient(to bottom, #ffffff, #ebebeb) !important; /* For Fx 15 */
   background-image: linear-gradient(to bottom, #ffffff, #ebebeb) !important;
   border: 1px solid rgba(0,0,0,.25) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
@@ -320,7 +312,6 @@
 #header toolbarbutton:not([disabled="true"]):active:hover,
 #header toolbarbutton[checked="true"],
 #header toolbarbutton[checked="true"]:hover {
-  background-image: -moz-linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important; /* For Fx 15 */
   background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important;
 /*  border-color: #72a0cf;*/
   border: 1px solid rgba(0,0,0,.25) !important;
@@ -655,22 +646,22 @@
 
 /*
 .addon[active="false"] {
-  background-image: -moz-linear-gradient(rgba(135, 135, 135, 0.2),
-                                         rgba(135, 135, 135, 0.1));
+  background-image: linear-gradient(rgba(135, 135, 135, 0.2),
+                                    rgba(135, 135, 135, 0.1));
 }
 */
 
 .addon-view[notification="warning"] {
   background-image: url("chrome://mozapps/skin/extensions/stripes-warning.png"),
-                    -moz-linear-gradient(rgba(255, 255, 0, 0.04),
-                                         rgba(255, 255, 0, 0));
+                     linear-gradient(rgba(255, 255, 0, 0.04),
+                                     rgba(255, 255, 0, 0));
   background-repeat: repeat-x;
 }
 
 .addon-view[notification="error"] {
   background-image: url("chrome://mozapps/skin/extensions/stripes-error.png"),
-                    -moz-linear-gradient(rgba(255, 0, 0, 0.04),
-                                         rgba(255, 0, 0, 0));
+                     linear-gradient(rgba(255, 0, 0, 0.04),
+                                     rgba(255, 0, 0, 0));
   background-repeat: repeat-x;
 }
 
@@ -678,16 +669,16 @@
 .addon-view[pending="upgrade"],
 .addon-view[pending="install"] {
   background-image: url("chrome://mozapps/skin/extensions/stripes-info-positive.png"),
-                    -moz-linear-gradient(rgba(0, 255, 0, 0.04),
-                                         rgba(0, 255, 0, 0));
+                     linear-gradient(rgba(0, 255, 0, 0.04),
+                                     rgba(0, 255, 0, 0));
   background-repeat: repeat-x;
 }
 
 .addon-view[pending="disable"],
 .addon-view[pending="uninstall"] {
   background-image: url("chrome://mozapps/skin/extensions/stripes-info-negative.png"),
-                    -moz-linear-gradient(rgba(128, 128, 128, 0.04),
-                                         rgba(128, 128, 128, 0));
+                     linear-gradient(rgba(128, 128, 128, 0.04),
+                                     rgba(128, 128, 128, 0));
   background-repeat: repeat-x;
 }
 
@@ -696,17 +687,13 @@
   height: 0;
   overflow: hidden;
   opacity: 0;
-  -moz-transition-property: height, opacity;
   transition-property: height, opacity;
-  -moz-transition-duration: 0.5s, 0.5s;
   transition-duration: 0.5s, 0.5s;
 }
 
 .addon[show-relnotes] .relnotes-container {
   opacity: 1;
-  -moz-transition-property: height, opacity;
   transition-property: height, opacity;
-  -moz-transition-duration: 0.5s, 0.5s;
   transition-duration: 0.5s, 0.5s;
 }
 
@@ -764,9 +751,7 @@
   -moz-box-align: center;
   -moz-box-pack: center;
   opacity: 1;
-  -moz-transition-property: opacity;
   transition-property: opacity;
-  -moz-transition-duration: 1s;
   transition-duration: 1s;
 }
 
@@ -886,8 +871,8 @@ setting {
 
 /*
 #detail-view[active="false"]:not([pending]):not([notification]) {
-  background-image: -moz-linear-gradient(rgba(135, 135, 135, 0.1),
-                                         rgba(135, 135, 135, 0));
+  background-image: linear-gradient(rgba(135, 135, 135, 0.1),
+                                    rgba(135, 135, 135, 0));
 }
 */
 
@@ -1041,9 +1026,7 @@ setting[type="radio"] > radiogroup {
   padding: 3px;
   min-width: 32px;
   opacity: 0.8;
-  -moz-transition-property: border, box-shadow, background;
   transition-property: border, box-shadow, background;
-  -moz-transition-duration: 200ms;
   transition-duration: 200ms;
 }
 
@@ -1057,7 +1040,7 @@ setting[type="radio"] > radiogroup {
 .addon-control:not([disabled="true"]):active:hover,
 .addon-control[checked="true"],
 .addon-control[checked="true"]:hover {
-  background-image: -moz-linear-gradient(to bottom, #c9c9c9, #e4e4e4);
+  background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4);
   border-color: rgba(0,0,0,.25);
   box-shadow: 0 1px 0 rgba(255,255,255,0.69);
 }

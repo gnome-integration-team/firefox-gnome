@@ -5,13 +5,13 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 notification {
-  background: -moz-linear-gradient(to bottom, #D4D4D4, #ECECEC);
+  background: linear-gradient(to bottom, #d4d4d4, #ececec);
   color: rgba(0,0,0,0.8) !important;
   box-shadow: 0 3px 5px rgba(0,0,0,0.2) inset;
   text-shadow: none;
 
   /* FIXME */
-  width: -moz-calc(100% + 2px);
+  width: calc(100% + 2px);
   -moz-margin-start: -1px;
   margin-top: -1px;
 }
@@ -22,7 +22,7 @@ notification[type="info"] {
 }
 
 notification[type="critical"] {
-  /* background-image: -moz-linear-gradient(rgb(212,0,0), rgb(152,0,0)); */
+  /* background-image: linear-gradient(to bottom, rgb(212,0,0), rgb(152,0,0)); */
   /* color: white; */
 }
 

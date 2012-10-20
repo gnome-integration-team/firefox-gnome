@@ -10,7 +10,7 @@ body {
 
 #bg {
   background-color: window;
-  background-image: -moz-linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,.2));
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,.2));
 }
 
 /* Tabs
@@ -116,7 +116,7 @@ html[dir=rtl] .close {
 html[dir=rtl] .expander {
   right: auto;
   left: 6px;
-  -moz-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .expander:hover {
@@ -126,9 +126,6 @@ html[dir=rtl] .expander {
 .close:hover,
 .expander:hover,
 .appTabIcon:hover {
-  -moz-transition-property: opacity;
-  -moz-transition-duration: 0.5s;
-  -moz-transition-timing-function: ease-out;
   transition-property: opacity;
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
@@ -200,7 +197,7 @@ html[dir=rtl] .stack-trayed .tab-title {
   cursor: pointer;
   border: 1px solid rgba(230,230,230,1);
   background-color: window;
-  background-image: -moz-linear-gradient(rgba(255,255,255,.3),rgba(255,255,255,.1));
+  background-image: linear-gradient(to bottom, rgba(255,255,255,.3),rgba(255,255,255,.1));
   border-radius: 0.4em;
   box-shadow:
     inset rgba(255, 255, 255, 0.6) 0 0 0 2px,
@@ -487,7 +484,7 @@ html[dir=rtl] .title-shield {
 html[dir=rtl] .resizer {
   right: auto;
   left: 0;
-  -moz-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .iq-resizable-handle {

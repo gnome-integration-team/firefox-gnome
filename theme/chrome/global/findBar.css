@@ -8,7 +8,7 @@ findbar {
   /*
   background-color: Window;
   */
-  background: -moz-linear-gradient(to bottom, #d4d4d4, #ececec);
+  background: linear-gradient(to bottom, #d4d4d4, #ececec);
   /*
   border-top: 1px solid #a7aba7;
   */

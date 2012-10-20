@@ -27,7 +27,7 @@
 
 #downloadsPanel[hasdownloads] > #downloadsHistory {
   border-top: 1px solid ThreeDShadow;
-  background-image: -moz-linear-gradient(hsla(0,0%,0%,.15), hsla(0,0%,0%,.08) 6px);
+  background-image: linear-gradient(to bottom, hsla(0,0%,0%,.15), hsla(0,0%,0%,.08) 6px);
 }
 
 #downloadsHistory > .button-box {
@@ -116,7 +116,7 @@ richlistitem[type="download"][state="1"] > .downloadInfo:hover {
   border-top: 1px solid hsla(0,0%,100%,.3);
   border-bottom: 1px solid hsla(0,0%,0%,.2);
   background-color: Highlight;
-  background-image: -moz-linear-gradient(hsla(0,0%,100%,.1), hsla(0,0%,100%,0));
+  background-image: linear-gradient(to bottom, hsla(0,0%,100%,.1), hsla(0,0%,100%,0));
   color: HighlightText;
   cursor: pointer;
 }
@@ -202,24 +202,24 @@ richlistitem[type="download"][state="1"] > .downloadInfo:hover {
 }
 
 @-moz-keyframes downloadsIndicatorNotificationRight {
-  from { opacity: 0; -moz-transform: translate(-128px, 128px) scale(8); }
-  20%  { opacity: .85; -moz-animation-timing-function: ease-out; }
-  to   { opacity: 0; -moz-transform: translate(0) scale(1); }
+  from { opacity: 0; transform: translate(-128px, 128px) scale(8); }
+  20%  { opacity: .85; animation-timing-function: ease-out; }
+  to   { opacity: 0; transform: translate(0) scale(1); }
 }
 
 @-moz-keyframes downloadsIndicatorNotificationLeft {
-  from { opacity: 0; -moz-transform: translate(128px, 128px) scale(8); }
-  20%  { opacity: .85; -moz-animation-timing-function: ease-out; }
-  to   { opacity: 0; -moz-transform: translate(0) scale(1); }
+  from { opacity: 0; transform: translate(128px, 128px) scale(8); }
+  20%  { opacity: .85; animation-timing-function: ease-out; }
+  to   { opacity: 0; transform: translate(0) scale(1); }
 }
 
 #downloads-indicator[notification] > #downloads-indicator-anchor > #downloads-indicator-notification {
-  -moz-animation-name: downloadsIndicatorNotificationRight;
-  -moz-animation-duration: 1s;
+  animation-name: downloadsIndicatorNotificationRight;
+  animation-duration: 1s;
 }
 
 #downloads-indicator[notification]:-moz-locale-dir(rtl) > #downloads-indicator-anchor > #downloads-indicator-notification {
-  -moz-animation-name: downloadsIndicatorNotificationLeft;
+  animation-name: downloadsIndicatorNotificationLeft;
 }
 
 /*** Progress bar and text ***/
