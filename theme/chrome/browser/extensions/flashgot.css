@@ -1,0 +1,6 @@
+
+/*Replace video icon*/
+
+#flashgot-media-tbb {
+  list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/flashgot-video.svg") !important;
+}
