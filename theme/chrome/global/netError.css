@@ -11,19 +11,18 @@
  */
 
 html {
-
 }
 
 body {
   margin: 0;
   padding: 0;
-	font: 11pt cantarell;
-	color: #2e3436;
-	padding: 20px 20px 0 20px;
-	background-color: #f6f6f4;
-	background-image: linear-gradient(to bottom, #eeeeec, #f6f6f4);
-	background-size: 100% 5em;
-	background-repeat: no-repeat;
+  font: 11pt cantarell;
+  color: #2e3436;
+  padding: 20px 20px 0 20px;
+  background-color: #f6f6f4;
+  background-image: linear-gradient(to bottom, #eeeeec, #f6f6f4);
+  background-size: 100% 5em;
+  background-repeat: no-repeat;
 }
 
 h1 {
@@ -56,17 +55,15 @@ ul {
   -moz-padding-start: 5em;
   text-align: left;
   color: #2e3436;
-
 }
 
 #errorPageContainer > #errorLongContent{
-   padding: 0 24px;
+  padding: 0 24px;
 }
 
 #errorPageContainer  h1{
-   padding: 0 24px;
+  padding: 0 24px;
 }
-
 
 #errorPageContainer.certerror {
   background-image: url("chrome://global/skin/icons/sslWarning.png");
@@ -89,13 +86,11 @@ body[dir="rtl"] #errorPageContainer {
   padding-bottom: 1em;
   font-size: 110%;
   white-space: pre-wrap;
-
 }
 
 #errorLongDesc {
   -moz-padding-end: 3em;
   font-size: 100%;
-
 }
 
 #errorLongDesc > p {
@@ -108,7 +103,7 @@ body[dir="rtl"] #errorPageContainer {
   -moz-appearance: none;
   border-radius: 3px;
   border: 1px solid;
-   margin-left: 8em;
+  margin-left: 8em;
   border-color: rgba(0,0,0,.2);
   border-left: 1px solid rgba(0,0,0,.15) ;
   box-shadow: 0 1px 0 rgba(255,255,255,1)inset ,
@@ -120,14 +115,14 @@ body[dir="rtl"] #errorPageContainer {
 }
 
 #errorTryAgain:hover{
-		color: rgba(0,0,0,0.75);
-	  border-color: rgba(0,0,0,0.5);
+  color: rgba(0,0,0,0.75);
+  border-color: rgba(0,0,0,0.5);
 }
 
 #errorTryAgain:active{
   color: rgba(0,0,0,0.75);
   border-color: rgba(0,0,0,0.3);
-  box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.2) inset ,
+  box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.2) inset,
               0 1px rgba(255,255,255,1);
   background-image: linear-gradient(to bottom, #F5F5F5, #DCDCDC);
   text-shadow: 0px 1px 0px rgba(255,255,255,0.6);
@@ -168,24 +163,19 @@ body[dir="rtl"] #brand {
 :root.blacklist #errorTitle, :root.blacklist #errorLongContent,
 :root.blacklist #errorShortDesc, :root.blacklist #errorLongDesc,
 :root.blacklist a {
-
 }
 
 :root.blacklist #errorPageContainer {
-
 }
 
 :root.blacklist {
-
 }
 
 :root.blacklist #errorTryAgain {
   display: none;
 }
 
-/*Remove out-of place images in about:robots*/
-
+/* Remove out-of place images in about:robots */
 #errorPageContainer > img {
-	display: none;
-
+  display: none;
 }
