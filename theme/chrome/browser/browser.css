@@ -2222,7 +2222,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   list-style-image: url("chrome://browser/skin/symbolic-icons/paste.svg");
 }
 #wrapper-appmenu-toolbar-button,
-.appmenu-edit-button[disabled="true"] {
+.appmenu-edit-button[disabled="true"] > .toolbarbutton-icon {
   opacity: .3;
 }
 
