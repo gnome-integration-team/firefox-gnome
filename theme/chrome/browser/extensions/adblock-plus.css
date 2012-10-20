@@ -9,6 +9,6 @@
 
 #abp-toolbarbutton[abpstate="disabled"] .toolbarbutton-icon,
 #abp-toolbarbutton[abpstate="whitelisted"] .toolbarbutton-icon {
-  opacity: 0.5 !important;
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/adblock-plus-stopped.svg) !important;
   -moz-image-region: auto !important;
 }
