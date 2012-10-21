@@ -107,9 +107,24 @@
 /* Close button */
 
 .devtools-closebutton {
-  list-style-image: url("moz-icon://stock/gtk-close?size=menu");
+  -moz-appearance: none;
+  list-style-image: url("chrome://browser/skin/symbolic-icons/close_white.svg");
   margin-top: 0;
   margin-bottom: 0;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid;
+  border-color: transparent;
+  opacity: 0.6;
+}
+
+
+.devtools-closebutton:hover{
+  border-color: rgba(0,0,0,0.3);
+  opacity: 1;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset,
+              0 1px 0 rgba(255,255,255,0.1);
+
 }
 
 .devtools-closebutton > .toolbarbutton-icon {
