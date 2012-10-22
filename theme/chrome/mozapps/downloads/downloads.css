@@ -11,8 +11,12 @@
   -moz-appearance: none !important;
   background-color: #ffffff;
   margin: 0;
-  border-top: 1px solid #a7aba7;
+  -moz-box-ordinal-group: 2;
+}
+
+windowdragbox#search {
   border-bottom: 1px solid #a7aba7;
+  -moz-box-ordinal-group: 1;
 }
 
 /* Download View Items */
@@ -114,13 +118,22 @@ menuitem:not([type]) {
   padding: 8px;
 }
 
-/*
 #clearListButton {
-  list-style-image: url(moz-icon://stock/gtk-clear?size=button);
-  margin-top: 3px;
+  list-style-image: url(chrome://browser/skin/symbolic-icons/clear-all.svg);
+  min-width: 30px;
 }
 
-#clearListButton[disabled="true"] {
-  list-style-image: url(moz-icon://stock/gtk-clear?size=button&state=disabled);
+#clearListButton .button-text {
+  display: none;
 }
-*/
+
+#clearListButton .button-icon {
+  display: block !important;
+  -moz-margin-end: 0;
+  opacity: 1;
+}
+
+#clearListButton[disabled="true"] .button-icon {
+  opacity: 0.5;
+}
+
