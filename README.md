@@ -17,10 +17,10 @@ Help & feedback are both appreciated! ;-)
 
 Tabs on top:
 
-![Screenshot](adwaita-firefox/raw/master/screenshots/screenshot-tabs-on-top.png)
+![Screenshot](firefox-gnome/raw/master/screenshots/screenshot-tabs-on-top.png)
 
 Tabs on bottom:
 
 (Visit to `about:config` in your URL bar and change **browser.tabs.onTop** to **false**.)
 
-![Screenshot](adwaita-firefox/raw/master/screenshots/screenshot-tabs-on-bottom.png)
+![Screenshot](firefox-gnome/raw/master/screenshots/screenshot-tabs-on-bottom.png)
