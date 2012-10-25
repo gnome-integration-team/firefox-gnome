@@ -1745,6 +1745,10 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-border-bottom-colors: #a7a7a7 #fff #fff;
 }
 
+#nav-bar[iconsize=small] ~ #TabsToolbar[tabsontop="false"] {
+  margin-top: 2px; /* margin between tabs and browser bar */
+}
+
 /* Recolor tabstrip underline when the window is inactive */
 #main-window:-moz-window-inactive #TabsToolbar[tabsontop="false"] {
   -moz-border-bottom-colors: #a7a7a7 #f8f8f6 #f8f8f6;
