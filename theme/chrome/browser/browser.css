@@ -88,6 +88,18 @@ toolbarbutton.bookmark-item {
   height: 16px;
 }
 
+/*Remove attention from close buttons until hovered over*/
+
+.messageCloseButton,
+#addonbar-closebutton {
+	opacity: 0.4;
+}
+
+.messageCloseButton:hover,
+#addonbar-closebutton:hover {
+	opacity: 1;
+}
+
 /* Prevent [mode="icons"] from hiding the label */
 .bookmark-item > .toolbarbutton-text {
   display: -moz-box !important;
@@ -1699,7 +1711,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
   margin-bottom: 0px !important;
   padding: 2px;
-  
+
   /* FIXME */
   border: 1px solid transparent;
   border-radius: 3px;
@@ -1807,7 +1819,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   color: #2e3436;
   margin: 0;
   padding: 0;
-  
+
   /* Uncomment it for test transition property */
   /*  transition-duration: 30s !important;*/
 }
