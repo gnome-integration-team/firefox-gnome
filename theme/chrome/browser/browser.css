@@ -2277,10 +2277,11 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 }
 
 #status-bar {
-  min-height: 0;
   -moz-appearance: none;
   background-color: transparent;
   border: none;
+  min-height: 0;
+  min-width: 0;
 }
 
 #addon-bar[customizing] > #status-bar {
