@@ -308,3 +308,8 @@ notification > button {
 #addons-page .button-link {
   box-shadow: none !important;
 }
+
+/* About dialog */
+window#aboutDialog #clientBox {
+  background-color: Window;
+}
