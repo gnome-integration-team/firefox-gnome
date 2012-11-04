@@ -5,27 +5,21 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 notification {
-  background: linear-gradient(to bottom, #d4d4d4, #ececec);
+  background: #faad3d;
   border-bottom: 1px solid #a7aba7;
   color: rgba(0,0,0,0.8) !important;
-  box-shadow: 0 3px 5px rgba(0,0,0,0.2) inset;
   text-shadow: none;
 }
 
 notification[type="info"] {
-/*  background-color: -moz-Dialog;*/
-/*  color: -moz-DialogText;*/
 }
 
 notification[type="critical"] {
-  /* background-image: linear-gradient(to bottom, rgb(212,0,0), rgb(152,0,0)); */
-  /* color: white; */
 }
 
 .notification-inner {
   border: 0 !important;
-  padding-top: 1px;
-  padding-bottom: 1px;
+  padding: 6px 0;
 }
 
 .messageText {
