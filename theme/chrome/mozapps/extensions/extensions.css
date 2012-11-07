@@ -279,10 +279,15 @@
 #header {
   -moz-appearance: none;
   margin: 0;
-  padding: 0 2px;
+  padding: 0 3px;
   height: 37px;
   background: linear-gradient(to bottom, #fff, #f3f3f3);
   border-bottom: 1px solid #a7a7a7;
+}
+
+#header toolbarbutton,
+#header textbox {
+  margin: 2px 3px;
 }
 
 #header toolbarbutton {
@@ -293,7 +298,6 @@
   color: #2e3436 !important;
   filter: none;
   padding: 1px !important;
-  margin: 2px 4px;
   min-width: 32px;
   min-height: 28px;
   text-shadow: none;
@@ -339,6 +343,14 @@
   min-width: 0;
 }
 
+#back-btn {
+  -moz-margin-end: 1px !important;
+}
+
+#forward-btn {
+  -moz-margin-start: 1px !important;
+}
+
 #back-btn:-moz-locale-dir(ltr) {
 /*  list-style-image: url("moz-icon://stock/gtk-go-back-ltr?size=menu");*/
   list-style-image: url(chrome://browser/skin/symbolic-icons/back-button.svg);
@@ -367,6 +379,10 @@
 #header-utils-btn {
 /*  list-style-image: url("moz-icon://stock/gtk-preferences?size=menu");*/
   list-style-image: url(chrome://browser/skin/symbolic-icons/preferences.svg);
+}
+
+#header-utils-btn > .toolbarbutton-icon {
+  -moz-margin-end: 0;
 }
 
 #header-utils-btn > .toolbarbutton-menu-dropmarker {
