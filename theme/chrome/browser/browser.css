@@ -80,7 +80,7 @@ toolbarbutton.bookmark-item {
 }
 
 .bookmark-item[container][livemark] .toolbarbutton-icon {
-  -moz-margin-end: 0;
+  -moz-margin-end: 3px;
 }
 
 .bookmark-item > .toolbarbutton-icon {
@@ -177,7 +177,7 @@ menuitem.bookmark-item {
 }
 
 .bookmark-item[container][livemark] {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/rss.svg");
+  list-style-image: url("chrome://browser/skin/symbolic-icons/rss-live.svg");
 }
 
 .bookmark-item[container][livemark] .bookmark-item {
