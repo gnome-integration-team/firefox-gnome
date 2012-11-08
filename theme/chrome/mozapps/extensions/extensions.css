@@ -471,6 +471,10 @@
   -moz-padding-end: 20px;
 }
 
+.addon.addon-view:hover {
+  background-color: rgba(255,255,255,0.3);
+}
+
 .list {
   -moz-appearance: none;
   margin: 0;
