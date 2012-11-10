@@ -621,6 +621,12 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   background: #d3d3d3 !important;
 }
 
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:-moz-window-inactive > .toolbarbutton-icon,
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:-moz-window-inactive > .toolbarbutton-menu-dropmarker,
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:-moz-window-inactive > .toolbarbutton-menubutton-dropmarker {
+  opacity: .5;
+}
+
 /* Buttons on nav bar */
 
 #nav-bar[iconsize=large] > toolbarbutton,
@@ -687,17 +693,6 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #nav-bar > toolbarbutton[disabled="true"] > .toolbarbutton-icon,
 #nav-bar > toolbarbutton[disabled="true"] > .toolbarbutton-menu-dropmarker,
 #nav-bar :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button)[disabled="true"] > .toolbarbutton-icon {
-  opacity: .5;
-}
-
-#nav-bar > toolbarbutton:-moz-window-inactive > .toolbarbutton-icon,
-#nav-bar > toolbarbutton:-moz-window-inactive > .toolbarbutton-menu-dropmarker,
-#nav-bar > toolbarbutton:-moz-window-inactive > .toolbarbutton-menubutton-dropmarker,
-#nav-bar :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button):-moz-window-inactive > .toolbarbutton-icon {
-  opacity: .5;
-}
-
-#main-window:-moz-window-inactive #FindToolbar :-moz-any(.findbar-find-next, .findbar-find-previous) > .toolbarbutton-icon {
   opacity: .5;
 }
 
