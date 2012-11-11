@@ -26,6 +26,16 @@ textbox {
   color: -moz-FieldText;
 }
 
+textbox[focused="true"],
+.searchbar-textbox[focused="true"] {
+  -moz-border-top-colors: Highlight!important;
+  -moz-border-right-colors: Highlight!important;
+  -moz-border-bottom-colors: Highlight!important;
+  -moz-border-left-colors: Highlight!important;
+/*  box-shadow: 0 1px 0 rgba(255,255,255,0.6), */
+/*              inset 0 1px 2px 0 rgba(0,106,221,0.3);*/
+}
+
 html|*.textbox-input,
 html|*.textbox-textarea {
   margin: 0px !important;
