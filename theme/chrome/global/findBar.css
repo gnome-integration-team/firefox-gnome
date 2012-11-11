@@ -128,6 +128,15 @@ label.findbar-find-fast:-moz-window-inactive {
   color: rgba(0,0,0,0.9);
 }
 
+.findbar-textbox[focused="true"] {
+  -moz-border-top-colors: Highlight;
+  -moz-border-right-colors: Highlight;
+  -moz-border-bottom-colors: Highlight;
+  -moz-border-left-colors: Highlight;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.6),
+              inset 0 1px 2px 0 rgba(0,106,221,0.3);
+}
+
 .findbar-textbox[status="notfound"] {
   box-shadow: 0 0 0 1em #f66 inset;
   background: #f66;
