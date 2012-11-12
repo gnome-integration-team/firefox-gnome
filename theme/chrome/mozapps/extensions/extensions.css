@@ -28,13 +28,13 @@
 
 #addons-page[warning] .global-warning-container {
   background-color: rgba(255, 255, 0, 0.1);
-  background-image: url("chrome://mozapps/skin/extensions/stripes-warning.png");
+  background-image: url(chrome://mozapps/skin/extensions/stripes-warning.png);
   background-repeat: repeat-x;
 }
 
 #detail-view .global-warning {
   padding: 4px 12px;
-  border-bottom: 1px solid ThreeDShadow;
+  border-bottom: 1px solid #dbdbdb;
   min-height: 41px;
 }
 
@@ -124,7 +124,7 @@
   border: none;
   background-color: transparent;
   position: relative;
-  margin-top: 41px;
+  margin-top: 39px;
   -moz-margin-start: 0px;
   -moz-margin-end: -12px;
 }
@@ -423,12 +423,14 @@
 
 .sorter[checkState="1"] .button-icon {
   display: -moz-box;
-  list-style-image: url("moz-icon://stock/gtk-sort-descending?size=16");
+/*  list-style-image: url("moz-icon://stock/gtk-sort-descending?size=16");*/
+  list-style-image: url(chrome://browser/skin/symbolic-icons/up.svg);
 }
 
 .sorter[checkState="2"] .button-icon {
   display: -moz-box;
-  list-style-image: url("moz-icon://stock/gtk-sort-ascending?size=16");
+/*  list-style-image: url("moz-icon://stock/gtk-sort-ascending?size=16");*/
+  list-style-image: url(chrome://browser/skin/symbolic-icons/down.svg);
 }
 
 /*** discover view ***/
@@ -471,10 +473,6 @@
   -moz-padding-end: 20px;
 }
 
-.addon.addon-view:hover {
-  background-color: rgba(255,255,255,0.3);
-}
-
 .list {
   -moz-appearance: none;
   margin: 0;
@@ -494,6 +492,10 @@
   border-top: 0;
 }
 
+.addon:not([selected]):hover {
+  background-color: rgba(255,255,255,0.3);
+}
+
 .addon[selected] {
   background: #e4e4e4;
   -moz-border-top-colors: #d1d1d1 #ebebeb;
@@ -502,24 +504,17 @@
   color: #414141;
 }
 
-/*
-.addon[selected] .text-link,
-.addon[selected] .button-link {
-  color: inherit;
-}
-*/
-
-.addon[active="false"] .version{
-    background: lightgray;
+.addon[active="false"] .version {
+  background: lightgray;
 }
 
 .addon[active="false"] .details.button-link,
-.addon[active="false"] .name-container{
-    color: gray;
+.addon[active="false"] .name-container {
+  color: gray;
 }
 
-.addon[active="false"] .addon-control {
-	opacity: 0.4;
+.addon[active="false"]:not(:hover) .addon-control {
+  opacity: 0.4;
 }
 
 .details {
@@ -537,29 +532,29 @@
 }
 
 .icon {
-  list-style-image: url("chrome://mozapps/skin/extensions/extensionGeneric.png");
+  list-style-image: url(chrome://mozapps/skin/extensions/extensionGeneric.png);
   max-width: 48px;
   max-height: 48px;
 }
 
 .addon[active="false"] .icon {
-  filter: url("chrome://mozapps/skin/extensions/extensions.svg#greyscale");
+  filter: url(chrome://mozapps/skin/extensions/extensions.svg#greyscale);
 }
 
 .addon-view[type="theme"] .icon {
-  list-style-image: url("chrome://mozapps/skin/extensions/themeGeneric.png");
+  list-style-image: url(chrome://mozapps/skin/extensions/themeGeneric.png);
 }
 
 .addon-view[type="locale"] .icon {
-  list-style-image: url("chrome://mozapps/skin/extensions/localeGeneric.png");
+  list-style-image: url(chrome://mozapps/skin/extensions/localeGeneric.png);
 }
 
 .addon-view[type="plugin"] .icon {
-  list-style-image: url("chrome://mozapps/skin/plugins/pluginGeneric.png");
+  list-style-image: url(chrome://mozapps/skin/plugins/pluginGeneric.png);
 }
 
 .addon-view[type="dictionary"] .icon {
-  list-style-image: url("chrome://mozapps/skin/extensions/dictionaryGeneric.png");
+  list-style-image: url(chrome://mozapps/skin/extensions/dictionaryGeneric.png);
 }
 
 .name-container {
@@ -577,7 +572,6 @@
   font-size: 0.8em;
   padding: 1px 8px;
 }
-
 
 .creator {
   font-weight: bold;
@@ -717,6 +711,10 @@
   transition-duration: 0.5s, 0.5s;
 }
 
+.addon[active="false"] .relnotes-container {
+  color: gray;
+}
+
 .addon .relnotes-header {
   font-weight: bold;
   margin: 10px 0;
@@ -728,24 +726,34 @@
   background: transparent;
   font-weight: bold;
   cursor: pointer;
-  list-style-image: url("moz-icon://stock/gtk-go-down?size=16");
+/*  list-style-image: url(moz-icon://stock/gtk-go-down?size=16);*/
+  list-style-image: url(chrome://browser/skin/symbolic-icons/down.svg);
+  margin-top: 10px;
+}
+
+.addon[active="false"] .relnotes-toggle {
+  color: gray;
 }
 
 .addon .relnotes-toggle > .button-box > .button-icon {
   display: -moz-box;
 }
 
+.addon[active="false"] .relnotes-toggle > .button-box > .button-icon {
+  opacity: 0.4;
+}
+
 .addon[show-relnotes] .relnotes-toggle {
-  list-style-image: url("moz-icon://stock/gtk-go-up?size=16");
+/*  list-style-image: url(moz-icon://stock/gtk-go-up?size=16);*/
+  list-style-image: url(chrome://browser/skin/symbolic-icons/up.svg);
 }
 
 /*** search view ***/
 
 #search-filter {
   padding: 5px 20px;
-  font-size: 120%;
   overflow-x: hidden;
-  border-bottom: 1px solid ThreeDShadow;
+  border-bottom: 1px solid #dbdbdb;
 }
 
 #search-filter-label {
@@ -1033,6 +1041,13 @@ setting[type="radio"] > radiogroup {
 
 #update-selected {
   margin: 12px;
+}
+
+/*** ***/
+
+#update-actions {
+  border-top: 1px solid #dbdbdb;
+  -moz-box-ordinal-group: 2; /* Move panel with Install Updates button to bottom */
 }
 
 /*** buttons ***/
