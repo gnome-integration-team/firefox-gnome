@@ -313,3 +313,12 @@ notification > button {
 window#aboutDialog #clientBox {
   background-color: Window;
 }
+
+/* Fix for some extensions */
+/* FIXME */
+toolbaritem .toolbarbutton-menubutton-button,
+toolbaritem .toolbarbutton-menubutton-button:hover {
+  background: transparent !important;
+  border-width: 0 !important;
+  box-shadow: none !important;
+}
