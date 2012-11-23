@@ -603,12 +603,16 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   border-color: #ffffff !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89);
   border-radius: 3px 3px 0 0;
-  /** FIXME: Should this be here? **/
+}
+
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[disabled="true"],
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[disabled="true"]:hover,
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[disabled="true"]:active,
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[disabled="true"]:active:hover {
   color: #a7aba7 !important;
 }
 
-/** FIXME: Added by Firefox 17 **/
-      window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons],                #nav-bar:not([currentset])[mode=icons])                 > #unified-back-forward-button > #forward-button[disabled] {
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button > #forward-button[disabled] {
   transform: scale(0);
   opacity: 0;
   pointer-events: none;
@@ -991,12 +995,6 @@ toolbar[iconsize="small"] .toolbarbutton-1:not([type="menu-button"]) {
   box-shadow: 0 1px 0 rgba(255,255,255,0.6), inset 0 1px 2px 0 rgba(0,106,221,0.3);
 }
 
-#urlbar {
-  width: 7em;
-  -moz-appearance: textfield;
-  padding: 0;
-}
-
 .urlbar-textbox-container {
   -moz-appearance: none;
   -moz-box-align: stretch;
@@ -1007,10 +1005,6 @@ toolbar[iconsize="small"] .toolbarbutton-1:not([type="menu-button"]) {
   padding-top: 3px;
   padding-bottom: 3px;
   min-width: 4em;
-}
-
-.urlbar-history-dropmarker {
-  -moz-appearance: toolbarbutton-dropdown;
 }
 
 #urlbar-container {
@@ -1858,17 +1852,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   border: none;
 /*  color: inherit;*/
   color: #2e3436;
-
-  /* FIXME: This was dded by Firefox 17 */
-/*
-  background: -moz-linear-gradient(hsla(0,0%,100%,.2), hsla(0,0%,45%,.2) 2px, hsla(0,0%,32%,.2) 80%);
-  background-origin: border-box;
-  background-position: 1px 2px;
-  background-size: 100% calc(100% - 2px);
-  background-repeat: no-repeat;
-  color: inherit;
-*/
-
   margin: 0;
   padding: 0;
 
@@ -1952,10 +1935,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tabbrowser-tab[pinned] > .tab-stack {
   padding-left: 13px;
   padding-right: 13px;
-}
-
-#tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab > .tab-stack > .tab-content[pinned] {
-  min-height: 18px; /* corresponds to the max. height of non-textual tab contents, i.e. the tab close button */
 }
 
 .tab-label {
