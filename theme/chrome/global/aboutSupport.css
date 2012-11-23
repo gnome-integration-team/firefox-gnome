@@ -91,7 +91,7 @@ td {
   width: 30%;
 }
 
-body[dir="rtl"] > #reset-box {
+#reset-box:-moz-dir(rtl) {
   float: left;
 }
 
