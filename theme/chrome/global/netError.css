@@ -69,7 +69,7 @@ ul {
   background-image: url("chrome://global/skin/icons/sslWarning.png");
 }
 
-body[dir="rtl"] #errorPageContainer {
+#errorPageContainer:-moz-dir(rtl) {
   background-position: right 0;
 }
 
@@ -135,7 +135,7 @@ body[dir="rtl"] #errorPageContainer {
   opacity: .4;
 }
 
-body[dir="rtl"] #brand {
+#brand:-moz-dir(rtl) {
   right: auto;
   left: 0;
 }
