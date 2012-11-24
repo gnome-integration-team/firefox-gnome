@@ -842,6 +842,13 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   list-style-image: url(chrome://browser/skin/symbolic-icons/tabview-3.svg);
 }
 
+#tabs-closebutton {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
+}
+#tabs-closebutton > .toolbarbutton-icon {
+  -moz-margin-end: 0;
+}
+
 #downloads-button {
   list-style-image: url(chrome://browser/skin/symbolic-icons/download.svg);
 }
