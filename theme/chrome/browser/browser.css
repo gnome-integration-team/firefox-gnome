@@ -736,55 +736,71 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 */
 
-#nav-bar[iconsize=large] > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton,
-#nav-bar[iconsize=small] > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton {
+#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:not(:first-of-type):not(:last-of-type),
+#nav-bar #social-toolbar-item > .toolbarbutton-1:not(:first-of-type):not(:last-of-type) {
   border-radius: 0;
-  -moz-margin-start: 0;
-  -moz-margin-end: 0;
+  -moz-margin-start: 0 !important;
+  -moz-margin-end: 0 !important;
   -moz-border-end-width: 0 !important;
   -moz-border-start-width: 0 !important;
 }
-#nav-bar[iconsize=large] > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:active:not([open="true"]),
-#nav-bar[iconsize=small] > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:active:not([open="true"]) {
+
+#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type,
+#nav-bar #social-toolbar-item > .toolbarbutton-1:first-of-type:not(:last-of-type) {
+  -moz-margin-end: 0 !important;
+  -moz-border-end-width: 0 !important;
+}
+#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type,
+#nav-bar #social-toolbar-item > .toolbarbutton-1:last-of-type:not(:first-of-type) {
+  -moz-margin-start: 0 !important;
+  -moz-border-start-width: 0 !important;
+}
+
+#nav-bar #social-toolbar-item > .toolbarbutton-1:not([disabled="true"]):hover {
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1) !important;
 }
-
-#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type {
-  -moz-margin-start: 3px;
-  -moz-border-start-width: 1px !important;
-}
-#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type {
-  -moz-margin-end: 3px;
-  -moz-border-end-width: 1px !important;
-}
-#nav-bar[iconsize=small] > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type {
-  -moz-margin-start: 2px;
-}
-#nav-bar[iconsize=small] > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type {
-  -moz-margin-end: 2px;
-}
-
-#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type:not([disabled="true"]):hover {
+#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type:not([disabled="true"]):hover,
+#nav-bar #social-toolbar-item > .toolbarbutton-1:first-of-type:not([disabled="true"]):hover {
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset -1px 0 0 rgba(0,0,0,.1) !important;
 }
-#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type:not([disabled="true"]):hover {
+#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type:not([disabled="true"]):hover,
+#nav-bar #social-toolbar-item > .toolbarbutton-1:last-of-type:not([disabled="true"]):hover {
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 1px 0 0 rgba(0,0,0,.1) !important;
+}
+#nav-bar #social-toolbar-item > .toolbarbutton-1:first-of-type:last-of-type:not([disabled="true"]):hover {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
 }
 
 #nav-bar:-moz-locale-dir(ltr) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type,
-#nav-bar:-moz-locale-dir(rtl) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type {
+#nav-bar:-moz-locale-dir(rtl) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type,
+#nav-bar:-moz-locale-dir(ltr) #social-toolbar-item > .toolbarbutton-1:first-of-type,
+#nav-bar:-moz-locale-dir(rtl) #social-toolbar-item > .toolbarbutton-1:last-of-type {
   border-radius: 3px 0px 0px 3px;
 }
 #nav-bar:-moz-locale-dir(ltr) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type,
-#nav-bar:-moz-locale-dir(rtl) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type {
+#nav-bar:-moz-locale-dir(ltr) #social-toolbar-item > .toolbarbutton-1:last-of-type,
+#nav-bar:-moz-locale-dir(rtl) > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type,
+#nav-bar:-moz-locale-dir(rtl) #social-toolbar-item > .toolbarbutton-1:first-of-type {
   border-radius: 0px 3px 3px 0px;
 }
+#nav-bar #social-toolbar-item > .toolbarbutton-1:first-of-type:last-of-type {
+  border-radius: 3px;
+}
 
-#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type:active:not([open="true"]) {
+#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:active:not([open="true"]),
+#nav-bar #social-toolbar-item > .toolbarbutton-1:active:not([open="true"]) {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1) !important;
+}
+#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type:active:not([open="true"]),
+#nav-bar #social-toolbar-item > .toolbarbutton-1:first-of-type:active:not([open="true"]) {
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset -1px 0 0 rgba(0,0,0,.1) !important;
 }
-#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type:active:not([open="true"]) {
+#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type:active:not([open="true"]),
+#nav-bar #social-toolbar-item > .toolbarbutton-1:last-of-type:active:not([open="true"]) {
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 1px 0 0 rgba(0,0,0,.1) !important;
+}
+#nav-bar #social-toolbar-item > .toolbarbutton-1:first-of-type:last-of-type:active:not([open="true"]) {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
 }
 
 /* 24px primary toolbar buttons */
@@ -3161,7 +3177,8 @@ stack[anonid=browserStack][responsivemode] {
 }
 
 #social-toolbar-item > .toolbarbutton-1 {
-
+  -moz-box-align: center;
+  -moz-box-pack: center;
 }
 
 .social-notification-icon-hbox {
@@ -3173,11 +3190,6 @@ stack[anonid=browserStack][responsivemode] {
 }
 
 #social-provider-button > image {
-  margin: 5px 3px;
-}
-
-#social-provider-button > .toolbarbutton-menu-dropmarker {
-  display: none;
 }
 
 .social-notification-icon-stack {
@@ -3185,7 +3197,8 @@ stack[anonid=browserStack][responsivemode] {
 }
 
 .social-notification-icon-image {
-  margin: 5px 3px;
+  max-width: 16px;
+  max-height: 16px;
   -moz-image-region: rect(0, 16px, 16px, 0);
 }
 
