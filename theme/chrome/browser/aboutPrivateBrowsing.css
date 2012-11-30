@@ -31,7 +31,7 @@ body.normal > #errorPageContainer {
   background: url("chrome://browser/skin/symbolic-icons/information.svg") no-repeat top left;
 }
 
-body[dir="rtl"] #moreInfo {
+#moreInfo:-moz-dir(rtl) {
   background-position: top right;
 }
 
