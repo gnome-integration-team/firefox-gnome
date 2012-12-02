@@ -769,13 +769,13 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   border-radius: 0px 3px 3px 0px;
 }
 
-#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:active:not([open="true"]) {
+#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:not([disabled="true"]):not([open="true"]):active {
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1) !important;
 }
-#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type:active:not([open="true"]) {
+#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type:not([disabled="true"]):not([open="true"]):active {
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset -1px 0 0 rgba(0,0,0,.1) !important;
 }
-#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type:active:not([open="true"]) {
+#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type:not([disabled="true"]):not([open="true"]):active {
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 1px 0 0 rgba(0,0,0,.1) !important;
 }
 
@@ -1093,7 +1093,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=large], #nav-bar:not([currentset])[mode=icons][iconsize=large]) > #unified-back-forward-button[forwarddisabled] #back-button:not(:-moz-window-inactive) {
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1) !important;
 }
-window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=large], #nav-bar:not([currentset])[mode=icons][iconsize=large]) > #unified-back-forward-button[forwarddisabled] #back-button:not([disable="true"]):not([open="true"]):not(:-moz-window-inactive):active {
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=large], #nav-bar:not([currentset])[mode=icons][iconsize=large]) > #unified-back-forward-button[forwarddisabled] #back-button:not([disabled="true"]):not([open="true"]):not(:-moz-window-inactive):active {
   box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
 }
 
