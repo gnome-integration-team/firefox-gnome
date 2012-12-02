@@ -53,6 +53,10 @@
   width: 16px;
   list-style-image: url(chrome://mozapps/skin/places/defaultFavicon.png);
 }
+.searchbar-engine-image:-moz-window-inactive {
+  filter: url(chrome://mozapps/skin/extensions/extensions.svg#greyscale);
+  opacity: 0.5;
+}
 
 .searchbar-engine-button > .button-box {
   -moz-appearance: none;
