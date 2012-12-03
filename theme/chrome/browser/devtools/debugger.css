@@ -116,7 +116,7 @@
 }
 
 #stackframes\+breakpoints[animated] {
-  -moz-transition: margin 0.25s ease-in-out;
+  transition: margin 0.25s ease-in-out;
 }
 
 /**
@@ -163,7 +163,7 @@
 }
 
 #variables[animated] {
-  -moz-transition: margin 0.25s ease-in-out;
+  transition: margin 0.25s ease-in-out;
 }
 
 /**
