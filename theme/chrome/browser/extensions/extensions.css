@@ -1,6 +1,13 @@
+/* A */
 @import url("chrome://browser/skin/extensions/adblock-plus.css");
+
+/* C */
 @import url("chrome://browser/skin/extensions/clearly.css");
+
+/* D */
 @import url("chrome://browser/skin/extensions/dta.css");
+
+/* F */
 @import url("chrome://browser/skin/extensions/fbdc.css");
 @import url("chrome://browser/skin/extensions/feedly.css");
 @import url("chrome://browser/skin/extensions/firebug.css");
@@ -8,13 +15,27 @@
 @import url("chrome://browser/skin/extensions/flashgot.css");
 @import url("chrome://browser/skin/extensions/foxtophone.css");
 @import url("chrome://browser/skin/extensions/fxbutton.css");
+
+/* G */
 @import url("chrome://browser/skin/extensions/ghostery.css");
 @import url("chrome://browser/skin/extensions/greasemonkey.css");
 @import url("chrome://browser/skin/extensions/gtranslator.css");
+
+/* L */
 @import url("chrome://browser/skin/extensions/lastpass-password-manager.css");
+
+/* M */
 @import url("chrome://browser/skin/extensions/movable-firefox-button.css");
+
+/* P */
 @import url("chrome://browser/skin/extensions/pinboard-extension.css");
 @import url("chrome://browser/skin/extensions/pocket.css");
+
+/* S */
 @import url("chrome://browser/skin/extensions/stylish.css");
+
+/* T */
 @import url("chrome://browser/skin/extensions/tree-style-tab.css");
+
+/* X */
 @import url("chrome://browser/skin/extensions/xmarks-sync.css");

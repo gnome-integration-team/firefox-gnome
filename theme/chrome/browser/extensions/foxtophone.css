@@ -3,6 +3,6 @@
  * URL: https://addons.mozilla.org/firefox/addon/foxtophone/ */
 
 #sendtophone-toolbar-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/foxtophone.svg") !important;
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/foxtophone.svg) !important;
   -moz-image-region: auto !important;
 }
