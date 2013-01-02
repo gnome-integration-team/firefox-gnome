@@ -23,6 +23,10 @@ toolbarbutton:-moz-lwtheme {
   text-shadow: none;
 }
 
+/* FIXME: Maybe, it's unneeded.
+   General idea of this code: add space after image and before label/dropmarker.
+   But we use dropmarkers for some buttons only. => This space unneeded by default.
+       by @seleznev */
 .toolbarbutton-icon[label]:not([label=""]),
 .toolbarbutton-icon[type="menu"] {
   -moz-margin-end: 2px;

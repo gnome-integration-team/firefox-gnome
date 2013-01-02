@@ -564,8 +564,10 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   padding: 3px !important;
 }
 
-/* Buttons */
+/* ::::: Buttons ::::: */
 
+/* Basic style of buttons on navigator-toolbox (all top part of Fx's window), addon and find bars.
+   Also apply for Social API buttons */
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton,
 #social-toolbar-item > .toolbarbutton-1 {
   -moz-appearance: none;
@@ -573,13 +575,14 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   border: 1px solid transparent !important;
   border-radius: 3px;
   color: #2e3436 !important;
-  filter: none;
+  filter: none; /* FIXME: It need for disable filter (maybe uneeded now). */
   padding: 3px;
   text-shadow: none;
   transition-property: color, border, box-shadow, background;
   transition-duration: 200ms;
 }
 
+/* Amazing code below ↯ */
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:not([disabled="true"]):hover,
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) .toolbarbutton-menubutton-dropmarker:hover,
 #social-toolbar-item > .toolbarbutton-1:hover {
@@ -644,7 +647,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   opacity: .5;
 }
 
-/* Buttons on nav bar */
+/* ::::: Buttons on Navigation bar ::::: */
 
 #nav-bar[iconsize=large] > toolbarbutton,
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button, #restore-button),
@@ -667,12 +670,9 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   padding: 0px 3px !important;
 }
 
-/* Back/forward buttons */
+/* ::::: Back/forward buttons ::::: */
 
-/*
-#nav-bar[iconsize=large] > toolbarbutton,
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button) {
-*/
+/* Style for buttons with relief in default state */
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button) {
   min-width: 31px;
 }
@@ -716,26 +716,8 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   opacity: .5;
 }
 
-/* Experimental view */
-/*
-#nav-bar toolbarbutton {
-  border-radius: 0px 3px 3px 0px;
-  -moz-margin-start: -2px;
-  -moz-margin-end: 0;
-}
-
-#nav-bar :-moz-any(toolbarseparator, toolbaritem, toolbarspring, toolbarspacer) + toolbarbutton,
-#nav-bar toolbarbutton:first-child {
-  border-radius: 3px 3px 3px 3px;
-  min-width: 33px;
-  -moz-margin-start: 0px;
-}
-
-#nav-bar toolbarbutton:last-child {
-  -moz-margin-end: 0px;
-}
-*/
-
+/* Code for connected buttons (back/forward, zoom).
+   It's universal code (can be used for 3+ buttons in group). */
 #nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:not(:first-of-type):not(:last-of-type) {
   border-radius: 0;
   -moz-margin-start: 0 !important;
@@ -780,6 +762,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 /* 24px primary toolbar buttons */
+/* FIXME: it's 16px in real */
 #back-button {
   list-style-image: url("chrome://browser/skin/symbolic-icons/back-button.svg");
 }
@@ -972,7 +955,6 @@ toolbar[iconsize="small"] .toolbarbutton-1:not([type="menu-button"]) {
   display: none;
 }
 #restore-button {
-/*  list-style-image: url(moz-icon://stock/gtk-leave-fullscreen?size=menu);*/
   list-style-image: url(chrome://browser/skin/symbolic-icons/restore-window.svg);
 }
 #close-button {
@@ -980,7 +962,7 @@ toolbar[iconsize="small"] .toolbarbutton-1:not([type="menu-button"]) {
   display: none;
 }
 
-/* Location bar */
+/* ::::: Location bar ::::: */
 
 /* remove ugly white border around location and searchbars */
 #urlbar, .searchbar-textbox {
@@ -1025,7 +1007,7 @@ toolbar[iconsize="small"] .toolbarbutton-1:not([type="menu-button"]) {
   -moz-box-align: stretch;
 }
 
-/* Autohide forward button */
+/* ::::: Autohide forward button ::::: */
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button + #urlbar-container {
   -moz-padding-start: 28px;
@@ -1142,7 +1124,8 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   color: GrayText;
 }
 
-/* Favicon */
+/* ::::: Favicon ::::: */
+/* It don't contain favicon now. */
 #page-proxy-favicon {
   width: 16px;
   height: 16px;
@@ -1173,7 +1156,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   opacity: 0.3;
 }
 
-/* Identity indicator */
+/* ::::: Identity indicator ::::: */
 #identity-box {
   padding: 1px;
   margin: 0;
@@ -1215,7 +1198,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   background: linear-gradient(to bottom, rgba(115, 210, 22, 0.25), rgba(115, 210, 22, 0.05));
 }
 
-/* Identity popup icons */
+/* ::::: Identity popup icons ::::: */
 #identity-popup-icon {
   height: 64px;
   width: 64px;
@@ -1232,7 +1215,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   -moz-image-region: rect(128px, 64px, 192px, 0px);
 }
 
-/* Identity popup body text */
+/* ::::: Identity popup body text ::::: */
 .identity-popup-description {
   white-space: pre-wrap;
   -moz-padding-start: 15px;
@@ -1245,13 +1228,13 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   margin: 0;
 }
 
-#identity-popup-content-host ,
+#identity-popup-content-host,
 #identity-popup-content-owner {
   font-weight: bold;
   max-width: 300px;
 }
 
-#identity-popup-content-host ,
+#identity-popup-content-host,
 #identity-popup-content-box.verifiedIdentity > #identity-popup-content-owner {
   font-size: 140%;
 }
@@ -1264,13 +1247,13 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   margin: 4px 0 2px;
 }
 
-#identity-popup-content-box.verifiedIdentity > #identity-popup-encryption ,
+#identity-popup-content-box.verifiedIdentity > #identity-popup-encryption,
 #identity-popup-content-box.verifiedDomain > #identity-popup-encryption {
   margin-top: 10px;
   -moz-margin-start: -18px;
 }
 
-#identity-popup-content-box.verifiedIdentity > #identity-popup-encryption > vbox > #identity-popup-encryption-icon ,
+#identity-popup-content-box.verifiedIdentity > #identity-popup-encryption > vbox > #identity-popup-encryption-icon,
 #identity-popup-content-box.verifiedDomain > #identity-popup-encryption > vbox > #identity-popup-encryption-icon {
   list-style-image: url("chrome://browser/skin/symbolic-icons/secure.svg");
 }
@@ -1498,10 +1481,10 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   border-top: 1px solid GrayText;
 }
 
-/* Combined go/reload/stop button in location bar */
+/* ::::: Combined go/reload/stop button in location bar ::::: */
 
 #urlbar > toolbarbutton,
-#urlbar-icons > :-moz-any(box, image, menupopup),
+#urlbar-icons > :-moz-any(box, image, menupopup), /* It need for extensions */
 #urlbar .urlbar-history-dropmarker {
   -moz-appearance: none;
   border: none !important;
@@ -1532,12 +1515,9 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 #urlbar > toolbarbutton:not([disabled="true"]):active {
-/*#urlbar-icons > :-moz-any(box, image, menupopup):not([disabled="true"]):active {*/
   background: linear-gradient(to bottom, #d1d1d1, #fff) !important;
   box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.15) !important;
 }
-
-
 
 #go-button {
   list-style-image: url(chrome://browser/skin/symbolic-icons/playback-start.svg);
@@ -1561,20 +1541,9 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 .urlbar-history-dropmarker {
-/*  display: none;*/
   -moz-box-align: center;
   list-style-image: url(chrome://browser/skin/symbolic-icons/down.svg);
-/*  background: url(chrome://browser/skin/symbolic-icons/down.svg) no-repeat center;*/
 }
-
-/*
-.urlbar-history-dropmarker:not([disabled="true"]):active,
-.urlbar-history-dropmarker[open="true"] {
-  background: url(chrome://browser/skin/symbolic-icons/down.svg) no-repeat center,
-              linear-gradient(to bottom, #d1d1d1, #fff) !important;
-  box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.15) !important;
-}
-*/
 
 #urlbar-go-button,
 #urlbar-stop-button,
