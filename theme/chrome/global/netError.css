@@ -187,4 +187,6 @@ ul {
 }
 #ignoreWarningButton {
   color: #2e3436 !important;
+  top: 0 !important;
+  left: 0 !important;
 }
