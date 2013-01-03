@@ -61,7 +61,7 @@ ul {
   padding: 0 24px;
 }
 
-#errorPageContainer  h1{
+#errorPageContainer h1{
   padding: 0 24px;
 }
 
@@ -183,11 +183,12 @@ ul {
 /* ::::: Ignore warning ::::: */
 
 #ignoreWarning {
-  text-align: right;
+  -moz-margin-start: 80px;
+  padding: 0 24px;
 }
 #ignoreWarningButton {
+  /* Fix for inline style */
   color: #2e3436 !important;
   top: 0 !important;
   left: 0 !important;
-  margin-right: 50px;
 }
