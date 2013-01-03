@@ -179,3 +179,12 @@ ul {
 #errorPageContainer > img {
   display: none;
 }
+
+/* ::::: Ignore warning ::::: */
+
+#ignoreWarning {
+  text-align: right;
+}
+#ignoreWarningButton {
+  color: #2e3436 !important;
+}
