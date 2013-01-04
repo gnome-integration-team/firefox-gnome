@@ -575,7 +575,6 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   border: 1px solid transparent !important;
   border-radius: 3px;
   color: #2e3436 !important;
-  filter: none; /* FIXME: It need for disable filter (maybe uneeded now). */
   padding: 3px;
   text-shadow: none;
   transition-property: color, border, box-shadow, background;
