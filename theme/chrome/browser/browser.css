@@ -676,8 +676,8 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   min-width: 31px;
 }
 
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button):not(:hover):not(:active):not([open="true"]),
-#FindToolbar :-moz-any(.findbar-find-next, .findbar-find-previous):not(:hover):not(:active):not([open="true"]) {
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button):not(:hover):not(:active):not([open="true"]):not([disabled="true"]),
+#FindToolbar :-moz-any(.findbar-find-next, .findbar-find-previous):not(:hover):not(:active):not([open="true"]):not([disabled="true"]) {
   background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
   border-color: rgba(0,0,0,.25) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1) !important;
@@ -685,9 +685,9 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button)[disabled="true"],
 #FindToolbar :-moz-any(.findbar-find-next, .findbar-find-previous)[disabled="true"] {
-  background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
+  background: #f4f4f2 !important;
   border-color: rgba(0,0,0,.25) !important;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1) !important;
+  box-shadow: none !important;
 }
 
 #nav-bar[iconsize=large] #back-button:-moz-window-inactive,
@@ -1071,7 +1071,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=large], #nav-bar:not([currentset])[mode=icons][iconsize=large]) > #unified-back-forward-button[forwarddisabled] #back-button {
   min-width: 32px;
 }
-window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=large], #nav-bar:not([currentset])[mode=icons][iconsize=large]) > #unified-back-forward-button[forwarddisabled] #back-button:not(:-moz-window-inactive) {
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=large], #nav-bar:not([currentset])[mode=icons][iconsize=large]) > #unified-back-forward-button[forwarddisabled] #back-button:not([disabled="true"]):not(:-moz-window-inactive) {
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1) !important;
 }
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=large], #nav-bar:not([currentset])[mode=icons][iconsize=large]) > #unified-back-forward-button[forwarddisabled] #back-button:not([disabled="true"]):not([open="true"]):not(:-moz-window-inactive):active {
