@@ -1307,6 +1307,10 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   list-style-image: url(chrome://browser/skin/webapps-64.png);
 }
 
+.popup-notification-icon[popupid="webRTC-shareDevices"] {
+  list-style-image: url(chrome://browser/skin/webRTC-shareDevice-64.png);
+}
+
 /* Notification icon box */
 #notification-popup-box {
   position: relative;
@@ -1378,6 +1382,27 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #plugins-notification-icon {
   list-style-image: url(chrome://browser/skin/symbolic-icons/plugin.svg);
+}
+
+#blocked-plugins-notification-icon {
+  list-style-image: url(chrome://mozapps/skin/plugins/notifyPluginBlocked.png);
+}
+
+#blocked-plugins-notification-icon[showing] {
+  animation: pluginBlockedNotification 500ms ease 0s 5 alternate both;
+}
+
+@keyframes pluginBlockedNotification {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#webRTC-notification-icon {
+  list-style-image: url(chrome://browser/skin/webRTC-shareDevice-16.png);
 }
 
 #treecolAutoCompleteImage {
@@ -2935,6 +2960,12 @@ html|*#gcli-output-frame {
               0 1px 0 hsla(210,16%,76%,.15);
 }
 
+.gclitoolbar-input-node > .textbox-input-box > html|*.textbox-input::-moz-selection {
+  background-color: hsl(210,30%,85%);
+  color: hsl(210,11%,16%);
+  text-shadow: none;
+}
+
 .gclitoolbar-complete-node {
   padding-left: 21px;
   background: transparent;
@@ -2984,13 +3015,12 @@ html|*#gcli-output-frame {
 
 /* Responsive Mode */
 
-vbox[anonid=browserContainer][responsivemode] {
-  background: #2a3643 url("chrome://browser/skin/devtools/responsive-background.png");
-  box-shadow: 0 0 7px black inset;
+.browserContainer[responsivemode] {
+  background: #222 url("chrome://browser/skin/devtools/responsive-background.png");
   padding: 0 20px 20px 20px;
 }
 
-stack[anonid=browserStack][responsivemode] {
+.browserStack[responsivemode] {
   box-shadow: 0 0 7px black;
 }
 
@@ -3062,10 +3092,15 @@ stack[anonid=browserStack][responsivemode] {
   box-shadow: 0 1px 2px rgba(0,0,0,.5) inset, 0 1px 0 hsla(210,16%,76%,.15);
 }
 
-.developer-toolbar-button[checked=true] {
+.developer-toolbar-button:hover,
+.developer-toolbar-button[checked=true],
+.developer-toolbar-button[open=true] {
   color: hsl(208,100%,60%) !important;
-  background: rgba(0,0,0,.4);
   text-shadow: 0 0 6px hsl(208,100%,60%);
+}
+
+.developer-toolbar-button[checked=true] {
+  background: rgba(0,0,0,.4);
 }
 
 #developer-toolbar-webconsole {
