@@ -1,0 +1,25 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+body {
+  background-color: #131c26;
+/*  color: #8fa1b2;*/
+}
+
+.tagname {
+  color: #a673bf;
+}
+.attrname {
+  color: #b26b47;
+}
+.attrvalue {
+  color: #3689b2;
+}
+.comment {
+  color: #5c6773;
+}
+
+.selected {
+  background-color: #253847 !important;
+}
