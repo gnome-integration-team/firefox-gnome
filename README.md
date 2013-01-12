@@ -4,7 +4,8 @@
 
 An easy-to-install version of this theme is available at 
 [Mozilla's ADD-ONS site](https://addons.mozilla.org/en-US/firefox/addon/adwaita).  
-Bleeding edge releases are available [here](https://launchpad.net/gnome-integration/firefox-gnome/firefox-gnome-releases)
+Bleeding edge releases are available [here](https://launchpad.net/gnome-integration/firefox-gnome/firefox-gnome-releases).
+
 We recommend [HTitle](https://addons.mozilla.org/en-US/firefox/addon/htitle) 
 for the full GNOME 3 experience.
 
