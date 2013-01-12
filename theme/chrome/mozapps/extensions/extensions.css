@@ -299,7 +299,6 @@
   box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
 }
 
-#header toolbarbutton:not([disabled="true"]):active,
 #header toolbarbutton:not([disabled="true"]):active:hover,
 #header toolbarbutton[checked="true"],
 #header toolbarbutton[checked="true"]:hover {
@@ -1058,7 +1057,6 @@ setting[type="radio"] > radiogroup {
               0 1px 0 rgba(255,255,255,0.69) inset;
 }
 
-.addon-control:not([disabled="true"]):active,
 .addon-control:not([disabled="true"]):active:hover,
 .addon-control[checked="true"],
 .addon-control[checked="true"]:hover {

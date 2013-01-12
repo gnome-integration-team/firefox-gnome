@@ -593,11 +593,9 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   box-shadow: 0 1px 0 rgba(255,255,255,0.89);
 }
 
-:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:not([disabled="true"]):active,
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:not([disabled="true"]):active:hover,
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[checked="true"],
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[checked="true"]:hover,
-#social-toolbar-item > .toolbarbutton-1:not([disabled="true"]):active,
 #social-toolbar-item > .toolbarbutton-1:not([disabled="true"]):active:hover,
 #social-toolbar-item > .toolbarbutton-1[checked="true"],
 #social-toolbar-item > .toolbarbutton-1[checked="true"]:hover {
@@ -679,8 +677,8 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   min-width: 32px;
 }
 
-#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button):not(:hover):not(:active):not([open="true"]):not([disabled="true"]),
-#FindToolbar :-moz-any(.findbar-find-next, .findbar-find-previous):not(:hover):not(:active):not([open="true"]):not([disabled="true"]) {
+#nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button):not(:hover):not([open="true"]):not([disabled="true"]),
+#FindToolbar :-moz-any(.findbar-find-next, .findbar-find-previous):not(:hover):not([open="true"]):not([disabled="true"]) {
   background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
   border-color: rgba(0,0,0,.25) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1) !important;
@@ -1054,11 +1052,11 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   transition: box-shadow 0ms ease-in;
 }
 
-window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] #back-button {
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] #back-button:not([open="true"]) {
   border-radius: 3px !important;
 }
 
-window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=large], #nav-bar:not([currentset])[mode=icons][iconsize=large]) > #unified-back-forward-button[forwarddisabled] #back-button {
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons][iconsize=large], #nav-bar:not([currentset])[mode=icons][iconsize=large]) > #unified-back-forward-button[forwarddisabled] #back-button:not([open="true"]) {
   border-color: rgba(0,0,0,.25) !important;
 }
 
@@ -1756,7 +1754,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 /* FIXME */
-#sidebar-header > .tabs-closebutton:active,
 #sidebar-header > .tabs-closebutton:active:hover {
   background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4);
   border-color: rgba(0,0,0,.25);
@@ -2009,7 +2006,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   border-color: rgba(0, 0, 0, 0.1) !important;
   box-shadow: none !important;
 }
-#TabsToolbar .tab-close-button:active {
+#TabsToolbar .tab-close-button:active:hover {
   list-style-image: url(chrome://browser/skin/tabbrowser/close-active.png);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.13) 1px, rgba(0, 0, 0, 0.08) 2px, rgba(0, 0, 0, 0.07) 100%) !important;
   border-color: rgba(0, 0, 0, 0.12) !important;
@@ -2035,9 +2032,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   opacity: .9;
 }
 
-#TabsToolbar .tabs-newtab-button:active,
-#TabsToolbar > #new-tab-button:active,
-#TabsToolbar > #wrapper-new-tab-button > #new-tab-button:active,
 #TabsToolbar .tabs-newtab-button:active:hover,
 #TabsToolbar > #new-tab-button:active:hover,
 #TabsToolbar > #wrapper-new-tab-button > #new-tab-button:active:hover {
@@ -2065,8 +2059,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   opacity: .9;
 }
 
-#TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-up:active > .toolbarbutton-icon,
-#TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-down:active > .toolbarbutton-icon,
 #TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-up:active:hover > .toolbarbutton-icon,
 #TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-down:active:hover > .toolbarbutton-icon {
   opacity: 1;
@@ -2132,7 +2124,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   opacity: .9;
 }
 
-#TabsToolbar #new-tab-button + #alltabs-button:active,
 #TabsToolbar #new-tab-button + #alltabs-button:active:hover {
   opacity: 1;
 }
@@ -2338,7 +2329,6 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   box-shadow: none !important;
 }
 
-#addon-bar toolbarbutton:not([disabled="true"]):active,
 #addon-bar toolbarbutton:not([disabled="true"]):active:hover,
 #addon-bar toolbarbutton[open="true"],
 #addon-bar toolbarbutton[checked="true"] {
