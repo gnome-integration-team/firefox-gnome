@@ -576,8 +576,8 @@
   color: #979797;
   font-size: 1em;
   margin: 0;
-  max-width: 600px
 }
+
 
 .addon .button-link {
   font-size: 1em;
@@ -1037,6 +1037,10 @@ setting[type="radio"] > radiogroup {
 }
 
 /*** buttons ***/
+
+.status-control-wrapper {
+	-moz-margin-start: 5em;
+}
 
 .addon-control {
   -moz-appearance: none;
