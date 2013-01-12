@@ -1889,13 +1889,13 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 /* All the tabs after the selected tab (hack) */
-.tabbrowser-tab[selected="true"] ~ .tabbrowser-tab > .tab-stack {
+.tabbrowser-tabs:not([movingtab]) > .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
 /* All the tabs after the selected tab (hack)
    (image mirrored for RTL locales) */
-.tabbrowser-tab[selected="true"] ~ .tabbrowser-tab:-moz-locale-dir(rtl) > .tab-stack {
+.tabbrowser-tabs:not([movingtab]) > .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab:-moz-locale-dir(rtl) > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-right-rtl.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
@@ -1909,13 +1909,13 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 /* All the updated tabs after the selected tab (hack) */
-.tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged] > .tab-stack {
+.tabbrowser-tabs:not([movingtab]) > .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged] > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
 /* All the updated tabs after the selected tab (hack)
    (image mirrored for RTL locales) */
-.tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged]:-moz-locale-dir(rtl) > .tab-stack {
+.tabbrowser-tabs:not([movingtab]) > .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged]:-moz-locale-dir(rtl) > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-unselected-new-right-rtl.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
