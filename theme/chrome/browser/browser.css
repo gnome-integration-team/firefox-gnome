@@ -1916,7 +1916,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 .tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned]):not([selected="true"]) > .tab-stack {
-  -moz-border-image: url(tabbrowser/adwaita-tab-unselected.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
+  -moz-border-image: url(tabbrowser/adwaita-tab.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
 /* Updated tabs (in the background) */
