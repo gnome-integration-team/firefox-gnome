@@ -749,6 +749,22 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   border-radius: 0px 3px 3px 0px;
 }
 
+/* */
+#nav-bar[customizing] :-moz-any(#back-button, #zoom-out-button) {
+  -moz-margin-end: 0 !important;
+}
+#nav-bar[customizing] :-moz-any(#forward-button, #zoom-in-button) {
+  -moz-margin-start: -1px !important;
+}
+#nav-bar[customizing]:-moz-locale-dir(ltr) #back-button,
+#nav-bar[customizing]:-moz-locale-dir(rtl) #forward-button {
+  border-radius: 3px 0px 0px 3px;
+}
+#nav-bar[customizing]:-moz-locale-dir(ltr) #forward-button,
+#nav-bar[customizing]:-moz-locale-dir(rtl) #back-button {
+  border-radius: 0px 3px 3px 0px;
+}
+
 /* 24px primary toolbar buttons */
 /* FIXME: it's 16px in real */
 #back-button {
