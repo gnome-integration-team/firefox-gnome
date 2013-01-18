@@ -27,6 +27,12 @@
 }
 
 /* Toolbars */
+#toolbar-menubar:not([autohide="true"]),
+#TabsToolbar[tabsontop="true"],
+#nav-bar[tabsontop="false"] {
+  -moz-binding: url(chrome://global/content/bindings/toolbar.xml#toolbar-drag);
+}
+
 #navigator-toolbox > toolbar {
   -moz-appearance: none;
 }
@@ -1811,10 +1817,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 /*  padding: 0 0 0 3px;*/
   padding: 0 3px;
   box-shadow: 0 -1px 0 #a7a7a7 inset;
-}
-
-#TabsToolbar[tabsontop="true"]:-moz-system-metric(menubar-drag) {
-  -moz-binding: url("chrome://global/content/bindings/toolbar.xml#toolbar-drag");
 }
 
 #TabsToolbar[tabsontop="false"] {
