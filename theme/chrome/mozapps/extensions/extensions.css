@@ -246,7 +246,7 @@
 /*** view-port-container ***/
 
 #view-port-container {
-  background: #eeeeee;
+  background: #fff;
   border: 0;
   border-radius: 0;
   -moz-border-start: 2px solid;
@@ -467,10 +467,9 @@
 }
 
 .addon {
-  border-top: 2px solid transparent;
-  border-bottom: 2px solid transparent;
-  border-image: url(chrome://mozapps/skin/extensions/addon-border.png) 0 0 2 0 / 0px 0px 2px 0px stretch;
-  color: #404040;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid #dfdfde;
+  color: #222;
   padding: 5px;
 }
 
@@ -483,9 +482,8 @@
 }
 
 .addon[selected] {
-  background: #e4e4e4;
-  -moz-border-top-colors: #d1d1d1 #ebebeb;
-  -moz-border-bottom-colors: #d1d1d1 #ebebeb;
+  background: #efefef;
+  -moz-border-top-colors: none;
   border-image: none;
   color: #414141;
 }
@@ -510,6 +508,9 @@
 }
 
 .icon-container {
+  background-image: -moz-linear-gradient(top, #F5F5F5, #DCDCDC)!important;
+  border: 1px solid #d2d2d2;
+  border-radius: 5px;
   width: 48px;
   height: 48px;
   margin: 3px 7px;
@@ -519,8 +520,8 @@
 
 .icon {
   list-style-image: url(chrome://mozapps/skin/extensions/extensionGeneric.png);
-  max-width: 48px;
-  max-height: 48px;
+  max-width: 40px;
+  max-height: 40px;
 }
 
 .addon[active="false"] .icon {
