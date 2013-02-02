@@ -1873,7 +1873,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tabbrowser-tab > .tab-stack {
   margin: 0;
   -moz-margin-start: -9px;
-  padding: 3px 11px 0 11px;
+  padding: 6px 11px 4px 11px;
 }
 
 .tabbrowser-tab:first-of-type > .tab-stack {
@@ -1949,26 +1949,25 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 .tab-label {
-  padding-top: 3px;
-  padding-bottom: 3px;
-  min-height: 25px;
 }
 
 .tab-throbber,
 .tab-icon-image {
-  width: 16px;
-  height: 16px;
-  -moz-margin-end: 4px;
-  margin-bottom: 1px;
-  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
+  width: 18px;
+  height: 18px;
+  border: 1px solid transparent;
+  margin: 1px 0;
+  -moz-margin-start: -1px;
+  -moz-margin-end: 3px;
+  list-style-image: url(chrome://mozapps/skin/places/defaultFavicon.png);
 }
 
 .tab-throbber {
-  list-style-image: url("chrome://browser/skin/tabbrowser/connecting.png");
+  list-style-image: url(chrome://browser/skin/tabbrowser/connecting.png);
 }
 
 .tab-throbber[progress] {
-  list-style-image: url("chrome://browser/skin/tabbrowser/loading.png");
+  list-style-image: url(chrome://browser/skin/tabbrowser/loading.png);
 }
 
 .tab-throbber[pinned],
@@ -2014,7 +2013,8 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 #TabsToolbar .tab-close-button {
   list-style-image: url(chrome://browser/skin/tabbrowser/close-normal.png);
-  -moz-margin-end: -3px !important;
+  margin: 1px 0;
+  -moz-margin-end: -3px;
   padding: 3px;
   border-radius: 3px;
   border: 1px solid transparent !important;
