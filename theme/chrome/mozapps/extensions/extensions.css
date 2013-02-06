@@ -489,7 +489,6 @@
 }
 
 .addon[active="false"] .version {
-  background: lightgray;
 }
 
 .addon[active="false"] .details.button-link,
