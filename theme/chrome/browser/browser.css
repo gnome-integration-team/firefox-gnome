@@ -1892,12 +1892,11 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-margin-start: 0;
 }
 
-.tabbrowser-tab:not([pinned]):not([fadein]) > .tab-stack {
-  display: block;
-}
-.tabbrowser-tab:not([pinned]):not([fadein]) > .tab-stack .tab-label {
-  display: block !important;
-  color: transparent !important;
+.tabbrowser-tab:not([pinned]):not([fadein]) > .tab-stack .tab-label,
+.tabbrowser-tab:not([pinned]):not([fadein]) > .tab-stack .tab-icon-image {
+  display: inherit !important;
+  visibility: hidden;
+  width: 0;
 }
 
 #main-window .tabbrowser-tab:not([selected="true"]) > .tab-stack {
