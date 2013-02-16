@@ -147,6 +147,7 @@
   background: url(chrome://browser/skin/symbolic-icons/pin_white.svg) no-repeat center;
   background-color: rgba(0,0,0,0.25);
   border-radius: 70px;
+  -moz-transform: rotate(30deg);
 }
 
 .newtab-control-pin[pinned]:hover {
