@@ -1,36 +1,169 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="70" height="20" id="svg2" version="1.1" inkscape:version="0.48.4 r9939" sodipodi:docname="New document 1">
-   <defs id="defs4">
-      <linearGradient inkscape:collect="always" id="linearGradient6178">
-         <stop style="stop-color:#71dc41;stop-opacity:1" offset="0" id="stop6180" />
-         <stop style="stop-color:#407e24;stop-opacity:1" offset="1" id="stop6182" />
-      </linearGradient>
-      <linearGradient inkscape:collect="always" id="linearGradient6162">
-         <stop style="stop-color:#cae394;stop-opacity:0.60526316" offset="0" id="stop6164" />
-         <stop style="stop-color:#cae394;stop-opacity:0;" offset="1" id="stop6166" />
-      </linearGradient>
-      <linearGradient inkscape:collect="always" xlink:href="#linearGradient6162" id="linearGradient6168" x1="28" y1="1033.3622" x2="28" y2="1040.3622" gradientUnits="userSpaceOnUse" />
-      <linearGradient inkscape:collect="always" xlink:href="#linearGradient6178" id="linearGradient6184" x1="34.206291" y1="1.0848936" x2="34.206291" y2="18.858866" gradientUnits="userSpaceOnUse" />
-   </defs>
-   <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="1" inkscape:cx="141.07885" inkscape:cy="142.76922" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="false" inkscape:showpageshadow="false" inkscape:object-nodes="true" inkscape:window-width="1366" inkscape:window-height="741" inkscape:window-x="0" inkscape:window-y="2" inkscape:window-maximized="1">
-      <inkscape:grid type="xygrid" id="grid6142" empspacing="5" visible="true" enabled="true" snapvisiblegridlinesonly="true" />
-   </sodipodi:namedview>
-   <metadata id="metadata7">
-      <rdf:RDF>
-         <cc:Work rdf:about="">
-            <dc:format>image/svg+xml</dc:format>
-            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-            <dc:title></dc:title>
-         </cc:Work>
-      </rdf:RDF>
-   </metadata>
-   <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(0,-1032.3622)">
-      <rect ry="2" rx="2" y="0" x="0" height="19.99999" width="70.000031" id="rect6150" style="fill:#3b651d;fill-opacity:1;stroke:none" transform="translate(0,1032.3622)" />
-      <rect transform="translate(0,1032.3622)" style="fill:url(#linearGradient6184);fill-opacity:1;stroke:none" id="rect6160" width="68.000015" height="17.999998" x="1" y="1" rx="2" ry="2" />
-      <rect style="fill:none;stroke:url(#linearGradient6168);stroke-width:1;fill-opacity:1" id="rect6144" width="67.060661" height="16.000002" x="1.513864" y="1033.8761" rx="1.4861014" ry="1.4861014" />
-      <text id="text7455" y="1046.3541" x="12.513879" style="font-size:13.36289787px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#253e28;fill-opacity:1;stroke:none;font-family:FontAwesome;-inkscape-font-specification:FontAwesome Bold" xml:space="preserve"><tspan style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#253e28;fill-opacity:1;font-family:Cantarell;-inkscape-font-specification:Cantarell Bold" id="tspan7457" y="1046.3541" x="12.513879" sodipodi:role="line">Install</tspan></text>
-      <text xml:space="preserve" style="font-size:13.36289787px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#71dc41;fill-opacity:1;stroke:none;font-family:FontAwesome;-inkscape-font-specification:FontAwesome Bold" x="12.513879" y="1045.6798" id="text7447"><tspan sodipodi:role="line" x="12.513879" y="1045.6798" id="tspan7451" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:white;fill-opacity:1;font-family:Cantarell;-inkscape-font-specification:Cantarell Bold">Install</tspan></text>
-   </g>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="26"
+   width="70"
+   version="1.1"
+   id="svg2"
+   inkscape:version="0.48+devel r12027"
+   sodipodi:docname="install.svg"
+   inkscape:export-filename="../theme/chrome/mozapps/extensions/install.png"
+   inkscape:export-xdpi="3"
+   inkscape:export-ydpi="3">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="0.38431373"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview41"
+     showgrid="false"
+     inkscape:zoom="10.142857"
+     inkscape:cx="20.502063"
+     inkscape:cy="13.140415"
+     inkscape:current-layer="svg2"
+     inkscape:showpageshadow="false"
+     showborder="true" />
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient6168"
+       y2="1e3"
+       gradientUnits="userSpaceOnUse"
+       x2="28"
+       gradientTransform="matrix(1,0,0,1.4,-0.043985,-1458.5)"
+       y1="1e3"
+       x1="28">
+      <stop
+         stop-color="#fff"
+         offset="0"
+         id="stop7" />
+      <stop
+         stop-color="#fff"
+         stop-opacity="0"
+         offset="1"
+         id="stop9" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient6184"
+       y2="18"
+       gradientUnits="userSpaceOnUse"
+       x2="34"
+       gradientTransform="matrix(1,0,0,1.3,7.4e-6,1)"
+       y1="-.50"
+       x1="34">
+      <stop
+         stop-color="#8ae234"
+         offset="0"
+         id="stop12" />
+      <stop
+         stop-color="#65b02c"
+         offset=".43"
+         id="stop14" />
+      <stop
+         stop-color="#529627"
+         offset=".78"
+         id="stop16" />
+      <stop
+         stop-color="#407e24"
+         offset="1"
+         id="stop18" />
+    </linearGradient>
+    <filter
+       id="filter902">
+      <feGaussianBlur
+         stdDeviation="0.34611812"
+         id="feGaussianBlur21" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter891"
+       x="-0.037991558"
+       width="1.0759831"
+       y="-0.14261885"
+       height="1.2852377">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.58735195"
+         id="feGaussianBlur893" />
+    </filter>
+  </defs>
+  <metadata
+     id="metadata23">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <rect
+     style="fill:#3b651d"
+     id="rect27"
+     x="3.7893188e-13"
+     y="0"
+     width="70"
+     height="26"
+     ry="3"
+     rx="3" />
+  <rect
+     style="fill:url(#linearGradient6184)"
+     id="rect29"
+     x="1.000015"
+     y="1"
+     width="68"
+     height="24"
+     ry="2"
+     rx="2" />
+  <rect
+     style="opacity:0.5;fill:none;stroke:url(#linearGradient6168)"
+     id="rect31"
+     x="1.500015"
+     y="1.5"
+     width="67"
+     height="23"
+     ry="2"
+     rx="2" />
+  <text
+     style="font-size:13px;font-weight:bold;fill:#000000;font-family:FontAwesome;fill-opacity:1;filter:url(#filter891);opacity:0.3"
+     id="text37-1"
+     x="34.905235"
+     y="18.832001"
+     font-size="13px"
+     xml:space="preserve"
+     font-weight="bold"><tspan
+       id="tspan39-9"
+       x="34.905235"
+       y="18.832001"
+       font-size="14px"
+       font-weight="normal"
+       style="font-size:14px;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;font-family:Cantarell;fill-opacity:1">Install</tspan></text>
+  <text
+     style="font-size:13px;font-weight:bold;fill:#71dc41;font-family:FontAwesome"
+     id="text37"
+     x="33.905235"
+     y="17.832001"
+     font-size="13px"
+     xml:space="preserve"
+     font-weight="bold"><tspan
+       id="tspan39"
+       x="33.905235"
+       y="17.832001"
+       font-size="14px"
+       font-weight="normal"
+       style="font-size:14px;font-weight:normal;text-align:center;text-anchor:middle;fill:#ffffff;font-family:Cantarell">Install</tspan></text>
 </svg>
