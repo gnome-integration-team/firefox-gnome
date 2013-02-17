@@ -1137,16 +1137,10 @@ setting[type="radio"] > radiogroup {
   list-style-image: url(chrome://browser/skin/symbolic-icons/gear.svg);
 }
 
-/*FIXME: Add an update image too*/
-
-/*.addon-control.install,*/
+.addon-control.install,
 .addon-control.update {
 /*  list-style-image: url("moz-icon://stock/gtk-save?size=button");*/
   list-style-image: url(chrome://browser/skin/symbolic-icons/download.svg);
-}
-
-.addon-control.install {
-  list-style-image: url(chrome://mozapps/skin/extensions/install.png);
 }
 
 .button-link {
