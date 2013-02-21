@@ -1881,10 +1881,12 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 }
 
 /* I Love Firefox! */
-.tabbrowser-tab[hidden="true"] + .tabbrowser-tab:not([hidden="true"]) .tab-stack {
+.tabbrowser-tab[hidden="true"] + .tabbrowser-tab:not([hidden="true"]) > .tab-stack {
   -moz-margin-start: 0;
 }
-.tabbrowser-tab:not([hidden="true"]) ~ .tabbrowser-tab[hidden="true"] + .tabbrowser-tab:not([hidden="true"]) .tab-stack {
+
+.tabbrowser-tabs:not([overflow]) > .tabbrowser-tab:not([hidden="true"]) ~ .tabbrowser-tab[hidden="true"] + .tabbrowser-tab:not([hidden="true"]) > .tab-stack,
+.tabbrowser-tabs[overflow] > .tabbrowser-tab:not([hidden="true"]):not([pinned]) ~ .tabbrowser-tab[hidden="true"] + .tabbrowser-tab:not([hidden="true"]) > .tab-stack {
   -moz-margin-start: -9px;
 }
 
@@ -1918,7 +1920,8 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-border-image: url(tabbrowser/adwaita-tab-right-rtl.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
-.tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned]):not([selected="true"]) > .tab-stack {
+.tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned]):not([selected="true"]) > .tab-stack,
+.tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] ~ .tabbrowser-tab[hidden="true"] + .tabbrowser-tab:not([hidden="true"]):not([selected="true"]) > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
@@ -1938,7 +1941,8 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-border-image: url(tabbrowser/adwaita-tab-new-right-rtl.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
-.tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned])[titlechanged] > .tab-stack {
+.tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned])[titlechanged] > .tab-stack,
+.tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] ~ .tabbrowser-tab[hidden="true"] + .tabbrowser-tab:not([hidden="true"])[titlechanged] > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-new.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
@@ -2437,7 +2441,8 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 #main-window:-moz-window-inactive .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab:-moz-locale-dir(rtl) > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-inactive-right-rtl.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
-#main-window:-moz-window-inactive .tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned]):not([selected="true"]) > .tab-stack {
+#main-window:-moz-window-inactive .tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned]):not([selected="true"]) > .tab-stack,
+#main-window:-moz-window-inactive .tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] ~ .tabbrowser-tab[hidden="true"] + .tabbrowser-tab:not([hidden="true"]):not([selected="true"]) > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-inactive.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
@@ -2450,7 +2455,8 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 #main-window:-moz-window-inactive .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged]:-moz-locale-dir(rtl) > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-new-inactive-right-rtl.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
-#main-window:-moz-window-inactive .tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned])[titlechanged] > .tab-stack {
+#main-window:-moz-window-inactive .tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned])[titlechanged] > .tab-stack,
+#main-window:-moz-window-inactive .tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] ~ .tabbrowser-tab[hidden="true"] + .tabbrowser-tab:not([hidden="true"])[titlechanged] > .tab-stack {
   -moz-border-image: url(tabbrowser/adwaita-tab-new-inactive.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
