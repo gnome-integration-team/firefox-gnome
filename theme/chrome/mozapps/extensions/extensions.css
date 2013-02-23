@@ -1136,8 +1136,12 @@ setting[type="radio"] > radiogroup {
 
 
 .addon-control.update {
-/*  list-style-image: url("moz-icon://stock/gtk-save?size=button");*/
-  list-style-image: url(chrome://browser/skin/symbolic-icons/download.svg);
+	color: #fff;
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+	background-image: -moz-linear-gradient(top, #4294F7, #004EAD);
+	padding: 4px 15px;
+	box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset;
+	border: 1px solid #003372;
 }
 
 .addon-control.install {
