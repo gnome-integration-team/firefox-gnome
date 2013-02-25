@@ -68,6 +68,18 @@
   background-color: hsla(210,8%,5%,.2) !important;
 }
 
+.devtools-option-toolbarbutton {
+  -moz-appearance: none;
+  list-style-image: url("chrome://browser/skin/devtools/option-icon.png");
+  -moz-image-region: rect(0px 16px 16px 0px);
+  background: none;
+  border: none;
+}
+
+.devtools-option-toolbarbutton[open=true] {
+  -moz-image-region: rect(0px 32px 16px 16px);
+}
+
 .devtools-menulist > .menulist-label-box {
   text-align: center;
 }
@@ -134,8 +146,9 @@
   display: none;
 }
 
-.devtools-searchinput > .textbox-input-box > .textbox-input:-moz-placeholder {
+.devtools-searchinput > .textbox-input-box > .textbox-input::-moz-placeholder {
   color: hsl(208,10%,66%);
+  opacity: 1.0;
 }
 
 /* Close button */

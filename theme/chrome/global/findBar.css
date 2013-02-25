@@ -137,6 +137,10 @@ label.findbar-find-fast:-moz-window-inactive {
               inset 0 1px 2px 0 rgba(0,106,221,0.3);
 }
 
+.find-status-icon[status="pending"] {
+  list-style-image: url("chrome://global/skin/icons/loading_16.png");
+}
+
 .findbar-textbox[status="notfound"] {
   box-shadow: 0 0 0 1em #f66 inset;
   background: #f66;
