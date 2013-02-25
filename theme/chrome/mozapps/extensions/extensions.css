@@ -507,8 +507,9 @@
 }
 
 .icon-container {
-  background-image: -moz-linear-gradient(top, #F5F5F5, #DCDCDC)!important;
-  border: 1px solid #d2d2d2;
+  background-color: #dfdfdf;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.1) inset;
+  border: 1px solid #c0c0c0;
   border-radius: 5px;
   min-width: 48px;
   min-height: 48px;
@@ -1084,9 +1085,7 @@ setting[type="radio"] > radiogroup {
 .addon-control.enable .button-icon,
 .addon-control.disable .button-icon,
 .addon-control.remove .button-icon,
-.addon-control.preferences .button-icon,
-.addon-control.install .button-icon,
-.addon-control.update .button-icon {
+.addon-control.preferences .button-icon {
   display: block !important;
   -moz-margin-end: 0;
 }
@@ -1094,9 +1093,7 @@ setting[type="radio"] > radiogroup {
 .addon-control.enable .button-text,
 .addon-control.disable .button-text,
 .addon-control.remove .button-text,
-.addon-control.preferences .button-text,
-.addon-control.install .button-text,
-.addon-control.update .button-text {
+.addon-control.preferences .button-text {
   display: none;
 }
 
@@ -1137,10 +1134,23 @@ setting[type="radio"] > radiogroup {
   list-style-image: url(chrome://browser/skin/symbolic-icons/gear.svg);
 }
 
-.addon-control.install,
+
 .addon-control.update {
-/*  list-style-image: url("moz-icon://stock/gtk-save?size=button");*/
-  list-style-image: url(chrome://browser/skin/symbolic-icons/download.svg);
+	color: #fff;
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+	background-image: -moz-linear-gradient(top, #4294F7, #004EAD);
+	padding: 4px 15px;
+	box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset;
+	border: 1px solid #003372;
+}
+
+.addon-control.install {
+	color: #fff;
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+	background-image: -moz-linear-gradient(top, #89C400, #5B9C00);
+	padding: 4px 15px;
+	box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset;
+	border: 1px solid #316D0E;
 }
 
 .button-link {
