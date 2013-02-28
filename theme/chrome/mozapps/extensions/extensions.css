@@ -1137,7 +1137,7 @@ setting[type="radio"] > radiogroup {
 .addon-control.update {
 	color: #fff;
 	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
-	background-image: -moz-linear-gradient(top, #4294F7, #004EAD);
+	background-image: linear-gradient(to bottom, #4294F7, #004EAD);
 	padding: 4px 15px;
 	box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset;
 	border: 1px solid #003372;
@@ -1146,13 +1146,12 @@ setting[type="radio"] > radiogroup {
 .addon-control.install {
 	color: #fff;
 	text-shadow: 0px -1px 0px rgba(0,0,0,0.3);
-	background-image: -moz-linear-gradient(top, #89C400, #5B9C00);
+	background-image: linear-gradient(to bottom, #89C400, #5B9C00);
 	padding: 4px 15px;
 	box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset;
 	border: 1px solid #316D0E;
 }
 
-.addon-control.install:active,
 .addon-control.install:active:hover {
 	color: #203006;
 	text-shadow: 0px 1px 0px rgba(255,255,255,0.3);
