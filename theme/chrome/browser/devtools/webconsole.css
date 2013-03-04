@@ -218,20 +218,12 @@
   -moz-image-region: rect(24px, 48px, 32px, 40px);
 }
 
-.webconsole-close-button {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
-}
-
 /* JSTerm Styles */
 .jsterm-input-node,
 .jsterm-complete-node {
   border: none;
   padding: 0 0 0 16px;
   -moz-appearance: none;
-  box-shadow: none;
-}
-.jsterm-complete-node {
-  background: transparent;
 }
 
 .jsterm-input-node {

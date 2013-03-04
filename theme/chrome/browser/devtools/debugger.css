@@ -266,10 +266,6 @@
   -moz-padding-start: 8px;
 }
 
-#variables[animated] {
-  transition: margin 0.25s ease-in-out;
-}
-
 .dbg-expression-arrow {
   width: 10px;
   height: auto;
