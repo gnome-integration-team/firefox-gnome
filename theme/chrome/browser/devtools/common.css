@@ -3,14 +3,22 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+/* Font for code */
+
+.devtools-monospace {
+  font: message-box;
+  font-family: monospace;
+}
+
 /* Toolbar and Toolbar items */
 
 .devtools-toolbar {
   -moz-appearance: none;
   padding: 4px 3px;
-  box-shadow: 0 1px 0 0 hsla(210, 16%, 76%, .2) inset;
-  background: -moz-linear-gradient(top, hsl(210,11%,36%), hsl(210,11%,18%));
   color: hsl(210,30%,85%);
+  background-image: url(background-noise-toolbar.png), linear-gradient(#3e4750, #3e4750);
+  border-bottom: 1px solid #060a0d;
+  box-shadow: 0 1px 0 hsla(204,45%,98%,.05) inset, -1px 0 0 hsla(204,45%,98%,.05) inset, 0 -1px 0 hsla(204,45%,98%,.05) inset;
 }
 
 .devtools-menulist,
@@ -40,6 +48,10 @@
 
 .devtools-toolbarbutton:not([label]) {
   min-width: 32px;
+}
+
+.devtools-toolbarbutton:not([label]) > .toolbarbutton-text {
+  display: none;
 }
 
 .devtools-toolbarbutton:not([checked=true]):hover:active {
@@ -117,25 +129,31 @@
   margin: 0 3px;
 }
 
-/* Search input */
+/* Text input */
 
+.devtools-textinput,
 .devtools-searchinput {
   -moz-appearance: none;
   margin: 0 3px;
   border: 1px solid hsla(210,8%,5%,.6);
   border-radius: 2px;
   background-color: transparent;
-  background-image: url(magnifying-glass.png), -moz-linear-gradient(hsla(210,16%,76%,.15), hsla(210,16%,76%,.35));
-  background-repeat: no-repeat;
-  background-position: 4px center, top left, top left;
-  padding-top: 0;
-  padding-bottom: 0;
-  -moz-padding-start: 18px;
-  -moz-padding-end: 12px;
+  background-image: -moz-linear-gradient(hsla(210,16%,76%,.15), hsla(210,16%,76%,.35));
+  padding: 3px;
   box-shadow: 0 1px 1px hsla(210,8%,5%,.3) inset,
               0 0 0 1px hsla(210,16%,76%,.1) inset,
               0 1px 0 hsla(210,16%,76%,.15);
   color: inherit;
+}
+
+.devtools-searchinput {
+  padding-top: 0;
+  padding-bottom: 0;
+  -moz-padding-start: 18px;
+  -moz-padding-end: 12px;
+  background-image: url(magnifying-glass.png), -moz-linear-gradient(hsla(210,16%,76%,.15), hsla(210,16%,76%,.35));
+  background-position: 4px center, top left, top left;
+  background-repeat: no-repeat;
 }
 
 .devtools-searchinput:-moz-locale-dir(rtl) {
@@ -186,6 +204,117 @@
   background-color: transparent;
   -moz-margin-end: -3px;
   position: relative;
+}
+
+/* In-tools sidebar */
+
+.devtools-sidebar-tabs {
+  -moz-appearance: none;
+  margin: 0;
+}
+
+.devtools-sidebar-tabs > tabpanels {
+  -moz-appearance: none;
+  padding: 0;
+  border: 0;
+}
+
+.devtools-sidebar-tabs > tabs {
+  -moz-appearance: none;
+  position: static;
+  color: hsl(210,30%,85%);
+  margin-bottom: 0;
+  padding: 0;
+  background-image: url(background-noise-toolbar.png), linear-gradient(#3e4750, #3e4750);
+  box-shadow: 0 1px 0 hsla(204,45%,98%,.05) inset, -1px 0 0 hsla(204,45%,98%,.05) inset, 0 -1px 0 hsla(204,45%,98%,.05) inset;
+  border-width: 0 0 1px 0;
+  border-color: hsla(210,8%,5%,.6);
+  border-style: solid;
+  overflow: hidden;
+}
+
+.devtools-sidebar-tabs > tabs > .tabs-right,
+.devtools-sidebar-tabs > tabs > .tabs-left {
+  display: none;
+}
+
+.devtools-sidebar-tabs > tabs > tab {
+  -moz-appearance: none;
+  /* We want to match the height of a toolbar with a toolbarbutton 
+   * First, we need to replicated the padding of toolbar (4px),
+   * then, the padding of the button itself from toolbarbutton.css (3px),
+   * Also, we need to take the border of the buttons into accout (1px).
+   * Padding-bottom is one pixel shorter because we need to include the
+   * black border.
+   */
+  padding: 8px 3px 7px;
+  -moz-padding-start: 6px;
+  margin: 0;
+  min-width: 78px;
+  text-shadow: 0 -1px 0 hsla(210,8%,5%,.45);
+  text-align: center;
+  color: inherit;
+  -moz-box-flex: 1;
+  border-width: 0;
+  background: transparent;
+  border-radius: 0;
+  position: static;
+  -moz-margin-start: -1px;
+}
+
+.devtools-sidebar-tabs > tabs > tab:first-of-type {
+  -moz-margin-start: -3px;
+}
+
+.devtools-sidebar-tabs > tabs > tab {
+  background-size: 100% 100%, 1px 100%, 1px 100%, 1px 100%;
+  background-repeat: no-repeat;
+  background-position: 2px, 0, 1px, 2px;
+}
+
+.devtools-sidebar-tabs:-moz-locale-dir(rtl) > tabs > tab {
+  background-position: calc(100% - 3px), 100%, calc(100% - 1px), calc(100% - 2px);
+}
+
+
+.devtools-sidebar-tabs > tabs > tab {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(hsla(204,45%,98%,0), hsla(204,45%,98%,.1), hsla(204,45%,98%,0)), linear-gradient(hsla(206,37%,4%,0), hsla(206,37%,4%,.6), hsla(206,37%,4%,0)), linear-gradient(hsla(204,45%,98%,0), hsla(204,45%,98%,.1), hsla(204,45%,98%,0));
+}
+
+.devtools-sidebar-tabs > tabs > tab:hover {
+  background-image: linear-gradient(hsla(206,37%,4%,.2), hsla(206,37%,4%,.2)), linear-gradient(hsla(204,45%,98%,0), hsla(204,45%,98%,.1), hsla(204,45%,98%,0)), linear-gradient(hsla(206,37%,4%,0), hsla(206,37%,4%,.6), hsla(206,37%,4%,0)), linear-gradient(hsla(204,45%,98%,0), hsla(204,45%,98%,.1), hsla(204,45%,98%,0));
+}
+
+.devtools-sidebar-tabs > tabs > tab:hover:active {
+  background-image: linear-gradient(hsla(206,37%,4%,.4), hsla(206,37%,4%,.4)), linear-gradient(hsla(204,45%,98%,0), hsla(204,45%,98%,.1), hsla(204,45%,98%,0)), linear-gradient(hsla(206,37%,4%,0), hsla(206,37%,4%,.6), hsla(206,37%,4%,0)), linear-gradient(hsla(204,45%,98%,0), hsla(204,45%,98%,.1), hsla(204,45%,98%,0));
+}
+
+.devtools-sidebar-tabs > tabs > tab[selected=true] + tab {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(transparent, transparent), linear-gradient(hsla(206,37%,4%,.6), hsla(206,37%,4%,.7)), linear-gradient(hsla(204,45%,98%,.1), hsla(204,45%,98%,.1));
+}
+
+.devtools-sidebar-tabs > tabs > tab[selected=true] + tab:hover {
+  background-image: linear-gradient(hsla(206,37%,4%,.2), hsla(206,37%,4%,.2)), linear-gradient(transparent, transparent), linear-gradient(hsla(206,37%,4%,.6), hsla(206,37%,4%,.7)), linear-gradient(hsla(204,45%,98%,.1), hsla(204,45%,98%,.1));
+}
+
+.devtools-sidebar-tabs > tabs > tab[selected=true] + tab:hover:active {
+  background-image: linear-gradient(hsla(206,37%,4%,.4), hsla(206,37%,4%,.4)), linear-gradient(transparent, transparent), linear-gradient(hsla(206,37%,4%,.6), hsla(206,37%,4%,.7)), linear-gradient(hsla(204,45%,98%,.1), hsla(204,45%,98%,.1));
+}
+
+.devtools-sidebar-tabs > tabs > tab[selected=true] {
+  color: #f5f7fa;
+  background-image: linear-gradient(#2f607b, #294d68), linear-gradient(transparent, transparent), linear-gradient(hsla(206,37%,4%,.6), hsla(206,37%,4%,.7)), linear-gradient(hsla(204,45%,98%,.1), hsla(204,45%,98%,.1));
+  box-shadow: 0 1px 0 hsla(0,0%,100%,.1) inset, 0 -2px 0 hsla(206,37%,4%,.05) inset, 0 -1px 1px hsla(206,37%,4%,.1) inset;
+}
+
+.devtools-sidebar-tabs > tabs > tab[selected=true]:hover {
+  background-image: linear-gradient(#274f64, #224056), linear-gradient(transparent, transparent), linear-gradient(hsla(206,37%,4%,.6), hsla(206,37%,4%,.7)), linear-gradient(hsla(204,45%,98%,.1), hsla(204,45%,98%,.1));
+  box-shadow: 0 1px 0 hsla(0,0%,100%,.05) inset, 0 -2px 0 hsla(206,37%,4%,.05) inset, 0 -1px 1px hsla(206,37%,4%,.1) inset;
+}
+
+.devtools-sidebar-tabs > tabs > tab[selected=true]:hover:active {
+  background-image: linear-gradient(#1f3e4f, #1b3243), linear-gradient(transparent, transparent), linear-gradient(hsla(206,37%,4%,.6), hsla(206,37%,4%,.7)), linear-gradient(hsla(204,45%,98%,.1), hsla(204,45%,98%,.1));
+  box-shadow: 0 1px 0 hsla(0,0%,100%,.05) inset, 0 -2px 0 hsla(206,37%,4%,.05) inset, 0 -1px 1px hsla(206,37%,4%,.1) inset;
 }
 
 /* Theme */
