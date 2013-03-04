@@ -58,7 +58,7 @@ richlistitem[type="download"] {
 }
 
 #downloadsSummary > .downloadTypeIcon {
-  list-style-image: url("chrome://browser/skin/downloads/download-summary.png");
+  list-style-image: url("chrome://browser/skin/downloads/downloadIcon.png");
 }
 
 #downloadsSummaryDescription {
@@ -89,8 +89,10 @@ richlistitem[type="download"]:last-child {
 .downloadTypeIcon {
   -moz-margin-end: 8px;
   /* Prevent flickering when changing states. */
+  /*
   min-height: 32px;
   min-width: 32px;
+  */
 }
 
 .blockedIcon {
@@ -213,8 +215,11 @@ richlistitem[type="download"]:hover > stack > .downloadButton.downloadRetry:acti
      rendered over the main browser window in the Z order.  This is required by
      the animated event notification. */
   position: relative;
+  min-width: 16px;
+  min-height: 16px;
 }
 
+/*
 toolbar[iconsize="small"] > #downloads-indicator > #downloads-indicator-anchor {
   min-width: 16px;
   min-height: 16px;
@@ -224,6 +229,7 @@ toolbar[iconsize="large"] > #downloads-indicator > #downloads-indicator-anchor {
   min-width: 24px;
   min-height: 24px;
 }
+*/
 
 /*** Main indicator icon ***/
 
@@ -235,6 +241,7 @@ toolbar[iconsize="large"] > #downloads-indicator > #downloads-indicator-anchor {
   background: -moz-image-rect(url(chrome://browser/skin/symbolic-icons/download-glow.svg), 0, 16, 16, 0) center no-repeat;
 }
 
+/*
 toolbar[iconsize="small"] > #downloads-indicator > #downloads-indicator-anchor > #downloads-indicator-icon {
   background: -moz-image-rect(url("chrome://browser/skin/Toolbar-small.png"),
                               0, 16, 16, 0) center no-repeat;
@@ -252,6 +259,7 @@ toolbar[iconsize="small"] > #downloads-indicator[attention] > #downloads-indicat
 toolbar[iconsize="large"] > #downloads-indicator[attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
   background-image: url("chrome://browser/skin/downloads/download-glow.png");
 }
+*/
 
 /* In the next few rules, we use :not([counter]) as a shortcut that is
    equivalent to -moz-any([progress], [paused]). */
