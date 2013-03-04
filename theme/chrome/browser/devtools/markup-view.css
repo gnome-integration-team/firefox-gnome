@@ -8,7 +8,6 @@
 }
 
 body {
-  font: message-box;
   color: hsl(0,0%,50%);
 }
 
@@ -48,6 +47,10 @@ li.container {
 
 .expander[expanded] {
   -moz-appearance: treetwistyopen;
+}
+
+.more-nodes {
+  padding-left: 16px;
 }
 
 .styleinspector-propertyeditor {

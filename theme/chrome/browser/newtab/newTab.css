@@ -12,6 +12,9 @@
   background-color: rgb(229,229,229);
   background-image: url(chrome://browser/skin/newtab/noise.png),
                      linear-gradient(to bottom, rgba(255,255,255,.3), rgba(255,255,255,.2));
+                     /*
+                    linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.2));
+                    */
   background-attachment: fixed;
 }
 
