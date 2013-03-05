@@ -686,6 +686,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button):not(:hover):not([open="true"]):not([disabled="true"]),
+#nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls):hover > toolbarbutton:not(:hover):not([open="true"]):not([disabled="true"]),
 #FindToolbar :-moz-any(.findbar-find-next, .findbar-find-previous):not(:hover):not([open="true"]):not([disabled="true"]) {
   background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb) !important;
   border-color: rgba(0,0,0,.25) !important;
@@ -693,6 +694,8 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button)[disabled="true"],
+#nav-bar[iconsize=small] > #unified-back-forward-button:hover:not([forwarddisabled]) > toolbarbutton[disabled="true"],
+#nav-bar > #zoom-controls:hover > toolbarbutton[disabled="true"],
 #FindToolbar :-moz-any(.findbar-find-next, .findbar-find-previous)[disabled="true"] {
   background: #f4f4f2 !important;
   border-color: rgba(0,0,0,.25) !important;
@@ -1060,7 +1063,11 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button #forward-button {
   transition: opacity 200ms ease-in,
-              visibility 200ms ease-out;
+              visibility 200ms ease-out,
+              color 200ms ease, 
+              border 200ms ease, 
+              box-shadow 200ms ease, 
+              background 200ms ease;
 }
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] #forward-button {
@@ -1073,7 +1080,11 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button #back-button {
-  transition: box-shadow 0ms ease-in;
+  transition: box-shadow 0ms ease-in,
+              color 200ms ease, 
+              border 200ms ease, 
+              box-shadow 200ms ease, 
+              background 200ms ease;
 }
 
 window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled] #back-button:not([open="true"]) {
