@@ -3501,10 +3501,14 @@ chatbox[minimized="true"] {
   min-width: 0;
 }
 
-#main-window[privatebrowsingmode=temporary] #TabsToolbar::before {
-  display: -moz-box;
-  content: "";
-  background: url("chrome://browser/skin/privatebrowsing-mask.png") center no-repeat;
-  width: 40px;
-}
+/*#main-window[privatebrowsingmode=temporary] #TabsToolbar::before {*/
+/*  display: -moz-box;*/
+/*  content: "";*/
+/*  background: url("chrome://browser/skin/privatebrowsing-mask.png") center no-repeat;*/
+/*  width: 40px;*/
+/*}*/
 
+
+#main-window[privatebrowsingmode=temporary] #appmenu-toolbar-button {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/privatebrowsing.svg);
+}
