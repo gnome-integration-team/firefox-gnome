@@ -153,6 +153,7 @@
   -moz-appearance: none;
   border: none;
   padding: 0 16px;
+	font-size: 10pt !important;  /* This is a temporary fix for the messy icons upstream have given us. */
 }
 
 .devtools-tab > .radio-label-center-box >.radio-label-box > .radio-icon {
