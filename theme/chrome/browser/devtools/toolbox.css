@@ -153,12 +153,23 @@
   -moz-appearance: none;
   border: none;
   padding: 0 16px;
-	font-size: 10pt !important;  /* This is a temporary fix for the messy icons upstream have given us. */
 }
 
-.devtools-tab > .radio-label-center-box >.radio-label-box > .radio-icon {
+.radio-label-center-box {
+  min-height: inherit;
+}
+
+.devtools-tab > .radio-label-center-box > .radio-label-box {
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+}
+
+.devtools-tab > .radio-label-center-box > .radio-label-box > .radio-icon {
   -moz-margin-end: 6px;
   opacity: 0.6;
+  max-height: 16px;
+  max-width: 16px;
 }
 
 .devtools-tab:hover > .radio-label-center-box > .radio-label-box >
