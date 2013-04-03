@@ -3,9 +3,8 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 body {
-  background: url(layout-background.png), radial-gradient(circle farthest-corner at 50% 70%, hsl(210,53%,45%) 0%, hsl(210,54%,33%) 100%);
+  background: url(layout-background-grid.png), -moz-radial-gradient(50% 70%, circle cover, hsl(210,53%,45%) 0%, hsl(210,54%,33%) 100%);
   color: hsl(210,100%,85%);
-  border-top: 1px solid black;
   -moz-box-sizing: border-box;
 }
 
@@ -30,7 +29,7 @@ body {
 
 #content {
   border-color: hsla(210,100%,85%,0.7);
-  border-style: dotted;
+  border-style: dotted 
 }
 
 #padding {
@@ -41,18 +40,4 @@ body {
 #borders {
   border-style: solid;
   border-color: hsl(210,100%,85%);
-}
-
-#togglebutton {
-  background-image: url(layout-buttons.png);
-  width: 16px;
-  height: 16px;
-}
-
-body.open {
-  background: url(layout-background-grid.png), radial-gradient(circle farthest-corner at 50% 70%, hsl(210,53%,45%) 0%, hsl(210,54%,33%) 100%);
-}
-
-body.open > #header > #togglebutton {
-  background-position: -16px 0;
 }
