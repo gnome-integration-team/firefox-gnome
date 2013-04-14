@@ -20,8 +20,12 @@
 
 #downloadsHistory {
   background: transparent;
-  color: -moz-nativehyperlinktext;
+  color: gray;
   cursor: pointer;
+}
+
+#downloadsHistory:hover {
+	color: #3A81CC;
 }
 
 #downloadsPanel[hasdownloads] > #downloadsFooter {
