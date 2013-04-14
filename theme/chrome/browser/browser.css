@@ -613,6 +613,16 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   box-shadow: 0 1px 0 rgba(255,255,255,0.89);
 }
 
+#downloads-indicator[open="true"],
+#downloads-indicator[open="true"]:hover,
+#downloads-indicator[open="true"]:active,
+#downloads-indicator[open="true"]:active:hover {
+  background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important;
+  border-color: rgba(0,0,0,.25) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89);
+  border-radius: 3px !important;
+}
+
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[open="true"],
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[open="true"]:hover,
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[open="true"]:active,
