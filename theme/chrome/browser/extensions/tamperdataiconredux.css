@@ -1,0 +1,7 @@
+/* Tamperdataiconredux
+ * id: tamperdataiconredux@frizzip.com
+ * URL: https://addons.mozilla.org/firefox/addon/tamper-data-icon-redux/ */
+
+#tdiconmenu-button {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/tamperdataiconredux.svg) !important;
+}

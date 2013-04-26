@@ -1,0 +1,204 @@
+/* WOT
+ * id: {a0d7ccb3-214d-498b-b4aa-0e8fda9a7bf7}
+ * URL: https://addons.mozilla.org/firefox/addon/wot-safe-browsing-tool/ */
+
+/* WOT works using a colorful semaphore system; 
+ * gray symbolic icons would not make sense. 
+ * The following css is meant to replace 24x24 icons 
+ * with their 16x16 counterparts */
+
+/* toolbar button */
+#main-window #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/no_rep_calculated.png") !important;
+}
+#main-window[wot-status="2"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/new_not_safe.png") !important;
+}
+#main-window[wot-status="2-testimony"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/not_safe.png") !important;
+}
+#main-window[wot-status="2-testimony-update"] #wot-button,
+#main-window[wot-status="2-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/message_not_safe.png") !important;
+}
+#main-window[wot-status="1"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/new_danger.png") !important;
+}
+#main-window[wot-status="1-testimony"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/danger.png") !important;
+}
+#main-window[wot-status="1-testimony-update"] #wot-button,
+#main-window[wot-status="1-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/message_danger.png") !important;
+}
+#main-window[wot-status="disabled"] #wot-button,
+#main-window[wot-status="disabled-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/software_not_in_use.png") !important;
+}
+#main-window[wot-status="error"] #wot-button,
+#main-window[wot-status="error-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/problem_with_the_service.png") !important;
+}
+#main-window[wot-status="3"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/new_caution.png") !important;
+}
+#main-window[wot-status="3-testimony"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/caution.png") !important;
+}
+#main-window[wot-status="3-testimony-update"] #wot-button,
+#main-window[wot-status="3-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/message_caution.png") !important;
+}
+#main-window[wot-status="5"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/new_trusted.png") !important;
+}
+#main-window[wot-status="5-testimony"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/trusted.png") !important;
+}
+#main-window[wot-status="5-testimony-update"] #wot-button,
+#main-window[wot-status="5-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/message_trusted.png") !important;
+}
+#main-window[wot-status="inprogress"] #wot-button,
+#main-window[wot-status="inprogress-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/getting_info.png") !important;
+}
+#main-window[wot-status="nohost"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/no_rep_calculated.png") !important;
+}
+#main-window[wot-status="nohost-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/message_no_rep_available.png") !important;
+}
+#main-window[wot-status="notready"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/getting_info.png") !important;
+}
+#main-window[wot-status="notready-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/getting_info.png") !important;
+}
+#main-window[wot-status="offline"] #wot-button,
+#main-window[wot-status="offline-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/offline.png") !important;
+}
+#main-window[wot-status="4"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/new_alright.png") !important;
+}
+#main-window[wot-status="4-testimony"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/alright.png") !important;
+}
+#main-window[wot-status="4-testimony-update"] #wot-button,
+#main-window[wot-status="4-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/message_alright.png") !important;
+}
+#main-window[wot-status="0"] #wot-button,
+#main-window[wot-status="0-testimony"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/no_rep_available.png") !important;
+}
+#main-window[wot-status="0-testimony-update"] #wot-button,
+#main-window[wot-status="0-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/message_no_rep_available.png") !important;
+}
+#main-window[wot-status="excluded"] #wot-button,
+#main-window[wot-status="excluded-testimony"] #wot-button,
+#main-window[wot-status="excluded-testimony-update"] #wot-button,
+#main-window[wot-status="excluded-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/excluded.png") !important;
+}
+
+/* toolbar button / accessible */
+#main-window[wot-mode="accessible"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/no_rep_calculated.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="2"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/new_not_safe.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="2-testimony"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/not_safe.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="2-testimony-update"] #wot-button,
+#main-window[wot-mode="accessible"][wot-status="2-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/message_not_safe.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="1"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/new_danger.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="1-testimony"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/danger.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="1-testimony-update"] #wot-button,
+#main-window[wot-mode="accessible"][wot-status="1-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/message_danger.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="disabled"] #wot-button,
+#main-window[wot-mode="accessible"][wot-status="disabled-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/software_not_in_use.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="error"] #wot-button,
+#main-window[wot-mode="accessible"][wot-status="error-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/problem_with_the_service.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="3"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/new_caution.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="3-testimony"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/caution.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="3-testimony-update"] #wot-button,
+#main-window[wot-mode="accessible"][wot-status="3-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/message_caution.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="5"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/new_trusted.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="5-testimony"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/trusted.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="5-testimony-update"] #wot-button,
+#main-window[wot-mode="accessible"][wot-status="5-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/message_trusted.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="inprogress"] #wot-button,
+#main-window[wot-mode="accessible"][wot-status="inprogress-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/getting_info.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="nohost"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/no_rep_calculated.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="nohost-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/message_no_rep_available.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="notready"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/getting_info.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="notready-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/getting_info.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="offline"] #wot-button,
+#main-window[wot-mode="accessible"][wot-status="offline-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/offline.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="4"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/new_alright.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="4-testimony"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/alright.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="4-testimony-update"] #wot-button,
+#main-window[wot-mode="accessible"][wot-status="4-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/message_alright.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="0"] #wot-button,
+#main-window[wot-mode="accessible"][wot-status="0-testimony"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/no_rep_available.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="0-testimony-update"] #wot-button,
+#main-window[wot-mode="accessible"][wot-status="0-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/accessible/16_16/message_no_rep_available.png") !important;
+}
+#main-window[wot-mode="accessible"][wot-status="excluded"] #wot-button,
+#main-window[wot-mode="accessible"][wot-status="excluded-testimony"] #wot-button,
+#main-window[wot-mode="accessible"][wot-status="excluded-testimony-update"] #wot-button,
+#main-window[wot-mode="accessible"][wot-status="excluded-update"] #wot-button {
+	list-style-image: url("chrome://wot/skin/fusion/16_16/excluded.png") !important;
+}
+
+

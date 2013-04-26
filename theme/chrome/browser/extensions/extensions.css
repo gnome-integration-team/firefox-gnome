@@ -13,6 +13,7 @@
 @import url("chrome://browser/skin/extensions/fbdc.css");
 @import url("chrome://browser/skin/extensions/feedly.css");
 @import url("chrome://browser/skin/extensions/firebug.css");
+@import url("chrome://browser/skin/extensions/flagfox.css");
 @import url("chrome://browser/skin/extensions/flashblock.css");
 @import url("chrome://browser/skin/extensions/flashgot.css");
 @import url("chrome://browser/skin/extensions/foxtophone.css");
@@ -20,8 +21,12 @@
 
 /* G */
 @import url("chrome://browser/skin/extensions/ghostery.css");
+@import url("chrome://browser/skin/extensions/greasefire.css");
 @import url("chrome://browser/skin/extensions/greasemonkey.css");
 @import url("chrome://browser/skin/extensions/gtranslator.css");
+
+/* H */
+@import url("chrome://browser/skin/extensions/https-everywhere.css");
 
 /* L */
 @import url("chrome://browser/skin/extensions/lastpass-password-manager.css");
@@ -37,7 +42,12 @@
 @import url("chrome://browser/skin/extensions/stylish.css");
 
 /* T */
+@import url("chrome://browser/skin/extensions/tamperdataiconredux.css");
+@import url("chrome://browser/skin/extensions/toomanytabs.css");
 @import url("chrome://browser/skin/extensions/tree-style-tab.css");
+
+/* W */
+@import url("chrome://browser/skin/extensions/wot.css");
 
 /* X */
 @import url("chrome://browser/skin/extensions/xmarks-sync.css");
