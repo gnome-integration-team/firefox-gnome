@@ -1,0 +1,35 @@
+/* HTTPS-Everywhere
+ * id: https-everywhere@eff.org
+ * URL: https://www.eff.org/https-everywhere */
+
+
+#https-everywhere-button {
+  list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/https-everywhere.svg") !important;
+  -moz-box-orient: horizontal !important;
+}
+
+toolbar[iconsize="small"] #https-everywhere-button {
+  list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/https-everywhere.svg") !important;
+  -moz-box-orient: horizontal !important;
+}
+
+/* Font fixes*/
+
+#https-everywhere-button menuitem.active-item label {
+  color: inherit !important;
+  font-weight: normal !important;
+}
+#https-everywhere-button menuitem.moot-item label {
+  color: inherit !important;
+  opacity: 0.5 !important;
+  font-weight: normal !important;
+}
+#https-everywhere-button menuitem.breaking-item label {
+  color: inherit !important;
+  font-weight: normal !important;
+}
+#https-everywhere-button menuitem.inactive-item label {
+  color: inherit !important;
+  font-weight: normal !important;
+}
+
