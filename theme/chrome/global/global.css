@@ -277,9 +277,45 @@ label[disabled="true"] {
   border: 1px dotted -moz-DialogText;
 }
 
-notification > button {
+notification > button,
+notification toolbarbutton {
   margin-top: 0;
   margin-bottom: 0;
+  -moz-appearance: none;
+  background: transparent;
+  border-radius: 3px;
+  padding: 3px;
+  box-shadow: none;
+  color: #2e3436;
+  transition-property: color, border, box-shadow, background;
+  transition-duration: 200ms;
+}
+
+notification > button,
+notification toolbarbutton {
+  background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb);
+  border: 1px solid rgba(0,0,0,.4);
+  text-shadow: none;
+}
+
+notification > button:not([disabled="true"]):hover,
+notification toolbarbutton:not([disabled="true"]):hover {
+  background-image: linear-gradient(to bottom, #ffffff, #ebebeb) !important;
+  border-color: rgba(0,0,0,.4) !important;
+}
+
+notification > button:active:hover,
+notification toolbarbutton:active:hover {
+  background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important;
+  border-color: rgba(0,0,0,.4) !important;
+}
+
+notification > button:-moz-window-inactive,
+notification toolbarbutton:-moz-window-inactive {
+  background-image: none !important;
+  background-color: #ededed !important;
+  border: 1px solid rgba(0,0,0,.2) !important;
+  color: #a7aba7 !important;
 }
 
 /* :::::: autoscroll popup ::::: */

@@ -16,6 +16,11 @@ notification[type="info"] {
 notification[type="critical"] {
 }
 
+notification:-moz-window-inactive {
+  background: #fff !important;
+  color: rgba(0,0,0,0.5) !important;
+}
+
 .notification-inner {
   border: 0 !important;
   padding: 4px 0;
@@ -29,8 +34,12 @@ notification[type="critical"] {
 .messageImage {
   width: 16px;
   height: 16px;
-  -moz-margin-start: 1em;
+  -moz-margin-start: 15px;
   -moz-margin-end: 1px;
+}
+
+.messageImage:-moz-window-inactive {
+  opacity: 0.5;
 }
 
 /* Default icons for notifications */
@@ -73,9 +82,14 @@ notification[value="missing-plugins"] .messageImage {
 }
 
 .messageCloseButton {
+  background: transparent !important;
+  border: 1px solid transparent !important;
   list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+  -moz-margin-end: 10px;
+  -moz-margin-start: 5px;
+  padding: 1px !important;
 }
 
 /* Popup notification */
