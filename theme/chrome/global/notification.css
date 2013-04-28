@@ -6,7 +6,6 @@
 
 notification {
   background: #faad3d;
-  border-bottom: 1px solid #a7aba7;
   color: rgba(0,0,0,0.8) !important;
   text-shadow: none;
 }
@@ -19,7 +18,7 @@ notification[type="critical"] {
 
 .notification-inner {
   border: 0 !important;
-  padding: 6px 0;
+  padding: 4px 0;
 }
 
 .messageText {
