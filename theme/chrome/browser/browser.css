@@ -1188,10 +1188,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 
 .mixedActiveContent > #page-proxy-favicon[pageproxystate="valid"] {
-  list-style-image: url(chrome://browser/skin/identity-icons-https-mixed-active.png);
-  /* FIXME
   list-style-image: url(chrome://browser/skin/symbolic-icons/identity-icons-https-mixed-active.svg);
-  */
   opacity: 0.6;
 }
 
