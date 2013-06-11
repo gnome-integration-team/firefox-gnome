@@ -226,6 +226,9 @@
 #category-extension > .category-icon {
   list-style-image: url("chrome://mozapps/skin/extensions/category-extensions.png");
 }
+#category-service > .category-icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/category-service.png");
+}
 #category-theme > .category-icon {
   list-style-image: url("chrome://mozapps/skin/extensions/category-themes.png");
 }
@@ -382,6 +385,12 @@
 #header-search {
   margin: 0;
   min-height: 28px;
+}
+
+@media (max-width: 600px) {
+  #header-search {
+    width: 12em;
+  }
 }
 
 /***  ***/
