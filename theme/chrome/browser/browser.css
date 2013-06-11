@@ -1187,6 +1187,14 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   opacity: 0.6;
 }
 
+.mixedActiveContent > #page-proxy-favicon[pageproxystate="valid"] {
+  list-style-image: url(chrome://browser/skin/identity-icons-https-mixed-active.png);
+  /* FIXME
+  list-style-image: url(chrome://browser/skin/symbolic-icons/identity-icons-https-mixed-active.svg);
+  */
+  opacity: 0.6;
+}
+
 #identity-box:hover #page-proxy-favicon,
 #identity-box:active #page-proxy-favicon,
 #identity-box[open="true"] #page-proxy-favicon {
@@ -1371,6 +1379,10 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   list-style-image: url(chrome://browser/skin/webapps-64.png);
 }
 
+.popup-notification-icon[popupid="mixed-content-blocked"] {
+  list-style-image: url(chrome://browser/skin/mixed-content-blocked-64.png);
+}
+
 .popup-notification-icon[popupid="webRTC-sharingDevices"],
 .popup-notification-icon[popupid="webRTC-shareDevices"] {
   list-style-image: url(chrome://browser/skin/webRTC-shareDevice-64.png);
@@ -1471,6 +1483,10 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   to {
     opacity: 1;
   }
+}
+
+#mixed-content-blocked-notification-icon {
+  list-style-image: url(chrome://browser/skin/mixed-content-blocked-16.png);
 }
 
 #webRTC-shareDevices-notification-icon {
@@ -2239,25 +2255,9 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   display: -moz-box; /* display chevron icon in text mode */
 }
 
-#download-monitor {
-  list-style-image: url("chrome://browser/skin/Toolbar-small.png");
-  -moz-image-region: rect(0px 16px 16px 0px);
-}
+/* Ctrl-Tab */
 
-/* ::::: Keyboard UI Panel ::::: */
-
-.KUI-panel-closebutton {
-  list-style-image: url(KUI-close.png);
-}
-
-.KUI-panel-closebutton > .toolbarbutton-icon {
-  margin: 0;
-}
-
-/* ::::: Ctrl-Tab and All Tabs Panels ::::: */
-
-.ctrlTab-preview,
-.allTabs-preview {
+.ctrlTab-preview {
   -moz-appearance: toolbarbutton;
 }
 
@@ -2266,21 +2266,16 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 }
 
 .ctrlTab-preview:focus .tabPreview-canvas,
-.ctrlTab-preview:hover .tabPreview-canvas,
-.allTabs-preview:focus .tabPreview-canvas,
-.allTabs-preview:hover .tabPreview-canvas {
+.ctrlTab-preview:hover .tabPreview-canvas {
   box-shadow: none;
 }
 
-.ctrlTab-favicon[src],
-.allTabs-favicon[src] {
+.ctrlTab-favicon[src] {
   background-color: white;
   width: 20px;
   height: 20px;
   padding: 2px;
 }
-
-/* Ctrl-Tab */
 
 #ctrlTab-panel {
   padding: 10px;
@@ -2295,25 +2290,6 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   color: ButtonText;
   padding: 0 3px;
   margin-top: 10px;
-}
-
-/* All Tabs */
-
-#allTabs-panel {
-  padding-bottom: 10px;
-}
-
-#allTabs-meta {
-  padding: 5px;
-}
-
-#allTabs-filter {
-  -moz-margin-start: 36px;
-  -moz-margin-end: 0;
-}
-
-.allTabs-preview-label {
-  transform: translate(0, 2px);
 }
 
 /* Application button menu */
@@ -2979,6 +2955,10 @@ html|*#gcli-output-frame {
   padding: 0;
   border-width: 0;
   background-color: transparent;
+}
+
+.gcli-panel {
+  padding: 0;
 }
 
 #gcli-output,
