@@ -214,6 +214,9 @@
 #category-extension > .category-icon {
   list-style-image: url("chrome://mozapps/skin/extensions/category-extensions.png");
 }
+#category-service > .category-icon {
+  list-style-image: url("chrome://mozapps/skin/extensions/category-service.png");
+}
 #category-theme > .category-icon {
   list-style-image: url("chrome://mozapps/skin/extensions/category-themes.png");
 }
@@ -287,6 +290,12 @@
 
 #header-search {
   margin: 0;
+}
+
+@media (max-width: 600px) {
+  #header-search {
+    width: 12em;
+  }
 }
 
 .view-header {
@@ -907,4 +916,3 @@ setting[type="radio"] > radiogroup {
 .header-button .toolbarbutton-text {
   display: none;
 }
-

@@ -71,6 +71,20 @@
   background-color: hsla(206,37%,4%,.4);
 }
 
+#command-button-paintflashing {
+  list-style-image: url("chrome://browser/skin/devtools/command-paintflashing.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+#command-button-paintflashing:hover {
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+#command-button-paintflashing:hover:active {
+  -moz-image-region: rect(0px, 48px, 16px, 32px);
+}
+#command-button-paintflashing[checked=true] {
+  -moz-image-region: rect(0px, 64px, 16px, 48px);
+}
+
 #command-button-responsive {
   list-style-image: url("chrome://browser/skin/devtools/command-responsivemode.png");
   -moz-image-region: rect(0px, 16px, 16px, 0px);
@@ -136,8 +150,9 @@
 
 .devtools-tab {
   -moz-appearance: none;
-  min-width: 88px;
+  min-width: 32px;
   min-height: 32px;
+  max-width: 127px;
   color: #b6babf;
   margin: 0;
   padding: 0;
@@ -147,27 +162,27 @@
   background-repeat: no-repeat;
   background-position: left, right;
   border-right: 1px solid hsla(206,37%,4%,.45);
+  -moz-box-align: center;
 }
 
-.devtools-tab > .radio-label-center-box > .radio-label-box {
-  -moz-appearance: none;
+.devtools-tab > image {
   border: none;
-  padding: 0 16px;
-}
-
-.devtools-tab > .radio-label-center-box >.radio-label-box > .radio-icon {
-  -moz-margin-end: 6px;
+  -moz-margin-end: 0;
+  -moz-margin-start: 8px;
   opacity: 0.6;
+  max-height: 16px;
 }
 
-.devtools-tab:hover > .radio-label-center-box > .radio-label-box >
-.radio-icon {
+.devtools-tab > label {
+  white-space: nowrap;
+}
+
+.devtools-tab:hover > image {
   opacity: 0.8;
 }
 
-.devtools-tab:active > .radio-label-center-box > .radio-label-box > .radio-icon,
-.devtools-tab[selected=true] > .radio-label-center-box > .radio-label-box >
-.radio-icon {
+.devtools-tab:active > image,
+.devtools-tab[selected=true] > label {
   opacity: 1;
 }
 
