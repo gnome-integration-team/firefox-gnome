@@ -67,10 +67,7 @@ menubar > menu[_moz-menuactive="true"]:not([open]):not([disabled="true"]):not(:-
 }
 
 menubar > menu[open] {
-
-/*  color: -moz-menubarhovertext;*/
-/*  background-color: -moz-menuhover;*/
-  color: #2e3436;
+  color: MenuText;
   background-color: Menu;
   border-radius: 3px 3px 0 0;
 }
