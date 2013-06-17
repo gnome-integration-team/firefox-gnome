@@ -18,10 +18,7 @@ menuitem,
   */
   -moz-box-align: center;
   max-width: 42em;
-  /*
   color: MenuText;
-  */
-  color: #2e3436;
   background-color: Menu;
   font: menu;
   list-style-image: none;
@@ -36,12 +33,8 @@ menuitem[default="true"] {
 menu[_moz-menuactive="true"],
 menuitem[_moz-menuactive="true"],
 .splitmenu-menuitem[_moz-menuactive="true"] {
-  /*
   color: -moz-menuhovertext;
   background-color: -moz-menuhover;
-  */
-  color: white;
-  background-color: #4a90d9;
 }
 
 menu[disabled="true"],
@@ -74,10 +67,7 @@ menubar > menu[_moz-menuactive="true"]:not([open]):not([disabled="true"]):not(:-
 }
 
 menubar > menu[open] {
-
-/*  color: -moz-menubarhovertext;*/
-/*  background-color: -moz-menuhover;*/
-  color: #2e3436;
+  color: MenuText;
   background-color: Menu;
   border-radius: 3px 3px 0 0;
 }

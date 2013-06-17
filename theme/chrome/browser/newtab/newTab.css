@@ -27,11 +27,11 @@
 }
 
 /* UNDO */
-/* FIXME: Need uncomment and fix it
 #newtab-undo-container {
   padding: 4px 3px;
   border: 1px solid;
   border-color: rgba(8,22,37,.12) rgba(8,22,37,.14) rgba(8,22,37,.16);
+  border-radius: 3px;
   background-color: rgba(255,255,255,.4);
   color: #525e69;
 }
@@ -43,7 +43,7 @@
 
 .newtab-undo-button {
   -moz-appearance: none;
-  color: rgb(221,72,20);
+  color: #3b6aa7;
   cursor: pointer;
   padding: 0;
   margin: 0 4px;
@@ -64,12 +64,17 @@
 #newtab-undo-close-button {
   padding: 0;
   border: none;
-  list-style-image: url("moz-icon://stock/gtk-close?size=menu");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
   -moz-user-focus: normal;
 }
 
 #newtab-undo-close-button > .toolbarbutton-icon {
   margin: -4px;
+  opacity: .4;
+}
+
+#newtab-undo-close-button:hover > .toolbarbutton-icon {
+  opacity: 1;
 }
 
 #newtab-undo-close-button > .toolbarbutton-text {
@@ -79,7 +84,6 @@
 #newtab-undo-close-button:-moz-focusring {
   outline: 1px dotted;
 }
-*/
 
 /* TOGGLE */
 #newtab-toggle {
@@ -107,7 +111,7 @@
 .newtab-cell {
   -moz-margin-end: 20px;
   background-color: rgba(255,255,255,.2);
-  border: 1px solid ;
+  border: 1px solid;
   border-color: rgba(8,22,37,.12) rgba(8,22,37,.14) rgba(8,22,37,.16);
   border-radius: 3px;
   transition: border-color 100ms ease-out;
