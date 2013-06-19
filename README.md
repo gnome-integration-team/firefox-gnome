@@ -18,10 +18,10 @@ Help & feedback are both appreciated! ;-)
 
 Tabs on top:
 
-![Screenshot](firefox-gnome/raw/master/screenshots/screenshot-tabs-on-top.png)
+![Screenshot](https://raw.github.com/gnome-integration-team/firefox-gnome/master/screenshots/screenshot-tabs-on-top.png)
 
 Tabs on bottom:
 
 (Visit to `about:config` in your URL bar and change **browser.tabs.onTop** to **false**.)
 
-![Screenshot](firefox-gnome/raw/master/screenshots/screenshot-tabs-on-bottom.png)
+![Screenshot](https://raw.github.com/gnome-integration-team/firefox-gnome/master/screenshots/screenshot-tabs-on-bottom.png)
