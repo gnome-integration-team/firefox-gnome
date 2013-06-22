@@ -2,17 +2,11 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+@import url("chrome://appversion/skin/devtools/markup-view.css");
+
 * {
   padding: 0;
   margin: 0;
-}
-
-body {
-  color: hsl(0,0%,50%);
-}
-
-.text {
-  color: black;
 }
 
 .newattr {
@@ -41,12 +35,6 @@ li.container {
 
 .expander {
   position: absolute;
-  -moz-appearance: treetwisty;
-  padding: 11px 0;
-}
-
-.expander[expanded] {
-  -moz-appearance: treetwistyopen;
 }
 
 .more-nodes {

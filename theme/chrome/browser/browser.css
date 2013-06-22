@@ -4,9 +4,7 @@
 
 @import url("chrome://global/skin/");
 
-/*
-@import url("chrome://app_version/skin/browser.css");
-*/
+@import url("chrome://appversion/skin/browser.css");
 
 @import url("chrome://browser/skin/extensions/extensions.css");
 
@@ -1339,6 +1337,10 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   list-style-image: url(chrome://mozapps/skin/plugins/pluginBlocked-64.png);
 }
 
+.popup-notification-icon[popupid="web-notifications"] {
+  list-style-image: url(chrome://browser/skin/notification-64.png);
+}
+
 .addon-progress-description {
   width: 350px;
   max-width: 350px;
@@ -1385,6 +1387,10 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   list-style-image: url(chrome://browser/skin/webRTC-shareDevice-64.png);
 }
 
+.popup-notification-icon[popupid="pointerLock"] {
+  list-style-image: url(chrome://browser/skin/pointerLock-64.png);
+}
+
 /* Notification icon box */
 #notification-popup-box {
   position: relative;
@@ -1395,7 +1401,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   border-width: 0 8px 0 0;
   border-style: solid;
   border-color: #fff;
-  -moz-border-image: url("chrome://browser/skin/urlbar-arrow.png") 0 8 0 0 fill;
+  border-image: url("chrome://browser/skin/urlbar-arrow.png") 0 8 0 0 fill;
   -moz-margin-end: -8px;
 /*  margin-top: -1px;*/
 /*  margin-bottom: -1px;*/
@@ -1492,6 +1498,17 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #webRTC-sharingDevices-notification-icon {
   list-style-image: url(chrome://browser/skin/webRTC-sharingDevice-16.png);
+}
+
+#web-notifications-notification-icon {
+  list-style-image: url(chrome://browser/skin/notification-16.png);
+}
+
+#pointerLock-notification-icon {
+  list-style-image: url(chrome://browser/skin/pointerLock-16.png);
+}
+#pointerLock-cancel {
+  margin: 0px;
 }
 
 #treecolAutoCompleteImage {
@@ -1660,6 +1677,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #socialUserPortrait {
   width: 48px;
   height: 48px;
+  list-style-image:url("chrome://global/skin/icons/information-32.png");
 }
 
 #socialUserDisplayName,
@@ -2170,14 +2188,14 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled]):-moz-locale-dir(rtl) {
   border-width: 0 2px 0 0;
   border-style: solid;
-  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill !important; /* FIXME */
+  border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill !important; /* FIXME */
 }
 
 .tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled]):-moz-locale-dir(ltr),
 .tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled]):-moz-locale-dir(rtl) {
   border-width: 0 0 0 2px;
   border-style: solid;
-  -moz-border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill !important; /* FIXME */
+  border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill !important; /* FIXME */
 }
 
 /*
@@ -2488,31 +2506,82 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   opacity: 0.5;
 }
 
-/*** Dev Tools ***/
-
-/* Inspector / Highlighter */
-
-#highlighter-panel {
-  -moz-appearance: none;
-  -moz-window-shadow: none;
-  background: linear-gradient(to bottom, #ffdd88, #ffeeaa);
-  border: none;
-  opacity: 0.35;
-}
-
-listitem.style-selector {
-  background-color: DarkGray;
+#full-screen-warning-message {
+  background-color: hsl(0,0%,15%);
   color: white;
+  border-radius: 8px;
+  margin-top: 30px;
+  padding: 30px 50px;
+  box-shadow: 0 0 2px white;
 }
 
-listitem.style-section {
-  background-color: LightGray;
-  color: black;
-  font-weight: bold;
+#full-screen-warning-container[obscure-browser] {
+  background-color: rgba(0,0,0,0.3);
 }
 
-panel[dimmed="true"] {
-  opacity: 0.5;
+.full-screen-description {
+  font-size: 150%;
+}
+
+#full-screen-domain-text {
+  font-size: 300%;
+}
+
+.full-screen-approval-button,
+#full-screen-remember-decision {
+  font-size: 120%;
+}
+
+/* Developer toolbar */
+
+#developer-toolbar {
+  border-top: 1px solid hsla(210, 8%, 5%, .65);
+}
+
+/* Responsive Mode */
+
+.browserContainer[responsivemode] {
+  background: #222 url("chrome://browser/skin/devtools/responsive-background.png");
+  padding: 0 20px 20px 20px;
+}
+
+.browserStack[responsivemode] {
+  box-shadow: 0 0 7px black;
+}
+
+.devtools-responsiveui-toolbar {
+  background: transparent;
+  margin: 10px 0;
+  padding: 0;
+  box-shadow: none;
+  border-bottom-width: 0;
+}
+
+.devtools-responsiveui-toolbar > menulist,
+.devtools-responsiveui-toolbar > toolbarbutton {
+  min-width: 22px;
+  border-radius: 0;
+}
+
+.devtools-responsiveui-toolbar:-moz-locale-dir(ltr) > *:first-child,
+.devtools-responsiveui-toolbar:-moz-locale-dir(rtl) > *:last-child {
+  margin-left: 0;
+}
+
+.devtools-responsiveui-resizebar {
+  width: 7px;
+  height: 24px;
+  cursor: ew-resize;
+  transform: translate(12px, -12px);
+  background-image: url("chrome://browser/skin/devtools/responsive-vertical-resizer.png");
+}
+
+.devtools-responsiveui-resizehandle {
+  width: 16px;
+  height: 16px;
+  cursor: se-resize;
+  transform: translate(12px, 12px);
+  background-image: url("chrome://browser/skin/devtools/responsive-se-resizer.png");
 }
 
 /* Highlighter */
@@ -2526,35 +2595,6 @@ panel[dimmed="true"] {
 .highlighter-outline[locked]  {
   box-shadow: 0 0 0 1px rgba(0,0,0,0.3);
   outline-color: rgba(255,255,255,0.7);
-}
-
-/* Highlighter toolbar */
-
-#inspector-inspect-toolbutton {
-  list-style-image: url("chrome://browser/skin/devtools/inspect-button.png");
-  -moz-image-region: rect(0px 16px 16px 0px);
-}
-
-#inspector-inspect-toolbutton[checked=true] {
-  -moz-image-region: rect(0px 32px 16px 16px);
-}
-
-#inspector-option-toolbarbutton {
-  -moz-appearance: none;
-  -moz-margin-end: 6px;
-  -moz-padding-start: 7px;
-  list-style-image: url("chrome://browser/skin/devtools/inspector-option-icon.png");
-  -moz-image-region: rect(0px 16px 16px 0px);
-  border: none;
-}
-
-#inspector-option-toolbarbutton[open] {
-  -moz-image-region: rect(0px 32px 16px 16px);
-}
-
-#inspector-toolbar,
-#developer-toolbar {
-  border-top: 1px solid hsla(210, 8%, 5%, .65);
 }
 
 /* Highlighter - Node Infobar */
@@ -2594,6 +2634,7 @@ html|*.highlighter-nodeinfobar-pseudo-classes {
   padding: 0;
   width: 26px;
   min-height: 26px;
+  background-color: transparent;
 }
 
 .highlighter-nodeinfobar-inspectbutton {
@@ -2668,294 +2709,11 @@ html|*.highlighter-nodeinfobar-pseudo-classes {
   margin: 7px 0;
 }
 
-#full-screen-warning-message {
-  background-color: hsl(0,0%,15%);
-  color: white;
-  border-radius: 8px;
-  margin-top: 30px;
-  padding: 30px 50px;
-  box-shadow: 0 0 2px white;
-}
-
-#full-screen-warning-container[obscure-browser] {
-  background-color: rgba(0,0,0,0.3);
-}
-
-.full-screen-description {
-  font-size: 150%;
-}
-
-#full-screen-domain-text {
-  font-size: 300%;
-}
-
-.full-screen-approval-button,
-#full-screen-remember-decision {
-  font-size: 120%;
-}
-
-/* Highlighter toolbar - breadcrumbs */
-
-#inspector-breadcrumbs {
-  -moz-margin-end: 3px;
-  /* A fake 1px-shadow is included in the border-images of the
-     inspector-breadcrumbs-buttons, to match toolbar-buttons style.
-     This negative margin compensate the extra row of pixels created
-     by the shadow.*/
-  margin-bottom: -1px;
-}
-
-#inspector-breadcrumbs > .scrollbutton-up,
-#inspector-breadcrumbs > .scrollbutton-down {
-  -moz-appearance: none;
-  border: 1px solid hsla(210,8%,5%,.45);
-  background: linear-gradient(to bottom, hsla(212,7%,57%,.35), hsla(212,7%,57%,.1)) padding-box;
-  box-shadow: 0 1px 0 hsla(210,16%,76%,.15) inset, 0 0 0 1px hsla(210,16%,76%,.15) inset, 0 1px 0 hsla(210,16%,76%,.15);
-  margin: 0 0 1px;
-}
-
-#inspector-breadcrumbs > .scrollbutton-up {
-  -moz-border-start-width: 0;
-}
-
-#inspector-breadcrumbs > .scrollbutton-up:not([disabled]):active:hover,
-#inspector-breadcrumbs > .scrollbutton-down:not([disabled]):active:hover {
-  border-color: hsla(210,8%,5%,.6);
-  background: linear-gradient(to bottom, hsla(220,6%,10%,.3), hsla(212,7%,57%,.15) 65%, hsla(212,7%,57%,.3));
-  box-shadow: 0 0 3px hsla(210,8%,5%,.25) inset, 0 1px 3px hsla(210,8%,5%,.25) inset, 0 1px 0 hsla(210,16%,76%,.15);
-}
-
-#inspector-breadcrumbs > .scrollbutton-up:not([disabled]):active:hover > .toolbarbutton-icon,
-#inspector-breadcrumbs > .scrollbutton-down:not([disabled]):active:hover > .toolbarbutton-icon {
-  -moz-image-region: rect(0px 14px 16px 7px);
-}
-
-#inspector-breadcrumbs > .scrollbutton-up > .toolbarbutton-icon,
-#inspector-breadcrumbs > .scrollbutton-down > .toolbarbutton-icon {
-  -moz-appearance: none;
-  list-style-image: url("chrome://browser/skin/devtools/breadcrumbs-scrollbutton.png");
-  -moz-image-region: rect(0px 7px 16px 0px);
-  margin: 0 5px;
-}
-
-#inspector-breadcrumbs > .scrollbutton-up[disabled] > .toolbarbutton-icon,
-#inspector-breadcrumbs > .scrollbutton-down[disabled] > .toolbarbutton-icon {
-  opacity: 0.5;
-}
-
-#inspector-breadcrumbs > .scrollbutton-up > .toolbarbutton-icon:-moz-locale-dir(rtl),
-#inspector-breadcrumbs > .scrollbutton-down > .toolbarbutton-icon:-moz-locale-dir(ltr) {
-  transform: scaleX(-1);
-}
-
-.inspector-breadcrumbs-button {
-  -moz-appearance: none;
-  background-color: transparent;
-  border-style: solid;
-  border-width: 1px 13px 2px 13px;
-  color: hsl(210,30%,85%);
-  width: 85px; /* Can't use max-width. See bug 723132 */
-  /* The content of the button can be larger than the button */
-  overflow: hidden;
-  min-height: 25px;
-
-  margin: 0 -11px 0 0;
-  padding: 0 9px;
-}
-
-.inspector-breadcrumbs-button:-moz-focusring > label {
-  border-bottom: 1px dotted hsla(210,30%,85%,0.4);
-}
-
-.inspector-breadcrumbs-button[checked] > .inspector-breadcrumbs-tag {
-  color: hsl(208,100%,60%);
-}
-
-.inspector-breadcrumbs-button[checked] > .inspector-breadcrumbs-id {
-  color: hsl(205,100%,70%);
-}
-
-.inspector-breadcrumbs-button[checked] > .inspector-breadcrumbs-pseudo-classes {
-  color: hsl(20, 100%, 70%);
-}
-
-.inspector-breadcrumbs-id,
-.inspector-breadcrumbs-classes {
-  color: #8d99a6;
-}
-
-.inspector-breadcrumbs-pseudo-classes {
-  color: hsl(20, 100%, 85%);
-}
-
-/* Highlighter toolbar - breadcrumbs - LTR */
-
-.inspector-breadcrumbs-button:-moz-locale-dir(ltr):first-of-type {
-  margin-left: 0;
-  border-left-width: 0;
-}
-
-.inspector-breadcrumbs-button {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle.png") 1 13 2 13 fill stretch;
-}
-
-.inspector-breadcrumbs-button[siblings-menu-open]:not([checked]),
-.inspector-breadcrumbs-button:not([checked]):hover:active {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle-pressed.png") 1 13 2 13 fill stretch;
-}
-
-.inspector-breadcrumbs-button[checked] {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle-selected.png") 1 13 2 13 fill stretch;
-}
-
-.inspector-breadcrumbs-button[checked][siblings-menu-open],
-.inspector-breadcrumbs-button[checked]:hover:active {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-middle-selected-pressed.png") 1 13 2 13 fill stretch;
-}
-
-.inspector-breadcrumbs-button:first-of-type {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-start.png") 1 13 2 13 fill stretch;
-}
-
-.inspector-breadcrumbs-button[siblings-menu-open]:first-of-type:not([checked]),
-.inspector-breadcrumbs-button:first-of-type:not([checked]):hover:active {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-start-pressed.png") 1 13 2 13 fill stretch;
-}
-
-.inspector-breadcrumbs-button:first-of-type[checked] {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-start-selected.png") 1 13 2 13 fill stretch;
-}
-
-.inspector-breadcrumbs-button[siblings-menu-open]:first-of-type[checked],
-.inspector-breadcrumbs-button:first-of-type[checked]:hover:active {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-start-selected-pressed.png") 1 13 2 13 fill stretch;
-}
-
-.inspector-breadcrumbs-button:last-of-type {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-end.png") 1 13 2 13 fill stretch;
-}
-
-#inspector-breadcrumbs[overflows] > .inspector-breadcrumbs-button:-moz-locale-dir(ltr):last-of-type {
-  border-right-width: 0;
-}
-
-.inspector-breadcrumbs-button[siblings-menu-open]:last-of-type:not([checked]),
-.inspector-breadcrumbs-button:last-of-type:not([checked]):hover:active {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-end-pressed.png") 1 13 2 13 fill stretch;
-}
-
-.inspector-breadcrumbs-button:last-of-type[checked] {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-end-selected.png") 1 13 2 13 fill stretch;
-}
-
-.inspector-breadcrumbs-button[siblings-menu-open]:last-of-type[checked],
-.inspector-breadcrumbs-button:last-of-type[checked]:hover:active {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/ltr-end-selected-pressed.png") 1 13 2 13 fill stretch;
-}
-
-/* Highlighter toolbar - breadcrumbs - RTL */
-
-.inspector-breadcrumbs-button:-moz-locale-dir(rtl):first-of-type {
-  margin-right: 0;
-  border-right-width: 0;
-}
-
-.inspector-breadcrumbs-button:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-middle.png") 1 13 2 13 fill stretch;
-}
-
-.inspector-breadcrumbs-button[siblings-menu-open]:not([checked]):-moz-locale-dir(rtl),
-.inspector-breadcrumbs-button:not([checked]):hover:active:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-middle-pressed.png") 1 13 2 13 fill stretch;
-}
-
-.inspector-breadcrumbs-button[checked]:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-middle-selected.png") 1 13 2 13 fill stretch;
-}
-
-.inspector-breadcrumbs-button[checked][siblings-menu-open]:-moz-locale-dir(rtl),
-.inspector-breadcrumbs-button[checked]:hover:active:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-middle-selected-pressed.png") 1 13 2 13 fill stretch;
-}
-
-.inspector-breadcrumbs-button:first-of-type:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-start.png") 1 13 2 13 fill stretch;
-}
-
-.inspector-breadcrumbs-button[siblings-menu-open]:first-of-type:not([checked]):-moz-locale-dir(rtl),
-.inspector-breadcrumbs-button:first-of-type:not([checked]):hover:active:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-start-pressed.png") 1 13 2 13 fill stretch;
-}
-
-.inspector-breadcrumbs-button:first-of-type[checked]:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-start-selected.png") 1 13 2 13 fill stretch;
-}
-
-.inspector-breadcrumbs-button[siblings-menu-open]:first-of-type[checked]:-moz-locale-dir(rtl),
-.inspector-breadcrumbs-button:first-of-type[checked]:hover:active:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-start-selected-pressed.png") 1 13 2 13 fill stretch;
-}
-
-.inspector-breadcrumbs-button:last-of-type:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-end.png") 1 13 2 13 fill stretch;
-}
-
-#inspector-breadcrumbs[overflows] > .inspector-breadcrumbs-button:last-of-type:-moz-locale-dir(rtl) {
-  border-left-width: 0;
-}
-
-.inspector-breadcrumbs-button[siblings-menu-open]:last-of-type:not([checked]):-moz-locale-dir(rtl),
-.inspector-breadcrumbs-button:last-of-type:not([checked]):hover:active:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-end-pressed.png") 1 13 2 13 fill stretch;
-}
-
-.inspector-breadcrumbs-button:last-of-type[checked]:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-end-selected.png") 1 13 2 13 fill stretch;
-}
-
-.inspector-breadcrumbs-button[siblings-menu-open]:last-of-type[checked]:-moz-locale-dir(rtl),
-.inspector-breadcrumbs-button:last-of-type[checked]:hover:active:-moz-locale-dir(rtl) {
-  -moz-border-image: url("chrome://browser/skin/devtools/breadcrumbs/rtl-end-selected-pressed.png") 1 13 2 13 fill stretch;
-}
-
-/* Highlighter toolbar - HTML Tree */
-
-#inspector-treepanel-toolbutton {
-  list-style-image: url("chrome://browser/skin/devtools/treepanel-button.png");
-  -moz-margin-end: 0;
-  -moz-image-region: rect(0px 18px 16px 0px);
-}
-
-#inspector-treepanel-toolbutton[checked] {
-  -moz-image-region: rect(0px 36px 16px 18px);
-}
-
-#inspector-breadcrumbs > .scrollbutton-down:-moz-locale-dir(rtl),
-#inspector-treepanel-toolbutton:-moz-locale-dir(ltr) {
-  border-radius: 3px 0 0 3px;
-}
-
-#inspector-breadcrumbs > .scrollbutton-down:-moz-locale-dir(ltr),
-#inspector-treepanel-toolbutton:-moz-locale-dir(rtl) {
-  border-radius: 0 3px 3px 0;
-}
-
-/* Highlight toolbar - Option menu */
-
-#inspector-option-toolbarbutton:-moz-focusring {
-  outline: 1px dotted hsla(210,30%,85%,0.4);
-  outline-offset: -2px;
-}
-
 html|*#gcli-tooltip-frame,
 html|*#gcli-output-frame {
   padding: 0;
   border-width: 0;
   background-color: transparent;
-}
-
-.gcli-panel {
-  padding: 0;
 }
 
 #gcli-output,
@@ -2984,17 +2742,16 @@ html|*#gcli-output-frame {
   padding-left: 20px;
   background: transparent;
   -moz-appearance: none;
-  border-color: hsl(210,11%,10%);
+  border-color: hsl(210,24%,10%);
   color: hsl(210,30%,85%);
   text-shadow: 0 -1px 0 hsla(210,8%,5%,.45);
-  box-shadow: 0 1px 1px hsla(210,8%,5%,.3) inset,
-              0 0 0 1px hsla(210,16%,76%,.1) inset,
-              0 1px 0 hsla(210,16%,76%,.15);
+  box-shadow: inset 0 1px 0 hsla(211,68%,6%,.05),
+              0 0 0 1px hsla(210,40%,83%,.1);
 }
 
 .gclitoolbar-input-node > .textbox-input-box > html|*.textbox-input::-moz-selection {
   background-color: hsl(210,30%,85%);
-  color: hsl(210,11%,16%);
+  color: hsl(210,24%,16%);
   text-shadow: none;
 }
 
@@ -3010,7 +2767,7 @@ html|*#gcli-output-frame {
   font-size: 150%;
   font-weight: bold;
   color: hsl(210,30%,85%);
-  background: hsl(210,11%,16%);
+  background-color: hsl(210,24%,16%);
 }
 
 .gclitoolbar-prompt-label,
@@ -3045,49 +2802,23 @@ html|*#gcli-output-frame {
   color: hsl(0,0%,80%);
 }
 
-/* Responsive Mode */
-
-.browserContainer[responsivemode] {
-  background: #222 url("chrome://browser/skin/devtools/responsive-background.png");
-  padding: 0 20px 20px 20px;
-}
-
-.browserStack[responsivemode] {
-  box-shadow: 0 0 7px black;
-}
-
-.devtools-responsiveui-toolbar {
-  background: transparent;
-  margin: 10px 0;
+.gcli-panel {
   padding: 0;
-  box-shadow: none;
 }
 
-.devtools-responsiveui-toolbar > menulist,
-.devtools-responsiveui-toolbar > toolbarbutton {
-  min-width: 22px;
-  border-radius: 0;
+.gclitoolbar-input-node {
+  border-color: hsl(210,11%,10%);
+  box-shadow: 0 1px 1px hsla(210,8%,5%,.3) inset,
+              0 0 0 1px hsla(210,16%,76%,.1) inset,
+              0 1px 0 hsla(210,16%,76%,.15);
 }
 
-.devtools-responsiveui-toolbar:-moz-locale-dir(ltr) > *:first-child,
-.devtools-responsiveui-toolbar:-moz-locale-dir(rtl) > *:last-child {
-  margin-left: 0;
+.gclitoolbar-input-node > .textbox-input-box > html|*.textbox-input::-moz-selection {
+  color: hsl(210,11%,16%);
 }
 
-.devtools-responsiveui-resizebar {
-  width: 7px;
-  height: 24px;
-  cursor: ew-resize;
-  transform: translate(12px, -12px);
-  background-image: url("chrome://browser/skin/devtools/responsive-vertical-resizer.png");
-}
-
-.devtools-responsiveui-resizehandle {
-  width: 16px;
-  height: 16px;
-  cursor: se-resize;
-  transform: translate(12px, 12px);
-  background-image: url("chrome://browser/skin/devtools/responsive-se-resizer.png");
+.gclitoolbar-prompt {
+  background-color: hsl(210,11%,16%);
 }
 
 /* Web Console */
@@ -3162,58 +2893,20 @@ html|*#gcli-output-frame {
   -moz-margin-end: 2px;
 }
 
-#social-toolbar-item {
-  -moz-box-orient: horizontal;
-}
-
-#social-toolbar-item > .toolbarbutton-1 {
-  -moz-box-align: center;
-  -moz-box-pack: center;
-}
-
-.social-notification-icon-hbox {
-  pointer-events: none;
-}
-
-.social-status-button {
-  list-style-image: none;
-}
-
-#social-provider-button > image {
-}
-
-.social-notification-icon-stack {
-  padding: 0;
-}
-
-.social-notification-icon-image {
-  max-width: 16px;
-  max-height: 16px;
-  -moz-image-region: rect(0, 16px, 16px, 0);
-}
-
-.social-notification-icon-hbox {
-  padding: 0;
-}
-
-#social-toolbar-item > .toolbarbutton-1 > .toolbarbutton-icon,
-.social-notification-container > .toolbarbutton-1 > .toolbarbutton-icon {
-  margin: 5px 3px;
-}
-
 #social-provider-button > .toolbarbutton-menu-dropmarker {
   display: none;
 }
 
-.social-notification-container {
-  /* position:relative on .toolbarbutton-1 does not get position:absolute
-     to work as expected on .toolbarbutton-1 generated content. Placing a
-     simple container outside of .toolbarbutton-1 and setting position:relative
-     on the simple container however will work. */
+.toolbarbutton-badge-container {
+  margin: 5px 3px;
   position: relative;
 }
 
-.social-notification-container > .toolbarbutton-1[badge]:not([badge=""])::after {
+toolbar[iconsize="small"] .toolbarbutton-badge-container {
+  margin: 0;
+}
+
+.toolbarbutton-badge[badge]:not([badge=""])::after {
   /* The |content| property is set in the content stylesheet. */
   font-size: 9px;
   font-weight: bold;
@@ -3228,9 +2921,13 @@ html|*#gcli-output-frame {
   font-size: 9px;
   font-weight: bold;
   margin: 0;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-.social-notification-container > .toolbarbutton-1[badge]:not([badge=""]):-moz-locale-dir(rtl)::after {
+.toolbarbutton-badge[badge]:not([badge=""]):-moz-locale-dir(rtl)::after {
   left: 2px;
   right: auto;
 }
@@ -3240,6 +2937,10 @@ html|*#gcli-output-frame {
   margin-top: 0;
   margin-left: -12px;
   margin-right: -12px;
+}
+
+.social-statusarea-user {
+  list-style-image:url("chrome://global/skin/icons/information-32.png");
 }
 
 .social-statusarea-user-portrait {
@@ -3252,6 +2953,7 @@ html|*#gcli-output-frame {
 .social-panel > .panel-arrowcontainer > .panel-arrowcontent {
   padding: 0;
 }
+
 
 .chat-status-icon {
   max-height: 16px;
@@ -3292,8 +2994,6 @@ html|*#gcli-output-frame {
 }
 
 .chat-titlebar {
-  background-color: #d9d9d9;
-  background-image: linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
   height: 20px;
   min-height: 20px;
   width: 100%;
@@ -3307,10 +3007,6 @@ html|*#gcli-output-frame {
 
 .chat-titlebar[minimized="true"] {
   border-bottom: none;
-}
-
-.chat-titlebar[selected] {
-  background-color: #f0f0f0;
 }
 
 .chat-titlebar[activity] {
@@ -3327,8 +3023,7 @@ html|*#gcli-output-frame {
 }
 
 .chatbar-button {
-  -moz-appearance: none;
-  background-color: #d9d9d9;
+  /* XXX get a real image for this */
   list-style-image: url("chrome://browser/skin/social/social.png");
   border: none;
   margin: 0;
@@ -3339,17 +3034,23 @@ html|*#gcli-output-frame {
   -moz-border-end: 1px solid #ccc;
 }
 
+.chatbar-button > menupopup > .menuitem-iconic > .menu-iconic-left > .menu-iconic-icon {
+  width: auto;
+  height: auto;
+  max-height: 16px;
+  max-width: 16px;
+}
+
 .chatbar-button > .toolbarbutton-icon {
   opacity: .6;
-  -moz-margin-end: 0;
 }
+
 .chatbar-button:hover > .toolbarbutton-icon,
 .chatbar-button[open="true"] > .toolbarbutton-icon {
   opacity: 1;
 }
 
 .chatbar-button[open="true"] {
-  background-color: #f0f0f0;
   box-shadow: inset 0 2px 5px rgba(0,0,0,0.6), 0 1px rgba(255,255,255,0.2);
 }
 
@@ -3358,24 +3059,13 @@ html|*#gcli-output-frame {
   display: none;
 }
 
-.chatbar-button[activity] {
-  background-image: radial-gradient(circle farthest-corner at center 3px, rgb(233,242,252) 3%, rgba(172,206,255,0.75) 40%, rgba(87,151,201,0.5) 80%, rgba(87,151,201,0));
-}
-
 .chatbar-button > menupopup > menuitem[activity] {
   font-weight: bold;
 }
 
-.chatbar-button > menupopup > .menuitem-iconic > .menu-iconic-left > .menu-iconic-icon {
-  width: auto;
-  height: auto;
-  max-height: 16px;
-  max-width: 16px;
-}
-
 .chatbar-innerbox {
   background: transparent;
-  margin: -285px -1px 0 -1px;
+  margin: -285px 0 0;
   overflow: hidden;
 }
 
@@ -3390,13 +3080,42 @@ chatbox {
   background-color: white;
   border: 1px solid #ccc;
   border-bottom: none;
-  border-top-left-radius: 2.5px;
-  border-top-right-radius: 2.5px;
 }
 
 chatbox[minimized="true"] {
   width: 160px;
   height: 20px;
+}
+
+.chat-titlebar {
+  background-color: #d9d9d9;
+  background-image: linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+}
+
+.chat-titlebar[selected] {
+  background-color: #f0f0f0;
+}
+
+.chatbar-button {
+  -moz-appearance: none;
+  background-color: #d9d9d9;
+}
+
+.chatbar-button > .toolbarbutton-icon {
+  -moz-margin-end: 0;
+}
+
+.chatbar-button[open="true"] {
+  background-color: #f0f0f0;
+}
+
+.chatbar-button[activity] {
+  background-image: radial-gradient(circle farthest-corner at center 3px, rgb(233,242,252) 3%, rgba(172,206,255,0.75) 40%, rgba(87,151,201,0.5) 80%, rgba(87,151,201,0));
+}
+
+chatbox {
+  border-top-left-radius: 2.5px;
+  border-top-right-radius: 2.5px;
 }
 
 .click-to-play-plugins-notification-content {
