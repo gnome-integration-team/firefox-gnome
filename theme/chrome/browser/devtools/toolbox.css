@@ -128,7 +128,6 @@
   -moz-image-region: rect(0px, 48px, 16px, 32px);
 }
 
-
 /* Tabs */
 
 .devtools-tabbar {
@@ -168,9 +167,13 @@
 .devtools-tab > image {
   border: none;
   -moz-margin-end: 0;
-  -moz-margin-start: 8px;
+  -moz-margin-start: 4px;
   opacity: 0.6;
   max-height: 16px;
+}
+
+#toolbox-tab-options > image {
+  margin: 0 8px;
 }
 
 .devtools-tab > label {
@@ -223,4 +226,29 @@
                      repeat-x;
   background-position: top right, top left, left, right;
   box-shadow: 1px -1px 0 hsla(206,37%,4%,.2) inset;
+}
+
+#options-panel {
+  background-image: url("chrome://browser/skin/newtab/noise.png");
+}
+
+.options-vertical-pane {
+  margin: 15px;
+  width: calc(50% - 30px);
+  min-width: 400px;
+  -moz-padding-start: 5px;
+}
+
+.options-vertical-pane > label {
+  padding: 5px 0;
+  font-size: 1.4rem;
+}
+
+.options-groupbox {
+  -moz-margin-start: 15px;
+  padding: 4px;
+}
+
+.options-groupbox > * {
+  padding: 2px;
 }

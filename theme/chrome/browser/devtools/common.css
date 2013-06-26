@@ -34,7 +34,7 @@
   text-shadow: 0 -1px 0 hsla(210,8%,5%,.45);
   border: 1px solid hsla(210,8%,5%,.45);
   border-radius: 3px;
-  background: -moz-linear-gradient(hsla(212,7%,57%,.35), hsla(212,7%,57%,.1)) padding-box;
+  background: linear-gradient(hsla(212,7%,57%,.35), hsla(212,7%,57%,.1)) padding-box;
   box-shadow: 0 1px 0 hsla(210,16%,76%,.15) inset, 0 0 0 1px hsla(210,16%,76%,.15) inset, 0 1px 0 hsla(210,16%,76%,.15);
   margin: 0 3px;
   color: inherit;
@@ -60,7 +60,7 @@
 
 .devtools-toolbarbutton:not([checked=true]):hover:active {
   border-color: hsla(210,8%,5%,.6);
-  background: -moz-linear-gradient(hsla(220,6%,10%,.3), hsla(212,7%,57%,.15) 65%, hsla(212,7%,57%,.3));
+  background: linear-gradient(hsla(220,6%,10%,.3), hsla(212,7%,57%,.15) 65%, hsla(212,7%,57%,.3));
   box-shadow: 0 0 3px hsla(210,8%,5%,.25) inset, 0 1px 3px hsla(210,8%,5%,.25) inset, 0 1px 0 hsla(210,16%,76%,.15);
 }
 
@@ -68,7 +68,7 @@
 .devtools-toolbarbutton[open=true],
 .devtools-toolbarbutton[checked=true] {
   border-color: hsla(210,8%,5%,.6) !important;
-  background: -moz-linear-gradient(hsla(220,6%,10%,.6), hsla(210,11%,18%,.45) 75%, hsla(210,11%,30%,.4));
+  background: linear-gradient(hsla(220,6%,10%,.6), hsla(210,11%,18%,.45) 75%, hsla(210,11%,30%,.4));
   box-shadow: 0 1px 3px hsla(210,8%,5%,.25) inset, 0 1px 3px hsla(210,8%,5%,.25) inset, 0 1px 0 hsla(210,16%,76%,.15);
 }
 
@@ -130,7 +130,7 @@
   -moz-appearance: none !important;
   list-style-image: url("chrome://browser/skin/devtools/dropmarker.png");
   -moz-box-align: center;
-  margin: 0 3px;
+  padding: 0 3px;
 }
 
 /* Text input */
@@ -143,7 +143,7 @@
   border: 1px solid hsla(210,8%,5%,.6);
   border-radius: 2px;
   background-color: transparent;
-  background-image: -moz-linear-gradient(hsla(210,16%,76%,.15), hsla(210,16%,76%,.35));
+  background-image: linear-gradient(hsla(210,16%,76%,.15), hsla(210,16%,76%,.35));
   padding: 3px;
   box-shadow: 0 1px 1px hsla(210,8%,5%,.3) inset,
               0 0 0 1px hsla(210,16%,76%,.1) inset,
@@ -156,7 +156,7 @@
   padding-bottom: 0;
   -moz-padding-start: 18px;
   -moz-padding-end: 12px;
-  background-image: url(magnifying-glass.png), -moz-linear-gradient(hsla(210,16%,76%,.15), hsla(210,16%,76%,.35));
+  background-image: url(magnifying-glass.png), linear-gradient(hsla(210,16%,76%,.15), hsla(210,16%,76%,.35));
   background-position: 4px center, top left, top left;
   background-repeat: no-repeat;
   font-size: inherit;
@@ -178,7 +178,7 @@
 .devtools-no-search-result {
   box-shadow: inset 0 0 0 1px hsla(0,68%,6%,.35);
   border-color: hsl(10,70%,40%) hsl(10,75%,37%) hsl(10,80%,35%) !important;
-  background-image: url(magnifying-glass.png), -moz-linear-gradient(hsla(1,16%,76%,.45), hsla(1,16%,76%,.75));
+  background-image: url(magnifying-glass.png), linear-gradient(hsla(1,16%,76%,.45), hsla(1,16%,76%,.75));
 }
 
 /* Close button */
@@ -216,6 +216,7 @@
   background-color: transparent;
   -moz-margin-end: -3px;
   position: relative;
+  cursor: e-resize;
 }
 
 /* In-tools sidebar */
@@ -256,7 +257,7 @@
 
 .devtools-sidebar-tabs > tabs > tab {
   -moz-appearance: none;
-  /* We want to match the height of a toolbar with a toolbarbutton 
+  /* We want to match the height of a toolbar with a toolbarbutton
    * First, we need to replicated the padding of toolbar (4px),
    * then, the padding of the button itself from toolbarbutton.css (3px),
    * Also, we need to take the border of the buttons into accout (1px).
@@ -408,4 +409,32 @@
 
 .devtools-autocomplete-listbox.light-theme > richlistitem > label {
   color: #666;
+}
+
+/* Responsive container */
+
+.devtools-responsive-container {
+  -moz-box-orient: horizontal;
+}
+
+@media (max-width: 700px) {
+  .devtools-responsive-container {
+    -moz-box-orient: vertical;
+  }
+
+  .devtools-responsive-container > .devtools-side-splitter {
+    border: 0;
+    margin: 0;
+    border-top: 1px solid black;
+    min-height: 3px;
+    height: 3px;
+    margin-bottom: -3px;
+    /* In some edge case the cursor is not changed to n-resize */
+    cursor: n-resize;
+  }
+
+  .devtools-responsive-container > .devtools-sidebar-tabs {
+    min-height: 35vh;
+    max-height: 75vh;
+  }
 }
