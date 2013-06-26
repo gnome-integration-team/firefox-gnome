@@ -960,8 +960,8 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   list-style-image: url(chrome://browser/skin/symbolic-icons/rss.svg);
 }
 
-#feed-button[disabled="true"] > .toolbarbutton-icon {
-  opacity: .3;
+#feed-button[disabled] > .toolbarbutton-icon {
+  opacity: .4;
 }
 
 #webrtc-status-button {
@@ -1339,6 +1339,10 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   list-style-image: url(chrome://mozapps/skin/plugins/pluginBlocked-64.png);
 }
 
+.popup-notification-icon[popupid="plugins-not-found"] {
+  list-style-image: url(chrome://browser/skin/pluginInstall-64.png);
+}
+
 .popup-notification-icon[popupid="web-notifications"] {
   list-style-image: url(chrome://browser/skin/notification-64.png);
 }
@@ -1367,7 +1371,8 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 
 .popup-notification-icon[popupid="indexedDB-permissions-prompt"],
-.popup-notification-icon[popupid="indexedDB-quota-prompt"] {
+.popup-notification-icon[popupid="indexedDB-quota-prompt"],
+.popup-notification-icon[popupid*="offline-app-requested"] {
   list-style-image: url(chrome://global/skin/icons/question-64.png);
 }
 
@@ -1468,6 +1473,10 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #blocked-plugins-notification-icon {
   list-style-image: url(chrome://mozapps/skin/plugins/notifyPluginBlocked.png);
+}
+
+#plugin-install-notification-icon {
+  list-style-image: url(chrome://browser/skin/pluginInstall-16.png);
 }
 
 #notification-popup-box[hidden] {
@@ -1670,50 +1679,68 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   opacity: 1;
 }
 
+
+/* social share panel */
+
+.social-share-frame {
+  background: linear-gradient(to bottom, rgba(242,242,242,.99), rgba(242,242,242,.95));
+  border-left: 1px solid #f8f8f8;
+  width: 330px;
+  height: 150px;
+  /* we resize our panels dynamically, make it look nice */
+  transition: height 100ms ease-out, width 100ms ease-out;
+}
+
+#social-share-button {
+  list-style-image: url("chrome://browser/skin/social/share-button.png");
+}
+
+#social-share-button[open],
+#social-share-button:hover:active {
+  list-style-image: url("chrome://browser/skin/social/share-button-active.png");
+}
+
+.social-share-toolbar {
+  border-right: 1px solid #dedede;
+  background: linear-gradient(to bottom, rgba(247,247,247,.99), rgba(247,247,247,.95));
+}
+
+#social-share-provider-buttons {
+  border-right: 1px solid #fbfbfb;
+  padding: 6px;
+}
+
+#social-share-provider-buttons > .share-provider-button {
+  padding: 6px;
+  margin: 0;
+  border: none;
+  border-radius: 2px;
+}
+
+#social-share-provider-buttons > .share-provider-button[checked],
+#social-share-provider-buttons > .share-provider-button:active {
+  padding: 5px;
+  border: 1px solid #b5b5b8;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#social-share-provider-buttons > .share-provider-button[checked] {
+  background: linear-gradient(to bottom, #d9d9d9, #e3e3e3);
+}
+
+#social-share-provider-buttons > .share-provider-button > .toolbarbutton-text {
+  display: none;
+}
+#social-share-provider-buttons > .share-provider-button > .toolbarbutton-icon {
+  width: 16px;
+  min-height: 16px;
+  max-height: 16px;
+}
+
 /* social recommending panel */
 
-#share-button {
+#social-mark-button {
   -moz-image-region: rect(0, 16px, 16px, 0);
-}
-
-#socialUserPortrait {
-  width: 48px;
-  height: 48px;
-  list-style-image:url("chrome://global/skin/icons/information-32.png");
-}
-
-#socialUserDisplayName,
-#socialUserPortrait {
-  cursor: pointer;
-}
-
-#socialUserDisplayName {
-  -moz-appearance: none;
-  border: none;
-  background-color: transparent;
-  margin-top: 0;
-  padding-top: 0;
-  font-size: 130%;
-  font-weight: bold;
-}
-
-#socialUserDisplayName > .button-box {
-  -moz-padding-start: 0;
-  padding-top: 0;
-  border-top-width: 0;
-}
-
-#socialUserDisplayName:hover {
-  color: -moz-nativehyperlinktext;
-  text-decoration: underline;
-}
-
-#unsharePopupText {
-  height: 48px;
-}
-
-#unsharePopupBottomButtons {
-  margin-top: 1em;
 }
 
 /* Star button */
@@ -1757,6 +1784,16 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #page-report-button {
   list-style-image: url(chrome://browser/skin/symbolic-icons/info.svg);
   opacity: 0.5;
+}
+
+/* bookmarks menu-button */
+
+#bookmarks-menu-button[disabled] > .toolbarbutton-icon,
+#bookmarks-menu-button[disabled] > .toolbarbutton-menu-dropmarker,
+#bookmarks-menu-button[disabled] > .toolbarbutton-menubutton-dropmarker,
+#bookmarks-menu-button[disabled] > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+#bookmarks-menu-button > .toolbarbutton-menubutton-button[disabled] > .toolbarbutton-icon {
+  opacity: .4;
 }
 
 /* Bookmarking panel */
@@ -2895,6 +2932,11 @@ html|*#gcli-output-frame {
   -moz-margin-end: 2px;
 }
 
+#social-provider-button {
+  -moz-image-region: rect(0, 16px, 16px, 0);
+  list-style-image: url(chrome://browser/skin/social/services-16.png);
+}
+
 #social-provider-button > .toolbarbutton-menu-dropmarker {
   display: none;
 }
@@ -2932,6 +2974,32 @@ toolbar[iconsize="small"] .toolbarbutton-badge-container {
 .toolbarbutton-badge[badge]:not([badge=""]):-moz-locale-dir(rtl)::after {
   left: 2px;
   right: auto;
+}
+
+.popup-notification-icon[popupid="servicesInstall"] {
+  list-style-image: url(chrome://browser/skin/social/services-64.png);
+}
+#servicesInstall-notification-icon {
+  list-style-image: url(chrome://browser/skin/social/services-16.png);
+}
+#social-undoactivation-button,
+#servicesInstall-learnmore-link {
+  -moz-margin-start: 0; /* override default label margin to match description margin */
+}
+
+.social-activation-icon {
+  width: auto;
+  height: auto;
+  max-height: 64px;
+  max-width: 64px;
+}
+
+#social-activation-message {
+  max-width: 250px;
+}
+
+#social-activation-message > label {
+  margin: 0;
 }
 
 /* social toolbar provider menu */
@@ -3025,15 +3093,19 @@ toolbar[iconsize="small"] .toolbarbutton-badge-container {
 }
 
 .chatbar-button {
-  /* XXX get a real image for this */
-  list-style-image: url("chrome://browser/skin/social/social.png");
-  border: none;
+  list-style-image: url("chrome://browser/skin/social/services-16.png");
   margin: 0;
   padding: 2px;
   height: 21px;
   width: 21px;
-  border-top: 1px solid #ccc;
-  -moz-border-end: 1px solid #ccc;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+
+@media (min-resolution: 2dppx) {
+  .chatbar-button {
+    list-style-image: url("chrome://browser/skin/social/services-16@2x.png");
+  }
 }
 
 .chatbar-button > menupopup > .menuitem-iconic > .menu-iconic-left > .menu-iconic-icon {
@@ -3041,15 +3113,6 @@ toolbar[iconsize="small"] .toolbarbutton-badge-container {
   height: auto;
   max-height: 16px;
   max-width: 16px;
-}
-
-.chatbar-button > .toolbarbutton-icon {
-  opacity: .6;
-}
-
-.chatbar-button:hover > .toolbarbutton-icon,
-.chatbar-button[open="true"] > .toolbarbutton-icon {
-  opacity: 1;
 }
 
 .chatbar-button[open="true"] {
@@ -3076,17 +3139,10 @@ chatbar {
 }
 
 chatbox {
-  height: 285px;
-  width: 260px;
   -moz-margin-start: 4px;
   background-color: white;
   border: 1px solid #ccc;
   border-bottom: none;
-}
-
-chatbox[minimized="true"] {
-  width: 160px;
-  height: 20px;
 }
 
 .chat-titlebar {
@@ -3101,12 +3157,14 @@ chatbox[minimized="true"] {
 .chatbar-button {
   -moz-appearance: none;
   background-color: #d9d9d9;
+  background-image: linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
 }
 
 .chatbar-button > .toolbarbutton-icon {
   -moz-margin-end: 0;
 }
 
+.chatbar-button:hover,
 .chatbar-button[open="true"] {
   background-color: #f0f0f0;
 }
@@ -3220,14 +3278,15 @@ chatbox {
   min-width: 0;
 }
 
-/*#main-window[privatebrowsingmode=temporary] #TabsToolbar::before {*/
-/*  display: -moz-box;*/
-/*  content: "";*/
-/*  background: url("chrome://browser/skin/privatebrowsing-mask.png") center no-repeat;*/
-/*  width: 40px;*/
-/*}*/
-
-
 #main-window[privatebrowsingmode=temporary] #appmenu-toolbar-button {
   list-style-image: url(chrome://browser/skin/symbolic-icons/privatebrowsing.svg);
 }
+
+/*
+#main-window[privatebrowsingmode=temporary] #TabsToolbar::before {
+  display: -moz-box;
+  content: "";
+  background: url("chrome://browser/skin/privatebrowsing-mask.png") center no-repeat;
+  width: 40px;
+}
+*/
