@@ -1,0 +1,21 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+.hud-outer-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.hud-console-wrapper {
+  width: 100%;
+  overflow: auto;
+}
+
+.hud-output-node {
+  border-top: 1px solid ThreeDShadow;
+}
+
+.webconsole-filter-button {
+  color: white !important;
+}
