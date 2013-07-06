@@ -100,7 +100,7 @@
        d="m 503.0002,203.00315 0,1 c -1.2e-4,0.0104 -4.6e-4,0.0208 0,0.0313 0.0112,0.25495 0.12858,0.50987 0.3125,0.6875 l 5.21875,5.28125 5.1875,-5.28125 c 0.18819,-0.18821 0.28125,-0.45351 0.28125,-0.7188 l 0,-1 -1,0 c -0.26529,0 -0.53058,0.0931 -0.71875,0.28125 l -3.75,3.8125 -3.78125,-3.8125 c -0.19463,-0.21074 -0.46925,-0.30316 -0.75,-0.28125 l -1,0 z"
        id="path11142"
        sodipodi:nodetypes="ccsccccccccccc"
-       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;color:#bebebe;fill:#2e3436;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.78124988000000006;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new;font-family:Andale Mono;-inkscape-font-specification:Andale Mono" />
+       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;text-anchor:start;color:#bebebe;fill:#2e3436;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.78124988000000006;marker:none;visibility:visible;display:inline;overflow:visible;font-family:Andale Mono;-inkscape-font-specification:Andale Mono" />
     <path
        sodipodi:cx="267.52942"
        sodipodi:cy="-13.455417"
@@ -108,7 +108,7 @@
        id="path11168"
        sodipodi:rx="1.524699"
        sodipodi:ry="1.524699"
-       style="color:#000000;fill:#2e3436;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
+       style="color:#000000;fill:#2e3436;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
        transform="translate(241.0002,215)"
        sodipodi:type="arc" />
     <path
@@ -118,7 +118,7 @@
        id="path11170"
        sodipodi:rx="1.524699"
        sodipodi:ry="1.524699"
-       style="color:#000000;fill:#2e3436;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
+       style="color:#000000;fill:#2e3436;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
        transform="translate(241.0002,211)"
        sodipodi:type="arc" />
   </g>
