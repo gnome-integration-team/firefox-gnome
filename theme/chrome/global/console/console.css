@@ -11,17 +11,26 @@
 #ToolbarMode,
 #ToolbarEval {
   -moz-appearance: none;
-  background: #ededed;
+  background: Window;
   border: none;
 }
 
+#ToolbarMode {
+  -moz-binding: url(chrome://global/content/bindings/toolbar.xml#toolbar-drag);
+  -moz-box-pack: center;
+  padding: 0 0 8px 0;
+}
+
 #ToolbarEval {
+  border-top: 1px solid #a7aba7;
   border-bottom: 1px solid #a7aba7;
+  background: linear-gradient(to bottom, #d4d4d4, #ececec);
 }
 
 .console-box {
   background-color: -moz-Field;
   color: -moz-FieldText;
+  border-bottom: 1px solid #a7aba7;
 }
 
 /* ::::: console rows ::::: */
@@ -129,12 +138,92 @@
   -moz-margin-end: 2px !important;
 }
 
+/* ::::: toolbarbuttons ::::: */
+
+#ToolbarMode toolbarbutton {
+  -moz-appearance: none;
+  background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb);
+  border: 1px solid rgba(0,0,0,.25);
+  border-radius: 3px;
+  color: #2e3436;
+  padding: 0px 3px;
+  margin: 0px 3px;
+  min-height: 28px;
+  min-width: 32px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89), inset 0 1px 0 rgba(255,255,255,1);
+  text-shadow: none;
+  transition-property: color, border, box-shadow, background;
+  transition-duration: 200ms;
+}
+
+#ToolbarMode toolbarbutton[id="Console:clear"] {
+  background: none;
+  border-color: transparent;
+  box-shadow: none;
+  width: 32px;
+}
+#ToolbarMode toolbarbutton#Console\:clear > .toolbarbutton-icon {
+  margin: 0;
+}
+#ToolbarMode toolbarbutton#Console\:clear > .toolbarbutton-text {
+  display: none;
+}
+
+#ToolbarMode toolbarbutton:not([disabled="true"]):hover {
+  background-image: linear-gradient(to bottom, #ffffff, #ebebeb);
+  border-color: rgba(0,0,0,.25);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89);
+}
+
+#ToolbarMode toolbarbutton:active:hover,
+#ToolbarMode toolbarbutton[checked="true"],
+#ToolbarMode toolbarbutton[checked="true"]:hover {
+  background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important;
+  border-color: rgba(0,0,0,.25);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89);
+}
+
+/* ::::: Mode ::::: */
+
+#ToolbarMode > toolbarseparator {
+  display: none;
+}
+
+#viewGroup > toolbarbutton {
+  -moz-border-start-width: 0;
+  -moz-border-end-width: 1px;
+  border-radius: 0;
+  margin: 0;
+  min-width: 120px;
+}
+
+#viewGroup > toolbarbutton > .toolbarbutton-icon {
+  display: none;
+}
+
+#viewGroup > toolbarbutton:first-of-type {
+  -moz-border-start-width: 1px;
+  border-radius: 3px 0px 0px 3px;
+  -moz-margin-start: 3px;
+}
+
+#viewGroup > toolbarbutton:last-of-type {
+  -moz-border-end-width: 1px;
+  border-radius: 0px 3px 3px 0px;
+  -moz-margin-end: 3px;
+}
+
+#viewGroup {
+  -moz-margin-start: calc(34px + 3px * 2);
+}
+
 /* Toolbar icons */
 
 toolbar#ToolbarMode toolbarbutton {
   -moz-box-orient: horizontal;
 }
 
+/*
 #Console\:modeAll {
   list-style-image: url("chrome://global/skin/console/console-toolbar.png");
 }
@@ -150,9 +239,13 @@ toolbar#ToolbarMode toolbarbutton {
 #Console\:modeMessages {
   list-style-image: url("moz-icon://stock/gtk-dialog-info?size=toolbar");
 }
+*/
 
 #Console\:clear {
+  /*
   list-style-image: url("moz-icon://stock/gtk-clear?size=toolbar");
+  */
+  list-style-image: url(chrome://browser/skin/symbolic-icons/clear-all.svg);
 }
 
 toolbar#ToolbarMode .toolbarbutton-text {
