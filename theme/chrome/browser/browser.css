@@ -1554,8 +1554,6 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 
 richlistitem {
-  margin-top: -1px;
-  padding-bottom: 2px;
   /*
   color: -moz-nativehyperlinktext;
   font-size: 0.9em;
