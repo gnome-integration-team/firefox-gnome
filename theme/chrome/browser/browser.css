@@ -1560,10 +1560,6 @@ richlistitem {
   */
 }
 
-richlistitem[selected="true"] {
-  background-color: #4a90d9 !important;
-}
-
 richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-icon {
   list-style-image: url(chrome://browser/skin/symbolic-icons/actionicon-tab.svg);
   padding: 0 3px;

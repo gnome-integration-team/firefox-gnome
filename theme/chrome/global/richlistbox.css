@@ -22,7 +22,7 @@ richlistitem[selected="true"] {
 
 richlistbox:focus > richlistitem[selected="true"] {
   background-color: Highlight;
-  color: #ffffff; HighlightText;
+  color: HighlightText;
 }
 
 /*

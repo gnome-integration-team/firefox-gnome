@@ -45,10 +45,10 @@
 }
 
 #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[selected="true"] {
-  background: #4a90d9 !important;
+  background: Highlight !important;
 }
 #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[selected="true"] > .tab-stack {
-  color: #ffffff !important;
+  color: HighlightText !important;
 }
 
 window:-moz-window-inactive #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[selected="true"] {

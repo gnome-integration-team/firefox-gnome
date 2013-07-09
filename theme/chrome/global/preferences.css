@@ -56,6 +56,6 @@ radio[pane] {
 }
 
 radio[pane][selected="true"] {
-  background-color: #4a90d9; /* Highlight */
-  color: #ffffff; /* HighlightText */
+  background-color: Highlight;
+  color: HighlightText;
 }
