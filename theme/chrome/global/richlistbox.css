@@ -16,18 +16,13 @@ richlistbox[disabled="true"] {
 }
 
 richlistitem[selected="true"] {
-  background-color: #4a90d9; /* -moz-cellhighlight */
-  color: #ffffff; /* -moz-cellhighlighttext */
+  background-color: -moz-cellhighlight;
+  color: -moz-cellhighlighttext;
 }
 
 richlistbox:focus > richlistitem[selected="true"] {
-  background-color: #4a90d9; /* Highlight */
-  color: #ffffff; /* HighlightText */
-}
-
-window:-moz-window-inactive richlistitem[selected="true"] {
-  background: #e2e2e2 !important;
-  color: #2e3436 !important;
+  background-color: Highlight;
+  color: #ffffff; HighlightText;
 }
 
 /*
