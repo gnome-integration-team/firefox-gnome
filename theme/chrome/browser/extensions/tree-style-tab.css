@@ -97,8 +97,8 @@ window:-moz-window-inactive #TabsToolbar.treestyletab-tabbar-toolbar[orient="ver
   display: none;
 }
 
-#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[selected="true"] .tab-close-button:not(:active) {
-  list-style-image: url(chrome://browser/skin/tabbrowser/close-hover.png);
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[selected="true"]:not(:-moz-window-inactive) .tab-close-button {
+  list-style-image: url(chrome://browser/skin/tabbrowser/close-active.png);
 }
 
 #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[pinned] .tab-close-button {
