@@ -349,8 +349,9 @@ notification toolbarbutton:-moz-window-inactive {
 }
 
 /* About dialog */
-window#aboutDialog #clientBox {
-  background-color: Window;
+window#aboutDialog[title*="Mozilla Firefox"] #clientBox {
+  background: inherit;
+  color: -moz-DialogText;
 }
 
 /* Fix for some extensions */
