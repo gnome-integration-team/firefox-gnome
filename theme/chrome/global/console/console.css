@@ -9,8 +9,10 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 #ToolbarMode,
-#ToolbarEval {
-  -moz-appearance: none;
+#ToolbarEval,
+statusbar,
+statusbarpanel {
+  -moz-appearance: none !important;
   background: Window;
   border: none;
 }
@@ -18,7 +20,7 @@
 #ToolbarMode {
   -moz-binding: url(chrome://global/content/bindings/toolbar.xml#toolbar-drag);
   -moz-box-pack: center;
-  padding: 0 0 8px 0;
+  padding: 5px 0;
 }
 
 #ToolbarEval {
@@ -30,7 +32,10 @@
 .console-box {
   background-color: -moz-Field;
   color: -moz-FieldText;
-  border-bottom: 1px solid #a7aba7;
+}
+
+statusbar {
+  border-top: 1px solid #a7aba7;
 }
 
 /* ::::: console rows ::::: */
