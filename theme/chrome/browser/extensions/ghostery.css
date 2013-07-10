@@ -2,19 +2,31 @@
  * id: firefox@ghostery.com
  * URL: https://addons.mozilla.org/firefox/addon/ghostery/ */
 
-#ghostery-toolbar-button {
+/* FIXME: Should be fixed in ../browser.css */
+#nav-bar[iconsize=large] > #ghostery-toolbar-button {
+  margin: 0px 3px !important;
+}
+#nav-bar[iconsize=small] > #ghostery-toolbar-button {
+  margin: 0px 2px !important; 
+}
+
+#ghostery-toolbar-button /* For older versions */,
+#ghostery-toolbar-button > .ghostery-toolbar-button {
   list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery.svg) !important;
 }
 
-#ghostery-toolbar-button[showTrackers="true"] {
+#ghostery-toolbar-button[showTrackers="true"] /* For older versions */,
+#ghostery-toolbar-button[showTrackers="true"] > .ghostery-toolbar-button {
   list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery-showtrackers.svg) !important;
 }
 
-#ghostery-toolbar-button[condition="grey"] {
+#ghostery-toolbar-button[condition="grey"] /* For older versions */,
+#ghostery-toolbar-button[condition="grey"] > .ghostery-toolbar-button {
   list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery-grayscale.svg) !important;
 }
 
-#ghostery-toolbar-button[condition="grey"] > .toolbarbutton-icon {
+#ghostery-toolbar-button[condition="grey"] > .toolbarbutton-icon /* For older versions */,
+#ghostery-toolbar-button[condition="grey"] > .ghostery-toolbar-button > .toolbarbutton-icon {
   opacity: 0.5;
 }
 
