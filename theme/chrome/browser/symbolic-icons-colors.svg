@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg height="0" xmlns="http://www.w3.org/2000/svg">
+  <filter id="default">
+    <feColorMatrix values="0 0 0 0 0.04
+                           0 0 0 0 0.02
+                           0 0 0 0 0.01
+                           0 0 0 1 0   "/>
+  </filter>
+  
+  <filter id="active">
+    <feColorMatrix values="0 0 0 0 1
+                           0 0 0 0 1
+                           0 0 0 0 1
+                           0 0 0 1 0"/>
+  </filter>
+  
+  <filter id="yellow">
+    <feColorMatrix values="0 0 0 0 1
+                           0 0 0 0 0.4
+                           0 0 0 0 0.1
+                           0 0 0 1 0  "/>
+  </filter>
+  
+  <filter id="blue">
+    <feColorMatrix values="0 0 0 0 0
+                           0 0 0 0 0
+                           0 0 0 0 1
+                           0 0 0 1 0"/>
+  </filter>
+</svg>
