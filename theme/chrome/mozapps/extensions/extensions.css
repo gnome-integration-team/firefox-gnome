@@ -124,9 +124,13 @@
   border: none;
   background-color: transparent;
   position: relative;
-  margin-top: 39px;
+  margin: 0;
   -moz-margin-start: 0px;
   -moz-margin-end: -12px;
+}
+
+#categories > .category:first-of-type {
+  margin-top: 39px;
 }
 
 .category {
@@ -135,7 +139,7 @@
   overflow: hidden;
   min-height: 0;
   color: #606060;
-  margin: 5px 0;
+  margin: 10px 0 0 0;
 
   -moz-border-start: 1px solid transparent;
   -moz-border-end: 12px solid transparent;
@@ -163,6 +167,10 @@
   opacity: 0;
   transition-property: height, opacity;
   transition-duration: 1s, 0.8s;
+}
+
+.category[disabled] + .category {
+  margin-top: 0;
 }
 
 .category:not([disabled]) {
