@@ -242,47 +242,30 @@ toolbar[iconsize="large"] > #downloads-indicator > #downloads-indicator-anchor {
 /*** Main indicator icon ***/
 
 #downloads-indicator-icon {
-  background: -moz-image-rect(url(chrome://browser/skin/symbolic-icons/download.svg), 0, 16, 16, 0) center no-repeat;
+  background: -moz-image-rect(url(moz-icon://stock/folder-download-symbolic?size=menu), 0, 16, 16, 0) center no-repeat;
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
 
 #downloads-indicator[attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
-  background: -moz-image-rect(url(chrome://browser/skin/symbolic-icons/download-glow.svg), 0, 16, 16, 0) center no-repeat;
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#green);
 }
-
-/*
-toolbar[iconsize="small"] > #downloads-indicator > #downloads-indicator-anchor > #downloads-indicator-icon {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-small.png"),
-                              0, 16, 16, 0) center no-repeat;
-}
-
-toolbar[iconsize="large"] > #downloads-indicator > #downloads-indicator-anchor > #downloads-indicator-icon {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"),
-                              0, 24, 24, 0) center no-repeat;
-}
-
-toolbar[iconsize="small"] > #downloads-indicator[attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
-  background-image: url("chrome://browser/skin/downloads/download-glow-small.png");
-}
-
-toolbar[iconsize="large"] > #downloads-indicator[attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
-  background-image: url("chrome://browser/skin/downloads/download-glow.png");
-}
-*/
 
 /* In the next few rules, we use :not([counter]) as a shortcut that is
    equivalent to -moz-any([progress], [paused]). */
 
 #downloads-indicator:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
-  background: -moz-image-rect(url(chrome://browser/skin/symbolic-icons/download.svg), 0, 16, 16, 0) center no-repeat;
+  background: -moz-image-rect(url(moz-icon://stock/folder-download-symbolic?size=menu), 0, 16, 16, 0) center no-repeat;
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
   background-size: 12px;
 }
 
 #downloads-indicator:not([counter])[attention] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
-  background: -moz-image-rect(url(chrome://browser/skin/symbolic-icons/download-glow.svg), 0, 16, 16, 0) center no-repeat;
-  background-size: 12px;
-  /*
-  background-image: url("chrome://browser/skin/downloads/download-glow.png");
-  */
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#green);
+}
+
+#downloads-indicator[open="true"] #downloads-indicator-icon,
+#downloads-indicator:active:hover #downloads-indicator-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
 }
 
 /*** Download notifications ***/

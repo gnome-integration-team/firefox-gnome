@@ -2,10 +2,10 @@
 
 <svg height="0" xmlns="http://www.w3.org/2000/svg">
   <filter id="default">
-    <feColorMatrix values="0 0 0 0 0.04
-                           0 0 0 0 0.02
-                           0 0 0 0 0.01
-                           0 0 0 1 0   "/>
+    <feColorMatrix values="0.242 0     0     0 0 
+                           0     0.274 0     0 0 
+                           0     0     0.284 0 0 
+                           0     0     0     1 0" color-interpolation-filters="sRGB"/>
   </filter>
   
   <filter id="active">
@@ -31,16 +31,23 @@
   </filter>
   
   <filter id="yellow">
-    <feColorMatrix values="0 0 0 0 1
-                           0 0 0 0 0.4
-                           0 0 0 0 0.1
-                           0 0 0 1 0  "/>
+    <feColorMatrix values="1.33 0    0    0 0
+                           0    0.92 0    0 0
+                           0    0    0.33 0 0
+                           0    0    0    1 0  " color-interpolation-filters="sRGB"/>
   </filter>
   
-  <filter id="blue">
-    <feColorMatrix values="0 0 0 0 0
-                           0 0 0 0 0
-                           0 0 0 0 1
-                           0 0 0 1 0"/>
+  <filter id="azure">
+    <feColorMatrix values="0.22 0    0    0 0
+                           0    0.67 0    0 0
+                           0    0    1.34 0 1
+                           0    0    0    1 0" color-interpolation-filters="sRGB"/>
+  </filter>
+  
+  <filter id="green">
+    <feColorMatrix values="0 0   0 0 0
+                           0 0.9 0 0 0
+                           0 0   0 0 0
+                           0 0   0 1 0  " color-interpolation-filters="sRGB"/>
   </filter>
 </svg>

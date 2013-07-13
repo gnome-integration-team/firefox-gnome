@@ -907,6 +907,27 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   list-style-image: url(moz-icon://stock/emblem-synchronizing-symbolic?size=menu);
 }
 
+/* Sync button (active) */
+@-moz-keyframes rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+#sync-button[status="active"] > .toolbarbutton-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#azure);
+  animation-name:             rotate;
+  animation-duration:         2s;
+  transition-timing-function: linear;
+  animation-iteration-count:  infinite;
+}
+
+#feed-button {
+  list-style-image: url(moz-icon://stock/application-rss+xml-symbolic?size=menu);
+}
+
+#webrtc-status-button {
+  -moz-image-region: rect(0px 192px 24px 168px);
+}
+
 /* Filters */
 :-moz-any(
   #back-button, #forward-button, #reload-button, #stop-button,
@@ -948,27 +969,6 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   #minimize-button, #restore-button, #close-button
 ):not([disabled="true"]) > .toolbarbutton-icon {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
-}
-
-/* Sync button (active) */
-@-moz-keyframes rotate {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
-#sync-button[status="active"] > .toolbarbutton-icon {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/sync-working.svg); /* FIXME */
-  animation-name:             rotate;
-  animation-duration:         2s;
-  transition-timing-function: linear;
-  animation-iteration-count:  infinite;
-}
-
-#feed-button {
-  list-style-image: url(moz-icon://stock/application-rss+xml-symbolic?size=menu);
-}
-
-#webrtc-status-button {
-  -moz-image-region: rect(0px 192px 24px 168px);
 }
 
 /* 16px primary toolbar buttons */
@@ -1584,12 +1584,20 @@ richlistitem[selected="true"] .autocomplete-treebody::-moz-tree-image(bookmark, 
   width: 16px;
   height: 16px;
 }
+richlistitem[selected="true"] .ac-result-type-keyword,
+richlistitem[selected="true"] .autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage) {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
+}
 
 .ac-result-type-tag,
 .autocomplete-treebody::-moz-tree-image(tag, treecolAutoCompleteImage) {
   list-style-image: url(chrome://browser/skin/symbolic-icons/tag.svg);
   width: 16px;
   height: 16px;
+}
+richlistitem[selected="true"] .ac-result-type-tag,
+richlistitem[selected="true"] .autocomplete-treebody::-moz-tree-image(tag, treecolAutoCompleteImage) {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
 }
 
 .ac-comment {
@@ -1617,6 +1625,10 @@ richlistitem {
 richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-icon {
   list-style-image: url(chrome://browser/skin/symbolic-icons/actionicon-tab.svg);
   padding: 0 3px;
+
+}
+richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
 }
 
 .autocomplete-treebody::-moz-tree-cell-text(treecolAutoCompleteComment) {
