@@ -608,8 +608,8 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #social-toolbar-item > .toolbarbutton-1:not([disabled="true"]):active:hover,
 #social-toolbar-item > .toolbarbutton-1[checked="true"],
 #social-toolbar-item > .toolbarbutton-1[checked="true"]:hover {
-  background-image: linear-gradient(to bottom, rgba(100,110,100,0.3), rgba(220,220,220,0.3)) !important;
-  border-color: rgba(50,50,50,.4) !important;
+  background-image: linear-gradient(to bottom, rgba(0,10,0,0.3), rgba(200,200,200,0.3)) !important;
+  border-color: rgba(180,180,180,1) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.37);
 }
 
@@ -617,8 +617,8 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #downloads-indicator[open="true"]:hover,
 #downloads-indicator[open="true"]:active,
 #downloads-indicator[open="true"]:active:hover {
-  background-image: linear-gradient(to bottom, rgba(100,110,100,0.3), rgba(220,220,220,0.3)) !important;
-  border-color: rgba(50,50,50,.4) !important;
+  background-image: linear-gradient(to bottom, rgba(0,10,0,0.3), rgba(200,200,200,0.3)) !important;
+  border-color: rgba(180,180,180,1) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.37);
   border-radius: 3px !important;
 }
@@ -656,10 +656,11 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[checked="true"]:-moz-window-inactive,
 #social-toolbar-item > .toolbarbutton-1[checked="true"]:-moz-window-inactive {
-  background: rgba(100,110,100,0.2) !important;
+  background: rgba(100,110,100,0.5) !important;
+  border-color: transparent !important;
 }
 
-:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:-moz-window-inactive > .toolbarbutton-icon,
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:not([checked="true"]):-moz-window-inactive > .toolbarbutton-icon,
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:-moz-window-inactive > .toolbarbutton-menu-dropmarker,
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:-moz-window-inactive > .toolbarbutton-menubutton-dropmarker,
 #social-toolbar-item > .toolbarbutton-1:-moz-window-inactive > .toolbarbutton-icon {
@@ -929,6 +930,12 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   #new-tab-button, #new-window-button
 ):not([open="true"]):-moz-any(:not([disabled="true"]):active:hover, [checked="true"]) > .toolbarbutton-icon {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
+}
+
+:-moz-any(
+  #downloads-button, #history-button, #bookmarks-button, #fullscreen-button
+)[checked="true"]:-moz-window-inactive > .toolbarbutton-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#checked-inactive);
 }
 
 :-moz-any(

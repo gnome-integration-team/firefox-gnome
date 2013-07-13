@@ -12,7 +12,22 @@
     <feColorMatrix values="0 0 0 0 1
                            0 0 0 0 1
                            0 0 0 0 1
-                           0 0 0 1 0"/>
+                           0 0 0 1 0" in="SourceGraphic" result="WhiteIcon"/>
+    <feColorMatrix values="0 0 0 0 0.2
+                           0 0 0 0 0.2
+                           0 0 0 0 0.2
+                           0 0 0 1 0  " in="SourceAlpha" result="ShadowColor"/>
+    <feOffset result="offOut" in="ShadowColor" dx="0" dy="1" />
+    <feGaussianBlur result="Shadow" in="offOut" stdDeviation="0" />
+    <feBlend in="WhiteIcon" in2="Shadow" mode="normal" />
+  </filter>
+  
+  <filter id="checked-inactive">
+    <!-- [checked] state in :-moz-window-inactive window -->
+    <feColorMatrix values="0 0 0 0 0.9
+                           0 0 0 0 0.9
+                           0 0 0 0 0.9
+                           0 0 0 1 0  "/>
   </filter>
   
   <filter id="yellow">
