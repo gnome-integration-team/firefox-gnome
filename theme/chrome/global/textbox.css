@@ -68,12 +68,13 @@ textbox.plain {
 /* ::::: search textbox ::::: */
 
 .textbox-search-icon {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/search.svg");
-  opacity: 0.5;
+  list-style-image: url(moz-icon://stock/folder-saved-search-symbolic?size=menu);
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#input-field-default);
 }
 
 .textbox-search-clear {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/clear.svg");
+  list-style-image: url(moz-icon://stock/edit-clear-symbolic?size=menu);
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#input-field-default);
 }
 
 .textbox-search-icon[searchbutton]:not([disabled]) ,

@@ -589,7 +589,8 @@ html[dir=rtl] #actions {
 }
 
 #actions #searchbutton{
-  background: transparent url(chrome://browser/skin/symbolic-icons/search.svg) no-repeat;
+  background: transparent url(moz-icon://stock/folder-saved-search-symbolic?size=menu) no-repeat;
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
   border: none;
   width: 20px;
   height: 20px;

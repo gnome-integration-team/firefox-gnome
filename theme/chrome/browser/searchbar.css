@@ -79,11 +79,6 @@
 /* Search go button */
 .search-go-container {
   -moz-box-align: center;
-  opacity: .35;
-}
-
-.search-go-container:hover {
-  opacity: 1;
 }
 
 .search-go-container:active {
@@ -92,7 +87,8 @@
 }
 
 .search-go-button {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/search.svg);
+  list-style-image: url(moz-icon://stock/folder-saved-search-symbolic?size=menu);
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#input-field-default);
   height: 22px;
   padding: 3px;
   min-width: 22px;
@@ -106,6 +102,10 @@
   height: 24px;
   padding: 4px;
   min-width: 24px;
+}
+
+.search-go-button:hover {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#input-field-hover);
 }
 
 /* FIXME */
