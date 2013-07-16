@@ -50,4 +50,30 @@
                            0 0   0 0 0
                            0 0   0 1 0  " color-interpolation-filters="sRGB"/>
   </filter>
+  
+  <!-- Into input fields (like urlbar) -->
+  <filter id="input-field-default">
+    <feColorMatrix values="0.93 0    0    0 0
+                           0    0.94 0    0 0
+                           0    0    0.94 0 0
+                           0    0    0    1 0  " color-interpolation-filters="sRGB"/>
+  </filter>
+  <filter id="input-field-hover">
+    <feColorMatrix values="0.242 0     0     0 0 
+                           0     0.274 0     0 0 
+                           0     0     0.284 0 0 
+                           0     0     0     1 0" color-interpolation-filters="sRGB"/>
+  </filter>
+  <filter id="input-field-yellow">
+    <feColorMatrix values="1.32 0    0    0 0
+                           0    1.03 0    0 0
+                           0    0    0.62 0 0
+                           0    0    0    1 0  " color-interpolation-filters="sRGB"/>
+  </filter>
+  <filter id="input-field-yellow-hover">
+    <feColorMatrix values="1.33 0    0    0 0
+                           0    0.92 0    0 0
+                           0    0    0.33 0 0
+                           0    0    0    1 0  " color-interpolation-filters="sRGB"/>
+  </filter>
 </svg>

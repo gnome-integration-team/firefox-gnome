@@ -959,15 +959,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#checked-inactive);
 }
 
-:-moz-any(
-  #go-button, #urlbar-go-button, #urlbar-reload-button, #urlbar-stop-button, .urlbar-history-dropmarker, #star-button
-):not([disabled="true"]) > .toolbarbutton-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
-}
-
-:-moz-any(
-  #minimize-button, #restore-button, #close-button
-):not([disabled="true"]) > .toolbarbutton-icon {
+:-moz-any(#minimize-button, #restore-button, #close-button) > .toolbarbutton-icon {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
 
@@ -1712,12 +1704,12 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   list-style-image: url(moz-icon://stock/go-down-symbolic?size=menu);
 }
 
-#urlbar-go-button,
-#urlbar-stop-button,
-#urlbar-reload-button,
+#urlbar-go-button > .toolbarbutton-icon,
+#urlbar-stop-button > .toolbarbutton-icon,
+#urlbar-reload-button > .toolbarbutton-icon,
 .urlbar-history-dropmarker,
 #star-button {
-  opacity: 0.35;
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#input-field-default);
 }
 
 /* Fix for go/stop/reload buttons */
@@ -1776,23 +1768,25 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 /* Star button */
 #star-button {
   list-style-image: url(moz-icon://stock/bookmark-new-symbolic?size=menu);
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#input-field-default);
 }
 
 #star-button[starred="true"] {
   list-style-image: url(moz-icon://stock/user-bookmarks-symbolic?size=menu);
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#yellow);
-  opacity: 1;
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#input-field-yellow);
 }
 
 /* Adjust opacity of the URL bar icons on hover */
-#urlbar-go-button:hover,
-#urlbar-reload-button:hover,
-#urlbar-stop-button:hover,
+#urlbar-go-button:hover > .toolbarbutton-icon,
+#urlbar-reload-button:hover > .toolbarbutton-icon,
+#urlbar-stop-button:hover > .toolbarbutton-icon,
 #urlbar #star-button:hover,
 .urlbar-history-dropmarker:hover,
 .urlbar-history-dropmarker[open="true"] {
-  opacity: 1;
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#input-field-hover);
+}
+#urlbar #star-button[starred="true"]:hover {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#input-field-yellow-hover);
 }
 
 /* Popup blocker button */
