@@ -4,7 +4,6 @@
 
 #TabsToolbar #appmenu-toolbar-button.fxbutton:not(:first-child) > .toolbarbutton-icon,
 toolbar:not(#TabsToolbar) #appmenu-toolbar-button.fxbutton > .toolbarbutton-icon {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/gear.svg) !important;
-/*  list-style-image: url(chrome://browser/skin/symbolic-icons/firefox.svg) !important;*/
+  list-style-image: url(moz-icon://stock/emblem-system-symbolic?size=menu) !important;
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
-

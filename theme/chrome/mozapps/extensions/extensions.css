@@ -1143,12 +1143,17 @@ setting[type="radio"] > radiogroup {
 
 .addon-control.remove {
 /*  list-style-image: url("moz-icon://stock/gtk-remove?size=button");*/
-  list-style-image: url(chrome://browser/skin/symbolic-icons/trash.svg);
+  list-style-image: url(moz-icon://stock/user-trash-symbolic?size=menu);
 }
 
 .addon-control.preferences {
 /*  list-style-image: url("moz-icon://stock/gtk-preferences?size=button");*/
-  list-style-image: url(chrome://browser/skin/symbolic-icons/gear.svg);
+  list-style-image: url(moz-icon://stock/emblem-system-symbolic?size=menu);
+}
+
+.addon-control.remove .button-icon,
+.addon-control.preferences .button-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
 
 .addon-control.update {
