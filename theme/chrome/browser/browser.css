@@ -617,7 +617,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #downloads-indicator[open="true"]:hover,
 #downloads-indicator[open="true"]:active,
 #downloads-indicator[open="true"]:active:hover {
-  background-image: linear-gradient(to bottom, rgba(0,10,0,0.3), rgba(200,200,200,0.3)) !important;
+  background: linear-gradient(to bottom, rgba(0,10,0,0.3), rgba(200,200,200,0.3)) !important;
   border-color: rgba(180,180,180,1) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.37);
   border-radius: 3px !important;
