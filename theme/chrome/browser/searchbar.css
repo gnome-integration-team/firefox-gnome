@@ -87,7 +87,7 @@
 }
 
 .search-go-button {
-  list-style-image: url(moz-icon://stock/folder-saved-search-symbolic?size=menu);
+  list-style-image: url(moz-icon://stock/edit-find-symbolic?size=menu);
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#input-field-default);
   height: 22px;
   padding: 3px;

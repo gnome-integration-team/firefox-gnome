@@ -851,7 +851,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 #history-button {
-  list-style-image: url(moz-icon://stock/preferences-system-time-symbolic?size=menu); /* FIXME */
+  list-style-image: url(moz-icon://stock/document-open-recent-symbolic?size=menu); /* FIXME */
 }
 
 #bookmarks-button,
@@ -1572,7 +1572,7 @@ richlistitem[selected="true"] .autocomplete-treebody::-moz-tree-image(bookmark, 
 
 .ac-result-type-keyword,
 .autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage) {
-  list-style-image: url(moz-icon://stock/folder-saved-search-symbolic?size=menu);
+  list-style-image: url(moz-icon://stock/edit-find-symbolic?size=menu);
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
   width: 16px;
   height: 16px;

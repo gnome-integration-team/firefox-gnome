@@ -68,7 +68,7 @@ textbox.plain {
 /* ::::: search textbox ::::: */
 
 .textbox-search-icon {
-  list-style-image: url(moz-icon://stock/folder-saved-search-symbolic?size=menu);
+  list-style-image: url(moz-icon://stock/edit-find-symbolic?size=menu);
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#input-field-default);
 }
 
