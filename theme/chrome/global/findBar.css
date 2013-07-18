@@ -67,16 +67,30 @@ findbar[hidden] {
 /* find-next button */
 
 .findbar-find-next {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/down.svg);
+  list-style-image: url(moz-icon://stock/go-down-symbolic?size=menu);
   border-radius: 0 3px 3px 0 !important;
+}
+
+.findbar-find-next > .toolbarbutton-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
+}
+.findbar-find-next:not([disabled="true"]):active:hover > .toolbarbutton-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
 }
 
 /* find-previous button */
 
 .findbar-find-previous {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/up.svg);
+  list-style-image: url(moz-icon://stock/go-up-symbolic?size=menu);
   border-radius: 0 !important;
   -moz-margin-end: 0;
+}
+
+.findbar-find-previous > .toolbarbutton-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
+}
+.findbar-find-previous:not([disabled="true"]):active:hover > .toolbarbutton-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
 }
 
 /* highlight button */

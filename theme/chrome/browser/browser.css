@@ -2252,7 +2252,8 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   list-style-image: url(chrome://browser/skin/symbolic-icons/alltabs.svg);
 }
 #alltabs-button[type="menu"] > .toolbarbutton-icon {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/down.svg);
+  list-style-image: url(moz-icon://stock/go-down-symbolic?size=menu);
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
 
 #TabsToolbar #new-tab-button + #alltabs-button {

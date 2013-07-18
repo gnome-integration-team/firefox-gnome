@@ -349,28 +349,29 @@
 }
 
 #back-btn:-moz-locale-dir(ltr) {
-/*  list-style-image: url("moz-icon://stock/gtk-go-back-ltr?size=menu");*/
-  list-style-image: url(chrome://browser/skin/symbolic-icons/back-button.svg);
+  list-style-image: url(moz-icon://stock/go-previous-symbolic?size=menu);
 }
 
 #forward-btn:-moz-locale-dir(ltr) {
-/*  list-style-image: url("moz-icon://stock/gtk-go-forward-ltr?size=menu");*/
-  list-style-image: url(chrome://browser/skin/symbolic-icons/forward-button.svg);
+  list-style-image: url(moz-icon://stock/go-next-symbolic?size=menu);
 }
 
 #back-btn:-moz-locale-dir(rtl) {
-/*  list-style-image: url("moz-icon://stock/gtk-go-back-rtl?size=menu");*/
-  list-style-image: url(chrome://browser/skin/symbolic-icons/forward-button.svg);
+  list-style-image: url(moz-icon://stock/go-next-symbolic?size=menu);
 }
 
 #forward-btn:-moz-locale-dir(rtl) {
-/*  list-style-image: url("moz-icon://stock/gtk-go-forward-rtl?size=menu");*/
-  list-style-image: url(chrome://browser/skin/symbolic-icons/back-button.svg);
+  list-style-image: url(moz-icon://stock/go-previous-symbolic?size=menu);
 }
 
-#back-btn[disabled="true"] > .toolbarbutton-icon,
-#forward-btn[disabled="true"] > .toolbarbutton-icon {
-  opacity: 0.5;
+#back-btn:not([disabled="true"]) > .toolbarbutton-icon,
+#forward-btn:not([disabled="true"]) > .toolbarbutton-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
+}
+
+#back-btn:not([open="true"]):not([disabled="true"]):active:hover > .toolbarbutton-icon,
+#forward-btn:not([open="true"]):not([disabled="true"]):active:hover > .toolbarbutton-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
 }
 
 #header-utils-btn {
@@ -426,14 +427,14 @@
 
 .sorter[checkState="1"] .button-icon {
   display: -moz-box;
-/*  list-style-image: url("moz-icon://stock/gtk-sort-descending?size=16");*/
-  list-style-image: url(chrome://browser/skin/symbolic-icons/up.svg);
+  list-style-image: url(moz-icon://stock/go-up-symbolic?size=menu);
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
 
 .sorter[checkState="2"] .button-icon {
   display: -moz-box;
-/*  list-style-image: url("moz-icon://stock/gtk-sort-ascending?size=16");*/
-  list-style-image: url(chrome://browser/skin/symbolic-icons/down.svg);
+  list-style-image: url(moz-icon://stock/go-down-symbolic?size=menu);
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
 
 /*** discover view ***/
@@ -728,8 +729,7 @@
   background: transparent;
   font-weight: bold;
   cursor: pointer;
-/*  list-style-image: url(moz-icon://stock/gtk-go-down?size=16);*/
-  list-style-image: url(chrome://browser/skin/symbolic-icons/down.svg);
+  list-style-image: url(moz-icon://stock/go-down-symbolic?size=menu);
   margin-top: 10px;
 }
 
@@ -738,6 +738,7 @@
 }
 
 .addon .relnotes-toggle > .button-box > .button-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
   display: -moz-box;
 }
 
@@ -746,8 +747,7 @@
 }
 
 .addon[show-relnotes] .relnotes-toggle {
-/*  list-style-image: url(moz-icon://stock/gtk-go-up?size=16);*/
-  list-style-image: url(chrome://browser/skin/symbolic-icons/up.svg);
+  list-style-image: url(moz-icon://stock/go-up-symbolic?size=menu);
 }
 
 /*** search view ***/
