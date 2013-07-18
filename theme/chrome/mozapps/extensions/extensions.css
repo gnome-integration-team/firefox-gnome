@@ -374,12 +374,12 @@
 }
 
 #header-utils-btn {
-/*  list-style-image: url("moz-icon://stock/gtk-preferences?size=menu");*/
-  list-style-image: url(chrome://browser/skin/symbolic-icons/preferences.svg);
+  list-style-image: url(moz-icon://stock/preferences-system-symbolic?size=menu);
 }
 
 #header-utils-btn > .toolbarbutton-icon {
   -moz-margin-end: 0;
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
 
 #header-utils-btn > .toolbarbutton-menu-dropmarker {
