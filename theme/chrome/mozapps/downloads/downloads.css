@@ -120,7 +120,7 @@ menuitem:not([type]) {
 }
 
 #clearListButton {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/clear-all.svg);
+  list-style-image: url(moz-icon://stock/edit-clear-all-symbolic?size=menu);
   min-width: 30px;
 }
 
@@ -131,10 +131,12 @@ menuitem:not([type]) {
 #clearListButton .button-icon {
   display: block !important;
   -moz-margin-end: 0;
-  opacity: 1;
 }
 
-#clearListButton[disabled="true"] .button-icon {
-  opacity: 0.5;
+#clearListButton:not([disabled="true"]) .button-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
 
+#clearListButton:not([open="true"]):not([disabled="true"]):active:hover .button-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
+}
