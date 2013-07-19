@@ -936,7 +936,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   #print-button, #cut-button, #copy-button, #paste-button,
   #fullscreen-button, #zoom-out-button, #zoom-in-button,
   #sync-button, #feed-button,
-  #new-tab-button, #new-window-button
+  #new-tab-button, .tabs-newtab-button, #new-window-button
 ):not([disabled="true"]) > .toolbarbutton-icon {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
@@ -948,8 +948,8 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   #print-button, #cut-button, #copy-button, #paste-button,
   #fullscreen-button, #zoom-out-button, #zoom-in-button,
   #sync-button, #feed-button,
-  #new-tab-button, #new-window-button
-):not([open="true"]):-moz-any(:not([disabled="true"]):active:hover, [checked="true"]) > .toolbarbutton-icon {
+  #new-tab-button, .tabs-newtab-button, #new-window-button
+):not([disabled="true"]):not([open="true"]):-moz-any(:active:hover, [checked="true"]) > .toolbarbutton-icon {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
 }
 
@@ -2160,7 +2160,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 #TabsToolbar .tabs-newtab-button,
 #TabsToolbar > #new-tab-button,
 #TabsToolbar > #wrapper-new-tab-button > #new-tab-button {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/add.svg);
+  list-style-image: url(moz-icon://stock/list-add-symbolic?size=menu);
   -moz-image-region: auto;
   background: transparent !important;
   border-color: transparent !important;
@@ -2178,6 +2178,12 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 #TabsToolbar > #new-tab-button:active:hover,
 #TabsToolbar > #wrapper-new-tab-button > #new-tab-button:active:hover {
   opacity: 1;
+}
+
+#TabsToolbar .tabs-newtab-button:active:hover > .toolbarbutton-icon,
+#TabsToolbar > #new-tab-button:active:hover > .toolbarbutton-icon,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button:active:hover > .toolbarbutton-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
 
 /* Tabbrowser arrowscrollbox arrows */
