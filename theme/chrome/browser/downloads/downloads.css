@@ -264,7 +264,9 @@ toolbar[iconsize="large"] > #downloads-indicator > #downloads-indicator-anchor {
 }
 
 #downloads-indicator[open="true"] #downloads-indicator-icon,
-#downloads-indicator:active:hover #downloads-indicator-icon {
+#downloads-indicator:active:hover #downloads-indicator-icon,
+#downloads-indicator:not([counter])[open="true"] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter,
+#downloads-indicator:not([counter]):active:hover > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
 }
 
@@ -316,6 +318,7 @@ toolbar[iconsize="large"] > #downloads-indicator > #downloads-indicator-anchor {
 #downloads-indicator-counter {
   height: 10px;
   margin: 0;
+  margin-bottom: 2px;
   color: hsl(0,0%,30%);
   text-shadow: 0 1px 0 hsla(0,0%,100%,.5);
   font-size: 10px;
@@ -357,12 +360,13 @@ toolbar[iconsize="large"] > #downloads-indicator > #downloads-indicator-anchor {
   background-color: #555753;
 }
 
-#downloads-indicator[paused] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-progress > .progress-bar {
-  background-color: #edd400;
+#downloads-indicator[open="true"] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-progress > .progress-remainder,
+#downloads-indicator:active:hover > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-progress > .progress-remainder {
+  background-color: #eee;
 }
 
-#downloads-indicator[paused] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-progress > .progress-remainder {
-  background-color: #555753;
+#downloads-indicator[paused] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-progress > .progress-bar {
+  background-color: #edd400;
 }
 
 toolbar[mode="full"] > #downloads-indicator > .toolbarbutton-text {
