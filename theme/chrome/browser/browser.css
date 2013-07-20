@@ -2255,14 +2255,14 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 /* All tabs button */
 
 #alltabs-button > .toolbarbutton-icon {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/alltabs.svg);
+  list-style-image: url(moz-icon://stock/view-more-symbolic?size=menu);
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
 #alltabs-button[type="menu"] > .toolbarbutton-icon {
   list-style-image: url(moz-icon://stock/go-down-symbolic?size=menu);
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
 
-#TabsToolbar #new-tab-button + #alltabs-button {
+#TabsToolbar #new-tab-button + #alltabs-button:not([open="true"]) {
   background: transparent !important;
   border-color: transparent !important;
   box-shadow: none !important;
@@ -2381,15 +2381,18 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 }
 #appmenu-cut,
 #appmenu-editmenu-cut {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/cut.svg");
+  list-style-image: url(moz-icon://stock/edit-cut-symbolic?size=menu);
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
 #appmenu-copy,
 #appmenu-editmenu-copy {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/copy.svg");
+  list-style-image: url(moz-icon://stock/edit-copy-symbolic?size=menu);
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
 #appmenu-paste,
 #appmenu-editmenu-paste {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/paste.svg");
+  list-style-image: url(moz-icon://stock/edit-paste-symbolic?size=menu);
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
 #wrapper-appmenu-toolbar-button,
 .appmenu-edit-button[disabled="true"] > .toolbarbutton-icon {

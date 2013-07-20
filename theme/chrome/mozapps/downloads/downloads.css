@@ -103,7 +103,8 @@ menuitem:not([type]) {
 }
 
 #menuitem_copyLocation {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/copy.svg);
+  list-style-image: url(moz-icon://stock/edit-copy-symbolic?size=menu);
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
 
 .blockedIcon {
