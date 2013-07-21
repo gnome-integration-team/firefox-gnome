@@ -1,0 +1,66 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+#share-button {
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+#socialUserPortrait {
+  width: 48px;
+  height: 48px;
+  list-style-image:url("chrome://global/skin/icons/information-32.png");
+}
+
+#socialUserDisplayName,
+#socialUserPortrait {
+  cursor: pointer;
+}
+
+#socialUserDisplayName {
+  -moz-appearance: none;
+  border: none;
+  background-color: transparent;
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 130%;
+  font-weight: bold;
+}
+
+#socialUserDisplayName > .button-box {
+  -moz-padding-start: 0;
+  padding-top: 0;
+  border-top-width: 0;
+}
+
+#socialUserDisplayName:hover {
+  color: -moz-nativehyperlinktext;
+  text-decoration: underline;
+}
+
+#unsharePopupText {
+  height: 48px;
+}
+
+#unsharePopupBottomButtons {
+  margin-top: 1em;
+}
+
+.chatbar-button > .toolbarbutton-icon {
+  opacity: .6;
+}
+
+.chatbar-button:hover > .toolbarbutton-icon,
+.chatbar-button[open="true"] > .toolbarbutton-icon {
+  opacity: 1;
+}
+
+chatbox {
+  height: 285px;
+  width: 260px;
+}
+
+chatbox[minimized="true"] {
+  width: 160px;
+  height: 20px;
+}

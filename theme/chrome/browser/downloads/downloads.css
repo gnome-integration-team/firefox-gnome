@@ -2,6 +2,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+@import url("chrome://appversion/skin/downloads/downloads.css");
+
 /*** Panel and outer controls ***/
 
 #downloadsPanel > .panel-arrowcontainer > .panel-arrowcontent {
@@ -165,7 +167,7 @@ richlistitem[type="download"]:last-child {
 
 /*** Highlighted list items ***/
 
-#downloadsPanel:not([keyfocus]) > #downloadsListBox > richlistitem[type="download"][state="1"]:hover {
+#downloadsPanel:not([keyfocus]) > #downloadsListBox > richlistitem[type="download"][state="1"][exists]:hover {
   border-radius: 3px;
   border-top: 1px solid hsla(0,0%,100%,.3);
   border-bottom: 1px solid hsla(0,0%,0%,.2);

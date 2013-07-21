@@ -2,6 +2,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+@import url("chrome://appversion/skin/extensions/extensions.css");
+
 @import url("chrome://global/skin/inContentUI.css");
 
 /*** global warnings ***/
@@ -670,15 +672,15 @@
 
 .addon-view[notification="warning"] {
   background-image: url("chrome://mozapps/skin/extensions/stripes-warning.png"),
-                     linear-gradient(rgba(255, 255, 0, 0.04),
-                                     rgba(255, 255, 0, 0));
+                    linear-gradient(rgba(255, 255, 0, 0.04),
+                                    rgba(255, 255, 0, 0));
   background-repeat: repeat-x;
 }
 
 .addon-view[notification="error"] {
   background-image: url("chrome://mozapps/skin/extensions/stripes-error.png"),
-                     linear-gradient(rgba(255, 0, 0, 0.04),
-                                     rgba(255, 0, 0, 0));
+                    linear-gradient(rgba(255, 0, 0, 0.04),
+                                    rgba(255, 0, 0, 0));
   background-repeat: repeat-x;
 }
 
@@ -686,16 +688,16 @@
 .addon-view[pending="upgrade"],
 .addon-view[pending="install"] {
   background-image: url("chrome://mozapps/skin/extensions/stripes-info-positive.png"),
-                     linear-gradient(rgba(0, 255, 0, 0.04),
-                                     rgba(0, 255, 0, 0));
+                    linear-gradient(rgba(0, 255, 0, 0.04),
+                                    rgba(0, 255, 0, 0));
   background-repeat: repeat-x;
 }
 
 .addon-view[pending="disable"],
 .addon-view[pending="uninstall"] {
   background-image: url("chrome://mozapps/skin/extensions/stripes-info-negative.png"),
-                     linear-gradient(rgba(128, 128, 128, 0.04),
-                                     rgba(128, 128, 128, 0));
+                    linear-gradient(rgba(128, 128, 128, 0.04),
+                                    rgba(128, 128, 128, 0));
   background-repeat: repeat-x;
 }
 

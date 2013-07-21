@@ -130,7 +130,7 @@
   -moz-appearance: none !important;
   list-style-image: url("chrome://browser/skin/devtools/dropmarker.png");
   -moz-box-align: center;
-  margin: 0 3px;
+  padding: 0 3px;
 }
 
 /* Text input */
@@ -178,7 +178,7 @@
 .devtools-no-search-result {
   box-shadow: inset 0 0 0 1px hsla(0,68%,6%,.35);
   border-color: hsl(10,70%,40%) hsl(10,75%,37%) hsl(10,80%,35%) !important;
-  background-image: url(magnifying-glass.png), -moz-linear-gradient(hsla(1,16%,76%,.45), hsla(1,16%,76%,.75));
+  background-image: url(magnifying-glass.png), linear-gradient(hsla(1,16%,76%,.45), hsla(1,16%,76%,.75));
 }
 
 /* Close button */
@@ -216,6 +216,7 @@
   background-color: transparent;
   -moz-margin-end: -3px;
   position: relative;
+  cursor: e-resize;
 }
 
 /* In-tools sidebar */
@@ -256,7 +257,7 @@
 
 .devtools-sidebar-tabs > tabs > tab {
   -moz-appearance: none;
-  /* We want to match the height of a toolbar with a toolbarbutton 
+  /* We want to match the height of a toolbar with a toolbarbutton
    * First, we need to replicated the padding of toolbar (4px),
    * then, the padding of the button itself from toolbarbutton.css (3px),
    * Also, we need to take the border of the buttons into accout (1px).
@@ -408,4 +409,32 @@
 
 .devtools-autocomplete-listbox.light-theme > richlistitem > label {
   color: #666;
+}
+
+/* Responsive container */
+
+.devtools-responsive-container {
+  -moz-box-orient: horizontal;
+}
+
+@media (max-width: 700px) {
+  .devtools-responsive-container {
+    -moz-box-orient: vertical;
+  }
+
+  .devtools-responsive-container > .devtools-side-splitter {
+    border: 0;
+    margin: 0;
+    border-top: 1px solid black;
+    min-height: 3px;
+    height: 3px;
+    margin-bottom: -3px;
+    /* In some edge case the cursor is not changed to n-resize */
+    cursor: n-resize;
+  }
+
+  .devtools-responsive-container > .devtools-sidebar-tabs {
+    min-height: 35vh;
+    max-height: 75vh;
+  }
 }
