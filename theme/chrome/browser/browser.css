@@ -589,7 +589,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   color: #2e3436 !important;
   padding: 3px;
   text-shadow: none;
-  transition-property: color, border, box-shadow, background;
+  transition-property: border, box-shadow, background;
   transition-duration: 200ms;
 }
 
@@ -611,6 +611,12 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   background-image: linear-gradient(to bottom, rgba(0,10,0,0.3), rgba(200,200,200,0.3)) !important;
   border-color: rgba(180,180,180,1) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.37);
+  color: #ffffff !important;
+  /*
+  font-weight: bolder;
+  text-shadow: 0 1px #7f7f7f;
+  */
+  text-shadow: 0 0 0 #ffffff, 0 1px #7f7f7f;
 }
 
 #downloads-indicator[open="true"],
@@ -658,6 +664,8 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #social-toolbar-item > .toolbarbutton-1[checked="true"]:-moz-window-inactive {
   background: rgba(100,110,100,0.5) !important;
   border-color: transparent !important;
+  color: #eaeaea !important;
+  text-shadow: 0 0 0 #ffffff;
 }
 
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:not([checked="true"]):-moz-window-inactive > .toolbarbutton-icon,
