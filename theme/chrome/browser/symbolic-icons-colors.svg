@@ -30,6 +30,13 @@
                            0 0 0 1 0  "/>
   </filter>
   
+  <filter id="white" filterRes="256" x="0" y="0" width="16px" height="16px">
+    <feColorMatrix values="0 0 0 0 1
+                           0 0 0 0 1
+                           0 0 0 0 1
+                           0 0 0 1 0"/>
+  </filter>
+  
   <filter id="yellow" filterRes="256" x="0" y="0" width="16px" height="16px">
     <feColorMatrix values="1.33 0    0    0 0
                            0    0.92 0    0 0

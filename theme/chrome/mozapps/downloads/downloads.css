@@ -63,48 +63,60 @@ menuitem:not([type]) {
   -moz-binding: url("chrome://global/content/bindings/menu.xml#menuitem-iconic");
 }
 
-.cancel,
-#menuitem_cancel {
+.cancel {
   list-style-image: url(chrome://browser/skin/symbolic-icons/playback-stop.svg);
 }
 
+#menuitem_cancel {
+  list-style-image: url("moz-icon://stock/gtk-cancel?size=menu");
+}
+
 #menuitem_open {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/open.svg);
+  list-style-image: url("moz-icon://stock/gtk-open?size=menu");
 }
 #menuitem_open[disabled="true"] {
-  opacity: 0.5;
+  list-style-image: url("moz-icon://stock/gtk-open?size=menu&state=disabled");
 }
 
-.pause,
-#menuitem_pause {
+.pause {
   list-style-image: url(chrome://browser/skin/symbolic-icons/playback-pause.svg);
 }
-.pause[disabled="true"],
-#menuitem_pause[disabled="true"] {
+.pause[disabled="true"] {
   opacity: 0.5;
 }
 
-.resume,
-#menuitem_resume {
+#menuitem_pause {
+  list-style-image: url("moz-icon://stock/gtk-media-pause?size=menu");
+}
+#menuitem_pause[disabled="true"] {
+  list-style-image: url("moz-icon://stock/gtk-media-pause?size=menu&state=disabled");
+}
+
+.resume {
   list-style-image: url(chrome://browser/skin/symbolic-icons/playback-start.svg);
 }
 
-.retry,
-#menuitem_retry {
+#menuitem_resume {
+  list-style-image: url("moz-icon://stock/gtk-media-play?size=menu");
+}
+
+.retry {
   list-style-image: url(chrome://browser/skin/symbolic-icons/redo.svg);
 }
-.retry:-moz-locale-dir(rtl),
-#menuitem_retry:-moz-locale-dir(rtl) {
+.retry:-moz-locale-dir(rtl) {
   list-style-image: url(chrome://browser/skin/symbolic-icons/redo-rtl.svg);
 }
 
+#menuitem_retry {
+  list-style-image: url("moz-icon://stock/gtk-redo?size=menu");
+}
+
 #menuitem_removeFromList {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/remove.svg);
+  list-style-image: url("moz-icon://stock/gtk-remove?size=menu");
 }
 
 #menuitem_copyLocation {
-  list-style-image: url(moz-icon://stock/edit-copy-symbolic?size=menu);
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
+  list-style-image: url("moz-icon://stock/gtk-copy?size=menu");
 }
 
 .blockedIcon {

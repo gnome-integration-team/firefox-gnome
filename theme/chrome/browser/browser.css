@@ -1599,7 +1599,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 richlistitem[selected="true"] .ac-result-type-bookmark,
 richlistitem[selected="true"] .autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage) {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
 
 .ac-result-type-keyword,
@@ -1611,7 +1611,7 @@ richlistitem[selected="true"] .autocomplete-treebody::-moz-tree-image(bookmark, 
 }
 richlistitem[selected="true"] .ac-result-type-keyword,
 richlistitem[selected="true"] .autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage) {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
 
 .ac-result-type-tag,
@@ -1622,7 +1622,7 @@ richlistitem[selected="true"] .autocomplete-treebody::-moz-tree-image(keyword, t
 }
 richlistitem[selected="true"] .ac-result-type-tag,
 richlistitem[selected="true"] .autocomplete-treebody::-moz-tree-image(tag, treecolAutoCompleteImage) {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
 
 .ac-comment {
@@ -1653,7 +1653,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 }
 richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
 
 .autocomplete-treebody::-moz-tree-cell-text(treecolAutoCompleteComment) {
@@ -2439,21 +2439,51 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 #appmenuSecondaryPane-spacer {
   min-height: 1em;
 }
+
 #appmenu-cut,
 #appmenu-editmenu-cut {
   list-style-image: url(moz-icon://stock/edit-cut-symbolic?size=menu);
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
 #appmenu-copy,
 #appmenu-editmenu-copy {
   list-style-image: url(moz-icon://stock/edit-copy-symbolic?size=menu);
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
 #appmenu-paste,
 #appmenu-editmenu-paste {
   list-style-image: url(moz-icon://stock/edit-paste-symbolic?size=menu);
+}
+
+#appmenu-cut > .toolbarbutton-icon,
+#appmenu-copy > .toolbarbutton-icon,
+#appmenu-paste > .toolbarbutton-icon {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
+
+#appmenu-cut:not([disabled="true"]):active:hover > .toolbarbutton-icon,
+#appmenu-copy:not([disabled="true"]):active:hover > .toolbarbutton-icon,
+#appmenu-paste:not([disabled="true"]):active:hover > .toolbarbutton-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
+}
+
+#appmenu-editmenu-cut {
+  list-style-image: url("moz-icon://stock/gtk-cut?size=menu");
+}
+#appmenu-editmenu-cut[disabled="true"] {
+  list-style-image: url("moz-icon://stock/gtk-cut?size=menu&state=disabled");
+}
+#appmenu-editmenu-copy {
+  list-style-image: url("moz-icon://stock/gtk-copy?size=menu");
+}
+#appmenu-editmenu-copy[disabled="true"] {
+  list-style-image: url("moz-icon://stock/gtk-copy?size=menu&state=disabled");
+}
+#appmenu-editmenu-paste {
+  list-style-image: url("moz-icon://stock/gtk-paste?size=menu");
+}
+#appmenu-editmenu-paste[disabled="true"] {
+  list-style-image: url("moz-icon://stock/gtk-paste?size=menu&state=disabled");
+}
+
 #wrapper-appmenu-toolbar-button,
 .appmenu-edit-button[disabled="true"] > .toolbarbutton-icon {
   opacity: .3;
