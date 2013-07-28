@@ -12,6 +12,7 @@
 
 #ghostery-toolbar-button /* For older versions */,
 #ghostery-toolbar-button > .ghostery-toolbar-button {
+  border-radius: 3px !important;
   list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery.svg) !important;
 }
 
@@ -32,10 +33,20 @@
 
 #ghostery-toolbar-button .badge > .label {
   background: transparent !important;
-  border: none !important;
+  border-color: transparent !important;
   box-shadow: none !important;
   color: #242b33 !important;
   text-shadow: none !important;
+}
+
+#ghostery-toolbar-button:hover .badge > .label {
+  background: rgba(255,255,255,0.8) !important;
+  border-color: rgba(50,50,50,.4) !important;
+  box-shadow: none !important;
+}
+
+#ghostery-toolbar-button .badge {
+  margin-top: 0 !important;
 }
 
 /* On status bar */
