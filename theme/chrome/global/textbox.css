@@ -6,6 +6,8 @@
   == Styles used by the XUL textbox element.
   ======================================================================= */
 
+@import url("chrome://os/skin/global/textbox.css");
+
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
 

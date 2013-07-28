@@ -5,3 +5,5 @@ skin    mozapps         Adwaita     chrome/mozapps/
 
 skin    appversion      Adwaita     chrome/appversion/22/ appversion<23a1
 skin    appversion      Adwaita     chrome/appversion/23/ appversion>=23a1
+
+skin    os              Adwaita     chrome/os/windows/     os=WINNT

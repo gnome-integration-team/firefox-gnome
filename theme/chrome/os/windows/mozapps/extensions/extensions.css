@@ -1,0 +1,46 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+#back-btn:-moz-locale-dir(ltr) {
+  list-style-image: url(chrome://os/skin/browser/symbolic-icons/go-previous.svg) !important;
+}
+
+#forward-btn:-moz-locale-dir(ltr) {
+  list-style-image: url(chrome://os/skin/browser/symbolic-icons/go-next.svg) !important;
+}
+
+#back-btn:-moz-locale-dir(rtl) {
+  list-style-image: url(chrome://os/skin/browser/symbolic-icons/go-next.svg) !important;
+}
+
+#forward-btn:-moz-locale-dir(rtl) {
+  list-style-image: url(chrome://os/skin/browser/symbolic-icons/go-previous.svg) !important;
+}
+
+#header-utils-btn {
+  list-style-image: url(chrome://os/skin/browser/symbolic-icons/preferences-system.svg) !important;
+}
+
+.sorter[checkState="1"] .button-icon {
+  list-style-image: url(chrome://os/skin/browser/symbolic-icons/go-up.svg) !important;
+}
+
+.sorter[checkState="2"] .button-icon {
+  list-style-image: url(chrome://os/skin/browser/symbolic-icons/go-down.svg) !important;
+}
+
+.addon .relnotes-toggle {
+  list-style-image: url(chrome://os/skin/browser/symbolic-icons/go-down.svg) !important;
+}
+.addon[show-relnotes] .relnotes-toggle {
+  list-style-image: url(chrome://os/skin/browser/symbolic-icons/go-up.svg) !important;
+}
+
+.addon-control.remove {
+  list-style-image: url(chrome://os/skin/browser/symbolic-icons/user-trash.svg) !important;
+}
+
+.addon-control.preferences {
+  list-style-image: url(chrome://os/skin/browser/symbolic-icons/emblem-system.svg) !important;
+}
