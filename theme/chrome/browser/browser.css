@@ -995,7 +995,7 @@ toolbar[iconsize="small"] .toolbarbutton-1:not([type="menu-button"]) {
   padding: 0 !important;
 }
 #nav-bar[iconsize="small"] #window-controls {
-  margin: -4px 0 !important;
+  margin: -6px 0 !important;
 }
 
 #close-button,
