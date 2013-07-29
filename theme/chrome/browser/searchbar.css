@@ -106,7 +106,7 @@
   min-width: 24px;
 }
 
-.search-go-button:hover {
+.search-go-button:not(:-moz-window-inactive):hover {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#input-field-hover);
 }
 

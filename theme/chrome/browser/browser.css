@@ -594,9 +594,9 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 /* Amazing code below ↯ */
-:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:not([disabled="true"]):hover,
-:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) .toolbarbutton-menubutton-dropmarker:hover,
-#social-toolbar-item > .toolbarbutton-1:hover {
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:not([disabled="true"]):not(:-moz-window-inactive):hover,
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) .toolbarbutton-menubutton-dropmarker:not(:-moz-window-inactive):hover,
+#social-toolbar-item > .toolbarbutton-1:not(:-moz-window-inactive):hover {
   background-image: linear-gradient(to bottom, rgba(255,255,255,0.8) 40%, rgba(220,220,220,0.5)) !important;
   border-color: rgba(50,50,50,.4) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.37);
@@ -1256,7 +1256,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   opacity: 0.6;
 }
 
-#identity-box:hover #page-proxy-favicon,
+#identity-box:not(:-moz-window-inactive):hover #page-proxy-favicon,
 #identity-box:active #page-proxy-favicon,
 #identity-box[open="true"] #page-proxy-favicon {
   opacity: 1;
@@ -1828,15 +1828,15 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 
 /* Adjust opacity of the URL bar icons on hover */
-#urlbar-go-button:hover > .toolbarbutton-icon,
-#urlbar-reload-button:hover > .toolbarbutton-icon,
-#urlbar-stop-button:hover > .toolbarbutton-icon,
-#urlbar #star-button:hover,
-.urlbar-history-dropmarker:hover,
+#urlbar-go-button:not(:-moz-window-inactive):hover > .toolbarbutton-icon,
+#urlbar-reload-button:not(:-moz-window-inactive):hover > .toolbarbutton-icon,
+#urlbar-stop-button:not(:-moz-window-inactive):hover > .toolbarbutton-icon,
+#urlbar #star-button:not(:-moz-window-inactive):hover,
+.urlbar-history-dropmarker:not(:-moz-window-inactive):hover,
 .urlbar-history-dropmarker[open="true"] {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#input-field-hover);
 }
-#urlbar #star-button[starred="true"]:hover {
+#urlbar #star-button[starred="true"]:not(:-moz-window-inactive):hover {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#input-field-yellow-hover);
 }
 
