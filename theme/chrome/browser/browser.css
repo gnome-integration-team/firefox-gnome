@@ -1011,6 +1011,11 @@ toolbar[iconsize="small"] .toolbarbutton-1:not([type="menu-button"]) {
   min-width: 42px !important;
   height: 38px;
 }
+#close-button:-moz-locale-dir(rtl),
+#restore-button:-moz-locale-dir(rtl) {
+  -moz-border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAPCAYAAAAlH6X5AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAeSURBVAiZY1i+evl/JgYGBgZyif8M/1cwMTExTQQA76IGUhW20HIAAAAASUVORK5CYII=") 0 1 0 0 fill / 0px 1px 0px 0px stretch !important;
+}
+
 #nav-bar:not([tabsontop="false"]) #close-button,
 #nav-bar:not([tabsontop="false"]) #restore-button {
   border-image: none !important;
