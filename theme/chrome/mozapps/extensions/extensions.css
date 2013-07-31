@@ -1062,7 +1062,10 @@ setting[type="radio"] > radiogroup {
 	-moz-margin-start: 5em;
 }
 
-.addon-control {
+/*
+  #new-userstyle == "Write New Style" (Stylish)
+*/
+.addon-control:not(#new-userstyle) {
   -moz-appearance: none;
   background: transparent ;
   border: 1px solid transparent;
@@ -1075,31 +1078,31 @@ setting[type="radio"] > radiogroup {
   transition-duration: 200ms;
 }
 
-.addon-control:not([disabled="true"]):hover {
+.addon-control:not(#new-userstyle):not([disabled="true"]):hover {
   border-color: rgba(0,0,0,.25) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.69),
               0 1px 0 rgba(255,255,255,0.69) inset;
 }
 
-.addon-control:not([disabled="true"]):active:hover,
-.addon-control[checked="true"],
-.addon-control[checked="true"]:hover {
+.addon-control:not(#new-userstyle):not([disabled="true"]):active:hover,
+.addon-control:not(#new-userstyle)[checked="true"],
+.addon-control:not(#new-userstyle)[checked="true"]:hover {
   background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4);
   border-color: rgba(0,0,0,.25);
   box-shadow: 0 1px 0 rgba(255,255,255,0.69);
 }
 
-.addon-control[open="true"],
-.addon-control[open="true"]:hover,
-.addon-control[open="true"]:active,
-.addon-control[open="true"]:active:hover {
+.addon-control:not(#new-userstyle)[open="true"],
+.addon-control:not(#new-userstyle)[open="true"]:hover,
+.addon-control:not(#new-userstyle)[open="true"]:active,
+.addon-control:not(#new-userstyle)[open="true"]:active:hover {
   background: #ffffff !important;
   border-color: #ffffff !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.69);
   border-radius: 3px 3px 0 0;
 }
 
-.addon-control[disabled="true"] {
+.addon-control:not(#new-userstyle)[disabled="true"] {
   display: none;
 }
 
