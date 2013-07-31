@@ -594,9 +594,9 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 /* Amazing code below ↯ */
-:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:not([disabled="true"]):not(:-moz-window-inactive):hover,
-:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) .toolbarbutton-menubutton-dropmarker:not(:-moz-window-inactive):hover,
-#social-toolbar-item > .toolbarbutton-1:not(:-moz-window-inactive):hover {
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:not([disabled="true"]):hover,
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) .toolbarbutton-menubutton-dropmarker:hover,
+#social-toolbar-item > .toolbarbutton-1:hover {
   background-image: linear-gradient(to bottom, rgba(255,255,255,0.8) 40%, rgba(220,220,220,0.5)) !important;
   border-color: rgba(50,50,50,.4) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.37);
@@ -655,7 +655,9 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:-moz-window-inactive,
-#social-toolbar-item > .toolbarbutton-1:-moz-window-inactive {
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:-moz-window-inactive:hover,
+#social-toolbar-item > .toolbarbutton-1:-moz-window-inactive,
+#social-toolbar-item > .toolbarbutton-1:-moz-window-inactive:hover {
   background: transparent !important;
   color: #a7aba7 !important;
 }
