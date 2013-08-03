@@ -92,6 +92,14 @@ notification[value="missing-plugins"] .messageImage {
   padding: 1px !important;
 }
 
+.messageCloseButton > .toolbarbutton-icon {
+  opacity: 0.4;
+}
+
+.messageCloseButton:hover > .toolbarbutton-icon {
+  opacity: 1;
+}
+
 /* Popup notification */
 
 .popup-notification-description {

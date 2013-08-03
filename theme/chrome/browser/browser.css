@@ -101,12 +101,10 @@ toolbarbutton.bookmark-item {
 
 /*Remove attention from close buttons until hovered over*/
 
-.messageCloseButton,
 #addonbar-closebutton {
 	opacity: 0.4;
 }
 
-.messageCloseButton:hover,
 #addonbar-closebutton:hover {
 	opacity: 1;
 }
