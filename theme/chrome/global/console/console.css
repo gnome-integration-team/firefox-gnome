@@ -6,9 +6,9 @@
    == Styles used by the Error Console window.
    ====================================================================== */
 
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
 @import url("chrome://os/skin/global/console/console.css");
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 #ToolbarMode,
 #ToolbarEval,
