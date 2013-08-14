@@ -2,13 +2,17 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
 /* General output styles */
 
 .webconsole-timestamp {
   color: GrayText;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "DejaVu Sans Mono", monospace;
+  font-family: monospace;
 }
 
 .hud-msg-node {
@@ -33,7 +37,7 @@
   -moz-margin-start: 3px;
   -moz-margin-end: 6px;
   white-space: pre-wrap;
-  font-family: "DejaVu Sans Mono", monospace;
+  font-family: monospace;
 }
 
 .webconsole-msg-body-piece {
@@ -57,7 +61,6 @@
   font-weight: 600;
 }
 
-/* TODO move this and other functional rules to content - bug 635359 */
 .webconsole-msg-repeat[value="1"] {
   display: none;
 }
@@ -85,16 +88,19 @@
   color: inherit;
 }
 
+.jsterm-input-container {
+  background: white;
+}
+
 .jsterm-input-node,
 .jsterm-complete-node {
-  font: 0.9em "DejaVu Sans Mono", monospace;
+  font-family: monospace;
 }
 
 .hud-output-node {
   -moz-appearance: none;
   border-bottom: 1px solid ThreeDShadow;
   margin: 0;
-  font-size: 0.9em;
 }
 
 .hud-filtered-by-type,
@@ -110,6 +116,10 @@
 }
 
 /* WebConsole colored drops */
+
+.webconsole-filter-button {
+  -moz-user-focus: normal;
+}
 
 .webconsole-filter-button[checked] {
   color: white !important;
@@ -222,8 +232,7 @@
 }
 
 .jsterm-input-node {
-  width: 98%;
-  background: url("chrome://browser/skin/devtools/commandline.png") 4px 3px no-repeat;
+  background: -moz-image-rect(url("chrome://browser/skin/devtools/commandline-icon.png"), 0, 32, 16, 16) no-repeat;
 }
 
 :-moz-any(.jsterm-input-node,
@@ -248,6 +257,8 @@
   border: none;
 }
 
+/* Security styles */
+
 .webconsole-msg-security > .webconsole-msg-icon-container {
   -moz-border-start: solid red 6px;
 }
@@ -255,4 +266,30 @@
 .webconsole-filter-button[category="security"] > .toolbarbutton-menubutton-button:before {
   background-image: linear-gradient(#FF3030, #FF7D7D);
   border-color: #D12C2C;
+}
+
+.webconsole-msg-security.webconsole-msg-error {
+  -moz-image-region: rect(32px, 16px, 40px, 8px);
+}
+
+.webconsole-msg-security.webconsole-msg-warn {
+  -moz-image-region: rect(32px, 24px, 40px, 16px);
+}
+
+.webconsole-timestamp,
+.webconsole-msg-body {
+  font-family: "DejaVu Sans Mono", monospace;
+}
+
+.jsterm-input-node,
+.jsterm-complete-node {
+  font: 0.9em "DejaVu Sans Mono", monospace;
+}
+
+.hud-output-node {
+  font-size: 0.9em;
+}
+
+.jsterm-input-node {
+  width: 98%;
 }

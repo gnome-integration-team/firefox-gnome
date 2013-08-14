@@ -1443,7 +1443,8 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 .popup-notification-icon[popupid="indexedDB-permissions-prompt"],
 .popup-notification-icon[popupid="indexedDB-quota-prompt"],
-.popup-notification-icon[popupid*="offline-app-requested"] {
+.popup-notification-icon[popupid*="offline-app-requested"],
+.popup-notification-icon[popupid="offline-app-usage"] {
   list-style-image: url(chrome://global/skin/icons/question-64.png);
 }
 
@@ -1506,14 +1507,17 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   outline: 1px dotted -moz-DialogText;
 }
 
+.default-notification-icon,
 #default-notification-icon {
   list-style-image: url(chrome://browser/skin/symbolic-icons/information.svg);
 }
 
+.identity-notification-icon,
 #identity-notification-icon {
   list-style-image: url(chrome://mozapps/skin/profile/profileicon.png);
 }
 
+.geo-notification-icon,
 #geo-notification-icon {
   list-style-image: url(chrome://browser/skin/symbolic-icons/geolocation.svg);
 }
@@ -1522,6 +1526,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   list-style-image: url(chrome://browser/skin/symbolic-icons/addon.svg);
 }
 
+.indexedDB-notification-icon,
 #indexedDB-notification-icon {
   list-style-image: url(chrome://browser/skin/symbolic-icons/question.svg);
 }
@@ -1539,11 +1544,35 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 
 #plugins-notification-icon {
+  /*
+  list-style-image: url(chrome://browser/skin/notification-pluginNormal.png);
+  */
   list-style-image: url(chrome://browser/skin/symbolic-icons/plugin.svg);
 }
 
+#alert-plugins-notification-icon {
+  /* FIXME */
+  list-style-image: url(chrome://browser/skin/notification-pluginAlert.png);
+}
+
 #blocked-plugins-notification-icon {
-  list-style-image: url(chrome://mozapps/skin/plugins/notifyPluginBlocked.png);
+  /* FIXME */
+  list-style-image: url(chrome://browser/skin/notification-pluginBlocked.png);
+}
+
+#alert-plugins-notification-icon,
+#blocked-plugins-notification-icon {
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+#alert-plugins-notification-icon:hover,
+#blocked-plugins-notification-icon:hover {
+  -moz-image-region: rect(0, 32px, 16px, 16px);
+}
+
+#alert-plugins-notification-icon:active,
+#blocked-plugins-notification-icon:active {
+  -moz-image-region: rect(0, 48px, 16px, 32px);
 }
 
 #plugin-install-notification-icon {
@@ -1570,18 +1599,22 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   }
 }
 
+.mixed-content-blocked-notification-icon,
 #mixed-content-blocked-notification-icon {
   list-style-image: url(chrome://browser/skin/mixed-content-blocked-16.png);
 }
 
+.webRTC-shareDevices-notification-icon,
 #webRTC-shareDevices-notification-icon {
   list-style-image: url(chrome://browser/skin/webRTC-shareDevice-16.png);
 }
 
+.webRTC-sharingDevices-notification-icon,
 #webRTC-sharingDevices-notification-icon {
   list-style-image: url(chrome://browser/skin/webRTC-sharingDevice-16.png);
 }
 
+.web-notifications-notification-icon,
 #web-notifications-notification-icon {
   list-style-image: url(chrome://browser/skin/notification-16.png);
 }
@@ -2678,12 +2711,6 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   font-size: 120%;
 }
 
-/* Developer toolbar */
-
-#developer-toolbar {
-  border-top: 1px solid hsla(210, 8%, 5%, .65);
-}
-
 /* Responsive Mode */
 
 .browserContainer[responsivemode] {
@@ -2855,6 +2882,48 @@ html|*.highlighter-nodeinfobar-pseudo-classes {
   margin: 7px 0;
 }
 
+/* Developer toolbar */
+
+#developer-toolbar {
+  padding: 0;
+  min-height: 32px;
+  background-image: url(devtools/background-noise-toolbar.png), linear-gradient(#303840, #2d3640);
+  border-top: 1px solid #060a0d;
+  box-shadow: 0 1px 0 hsla(204,45%,98%,.05) inset, 0 -1px 0 hsla(206,37%,4%,.1) inset;
+}
+
+.developer-toolbar-button {
+  -moz-appearance: none;
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0 10px;
+  width: 32px;
+}
+
+.developer-toolbar-button > image {
+  margin: auto 10px;
+}
+
+#developer-toolbar-toolbox-button {
+  list-style-image: url("chrome://browser/skin/devtools/toggle-tools.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+#developer-toolbar-toolbox-button:hover {
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+#developer-toolbar-toolbox-button:hover:active {
+  -moz-image-region: rect(0px, 48px, 16px, 32px);
+}
+
+#developer-toolbar-toolbox-button[checked=true] {
+  -moz-image-region: rect(0px, 64px, 16px, 48px);
+}
+
+/* GCLI */
+
 html|*#gcli-tooltip-frame,
 html|*#gcli-output-frame {
   padding: 0;
@@ -2867,32 +2936,39 @@ html|*#gcli-output-frame {
   border-width: 0;
   background-color: transparent;
   -moz-appearance: none;
-  margin-bottom: -2px;
 }
 
 .gclitoolbar-input-node,
-.gclitoolbar-complete-node,
-.gclitoolbar-prompt {
+.gclitoolbar-complete-node {
   margin: 0;
-  -moz-margin-end: 5px;
   -moz-box-align: center;
   padding-top: 0;
   padding-bottom: 0;
-  padding-right: 4px;
-  border: 1px solid transparent;
-  border-radius: 3px;
+  padding-right: 8px;
   text-shadow: none;
+  box-shadow: none;
+  border-width: 0;
+  background-color: transparent;
 }
 
 .gclitoolbar-input-node {
-  padding-left: 20px;
-  background: transparent;
   -moz-appearance: none;
-  border-color: hsl(210,24%,10%);
   color: hsl(210,30%,85%);
-  text-shadow: 0 -1px 0 hsla(210,8%,5%,.45);
-  box-shadow: inset 0 1px 0 hsla(211,68%,6%,.05),
-              0 0 0 1px hsla(210,40%,83%,.1);
+  padding-left: 20px;
+  background-color: #242b33;
+  background-repeat: no-repeat;
+  background-position: 4px center;
+  box-shadow: 0 1px 1px hsla(206,37%,4%,.2) inset,
+              1px 0 0 hsla(206,37%,4%,.2) inset,
+              -1px 0 0 hsla(206,37%,4%,.2) inset;
+  line-height: 32px;
+  outline-style: none;
+  background-image: -moz-image-rect(url("chrome://browser/skin/devtools/commandline-icon.png"), 0, 16, 16, 0);
+}
+
+.gclitoolbar-input-node[focused="true"] {
+  background-image: -moz-image-rect(url("chrome://browser/skin/devtools/commandline-icon.png"), 0, 32, 16, 16);
+  background-color: #232e38;
 }
 
 .gclitoolbar-input-node > .textbox-input-box > html|*.textbox-input::-moz-selection {
@@ -2905,18 +2981,10 @@ html|*#gcli-output-frame {
   padding-left: 21px;
   background: transparent;
   color: transparent;
+  z-index: 100;
+  pointer-events: none;
 }
 
-.gclitoolbar-prompt {
-  padding-left: 4px;
-  padding-bottom: 2px;
-  font-size: 150%;
-  font-weight: bold;
-  color: hsl(210,30%,85%);
-  background-color: hsl(210,24%,16%);
-}
-
-.gclitoolbar-prompt-label,
 .gcli-in-incomplete,
 .gcli-in-error,
 .gcli-in-ontab,
@@ -2947,85 +3015,66 @@ html|*#gcli-output-frame {
 .gcli-in-closebrace {
   color: hsl(0,0%,80%);
 }
+#notification-popup[popupid="click-to-play-plugins"] > .panel-arrowcontainer > .panel-arrowcontent {
+  padding: 0px;
+}
+
+.click-to-play-plugins-notification-content {
+  width: 28em;
+}
+
+.click-to-play-plugins-notification-center-box {
+  border: 1px solid ThreeDShadow;
+  margin: 10px;
+}
+
+.plugin-popupnotification-centeritem:nth-child(odd) {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.center-item-label {
+  -moz-margin-start: 6px;
+  margin-bottom: 0;
+  text-overflow: ellipsis;
+}
+
+.center-item-warning-icon {
+  background-image: url("chrome://mozapps/skin/extensions/alerticon-info-negative.png");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 15px;
+  -moz-margin-start: 6px;
+}
+
+.click-to-play-plugins-notification-button-container {
+  background: linear-gradient(rgba(0,0,0,0.04) 60%, transparent);
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.click-to-play-popup-button {
+  width: 50%;
+}
+
+.click-to-play-plugins-notification-description-box {
+  padding: 10px;
+}
+
+.click-to-play-plugins-outer-description {
+  margin-top: 8px;
+}
+
+.click-to-play-plugins-notification-link,
+.center-item-link {
+  margin: 0;
+}
 
 .gcli-panel {
   padding: 0;
 }
 
-.gclitoolbar-input-node {
-  border-color: hsl(210,11%,10%);
-  box-shadow: 0 1px 1px hsla(210,8%,5%,.3) inset,
-              0 0 0 1px hsla(210,16%,76%,.1) inset,
-              0 1px 0 hsla(210,16%,76%,.15);
-}
-
 .gclitoolbar-input-node > .textbox-input-box > html|*.textbox-input::-moz-selection {
   color: hsl(210,11%,16%);
-}
-
-.gclitoolbar-prompt {
-  background-color: hsl(210,11%,16%);
-}
-
-/* Web Console */
-
-.web-console-frame {
-  border-bottom: 1px solid #aaa;
-}
-
-.web-console-frame[animated] {
-  transition: height 100ms;
-}
-
-/* Developer Toolbar */
-
-#developer-toolbar-toolbox-button {
-  min-width: 18px;
-}
-
-#developer-toolbar-toolbox-button > .toolbarbutton-text {
-  display: none;
-}
-
-#developer-toolbar-toolbox-button > .toolbarbutton-icon {
-  -moz-margin-end: 0;
-}
-
-.developer-toolbar-button {
-  -moz-appearance: none;
-  min-width: 78px;
-  min-height: 22px;
-  text-shadow: 0 -1px 0 hsla(210,8%,5%,.45);
-  border-radius: 3px;
-  color: inherit;
-  border: 1px solid transparent;
-  margin: 0 5px;
-  padding: 0 10px;
-  list-style-image: url("chrome://browser/skin/devtools/tools-icons-small.png");
-}
-
-.developer-toolbar-button:active,
-.developer-toolbar-button:active:hover,
-.developer-toolbar-button[checked=true],
-.developer-toolbar-button[open=true] {
-  border-color: hsla(210,8%,5%,.6);
-  background: rgba(0,0,0,.6);
-  box-shadow: 0 1px 2px rgba(0,0,0,.5) inset, 0 1px 0 hsla(210,16%,76%,.15);
-}
-
-.developer-toolbar-button:hover,
-.developer-toolbar-button[checked=true],
-.developer-toolbar-button[open=true] {
-  color: hsl(208,100%,60%) !important;
-  text-shadow: 0 0 6px hsl(208,100%,60%);
-}
-
-.developer-toolbar-button[checked=true] {
-  background: rgba(0,0,0,.4);
-}
-
-#developer-toolbar-toolbox-button {
-  -moz-image-region: rect(64px, 22px, 80px, 0);
 }
 
 /* Error counter */
@@ -3144,23 +3193,121 @@ toolbar[iconsize="small"] .toolbarbutton-badge-container {
   padding: 0;
   margin: 0;
   background: none;
+  width: 16px;
 }
 
 .chat-toolbarbutton > .toolbarbutton-text {
   display: none;
 }
 
-.chat-close-button {
-  list-style-image: url('chrome://browser/skin/social/chat-close.png');
-  -moz-image-region: rect(0, 14px, 14px, 0);
+.chat-toolbarbutton > .toolbarbutton-icon {
+  width: inherit;
 }
 
-.chat-close-button:hover:active {
-  -moz-image-region: rect(14px, 14px, 28px, 0);
+.chat-close-button {
+  list-style-image: url('chrome://browser/skin/social/chat-icons.png');
+  -moz-image-region: rect(0, 16px, 16px, 0);
 }
 
 .chat-close-button:hover {
-  -moz-image-region: rect(28px, 14px, 42px, 0);
+  -moz-image-region: rect(0, 32px, 16px, 16px);
+}
+
+.chat-close-button:hover:active {
+  -moz-image-region: rect(0, 48px, 16px, 32px);
+}
+
+.chat-minimize-button {
+  list-style-image: url('chrome://browser/skin/social/chat-icons.png');
+  -moz-image-region: rect(16px, 16px, 32px, 0);
+}
+
+.chat-minimize-button:hover {
+  -moz-image-region: rect(16px, 32px, 32px, 16px);
+}
+
+.chat-minimize-button:hover:active {
+  -moz-image-region: rect(16px, 48px, 32px, 32px);
+}
+
+.chat-swap-button {
+  list-style-image: url('chrome://browser/skin/social/chat-icons.png');
+  -moz-image-region: rect(48px, 16px, 64px, 0);
+}
+
+.chat-swap-button:hover {
+  -moz-image-region: rect(48px, 32px, 64px, 16px);
+}
+
+.chat-swap-button:hover:active {
+  -moz-image-region: rect(48px, 48px, 64px, 32px);
+}
+
+chatbar > chatbox > .chat-titlebar > .chat-swap-button {
+  list-style-image: url('chrome://browser/skin/social/chat-icons.png');
+  -moz-image-region: rect(32px, 16px, 48px, 0);
+}
+
+chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover {
+  -moz-image-region: rect(32px, 32px, 48px, 16px);
+}
+
+chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover:active {
+  -moz-image-region: rect(32px, 48px, 48px, 32px);
+}
+
+@media (min-resolution: 2dppx) {
+  .chat-close-button {
+    list-style-image: url('chrome://browser/skin/social/chat-icons@2x.png');
+    -moz-image-region: rect(0, 32px, 32px, 0);
+  }
+
+  .chat-close-button:hover {
+    -moz-image-region: rect(0, 64px, 32px, 32px);
+  }
+
+  .chat-close-button:hover:active {
+    -moz-image-region: rect(0, 96px, 32px, 64px);
+  }
+
+  .chat-minimize-button {
+    list-style-image: url('chrome://browser/skin/social/chat-icons@2x.png');
+    -moz-image-region: rect(32px, 32px, 64px, 0);
+  }
+
+  .chat-minimize-button:hover {
+    -moz-image-region: rect(32px, 64px, 64px, 32px);
+  }
+
+  .chat-minimize-button:hover:active {
+    -moz-image-region: rect(32px, 96px, 64px, 64px);
+  }
+
+  .chat-swap-button {
+    list-style-image: url('chrome://browser/skin/social/chat-icons@2x.png');
+    -moz-image-region: rect(96px, 32px, 128px, 0);
+  }
+
+  .chat-swap-button:hover {
+    -moz-image-region: rect(96px, 64px, 128px, 32px);
+  }
+
+  .chat-swap-button:hover:active {
+    -moz-image-region: rect(96px, 96px, 128px, 64px);
+  }
+
+  chatbar > chatbox > .chat-titlebar > .chat-swap-button {
+    list-style-image: url('chrome://browser/skin/social/chat-icons@2x.png');
+    -moz-image-region: rect(64px, 32px, 96px, 0);
+  }
+
+  chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover {
+    -moz-image-region: rect(64px, 64px, 96px, 32px);
+  }
+
+  chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover:active {
+    -moz-image-region: rect(64px, 96px, 96px, 64px);
+  }
 }
 
 .chat-title {
@@ -3180,6 +3327,11 @@ toolbar[iconsize="small"] .toolbarbutton-badge-container {
   border: none;
   border-bottom: 1px solid #ccc;
   cursor: pointer;
+}
+
+.chat-titlebar > .notification-anchor-icon {
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 .chat-titlebar[minimized="true"] {
@@ -3256,6 +3408,13 @@ chatbox {
   border-bottom: none;
 }
 
+window > chatbox {
+  -moz-margin-start: 0px;
+  margin: 0px;
+  border: none;
+  padding: 0px;
+}
+
 .chat-titlebar {
   background-color: #d9d9d9;
   background-image: linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
@@ -3287,110 +3446,6 @@ chatbox {
 chatbox {
   border-top-left-radius: 2.5px;
   border-top-right-radius: 2.5px;
-}
-
-.click-to-play-plugins-notification-content {
-  margin: -10px;
-}
-
-.click-to-play-plugins-notification-icon-box {
-  -moz-border-end: 1px solid hsla(0,0%,100%,.2);
-  padding-top: 16px;
-  -moz-padding-start: 16px;
-  -moz-padding-end: 6px;
-}
-
-.click-to-play-plugins-notification-separator {
-  -moz-border-start: 1px solid hsla(211,79%,6%,.1);
-  border-top: 1px solid hsla(211,79%,6%,.1);
-}
-
-.click-to-play-plugins-notification-description-box {
-  border-bottom: 1px solid hsla(0,0%,100%,.2);
-  -moz-border-start: 1px solid hsla(0,0%,100%,.2);
-  padding: 14px 10px 9px 10px;
-}
-
-.click-to-play-plugins-notification-center-box {
-  border-top: 1px solid hsla(0,0%,100%,.2);
-  border-bottom: 1px solid hsla(0,0%,100%,.2);
-  background-color: hsla(211,79%,6%,.05);
-}
-
-.click-to-play-plugins-notification-button-container {
-  border-top: 1px solid hsla(0,0%,100%,.2);
-  -moz-border-start: 1px solid hsla(0,0%,100%,.2);
-  margin: 0px;
-  padding: 15px 11px 14px 11px;
-}
-
-.center-item-box {
-  padding-top: 11px;
-  -moz-padding-start: 16px;
-  -moz-padding-end: 11px;
-  margin-bottom: -2px;
-  -moz-border-start: 1px solid hsla(0,0%,100%,.2);
-}
-
-.center-item-box[padbottom="true"] {
-  padding-bottom: 12px;
-}
-
-.center-item-icon {
-  background-image: url("chrome://mozapps/skin/plugins/pluginGeneric-16.png");
-  background-repeat: no-repeat;
-  height: 16px;
-  width: 16px;
-  margin-bottom: 4px;
-}
-
-.center-item-box[warn="true"] {
-  background-image: url("chrome://browser/skin/click-to-play-warning-stripes.png");
-  background-repeat: repeat-x;
-  padding-top: 7px;
-  -moz-padding-end: 11px;
-  padding-bottom: 9px;
-  -moz-padding-start: 16px;
-}
-
-.center-item-box[padbottom="true"][warn="true"] {
-  padding-bottom: 7px;
-}
-
-.center-item-box[showseparator="true"] {
-  border-top: 1px solid hsla(211,79%,6%,.1);
-}
-
-.center-item-box[warn="false"] > .center-item-warning {
-  display: none;
-}
-
-.center-item-warning > .text-link {
-  color: #3d8cd7;
-}
-
-.center-item-warning > .text-link[href=""] {
-  display: none;
-}
-
-.center-item-warning-icon {
-  background-image: url("chrome://mozapps/skin/extensions/alerticon-info-negative.png");
-  background-repeat: no-repeat;
-  width: 16px;
-  height: 15px;
-  margin-bottom: 4px;
-}
-
-.center-item-warning-description {
-  color: #828282;
-}
-
-.center-item-button {
-  min-width: 0;
-}
-
-#main-window[privatebrowsingmode=temporary] #appmenu-toolbar-button {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/privatebrowsing.svg);
 }
 
 /*
