@@ -2,8 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-@import url("chrome://appversion/skin/media/TopLevelImageDocument.css");
-
 @media not print {
   /* N.B.: Remember to update ImageDocument.css in the tree or reftests may fail! */
 
