@@ -55,10 +55,6 @@
   width: 16px;
   list-style-image: url(chrome://mozapps/skin/places/defaultFavicon.png);
 }
-.searchbar-engine-image:-moz-window-inactive {
-  filter: url(chrome://mozapps/skin/extensions/extensions.svg#greyscale);
-  opacity: 0.5;
-}
 
 .searchbar-engine-button > .button-box {
   -moz-appearance: none;
@@ -104,10 +100,6 @@
   height: 24px;
   padding: 4px;
   min-width: 24px;
-}
-
-.search-go-button:not(:-moz-window-inactive):hover {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#input-field-hover);
 }
 
 /* FIXME */

@@ -313,14 +313,6 @@ notification toolbarbutton:active:hover {
   border-color: rgba(0,0,0,.4) !important;
 }
 
-notification > button:-moz-window-inactive,
-notification toolbarbutton:-moz-window-inactive {
-  background-image: none !important;
-  background-color: #ededed !important;
-  border: 1px solid rgba(0,0,0,.2) !important;
-  color: #a7aba7 !important;
-}
-
 /* :::::: autoscroll popup ::::: */
 
 .autoscroller {

@@ -16,11 +16,6 @@ notification[type="info"] {
 notification[type="critical"] {
 }
 
-notification:-moz-window-inactive {
-  background: #fff !important;
-  color: rgba(0,0,0,0.5) !important;
-}
-
 .notification-inner {
   border: 0 !important;
   padding: 4px 0;
@@ -36,10 +31,6 @@ notification:-moz-window-inactive {
   height: 16px;
   -moz-margin-start: 15px;
   -moz-margin-end: 1px;
-}
-
-.messageImage:-moz-window-inactive {
-  opacity: 0.5;
 }
 
 /* Default icons for notifications */

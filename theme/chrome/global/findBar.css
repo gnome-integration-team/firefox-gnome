@@ -24,10 +24,6 @@ findbar {
   transition-timing-function: ease-in-out, ease-in-out, linear;
 }
 
-findbar:-moz-window-inactive {
-  background: #e0e0e0;
-}
-
 findbar > * > * {
   margin-left: 2px;
   margin-right: 5px;
@@ -132,16 +128,9 @@ findbar[hidden] {
   -moz-margin-end: 0;
   padding: 2px !important;
 }
-.findbar-find-status:-moz-window-inactive {
-  color: #a7aba7;
-}
 
 .find-status-icon[status="notfound"] {
   list-style-image: url(chrome://browser/skin/symbolic-icons/important.svg);
-}
-
-label.findbar-find-fast:-moz-window-inactive {
-  color: #a7aba7;
 }
 
 .findbar-textbox {
@@ -185,18 +174,10 @@ label.findbar-find-fast:-moz-window-inactive {
   list-style-image: url(chrome://browser/skin/symbolic-icons/wrap.svg);
 }
 
-.find-status-icon:-moz-window-inactive {
-  opacity: 0.5;
-}
-
 findbar checkbox > .checkbox-spacer-box > .checkbox-check {
   -moz-margin-end: -4px;
 }
 
 findbar checkbox:hover:active > .checkbox-spacer-box > .checkbox-check {
   background-color: transparent;
-}
-
-findbar checkbox:-moz-window-inactive {
-  color: #a7aba7;
 }
