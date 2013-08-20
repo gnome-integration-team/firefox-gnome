@@ -3,9 +3,9 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 .findbar-find-next {
-  list-style-image: url(chrome://os/skin/browser/symbolic-icons/go-down.svg) !important;
+  list-style-image: url(chrome://browser/skin/symbolic-icons/go-down.svg) !important;
 }
 
 .findbar-find-previous {
-  list-style-image: url(chrome://os/skin/browser/symbolic-icons/go-up.svg) !important;
+  list-style-image: url(chrome://browser/skin/symbolic-icons/go-up.svg) !important;
 }
