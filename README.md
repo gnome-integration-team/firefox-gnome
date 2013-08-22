@@ -10,7 +10,7 @@ We recommend [HTitle](https://addons.mozilla.org/en-US/firefox/addon/htitle)
 for the full GNOME 3 experience.
 
 For current issues please see the 
-[bug tracker](https://github.com/adwaita-firefox-team/adwaita-firefox/issues).
+[bug tracker](https://github.com/gnome-integration-team/firefox-gnome/issues).
 
 Help & feedback are both appreciated! ;-)
 
