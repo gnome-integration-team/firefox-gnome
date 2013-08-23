@@ -8,6 +8,13 @@
                            0     0     0     1 0" color-interpolation-filters="sRGB"/>
   </filter>
   
+  <filter id="default-2" filterRes="1024" x="0" y="0" width="16px" height="16px">
+    <feColorMatrix values="0.242 0     0     0 0 
+                           0     0.274 0     0 0 
+                           0     0     0.284 0 0 
+                           0     0     0     1 0" color-interpolation-filters="sRGB"/>
+  </filter>
+  
   <filter id="active" filterRes="256" x="0" y="0" width="16px" height="16px">
     <feColorMatrix values="0 0 0 0 1
                            0 0 0 0 1
