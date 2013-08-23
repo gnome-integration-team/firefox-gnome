@@ -1054,7 +1054,7 @@ setting[type="radio"] > radiogroup {
 /*
   #new-userstyle == "Write New Style" (Stylish)
 */
-.addon-control:not(#new-userstyle) {
+:not(menuitem).addon-control:not(#new-userstyle) {
   -moz-appearance: none;
   background: transparent ;
   border: 1px solid transparent;
@@ -1067,31 +1067,31 @@ setting[type="radio"] > radiogroup {
   transition-duration: 200ms;
 }
 
-.addon-control:not(#new-userstyle):not([disabled="true"]):hover {
+:not(menuitem).addon-control:not(#new-userstyle):not([disabled="true"]):hover {
   border-color: rgba(0,0,0,.25) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.69),
               0 1px 0 rgba(255,255,255,0.69) inset;
 }
 
-.addon-control:not(#new-userstyle):not([disabled="true"]):active:hover,
-.addon-control:not(#new-userstyle)[checked="true"],
-.addon-control:not(#new-userstyle)[checked="true"]:hover {
+:not(menuitem):.addon-control:not(#new-userstyle):not([disabled="true"]):active:hover,
+:not(menuitem).addon-control:not(#new-userstyle)[checked="true"],
+:not(menuitem).addon-control:not(#new-userstyle)[checked="true"]:hover {
   background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4);
   border-color: rgba(0,0,0,.25);
   box-shadow: 0 1px 0 rgba(255,255,255,0.69);
 }
 
-.addon-control:not(#new-userstyle)[open="true"],
-.addon-control:not(#new-userstyle)[open="true"]:hover,
-.addon-control:not(#new-userstyle)[open="true"]:active,
-.addon-control:not(#new-userstyle)[open="true"]:active:hover {
+:not(menuitem).addon-control:not(#new-userstyle)[open="true"],
+:not(menuitem).addon-control:not(#new-userstyle)[open="true"]:hover,
+:not(menuitem).addon-control:not(#new-userstyle)[open="true"]:active,
+:not(menuitem).addon-control:not(#new-userstyle)[open="true"]:active:hover {
   background: #ffffff !important;
   border-color: #ffffff !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.69);
   border-radius: 3px 3px 0 0;
 }
 
-.addon-control:not(#new-userstyle)[disabled="true"] {
+:not(menuitem).addon-control:not(#new-userstyle)[disabled="true"] {
   display: none;
 }
 
@@ -1132,8 +1132,8 @@ setting[type="radio"] > radiogroup {
   box-shadow: none !important;
 }
 
-.addon[active="false"] .addon-control.enable,
-.addon[active="false"] .addon-control.disable{
+button.addon[active="false"] .addon-control.enable,
+button.addon[active="false"] .addon-control.disable{
   opacity: 1;
 }
 
@@ -1148,27 +1148,36 @@ setting[type="radio"] > radiogroup {
 }
 
 .addon-control.update {
-	color: #fff;
-	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
-	background-image: linear-gradient(to bottom, #4294F7, #004EAD);
-	padding: 4px 15px;
-	box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset;
-	border: 1px solid #003372;
+  color: #fff;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(to bottom, #4294F7, #004EAD);
+  padding: 4px 15px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset;
+  border: 1px solid #003372;
 }
 
 .addon-control.install {
-	color: #fff;
-	text-shadow: 0px -1px 0px rgba(0,0,0,0.3);
-	background-image: linear-gradient(to bottom, #89C400, #5B9C00);
-	padding: 4px 15px;
-	box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset;
-	border: 1px solid #316D0E;
+  color: #fff;
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.3);
+  background-image: linear-gradient(to bottom, #89C400, #5B9C00);
+  padding: 4px 15px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset;
+  border: 1px solid #316D0E;
 }
 
 .addon-control.install:active:hover {
-	color: #203006;
-	text-shadow: 0px 1px 0px rgba(255,255,255,0.3);
-	box-shadow: 0 0 2px 1px rgba(0,0,0,0.2) inset;
+  color: #203006;
+  text-shadow: 0px 1px 0px rgba(255,255,255,0.3);
+  box-shadow: 0 0 2px 1px rgba(0,0,0,0.2) inset;
+}
+
+.addon-control.state .menulist-dropmarker {
+  -moz-appearance: none;
+  display: -moz-box;
+  list-style-image: url(chrome://browser/skin/symbolic-icons/dropmarker.svg);
+  padding: 3px;
+  margin: 2px 0;
+  max-height: 16px;
 }
 
 .button-link {
