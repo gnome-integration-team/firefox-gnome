@@ -2343,6 +2343,12 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   opacity: 1;
 }
 
+#TabsToolbar .tabs-newtab-button:active:hover > .toolbarbutton-icon,
+#TabsToolbar > #new-tab-button:active:hover > .toolbarbutton-icon,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button:active:hover > .toolbarbutton-icon {
+  filter: none;
+}
+
 /* Tabbrowser arrowscrollbox arrows */
 
 #TabsToolbar .tabbrowser-arrowscrollbox > .scrollbutton-up,
