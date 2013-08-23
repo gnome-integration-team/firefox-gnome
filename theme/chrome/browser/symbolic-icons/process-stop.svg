@@ -56,14 +56,14 @@
   <g
      transform="translate(-260.00005,-517.99)"
      id="g12"
-     style="fill:#bebebe">
+     style="fill:#2e3436">
     <path
-       style="text-indent:0;text-transform:none;color:#bebebe"
+       style="text-indent:0;text-transform:none;color:#2e3436"
        d="m 265,519 -0.3125,0.28125 -3.4062,3.375 -0.28125,0.3125 v 5 l 0.28125,0.3125 3.4062,3.4375 0.31,0.27 h 5.0313 l 0.28125,-0.28125 3.4062,-3.4375 0.28125,-0.3125 v -5 l -0.28125,-0.3125 -3.4062,-3.375 -0.31,-0.28 h -5.0038 z m 0.8125,2 h 3.375 L 272,523.8125 v 3.3438 l -2.8438,2.8438 h -3.3125 l -2.84,-2.83 v -3.35 l 2.81,-2.81 z"
        inkscape:connector-curvature="0"
        id="path14" />
     <path
-       style="color:#bebebe"
+       style="color:#2e3436"
        d="m 266.17,522 -2.17,2.15 v 2.6707 l 2.1656,2.1835 h 2.6707 l 2.1636,-2.1835 V 524.15 l -2.1636,-2.1457 h -2.6707 z"
        inkscape:connector-curvature="0"
        id="path16" />

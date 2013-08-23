@@ -248,7 +248,6 @@ toolbar[iconsize="large"] > #downloads-indicator > #downloads-indicator-anchor {
   background: -moz-image-rect(url(moz-icon://stock/folder-download-symbolic?size=menu), 0, 16, 16, 0) center no-repeat;
   */
   background: -moz-image-rect(url(chrome://browser/skin/symbolic-icons/download.svg), 0, 16, 16, 0) center no-repeat;
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
 
 #downloads-indicator[attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
@@ -263,7 +262,6 @@ toolbar[iconsize="large"] > #downloads-indicator > #downloads-indicator-anchor {
   background: -moz-image-rect(url(moz-icon://stock/folder-download-symbolic?size=menu), 0, 16, 16, 0) center no-repeat;
   */
   background: -moz-image-rect(url(chrome://browser/skin/symbolic-icons/download.svg), 0, 16, 16, 0) center no-repeat;
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
   background-size: 12px;
 }
 

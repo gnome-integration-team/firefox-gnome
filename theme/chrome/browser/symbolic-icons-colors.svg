@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 
 <svg height="0" xmlns="http://www.w3.org/2000/svg">
-  <filter id="default" filterRes="256" x="0" y="0" width="16px" height="16px">
-    <feColorMatrix values="0.242 0     0     0 0 
-                           0     0.274 0     0 0 
-                           0     0     0.284 0 0 
-                           0     0     0     1 0" color-interpolation-filters="sRGB"/>
-  </filter>
-  
-  <filter id="default-2" filterRes="1024" x="0" y="0" width="16px" height="16px">
-    <feColorMatrix values="0.242 0     0     0 0 
-                           0     0.274 0     0 0 
-                           0     0     0.284 0 0 
-                           0     0     0     1 0" color-interpolation-filters="sRGB"/>
-  </filter>
-  
   <filter id="active" filterRes="256" x="0" y="0" width="16px" height="16px">
     <feColorMatrix values="0 0 0 0 1
                            0 0 0 0 1
@@ -44,50 +30,25 @@
                            0 0 0 1 0"/>
   </filter>
   
-  <filter id="yellow" filterRes="256" x="0" y="0" width="16px" height="16px">
-    <feColorMatrix values="1.33 0    0    0 0
-                           0    0.92 0    0 0
-                           0    0    0.33 0 0
-                           0    0    0    1 0  " color-interpolation-filters="sRGB"/>
-  </filter>
-  
   <filter id="azure" filterRes="256" x="0" y="0" width="16px" height="16px">
-    <feColorMatrix values="0.22 0    0    0 0
-                           0    0.67 0    0 0
-                           0    0    1.34 0 1
+    <feColorMatrix values="0.91 0    0    0 0
+                           0    2.44 0    0 0
+                           0    0    4.72 0 1
                            0    0    0    1 0" color-interpolation-filters="sRGB"/>
   </filter>
   
   <filter id="green" filterRes="256" x="0" y="0" width="16px" height="16px">
-    <feColorMatrix values="0 0   0 0 0
-                           0 0.9 0 0 0
-                           0 0   0 0 0
-                           0 0   0 1 0  " color-interpolation-filters="sRGB"/>
+    <feColorMatrix values="2.5 0    0    0 0
+                           0   4.04 0    0 0
+                           0   0    0    0 0
+                           0   0    1.15 1 0" color-interpolation-filters="sRGB"/>
   </filter>
   
   <!-- Into input fields (like urlbar) -->
-  <filter id="input-field-default" filterRes="256">
-    <feColorMatrix values="0.93 0    0    0 0
-                           0    0.94 0    0 0
-                           0    0    0.94 0 0
-                           0    0    0    1 0  " color-interpolation-filters="sRGB"/>
-  </filter>
-  <filter id="input-field-hover" filterRes="256">
-    <feColorMatrix values="0.242 0     0     0 0 
-                           0     0.274 0     0 0 
-                           0     0     0.284 0 0 
-                           0     0     0     1 0" color-interpolation-filters="sRGB"/>
-  </filter>
   <filter id="input-field-yellow" filterRes="256">
-    <feColorMatrix values="1.32 0    0    0 0
-                           0    1.03 0    0 0
-                           0    0    0.62 0 0
-                           0    0    0    1 0  " color-interpolation-filters="sRGB"/>
-  </filter>
-  <filter id="input-field-yellow-hover" filterRes="256">
-    <feColorMatrix values="1.33 0    0    0 0
-                           0    0.92 0    0 0
-                           0    0    0.33 0 0
-                           0    0    0    1 0  " color-interpolation-filters="sRGB"/>
+    <feColorMatrix values="5.48 0    0    0 0
+                           0    3.37 0    0 0
+                           0    0    1.15 0 0
+                           0    0    0    1 0" color-interpolation-filters="sRGB"/>
   </filter>
 </svg>

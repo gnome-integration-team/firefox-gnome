@@ -13,11 +13,11 @@
 <inkscape:grid spacingx="1px" enabled="true" spacingy="1px" visible="true" snapvisiblegridlinesonly="true" type="xygrid" empspacing="2"/>
 </sodipodi:namedview>
 <title>Gnome Symbolic Icon Theme</title>
-<g inkscape:label="actions" transform="translate(-241 -627)" inkscape:groupmode="layer" fill="#bebebe">
-<path style="color:#bebebe;text-transform:none;text-indent:0" d="m247.16 629.06c-1.5222 0.21741-2.9782 1.023-3.9688 2.3438-1.9812 2.6414-1.4227 6.425 1.2188 8.4062s6.425 1.4227 8.4062-1.2188a1.0063 1.0063 0 1 0 -1.625 -1.1875c-1.3326 1.7767-3.817 2.1139-5.5938 0.78125-1.7767-1.3326-2.1139-3.817-0.78125-5.5938 1.3326-1.7767 3.817-2.1139 5.5938-0.78125 0.7429 0.55721 1.25 1.3475 1.4688 2.25a1.0119 1.0119 0 1 0 1.9688 -0.46875c-0.32806-1.3533-1.136-2.5707-2.25-3.4062-1.3207-0.9906-2.9153-1.3424-4.4375-1.125z" inkscape:connector-curvature="0"/>
+<g inkscape:label="actions" transform="translate(-241 -627)" inkscape:groupmode="layer" fill="#2e3436">
+<path style="color:#2e3436;text-transform:none;text-indent:0" d="m247.16 629.06c-1.5222 0.21741-2.9782 1.023-3.9688 2.3438-1.9812 2.6414-1.4227 6.425 1.2188 8.4062s6.425 1.4227 8.4062-1.2188a1.0063 1.0063 0 1 0 -1.625 -1.1875c-1.3326 1.7767-3.817 2.1139-5.5938 0.78125-1.7767-1.3326-2.1139-3.817-0.78125-5.5938 1.3326-1.7767 3.817-2.1139 5.5938-0.78125 0.7429 0.55721 1.25 1.3475 1.4688 2.25a1.0119 1.0119 0 1 0 1.9688 -0.46875c-0.32806-1.3533-1.136-2.5707-2.25-3.4062-1.3207-0.9906-2.9153-1.3424-4.4375-1.125z" inkscape:connector-curvature="0"/>
 <path style="color:#000000;text-transform:none;text-indent:0" d="m253.78 629a1.0001 1.0001 0 0 0 -0.78 1v3h-3a1.0001 1.0001 0 1 0 0 2h5v-5a1.0001 1.0001 0 0 0 -1.2188 -1z" inkscape:connector-curvature="0"/>
-<rect y="637" width="1" style="color:#bebebe" x="252" height="1"/>
-<rect y="629" width="1" style="color:#bebebe" x="254" height="1"/>
-<rect y="634" width="1" style="color:#bebebe" x="249" height="1"/>
+<rect y="637" width="1" style="color:#2e3436" x="252" height="1"/>
+<rect y="629" width="1" style="color:#2e3436" x="254" height="1"/>
+<rect y="634" width="1" style="color:#2e3436" x="249" height="1"/>
 </g>
 </svg>

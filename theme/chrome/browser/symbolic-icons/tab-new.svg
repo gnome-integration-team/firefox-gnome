@@ -13,8 +13,8 @@
 <inkscape:grid visible="true" enabled="true" spacingy="1px" spacingx="1px" snapvisiblegridlinesonly="true" type="xygrid" empspacing="2"/>
 </sodipodi:namedview>
 <title>Gnome Symbolic Icon Theme</title>
-<g inkscape:label="actions" transform="translate(-120 -686)" inkscape:groupmode="layer" fill="#bebebe">
-<path style="color:#bebebe" inkscape:connector-curvature="0" d="m123 688c-0.88358 0-2 1.1069-2 2v8h-1v2h3v-10h10v10h3v-2h-1v-8c0-0.89314-1.1164-2-2-2z" sodipodi:nodetypes="ssccccccccccsss"/>
+<g inkscape:label="actions" transform="translate(-120 -686)" inkscape:groupmode="layer" fill="#2e3436">
+<path style="color:#2e3436" inkscape:connector-curvature="0" d="m123 688c-0.88358 0-2 1.1069-2 2v8h-1v2h3v-10h10v10h3v-2h-1v-8c0-0.89314-1.1164-2-2-2z" sodipodi:nodetypes="ssccccccccccsss"/>
 <rect y="694" width="6" x="125" height="2"/>
 <rect y="-129" width="6" x="692" transform="rotate(90)" height="2"/>
 </g>

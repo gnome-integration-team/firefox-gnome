@@ -2,8 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-@import url("chrome://os/skin/mozapps/downloads/downloads.css");
-
 #downloadManager {
   background-color: Window;
 }
@@ -135,7 +133,10 @@ menuitem:not([type]) {
 }
 
 #clearListButton {
+  /*
   list-style-image: url(moz-icon://stock/edit-clear-all-symbolic?size=menu);
+  */
+  list-style-image: url(chrome://browser/skin/symbolic-icons/edit-clear-all.svg);
   min-width: 30px;
 }
 
@@ -146,10 +147,6 @@ menuitem:not([type]) {
 #clearListButton .button-icon {
   display: block !important;
   -moz-margin-end: 0;
-}
-
-#clearListButton:not([disabled="true"]) .button-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
 
 #clearListButton:not([open="true"]):not([disabled="true"]):active:hover .button-icon {
