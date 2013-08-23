@@ -112,6 +112,7 @@ toolbarbutton.bookmark-item {
 /* Prevent [mode="icons"] from hiding the label */
 .bookmark-item > .toolbarbutton-text {
   display: -moz-box !important;
+  padding-top: 3px; 
 }
 
 .bookmark-item > .toolbarbutton-menu-dropmarker {
