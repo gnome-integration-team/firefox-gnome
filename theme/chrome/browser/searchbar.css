@@ -2,8 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-@import url("chrome://os/skin/browser/searchbar.css");
-
 .searchbar-textbox {
   min-height: 22px;
   width: 6em;
@@ -81,6 +79,11 @@
 /* Search go button */
 .search-go-container {
   -moz-box-align: center;
+  opacity: .35;
+}
+
+.search-go-container:hover {
+  opacity: 1;
 }
 
 .search-go-container:active {
@@ -89,8 +92,10 @@
 }
 
 .search-go-button {
+  /*
   list-style-image: url(moz-icon://stock/edit-find-symbolic?size=menu);
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#input-field-default);
+  */
+  list-style-image: url(chrome://browser/skin/symbolic-icons/edit-find.svg);
   height: 22px;
   padding: 3px;
   min-width: 22px;
@@ -104,10 +109,6 @@
   height: 24px;
   padding: 4px;
   min-width: 24px;
-}
-
-.search-go-button:not(:-moz-window-inactive):hover {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#input-field-hover);
 }
 
 /* FIXME */

@@ -2,8 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-@import url("chrome://os/skin/browser/tabview/tabview.css");
-
 body {
   font: -moz-window;
   color: WindowText;
@@ -591,8 +589,7 @@ html[dir=rtl] #actions {
 }
 
 #actions #searchbutton{
-  background: transparent url(moz-icon://stock/edit-find-symbolic?size=menu) no-repeat;
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
+  background: transparent url(chrome://browser/skin/symbolic-icons/edit-find.svg) no-repeat;
   border: none;
   width: 20px;
   height: 20px;

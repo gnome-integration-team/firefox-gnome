@@ -6,8 +6,6 @@
    == Styles used by the Error Console window.
    ====================================================================== */
 
-@import url("chrome://os/skin/global/console/console.css");
-
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 #ToolbarMode,
@@ -249,11 +247,10 @@ toolbar#ToolbarMode toolbarbutton {
 */
 
 #Console\:clear {
+  /*
   list-style-image: url(moz-icon://stock/edit-clear-all-symbolic?size=menu);
-}
-
-#Console\:clear:not([disabled="true"]) > .toolbarbutton-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
+  */
+  list-style-image: url(chrome://browser/skin/symbolic-icons/edit-clear-all.svg);
 }
 
 #Console\:clear:not([open="true"]):not([disabled="true"]):active:hover > .toolbarbutton-icon {

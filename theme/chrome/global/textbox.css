@@ -6,8 +6,6 @@
   == Styles used by the XUL textbox element.
   ======================================================================= */
 
-@import url("chrome://os/skin/global/textbox.css");
-
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
 
@@ -70,13 +68,18 @@ textbox.plain {
 /* ::::: search textbox ::::: */
 
 .textbox-search-icon {
+  /*
   list-style-image: url(moz-icon://stock/edit-find-symbolic?size=menu);
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#input-field-default);
+  */
+  list-style-image: url(chrome://browser/skin/symbolic-icons/edit-find.svg);
+  opacity: .5;
 }
 
 .textbox-search-clear {
+  /*
   list-style-image: url(moz-icon://stock/edit-clear-symbolic?size=menu);
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#input-field-default);
+  */
+  list-style-image: url(chrome://browser/skin/symbolic-icons/edit-clear.svg);
 }
 
 .textbox-search-icon[searchbutton]:not([disabled]) ,

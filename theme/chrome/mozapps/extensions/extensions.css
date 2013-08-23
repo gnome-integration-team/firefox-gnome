@@ -2,8 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-@import url("chrome://os/skin/mozapps/extensions/extensions.css");
-
 @import url("chrome://appversion/skin/extensions/extensions.css");
 
 @import url("chrome://global/skin/inContentUI.css");
@@ -353,38 +351,32 @@
 }
 
 #back-btn:-moz-locale-dir(ltr) {
-  list-style-image: url(moz-icon://stock/go-previous-symbolic?size=menu);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/go-previous.svg);
 }
 
 #forward-btn:-moz-locale-dir(ltr) {
-  list-style-image: url(moz-icon://stock/go-next-symbolic?size=menu);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/go-next.svg);
 }
 
 #back-btn:-moz-locale-dir(rtl) {
-  list-style-image: url(moz-icon://stock/go-next-symbolic?size=menu);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/go-next.svg);
 }
 
 #forward-btn:-moz-locale-dir(rtl) {
-  list-style-image: url(moz-icon://stock/go-previous-symbolic?size=menu);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/go-previous.svg);
 }
 
-#back-btn:not([disabled="true"]) > .toolbarbutton-icon,
-#forward-btn:not([disabled="true"]) > .toolbarbutton-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
-}
-
-#back-btn:not([open="true"]):not([disabled="true"]):active:hover > .toolbarbutton-icon,
-#forward-btn:not([open="true"]):not([disabled="true"]):active:hover > .toolbarbutton-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
+#back-btn[disabled="true"] > .toolbarbutton-icon,
+#forward-btn[disabled="true"] > .toolbarbutton-icon {
+  opacity: 0.5;
 }
 
 #header-utils-btn {
-  list-style-image: url(moz-icon://stock/preferences-system-symbolic?size=menu);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/preferences-system.svg);
 }
 
 #header-utils-btn > .toolbarbutton-icon {
   -moz-margin-end: 0;
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
 }
 
 #header-utils-btn > .toolbarbutton-menu-dropmarker {
@@ -431,14 +423,12 @@
 
 .sorter[checkState="1"] .button-icon {
   display: -moz-box;
-  list-style-image: url(moz-icon://stock/go-up-symbolic?size=menu);
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/go-up.svg);
 }
 
 .sorter[checkState="2"] .button-icon {
   display: -moz-box;
-  list-style-image: url(moz-icon://stock/go-down-symbolic?size=menu);
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/go-down.svg);
 }
 
 /*** discover view ***/
@@ -733,7 +723,7 @@
   background: transparent;
   font-weight: bold;
   cursor: pointer;
-  list-style-image: url(moz-icon://stock/go-down-symbolic?size=menu);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/go-down.svg);
   margin-top: 10px;
 }
 
@@ -742,7 +732,6 @@
 }
 
 .addon .relnotes-toggle > .button-box > .button-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
   display: -moz-box;
 }
 
@@ -751,7 +740,7 @@
 }
 
 .addon[show-relnotes] .relnotes-toggle {
-  list-style-image: url(moz-icon://stock/go-up-symbolic?size=menu);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/go-up.svg);
 }
 
 /*** search view ***/
@@ -1121,7 +1110,7 @@ setting[type="radio"] > radiogroup {
   display: none;
 }
 
-   /*  Switches*/
+/* Switches */
 
 .addon-control.enable {
 /*  list-style-image: url("moz-icon://stock/gtk-yes?size=button");*/
@@ -1150,17 +1139,12 @@ setting[type="radio"] > radiogroup {
 
 .addon-control.remove {
 /*  list-style-image: url("moz-icon://stock/gtk-remove?size=button");*/
-  list-style-image: url(moz-icon://stock/user-trash-symbolic?size=menu);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/user-trash.svg);
 }
 
 .addon-control.preferences {
 /*  list-style-image: url("moz-icon://stock/gtk-preferences?size=button");*/
-  list-style-image: url(moz-icon://stock/emblem-system-symbolic?size=menu);
-}
-
-.addon-control.remove .button-icon,
-.addon-control.preferences .button-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#default);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/emblem-system.svg);
 }
 
 .addon-control.update {

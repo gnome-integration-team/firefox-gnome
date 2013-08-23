@@ -2,8 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-@import url("chrome://os/skin/browser/aboutCertError.css");
-
 html {
 }
 
@@ -63,7 +61,7 @@ p > b {
 .expander > button {
   -moz-padding-start: 20px;
   -moz-margin-start: -20px;
-  background: url(moz-icon://stock/go-down-symbolic?size=menu) left center no-repeat;
+  background: url(chrome://browser/skin/symbolic-icons/go-down.svg) left center no-repeat;
   border: none;
   font: inherit;
   color: inherit;
@@ -75,9 +73,9 @@ p > b {
 }
 
 .expander[collapsed] > button {
-  background-image: url(moz-icon://stock/go-next-symbolic?size=menu);
+  background-image: url(chrome://browser/skin/symbolic-icons/go-next.svg)
 }
 
 .expander[collapsed] > button:-moz-dir(rtl) {
-  background-image: url(moz-icon://stock/go-previous-symbolic?size=menu);
+  background-image: url(chrome://browser/skin/symbolic-icons/go-previous.svg)
 }
