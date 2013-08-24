@@ -601,7 +601,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   box-shadow: 0 1px 0 rgba(255,255,255,0.37);
 }
 
-:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:not([disabled="true"]):active:hover,
+:-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton:not([disabled="true"]):not([open="true"]):active:hover,
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[checked="true"],
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[checked="true"]:hover,
 #social-toolbar-item > .toolbarbutton-1:not([disabled="true"]):active:hover,
@@ -626,6 +626,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   border-color: rgba(180,180,180,1) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.37);
   border-radius: 3px !important;
+  color: #ffffff !important;
 }
 
 :-moz-any(#navigator-toolbox, #addon-bar, #FindToolbar) toolbarbutton[open="true"],
