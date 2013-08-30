@@ -95,7 +95,21 @@
   }
 }
 
-/* ::::: Others ::::: */
+/* ::::: Titlebar ::::: */
+
+#main-window[sizemode="normal"] > #titlebar {
+  -moz-appearance: -moz-window-titlebar !important;
+}
+
+#main-window[sizemode="maximized"] > #titlebar {
+  -moz-appearance: -moz-window-titlebar-maximized !important;
+}
+
+@media (-moz-windows-classic) {
+  #main-window[sizemode="normal"] > #titlebar > #titlebar-content > #appmenu-button-container {
+    margin-top: 4px !important;
+  }
+}
 
 #titlebar-buttonbox {
   -moz-appearance: -moz-window-button-box !important;
@@ -105,12 +119,27 @@
   -moz-appearance: -moz-window-button-box-maximized !important;
 }
 
+.titlebar-placeholder[type="appmenu-button"] {
+  margin-left: 4px !important;
+}
+
+.titlebar-placeholder[type="caption-buttons"] {
+  margin-left: 22px !important; /* additional space for Aero Snap */
+}
+
 #main-window[sizemode="maximized"] #titlebar {
   padding-top: 7px !important;
 }
 
+/* ::::: Others ::::: */
+
 #main-window[sizemode="maximized"] #TabsToolbar {
   padding-top: 3px !important;
+}
+
+#navigator-toolbox[tabsontop=true],
+#TabsToolbar[tabsontop=true] {
+  background-color: transparent !important;
 }
 
 @media not all and (-moz-windows-compositor) {
