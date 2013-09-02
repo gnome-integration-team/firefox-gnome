@@ -1839,7 +1839,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 .urlbar-history-dropmarker,
 #star-button {
   opacity: .35;
-} 
+}
 
 /* social share panel */
 
@@ -1919,6 +1919,16 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   list-style-image: url(chrome://browser/skin/symbolic-icons/user-bookmarks.svg);
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#input-field-yellow);
   opacity: 0.7;
+}
+
+/* Adjust opacity of the URL bar icons on hover */
+#urlbar-go-button:hover,
+#urlbar-reload-button:hover,
+#urlbar-stop-button:hover,
+#urlbar #star-button:hover,
+.urlbar-history-dropmarker:hover,
+.urlbar-history-dropmarker[open="true"] {
+  opacity: 1;
 }
 
 /* Popup blocker button */
