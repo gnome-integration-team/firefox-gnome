@@ -23,8 +23,7 @@
 }
 
 #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab,
-#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab > .tab-stack,
-#main-window:-moz-window-inactive #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab > .tab-stack {
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab > .tab-stack {
   border: none !important;
   box-shadow: none !important;
   background: transparent !important;
@@ -49,13 +48,6 @@
 }
 #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[selected="true"] > .tab-stack {
   color: HighlightText !important;
-}
-
-window:-moz-window-inactive #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[selected="true"] {
-  background: #e2e2e2 !important;
-}
-window:-moz-window-inactive #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[selected="true"] > .tab-stack {
-  color: #2e3436 !important;
 }
 
 .treestyletab-splitter {
