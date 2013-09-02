@@ -2,6 +2,14 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-.devtools-tab > image {
-  -moz-margin-start: 8px !important;
+#toolbox-close {
+  list-style-image: url("chrome://browser/skin/devtools/close.png");
+}
+
+#toolbox-close {
+  opacity: 0.6;
+}
+
+#toolbox-close:hover {
+  opacity: 1;
 }

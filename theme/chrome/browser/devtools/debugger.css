@@ -3,8 +3,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-@import url("chrome://appversion/skin/devtools/debugger.css"); 
-
 #body {
   background: #fff;
 }
@@ -85,13 +83,12 @@
 
 .dbg-expression {
   height: 20px;
-  -moz-padding-start: 8px;
 }
 
 .dbg-expression-arrow {
-  width: 10px;
+  width: 16px;
   height: auto;
-  background: url("chrome://browser/skin/devtools/commandline.png") 0px 4px no-repeat;
+  background: -moz-image-rect(url("chrome://browser/skin/devtools/commandline-icon.png"), 0, 32, 16, 16);
 }
 
 .dbg-expression-input {
