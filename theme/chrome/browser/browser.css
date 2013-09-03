@@ -681,7 +681,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 #nav-bar[iconsize=large] :-moz-any(#back-button, #forward-button):not(:hover):not([open="true"]):not([disabled="true"]),
 #nav-bar > :-moz-any(#unified-back-forward-button, #zoom-controls):hover > toolbarbutton:not(:hover):not([open="true"]):not([disabled="true"]),
-#FindToolbar :-moz-any(.findbar-find-next, .findbar-find-previous):not(:hover):not([open="true"]):not([disabled="true"]),
+#FindToolbar :-moz-any(.findbar-find-next, .findbar-find-previous):not(:hover):not([disabled="true"]),
 /* Relief buttons */
 #nav-bar[reliefbuttons="true"][iconsize=large] > :-moz-any(toolbarbutton:not(#close-button), .toolbarbutton-menubutton-dropmarker):not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]),
 #nav-bar[reliefbuttons="true"][iconsize=large] > toolbaritem:not(#urlbar):not(#unified-back-forward-button) > :-moz-any(toolbarbutton:not(#close-button), .toolbarbutton-menubutton-dropmarker):not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]),
@@ -705,12 +705,20 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 
 #nav-bar[iconsize=large] #back-button:not(:active):not([open="true"]),
-#FindToolbar .findbar-find-next:not(:active):not([open="true"]) {
+#nav-bar[iconsize=large] #back-button[disabled="true"] {
   -moz-border-end-color: rgba(0,0,0,.10) !important;
 }
 #nav-bar[iconsize=large] #forward-button:not(:active):not([open="true"]),
-#FindToolbar .findbar-find-previous:not(:active):not([open="true"]) {
+#nav-bar[iconsize=large] #forward-button[disabled="true"] {
   -moz-border-start-color: rgba(0,0,0,.10) !important;
+}
+
+#FindToolbar :-moz-any(.findbar-find-previous, .findbar-find-next)[disabled="true"] {
+  border-color: rgba(0,0,0,.25) !important;
+  -moz-border-start-color: rgba(0,0,0,.08) !important;
+}
+#FindToolbar .findbar-find-previous[disabled="true"] {
+  -moz-border-end-color: rgba(0,0,0,.08) !important;
 }
 
 #nav-bar > toolbarbutton > .toolbarbutton-menubutton-button {
