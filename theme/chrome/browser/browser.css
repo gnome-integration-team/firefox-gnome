@@ -3462,6 +3462,10 @@ chatbox {
   border-top-right-radius: 2.5px;
 }
 
+#main-window[privatebrowsingmode=temporary] #appmenu-toolbar-button {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/privatebrowsing.svg);
+}
+
 /*
 #main-window[privatebrowsingmode=temporary] #TabsToolbar::before {
   display: -moz-box;
