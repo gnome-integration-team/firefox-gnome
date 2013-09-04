@@ -58,3 +58,116 @@
 #developer-toolbar-toolbox-button {
   -moz-image-region: rect(64px, 22px, 80px, 0);
 }
+
+/* */
+
+.popup-notification-icon[popupid="geolocation"],
+.popup-notification-icon[popupid="click-to-play-plugins"],
+.popup-notification-icon[popupid="plugins-not-found"],
+.popup-notification-icon[popupid="web-notifications"] { 
+  min-width: 64px;
+  min-height: 64px;
+}
+
+.click-to-play-plugins-notification-content {
+  margin: -1px !important;
+}
+
+.click-to-play-plugins-notification-icon-box {
+  -moz-border-end: 1px solid hsla(0,0%,100%,.2) !important;
+  padding-top: 16px !important;
+  -moz-padding-start: 16px !important;
+  -moz-padding-end: 6px !important;
+}
+
+.click-to-play-plugins-notification-separator {
+  -moz-border-start: 1px solid hsla(211,79%,6%,.1) !important;
+  border-top: 1px solid hsla(211,79%,6%,.1) !important;
+}
+
+.click-to-play-plugins-notification-description-box {
+  border-bottom: 1px solid hsla(0,0%,100%,.2) !important;
+  -moz-border-start: 1px solid hsla(0,0%,100%,.2) !important;
+  padding: 11px 10px 9px 10px !important;
+}
+
+.click-to-play-plugins-notification-center-box {
+  margin: 0 !important;
+  border: none !important;
+  border-top: 1px solid hsla(0,0%,100%,.2) !important;
+  border-bottom: 1px solid hsla(0,0%,100%,.2) !important;
+  background-color: hsla(211,79%,6%,.05) !important;
+}
+
+.click-to-play-plugins-notification-button-container {
+  background: none !important;
+  border-top: 1px solid hsla(0,0%,100%,.2) !important;
+  -moz-border-start: 1px solid hsla(0,0%,100%,.2) !important;
+  margin: 0 !important;
+  padding: 15px 11px 14px 11px !important;
+}
+
+.center-item-box {
+  padding-top: 11px !important;
+  -moz-padding-start: 16px !important;
+  -moz-padding-end: 11px !important;
+  margin-bottom: -2px !important;
+  -moz-border-start: 1px solid hsla(0,0%,100%,.2) !important;
+}
+
+.center-item-box[padbottom="true"] {
+  padding-bottom: 12px !important;
+}
+
+.center-item-icon {
+  background-image: url("chrome://mozapps/skin/plugins/pluginGeneric-16.png");
+  background-repeat: no-repeat !important;
+  height: 16px !important;
+  width: 16px !important;
+  margin-bottom: 4px !important;
+}
+
+.center-item-box[warn="true"] {
+  background-image: url("chrome://browser/skin/click-to-play-warning-stripes.png");
+  background-repeat: repeat-x !important;
+  padding-top: 7px !important;
+  -moz-padding-end: 11px !important;
+  padding-bottom: 9px !important;
+  -moz-padding-start: 16px !important;
+}
+
+.center-item-box[padbottom="true"][warn="true"] {
+  padding-bottom: 7px !important;
+}
+
+.center-item-box[showseparator="true"] {
+  border-top: 1px solid hsla(211,79%,6%,.1) !important;
+}
+
+.center-item-box[warn="false"] > .center-item-warning {
+  display: none !important;
+}
+
+.center-item-warning > .text-link {
+  color: #3d8cd7 !important;
+}
+
+.center-item-warning > .text-link[href=""] {
+  display: none !important;
+}
+
+.center-item-warning-icon {
+  background-image: url("chrome://mozapps/skin/extensions/alerticon-info-negative.png");
+  background-repeat: no-repeat !important;
+  width: 16px !important;
+  height: 15px !important;
+  margin-bottom: 4px !important;
+}
+
+.center-item-warning-description {
+  color: #828282 !important;
+}
+
+.center-item-button {
+  min-width: 0 !important;
+}
