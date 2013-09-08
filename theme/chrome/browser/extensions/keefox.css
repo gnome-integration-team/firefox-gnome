@@ -20,7 +20,7 @@ toolbar[iconsize="small"] #KeeFox_Logins-Button
 
 /* Lock (Disabled) */
 
-#KeeFox_Logins-Button[disabled="true",
+#KeeFox_Logins-Button[disabled="true"],
 toolbar[iconsize="small"] #KeeFox_Logins-Button[disabled="true"]
 {
   	opacity: .5;
