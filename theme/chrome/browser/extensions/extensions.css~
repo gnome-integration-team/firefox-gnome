@@ -29,9 +29,6 @@
 @import url("chrome://browser/skin/extensions/https-everywhere.css");
 @import url("chrome://browser/skin/extensions/htitle.css");
 
-/* K */
-@import url("chrome://browser/skin/extensions/keefox.css");
-
 /* L */
 @import url("chrome://browser/skin/extensions/lastpass-password-manager.css");
 

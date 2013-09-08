@@ -1,0 +1,43 @@
+/* Keefox
+ * id: {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d} FIXME: Wrong ID.
+ * URL: https://addons.mozilla.org/firefox/addon/keefox/ */
+
+/* Globe */
+
+#KeeFox_Menu-Button,
+toolbar[iconsize="small"] #KeeFox_Menu-Button
+{
+    list-style-image: url("chrome://keefox/skin/KeeFox24.png");  
+}
+
+/* Lock */
+
+#KeeFox_Logins-Button,
+toolbar[iconsize="small"] #KeeFox_Logins-Button
+{
+ 	list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/keelock.svg") !important;
+}
+
+/* Lock (Disabled) */
+
+#KeeFox_Logins-Button[disabled="true",
+toolbar[iconsize="small"] #KeeFox_Logins-Button[disabled="true"]
+{
+  	opacity: .5;
+}
+
+/* Key */
+
+toolbarbutton#KeeFox_Main-Button,
+toolbar[iconsize="small"] toolbarbutton#KeeFox_Main-Button
+{
+  	list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/keekey.svg") !important;
+}
+
+toolbarbutton.highlight, toolbarbutton.login-found,
+toolbar[iconsize="small"] toolbarbutton.highlight,
+toolbar[iconsize="small"] toolbarbutton.login-found 
+{
+  	list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/keekey-orange.svg") !important;
+}
+
