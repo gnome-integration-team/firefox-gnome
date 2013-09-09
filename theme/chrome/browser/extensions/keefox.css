@@ -7,7 +7,7 @@
 #KeeFox_Menu-Button,
 toolbar[iconsize="small"] #KeeFox_Menu-Button
 {
-    list-style-image: url("chrome://keefox/skin/KeeFox24.png");  
+  list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/keeforms.svg") !important;
 }
 
 /* Lock */
