@@ -137,7 +137,6 @@
   padding-top: 3px !important;
 }
 
-#navigator-toolbox[tabsontop=true],
 #TabsToolbar[tabsontop=true] {
   background-color: transparent !important;
 }
@@ -173,7 +172,6 @@
     -moz-appearance: -moz-win-exclude-glass !important;
   }
     
-  #navigator-toolbox,
   #toolbar-menubar,
   #TabsToolbar[tabsontop=true],
   #nav-bar[tabsontop=false],

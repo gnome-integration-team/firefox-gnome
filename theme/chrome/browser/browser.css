@@ -23,7 +23,7 @@
 
 #navigator-toolbox {
   -moz-appearance: none;
-  background-color: Window;
+  background-color: transparent;
   border-top: none;
   border-bottom: 1px solid #a7aba7 !important;
 }
