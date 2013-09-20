@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:version="0.48.4 r9939" height="16px" width="16px" version="1.1" sodipodi:docname="plugin.svg" id="svg2">
    <defs id="defs14" />
-   <sodipodi:namedview bordercolor="#666666" inkscape:pageshadow="2" inkscape:window-y="27" pagecolor="#ffffff" inkscape:zoom="62.784864" inkscape:grid-bbox="true" inkscape:window-maximized="1" inkscape:window-x="0" showgrid="true" borderopacity="1.0" inkscape:current-layer="g10" inkscape:cx="8.0919566" inkscape:cy="9.3344121" inkscape:window-height="741" inkscape:pageopacity="0.0" inkscape:window-width="1366" inkscape:document-units="px" id="namedview4">
+   <sodipodi:namedview bordercolor="#666666" inkscape:pageshadow="2" inkscape:window-y="27" pagecolor="#ffffff" inkscape:zoom="22.197802" inkscape:grid-bbox="true" inkscape:window-maximized="1" inkscape:window-x="0" showgrid="true" borderopacity="1.0" inkscape:current-layer="g10" inkscape:cx="13.719998" inkscape:cy="8.4139726" inkscape:window-height="741" inkscape:pageopacity="0.0" inkscape:window-width="1366" inkscape:document-units="px" id="namedview4">
       <inkscape:grid type="xygrid" id="grid6" />
    </sodipodi:namedview>
    <metadata id="metadata8">
@@ -9,11 +9,11 @@
          <cc:Work rdf:about="">
             <dc:format>image/svg+xml</dc:format>
             <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-            <dc:title />
+            <dc:title></dc:title>
          </cc:Work>
       </rdf:RDF>
    </metadata>
    <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="g10">
-      <path style="fill:#2e3436;fill-opacity:1;stroke:none" d="M 4,3 4,4 6,4 6,3 z M 6,4 7,4 7,6 6,6 6,5 4,5 4,6 3,6 3,4 4,4 2,4 1,7 15,7 14,4 l -2,0 1,0 0,2 -1,0 0,-1 -2,0 0,1 -1,0 0,-2 1,0 z m 4,0 2,0 0,-1 -2,0 z m -9,4 0,6 14,0 0,-6 z" id="path3292" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccc" />
+      <path style="fill:#2a7fff;fill-opacity:1;stroke:none" d="M 4,3 4,4 6,4 6,3 z M 6,4 7,4 7,6 6,6 6,5 4,5 4,6 3,6 3,4 4,4 2,4 1,7 15,7 14,4 l -2,0 1,0 0,2 -1,0 0,-1 -2,0 0,1 -1,0 0,-2 1,0 z m 4,0 2,0 0,-1 -2,0 z m -9,4 0,6 14,0 0,-6 z" id="path3292" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccc" />
    </g>
 </svg>

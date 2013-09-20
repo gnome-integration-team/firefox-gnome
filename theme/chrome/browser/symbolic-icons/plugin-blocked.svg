@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:version="0.48.4 r9939" height="16px" width="16px" version="1.1" sodipodi:docname="plugin-alert.svg" id="svg2">
+   <defs id="defs14" />
+   <sodipodi:namedview bordercolor="#666666" inkscape:pageshadow="2" inkscape:window-y="27" pagecolor="#ffffff" inkscape:zoom="1" inkscape:grid-bbox="true" inkscape:window-maximized="1" inkscape:window-x="0" showgrid="false" borderopacity="1.0" inkscape:current-layer="g10" inkscape:cx="12.415055" inkscape:cy="6.7997444" inkscape:window-height="741" inkscape:pageopacity="0.0" inkscape:window-width="1366" inkscape:document-units="px" id="namedview4">
+      <inkscape:grid type="xygrid" id="grid6" />
+   </sodipodi:namedview>
+   <metadata id="metadata8">
+      <rdf:RDF>
+         <cc:Work rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <dc:title></dc:title>
+         </cc:Work>
+      </rdf:RDF>
+   </metadata>
+   <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="g10">
+      <path style="fill:#ef2929;fill-opacity:1;stroke:none" d="M 4 3 L 4 4 L 6 4 L 6 3 L 4 3 z M 10 3 L 10 4 L 12 4 L 12 3 L 10 3 z M 2 4 L 1 7 L 15 7 L 14 4 L 13 4 L 13 6 L 12 6 L 12 5 L 10 5 L 10 6 L 9 6 L 9 4 L 7 4 L 7 6 L 6 6 L 6 5 L 4 5 L 4 6 L 3 6 L 3 4 L 2 4 z M 1 8 L 1 14 L 15 14 L 15 8 L 1 8 z M 4 10 L 12 10 L 12 12 L 4 12 L 4 10 z " id="path3292" />
+   </g>
+</svg>
