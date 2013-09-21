@@ -13,26 +13,19 @@
 
 .theme-twisty {
   cursor: pointer;
-  margin-right: 5px;
+  width: 14px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-image: url("chrome://browser/skin/devtools/controls.png");
+  background-position: 0 -14px;
 }
 
 .theme-twisty:-moz-focusring {
   outline-style: none;
 }
 
-.theme-twisty:not([open]) {
-  width: 0;
-  height: 0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 5px solid rgba(0,0,0,0.5);
-  margin-left: 5px;
-}
-
 .theme-twisty[open] {
-  width: 10px;
-  height: 10px;
-  background-image: linear-gradient(to bottom right, transparent 68%,  rgba(0,0,0,0.5) 68%);
+  background-position: -14px -14px;
 }
 
 .theme-checkbox {
@@ -42,15 +35,16 @@
   height: 14px;
   padding: 0;
   outline: none;
-  background: url("chrome://browser/skin/devtools/checkbox-light.png") no-repeat;
+  background-image: url("chrome://browser/skin/devtools/controls.png");
+  background-position: 0 0;
 }
 
 .theme-checkbox[checked] {
-  background: url("chrome://browser/skin/devtools/checkbox-light.png") 14px 0;
+  background-position: -14px 0;
 }
 
 .theme-selected {
-  background-color: hsl(0,0%,90%);
+  background-color: #CCC;
 }
 
 .theme-bg-darker {
