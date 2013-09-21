@@ -4,4 +4,5 @@
 
 #dta-manager-button {
   list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/dta-manager.svg) !important;
+  -moz-image-region: auto !important;
 }
