@@ -1605,28 +1605,17 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 
 #alert-plugins-notification-icon {
-  /* FIXME */
+  /*
   list-style-image: url(chrome://browser/skin/notification-pluginAlert.png);
+  */
+  list-style-image: url(chrome://browser/skin/symbolic-icons/plugin-alert.svg);
 }
 
 #blocked-plugins-notification-icon {
-  /* FIXME */
+  /*
   list-style-image: url(chrome://browser/skin/notification-pluginBlocked.png);
-}
-
-#alert-plugins-notification-icon,
-#blocked-plugins-notification-icon {
-  -moz-image-region: rect(0, 16px, 16px, 0);
-}
-
-#alert-plugins-notification-icon:hover,
-#blocked-plugins-notification-icon:hover {
-  -moz-image-region: rect(0, 32px, 16px, 16px);
-}
-
-#alert-plugins-notification-icon:active,
-#blocked-plugins-notification-icon:active {
-  -moz-image-region: rect(0, 48px, 16px, 32px);
+  */
+  list-style-image: url(chrome://browser/skin/symbolic-icons/plugin-blocked.svg);
 }
 
 #plugin-install-notification-icon {
