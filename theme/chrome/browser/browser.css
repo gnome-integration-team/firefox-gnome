@@ -1544,7 +1544,11 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #notification-popup-box:after {
   display: none;
-  content: url(chrome://browser/skin/identity-box-active.svg) url(chrome://browser/skin/identity-box-https-ev.svg) url(chrome://browser/skin/identity-box-https-ev-active.svg);
+  content: url(chrome://browser/skin/identity-box-borders/active.svg) url(chrome://browser/skin/identity-box-borders/https-ev.svg) url(chrome://browser/skin/identity-box-borders/https-ev-active.svg);
+}
+#notification-popup-box:-moz-locale-dir(rtl):after {
+  display: none;
+  content: url(chrome://browser/skin/identity-box-borders/active-rtl.svg) url(chrome://browser/skin/identity-box-borders/https-ev-rtl.svg) url(chrome://browser/skin/identity-box-borders/https-ev-active-rtl.svg);
 }
 
 #notification-popup-box:not([hidden]) + #identity-box {
@@ -1554,20 +1558,37 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 
 #notification-popup-box:not([hidden]) + #identity-box:active,
 #notification-popup-box:not([hidden]) + #identity-box[open="true"] {
-  background: url(chrome://browser/skin/identity-box-active.svg), linear-gradient(to bottom, #d1d1d1, #fff) 8px 0px;
+  background: url(chrome://browser/skin/identity-box-borders/active.svg), linear-gradient(to bottom, #d1d1d1, #fff) 8px 0px;
+  background-size: 8px 100%, auto;
+  background-repeat: no-repeat;
+}
+#notification-popup-box:not([hidden]) + #identity-box:active:-moz-locale-dir(rtl),
+#notification-popup-box:not([hidden]) + #identity-box[open="true"]:-moz-locale-dir(rtl) {
+  background: url(chrome://browser/skin/identity-box-borders/active-rtl.svg) top right, linear-gradient(to bottom, #d1d1d1, #fff) -8px 0px;
   background-size: 8px 100%, auto;
   background-repeat: no-repeat;
 }
 
 #urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.verifiedIdentity {
-  background: url(chrome://browser/skin/identity-box-https-ev.svg), linear-gradient(to bottom, rgba(115, 210, 22, 0.15), rgba(115, 210, 22, 0.15)) 8px 0px;
+  background: url(chrome://browser/skin/identity-box-borders/https-ev.svg), linear-gradient(to bottom, rgba(115, 210, 22, 0.15), rgba(115, 210, 22, 0.15)) 8px 0px;
+  background-size: 8px 100%, auto;
+  background-repeat: no-repeat;
+}
+#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.verifiedIdentity:-moz-locale-dir(rtl) {
+  background: url(chrome://browser/skin/identity-box-borders/https-ev-rtl.svg) top right, linear-gradient(to bottom, rgba(115, 210, 22, 0.15), rgba(115, 210, 22, 0.15)) -8px 0px;
   background-size: 8px 100%, auto;
   background-repeat: no-repeat;
 }
 
 #urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.verifiedIdentity:hover:active,
 #urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.verifiedIdentity[open="true"] {
-  background: url(chrome://browser/skin/identity-box-https-ev-active.svg), linear-gradient(to bottom, rgba(115, 210, 22, 0.25), rgba(115, 210, 22, 0.05)) 8px 0px;
+  background: url(chrome://browser/skin/identity-box-borders/https-ev-active.svg), linear-gradient(to bottom, rgba(115, 210, 22, 0.25), rgba(115, 210, 22, 0.05)) 8px 0px;
+  background-size: 8px 100%, auto;
+  background-repeat: no-repeat;
+}
+#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.verifiedIdentity:hover:active:-moz-locale-dir(rtl),
+#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.verifiedIdentity[open="true"]:-moz-locale-dir(rtl) {
+  background: url(chrome://browser/skin/identity-box-borders/https-ev-active-rtl.svg) top right, linear-gradient(to bottom, rgba(115, 210, 22, 0.25), rgba(115, 210, 22, 0.05)) -8px 0px;
   background-size: 8px 100%, auto;
   background-repeat: no-repeat;
 }
