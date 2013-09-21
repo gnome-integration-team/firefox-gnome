@@ -1354,7 +1354,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 #identity-box:hover:active,
 #identity-box[open="true"] {
   background: linear-gradient(to bottom, #d1d1d1, #fff);
-  box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.15);
+  box-shadow: inset 0 1px 1px -1px rgba(0,0,0,0.15);
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity {
@@ -1527,22 +1527,47 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 /* Notification icon box */
 #notification-popup-box {
   position: relative;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.4);
   background-clip: padding-box;
   padding-left: 4px;
   border-radius: 2.5px 0 0 2.5px;
   border-width: 0 8px 0 0;
   border-style: solid;
   border-color: #fff;
-  border-image: url("chrome://browser/skin/urlbar-arrow.png") 0 8 0 0 fill;
+  border-image: url("chrome://browser/skin/urlbar-arrow.svg") 0 8 0 0 fill;
   -moz-margin-end: -8px;
 /*  margin-top: -1px;*/
 /*  margin-bottom: -1px;*/
 }
 
+#notification-popup-box:after {
+  display: none;
+  content: url(chrome://browser/skin/identity-box-active.svg) url(chrome://browser/skin/identity-box-https-ev.svg) url(chrome://browser/skin/identity-box-https-ev-active.svg);
+}
+
 #notification-popup-box:not([hidden]) + #identity-box {
-  -moz-padding-start: 10px;
+  -moz-padding-start: 8px;
   border-radius: 0;
+}
+
+#notification-popup-box:not([hidden]) + #identity-box:active,
+#notification-popup-box:not([hidden]) + #identity-box[open="true"] {
+  background: url(chrome://browser/skin/identity-box-active.svg), linear-gradient(to bottom, #d1d1d1, #fff) 8px 0px;
+  background-size: 8px 100%, auto;
+  background-repeat: no-repeat;
+}
+
+#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.verifiedIdentity {
+  background: url(chrome://browser/skin/identity-box-https-ev.svg), linear-gradient(to bottom, rgba(115, 210, 22, 0.15), rgba(115, 210, 22, 0.15)) 8px 0px;
+  background-size: 8px 100%, auto;
+  background-repeat: no-repeat;
+}
+
+#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.verifiedIdentity:hover:active,
+#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.verifiedIdentity[open="true"] {
+  background: url(chrome://browser/skin/identity-box-https-ev-active.svg), linear-gradient(to bottom, rgba(115, 210, 22, 0.25), rgba(115, 210, 22, 0.05)) 8px 0px;
+  background-size: 8px 100%, auto;
+  background-repeat: no-repeat;
 }
 
 #notification-popup-box:-moz-locale-dir(rtl),
