@@ -2180,6 +2180,10 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   /*  transition-duration: 30s !important;*/
 }
 
+.tabbrowser-tab:-moz-lwtheme-brighttext {
+  text-shadow: none;
+}
+
 .tabbrowser-tab > .tab-stack {
   margin: 0;
   -moz-margin-start: -9px;
