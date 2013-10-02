@@ -3,9 +3,9 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 .up::before {
-  content: url(chrome://global/skin/dirListing/up.png);
+  content: url(moz-icon://stock/gtk-go-up?size=menu);
 }
 
 .dir::before {
-  content: url(chrome://global/skin/dirListing/folder.png);
+  content: url(moz-icon://stock/gtk-directory?size=menu);
 }
