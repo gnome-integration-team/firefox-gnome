@@ -8,6 +8,8 @@
 
 @import url("chrome://global/skin/");
 
+@import url("chrome://os/skin/global/filepicker.css");
+
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 /* ::::: column widths ::::: */
@@ -28,7 +30,7 @@ treechildren::-moz-tree-image(FilenameColumn) {
 }
 
 treechildren::-moz-tree-image(FilenameColumn, directory) {
-  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
+  /* chrome/os */
 }
 
 treechildren::-moz-tree-image(FilenameColumn, file) {

@@ -1,0 +1,25 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+treechildren::-moz-tree-image(title) {
+  list-style-image: url(chrome://mozapps/skin/places/defaultFavicon.png);
+}
+
+treechildren::-moz-tree-image(title, container) {
+  list-style-image: url(moz-icon://stock/gtk-directory?size=menu);
+}
+
+treechildren::-moz-tree-image(title, query, hostContainer) {
+  list-style-image: url(moz-icon://stock/gtk-directory?size=menu);
+}
+
+treechildren::-moz-tree-image(title, query, hostContainer, open) {
+  list-style-image: url(moz-icon://stock/gtk-directory?size=menu);
+}
+
+/* We want some queries to look like ordinary folders. This must come
+   after the (title, query) selector, or it would get overridden. */
+treechildren::-moz-tree-image(title, query, folder) {
+  list-style-image: url(moz-icon://stock/gtk-directory?size=menu);
+}

@@ -1,3 +1,4 @@
+@import url("chrome://os/skin/browser/preferences/preferences.css");
 
 /* Global Styles */
 #BrowserPreferences radio[pane] {
@@ -76,7 +77,6 @@ radio[pane=paneSync] {
   width: 16px;
   height: 16px;
   margin: 0px 2px;
-  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
 }
 
 #paneApplications {
@@ -99,7 +99,7 @@ radio[pane=paneSync] {
 }
 
 #cookiesChildren::-moz-tree-image(domainCol, container) {
-  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
+  /* chrome/os */
 }
 
 #cookieInfoBox {

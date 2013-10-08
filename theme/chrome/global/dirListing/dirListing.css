@@ -98,10 +98,4 @@ td:not(:first-child) {
   -moz-margin-end: 4px;
   -moz-margin-start: -20px;
   vertical-align: middle;
-  content: url(moz-icon://stock/gtk-go-up?size=menu);
 }
-
-.dir::before {
-  content: url(moz-icon://stock/gtk-directory?size=menu);
-}
-
