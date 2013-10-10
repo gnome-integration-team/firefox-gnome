@@ -148,7 +148,3 @@ menuitem:not([type]) {
   display: block !important;
   -moz-margin-end: 0;
 }
-
-#clearListButton:not([open="true"]):not([disabled="true"]):active:hover .button-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
-}

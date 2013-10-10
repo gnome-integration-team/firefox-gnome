@@ -591,12 +591,6 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   background-image: linear-gradient(to bottom, rgba(0,10,0,0.3), rgba(200,200,200,0.3)) !important;
   border-color: rgba(180,180,180,1) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.37);
-  color: #ffffff !important;
-  /*
-  font-weight: bolder;
-  text-shadow: 0 1px #7f7f7f;
-  */
-  text-shadow: 0 0 0 #ffffff, 0 1px #7f7f7f;
 }
 
 #downloads-indicator[open="true"],
@@ -607,7 +601,6 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   border-color: rgba(180,180,180,1) !important;
   box-shadow: 0 1px 0 rgba(255,255,255,0.37);
   border-radius: 3px !important;
-  color: #ffffff !important;
 }
 
 :-moz-any(#navigator-toolbox, #addon-bar, findbar) toolbarbutton[open="true"],
@@ -1005,20 +998,6 @@ findbar .findbar-find-previous[disabled="true"] {
   -moz-image-region: rect(0px 192px 24px 168px);
 }
 
-/* Filters */
-
-:-moz-any(
-  #back-button, #forward-button, #reload-button, #stop-button,
-  #home-button, #downloads-button, #history-button, #print-button,
-  #bookmarks-button, #bookmarks-menu-button, #bookmarks-menu-button.bookmark-item,
-  #print-button, #cut-button, #copy-button, #paste-button,
-  #fullscreen-button, #zoom-out-button, #zoom-in-button,
-  #sync-button, #feed-button,
-  #new-tab-button, .tabs-newtab-button, #new-window-button
-):not([disabled="true"]):not([open="true"]):-moz-any(:active:hover, [checked="true"]) > .toolbarbutton-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
-}
-
 /* 16px primary toolbar buttons */
 toolbar[iconsize="small"] .toolbarbutton-1:not([type="menu-button"]) {
   -moz-box-orient: vertical;
@@ -1072,10 +1051,6 @@ toolbar[iconsize="small"] .toolbarbutton-1:not([type="menu-button"]) {
 :-moz-any(#minimize-button, #restore-button, #close-button) > .toolbarbutton-icon {
   height: 14px;
   width: 14px;
-}
-
-:-moz-any(#minimize-button, #restore-button, #close-button):active:hover > .toolbarbutton-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
 }
 
 /* ::::: Location bar ::::: */
@@ -2618,12 +2593,6 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
   list-style-image: url(moz-icon://stock/edit-paste-symbolic?size=menu);
   */
   list-style-image: url(chrome://browser/skin/symbolic-icons/edit-paste.svg);
-}
-
-#appmenu-cut:not([disabled="true"]):active:hover > .toolbarbutton-icon,
-#appmenu-copy:not([disabled="true"]):active:hover > .toolbarbutton-icon,
-#appmenu-paste:not([disabled="true"]):active:hover > .toolbarbutton-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
 }
 
 #appmenu-editmenu-cut {
