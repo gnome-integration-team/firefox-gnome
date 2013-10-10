@@ -1238,8 +1238,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 
 .chromeUI > #page-proxy-favicon[pageproxystate="valid"] {
-  list-style-image: url(chrome://branding/content/identity-icons-brand.png);
-  -moz-image-region: rect(0, 48px, 16px, 32px);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/identity-icons-brand.svg);
 }
 
 .verifiedDomain #page-proxy-favicon[pageproxystate="valid"] {
@@ -1274,16 +1273,6 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 #identity-popup-content-box {
   max-width: 50ch;
 }
-
-/* FIXME
-#page-proxy-favicon {
-  -moz-image-region: rect(0, 16px, 16px, 0);
-}
-
-#identity-box:hover > #page-proxy-favicon {
-  -moz-image-region: rect(0, 32px, 16px, 16px);
-}
-*/
 
 #identity-box:hover #page-proxy-favicon,
 #identity-box:active #page-proxy-favicon,
@@ -1322,15 +1311,18 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.chromeUI {
-  border-right: 1px solid rgba(50,50,50,.4);
+  background: rgba(200, 200, 200, 0.15);
+  border-right: 1px solid rgba(100, 100, 100, 0.25);
   -moz-margin-end: 4px;
+}
+#urlbar[pageproxystate="valid"] > #identity-box.chromeUI:hover:active,
+#urlbar[pageproxystate="valid"] > #identity-box.chromeUI[open="true"] {
+  background: linear-gradient(to bottom, #d1d1d1, #fff);
+  box-shadow: inset 0 1px 1px -1px rgba(0,0,0,0.15);
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity {
   background: rgba(115, 210, 22, 0.15);
-  /* FIXME
-  background-color: #fff;
-  */
   border-right: 1px solid rgba(115, 210, 22, 0.25);
   color: #00aa00;
   -moz-margin-end: 4px;
@@ -1544,6 +1536,30 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
 }
 #notification-popup-box:not([hidden]) + #identity-box:active:-moz-locale-dir(rtl),
 #notification-popup-box:not([hidden]) + #identity-box[open="true"]:-moz-locale-dir(rtl) {
+  background: url(chrome://browser/skin/identity-box-borders/active-rtl.svg) top right, linear-gradient(to bottom, #d1d1d1, #fff) -8px 0px;
+  background-size: 8px 100%, auto;
+  background-repeat: no-repeat;
+}
+
+#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.chromeUI {
+  background: url(chrome://browser/skin/identity-box-borders/brand.svg), linear-gradient(to bottom, rgba(200, 200, 200, 0.15), rgba(200, 200, 200, 0.15)) 8px 0px;
+  background-size: 8px 100%, auto;
+  background-repeat: no-repeat;
+}
+#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.chromeUI:-moz-locale-dir(rtl) {
+  background: url(chrome://browser/skin/identity-box-borders/brand-rtl.svg) top right, linear-gradient(to bottom, rgba(200, 200, 200, 0.15), rgba(200, 200, 200, 0.15)) -8px 0px;
+  background-size: 8px 100%, auto;
+  background-repeat: no-repeat;
+}
+
+#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.chromeUI:hover:active,
+#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.chromeUI[open="true"] {
+  background: url(chrome://browser/skin/identity-box-borders/active.svg), linear-gradient(to bottom, #d1d1d1, #fff) 8px 0px;
+  background-size: 8px 100%, auto;
+  background-repeat: no-repeat;
+}
+#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.chromeUI:hover:active:-moz-locale-dir(rtl),
+#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.chromeUI[open="true"]:-moz-locale-dir(rtl) {
   background: url(chrome://browser/skin/identity-box-borders/active-rtl.svg) top right, linear-gradient(to bottom, #d1d1d1, #fff) -8px 0px;
   background-size: 8px 100%, auto;
   background-repeat: no-repeat;
