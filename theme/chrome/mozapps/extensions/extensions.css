@@ -23,7 +23,7 @@
 }
 
 #addons-page {
-  background: #ebebeb url(chrome://browser/skin/newtab/noise.png);
+  background: #ebebeb url(chrome://browser/skin/devtools/noise.png);
   background-attachment: fixed;
   padding: 0;
 }

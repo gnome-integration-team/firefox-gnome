@@ -249,7 +249,7 @@
 }
 
 #options-panel {
-  background-image: url("chrome://browser/skin/newtab/noise.png");
+  background-image: url(chrome://browser/skin/devtools/noise.png);
 }
 
 .options-vertical-pane {
