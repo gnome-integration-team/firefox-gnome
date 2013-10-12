@@ -1100,7 +1100,7 @@ toolbar[iconsize="small"] .toolbarbutton-1:not([type="menu-button"]) {
 }
 
 :-moz-any(#minimize-button, #restore-button, #close-button):active:hover > .toolbarbutton-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
 
 /* ::::: Location bar ::::: */
