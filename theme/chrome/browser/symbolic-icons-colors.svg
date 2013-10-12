@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 
 <svg height="0" xmlns="http://www.w3.org/2000/svg">
-  <filter id="active" filterRes="256" x="0" y="0" width="16px" height="16px">
+  <filter id="active" filterRes="500" x="0" y="0" width="16px" height="16px">
     <feColorMatrix values="0 0 0 0 1
                            0 0 0 0 1
                            0 0 0 0 1
@@ -15,7 +15,7 @@
     <feBlend in="WhiteIcon" in2="Shadow" mode="normal" />
   </filter>
   
-  <filter id="checked-inactive" filterRes="256" x="0" y="0" width="16px" height="16px">
+  <filter id="checked-inactive" filterRes="500" x="0" y="0" width="16px" height="16px">
     <!-- [checked] state in :-moz-window-inactive window -->
     <feColorMatrix values="0 0 0 0 0.9
                            0 0 0 0 0.9
@@ -23,21 +23,21 @@
                            0 0 0 1 0  "/>
   </filter>
   
-  <filter id="white" filterRes="256" x="0" y="0" width="16px" height="16px">
+  <filter id="white" filterRes="500" x="0" y="0" width="16px" height="16px">
     <feColorMatrix values="0 0 0 0 1
                            0 0 0 0 1
                            0 0 0 0 1
                            0 0 0 1 0"/>
   </filter>
   
-  <filter id="azure" filterRes="256" x="0" y="0" width="16px" height="16px">
+  <filter id="azure" filterRes="500" x="0" y="0" width="16px" height="16px">
     <feColorMatrix values="0.91 0    0    0 0
                            0    2.44 0    0 0
                            0    0    4.72 0 1
                            0    0    0    1 0" color-interpolation-filters="sRGB"/>
   </filter>
   
-  <filter id="green" filterRes="256" x="0" y="0" width="16px" height="16px">
+  <filter id="green" filterRes="500" x="0" y="0" width="16px" height="16px">
     <feColorMatrix values="2.5 0    0    0 0
                            0   4.04 0    0 0
                            0   0    0    0 0
@@ -45,7 +45,7 @@
   </filter>
   
   <!-- Into input fields (like urlbar) -->
-  <filter id="input-field-yellow" filterRes="256">
+  <filter id="input-field-yellow" filterRes="500" width="16px" height="16px">
     <feColorMatrix values="5.48 0    0    0 0
                            0    3.37 0    0 0
                            0    0    1.15 0 0

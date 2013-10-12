@@ -1007,10 +1007,20 @@ toolbar[iconsize="small"] .toolbarbutton-1:not([type="menu-button"]) {
 /* Fullscreen window controls */
 #window-controls {
   overflow: hidden;
-  margin: 0 2px !important;
+  margin: 0 3px !important;
 }
 
-#window-controls > * {
+#toolbar-menubar > #window-controls {
+  margin: 2px !important;
+  -moz-margin-end: 6px !important;
+}
+
+#TabsToolbar > #window-controls {
+  margin: 1px 3px 4px 3px !important;
+  -moz-margin-start: 6px !important;
+}
+
+#window-controls > toolbarbutton {
   height: 100%;
   min-width: 28px !important;
   margin: 0 !important;
@@ -1038,7 +1048,6 @@ toolbar[iconsize="small"] .toolbarbutton-1:not([type="menu-button"]) {
   list-style-image: url(moz-icon://stock/window-restore-symbolic?size=menu);
   */
   list-style-image: url(chrome://browser/skin/symbolic-icons/window-restore.svg);
-  display: block;
 }
 #close-button {
   /*
@@ -1051,6 +1060,10 @@ toolbar[iconsize="small"] .toolbarbutton-1:not([type="menu-button"]) {
 :-moz-any(#minimize-button, #restore-button, #close-button) > .toolbarbutton-icon {
   height: 14px;
   width: 14px;
+}
+
+:-moz-any(#minimize-button, #restore-button, #close-button):active:hover > .toolbarbutton-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
 
 /* ::::: Location bar ::::: */
