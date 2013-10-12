@@ -5,3 +5,12 @@
 #htitle-close-button {
   list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg) !important;
 }
+
+#window-controls[htitle="true"] > #restore-button {
+  display: none !important;
+}
+
+#main-window[sizemode="maximized"] #window-controls[htitle="true"] > #close-button,
+#main-window[sizemode="fullscreen"] #window-controls[htitle="true"] > #restore-button {
+  display: -moz-box !important;
+}

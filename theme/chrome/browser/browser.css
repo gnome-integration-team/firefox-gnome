@@ -1075,7 +1075,6 @@ toolbar[iconsize="small"] .toolbarbutton-1:not([type="menu-button"]) {
   list-style-image: url(moz-icon://stock/window-restore-symbolic?size=menu);
   */
   list-style-image: url(chrome://browser/skin/symbolic-icons/window-restore.svg);
-  display: block;
 }
 #close-button {
   /*
