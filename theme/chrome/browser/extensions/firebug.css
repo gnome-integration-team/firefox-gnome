@@ -4,7 +4,7 @@
 
 #firebug-button {
   filter: none !important;
-  list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/firebug.svg") !important;
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/firebug.svg) !important;
   -moz-image-region: rect(16px, 16px, 32px, 0) !important;
 }
 

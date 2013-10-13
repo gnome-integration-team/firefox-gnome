@@ -38,7 +38,7 @@
 }
 
 #foxmarks-statusbarpanel > #foxmarks-statusimage {
-   -moz-appearance: none !important;
+  -moz-appearance: none !important;
   min-width: 16px !important;
   max-width: 16px !important;
   min-height: 16px !important;

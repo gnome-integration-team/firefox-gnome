@@ -21,33 +21,36 @@
   list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/toomanytabs-toggle-button.png) !important;
 }
 
-.toomanytabs-tgbutton                          {-moz-image-region: rect(0px 40px 16px 24px) !important;}
+.toomanytabs-tgbutton {
+  -moz-image-region: rect(0px 40px 16px 24px) !important;
+}
 
-.toomanytabs-tgbutton:hover                    {-moz-image-region: rect(24px 40px 40px 24px) !important;}
+.toomanytabs-tgbutton:hover {
+  -moz-image-region: rect(24px 40px 40px 24px) !important;
+}
 
 /* The following buttons won't work with svg's */
 
 #visibo-tmt-view-options {
-    list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/toomanytabs-gears.png) !important;
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/toomanytabs-gears.png) !important;
 }
 
 #visibo-tmt-view-options-v {
-    list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/toomanytabs-gears.png) !important;
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/toomanytabs-gears.png) !important;
 }
 
 #visibo-tmt-closed-tabs {
-    list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/toomanytabs-trash.png) !important;
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/toomanytabs-trash.png) !important;
 }
 
 #visibo-tmt-closed-tabs-v {
-    list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/toomanytabs-trash.png) !important;
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/toomanytabs-trash.png) !important;
 }
 
 #visibo-tmt-view-row {
-    list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/toomanytabs-down.png) !important;
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/toomanytabs-down.png) !important;
 }
 
 #visibo-tmt-view-row-v {
-    list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/toomanytabs-down.png) !important;
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/toomanytabs-down.png) !important;
 }
-

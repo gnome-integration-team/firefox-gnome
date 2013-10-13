@@ -5,39 +5,33 @@
 /* Globe */
 
 #KeeFox_Menu-Button,
-toolbar[iconsize="small"] #KeeFox_Menu-Button
-{
-  list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/keeforms.svg") !important;
+toolbar[iconsize="small"] #KeeFox_Menu-Button {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/keeforms.svg) !important;
 }
 
 /* Lock */
 
 #KeeFox_Logins-Button,
-toolbar[iconsize="small"] #KeeFox_Logins-Button
-{
- 	list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/keelock.svg") !important;
+toolbar[iconsize="small"] #KeeFox_Logins-Button {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/keelock.svg) !important;
 }
 
 /* Lock (Disabled) */
 
 #KeeFox_Logins-Button[disabled="true"],
-toolbar[iconsize="small"] #KeeFox_Logins-Button[disabled="true"]
-{
-  	opacity: .5;
+toolbar[iconsize="small"] #KeeFox_Logins-Button[disabled="true"] {
+  opacity: .5;
 }
 
 /* Key */
 
 toolbarbutton#KeeFox_Main-Button,
-toolbar[iconsize="small"] toolbarbutton#KeeFox_Main-Button
-{
-  	list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/keekey.svg") !important;
+toolbar[iconsize="small"] toolbarbutton#KeeFox_Main-Button {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/keekey.svg) !important;
 }
 
 toolbarbutton.highlight, toolbarbutton.login-found,
 toolbar[iconsize="small"] toolbarbutton.highlight,
-toolbar[iconsize="small"] toolbarbutton.login-found 
-{
-  	list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/keekey-orange.svg") !important;
+toolbar[iconsize="small"] toolbarbutton.login-found {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/keekey-orange.svg) !important;
 }
-

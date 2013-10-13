@@ -2,18 +2,17 @@
  * id: https-everywhere@eff.org
  * URL: https://www.eff.org/https-everywhere */
 
-
 #https-everywhere-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/https-everywhere.svg") !important;
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/https-everywhere.svg) !important;
   -moz-box-orient: horizontal !important;
 }
 
 toolbar[iconsize="small"] #https-everywhere-button {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/extensions/https-everywhere.svg") !important;
+  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/https-everywhere.svg) !important;
   -moz-box-orient: horizontal !important;
 }
 
-/* Font fixes*/
+/* Font fixes */
 
 #https-everywhere-button menuitem.active-item label {
   color: inherit !important;
@@ -32,4 +31,3 @@ toolbar[iconsize="small"] #https-everywhere-button {
   color: inherit !important;
   font-weight: normal !important;
 }
-
