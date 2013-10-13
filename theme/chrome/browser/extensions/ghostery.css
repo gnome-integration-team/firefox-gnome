@@ -2,74 +2,31 @@
  * id: firefox@ghostery.com
  * URL: https://addons.mozilla.org/firefox/addon/ghostery/ */
 
-/* FIXME: Should be fixed in ../browser.css */
-#nav-bar[iconsize=large] > #ghostery-toolbar-button {
-  margin: 0px 3px !important;
-}
-#nav-bar[iconsize=small] > #ghostery-toolbar-button {
-  margin: 0px 2px !important; 
+#nav-bar[reliefbuttons="true"][iconsize=large] #ghostery-button {
+  min-width: 32px !important;
 }
 
-#ghostery-toolbar-button /* For older versions */,
-#ghostery-toolbar-button > .ghostery-toolbar-button {
-  border-radius: 3px !important;
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery.svg) !important;
-}
-
-#ghostery-toolbar-button[showTrackers="true"] /* For older versions */,
-#ghostery-toolbar-button[showTrackers="true"] > .ghostery-toolbar-button {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery-showtrackers.svg) !important;
-}
-
-#ghostery-toolbar-button[condition="grey"] /* For older versions */,
-#ghostery-toolbar-button[condition="grey"] > .ghostery-toolbar-button {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery-grayscale.svg) !important;
-}
-
-#ghostery-toolbar-button[condition="grey"] > .toolbarbutton-icon /* For older versions */,
-#ghostery-toolbar-button[condition="grey"] > .ghostery-toolbar-button > .toolbarbutton-icon {
-  opacity: 0.5;
-}
-
-#ghostery-toolbar-button .badge > .label {
-  background: transparent !important;
-  border-color: transparent !important;
-  box-shadow: none !important;
-  color: #242b33 !important;
-  text-shadow: none !important;
-}
-
-#ghostery-toolbar-button:hover .badge > .label {
-  background: rgba(255,255,255,0.8) !important;
-  border-color: rgba(50,50,50,.4) !important;
-  box-shadow: none !important;
-}
-
-#ghostery-toolbar-button .badge {
-  margin-top: 0 !important;
-}
-
-/* On status bar */
-
-#ghostery-status {
-  text-decoration: none !important;
-}
-
-#ghostery-status > #ghostery-status-icon {
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery-showtrackers.svg) !important;
-}
-#ghostery-status > #ghostery-status-icon[src*="off"] {
-  background-image: url(chrome://browser/skin/symbolic-icons/extensions/ghostery-grayscale.svg) !important;
-  opacity: 0.5;
-}
-
-#ghostery-status > #ghostery-status-icon {
-   -moz-appearance: none !important;
-  min-width: 16px !important;
-  max-width: 16px !important;
-  min-height: 16px !important;
+#ghostery-button[image*="Icon-16"] > .toolbarbutton-icon {
+  background: url(chrome://browser/skin/symbolic-icons/extensions/ghostery.svg) no-repeat center !important;
+  width: 16px !important;
+  height: 16px !important;
   -moz-padding-start: 16px !important;
   overflow: hidden !important;
+}
+
+#ghostery-button[image*="Icon-16-off"] > .toolbarbutton-icon {
+  background: url(chrome://browser/skin/symbolic-icons/extensions/ghostery-grayscale.svg) no-repeat center !important;
+  opacity: 0.5;
+  width: 16px !important;
+  height: 16px !important;
+  -moz-padding-start: 16px !important;
+  overflow: hidden !important;
+}
+
+#ghostery-button-badge {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #242b33 !important;
+  text-shadow: 0px 0px 1px #fff !important;
 }
