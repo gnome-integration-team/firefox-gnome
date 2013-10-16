@@ -62,7 +62,9 @@ label {
 }
 
 .alertCloseButton {
-  list-style-image: url("moz-icon://stock/gtk-close?size=button");
+  list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
+  height: 24px;
+  width: 24px;
 }
 
 .alertCloseButton > .toolbarbutton-icon {
