@@ -5,50 +5,15 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 findbar {
-  /*
-  background-color: Window;
-  */
+  -moz-appearance: none;
   background: linear-gradient(to bottom, #d4d4d4, #ececec);
-  /*
-  border-top: 1px solid #a7aba7;
-  */
+  padding: 4px 8px;
   border-top: 2px solid;
   -moz-border-top-colors: ThreeDShadow ThreeDHighlight;
-  padding-bottom: 1px;
-  -moz-appearance: none !important;
   min-width: 1px;
   transition-property: margin-bottom, opacity, visibility;
   transition-duration: 150ms, 150ms, 0s;
   transition-timing-function: ease-in-out, ease-in-out, linear;
-}
-
-findbar > * > * {
-  margin-left: 2px;
-  margin-right: 5px;
-}
-
-.findbar-find-next,
-.findbar-find-previous {
-  -moz-margin-start: -1px;
-  padding-left: 7px;
-  padding-right: 7px;
-  width: 30px;
-}
-
-.findbar-find-next .toolbarbutton-text,
-.findbar-find-previous .toolbarbutton-text {
-/*  display: none;*/
-  max-width: 0; /* FIXME: Hack for support font scaling factor */
-}
-
-.findbar-find-next .toolbarbutton-icon,
-.findbar-find-previous .toolbarbutton-icon {
-  margin: 0;
-}
-
-.findbar-find-next[disabled="true"] .toolbarbutton-icon,
-.findbar-find-previous[disabled="true"] .toolbarbutton-icon {
-  opacity: 0.3;
 }
 
 findbar[hidden] {
@@ -60,122 +25,143 @@ findbar[hidden] {
   transition-delay: 0s, 0s, 150ms;
 }
 
-/* find-next button */
+.findbar-closebutton {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
+  -moz-margin-start: 6px;
+}
+
+.findbar-closebutton > .toolbarbutton-icon {
+  margin: -3px;
+  opacity: 0.5;
+}
+
+.findbar-closebutton:hover > .toolbarbutton-icon {
+  opacity: 1;
+}
+
+/* Search field */
+
+.findbar-textbox {
+  -moz-appearance: none;
+  border: 1px solid rgba(0,0,0,.25);
+  background-image: linear-gradient(to bottom, #f2f2f2, #fdfdfd);
+  box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15),
+                    0px 1px 0 0 rgba(255,255,255,0.89);
+  color: rgba(0,0,0,0.9);
+  margin: 0;
+  padding: 3px;
+  width: 14em;
+}
+
+.findbar-textbox:-moz-locale-dir(ltr) {
+  border-radius: 3px 0 0 3px;
+  border-right-width: 0;
+}
+
+.findbar-textbox:-moz-locale-dir(rtl) {
+  border-radius: 0 3px 3px 0;
+  border-left-width: 0;
+}
+
+.findbar-textbox[focused="true"] {
+  border-color: Highlight;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.6),
+              inset 0 1px 2px 0 rgba(0,106,221,0.3);
+}
+
+.findbar-textbox[status="notfound"] {
+  background: #f66;
+  border-color: #f66;
+  box-shadow: inset 0 0 0 1em #f66;
+  color: white;
+}
+
+.findbar-textbox[flash="true"] {
+  box-shadow: inset 0 0 0 1em yellow;
+  color: black;
+}
+
+.findbar-textbox.minimal {
+  border-width: 1px;
+  border-radius: 3px;
+}
+
+.findbar-find-previous,
+.findbar-find-next {
+  line-height: 1em;
+  margin: 0 !important;
+  padding: 5px !important;
+  width: 30px;
+}
+
+.findbar-find-previous:focus,
+.findbar-find-next:focus {
+  border-color: Highlight;
+  box-shadow: inset 0 0 1px 0 Highlight;
+}
+
+.findbar-find-previous:not([disabled]):active,
+.findbar-find-next:not([disabled]):active {
+  background: rgba(23,50,76,.2);
+  border: 1px solid ThreeDShadow;
+  box-shadow: 0 1px 2px rgba(10,31,51,.2) inset;
+}
+
+.findbar-find-previous {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/go-up.svg);
+  border-radius: 0 !important;
+  -moz-margin-end: -1px !important;
+}
 
 .findbar-find-next {
-  /*
-  list-style-image: url(moz-icon://stock/go-down-symbolic?size=menu);
-  */
   list-style-image: url(chrome://browser/skin/symbolic-icons/go-down.svg);
   border-radius: 0 3px 3px 0 !important;
 }
 
-.findbar-find-next:not([disabled="true"]):active:hover > .toolbarbutton-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
+.findbar-find-previous > .toolbarbutton-icon,
+.findbar-find-next > .toolbarbutton-icon {
+  margin: 0;
 }
 
-/* find-previous button */
-
-.findbar-find-previous {
-  /*
-  list-style-image: url(moz-icon://stock/go-up-symbolic?size=menu);
-  */
-  list-style-image: url(chrome://browser/skin/symbolic-icons/go-up.svg);
-  border-radius: 0 !important;
-  -moz-margin-end: 0;
+.findbar-find-previous > .toolbarbutton-text,
+.findbar-find-next > .toolbarbutton-text {
+  display: none;
 }
 
-.findbar-find-previous:not([disabled="true"]):active:hover > .toolbarbutton-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
+.findbar-find-previous[disabled="true"] > .toolbarbutton-icon,
+.findbar-find-next[disabled="true"] > .toolbarbutton-icon {
+  opacity: .5;
 }
 
-/* highlight button */
-
-.findbar-highlight {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/highlight.svg);
-/*  -moz-margin-start: 6px;*/
+.findbar-find-next:-moz-locale-dir(ltr) {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
-.findbar-highlight[disabled="true"] {
-  opacity: 0.5;
+.findbar-find-next:-moz-locale-dir(rtl) {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
 }
 
-.findbar-closebutton {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
-  padding: 1px !important;
+.findbar-find-previous:focus + .findbar-find-next {
+  -moz-border-start-width: 0 !important;
 }
 
-.findbar-closebutton .toolbarbutton-icon {
-  opacity: 0.5;
-}
-.findbar-closebutton:hover .toolbarbutton-icon {
-  opacity: 1;
+.findbar-find-previous:focus {
+  -moz-border-end-width: 1px;
 }
 
-.find-status-icon {
-  list-style-image: none;
-  -moz-margin-end: 0;
-  width: 16px;
-  height: 16px;
+.findbar-highlight,
+.findbar-case-sensitive {
+  -moz-margin-start: 5px;
 }
 
 .findbar-find-status {
-  margin-top: 0;
-  margin-bottom: 0;
-  -moz-margin-start: 3px;
-  -moz-margin-end: 0;
-  padding: 2px !important;
-}
-
-.find-status-icon[status="notfound"] {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/important.svg);
-}
-
-.findbar-textbox {
-  -moz-appearance: none;
-  border-radius: 3px 0 0 3px !important;
-  -moz-margin-end:0 ;
-  border: 1px solid rgba(0,0,0,.25);
-  background-image: linear-gradient(to bottom, #f2f2f2, #fdfdfd);
-  padding: 3px;
-  box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15),
-  0px 1px 0 0 rgba(255,255,255,0.89);
-  color: rgba(0,0,0,0.9);
-}
-
-.findbar-textbox[focused="true"] {
-  -moz-border-top-colors: Highlight;
-  -moz-border-right-colors: Highlight;
-  -moz-border-bottom-colors: Highlight;
-  -moz-border-left-colors: Highlight;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.6),
-              inset 0 1px 2px 0 rgba(0,106,221,0.3);
+  margin: 0 !important;
+  -moz-margin-start: 12px !important;
 }
 
 .find-status-icon[status="pending"] {
   list-style-image: url("chrome://global/skin/icons/loading_16.png");
 }
 
-.findbar-textbox[status="notfound"] {
-  box-shadow: 0 0 0 1em #f66 inset;
-  background: #f66;
-  border-color: #f66;
-  color: white;
-}
-
-.findbar-textbox[flash="true"] {
-  box-shadow: 0 0 0 1em yellow inset;
-  color: black;
-}
-
-.find-status-icon[status="wrapped"] {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/wrap.svg);
-}
-
-findbar checkbox > .checkbox-spacer-box > .checkbox-check {
-  -moz-margin-end: -4px;
-}
-
-findbar checkbox:hover:active > .checkbox-spacer-box > .checkbox-check {
-  background-color: transparent;
-}

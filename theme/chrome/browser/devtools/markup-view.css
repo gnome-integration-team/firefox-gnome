@@ -11,10 +11,6 @@
   cursor: pointer;
 }
 
-.selected {
-  background-color: hsl(0,0%,90%);
-}
-
 /* Give some padding to focusable elements to match the editor input
  * that will replace them. */
 span[tabindex] {
@@ -23,7 +19,6 @@ span[tabindex] {
 }
 
 li.container {
-  position: relative;
   padding: 2px 0 0 2px;
 }
 
@@ -31,8 +26,13 @@ li.container {
   padding-left: 14px;
 }
 
+.codebox > * {
+  vertical-align: middle;
+}
+
 .expander {
-  position: absolute;
+  display: inline-block;
+  margin-left: -14px;
 }
 
 .more-nodes {

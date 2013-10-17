@@ -253,10 +253,6 @@ toolbar#ToolbarMode toolbarbutton {
   list-style-image: url(chrome://browser/skin/symbolic-icons/edit-clear-all.svg);
 }
 
-#Console\:clear:not([open="true"]):not([disabled="true"]):active:hover > .toolbarbutton-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#active);
-}
-
 toolbar#ToolbarMode .toolbarbutton-text {
   -moz-padding-end: 4px;
 }
