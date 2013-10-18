@@ -1,0 +1,150 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+findbar {
+  background: linear-gradient(to bottom, #d4d4d4, #ececec);
+  border-top: 2px solid;
+  -moz-border-top-colors: ThreeDShadow ThreeDHighlight;
+  padding-bottom: 1px;
+  -moz-appearance: none !important;
+  min-width: 1px;
+  transition-property: margin-bottom, opacity, visibility;
+  transition-duration: 150ms, 150ms, 0s;
+  transition-timing-function: ease-in-out, ease-in-out, linear;
+}
+
+findbar > * > * {
+  margin-left: 2px;
+  margin-right: 5px;
+}
+
+.findbar-find-next,
+.findbar-find-previous {
+  -moz-margin-start: -1px;
+  padding-left: 7px;
+  padding-right: 7px;
+  width: 30px;
+}
+
+.findbar-find-next .toolbarbutton-text,
+.findbar-find-previous .toolbarbutton-text {
+  max-width: 0;
+}
+
+.findbar-find-next .toolbarbutton-icon,
+.findbar-find-previous .toolbarbutton-icon {
+  margin: 0;
+}
+
+.findbar-find-next[disabled="true"] .toolbarbutton-icon,
+.findbar-find-previous[disabled="true"] .toolbarbutton-icon {
+  opacity: 0.3;
+}
+
+findbar[hidden] {
+  display: -moz-box;
+  visibility: collapse;
+  margin-bottom: -1em;
+  opacity: 0;
+  transition-delay: 0s, 0s, 150ms;
+}
+
+.findbar-find-next {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/go-down.svg);
+  border-radius: 0 3px 3px 0 !important;
+}
+
+.findbar-find-previous {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/go-up.svg);
+  border-radius: 0 !important;
+  -moz-margin-end: 0;
+}
+
+.findbar-highlight {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/highlight.svg);
+}
+
+.findbar-highlight[disabled="true"] {
+  opacity: 0.5;
+}
+
+.findbar-closebutton {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
+  padding: 1px !important;
+}
+
+.findbar-closebutton .toolbarbutton-icon {
+  opacity: 0.5;
+}
+.findbar-closebutton:hover .toolbarbutton-icon {
+  opacity: 1;
+}
+
+.find-status-icon {
+  list-style-image: none;
+  -moz-margin-end: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.findbar-find-status {
+  margin-top: 0;
+  margin-bottom: 0;
+  -moz-margin-start: 3px;
+  -moz-margin-end: 0;
+  padding: 2px !important;
+}
+
+.find-status-icon[status="notfound"] {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/important.svg);
+}
+
+.findbar-textbox {
+  -moz-appearance: none;
+  border-radius: 3px 0 0 3px !important;
+  -moz-margin-end:0 ;
+  border: 1px solid rgba(0,0,0,.25);
+  background-image: linear-gradient(to bottom, #f2f2f2, #fdfdfd);
+  padding: 3px;
+  box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15),
+  0px 1px 0 0 rgba(255,255,255,0.89);
+  color: rgba(0,0,0,0.9);
+}
+
+.findbar-textbox[focused="true"] {
+  -moz-border-top-colors: Highlight;
+  -moz-border-right-colors: Highlight;
+  -moz-border-bottom-colors: Highlight;
+  -moz-border-left-colors: Highlight;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.6),
+              inset 0 1px 2px 0 rgba(0,106,221,0.3);
+}
+
+.find-status-icon[status="pending"] {
+  list-style-image: url("chrome://global/skin/icons/loading_16.png");
+}
+
+.findbar-textbox[status="notfound"] {
+  box-shadow: 0 0 0 1em #f66 inset;
+  background: #f66;
+  border-color: #f66;
+  color: white;
+}
+
+.findbar-textbox[flash="true"] {
+  box-shadow: 0 0 0 1em yellow inset;
+  color: black;
+}
+
+.find-status-icon[status="wrapped"] {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/wrap.svg);
+}
+
+findbar checkbox > .checkbox-spacer-box > .checkbox-check {
+  -moz-margin-end: -4px;
+}
+
+findbar checkbox:hover:active > .checkbox-spacer-box > .checkbox-check {
+  background-color: transparent;
+}

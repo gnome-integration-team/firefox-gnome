@@ -1,0 +1,24 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+.profiler-sidebar-item > span {
+  margin-top: 2px;
+  color: rgb(140, 152, 165);
+}
+
+.selected .profiler-sidebar-item > span {
+  color: rgb(128, 195, 228);
+}
+
+.devtools-toolbar {
+  height: 26px;
+  padding: 3px;
+}
+
+.devtools-toolbar .devtools-toolbarbutton {
+  min-width: 48px;
+  min-height: 0;
+  font-size: 11px;
+  padding: 0px 8px;
+}
