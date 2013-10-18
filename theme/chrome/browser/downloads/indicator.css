@@ -126,11 +126,6 @@
   background-color: #555753;
 }
 
-#downloads-indicator[open="true"] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-progress > .progress-remainder,
-#downloads-indicator:active:hover > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-progress > .progress-remainder {
-  background-color: #eee;
-}
-
 #downloads-indicator[paused] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-progress > .progress-bar {
   background-color: #edd400;
 }
