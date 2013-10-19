@@ -19,13 +19,22 @@
 }
 
 #appmenu-button > .button-box {
-  border-style: none !important;
-  padding: 0 !important;
+  border-style: none;
+  margin: 0 -1px;
+  padding: 0;
 }
 
-#appmenu-button > .button-box > .button-icon,
-#appmenu-button > .button-box > .button-menu-dropmarker {
+#appmenu-button > .button-box > .button-icon {
   display: none !important;
+}
+
+#appmenu-button > .button-box > .button-menu-dropmarker {
+  list-style-image: url(chrome://os/skin/browser/appmenu-dropmarker.png);
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  -moz-margin-start: .5em;
 }
 
 @media (-moz-windows-classic) {
