@@ -54,7 +54,33 @@
   border-radius: 0 !important;
 }
 
-/* Default style */
+/* ::::: Appmenu Popup ::::: */
+
+#appmenu-popup {
+  -moz-appearance: none;
+  background: white;
+  border: 1px solid ThreeDShadow;
+}
+#appmenuPrimaryPane {
+  background-color: rgba(255,255,255,0.5);
+  padding: 2px;
+  -moz-border-end: none;
+}
+#appmenuSecondaryPane {
+  background-color: #f1f5fb;
+  box-shadow: 1px 0 2px rgb(204,214,234) inset;
+  -moz-padding-start: 3px;
+  -moz-padding-end: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-family: "Segoe UI Semibold", "Segoe UI", sans-serif;
+}
+#appmenuSecondaryPane:-moz-locale-dir(rtl) {
+  box-shadow: -1px 0 2px rgb(204,214,234) inset;
+}
+
+/* ::::: Default style ::::: */
+
 #appmenu-button {
   background-image: linear-gradient(rgb(247,182,82), rgb(215,98,10) 95%) !important;
   border-color: rgba(83,42,6,.9) !important;
