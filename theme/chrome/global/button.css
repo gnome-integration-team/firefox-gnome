@@ -6,6 +6,8 @@
   == Styles used by the XUL button element.
   ======================================================================= */
 
+@import url("chrome://os/skin/global/button.css");
+
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 /* :::::::::: button :::::::::: */
