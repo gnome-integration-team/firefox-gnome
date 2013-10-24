@@ -2,14 +2,47 @@
  * id: https-everywhere@eff.org
  * URL: https://www.eff.org/https-everywhere */
 
-#https-everywhere-button {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/https-everywhere.svg) !important;
-  -moz-box-orient: horizontal !important;
+:-moz-any(#navigator-toolbox, #addon-bar) #https-everywhere-button,
+#nav-bar #https-everywhere-button {
+  padding: 0 !important;
 }
 
-toolbar[iconsize="small"] #https-everywhere-button {
+#addon-bar #https-everywhere-button,
+#nav-bar #https-everywhere-button {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#https-everywhere-button > .https-everywhere-button {
   list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/https-everywhere.svg) !important;
-  -moz-box-orient: horizontal !important;
+  margin: 0 !important;
+}
+
+#https-everywhere-button[status="disabled"] > .https-everywhere-button > .toolbarbutton-icon {
+  opacity: 0.5 !important;
+}
+
+#rscounter {
+  -moz-margin-start: -5px !important;
+  -moz-margin-end: -15px !important;
+  pointer-events: none;
+  min-width: 20px;
+  text-align: center;
+}
+#nav-bar[reliefbuttons="true"][iconsize=large] #rscounter {
+  -moz-margin-start: -3px !important;
+  -moz-margin-end: -18px !important;
+}
+
+#rsapplied {
+  background: none !important;
+  border: none !important;
+}
+
+:-moz-any(#navigator-toolbox, #addon-bar) #https-everywhere-button:not([rulesetsApplied="0"]) > .https-everywhere-button {
+  -moz-padding-start: 8px !important;
+  -moz-padding-end: 0px !important;
 }
 
 /* Font fixes */
