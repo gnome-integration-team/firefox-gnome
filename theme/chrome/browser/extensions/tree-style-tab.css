@@ -90,7 +90,7 @@
 }
 
 #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[selected="true"]:not(:-moz-window-inactive) .tab-close-button {
-  list-style-image: url(chrome://browser/skin/tabbrowser/close-active.png);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/close_white.svg);
 }
 
 #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[pinned] .tab-close-button {

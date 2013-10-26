@@ -15,6 +15,30 @@
     <feBlend in="WhiteIcon" in2="Shadow" mode="normal" />
   </filter>
   
+  <filter id="tab-close" filterRes="500" x="0" y="0" width="16px" height="16px">
+    <feColorMatrix values="0 0 0 0 1
+                           0 0 0 0 1
+                           0 0 0 0 1
+                           0 0 0 1 0" in="SourceGraphic" result="ShadowColor"/>
+    <feOffset result="offOut" in="ShadowColor" dx="0" dy="1" />
+    <feGaussianBlur result="Shadow" in="offOut" stdDeviation="0" />
+    <feBlend in="SourceGraphic" in2="Shadow" mode="normal" />
+  </filter>
+  
+  <filter id="tab-close-active" filterRes="500" x="0" y="0" width="16px" height="16px">
+    <feColorMatrix values="0 0 0 0 1
+                           0 0 0 0 1
+                           0 0 0 0 1
+                           0 0 0 1 0" in="SourceGraphic" result="WhiteIcon"/>
+    <feColorMatrix values="0 0 0 0 0.2
+                           0 0 0 0 0.2
+                           0 0 0 0 0.2
+                           0 0 0 1 0  " in="SourceAlpha" result="ShadowColor"/>
+    <feOffset result="offOut" in="ShadowColor" dx="0" dy="2" />
+    <feGaussianBlur result="Shadow" in="offOut" stdDeviation="0" />
+    <feBlend in="WhiteIcon" in2="Shadow" mode="normal" />
+  </filter>
+  
   <filter id="checked-inactive" filterRes="500" x="0" y="0" width="16px" height="16px">
     <!-- [checked] state in :-moz-window-inactive window -->
     <feColorMatrix values="0 0 0 0 0.9

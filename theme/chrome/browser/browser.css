@@ -2046,9 +2046,13 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 
 .panel-promo-closebutton {
-  list-style-image: url(chrome://browser/skin/tabbrowser/close-normal.png);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.panel-promo-closebutton > .toolbarbutton-icon {
+  opacity: .5;
 }
 
 .panel-promo-closebutton > .toolbarbutton-text {
@@ -2285,6 +2289,46 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   -moz-border-image: url(tabbrowser/adwaita-tab-new.png) 7 8 1 8 fill / 7px 8px 1px 8px stretch !important;
 }
 
+@media (min-resolution: 2dppx) {
+  #main-window .tabbrowser-tab:not([selected="true"]) > .tab-stack {
+    -moz-border-image: url(tabbrowser/adwaita-tab-2dppx.png) 14 16 2 16 fill / 7px 8px 1px 8px stretch;
+  }
+
+  #main-window .tabbrowser-tab[selected="true"] > .tab-stack {
+    -moz-border-image: url(tabbrowser/adwaita-tab-selected-2dppx.png) 14 16 2 16 fill / 7px 8px 1px 8px stretch;
+  }
+
+  .tabbrowser-tabs:not([movingtab]) > .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab > .tab-stack {
+    -moz-border-image: url(tabbrowser/adwaita-tab-right-2dppx.png) 14 16 2 16 fill / 7px 8px 1px 8px stretch !important;
+  }
+
+  .tabbrowser-tabs:not([movingtab]) > .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab:-moz-locale-dir(rtl) > .tab-stack {
+    -moz-border-image: url(tabbrowser/adwaita-tab-right-rtl-2dppx.png) 14 16 2 16 fill / 7px 8px 1px 8px stretch !important;
+  }
+
+  .tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned]):not([selected="true"]) > .tab-stack,
+  .tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] ~ .tabbrowser-tab[hidden="true"] + .tabbrowser-tab:not([hidden="true"]):not([selected="true"]) > .tab-stack {
+    -moz-border-image: url(tabbrowser/adwaita-tab-2dppx.png) 14 16 2 16 fill / 7px 8px 1px 8px stretch !important;
+  }
+
+  .tabbrowser-tab[titlechanged]:not([selected="true"]) > .tab-stack {
+    -moz-border-image: url(tabbrowser/adwaita-tab-new-2dppx.png) 14 16 2 16 fill / 7px 8px 1px 8px stretch !important;
+  }
+
+  .tabbrowser-tabs:not([movingtab]) > .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged] > .tab-stack {
+    -moz-border-image: url(tabbrowser/adwaita-tab-new-right-2dppx.png) 14 16 2 16 fill / 7px 8px 1px 8px stretch !important;
+  }
+
+  .tabbrowser-tabs:not([movingtab]) > .tabbrowser-tab[selected="true"] ~ .tabbrowser-tab[titlechanged]:-moz-locale-dir(rtl) > .tab-stack {
+    -moz-border-image: url(tabbrowser/adwaita-tab-new-right-rtl-2dppx.png) 14 16 2 16 fill / 7px 8px 1px 8px stretch !important;
+  }
+
+  .tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] + .tabbrowser-tab:not([pinned])[titlechanged] > .tab-stack,
+  .tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] ~ .tabbrowser-tab[hidden="true"] + .tabbrowser-tab:not([hidden="true"])[titlechanged] > .tab-stack {
+    -moz-border-image: url(tabbrowser/adwaita-tab-new-2dppx.png) 14 16 2 16 fill / 7px 8px 1px 8px stretch !important;
+  }
+}
+
 .tabbrowser-tab[pinned] > .tab-stack {
   padding-left: 13px;
   padding-right: 13px;
@@ -2347,33 +2391,37 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 
 /* In-tab close button */
-.tab-close-button > .toolbarbutton-icon {
-  /* XXX Buttons have padding in widget/ that we don't want here but can't override with good CSS, so we must
-     use evil CSS to give the impression of smaller content */
-/*  margin: -2px;*/
-}
-
 #TabsToolbar .tab-close-button {
-  list-style-image: url(chrome://browser/skin/tabbrowser/close-normal.png);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
   margin: 1px 0;
   -moz-margin-end: -3px;
-  padding: 3px;
+  padding: 0;
   border-radius: 3px;
   border: 1px solid transparent !important;
   box-shadow: none !important;
 }
+#TabsToolbar .tab-close-button > .toolbarbutton-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#tab-close);
+  opacity: .4;
+}
+
 #TabsToolbar .tab-close-button:hover {
-  list-style-image: url(chrome://browser/skin/tabbrowser/close-hover.png);
   background: none !important;
   border-color: rgba(0, 0, 0, 0.1) !important;
   box-shadow: none !important;
 }
+#TabsToolbar .tab-close-button:hover > .toolbarbutton-icon {
+  opacity: 1;
+}
+
 #TabsToolbar .tab-close-button:active:hover {
-  list-style-image: url(chrome://browser/skin/tabbrowser/close-active.png);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.13) 1px, rgba(0, 0, 0, 0.08) 2px, rgba(0, 0, 0, 0.07) 100%) !important;
   border-color: rgba(0, 0, 0, 0.12) !important;
   border-top-color: rgba(0, 0, 0, 0.27) !important;
   box-shadow: none !important;
+}
+#TabsToolbar .tab-close-button:active:hover > .toolbarbutton-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#tab-close-active);
 }
 
 /* Tabstrip new tab button */
@@ -2703,7 +2751,6 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 }
 
 #addonbar-closebutton {
-/*  list-style-image: url(chrome://browser/skin/tabbrowser/close-normal.png);*/
   list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
 }
 
