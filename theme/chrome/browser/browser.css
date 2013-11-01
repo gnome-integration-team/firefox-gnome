@@ -566,7 +566,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   background: transparent !important;
   border: 1px solid transparent !important;
   border-radius: 3px;
-  color: #2e3436 !important;
+  color: #2e3436;
   padding: 3px;
   text-shadow: none;
   transition-property: border, box-shadow, background;
@@ -625,7 +625,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #social-toolbar-item > .toolbarbutton-1[disabled="true"]:hover,
 #social-toolbar-item > .toolbarbutton-1[disabled="true"]:active,
 #social-toolbar-item > .toolbarbutton-1[disabled="true"]:active:hover {
-  color: #a7aba7 !important;
+  color: #a7aba7;
 }
 
 /* ::::: Buttons on Navigation bar ::::: */
