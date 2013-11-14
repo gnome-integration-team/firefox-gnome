@@ -18,11 +18,11 @@
 }
 
 .side-menu-widget-item-checkbox {
- -moz-appearance: none;
+  -moz-appearance: none;
+  -moz-margin-end: -6px;
   padding: 0;
-  margin: 0 -4px 0 4px;
   opacity: 0;
-  transition: opacity .25s ease 0s;
+  transition: opacity .15s ease 0s;
 }
 
 /* Only show the checkbox when the source is hovered over, is selected, or if it
@@ -31,7 +31,7 @@
 .side-menu-widget-item.selected > .side-menu-widget-item-checkbox,
 .side-menu-widget-item-checkbox:not([checked]) {
   opacity: 1;
-  transition: opacity .25s ease 0s;
+  transition: opacity .15s ease 0s;
 }
 
 .side-menu-widget-item-checkbox > .checkbox-spacer-box {
@@ -44,14 +44,19 @@
   background-image: url(itemToggle.png);
   background-repeat: no-repeat;
   background-clip: content-box;
-  background-position: -24px 0;
-  width: 24px;
-  height: 24px;
+  background-size: 32px 16px;
+  background-position: -16px 0;
+  width: 16px;
+  height: 16px;
   border: 0;
 }
 
 .side-menu-widget-item-checkbox[checked] > .checkbox-spacer-box > .checkbox-check {
   background-position: 0 0;
+}
+
+.side-menu-widget-item-checkbox:not([checked]) ~ .side-menu-widget-item-contents {
+  color: #888;
 }
 
 .side-menu-widget-item-checkbox:not([checked]) ~ .side-menu-widget-item-contents > .dbg-breakpoint {
@@ -61,9 +66,9 @@
 /* Black box message */
 
 #black-boxed-message {
+  background: url(background-noise-toolbar.png) rgb(61,69,76);
   /* Prevent the container deck from aquiring the height from this message. */
   min-height: 1px;
-  background-color: rgb(61,69,76);
   padding: 25vh 0;
   color: white;
 }
@@ -124,7 +129,7 @@
 /* Sources and breakpoints view */
 
 .dbg-breakpoint {
-  font-family: monospace;
+  -moz-margin-start: -14px;
 }
 
 .dbg-breakpoint-line {
@@ -134,6 +139,13 @@
 .dbg-breakpoint-text {
   -moz-margin-start: 10px !important;
   font-style: italic;
+  font-size: 90%;
+}
+
+.dbg-breakpoint-checkbox {
+  width: 16px;
+  height: 16px;
+  margin: 2px;
 }
 
 /* Watch expressions view */
@@ -155,7 +167,6 @@
 
 .dbg-expression-input {
   -moz-padding-start: 2px !important;
-  font-family: Menlo, Monaco, monospace;
 }
 
 /* Searchbox and the search operations help panel */
@@ -182,7 +193,6 @@
   -moz-margin-start: 2px;
   -moz-margin-end: 6px;
   text-align: center;
-  font-family: Menlo, Monaco, monospace;
 }
 
 .searchbox-panel-operator-label {
@@ -280,7 +290,6 @@
   -moz-padding-end: 4px;
   padding-top: 2px;
   text-align: end;
-  font-family: monospace;
   color: #8c8c8c;
 }
 
@@ -288,7 +297,6 @@
   -moz-padding-start: 4px;
   padding-top: 1px;
   padding-bottom: 1px;
-  font-family: monospace;
 }
 
 .dbg-results-line-contents-string {

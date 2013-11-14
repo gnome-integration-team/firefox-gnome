@@ -14,7 +14,7 @@
   -moz-user-select: none;
 }
 
-.ruleview-rule-inheritance {
+.ruleview-header {
   border-top-width: 1px;
   border-bottom-width: 1px;
   border-top-style: solid;
@@ -46,7 +46,8 @@
 .ruleview-warning {
   background: url("chrome://browser/skin/devtools/alerticon-warning.png");
   -moz-margin-start: 5px;
-  vertical-align: middle;
+  display: inline-block;
+  vertical-align: top;
   width: 13px;
   height: 12px;
 }
