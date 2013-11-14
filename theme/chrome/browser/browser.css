@@ -1280,6 +1280,12 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
   opacity: 0.6;
 }
 
+.mixedDisplayContent > #page-proxy-favicon[pageproxystate="valid"],
+.mixedDisplayContentLoadedActiveBlocked > #page-proxy-favicon[pageproxystate="valid"] {
+  list-style-image: url(chrome://adwaita-browser/skin/symbolic-icons/identity-icons-https-mixed-display.svg);
+  opacity: 0.5;
+}
+
 #page-proxy-favicon[pageproxystate="invalid"] {
   opacity: 0.3;
 }
@@ -1506,6 +1512,7 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
   list-style-image: url(chrome://mozapps/skin/passwordmgr/key-64.png);
 }
 
+.popup-notification-icon[popupid="webapps-install-progress"],
 .popup-notification-icon[popupid="webapps-install"] {
   list-style-image: url(chrome://global/skin/icons/webapps-64.png);
 }
@@ -1667,23 +1674,12 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 }
 
 #plugins-notification-icon {
-  /*
-  list-style-image: url(chrome://browser/skin/notification-pluginNormal.png);
-  */
   list-style-image: url(chrome://browser/skin/symbolic-icons/plugin.svg);
 }
-
-#alert-plugins-notification-icon {
-  /*
-  list-style-image: url(chrome://browser/skin/notification-pluginAlert.png);
-  */
+#plugins-notification-icon.plugin-hidden {
   list-style-image: url(chrome://browser/skin/symbolic-icons/plugin-alert.svg);
 }
-
-#blocked-plugins-notification-icon {
-  /*
-  list-style-image: url(chrome://browser/skin/notification-pluginBlocked.png);
-  */
+#plugins-notification-icon.plugin-blocked {
   list-style-image: url(chrome://browser/skin/symbolic-icons/plugin-blocked.svg);
 }
 
@@ -1698,7 +1694,7 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
   visibility: collapse;
 }
 
-#blocked-plugins-notification-icon[showing] {
+#plugins-notification-icon.plugin-blocked[showing] {
   animation: pluginBlockedNotification 500ms ease 0s 5 alternate both;
 }
 
@@ -2866,6 +2862,27 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 .devtools-responsiveui-toolbar:-moz-locale-dir(ltr) > *:first-child,
 .devtools-responsiveui-toolbar:-moz-locale-dir(rtl) > *:last-child {
   margin-left: 0;
+}
+
+.devtools-responsiveui-close {
+  list-style-image: url("chrome://browser/skin/devtools/close.png");
+}
+
+.devtools-responsiveui-rotate {
+  list-style-image: url("chrome://browser/skin/devtools/responsiveui-rotate.png");
+}
+
+.devtools-responsiveui-touch {
+  list-style-image: url("chrome://browser/skin/devtools/responsiveui-touch.png");
+  -moz-image-region: rect(0px,16px,16px,0px);
+}
+
+.devtools-responsiveui-touch[checked] {
+  -moz-image-region: rect(0px,32px,16px,16px);
+}
+
+.devtools-responsiveui-screenshot {
+  list-style-image: url("chrome://browser/skin/devtools/responsiveui-screenshot.png");
 }
 
 .devtools-responsiveui-resizebarV {
