@@ -30,7 +30,7 @@
   min-width: 20px;
   text-align: center;
 }
-#nav-bar[reliefbuttons="true"][iconsize=large] #rscounter {
+#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] #rscounter {
   -moz-margin-start: -3px !important;
   -moz-margin-end: -18px !important;
 }

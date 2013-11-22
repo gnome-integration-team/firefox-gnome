@@ -4,8 +4,8 @@
 
 /* ::::: Relief buttons ::::: */
 
-#nav-bar[iconsize=large] > toolbarbutton,
-#nav-bar[iconsize=large] > toolbaritem:not(#urlbar):not(#unified-back-forward-button) > toolbarbutton {
+#navigator-toolbox[iconsize=large] > #nav-bar > toolbarbutton,
+#navigator-toolbox[iconsize=large] > #nav-bar > toolbaritem:not(#urlbar):not(#unified-back-forward-button) > toolbarbutton {
   min-width: 32px !important;
 }
 

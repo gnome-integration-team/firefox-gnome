@@ -2,7 +2,7 @@
  * id: firefox@ghostery.com
  * URL: https://addons.mozilla.org/firefox/addon/ghostery/ */
 
-#nav-bar[reliefbuttons="true"][iconsize=large] #ghostery-button {
+#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] #ghostery-button {
   min-width: 32px !important;
 }
 

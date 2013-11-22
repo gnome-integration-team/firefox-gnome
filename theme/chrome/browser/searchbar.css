@@ -37,12 +37,12 @@
   padding: 3px;
   min-width: 22px;
 }
-#nav-bar[iconsize=large] .searchbar-textbox .searchbar-engine-button {
+#navigator-toolbox[iconsize=large] > #nav-bar .searchbar-textbox .searchbar-engine-button {
   height: 26px;
   padding: 5px;
   min-width: 26px;
 }
-#nav-bar[iconsize=small] .searchbar-textbox .searchbar-engine-button {
+#navigator-toolbox[iconsize=small] > #nav-bar .searchbar-textbox .searchbar-engine-button {
   height: 24px;
   padding: 4px;
   min-width: 24px;
@@ -96,12 +96,12 @@
   padding: 3px;
   min-width: 22px;
 }
-#nav-bar[iconsize=large] .searchbar-textbox .search-go-button {
+#navigator-toolbox[iconsize=large] > #nav-bar .searchbar-textbox .search-go-button {
   height: 26px;
   padding: 5px;
   min-width: 26px;
 }
-#nav-bar[iconsize=small] .searchbar-textbox .search-go-button {
+#navigator-toolbox[iconsize=small] > #nav-bar .searchbar-textbox .search-go-button {
   height: 24px;
   padding: 4px;
   min-width: 24px;
