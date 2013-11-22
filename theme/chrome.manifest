@@ -1,9 +1,15 @@
 skin    browser         Adwaita     chrome/browser/
 skin    global          Adwaita     chrome/global/
-skin    mozapps         Adwaita     chrome/mozapps/
+
+skin    adwaita-mozapps    Adwaita    chrome/mozapps/
 
 #skin    appversion      Adwaita     chrome/appversion/25/ appversion<26a1
 #skin    appversion      Adwaita     chrome/appversion/26/ appversion>=26a1
 
 skin    os              Adwaita     chrome/os/windows/     os=WINNT
 skin    os              Adwaita     chrome/os/linux/       os!=WINNT
+
+style  about:addons                                        chrome://adwaita-mozapps/skin/extensions/extensions.css
+style  chrome://mozapps/content/extensions/extensions.xul  chrome://adwaita-mozapps/skin/extensions/extensions.css
+
+style  chrome://mozapps/content/downloads/downloads.xul    chrome://adwaita-mozapps/skin/downloads/downloads.css
