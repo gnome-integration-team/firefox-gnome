@@ -1,0 +1,12 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+@-moz-document url("chrome://browser/content/browser.xul") {
+
+/* ::::: Relief buttons ::::: */
+
+#nav-bar[iconsize=large] > toolbarbutton,
+#nav-bar[iconsize=large] > toolbaritem:not(#urlbar):not(#unified-back-forward-button) > toolbarbutton {
+  min-width: 32px !important;
+}
+
+}

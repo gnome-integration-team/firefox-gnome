@@ -1,0 +1,4 @@
+content  gnome-theme-tweak         chrome/content/
+
+locale   gnome-theme-tweak  en-US  chrome/locale/en-US/
+locale   gnome-theme-tweak  ru     chrome/locale/ru/
