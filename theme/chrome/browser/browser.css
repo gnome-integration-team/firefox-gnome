@@ -1262,11 +1262,11 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
   list-style-image: url(chrome://browser/skin/symbolic-icons/identity-icons-brand.svg);
 }
 
-.verifiedDomain #page-proxy-favicon[pageproxystate="valid"] {
+.verifiedDomain > #page-proxy-favicon[pageproxystate="valid"] {
   list-style-image: url(chrome://browser/skin/symbolic-icons/identity-icons-https.svg);
 }
 
-.verifiedIdentity #page-proxy-favicon[pageproxystate="valid"] {
+.verifiedIdentity > #page-proxy-favicon[pageproxystate="valid"] {
   list-style-image: url(chrome://browser/skin/symbolic-icons/identity-icons-https-ev.svg);
   opacity: 0.6;
 }
@@ -1278,7 +1278,7 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 
 .mixedDisplayContent > #page-proxy-favicon[pageproxystate="valid"],
 .mixedDisplayContentLoadedActiveBlocked > #page-proxy-favicon[pageproxystate="valid"] {
-  list-style-image: url(chrome://adwaita-browser/skin/symbolic-icons/identity-icons-https-mixed-display.svg);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/identity-icons-https-mixed-display.svg);
   opacity: 0.5;
 }
 
