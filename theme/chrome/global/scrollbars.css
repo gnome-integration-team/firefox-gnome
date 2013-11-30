@@ -12,17 +12,10 @@
 /* ::::: scrollbar ::::: */
 
 scrollbar {
-  min-height: 13px;
-  min-width: 13px;
-  /*
   -moz-appearance: scrollbartrack-horizontal;
-  */
   -moz-binding: url("chrome://global/content/bindings/scrollbar.xml#scrollbar");
   cursor: default;
-  /*
   background: url("chrome://global/skin/scrollbar/slider.gif") scrollbar;
-  */
-  background: #d6d6d6;
   pointer-events: auto;
 }
 
@@ -33,9 +26,7 @@ scrollbar[root="true"] {
 
 scrollbar[orient="vertical"] 
 {
-  /*
    -moz-appearance: scrollbartrack-vertical;
-   */
 }
 
 @media all and (-moz-overlay-scrollbars) {
@@ -49,48 +40,24 @@ scrollbar[orient="vertical"]
 
 thumb,
 scrollbarbutton {
-  /*
   border: 2px solid;
   -moz-border-top-colors: ThreeDLightShadow ThreeDHighlight;
   -moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
   -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
   -moz-border-left-colors: ThreeDLightShadow ThreeDHighlight;
   background-color: -moz-Dialog;
-  */
-  background: #9b9d9e;
 }
 
 /* ::::: thumb (horizontal) ::::: */
 
 thumb {
-  /*
   -moz-appearance: scrollbarthumb-vertical;
-  */
-  border: 3px solid #d6d6d6;
-  border-radius: 6px;
-}
-
-thumb[orient="vertical"] {
-  width: 13px;
-  min-height: 42px;
+  min-height: 8px;
 }
 
 thumb[orient="horizontal"] {
-  height: 13px;
-  /*
   -moz-appearance: scrollbarthumb-horizontal;
-  */
-  min-width: 42px;
-}
-
-thumb:hover {
-  background: #828586;
-}
-
-thumb:active,
-thumb:hover:active,
-thumb[active="true"] {
-  background: #4a90d9;
+  min-width: 8px;
 }
 
 /* ::::: scrollbar button ::::: */
@@ -99,7 +66,6 @@ scrollbarbutton {
   background: -moz-Dialog no-repeat 50% 50%;
   min-width: 16px;
   min-height: 16px;
-  display: none;
 }
 
 scrollbarbutton:hover:active, scrollbarbutton[active="true"] {
@@ -117,15 +83,11 @@ scrollcorner {
   -moz-binding: url(chrome://global/content/bindings/scrollbar.xml#scrollbar-base);
   width: 16px;
   cursor: default;
-  /*
   background-color: -moz-Dialog;
-  */
-  background: #d6d6d6;
 }
 
 /* ..... increment .... */
 
-/*
 scrollbarbutton[type="increment"] {
   -moz-appearance: scrollbarbutton-right;
   background-image: url("chrome://global/skin/arrow/arrow-rit.gif")
@@ -143,11 +105,9 @@ scrollbar[orient="vertical"] > scrollbarbutton[type="increment"] {
 scrollbar[orient="vertical"] > scrollbarbutton[type="increment"][disabled="true"] {
   background-image: url("chrome://global/skin/arrow/arrow-dn-dis.gif")
 }
-*/
 
 /* ..... decrement .... */
 
-/*
 scrollbarbutton[type="decrement"] {
   -moz-appearance: scrollbarbutton-left;
    background-image: url("chrome://global/skin/arrow/arrow-lft.gif")
@@ -165,7 +125,6 @@ scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"] {
 scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"][disabled="true"] {
    background-image: url("chrome://global/skin/arrow/arrow-up-dis.gif")
 }
-*/
 
 /* :::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 /* ::::::::::::::::::::: MEDIA PRINT :::::::::::::::::::::: */
@@ -265,9 +224,4 @@ scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"][disabled="true"
      background-image: url("chrome://global/skin/arrow/arrow-up-dis.gif")
   }
 
-}
-
-/* Fix for Tree Style Tab extension */
-#TabsToolbar.treestyletab-tabbar-toolbar scrollbar {
-  display: none;
 }
