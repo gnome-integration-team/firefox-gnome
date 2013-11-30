@@ -23,10 +23,6 @@ toolbarbutton:-moz-lwtheme {
   text-shadow: none;
 }
 
-/* FIXME: Maybe, it's unneeded.
-   General idea of this code: add space after image and before label/dropmarker.
-   But we use dropmarkers for some buttons only. => This space unneeded by default.
-       by @seleznev */
 .toolbarbutton-icon[label]:not([label=""]),
 .toolbarbutton-icon[type="menu"] {
   -moz-margin-end: 2px;
@@ -74,12 +70,11 @@ toolbarbutton:-moz-lwtheme:not(:hover):not([checked="true"]):not([open="true"]):
 /* ::::: toolbarbutton menu ::::: */
 
 .toolbarbutton-menu-dropmarker {
-  -moz-appearance: none !important;
-  list-style-image: url(chrome://browser/skin/symbolic-icons/dropmarker.svg);
+  -moz-appearance: toolbarbutton-dropdown !important;
+  list-style-image: none;
   -moz-image-region: auto;
   padding: 0;
   margin: 0;
-  display: none;
 }
 
 .toolbarbutton-menu-dropmarker[disabled="true"] {
@@ -108,21 +103,14 @@ toolbarbutton[type="menu-button"][disabled="true"]:hover:active {
   -moz-box-align: center;
   -moz-box-pack: center;
   -moz-box-orient: vertical;
-  background: transparent !important;
-  border-width: 0 !important;
-  box-shadow: none !important;
 }
 
 /* .......... dropmarker .......... */
 
 .toolbarbutton-menubutton-dropmarker {
-  -moz-appearance: none;
-  -moz-image-region: auto;
+  margin: 0 3px;
+  -moz-appearance: toolbarbutton-dropdown !important;
   list-style-image: none;
-  -moz-box-align: center;
-  list-style-image: url(chrome://browser/skin/symbolic-icons/dropmarker.svg);
-  padding: 0;
-  margin: 0;
-  -moz-margin-end: 3px;
-  -moz-margin-start: -5px;
+  -moz-image-region: auto;
 }
+
