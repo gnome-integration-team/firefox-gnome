@@ -43,10 +43,6 @@ toolbarbutton:hover {
 
 toolbarbutton:hover:active,
 toolbarbutton[open="true"] {
-  padding-top: 4px;
-  padding-bottom: 2px;
-  -moz-padding-start: 4px;
-  -moz-padding-end: 2px;
   color: ButtonText;
 }
 

@@ -25,6 +25,50 @@ findbar[hidden] {
   transition-delay: 0s, 0s, 150ms;
 }
 
+/* Buttons */
+
+findbar toolbarbutton {
+  -moz-appearance: none;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: #2e3436;
+  padding: 3px 5px;
+  transition-property: border, box-shadow, background;
+  transition-duration: 200ms;
+}
+
+findbar toolbarbutton:not([disabled="true"]):hover {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(255,255,255,0.8) 40%, rgba(220,220,220,0.5));
+  border-color: rgba(50,50,50,.4);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.37);
+}
+
+findbar toolbarbutton:not([disabled="true"]):not([open="true"]):active:hover,
+findbar toolbarbutton[checked="true"],
+findbar toolbarbutton[checked="true"]:hover {
+  background-image: linear-gradient(to bottom, rgba(0,10,0,0.3), rgba(200,200,200,0.3));
+  border-color: rgba(180,180,180,1);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.37);
+}
+
+findbar toolbarbutton[open="true"],
+findbar toolbarbutton[open="true"]:hover,
+findbar toolbarbutton[open="true"]:active,
+findbar toolbarbutton[open="true"]:active:hover {
+  background: rgba(255,255,255,0.8);
+  border-color: rgba(255,255,255,0.8);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.37);
+  border-radius: 3px 3px 0 0;
+}
+
+findbar toolbarbutton[disabled="true"],
+findbar toolbarbutton[disabled="true"]:hover,
+findbar toolbarbutton[disabled="true"]:active,
+findbar toolbarbutton[disabled="true"]:active:hover {
+  color: #a7aba7;
+}
+
 .findbar-closebutton {
   list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
   -moz-margin-start: 6px;
@@ -43,7 +87,7 @@ findbar[hidden] {
 
 .findbar-textbox {
   -moz-appearance: none;
-  border: 1px solid rgba(0,0,0,.25);
+  border: 1px solid rgba(50,50,50,.4);
   background-image: linear-gradient(to bottom, #f2f2f2, #fdfdfd);
   box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15),
                     0px 1px 0 0 rgba(255,255,255,0.89);
@@ -94,6 +138,18 @@ findbar[hidden] {
   width: 30px;
 }
 
+:-moz-any(.findbar-find-next, .findbar-find-previous):not(:hover):not([disabled="true"]) {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.6), rgba(200,200,200,0.5)) !important;
+  border: 1px solid rgba(50,50,50,.4) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.37), inset 0 1px 0 rgba(255,255,255,0.45), inset 1px 0 0 rgba(255,255,255,0.3), inset -1px 0 0 rgba(255,255,255,0.3) !important;
+}
+
+:-moz-any(.findbar-find-next, .findbar-find-previous)[disabled="true"] {
+  background: rgba(255,255,255,0.3) !important;
+  border-color: rgba(50,50,50,.4) !important;
+  box-shadow: none !important;
+}
+
 .findbar-find-previous:focus,
 .findbar-find-next:focus {
   border-color: Highlight;
@@ -134,13 +190,13 @@ findbar[hidden] {
 }
 
 .findbar-find-next:-moz-locale-dir(ltr) {
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 .findbar-find-next:-moz-locale-dir(rtl) {
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
 .findbar-find-previous:focus + .findbar-find-next {
@@ -164,4 +220,3 @@ findbar[hidden] {
 .find-status-icon[status="pending"] {
   list-style-image: url("chrome://global/skin/icons/loading_16.png");
 }
-

@@ -4,6 +4,8 @@
 
 @import url("chrome://global/skin/");
 
+@import url("chrome://browser/skin/browser-tb.css");
+
 @import url("chrome://appversion/skin/browser/browser.css");
 
 @import url("chrome://os/skin/browser/browser.css");
@@ -534,237 +536,6 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
   list-style-image: url("chrome://global/skin/console/console.png");
 }
 
-/* Primary toolbar buttons */
-.toolbarbutton-1:not([type="menu-button"]) {
-  -moz-box-orient: vertical;
-  min-width: 0;
-  list-style-image: url("chrome://browser/skin/Toolbar.png");
-}
-
-.toolbarbutton-1 > .toolbarbutton-icon {
-  -moz-margin-end: 0;
-}
-
-toolbar[mode="full"] .toolbarbutton-1:not([type="menu-button"]),
-toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
-  min-width: 57px;
-}
-
-.toolbarbutton-1:not([type="menu-button"]),
-.toolbarbutton-1 > .toolbarbutton-menubutton-button {
-}
-
-.toolbarbutton-1[checked="true"] {
-  padding: 3px !important;
-}
-
-/* ::::: Buttons ::::: */
-
-/* Basic style of buttons on navigator-toolbox (all top part of Fx's window), addon and find bars.
-   Also apply for Social API buttons */
-:-moz-any(#navigator-toolbox, #addon-bar, findbar) toolbarbutton,
-#social-toolbar-item > .toolbarbutton-1 {
-  -moz-appearance: none;
-  background: transparent !important;
-  border: 1px solid transparent !important;
-  border-radius: 3px;
-  color: #2e3436;
-  padding: 3px;
-  text-shadow: none;
-  transition-property: border, box-shadow, background;
-  transition-duration: 200ms;
-}
-
-/* Amazing code below ↯ */
-:-moz-any(#navigator-toolbox, #addon-bar, findbar) toolbarbutton:not([disabled="true"]):hover,
-:-moz-any(#navigator-toolbox, #addon-bar, findbar) .toolbarbutton-menubutton-dropmarker:hover,
-#social-toolbar-item > .toolbarbutton-1:hover {
-  background-image: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(255,255,255,0.8) 40%, rgba(220,220,220,0.5)) !important;
-  border-color: rgba(50,50,50,.4) !important;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.37);
-}
-
-:-moz-any(#navigator-toolbox, #addon-bar, findbar) toolbarbutton:not([disabled="true"]):not([open="true"]):active:hover,
-:-moz-any(#navigator-toolbox, #addon-bar, findbar) toolbarbutton[open="true"],
-:-moz-any(#navigator-toolbox, #addon-bar, findbar) toolbarbutton[open="true"]:hover,
-:-moz-any(#navigator-toolbox, #addon-bar, findbar) toolbarbutton[checked="true"],
-:-moz-any(#navigator-toolbox, #addon-bar, findbar) toolbarbutton[checked="true"]:hover,
-#social-toolbar-item > .toolbarbutton-1:not([disabled="true"]):active:hover,
-#social-toolbar-item > .toolbarbutton-1[open="true"],
-#social-toolbar-item > .toolbarbutton-1[open="true"]:hover,
-#social-toolbar-item > .toolbarbutton-1[checked="true"],
-#social-toolbar-item > .toolbarbutton-1[checked="true"]:hover {
-  background-image: linear-gradient(to bottom, rgba(0,10,0,0.3), rgba(200,200,200,0.3)) !important;
-  border-color: rgba(180,180,180,1) !important;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.37);
-}
-
-:-moz-any(#navigator-toolbox, #addon-bar, findbar) toolbarbutton[type="menu"][open="true"],
-:-moz-any(#navigator-toolbox, #addon-bar, findbar) toolbarbutton[type="menu"][open="true"]:hover,
-:-moz-any(#navigator-toolbox, #addon-bar, findbar) toolbarbutton[type="menu"][open="true"]:active,
-:-moz-any(#navigator-toolbox, #addon-bar, findbar) toolbarbutton[type="menu"][open="true"]:active:hover,
-:-moz-any(#navigator-toolbox, #addon-bar, findbar) toolbarbutton[type="menu-button"][open="true"],
-:-moz-any(#navigator-toolbox, #addon-bar, findbar) toolbarbutton[type="menu-button"][open="true"]:hover,
-:-moz-any(#navigator-toolbox, #addon-bar, findbar) toolbarbutton[type="menu-button"][open="true"]:active,
-:-moz-any(#navigator-toolbox, #addon-bar, findbar) toolbarbutton[type="menu-button"][open="true"]:active:hover,
-#social-toolbar-item > .toolbarbutton-1[type="menu"][open="true"],
-#social-toolbar-item > .toolbarbutton-1[type="menu"][open="true"]:hover,
-#social-toolbar-item > .toolbarbutton-1[type="menu"][open="true"]:active,
-#social-toolbar-item > .toolbarbutton-1[type="menu"][open="true"]:active:hover {
-  background: rgba(255,255,255,0.8) !important;
-  border-color: rgba(255,255,255,0.8) !important;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.37);
-  border-radius: 3px 3px 0 0;
-}
-
-:-moz-any(#navigator-toolbox, #addon-bar, findbar) toolbarbutton[disabled="true"],
-:-moz-any(#navigator-toolbox, #addon-bar, findbar) toolbarbutton[disabled="true"]:hover,
-:-moz-any(#navigator-toolbox, #addon-bar, findbar) toolbarbutton[disabled="true"]:active,
-:-moz-any(#navigator-toolbox, #addon-bar, findbar) toolbarbutton[disabled="true"]:active:hover,
-#social-toolbar-item > .toolbarbutton-1[disabled="true"],
-#social-toolbar-item > .toolbarbutton-1[disabled="true"]:hover,
-#social-toolbar-item > .toolbarbutton-1[disabled="true"]:active,
-#social-toolbar-item > .toolbarbutton-1[disabled="true"]:active:hover {
-  color: #a7aba7;
-}
-
-/* ::::: Buttons on Navigation bar ::::: */
-
-#navigator-toolbox[iconsize=large] > #nav-bar > toolbarbutton,
-#navigator-toolbox[iconsize=large] > #nav-bar[customizing] > * > toolbarbutton,
-#navigator-toolbox[iconsize=large] > #nav-bar :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button, #restore-button),
-#navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1 {
-  margin: 0px 3px;
-  min-height: 28px;
-  min-width: 26px;
-}
-
-#navigator-toolbox[iconsize=small] > #nav-bar > toolbarbutton,
-#navigator-toolbox[iconsize=small] > #nav-bar[customizing] > * > toolbarbutton,
-#navigator-toolbox[iconsize=small] > #nav-bar :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button, #restore-button),
-#navigator-toolbox[iconsize=small] > #nav-bar .toolbarbutton-1 {
-  margin: 0px 2px;
-  min-height: 26px;
-}
-
-#navigator-toolbox[iconsize=large] > #nav-bar > toolbarbutton:not([type="menu-button"]),
-#navigator-toolbox[iconsize=large] > #nav-bar[customizing] > * > toolbarbutton:not([type="menu-button"]),
-#navigator-toolbox[iconsize=large] > #nav-bar :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button, #restore-button),
-#navigator-toolbox[iconsize=large] > #nav-bar .toolbarbutton-1 {
-  padding: 0px 3px !important;
-}
-
-/* ::::: Relief buttons ::::: */
-
-#navigator-toolbox[iconsize=large] > #nav-bar :-moz-any(#back-button, #forward-button),
-#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] > toolbarbutton,
-#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"][customizing] > * > toolbarbutton,
-#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] > toolbaritem:not(#urlbar):not(#unified-back-forward-button) > toolbarbutton,
-#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"][customizing] > * > toolbaritem:not(#urlbar):not(#unified-back-forward-button) > toolbarbutton {
-  min-width: 32px;
-}
-
-#navigator-toolbox[iconsize=large] > #nav-bar :-moz-any(#back-button, #forward-button):not(:hover):not([open="true"]):not([disabled="true"]),
-#nav-bar :-moz-any(#unified-back-forward-button, #zoom-controls):hover > toolbarbutton:not(:hover):not([open="true"]):not([disabled="true"]),
-findbar :-moz-any(.findbar-find-next, .findbar-find-previous):not(:hover):not([disabled="true"]),
-/* Relief buttons */
-#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] > :-moz-any(toolbarbutton:not(#close-button), .toolbarbutton-menubutton-dropmarker):not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]),
-#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"][customizing] > * > :-moz-any(toolbarbutton:not(#close-button), .toolbarbutton-menubutton-dropmarker):not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]),
-#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] > toolbaritem:not(#urlbar):not(#unified-back-forward-button) > :-moz-any(toolbarbutton:not(#close-button), .toolbarbutton-menubutton-dropmarker):not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]),
-#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"][customizing] > * > toolbaritem:not(#urlbar):not(#unified-back-forward-button) > :-moz-any(toolbarbutton:not(#close-button), .toolbarbutton-menubutton-dropmarker):not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]),
-#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] .toolbarbutton-1:not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]) {
-  background-image: linear-gradient(to bottom, rgba(255,255,255,0.6), rgba(200,200,200,0.5)) !important;
-  border: 1px solid rgba(50,50,50,.4) !important;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.37), inset 0 1px 0 rgba(255,255,255,0.45), inset 1px 0 0 rgba(255,255,255,0.3), inset -1px 0 0 rgba(255,255,255,0.3) !important;
-}
-
-#navigator-toolbox[iconsize=large] > #nav-bar :-moz-any(#back-button, #forward-button)[disabled="true"],
-#navigator-toolbox[iconsize=small] > #nav-bar > #unified-back-forward-button:hover:not([forwarddisabled]) > toolbarbutton[disabled="true"],
-#nav-bar > #zoom-controls:hover > toolbarbutton[disabled="true"],
-findbar :-moz-any(.findbar-find-next, .findbar-find-previous)[disabled="true"],
-/* Relief buttons */
-#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] > :-moz-any(toolbarbutton:not(#close-button), .toolbarbutton-menubutton-dropmarker)[disabled="true"],
-#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] > toolbaritem:not(#urlbar):not(#unified-back-forward-button) > :-moz-any(toolbarbutton:not(#close-button), .toolbarbutton-menubutton-dropmarker)[disabled="true"],
-#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] .toolbarbutton-1[disabled="true"] {
-  background: rgba(255,255,255,0.3) !important;
-  border-color: rgba(50,50,50,.4) !important;
-  box-shadow: none !important;
-}
-
-#navigator-toolbox[iconsize=large] > #nav-bar #back-button:not(:active):not([open="true"]),
-#navigator-toolbox[iconsize=large] > #nav-bar #back-button[disabled="true"] {
-  -moz-border-end-color: rgba(0,0,0,.10) !important;
-}
-#navigator-toolbox[iconsize=large] > #nav-bar #forward-button:not(:active):not([open="true"]),
-#navigator-toolbox[iconsize=large] > #nav-bar #forward-button[disabled="true"] {
-  -moz-border-start-color: rgba(0,0,0,.10) !important;
-}
-
-findbar :-moz-any(.findbar-find-previous, .findbar-find-next)[disabled="true"] {
-  border-color: rgba(0,0,0,.25) !important;
-  -moz-border-start-color: rgba(0,0,0,.08) !important;
-}
-findbar .findbar-find-previous[disabled="true"] {
-  -moz-border-end-color: rgba(0,0,0,.08) !important;
-}
-
-#nav-bar > toolbarbutton > .toolbarbutton-menubutton-button {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-#nav-bar > toolbarbutton[disabled="true"],
-#nav-bar :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button, #bookmarks-menu-button)[disabled="true"] {
-  opacity: 1;
-}
-
-#nav-bar > toolbarbutton[disabled="true"] > .toolbarbutton-icon,
-#nav-bar > toolbarbutton[disabled="true"] > .toolbarbutton-menu-dropmarker,
-#nav-bar :-moz-any(#back-button, #forward-button, #zoom-out-button, #zoom-in-button)[disabled="true"] > .toolbarbutton-icon {
-  opacity: .5;
-}
-
-/* Code for connected buttons (back/forward, zoom).
-   It's universal code (can be used for 3+ buttons in group). */
-#nav-bar :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:not(:first-of-type):not(:last-of-type) {
-  border-radius: 0;
-  -moz-margin-start: -1px !important;
-  -moz-margin-end: 0 !important;
-}
-
-#nav-bar :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type {
-  -moz-margin-end: 0 !important;
-}
-#nav-bar :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type {
-  -moz-margin-start: -1px !important;
-}
-
-#nav-bar:-moz-locale-dir(ltr) :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type,
-#nav-bar:-moz-locale-dir(rtl) :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type {
-  border-radius: 3px 0px 0px 3px;
-}
-#nav-bar:-moz-locale-dir(ltr) :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type,
-#nav-bar:-moz-locale-dir(rtl) :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type {
-  border-radius: 0px 3px 3px 0px;
-}
-
-/* */
-#nav-bar[customizing] :-moz-any(#back-button, #zoom-out-button) {
-  -moz-margin-end: 0 !important;
-}
-#nav-bar[customizing] :-moz-any(#forward-button, #zoom-in-button) {
-  -moz-margin-start: -1px !important;
-}
-#nav-bar[customizing]:-moz-locale-dir(ltr) #back-button,
-#nav-bar[customizing]:-moz-locale-dir(rtl) #forward-button {
-  border-radius: 3px 0px 0px 3px;
-}
-#nav-bar[customizing]:-moz-locale-dir(ltr) #forward-button,
-#nav-bar[customizing]:-moz-locale-dir(rtl) #back-button {
-  border-radius: 0px 3px 3px 0px;
-}
-
 /* 24px primary toolbar buttons */
 /* FIXME: it's 16px in real */
 #back-button {
@@ -1004,12 +775,6 @@ findbar .findbar-find-previous[disabled="true"] {
 
 #webrtc-status-button {
   -moz-image-region: rect(0px 192px 24px 168px);
-}
-
-/* 16px primary toolbar buttons */
-toolbar[iconsize="small"] .toolbarbutton-1:not([type="menu-button"]) {
-  -moz-box-orient: vertical;
-  list-style-image: url("chrome://browser/skin/Toolbar-small.png");
 }
 
 /* Fullscreen window controls */
@@ -2512,15 +2277,6 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill !important; /* FIXME */
 }
 
-/*
-#TabsToolbar .toolbarbutton-1 > .toolbarbutton-icon,
-#TabsToolbar .toolbarbutton-1 > .toolbarbutton-menu-dropmarker,
-#TabsToolbar .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-icon {
-  margin-top: -2px;
-  margin-bottom: -2px;
-}
-*/
-
 /* All tabs button */
 
 #alltabs-button > .toolbarbutton-icon {
@@ -2693,6 +2449,12 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 }
 #appmenu-editmenu-paste[disabled="true"] {
   list-style-image: url("moz-icon://stock/gtk-paste?size=menu&state=disabled");
+}
+
+.appmenu-edit-button {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 #wrapper-appmenu-toolbar-button,
