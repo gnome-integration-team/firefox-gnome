@@ -1,0 +1,15 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+#alert-plugins-notification-icon {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/plugin-alert.svg);
+}
+
+#blocked-plugins-notification-icon {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/plugin-blocked.svg);
+}
+
+#blocked-plugins-notification-icon[showing] {
+  animation: pluginBlockedNotification 500ms ease 0s 5 alternate both;
+}

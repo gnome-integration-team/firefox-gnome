@@ -3,6 +3,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+@import url("chrome://appversion/skin/browser/devtools/netmonitor.css");
+
 #body {
   background: url(background-noise-toolbar.png), hsl(208,11%,27%);
 }
@@ -316,10 +318,6 @@ box.requests-menu-status[code^="5"] {
   background: rgba(255,255,255,0.05);
 }
 
-.side-menu-widget-item-contents {
-  padding: 0;
-}
-
 /* Network request details */
 
 #details-pane {
@@ -365,7 +363,6 @@ box.requests-menu-status[code^="5"] {
 
 .tabpanel-summary-value {
   -moz-padding-start: 3px;
-  font-family: Menlo, Monaco, monospace;
 }
 
 .variable-or-property:not(:focus) > .title > .token-string {
