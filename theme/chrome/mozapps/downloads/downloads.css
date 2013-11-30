@@ -8,9 +8,8 @@
 
 /* Download View */
 #downloadView {
-  -moz-appearance: none !important;
   background-color: #ffffff;
-  margin: 0;
+  border-bottom: none;
   -moz-box-ordinal-group: 2;
 }
 
@@ -25,18 +24,21 @@ richlistitem[type="download"] {
   padding: 7px;
   -moz-padding-start: 4px;
   -moz-padding-end: 8px;
-  min-height: 46px;
+}
+
+richlistitem[type="download"][selected="true"] {
+  background-image: none;
+}
+
+richlistitem[type="download"]:not([selected="true"]):nth-child(odd) {
+  background-color: transparent;
 }
 
 richlistitem[type="download"] .name {
-  font-size: larger;
   margin-bottom: 5px;
 }
 
-richlistitem[type="download"] .dateTime {
-  font-size: smaller;
-}
-
+richlistitem[type="download"] .dateTime,
 richlistitem[type="download"] .status {
   font-size: smaller;
 }
@@ -45,37 +47,8 @@ richlistitem[type="download"] progressmeter {
   margin-bottom: 5px;
 }
 
-.mini-button {
-  -moz-appearance: none;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-  min-width: 0;
-  min-height: 0;
-}
-
-.mini-button > .button-box {
-  padding: 0 !important;
-}
-
-menuitem:not([type]) {
-  -moz-binding: url("chrome://global/content/bindings/menu.xml#menuitem-iconic");
-}
-
 .cancel {
   list-style-image: url(chrome://browser/skin/symbolic-icons/playback-stop.svg);
-}
-
-#menuitem_cancel {
-  list-style-image: url("moz-icon://stock/gtk-cancel?size=menu");
-}
-
-#menuitem_open {
-  list-style-image: url("moz-icon://stock/gtk-open?size=menu");
-}
-#menuitem_open[disabled="true"] {
-  list-style-image: url("moz-icon://stock/gtk-open?size=menu&state=disabled");
 }
 
 .pause {
@@ -85,19 +58,8 @@ menuitem:not([type]) {
   opacity: 0.5;
 }
 
-#menuitem_pause {
-  list-style-image: url("moz-icon://stock/gtk-media-pause?size=menu");
-}
-#menuitem_pause[disabled="true"] {
-  list-style-image: url("moz-icon://stock/gtk-media-pause?size=menu&state=disabled");
-}
-
 .resume {
   list-style-image: url(chrome://browser/skin/symbolic-icons/playback-start.svg);
-}
-
-#menuitem_resume {
-  list-style-image: url("moz-icon://stock/gtk-media-play?size=menu");
 }
 
 .retry {
@@ -107,36 +69,14 @@ menuitem:not([type]) {
   list-style-image: url(chrome://browser/skin/symbolic-icons/redo-rtl.svg);
 }
 
-#menuitem_retry {
-  list-style-image: url("moz-icon://stock/gtk-redo?size=menu");
-}
-
-#menuitem_removeFromList {
-  list-style-image: url("moz-icon://stock/gtk-remove?size=menu");
-}
-
-#menuitem_copyLocation {
-  list-style-image: url("moz-icon://stock/gtk-copy?size=menu");
-}
-
-.blockedIcon {
-  list-style-image: url("moz-icon://stock/gtk-dialog-error?size=dialog");
-  width: 32px;
-  height: 32px;
-}
-
 /* prevent flickering when changing states */
 .downloadTypeIcon {
-  min-height: 32px;
-  min-width: 32px;
   padding: 8px;
 }
 
 #clearListButton {
-  /*
-  list-style-image: url(moz-icon://stock/edit-clear-all-symbolic?size=menu);
-  */
-  list-style-image: url(chrome://browser/skin/symbolic-icons/edit-clear-all.svg);
+  list-style-image: url(chrome://browser/skin/symbolic-icons/edit-clear-all.svg) !important;
+  margin-top: 0;
   min-width: 30px;
 }
 
@@ -147,4 +87,7 @@ menuitem:not([type]) {
 #clearListButton .button-icon {
   display: block !important;
   -moz-margin-end: 0;
+}
+#clearListButton[disabled="true"] .button-icon {
+  opacity: .5;
 }
