@@ -212,6 +212,13 @@ findbar toolbarbutton[disabled="true"]:active:hover {
   -moz-margin-start: 5px;
 }
 
+.findbar-highlight {
+  list-style-image: url(chrome://browser/skin/symbolic-icons/highlight.svg);
+}
+.findbar-highlight[disabled="true"] {
+  opacity: 0.5;
+}
+
 .findbar-find-status {
   margin: 0 !important;
   -moz-margin-start: 12px !important;
