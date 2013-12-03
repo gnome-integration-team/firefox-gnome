@@ -63,7 +63,7 @@
 #newtab-undo-close-button {
   padding: 0;
   border: none;
-  list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/close.svg);
   -moz-user-focus: normal;
 }
 
@@ -137,7 +137,7 @@
   transition-duration: 0.5s;
 
   /* Consistency FTW, Comment out to go back to the madness */
-  background:  url(chrome://browser/skin/symbolic-icons/newtab-placeholder.svg) no-repeat;
+  background:  url(chrome://symbolic-icons/skin/newtab-placeholder.svg) no-repeat;
   background-size: 96px;
   background-position: 50% calc(50% - (24px / 2)); /* Half height, compensate for text title */
 }
@@ -200,7 +200,7 @@
 }
 
 .newtab-control-pin {
-  background: url(chrome://browser/skin/symbolic-icons/pin_white.svg) no-repeat center;
+  background: url(chrome://symbolic-icons/skin/pin_white.svg) no-repeat center;
   background-color: rgba(0,0,0,0.25);
   border-radius: 50%;
 }
@@ -215,7 +215,7 @@
 }
 
 .newtab-control-block {
-  background: url(chrome://browser/skin/symbolic-icons/close_white.svg) no-repeat center;
+  background: url(chrome://symbolic-icons/skin/close_white.svg) no-repeat center;
   background-color: rgba(0,0,0,0.25);
   border-radius: 50%;
 }

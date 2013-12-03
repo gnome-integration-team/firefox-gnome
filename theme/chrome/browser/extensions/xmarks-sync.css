@@ -9,7 +9,7 @@
   -moz-appearance: none !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  background-image: url(chrome://browser/skin/symbolic-icons/extensions/xmarks-sync-grayscale.svg) !important;
+  background-image: url(chrome://symbolic-icons/skin/extensions/xmarks-sync-grayscale.svg) !important;
   min-width: 16px !important;
   max-width: 16px !important;
   min-height: 16px !important;
@@ -22,19 +22,19 @@
 #foxmarks-statusbarpanel > #foxmarks-statusimage {
   background-position: center !important;
   background-repeat: no-repeat !important;
-  background-image: url(chrome://browser/skin/symbolic-icons/extensions/xmarks-sync.svg) !important;
+  background-image: url(chrome://symbolic-icons/skin/extensions/xmarks-sync.svg) !important;
 }
 #foxmarks-statusbarpanel > #foxmarks-statusimage[src*="ready"] {
-  background-image: url(chrome://browser/skin/symbolic-icons/extensions/xmarks-sync-grayscale.svg) !important;
+  background-image: url(chrome://symbolic-icons/skin/extensions/xmarks-sync-grayscale.svg) !important;
 }
 #foxmarks-statusbarpanel > #foxmarks-statusimage[src*="dirty"] {
-  background-image: url(chrome://browser/skin/symbolic-icons/extensions/xmarks-sync-syncing.svg) !important;
+  background-image: url(chrome://symbolic-icons/skin/extensions/xmarks-sync-syncing.svg) !important;
 }
 #foxmarks-statusbarpanel > #foxmarks-statusimage[src*="wheel"] {
-  background-image: url(chrome://browser/skin/symbolic-icons/extensions/xmarks-sync.svg) !important;
+  background-image: url(chrome://symbolic-icons/skin/extensions/xmarks-sync.svg) !important;
 }
 #foxmarks-statusbarpanel > #foxmarks-statusimage[src*="error"] {
-  background-image: url(chrome://browser/skin/symbolic-icons/extensions/xmarks-sync-error.svg) !important;
+  background-image: url(chrome://symbolic-icons/skin/extensions/xmarks-sync-error.svg) !important;
 }
 
 #foxmarks-statusbarpanel > #foxmarks-statusimage {

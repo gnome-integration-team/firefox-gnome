@@ -5,7 +5,7 @@
 #status-bar > #visibo-tmt-status-button {
   background-position: center !important;
   background-repeat: no-repeat !important;
-  background-image: url(chrome://browser/skin/symbolic-icons/extensions/toomanytabs.svg) !important;
+  background-image: url(chrome://symbolic-icons/skin/extensions/toomanytabs.svg) !important;
 }
 
 #status-bar > #visibo-tmt-status-button {
@@ -18,7 +18,7 @@
 }
 
 #visibo-tmt-palette-button {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/toomanytabs-toggle-button.png) !important;
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/toomanytabs-toggle-button.png) !important;
 }
 
 .toomanytabs-tgbutton {
@@ -32,25 +32,25 @@
 /* The following buttons won't work with svg's */
 
 #visibo-tmt-view-options {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/toomanytabs-gears.png) !important;
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/toomanytabs-gears.png) !important;
 }
 
 #visibo-tmt-view-options-v {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/toomanytabs-gears.png) !important;
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/toomanytabs-gears.png) !important;
 }
 
 #visibo-tmt-closed-tabs {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/toomanytabs-trash.png) !important;
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/toomanytabs-trash.png) !important;
 }
 
 #visibo-tmt-closed-tabs-v {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/toomanytabs-trash.png) !important;
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/toomanytabs-trash.png) !important;
 }
 
 #visibo-tmt-view-row {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/toomanytabs-down.png) !important;
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/toomanytabs-down.png) !important;
 }
 
 #visibo-tmt-view-row-v {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/toomanytabs-down.png) !important;
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/toomanytabs-down.png) !important;
 }

@@ -16,7 +16,7 @@
 /*** Main indicator icon ***/
 
 #downloads-indicator > #downloads-indicator-anchor > #downloads-indicator-icon {
-  background: -moz-image-rect(url(chrome://browser/skin/symbolic-icons/download.svg),
+  background: -moz-image-rect(url(chrome://symbolic-icons/skin/download.svg),
                               0, 16, 16, 0) center no-repeat;
 }
 
@@ -28,7 +28,7 @@
    equivalent to -moz-any([progress], [paused]). */
 
 #downloads-indicator:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
-  background: -moz-image-rect(url(chrome://browser/skin/symbolic-icons/download.svg),
+  background: -moz-image-rect(url(chrome://symbolic-icons/skin/download.svg),
                               0, 16, 16, 0) center no-repeat;
   background-size: 12px;
 }

@@ -11,10 +11,10 @@
 /* back button */
 
 #back-button {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/go-previous.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/go-previous.svg);
 }
 #back-button:-moz-locale-dir(rtl) {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/go-next.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/go-next.svg);
 }
 #back-button[disabled="true"] > .toolbarbutton-icon {
   opacity: .3;
@@ -23,10 +23,10 @@
 /* forward button */
 
 #forward-button {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/go-next.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/go-next.svg);
 }
 #forward-button:-moz-locale-dir(rtl) {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/go-previous.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/go-previous.svg);
 }
 #forward-button[disabled="true"] > .toolbarbutton-icon {
   opacity: .3;

@@ -61,7 +61,7 @@ p > b {
 .expander > button {
   -moz-padding-start: 20px;
   -moz-margin-start: -20px;
-  background: url(chrome://browser/skin/symbolic-icons/go-down.svg) left center no-repeat;
+  background: url(chrome://symbolic-icons/skin/go-down.svg) left center no-repeat;
   border: none;
   font: inherit;
   color: inherit;
@@ -73,9 +73,9 @@ p > b {
 }
 
 .expander[collapsed] > button {
-  background-image: url(chrome://browser/skin/symbolic-icons/go-next.svg)
+  background-image: url(chrome://symbolic-icons/skin/go-next.svg)
 }
 
 .expander[collapsed] > button:-moz-dir(rtl) {
-  background-image: url(chrome://browser/skin/symbolic-icons/go-previous.svg)
+  background-image: url(chrome://symbolic-icons/skin/go-previous.svg)
 }

@@ -70,7 +70,7 @@ findbar toolbarbutton[disabled="true"]:active:hover {
 }
 
 .findbar-closebutton {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/close.svg);
   -moz-margin-start: 6px;
 }
 
@@ -164,13 +164,13 @@ findbar toolbarbutton[disabled="true"]:active:hover {
 }
 
 .findbar-find-previous {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/go-up.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/go-up.svg);
   border-radius: 0 !important;
   -moz-margin-end: -1px !important;
 }
 
 .findbar-find-next {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/go-down.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/go-down.svg);
   border-radius: 0 3px 3px 0 !important;
 }
 
@@ -213,7 +213,7 @@ findbar toolbarbutton[disabled="true"]:active:hover {
 }
 
 .findbar-highlight {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/highlight.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/highlight.svg);
 }
 .findbar-highlight[disabled="true"] {
   opacity: 0.5;

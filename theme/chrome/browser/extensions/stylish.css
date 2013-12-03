@@ -3,8 +3,8 @@
  * URL: https://addons.mozilla.org/firefox/addon/stylish/ */
 
 #stylish-toolbar-button {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/stylish.svg) !important;
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/stylish.svg) !important;
 }
 #stylish-toolbar-button:not([styles-applied~="site"]) > .toolbarbutton-icon {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/stylish-stopped.svg) !important;
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/stylish-stopped.svg) !important;
 }

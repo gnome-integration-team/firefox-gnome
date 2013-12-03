@@ -3,5 +3,5 @@
  * URL: https://addons.mozilla.org/firefox/addon/tamper-data-icon-redux/ */
 
 #tdiconmenu-button {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/tamperdataiconredux.svg) !important;
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/tamperdataiconredux.svg) !important;
 }

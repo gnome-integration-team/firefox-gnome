@@ -6,7 +6,7 @@
 #gtStatusBar > #gtStatusIcon {
   background-position: center !important;
   background-repeat: no-repeat !important;
-  background-image: url(chrome://browser/skin/symbolic-icons/extensions/gtranslator.svg) !important;
+  background-image: url(chrome://symbolic-icons/skin/extensions/gtranslator.svg) !important;
    -moz-appearance: none !important;
   min-width: 16px !important;
   max-width: 16px !important;

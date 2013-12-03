@@ -48,25 +48,25 @@ richlistitem[type="download"] progressmeter {
 }
 
 .cancel {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/playback-stop.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/playback-stop.svg);
 }
 
 .pause {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/playback-pause.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/playback-pause.svg);
 }
 .pause[disabled="true"] {
   opacity: 0.5;
 }
 
 .resume {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/playback-start.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/playback-start.svg);
 }
 
 .retry {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/redo.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/redo.svg);
 }
 .retry:-moz-locale-dir(rtl) {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/redo-rtl.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/redo-rtl.svg);
 }
 
 /* prevent flickering when changing states */
@@ -75,7 +75,7 @@ richlistitem[type="download"] progressmeter {
 }
 
 #clearListButton {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/edit-clear-all.svg) !important;
+  list-style-image: url(chrome://symbolic-icons/skin/edit-clear-all.svg) !important;
   margin-top: 0;
   min-width: 30px;
 }

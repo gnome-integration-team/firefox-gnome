@@ -250,7 +250,7 @@ toolbar#ToolbarMode toolbarbutton {
   /*
   list-style-image: url(moz-icon://stock/edit-clear-all-symbolic?size=menu);
   */
-  list-style-image: url(chrome://browser/skin/symbolic-icons/edit-clear-all.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/edit-clear-all.svg);
 }
 
 toolbar#ToolbarMode .toolbarbutton-text {

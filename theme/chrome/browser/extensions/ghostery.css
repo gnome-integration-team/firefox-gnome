@@ -7,7 +7,7 @@
 }
 
 #ghostery-button[image*="Icon-16"] > .toolbarbutton-icon {
-  background: url(chrome://browser/skin/symbolic-icons/extensions/ghostery.svg) no-repeat center !important;
+  background: url(chrome://symbolic-icons/skin/extensions/ghostery.svg) no-repeat center !important;
   width: 16px !important;
   height: 16px !important;
   -moz-padding-start: 16px !important;
@@ -15,7 +15,7 @@
 }
 
 #ghostery-button[image*="Icon-16-off"] > .toolbarbutton-icon {
-  background: url(chrome://browser/skin/symbolic-icons/extensions/ghostery-grayscale.svg) no-repeat center !important;
+  background: url(chrome://symbolic-icons/skin/extensions/ghostery-grayscale.svg) no-repeat center !important;
   opacity: 0.5;
   width: 16px !important;
   height: 16px !important;

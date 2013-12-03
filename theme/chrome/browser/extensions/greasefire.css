@@ -3,6 +3,6 @@
  * URL: https://addons.mozilla.org/en-US/firefox/addon/greasefire// */
 
 .tbb-scripts-available .toolbarbutton-icon {
-  background-image: url(chrome://browser/skin/symbolic-icons/extensions/greasefire.svg) !important;
+  background-image: url(chrome://symbolic-icons/skin/extensions/greasefire.svg) !important;
 }
 

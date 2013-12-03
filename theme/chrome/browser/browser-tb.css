@@ -58,7 +58,7 @@ toolbarbutton[disabled="true"]:active:hover {
 .toolbarbutton-menubutton-dropmarker {
   -moz-appearance: none !important;
   -moz-image-region: auto;
-  list-style-image: url(chrome://browser/skin/symbolic-icons/dropmarker.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/dropmarker.svg);
   padding: 0;
   margin: 0;
 }

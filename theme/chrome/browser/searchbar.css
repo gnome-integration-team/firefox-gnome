@@ -91,7 +91,7 @@
   /*
   list-style-image: url(moz-icon://stock/edit-find-symbolic?size=menu);
   */
-  list-style-image: url(chrome://browser/skin/symbolic-icons/edit-find.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/edit-find.svg);
   height: 22px;
   padding: 3px;
   min-width: 22px;

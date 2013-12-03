@@ -15,7 +15,7 @@
 }
 
 #https-everywhere-button > .https-everywhere-button {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/https-everywhere.svg) !important;
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/https-everywhere.svg) !important;
   margin: 0 !important;
 }
 

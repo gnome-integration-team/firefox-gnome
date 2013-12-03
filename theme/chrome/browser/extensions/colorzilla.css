@@ -4,5 +4,5 @@
 
 #wrapper-colorzilla-navbar-button .toolbarbutton-icon,
 #colorzilla-navbar-button .toolbarbutton-icon {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/colorzilla.svg) !important;
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/colorzilla.svg) !important;
 }

@@ -91,7 +91,7 @@ html[dir=rtl] .favicon {
   width: 16px;
   height: 16px;
   opacity: 0.2;
-  background: url(chrome://browser/skin/symbolic-icons/close.svg) no-repeat;
+  background: url(chrome://symbolic-icons/skin/close.svg) no-repeat;
 }
 
 html[dir=rtl] .close {
@@ -519,26 +519,26 @@ html[dir=rtl] .iq-resizable-se {
   height: 16px;
   -moz-margin-end: 8px;
   margin-top: 5px;
-  background-image: url(chrome://browser/skin/symbolic-icons/tabview.svg);
+  background-image: url(chrome://symbolic-icons/skin/tabview.svg);
   background-attachment: scroll;
   background-repeat: no-repeat;
   border: none;
 }
 
 #exit-button[groups="0"] {
-  background-image: url(chrome://browser/skin/symbolic-icons/tabview-0.svg);
+  background-image: url(chrome://symbolic-icons/skin/tabview-0.svg);
 }
 
 #exit-button[groups="1"] {
-  background-image: url(chrome://browser/skin/symbolic-icons/tabview-1.svg);
+  background-image: url(chrome://symbolic-icons/skin/tabview-1.svg);
 }
 
 #exit-button[groups="2"] {
-  background-image: url(chrome://browser/skin/symbolic-icons/tabview-2.svg);
+  background-image: url(chrome://symbolic-icons/skin/tabview-2.svg);
 }
 
 #exit-button[groups="3"] {
-  background-image: url(chrome://browser/skin/symbolic-icons/tabview-3.svg);
+  background-image: url(chrome://symbolic-icons/skin/tabview-3.svg);
 }
 
 /* Search
@@ -589,7 +589,7 @@ html[dir=rtl] #actions {
 }
 
 #actions #searchbutton{
-  background: transparent url(chrome://browser/skin/symbolic-icons/edit-find.svg) no-repeat;
+  background: transparent url(chrome://symbolic-icons/skin/edit-find.svg) no-repeat;
   border: none;
   width: 20px;
   height: 20px;

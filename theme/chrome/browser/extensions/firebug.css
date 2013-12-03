@@ -4,19 +4,19 @@
 
 #firebug-button {
   filter: none !important;
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/firebug.svg) !important;
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/firebug.svg) !important;
   -moz-image-region: rect(16px, 16px, 32px, 0) !important;
 }
 
 #firebug-button > .fb-toolbarbutton image {
   background-position: center !important;
   background-repeat: no-repeat !important;
-  background-image: url(chrome://browser/skin/symbolic-icons/extensions/firebug.svg) !important;
+  background-image: url(chrome://symbolic-icons/skin/extensions/firebug.svg) !important;
   opacity: 0.5;
 }
 
 #firebug-button[firebugActive="true"] > .fb-toolbarbutton image {
-  background-image: url(chrome://browser/skin/symbolic-icons/extensions/firebug.svg) !important;
+  background-image: url(chrome://symbolic-icons/skin/extensions/firebug.svg) !important;
   opacity: 1;
 }
 

@@ -3,7 +3,7 @@
  * URL: https://addons.mozilla.org/firefox/addon/htitle/ */
 
 #htitle-close-button {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg) !important;
+  list-style-image: url(chrome://symbolic-icons/skin/close.svg) !important;
 }
 
 #window-controls[htitle="true"] > #restore-button {

@@ -6,7 +6,7 @@
 #flashblockToggle-button[state="enabled"],
 #flashblockToggle-button[state="disabled"],
 #flashblockToggle-button[disabled="true"] {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/flashblock.svg) !important;
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/flashblock.svg) !important;
 }
 
 #flashblockToggle-button[state="disabled"] .toolbarbutton-icon,

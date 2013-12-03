@@ -4,11 +4,11 @@
 
 #RIL_toolbar_button,
 #RIL_urlbar_add {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/pocket.svg) !important;
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/pocket.svg) !important;
 }
 
 #RIL_urlbar_mark {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/pocket-added.svg) !important;
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/pocket-added.svg) !important;
 }
 
 #RIL_urlbar_add {

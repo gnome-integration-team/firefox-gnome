@@ -3,11 +3,11 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 #alert-plugins-notification-icon {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/plugin-alert.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/plugin-alert.svg);
 }
 
 #blocked-plugins-notification-icon {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/plugin-blocked.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/plugin-blocked.svg);
 }
 
 #blocked-plugins-notification-icon[showing] {

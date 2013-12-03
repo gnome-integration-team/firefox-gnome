@@ -5,14 +5,14 @@
 /* FIXME: Need fix toolbar view. */
 
 #at_toolbarBtn {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/addthis.svg) !important;
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/addthis.svg) !important;
 }
 #at_toolbarBtn > .toolbarbutton-icon {
   -moz-margin-end: 0 !important;
 }
 
 #at_urlbarBtn {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/addthis.svg) !important;
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/addthis.svg) !important;
   opacity: .35;
 }
 #at_urlbarBtn:hover {

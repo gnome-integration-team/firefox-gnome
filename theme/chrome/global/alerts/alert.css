@@ -62,7 +62,7 @@ label {
 }
 
 .alertCloseButton {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/close.svg);
   height: 24px;
   width: 24px;
 }

@@ -5,5 +5,5 @@
 /* Replace video icon */
 
 #flashgot-media-tbb {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/extensions/flashgot-video.svg) !important;
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/flashgot-video.svg) !important;
 }

@@ -36,15 +36,15 @@ notification[type="critical"] {
 /* Default icons for notifications */
 
 .messageImage[type="info"] {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/information.svg");
+  list-style-image: url("chrome://symbolic-icons/skin/information.svg");
 }
 
 .messageImage[type="warning"] {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/important.svg");
+  list-style-image: url("chrome://symbolic-icons/skin/important.svg");
 }
 
 .messageImage[type="critical"] {
-  list-style-image: url("chrome://browser/skin/symbolic-icons/critical.svg");
+  list-style-image: url("chrome://symbolic-icons/skin/critical.svg");
 }
 
 /* Replace icons */
@@ -65,17 +65,17 @@ notification[value="popup-blocked"] .messageImage,
 notification[value="refresh-blocked"] .messageImage,
 notification[value="offline-app-usage"] .messageImage,
 notification[value*="offline-app-requested-"] .messageImage {
-  background: url(chrome://browser/skin/symbolic-icons/info.svg) no-repeat center !important;
+  background: url(chrome://symbolic-icons/skin/info.svg) no-repeat center !important;
 }
 
 notification[value="missing-plugins"] .messageImage {
-  background: url(chrome://browser/skin/symbolic-icons/plugin.svg) no-repeat center !important;
+  background: url(chrome://symbolic-icons/skin/plugin.svg) no-repeat center !important;
 }
 
 .messageCloseButton {
   background: transparent !important;
   border: 1px solid transparent !important;
-  list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/close.svg);
   margin-top: 5px !important;
   margin-bottom: 5px !important;
   -moz-margin-end: 10px;
@@ -102,5 +102,5 @@ notification[value="missing-plugins"] .messageImage {
 }
 
 .popup-notification-closeitem {
-  list-style-image: url(chrome://browser/skin/symbolic-icons/close.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/close.svg);
 }
