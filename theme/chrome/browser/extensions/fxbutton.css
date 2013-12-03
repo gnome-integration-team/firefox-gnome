@@ -6,3 +6,18 @@
 toolbar:not(#TabsToolbar) #appmenu-toolbar-button.fxbutton > .toolbarbutton-icon {
   list-style-image: url(chrome://browser/skin/symbolic-icons/emblem-system.svg) !important;
 }
+
+#navigator-toolbox[iconsize=large] > #nav-bar > #appmenu-toolbar-button.fxbutton {
+  margin: 0px 3px;
+  min-height: 28px;
+  min-width: 26px;
+  padding: 0px 3px;
+}
+#navigator-toolbox[iconsize=small] > #nav-bar > #appmenu-toolbar-button.fxbutton {
+  margin: 0px 2px;
+  min-height: 26px;
+  padding: 0px 3px;
+}
+#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] > #appmenu-toolbar-button.fxbutton {
+  min-width: 32px;
+}
