@@ -4,8 +4,6 @@
 
 @import url("chrome://global/skin/");
 
-@import url("chrome://browser/skin/browser-tb.css");
-
 @import url("chrome://appversion/skin/browser/browser.css");
 
 @import url("chrome://os/skin/browser/browser.css");
@@ -1611,8 +1609,8 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   min-width: 24px;
 }
 
-#urlbar > toolbarbutton:hover,
-#urlbar-icons > :-moz-any(box, image, menupopup):hover {
+#urlbar > toolbarbutton,
+#urlbar-icons > :-moz-any(box, image, menupopup) {
   background: transparent !important;
 }
 

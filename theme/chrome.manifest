@@ -10,6 +10,8 @@ skin    appversion      Adwaita     chrome/appversion/26/ appversion>=26a1
 skin    os              Adwaita     chrome/os/windows/     os=WINNT
 skin    os              Adwaita     chrome/os/linux/       os!=WINNT
 
+style  chrome://browser/content/browser.xul                chrome://browser/skin/browser-tb.css
+
 style  about:addons                                        chrome://adwaita-mozapps/skin/extensions/extensions.css
 style  chrome://mozapps/content/extensions/extensions.xul  chrome://adwaita-mozapps/skin/extensions/extensions.css
 
