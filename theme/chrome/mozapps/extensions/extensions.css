@@ -104,7 +104,7 @@
   -moz-border-left-colors: #dbdbdb #fafafa;
 }
 #view-port-container:-moz-locale-dir(rtl) {
-  -moz-border-right-colors: #fafafa #dbdbdb;
+  -moz-border-right-colors: #dbdbdb #fafafa;
 }
 
 /*** header ***/

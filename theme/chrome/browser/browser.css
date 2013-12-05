@@ -798,7 +798,7 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
   position: relative;
 }
 
-#window-controls {
+#window-controls:-moz-locale-dir(ltr) {
   border-left: 7px solid;
   -moz-border-left-colors: rgba(50,50,50,.2) rgba(255,255,255,0.2) transparent;
 }
