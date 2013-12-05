@@ -1095,31 +1095,43 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 }
 
 #identity-box:hover:active,
-#identity-box[open="true"] {
+#identity-box[open="true"],
+#identity-box:hover:active:before,
+#identity-box[open="true"]:before {
   background: linear-gradient(to bottom, #d1d1d1, #fff);
   box-shadow: inset 0 1px 1px -1px rgba(0,0,0,0.15);
 }
 
-#urlbar[pageproxystate="valid"] > #identity-box.chromeUI {
+#urlbar[pageproxystate="valid"] > #identity-box.chromeUI,
+#urlbar[pageproxystate="valid"] > #identity-box.chromeUI:before {
   background: rgba(200, 200, 200, 0.15);
-  border-right: 1px solid rgba(100, 100, 100, 0.25);
+}
+#urlbar[pageproxystate="valid"] > #identity-box.chromeUI {
+  -moz-border-end: 1px solid rgba(100, 100, 100, 0.25);
   -moz-margin-end: 4px;
 }
 #urlbar[pageproxystate="valid"] > #identity-box.chromeUI:hover:active,
-#urlbar[pageproxystate="valid"] > #identity-box.chromeUI[open="true"] {
+#urlbar[pageproxystate="valid"] > #identity-box.chromeUI[open="true"],
+#urlbar[pageproxystate="valid"] > #identity-box.chromeUI:hover:active:before,
+#urlbar[pageproxystate="valid"] > #identity-box.chromeUI[open="true"]:before {
   background: linear-gradient(to bottom, #d1d1d1, #fff);
   box-shadow: inset 0 1px 1px -1px rgba(0,0,0,0.15);
 }
 
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity {
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity,
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:before {
   background: rgba(115, 210, 22, 0.15);
-  border-right: 1px solid rgba(115, 210, 22, 0.25);
+}
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity {
+  -moz-border-end: 1px solid rgba(115, 210, 22, 0.25);
   color: #00aa00;
   -moz-margin-end: 4px;
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:hover:active,
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity[open="true"] {
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity[open="true"],
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:hover:active:before,
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity[open="true"]:before {
   background: linear-gradient(to bottom, rgba(115, 210, 22, 0.25), rgba(115, 210, 22, 0.05));
 }
 
@@ -1299,90 +1311,43 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
   border-width: 0 8px 0 0;
   border-style: solid;
   border-color: #fff;
-  border-image: url("chrome://browser/skin/urlbar-arrow.svg") 0 8 0 0 fill;
-  -moz-margin-end: -8px;
-/*  margin-top: -1px;*/
-/*  margin-bottom: -1px;*/
+  border-image: url(chrome://browser/skin/urlbar-arrow.svg) 0 8 0 0 fill;
+  -moz-margin-end: 0;
+  z-index: 100;
 }
 
-#notification-popup-box:after {
-  display: none;
-  content: url(chrome://browser/skin/identity-box-borders/active.svg) url(chrome://browser/skin/identity-box-borders/https-ev.svg) url(chrome://browser/skin/identity-box-borders/https-ev-active.svg);
-}
-#notification-popup-box:-moz-locale-dir(rtl):after {
-  display: none;
-  content: url(chrome://browser/skin/identity-box-borders/active-rtl.svg) url(chrome://browser/skin/identity-box-borders/https-ev-rtl.svg) url(chrome://browser/skin/identity-box-borders/https-ev-active-rtl.svg);
+#identity-box {
+  position: relative;
 }
 
 #notification-popup-box:not([hidden]) + #identity-box {
-  -moz-padding-start: 8px;
   border-radius: 0;
 }
 
-#notification-popup-box:not([hidden]) + #identity-box:active,
-#notification-popup-box:not([hidden]) + #identity-box[open="true"] {
-  background: url(chrome://browser/skin/identity-box-borders/active.svg), linear-gradient(to bottom, #d1d1d1, #fff) 8px 0px;
-  background-size: 8px 100%, auto;
-  background-repeat: no-repeat;
+#identity-box:before {
+  clip-path: url(chrome://browser/skin/identity-box.svg#arrow-clip-path);
+  content: "";
+  display: -moz-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 8px;
+  margin: 0;
+  -moz-margin-start: -8px;
 }
-#notification-popup-box:not([hidden]) + #identity-box:active:-moz-locale-dir(rtl),
-#notification-popup-box:not([hidden]) + #identity-box[open="true"]:-moz-locale-dir(rtl) {
-  background: url(chrome://browser/skin/identity-box-borders/active-rtl.svg) top right, linear-gradient(to bottom, #d1d1d1, #fff) -8px 0px;
-  background-size: 8px 100%, auto;
-  background-repeat: no-repeat;
-}
-
-#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.chromeUI {
-  background: url(chrome://browser/skin/identity-box-borders/brand.svg), linear-gradient(to bottom, rgba(200, 200, 200, 0.15), rgba(200, 200, 200, 0.15)) 8px 0px;
-  background-size: 8px 100%, auto;
-  background-repeat: no-repeat;
-}
-#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.chromeUI:-moz-locale-dir(rtl) {
-  background: url(chrome://browser/skin/identity-box-borders/brand-rtl.svg) top right, linear-gradient(to bottom, rgba(200, 200, 200, 0.15), rgba(200, 200, 200, 0.15)) -8px 0px;
-  background-size: 8px 100%, auto;
-  background-repeat: no-repeat;
-}
-
-#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.chromeUI:hover:active,
-#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.chromeUI[open="true"] {
-  background: url(chrome://browser/skin/identity-box-borders/active.svg), linear-gradient(to bottom, #d1d1d1, #fff) 8px 0px;
-  background-size: 8px 100%, auto;
-  background-repeat: no-repeat;
-}
-#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.chromeUI:hover:active:-moz-locale-dir(rtl),
-#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.chromeUI[open="true"]:-moz-locale-dir(rtl) {
-  background: url(chrome://browser/skin/identity-box-borders/active-rtl.svg) top right, linear-gradient(to bottom, #d1d1d1, #fff) -8px 0px;
-  background-size: 8px 100%, auto;
-  background-repeat: no-repeat;
-}
-
-#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.verifiedIdentity {
-  background: url(chrome://browser/skin/identity-box-borders/https-ev.svg), linear-gradient(to bottom, rgba(115, 210, 22, 0.15), rgba(115, 210, 22, 0.15)) 8px 0px;
-  background-size: 8px 100%, auto;
-  background-repeat: no-repeat;
-}
-#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.verifiedIdentity:-moz-locale-dir(rtl) {
-  background: url(chrome://browser/skin/identity-box-borders/https-ev-rtl.svg) top right, linear-gradient(to bottom, rgba(115, 210, 22, 0.15), rgba(115, 210, 22, 0.15)) -8px 0px;
-  background-size: 8px 100%, auto;
-  background-repeat: no-repeat;
-}
-
-#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.verifiedIdentity:hover:active,
-#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.verifiedIdentity[open="true"] {
-  background: url(chrome://browser/skin/identity-box-borders/https-ev-active.svg), linear-gradient(to bottom, rgba(115, 210, 22, 0.25), rgba(115, 210, 22, 0.05)) 8px 0px;
-  background-size: 8px 100%, auto;
-  background-repeat: no-repeat;
-}
-#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.verifiedIdentity:hover:active:-moz-locale-dir(rtl),
-#urlbar[pageproxystate="valid"] > #notification-popup-box:not([hidden]) + #identity-box.verifiedIdentity[open="true"]:-moz-locale-dir(rtl) {
-  background: url(chrome://browser/skin/identity-box-borders/https-ev-active-rtl.svg) top right, linear-gradient(to bottom, rgba(115, 210, 22, 0.25), rgba(115, 210, 22, 0.05)) -8px 0px;
-  background-size: 8px 100%, auto;
-  background-repeat: no-repeat;
+#identity-box:-moz-locale-dir(rtl):before {
+  right: 0;
+  transform: scaleX(-1);
 }
 
 #notification-popup-box:-moz-locale-dir(rtl),
 .notification-anchor-icon:-moz-locale-dir(rtl) {
   transform: scaleX(-1);
+}
+
+#notification-popup-box[hidden] + #identity-box:before {
+  display: none;
 }
 
 .notification-anchor-icon {
