@@ -54,6 +54,8 @@ ul {
   padding: 3em 0;
   -moz-padding-start: 5em;
   text-align: left;
+  background-repeat: no-repeat;
+  background-position: 7em 2.5em;
   color: #2e3436;
 }
 
