@@ -4,7 +4,7 @@
 
 /* ::::: General style ::::: */
 
-toolbarbutton {
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton {
   -moz-appearance: none;
   background: transparent;
   border: 1px solid transparent;
@@ -15,47 +15,47 @@ toolbarbutton {
   transition-duration: 200ms;
 }
 
-toolbarbutton:not([disabled="true"]):hover {
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton:not([disabled="true"]):hover {
   background-image: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(255,255,255,0.8) 40%, rgba(220,220,220,0.5));
   border-color: rgba(50,50,50,.4);
   box-shadow: 0 1px 0 rgba(255,255,255,0.37);
 }
 
-toolbarbutton:not([disabled="true"]):active:hover,
-toolbarbutton[open="true"],
-toolbarbutton[open="true"]:hover,
-toolbarbutton[checked="true"],
-toolbarbutton[checked="true"]:hover {
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton:not([disabled="true"]):active:hover,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[open="true"],
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[open="true"]:hover,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[checked="true"],
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[checked="true"]:hover {
   background-image: linear-gradient(to bottom, rgba(0,10,0,0.3), rgba(200,200,200,0.3));
   border-color: rgba(180,180,180,1);
   box-shadow: 0 1px 0 rgba(255,255,255,0.37);
 }
 
-toolbarbutton[type="menu"][open="true"],
-toolbarbutton[type="menu"][open="true"]:hover,
-toolbarbutton[type="menu"][open="true"]:active,
-toolbarbutton[type="menu"][open="true"]:active:hover,
-toolbarbutton[type="menu-button"][open="true"],
-toolbarbutton[type="menu-button"][open="true"]:hover,
-toolbarbutton[type="menu-button"][open="true"]:active,
-toolbarbutton[type="menu-button"][open="true"]:active:hover {
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[type="menu"][open="true"],
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[type="menu"][open="true"]:hover,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[type="menu"][open="true"]:active,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[type="menu"][open="true"]:active:hover,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[type="menu-button"][open="true"],
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[type="menu-button"][open="true"]:hover,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[type="menu-button"][open="true"]:active,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[type="menu-button"][open="true"]:active:hover {
   background: rgba(255,255,255,0.8);
   border-color: rgba(255,255,255,0.8);
   box-shadow: 0 1px 0 rgba(255,255,255,0.37);
   border-radius: 3px 3px 0 0;
 }
 
-toolbarbutton[disabled="true"],
-toolbarbutton[disabled="true"]:hover,
-toolbarbutton[disabled="true"]:active,
-toolbarbutton[disabled="true"]:active:hover {
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[disabled="true"],
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[disabled="true"]:hover,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[disabled="true"]:active,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[disabled="true"]:active:hover {
   color: #a7aba7;
 }
 
 /* */
 
-.toolbarbutton-menu-dropmarker,
-.toolbarbutton-menubutton-dropmarker {
+:-moz-any(#navigator-toolbox, #addon-bar) .toolbarbutton-menu-dropmarker,
+:-moz-any(#navigator-toolbox, #addon-bar) .toolbarbutton-menubutton-dropmarker {
   -moz-appearance: none !important;
   -moz-image-region: auto;
   list-style-image: url(chrome://symbolic-icons/skin/dropmarker.svg);
@@ -63,24 +63,24 @@ toolbarbutton[disabled="true"]:active:hover {
   margin: 0;
 }
 
-.toolbarbutton-menu-dropmarker {
+:-moz-any(#navigator-toolbox, #addon-bar) .toolbarbutton-menu-dropmarker {
   display: none;
   -moz-margin-start: 2px;
   -moz-margin-end: -2px;
 }
 
-.toolbarbutton-menubutton-dropmarker {
+:-moz-any(#navigator-toolbox, #addon-bar) .toolbarbutton-menubutton-dropmarker {
   -moz-box-align: center;
   -moz-border-start: 1px solid transparent;
   -moz-margin-end: 1px;
   -moz-margin-start: 1px;
 }
 
-toolbarbutton:not([open="true"]):hover > .toolbarbutton-menubutton-dropmarker {
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton:not([open="true"]):hover > .toolbarbutton-menubutton-dropmarker {
   -moz-border-start: 1px solid rgba(50,50,50,.1);
 }
 
-.toolbarbutton-menubutton-button {
+:-moz-any(#navigator-toolbox, #addon-bar) .toolbarbutton-menubutton-button {
   background: none !important;
   border: none !important;
   border-radius: 0 !important;
@@ -89,7 +89,7 @@ toolbarbutton:not([open="true"]):hover > .toolbarbutton-menubutton-dropmarker {
   -moz-padding-end: 0px !important;
 }
 
-.toolbarbutton-menubutton-button .toolbarbutton-icon {
+:-moz-any(#navigator-toolbox, #addon-bar) .toolbarbutton-menubutton-button .toolbarbutton-icon {
   -moz-margin-end: 0 !important;
 }
 
