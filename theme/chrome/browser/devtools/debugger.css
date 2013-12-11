@@ -13,64 +13,65 @@
   min-width: 50px;
 }
 
-#sources-pane + .devtools-side-splitter {
+#sources-and-editor-splitter {
   -moz-border-start-color: transparent;
 }
 
-.side-menu-widget-item-checkbox {
-  -moz-appearance: none;
-  -moz-margin-end: -6px;
-  padding: 0;
-  opacity: 0;
-  transition: opacity .15s ease 0s;
+/* Sources toolbar */
+
+#sources-toolbar {
+  border: none; /* Remove the devtools-toolbar's black bottom border. */
+  -moz-border-end: 1px solid #222426; /* Match the sources list's dark margin. */
 }
 
-/* Only show the checkbox when the source is hovered over, is selected, or if it
- * is not checked. */
-.side-menu-widget-item:hover > .side-menu-widget-item-checkbox,
-.side-menu-widget-item.selected > .side-menu-widget-item-checkbox,
-.side-menu-widget-item-checkbox:not([checked]) {
-  opacity: 1;
-  transition: opacity .15s ease 0s;
+#sources-toolbar .devtools-toolbarbutton {
+  min-width: 32px;
 }
 
-.side-menu-widget-item-checkbox > .checkbox-spacer-box {
-  -moz-appearance: none;
+#pretty-print {
+  font-weight: bold;
 }
 
-.side-menu-widget-item-checkbox > .checkbox-spacer-box > .checkbox-check {
-  -moz-appearance: none;
-  background: none;
-  background-image: url(itemToggle.png);
-  background-repeat: no-repeat;
-  background-clip: content-box;
-  background-size: 32px 16px;
-  background-position: -16px 0;
-  width: 16px;
-  height: 16px;
-  border: 0;
+#black-box {
+  list-style-image: url(debugger-blackbox.png);
+  -moz-image-region: rect(0px,16px,16px,0px);
 }
 
-.side-menu-widget-item-checkbox[checked] > .checkbox-spacer-box > .checkbox-check {
-  background-position: 0 0;
+#black-box[checked] {
+  -moz-image-region: rect(0px,32px,16px,16px);
 }
 
-.side-menu-widget-item-checkbox:not([checked]) ~ .side-menu-widget-item-contents {
+#sources .black-boxed {
   color: #888;
 }
 
-.side-menu-widget-item-checkbox:not([checked]) ~ .side-menu-widget-item-contents > .dbg-breakpoint {
+#sources .black-boxed > .dbg-breakpoint {
   display: none;
 }
 
-/* Black box message */
+#sources .black-boxed + .side-menu-widget-item-arrow:-moz-locale-dir(ltr) {
+  background-image: none;
+  box-shadow: inset -1px 0 0 #222426;
+}
 
-#black-boxed-message {
+#sources .black-boxed + .side-menu-widget-item-arrow:-moz-locale-dir(rtl) {
+  background-image: none;
+  box-shadow: inset 1px 0 0 #222426;
+}
+
+/* Black box message and source progress meter */
+
+#black-boxed-message,
+#source-progress-container {
   background: url(background-noise-toolbar.png) rgb(61,69,76);
   /* Prevent the container deck from aquiring the height from this message. */
   min-height: 1px;
-  padding: 25vh 0;
   color: white;
+}
+
+#source-progress {
+  min-height: 2em;
+  min-width: 40em;
 }
 
 #black-boxed-message-label,
@@ -129,7 +130,7 @@
 /* Sources and breakpoints view */
 
 .dbg-breakpoint {
-  -moz-margin-start: -14px;
+  -moz-margin-start: 4px;
 }
 
 .dbg-breakpoint-line {
@@ -148,6 +149,17 @@
   margin: 2px;
 }
 
+/* Instruments pane (watch expressions, variables, event listeners...) */
+
+#instruments-pane > tabs > tab {
+  min-height: 25px !important;
+  padding: 0 !important;
+}
+
+#instruments-pane > tabpanels > tabpanel {
+  background: #fff;
+}
+
 /* Watch expressions view */
 
 #expressions {
@@ -162,11 +174,33 @@
 .dbg-expression-arrow {
   width: 16px;
   height: auto;
-  background: -moz-image-rect(url("chrome://browser/skin/devtools/commandline-icon.png"), 0, 32, 16, 16);
+  background: -moz-image-rect(url(commandline-icon.png), 0, 32, 16, 16);
 }
 
 .dbg-expression-input {
   -moz-padding-start: 2px !important;
+}
+
+/* Event listeners view */
+
+.dbg-event-listener {
+  padding: 4px 8px;
+}
+
+.dbg-event-listener-type {
+  font-weight: 600;
+}
+
+.dbg-event-listener-separator {
+  color: #999;
+}
+
+.dbg-event-listener-targets {
+  color: #046;
+}
+
+.dbg-event-listener-location {
+  color: #666;
 }
 
 /* Searchbox and the search operations help panel */
@@ -320,7 +354,7 @@
   transform: scale(1.75, 1.75);
 }
 
-/* Toolbar Controls */
+/* Toolbar controls */
 
 #resumption-panel-desc {
   width: 200px;
@@ -351,7 +385,8 @@
   list-style-image: url("chrome://browser/skin/devtools/debugger-step-out.png");
 }
 
-#debugger-controls > toolbarbutton {
+#debugger-controls > toolbarbutton,
+#sources-controls > toolbarbutton {
   margin: 0;
   box-shadow: none;
   border-radius: 0;
@@ -360,11 +395,13 @@
   outline-offset: -3px;
 }
 
-#debugger-controls > toolbarbutton:last-of-type {
+#debugger-controls > toolbarbutton:last-of-type,
+#sources-controls > toolbarbutton:last-of-type {
   -moz-border-end-width: 0;
 }
 
-#debugger-controls {
+#debugger-controls,
+#sources-controls {
   box-shadow: 0 1px 0 hsla(210,16%,76%,.15) inset,
               0 0 0 1px hsla(210,16%,76%,.15) inset,
               0 1px 0 hsla(210,16%,76%,.15);
@@ -387,4 +424,29 @@
 
 #instruments-pane-toggle:active {
   -moz-image-region: rect(0px,32px,16px,16px);
+}
+
+/* Horizontal vs. vertical layout */
+
+#vertical-layout-panes-container {
+  min-height: 35vh;
+  max-height: 80vh;
+}
+
+#body[layout=vertical] #instruments-pane {
+  margin: 0 !important;
+  /* To prevent all the margin hacks to hide the sidebar. */
+}
+
+#body[layout=vertical] .side-menu-widget-container {
+  box-shadow: none !important;
+}
+
+#body[layout=vertical] .side-menu-widget-item-arrow {
+  background-image: none !important;
+}
+
+#body[layout=vertical] .side-menu-widget-group,
+#body[layout=vertical] .side-menu-widget-item {
+  -moz-margin-end: 0;
 }

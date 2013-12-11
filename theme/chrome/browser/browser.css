@@ -1161,6 +1161,30 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
   list-style-image: url("chrome://browser/skin/Secure.png");
 }
 
+#identity-popup-help-icon {
+  -moz-appearance: none;
+  margin-left: 0px;
+  border: none;
+  background: none;
+  min-width: 0;
+  list-style-image: url("chrome://global/skin/icons/question-16.png");
+  cursor: pointer;
+}
+
+#identity-popup-help-icon > .button-box > .button-text {
+  display: none;
+}
+
+#identity-popup-help-icon > .button-box > .button-icon {
+  height: 16px;
+  width: 16px;
+}
+
+#identity-popup-help-icon:-moz-focusring {
+  outline: 1px dotted;
+  outline-offset: 1px;
+}
+
 #identity-popup > .panel-arrowcontainer > .panel-arrowcontent {
   padding: 0;
 }
@@ -2212,10 +2236,9 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 /* Highlighter - Node Infobar */
 
 .highlighter-nodeinfobar {
-  color: hsl(200, 100%, 65%);
-  border: 1px solid hsla(210, 19%, 63%, .5);
+  color: hsl(216,33%,97%);
   border-radius: 3px;
-  background: linear-gradient(hsl(209, 18%, 30%), hsl(210, 24%, 16%)) no-repeat padding-box;
+  background: hsl(214,13%,24%) no-repeat padding-box;
 }
 
 /* Highlighter - Node Infobar - text */
@@ -2227,37 +2250,32 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 }
 
 html|*.highlighter-nodeinfobar-tagname {
-  color: white;
+  color: hsl(285,100%,75%);
 }
 
 html|*.highlighter-nodeinfobar-id {
-  color: hsl(90, 79%, 52%);
+  color: hsl(103,46%,54%);
 }
 
+html|*.highlighter-nodeinfobar-classes,
 html|*.highlighter-nodeinfobar-pseudo-classes {
-  color: hsl(20, 100%, 70%);
+  color: hsl(200,74%,57%);
 }
 
 /* Highlighter - Node Infobar - buttons */
 
 .highlighter-nodeinfobar-button {
   -moz-appearance: none;
-  border: 0 solid hsla(210,8%,5%,.45);
+  border-width: 0;
   padding: 0;
   width: 26px;
   min-height: 26px;
 }
 
 .highlighter-nodeinfobar-inspectbutton {
-  -moz-border-end-width: 1px;
-  box-shadow: 1px 0 0 hsla(210,16%,76%,.15), -1px 0 0 hsla(210,16%,76%,.15) inset;
   -moz-margin-end: 6px;
   list-style-image: url("chrome://browser/skin/devtools/inspect-button.png");
   -moz-image-region: rect(0px 16px 16px 0px);
-}
-
-.highlighter-nodeinfobar-inspectbutton:-moz-locale-dir(rtl) {
-  box-shadow: -1px 0 0 hsla(210,16%,76%,.15), 1px 0 0 hsla(210,16%,76%,.15) inset;
 }
 
 .highlighter-nodeinfobar-inspectbutton:active:hover,
@@ -2266,13 +2284,7 @@ html|*.highlighter-nodeinfobar-pseudo-classes {
 }
 
 .highlighter-nodeinfobar-menu {
-  -moz-border-start-width: 1px;
-  box-shadow: -1px 0 0 hsla(210,16%,76%,.15), 1px 0 0 hsla(210,16%,76%,.15) inset;
   -moz-margin-start: 6px;
-}
-
-.highlighter-nodeinfobar-menu:-moz-locale-dir(rtl) {
-  box-shadow: 1px 0 0 hsla(210,16%,76%,.15), -1px 0 0 hsla(210,16%,76%,.15) inset;
 }
 
 .highlighter-nodeinfobar-menu > .toolbarbutton-menu-dropmarker {
@@ -2289,7 +2301,6 @@ html|*.highlighter-nodeinfobar-pseudo-classes {
   height: 14px;
   -moz-margin-start: calc(50% - 7px);
   transform: rotate(-45deg);
-  border: 1px solid transparent;
   background-clip: padding-box;
   background-repeat: no-repeat;
 }
@@ -2297,22 +2308,13 @@ html|*.highlighter-nodeinfobar-pseudo-classes {
 .highlighter-nodeinfobar-arrow-top {
   margin-bottom: -8px;
   margin-top: 8px;
-  border-right-color: hsla(210, 19%, 63%, .5);
-  border-top-color: hsla(210, 19%, 63%, .5);
-  background-image: linear-gradient(to top right, transparent 50%, hsl(209, 18%, 30%) 50%);
+  background-image: linear-gradient(to top right, transparent 50%, hsl(210,2%,22%) 50%);
 }
 
 .highlighter-nodeinfobar-arrow-bottom {
   margin-top: -8px;
   margin-bottom: 8px;
-  border-left-color: hsla(210, 19%, 63%, .5);
-  border-bottom-color: hsla(210, 19%, 63%, .5);
-  background-image: linear-gradient(to bottom left, transparent 50%, hsl(210, 24%, 16%) 50%);
-}
-
-.highlighter-nodeinfobar-container[position="top"] > .highlighter-nodeinfobar,
-.highlighter-nodeinfobar-container[position="overlap"] > .highlighter-nodeinfobar {
-  box-shadow: 0 1px 0 hsla(0, 0%, 100%, .1) inset;
+  background-image: linear-gradient(to bottom left, transparent 50%, hsl(210,2%,22%) 50%);
 }
 
 .highlighter-nodeinfobar-container[hide-arrow] > .highlighter-nodeinfobar {
@@ -2522,6 +2524,173 @@ notification.pluginVulnerable .messageImage {
   list-style-image: url("chrome://browser/skin/notification-pluginBlocked.png");
 }
 
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/*** Status and progress indicator ***/
+
+#downloads-animation-container {
+  min-height: 1px;
+  min-width: 1px;
+  height: 1px;
+  margin-bottom: -1px;
+  /* Makes the outermost animation container element positioned, so that its
+     contents are rendered over the main browser window in the Z order.
+     This is required by the animated event notification. */
+  position: relative;
+  /* The selected tab may overlap #downloads-indicator-notification */
+  z-index: 5;
+}
+
+toolbar[iconsize="small"] > #downloads-button > #downloads-indicator-anchor {
+  min-width: 16px;
+  min-height: 16px;
+}
+
+toolbar[iconsize="large"] > #downloads-button > #downloads-indicator-anchor {
+  min-width: 24px;
+  min-height: 24px;
+}
+
+/*** Main indicator icon ***/
+
+toolbar[iconsize="small"] > #downloads-button > #downloads-indicator-anchor > #downloads-indicator-icon {
+  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-small.png"),
+                              0, 16, 16, 0) center no-repeat;
+}
+
+toolbar[iconsize="large"] > #downloads-button > #downloads-indicator-anchor > #downloads-indicator-icon {
+  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"),
+                              0, 24, 24, 0) center no-repeat;
+}
+
+toolbar[iconsize="small"] > #downloads-button[attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
+  background-image: url("chrome://browser/skin/downloads/download-glow-small.png");
+}
+
+toolbar[iconsize="large"] > #downloads-button[attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
+  background-image: url("chrome://browser/skin/downloads/download-glow.png");
+}
+
+/* In the next few rules, we use :not([counter]) as a shortcut that is
+   equivalent to -moz-any([progress], [paused]). */
+
+#downloads-button:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
+  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-small.png"),
+                              0, 16, 16, 0) center no-repeat;
+  background-size: 12px;
+}
+
+#downloads-button:not([counter])[attention] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
+  background-image: url("chrome://browser/skin/downloads/download-glow.png");
+}
+
+/*** Download notifications ***/
+
+#downloads-indicator-notification {
+  opacity: 0;
+  background-size: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+@keyframes downloadsIndicatorNotificationStartRight {
+  from { opacity: 0; transform: translate(-128px, 128px) scale(8); }
+  20%  { opacity: .85; animation-timing-function: ease-out; }
+  to   { opacity: 0; transform: translate(0) scale(1); }
+}
+
+@keyframes downloadsIndicatorNotificationStartLeft {
+  from { opacity: 0; transform: translate(128px, 128px) scale(8); }
+  20%  { opacity: .85; animation-timing-function: ease-out; }
+  to   { opacity: 0; transform: translate(0) scale(1); }
+}
+
+#downloads-notification-anchor[notification="start"] > #downloads-indicator-notification {
+  background-image: url("chrome://browser/skin/downloads/download-notification-start.png");
+  animation-name: downloadsIndicatorNotificationStartRight;
+  animation-duration: 1s;
+}
+
+#downloads-notification-anchor[notification="start"]:-moz-locale-dir(rtl) > #downloads-indicator-notification {
+  animation-name: downloadsIndicatorNotificationStartLeft;
+}
+
+@keyframes downloadsIndicatorNotificationFinish {
+  from { opacity: 0; transform: scale(1); }
+  20%  { opacity: .65; animation-timing-function: ease-in; }
+  to   { opacity: 0; transform: scale(8); }
+}
+
+#downloads-notification-anchor[notification="finish"] > #downloads-indicator-notification {
+  background-image: url("chrome://browser/skin/downloads/download-notification-finish.png");
+  animation-name: downloadsIndicatorNotificationFinish;
+  animation-duration: 1s;
+}
+
+/*** Progress bar and text ***/
+
+#downloads-indicator-counter {
+  height: 10px;
+  margin: 0;
+  color: hsl(0,0%,30%);
+  text-shadow: 0 1px 0 hsla(0,0%,100%,.5);
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+}
+
+#downloads-indicator-progress {
+  width: 16px;
+  height: 6px;
+  min-width: 0;
+  min-height: 0;
+  margin-top: 1px;
+  margin-bottom: 2px;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 hsla(0,0%,100%,.4);
+}
+
+#downloads-indicator-progress > .progress-bar {
+  -moz-appearance: none;
+  min-width: 0;
+  min-height: 0;
+  /* The background-clip: border-box; and background-image: none; are there to expand the background-color behind the border */
+  background-clip: padding-box, border-box;
+  background-color: rgb(255, 135, 94);
+  background-image: linear-gradient(transparent 1px, rgba(255, 255, 255, 0.4) 1px, rgba(255, 255, 255, 0.4) 2px, transparent 2px), none;
+  border: 1px solid;
+  border-color: rgba(0,43,86,.6) rgba(0,43,86,.4) rgba(0,43,86,.4);
+  border-radius: 2px 0 0 2px;
+}
+
+#downloads-indicator-progress > .progress-remainder {
+  -moz-appearance: none;
+  min-width: 0;
+  min-height: 0;
+  background-image: linear-gradient(#505050, #575757);
+  border: 1px solid;
+  border-color: hsla(0,0%,0%,.6) hsla(0,0%,0%,.4) hsla(0,0%,0%,.4);
+  -moz-border-start: none;
+  border-radius: 0 2px 2px 0;
+}
+
+#downloads-button[paused] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-progress > .progress-bar {
+  background-color: rgb(220, 230, 81);
+}
+
+#downloads-button[paused] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-progress > .progress-remainder {
+  background-image: linear-gradient(#4b5000, #515700);
+}
+
+toolbar[mode="full"] > #downloads-button > .toolbarbutton-text {
+  margin: 0;
+  text-align: center;
+}
+
 .gcli-panel {
   padding: 0;
 }
@@ -2540,6 +2709,90 @@ notification.pluginVulnerable .messageImage {
   border-radius: 1px;
   -moz-margin-end: 2px;
 }
+
+/* UI Tour */
+
+@keyframes uitour-wobble {
+  from {
+    transform: rotate(0deg) translateX(2px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(2px) rotate(-360deg);
+  }
+}
+
+@keyframes uitour-zoom {
+  from {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes uitour-color {
+  from {
+    border-color: #5B9CD9;
+  }
+  50% {
+    border-color: #FF0000;
+  }
+  to {
+    border-color: #5B9CD9;
+  }
+}
+
+html|div#UITourHighlight {
+  display: none;
+  position: absolute;
+  min-height: 32px;
+  min-width: 32px;
+  display: none;
+  border: 2px #5B9CD9 solid;
+  box-shadow: 0 0 2px #5B9CD9, inset 0 0 1px #5B9CD9;
+  border-radius: 20px;
+  z-index: 10000000000;
+}
+
+html|div#UITourHighlight[active] {
+  display: block;
+  animation-delay: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+html|div#UITourHighlight[active="wobble"] {
+  animation-name: uitour-wobble;
+  animation-duration: 1s;
+}
+html|div#UITourHighlight[active="zoom"] {
+  animation-name: uitour-zoom;
+  animation-duration: 1s;
+}
+html|div#UITourHighlight[active="color"] {
+  animation-name: uitour-color;
+  animation-duration: 2s;
+}
+
+#UITourTooltip {
+  max-width: 20em;
+}
+
+#UITourTooltipTitle {
+  font-weight: bold;
+  font-size: 130%;
+  margin: 0 0 5px 0;
+}
+
+#UITourTooltipDescription {
+  max-width: 20em;
+}
+
+/* Social toolbar item */
 
 #social-provider-button {
   -moz-image-region: rect(0, 16px, 16px, 0);

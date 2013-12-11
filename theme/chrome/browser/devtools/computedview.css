@@ -45,6 +45,7 @@ body {
   overflow-x: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  outline: 0;
 }
 
 .property-value {
@@ -58,6 +59,7 @@ body {
   background-size: 5px 8px;
   background-position: 2px center;
   padding-left: 10px;
+  outline: 0;
 }
 
 .other-property-value {
@@ -144,4 +146,13 @@ body {
   padding: 0 3px;
   cursor: pointer;
   float: right;
+}
+
+.computedview-colorswatch {
+  display: inline-block;
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  vertical-align: text-top;
+  -moz-margin-end: 5px;
 }
