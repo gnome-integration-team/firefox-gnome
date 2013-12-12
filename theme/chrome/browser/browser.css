@@ -2146,9 +2146,6 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   border-top-color: rgba(0, 0, 0, 0.27) !important;
   box-shadow: none !important;
 }
-#TabsToolbar .tab-close-button:active:hover > .toolbarbutton-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#tab-close-active);
-}
 
 /* Tabstrip new tab button */
 #TabsToolbar .tabs-newtab-button,
