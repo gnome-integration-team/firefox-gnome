@@ -3,7 +3,6 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
 <!ENTITY newtabpage.label              "White background for a newtab page">
-<!ENTITY restorebutton.label           "Hide restore button in fullscreen mode">
 <!ENTITY reliefbuttons.label           "Relief buttons on the navigation toolbar">
 <!ENTITY inactivestate.label           "Enable different style for unfocused windows">
 <!ENTITY tabontop.label                "Show tabs on top">

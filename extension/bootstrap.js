@@ -26,7 +26,6 @@ function Tweak(options) {
 var GNOMEThemeTweak = {
     tweaks: [
         new Tweak({key: "newtab-page"}),
-        new Tweak({key: "restore-button"}),
         new Tweak({key: "relief-buttons", style: null}),
         new Tweak({key: "tabs-border"}),
         new Tweak({key: "urlbar-history-dropmarker"}),
@@ -97,6 +96,10 @@ var GNOMEThemeTweak = {
         this.prefs = Cc["@mozilla.org/preferences-service;1"]
                        .getService(Components.interfaces.nsIPrefService)
                        .getBranch("extensions.gnome-theme-tweak.");
+        
+        // Removing older keys...
+        if (this.prefs.getPrefType("restore-button"))
+            this.prefs.clearUserPref("restore-button");
         
         this.prefs.addObserver("", this, false);
         

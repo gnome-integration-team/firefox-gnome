@@ -3,7 +3,6 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
 <!ENTITY newtabpage.label              "Белый фон для страницы about:newtab">
-<!ENTITY restorebutton.label           "Скрыть кнопку выхода из полноэкранного режима">
 <!ENTITY reliefbuttons.label           "Объемные кнопки на панели навигации">
 <!ENTITY inactivestate.label           "Включить отдельный стиль для неактивных окон">
 <!ENTITY tabontop.label                "Показывать панель вкладок сверху">
