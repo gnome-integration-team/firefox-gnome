@@ -6,6 +6,13 @@
   list-style-image: url(chrome://symbolic-icons/skin/close.svg) !important;
 }
 
+#main-window[sizemode="normal"] #window-controls[htitle="true"] > #restore-button {
+  list-style-image: url(chrome://symbolic-icons/skin/window-maximize.svg);
+}
+#main-window[sizemode="maximized"] #window-controls[htitle="true"] > #restore-button {
+  list-style-image: url(chrome://symbolic-icons/skin/window-restore.svg);
+}
+
 #window-controls[htitle="true"] > #restore-button {
   display: none !important;
 }

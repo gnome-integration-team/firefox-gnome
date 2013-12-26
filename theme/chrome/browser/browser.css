@@ -808,33 +808,27 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
 }
 
 #minimize-button {
-  /*
-  list-style-image: url(moz-icon://stock/window-minimize-symbolic?size=menu);
-  */
-  list-style-image: url(chrome://global/skin/icons/Minimize.gif);
+  list-style-image: url(chrome://symbolic-icons/skin/window-minimize.svg);
   display: none;
 }
 #restore-button {
-  /*
-  list-style-image: url(moz-icon://stock/window-restore-symbolic?size=menu);
-  */
-  list-style-image: url(chrome://symbolic-icons/skin/window-restore.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/view-fullscreen.svg);
+}
+#main-window[sizemode="fullscreen"] #restore-button {
+  list-style-image: url(chrome://symbolic-icons/skin/view-fullscreen-leave.svg);
 }
 #close-button {
-  /*
-  list-style-image: url(moz-icon://stock/window-close-symbolic?size=menu);
-  */
   list-style-image: url(chrome://symbolic-icons/skin/close.svg);
   display: none;
 }
 
 :-moz-any(#minimize-button, #restore-button, #close-button) > .toolbarbutton-icon {
-  height: 14px;
-  width: 14px;
+  opacity: .8;
 }
 
 :-moz-any(#minimize-button, #restore-button, #close-button):active:hover > .toolbarbutton-icon {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
+  opacity: 1;
 }
 
 /* ::::: Location bar ::::: */
