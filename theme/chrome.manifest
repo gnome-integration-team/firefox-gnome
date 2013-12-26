@@ -4,8 +4,8 @@ skin    global          Adwaita     chrome/global/
 skin    symbolic-icons     Adwaita    chrome/symbolic-icons/
 skin    adwaita-mozapps    Adwaita    chrome/mozapps/
 
-skin    appversion      Adwaita     chrome/appversion/25/ appversion<26a1
-skin    appversion      Adwaita     chrome/appversion/26/ appversion>=26a1
+skin    appversion      Adwaita     chrome/appversion/26/ appversion<27a1
+skin    appversion      Adwaita     chrome/appversion/27/ appversion>=27a1
 
 skin    os              Adwaita     chrome/os/windows/     os=WINNT
 skin    os              Adwaita     chrome/os/linux/       os!=WINNT
