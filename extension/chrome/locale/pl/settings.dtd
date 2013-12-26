@@ -1,0 +1,11 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY newtabpage.label              "Białe tło na stronie nowej karty">
+<!ENTITY reliefbuttons.label           "Wypukłe przyciski na pasku narzędziowym nawigacji">
+<!ENTITY inactivestate.label           "Inny wygląd nieaktywnych okien">
+<!ENTITY tabontop.label                "Karty na górze">
+<!ENTITY tabsborder.label              "Ukrywanie białej ramki za paskiem narzędziowym kart">
+<!ENTITY urlbarhistorydropmarker.label "Ukrywanie przycisku rozwijania paska adresu">
+<!ENTITY forwardbutton.label           "Wyświetlanie przycisku Do przodu">
