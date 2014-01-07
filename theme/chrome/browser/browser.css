@@ -550,7 +550,7 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
   list-style-image: url(chrome://symbolic-icons/skin/go-next.svg);
 }
 
-#back-button[disabled="true"] {
+#back-button[disabled="true"] > .toolbarbutton-icon {
   opacity: .3;
 }
 
@@ -568,7 +568,7 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
   list-style-image: url(chrome://symbolic-icons/skin/go-previous.svg);
 }
 
-#forward-button[disabled] {
+#forward-button[disabled] > .toolbarbutton-icon {
   opacity: .3;
 }
 
@@ -579,7 +579,7 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
   list-style-image: url(chrome://symbolic-icons/skin/view-refresh.svg);
 }
 
-#reload-button[disabled="true"] {
+#reload-button[disabled="true"] > .toolbarbutton-icon {
   opacity: .3;
 }
 
@@ -590,7 +590,7 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
   list-style-image: url(chrome://symbolic-icons/skin/process-stop.svg);
 }
 
-#stop-button[disabled="true"] {
+#stop-button[disabled="true"] > .toolbarbutton-icon {
   opacity: .5;
 }
 
@@ -601,7 +601,7 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
   list-style-image: url(chrome://symbolic-icons/skin/user-home.svg);
 }
 
-#home-button[disabled="true"] {
+#home-button[disabled="true"] > .toolbarbutton-icon {
   opacity: .5;
 }
 

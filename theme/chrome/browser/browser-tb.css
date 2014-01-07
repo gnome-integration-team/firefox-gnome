@@ -150,7 +150,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   min-width: 32px !important;
 }
 
-:-moz-any(#unified-back-forward-button, #zoom-controls):hover > toolbarbutton:not(:hover):not([open="true"]):not([disabled="true"]),
+#nav-bar :-moz-any(#unified-back-forward-button, #zoom-controls):hover > toolbarbutton:not(:hover):not([open="true"]):not([disabled="true"]),
 #navigator-toolbox[iconsize=large] > #nav-bar :-moz-any(#back-button, #forward-button):not(:hover):not([open="true"]):not([disabled="true"]),
 #navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] :not(#window-controls) toolbarbutton:not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]),
 #navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] > toolbarbutton:not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]) {
@@ -197,6 +197,15 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #navigator-toolbox[iconsize=large] > #nav-bar #forward-button:not(:active):not([open="true"]),
 #navigator-toolbox[iconsize=large] > #nav-bar #forward-button[disabled="true"],
 #navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] #zoom-controls toolbarbutton:last-of-type {
+  -moz-border-start-color: rgba(0,0,0,.10) !important;
+}
+
+#nav-bar #unified-back-forward-button:not([forwarddisabled]):hover > #back-button:not([disabled="true"]),
+#nav-bar #zoom-controls:hover > toolbarbutton:first-of-type {
+  -moz-border-end-color: rgba(0,0,0,.10) !important;
+}
+#nav-bar #unified-back-forward-button:hover > #back-button:not([disabled="true"]) + #forward-button:not([disabled="true"]),
+#nav-bar #zoom-controls:hover > toolbarbutton:last-of-type {
   -moz-border-start-color: rgba(0,0,0,.10) !important;
 }
 
