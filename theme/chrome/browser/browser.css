@@ -787,7 +787,7 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
 }
 
 #TabsToolbar > #window-controls {
-  margin: 1px 3px 4px 3px !important;
+  margin: 0px 3px 2px 3px !important;
   -moz-margin-start: 6px !important;
 }
 
