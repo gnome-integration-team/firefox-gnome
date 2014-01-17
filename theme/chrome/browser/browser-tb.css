@@ -16,9 +16,15 @@
 }
 
 :-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton:not([disabled="true"]):hover {
+  background-image: linear-gradient(to bottom, #fff, #ebebeb);
+  border-color: #a7aba7;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.37);
+}
+
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton:not([disabled="true"]):hover:-moz-lwtheme {
   background-image: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(255,255,255,0.8) 40%, rgba(220,220,220,0.5));
   border-color: rgba(50,50,50,.4);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.37);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.15);
 }
 
 :-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton:not([disabled="true"]):active:hover,
@@ -26,9 +32,19 @@
 :-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[open="true"]:hover,
 :-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[checked="true"],
 :-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[checked="true"]:hover {
+  background-image: linear-gradient(to bottom, #a6aaa6, #e2e2e2);
+  border-color: #a7aba7;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.37);
+}
+
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton:not([disabled="true"]):active:hover:-moz-lwtheme,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[open="true"]:-moz-lwtheme,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[open="true"]:hover:-moz-lwtheme,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[checked="true"]:-moz-lwtheme,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[checked="true"]:hover:-moz-lwtheme {
   background-image: linear-gradient(to bottom, rgba(0,10,0,0.3), rgba(200,200,200,0.3));
   border-color: rgba(180,180,180,1);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.37);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.15);
 }
 
 :-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[type="menu"][open="true"],
@@ -39,10 +55,22 @@
 :-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[type="menu-button"][open="true"]:hover,
 :-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[type="menu-button"][open="true"]:active,
 :-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[type="menu-button"][open="true"]:active:hover {
+  background: #fff;
+  border-color: #fff;
+  border-radius: 3px 3px 0 0;
+  box-shadow: none;
+}
+
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[type="menu"][open="true"]:-moz-lwtheme,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[type="menu"][open="true"]:hover:-moz-lwtheme,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[type="menu"][open="true"]:active:-moz-lwtheme,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[type="menu"][open="true"]:active:hover:-moz-lwtheme,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[type="menu-button"][open="true"]:-moz-lwtheme,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[type="menu-button"][open="true"]:hover:-moz-lwtheme,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[type="menu-button"][open="true"]:active:-moz-lwtheme,
+:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[type="menu-button"][open="true"]:active:hover:-moz-lwtheme {
   background: rgba(255,255,255,0.8);
   border-color: rgba(255,255,255,0.8);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.37);
-  border-radius: 3px 3px 0 0;
 }
 
 :-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[disabled="true"],
@@ -154,9 +182,24 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #navigator-toolbox[iconsize=large] > #nav-bar :-moz-any(#back-button, #forward-button):not(:hover):not([open="true"]):not([disabled="true"]),
 #navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] :not(#window-controls) toolbarbutton:not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]),
 #navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] > toolbarbutton:not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]) {
+  background-image: linear-gradient(to bottom, #f8f8f8, #ededed 40%, #dbdbdb);
+  border-color: #a7aba7;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.37), /* bottom */
+              inset 0 1px 0 rgba(255,255,255,0.45),
+              inset 1px 0 0 rgba(255,255,255,0.3),
+              inset -1px 0 0 rgba(255,255,255,0.3);
+}
+
+#nav-bar :-moz-any(#unified-back-forward-button, #zoom-controls):hover > toolbarbutton:not(:hover):not([open="true"]):not([disabled="true"]):-moz-lwtheme,
+#navigator-toolbox[iconsize=large] > #nav-bar :-moz-any(#back-button, #forward-button):not(:hover):not([open="true"]):not([disabled="true"]):-moz-lwtheme,
+#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] :not(#window-controls) toolbarbutton:not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]):-moz-lwtheme,
+#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] > toolbarbutton:not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]):-moz-lwtheme {
   background-image: linear-gradient(to bottom, rgba(255,255,255,0.6), rgba(200,200,200,0.5));
-  border: 1px solid rgba(50,50,50,.4);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.37), inset 0 1px 0 rgba(255,255,255,0.45), inset 1px 0 0 rgba(255,255,255,0.3), inset -1px 0 0 rgba(255,255,255,0.3);
+  border-color: rgba(50,50,50,.4);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.15),
+              inset 0 1px 0 rgba(255,255,255,0.3),
+              inset 1px 0 0 rgba(255,255,255,0.2),
+              inset -1px 0 0 rgba(255,255,255,0.2);
 }
 
 #navigator-toolbox[iconsize=large] > #nav-bar :-moz-any(#back-button, #forward-button)[disabled="true"],

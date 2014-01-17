@@ -836,8 +836,8 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
 /* remove ugly white border around location and searchbars */
 #urlbar, .searchbar-textbox {
  -moz-appearance: none;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.8));
-  border: 1px solid rgba(50,50,50,.4);
+  background: linear-gradient(to bottom, #f0f0f0, #fff);
+  border: 1px solid #a7aba7;
   border-radius: 3px;
   box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 0 0 rgba(255,255,255,0.37);
   color: #2e3436;
@@ -852,6 +852,12 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
 #navigator-toolbox[iconsize=small] > #nav-bar :-moz-any(#urlbar, .searchbar-textbox) {
   margin: 0px 2px;
   min-height: 26px;
+}
+
+#urlbar:-moz-lwtheme, .searchbar-textbox:-moz-lwtheme {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.8));
+  border-color: rgba(50,50,50,.4);
+  box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 0 0 rgba(255,255,255,0.15);
 }
 
 #urlbar[focused="true"], .searchbar-textbox[focused="true"] {
