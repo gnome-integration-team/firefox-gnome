@@ -1,11 +1,29 @@
+#errorTitle {
+  -moz-margin-start: 150px;
+}
+
+#errorLongContent {
+  -moz-margin-start: 150px;
+}
 
 body.private > #errorPageContainer {
-/*  background-image: url("chrome://browser/skin/Privacy-48.png");*/
+  background-image: url(chrome://browser/skin/about-pages/private-browsing.svg);
 }
 
 body.normal > #errorPageContainer {
-/*  background-image: url("moz-icon://stock/gtk-dialog-question?size=dialog");*/
+  /*
+  background-image: url("moz-icon://stock/gtk-dialog-question?size=dialog");
+  */
 }
+
+#errorPageContainer {
+  background-position: 3em 2.5em;
+}
+
+h1 {
+  color: #9200a0;
+}
+
 #clearRecentHistoryDesc {
   margin-top: 2em;
 }
@@ -20,19 +38,17 @@ body.normal > #errorPageContainer {
 
 #footerDesc > p {
   font-size: 100%; /* to match the value set in chrome://global/skin/netError.css */
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
 }
 
 #moreInfo {
-  font-size: 100%; /* to match the value set in chrome://global/skin/netError.css */
-  -moz-padding-start: 25px;
-  -moz-padding-end: 70px;
-  margin-top: 30px;
-  color: grey;
-  background: url("chrome://symbolic-icons/skin/information.svg") no-repeat top left;
+  padding: 0;
 }
 
-#moreInfo:-moz-dir(rtl) {
-  background-position: top right;
+#moreInfo > p {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
 }
 
 #moreInfoText {
@@ -44,5 +60,10 @@ body.normal > #errorPageContainer {
 }
 
 #moreInfoLink{
-  color: grey  !important;
+  color: #3a81cc !important;
+  text-decoration: none;
+}
+
+#moreInfoLink:hover {
+  text-decoration: underline;
 }
