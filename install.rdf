@@ -8,6 +8,7 @@
     <em:type>32</em:type>
     <em:name>GNOME</em:name>
     <em:version>26.1b1</em:version>
+    <em:targetPlatform>Linux</em:targetPlatform>
 
     <em:targetApplication>
       <Description>
