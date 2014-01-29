@@ -16,7 +16,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font: 11pt cantarell;
+  font: 11pt Cantarell;
   color: #2e3436;
   padding: 20px 20px 0 20px;
   background-color: #f6f6f4;
@@ -49,8 +49,8 @@ ul {
 #errorPageContainer {
   position: relative;
   min-width: 13em;
-  max-width: 65em;
-  margin: auto;
+  max-width: 55em;
+  margin: 5em auto;
   padding: 3em 0;
   -moz-padding-start: 5em;
   text-align: left;
