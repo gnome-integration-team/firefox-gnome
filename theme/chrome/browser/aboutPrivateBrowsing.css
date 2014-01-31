@@ -23,6 +23,7 @@ body.normal > #errorPageContainer {
 #errorTitleText.showPrivate {
   color: #9200a0;
   letter-spacing: 0.02em;
+  text-shadow: none;
 }
 
 #clearRecentHistoryDesc {

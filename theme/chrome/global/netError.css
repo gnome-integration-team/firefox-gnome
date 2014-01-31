@@ -26,8 +26,6 @@ body {
 }
 
 h1 {
-  color: #babdb6;
-  text-shadow: 0 1px 0 white;
   margin: 0 0 .3em 0;
   font-size: 160%;
 }
@@ -76,6 +74,8 @@ ul {
 }
 
 #errorTitle {
+  color: #babdb6;
+  text-shadow: 0 1px 0 white;
   -moz-margin-start: 80px;
 }
 
@@ -165,15 +165,24 @@ ul {
 }
 
 /* Custom styling for 'blacklist' error class */
-:root.blacklist #errorTitle, :root.blacklist #errorLongContent,
-:root.blacklist #errorShortDesc, :root.blacklist #errorLongDesc,
-:root.blacklist a {
+
+:root.blacklist #errorTitle {
+  -moz-margin-start: 150px;
+}
+
+:root.blacklist #errorLongContent {
+  -moz-margin-start: 150px;
 }
 
 :root.blacklist #errorPageContainer {
+  background-image: url(chrome://browser/skin/about-pages/danger.svg);
+  background-position: 52px 50px;
 }
 
-:root.blacklist {
+:root.blacklist #errorTitle {
+  color: #d8001d;
+  letter-spacing: 0.02em;
+  text-shadow: none;
 }
 
 :root.blacklist #errorTryAgain {
