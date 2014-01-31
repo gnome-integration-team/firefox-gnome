@@ -1,8 +1,8 @@
-#errorTitle {
+body.private #errorTitle {
   -moz-margin-start: 150px;
 }
 
-#errorLongContent {
+body.private #errorLongContent {
   -moz-margin-start: 150px;
 }
 
@@ -17,19 +17,16 @@ body.normal > #errorPageContainer {
 }
 
 #errorPageContainer {
-  background-position: 3em 2.5em;
+  background-position: 51px 37px;
 }
 
-h1 {
+#errorTitleText.showPrivate {
   color: #9200a0;
+  letter-spacing: 0.02em;
 }
 
 #clearRecentHistoryDesc {
   margin-top: 2em;
-}
-
-#clearRecentHistoryDesc > p {
-  font-size: 110%; /* to match the value set in chrome://global/skin/netError.css */
 }
 
 #startPrivateBrowsingDesc > button {
@@ -37,7 +34,6 @@ h1 {
 }
 
 #footerDesc > p {
-  font-size: 100%; /* to match the value set in chrome://global/skin/netError.css */
   margin-top: 1.2em;
   margin-bottom: 1.2em;
 }

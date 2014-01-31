@@ -87,7 +87,6 @@ ul {
   overflow: auto;
   margin-top: 2em;
   margin-bottom: 2em;
-  font-size: 110%;
   font-weight: bold;
   white-space: pre-wrap;
 }
@@ -96,7 +95,6 @@ ul {
 }
 
 #errorLongDesc > p {
-  font-size: 110%;
   margin-top: 1.2em;
   margin-bottom: 1.2em;
   /*
