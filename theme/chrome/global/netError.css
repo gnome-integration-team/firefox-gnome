@@ -48,7 +48,7 @@ ul {
   position: relative;
   min-width: 13em;
   max-width: 55em;
-  margin: 5em auto;
+  margin: 5em auto 0;
   padding: 3em 0;
   -moz-padding-start: 5em;
   text-align: left;
