@@ -216,6 +216,14 @@ notification .messageImage:-moz-window-inactive {
   opacity: 0.5;
 }
 
+#window-controls > toolbarbutton:-moz-window-inactive {
+  border-color: transparent !important;
+}
+
+:-moz-any(#minimize-button, #restore-button, #close-button):-moz-window-inactive > .toolbarbutton-icon {
+  opacity: .38 !important;
+}
+
 /* ::::: browser/searchbar.css ::::: */
 
 .searchbar-engine-image:-moz-window-inactive {
