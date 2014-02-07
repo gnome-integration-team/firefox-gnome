@@ -17,7 +17,7 @@
 
 :-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton:not([disabled="true"]):hover {
   background-image: linear-gradient(to bottom, #fff, #ebebeb);
-  border-color: #a7aba7;
+  border-color: #b2b6b2 #b8bbb8 #bdbfbd;
   box-shadow: 0 1px 0 rgba(255,255,255,0.37);
 }
 
@@ -33,7 +33,7 @@
 :-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[checked="true"],
 :-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton[checked="true"]:hover {
   background-image: linear-gradient(to bottom, #a6aaa6, #e2e2e2);
-  border-color: #a7aba7;
+  border-color: #b2b6b2 #b8bbb8 #bdbfbd;
   box-shadow: 0 1px 0 rgba(255,255,255,0.37);
 }
 
@@ -183,7 +183,7 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] :not(#window-controls) toolbarbutton:not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]),
 #navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] > toolbarbutton:not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]) {
   background-image: linear-gradient(to bottom, #f8f8f8, #ededed 40%, #dbdbdb);
-  border-color: #a7aba7;
+  border-color: #b2b6b2 #b8bbb8 #bdbfbd;
   box-shadow: 0 1px 0 rgba(255,255,255,0.37), /* bottom */
               inset 0 1px 0 rgba(255,255,255,0.45),
               inset 1px 0 0 rgba(255,255,255,0.3),

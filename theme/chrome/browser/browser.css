@@ -839,7 +839,8 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
 #urlbar, .searchbar-textbox {
  -moz-appearance: none;
   background: linear-gradient(to bottom, #f0f0f0, #fff);
-  border: 1px solid #a7aba7;
+  border: 1px solid;
+  border-color: #b2b6b2 #b8bbb8 #bdbfbd;
   border-radius: 3px;
   box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 0 0 rgba(255,255,255,0.37);
   color: #2e3436;
