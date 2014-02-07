@@ -98,7 +98,6 @@ notification .messageImage:-moz-window-inactive {
 #navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] > :-moz-any(toolbarbutton:not(#close-button), .toolbarbutton-menubutton-dropmarker):-moz-window-inactive:not([checked="true"]),
 #navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] > toolbaritem:not(#urlbar):not(#unified-back-forward-button) > :-moz-any(toolbarbutton:not(#close-button), .toolbarbutton-menubutton-dropmarker):-moz-window-inactive:not([checked="true"]) {
   background: transparent !important;
-  border-color: rgba(50,50,50,.4) !important;
   box-shadow: none !important;
 }
 
@@ -122,7 +121,6 @@ notification .messageImage:-moz-window-inactive {
 
 #main-window:-moz-window-inactive textbox {
   background: rgba(255,255,255,0.5) !important;
-  border-color: rgba(50,50,50,.4) !important;
   box-shadow: none !important;
   color: #6a6f6e !important;
 }

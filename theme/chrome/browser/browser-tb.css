@@ -134,7 +134,6 @@
   opacity: .5;
 }
 
-
 /* ::::: Primary toolbarbuttons ::::: */
 
 .toolbarbutton-1 {
@@ -173,9 +172,13 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 /* ::::: Relief buttons ::::: */
 
-#navigator-toolbox[iconsize=large] > #nav-bar :-moz-any(#back-button, #forward-button),
 #navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] .toolbarbutton-1 {
   min-width: 32px !important;
+}
+
+#navigator-toolbox[iconsize=large] > #nav-bar :-moz-any(#back-button, #forward-button),
+#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] :-moz-any(#back-button, #forward-button) {
+  min-width: 31px !important;
 }
 
 #nav-bar :-moz-any(#unified-back-forward-button, #zoom-controls):hover > toolbarbutton:not(:hover):not([open="true"]):not([disabled="true"]),
@@ -184,10 +187,6 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] > toolbarbutton:not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]) {
   background-image: linear-gradient(to bottom, #f8f8f8, #ededed 40%, #dbdbdb);
   border-color: #b2b6b2 #b8bbb8 #bdbfbd;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.37), /* bottom */
-              inset 0 1px 0 rgba(255,255,255,0.45),
-              inset 1px 0 0 rgba(255,255,255,0.3),
-              inset -1px 0 0 rgba(255,255,255,0.3);
 }
 
 #nav-bar :-moz-any(#unified-back-forward-button, #zoom-controls):hover > toolbarbutton:not(:hover):not([open="true"]):not([disabled="true"]):-moz-lwtheme,
@@ -196,17 +195,40 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 #navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] > toolbarbutton:not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]):-moz-lwtheme {
   background-image: linear-gradient(to bottom, rgba(255,255,255,0.6), rgba(200,200,200,0.5));
   border-color: rgba(50,50,50,.4);
+}
+
+#nav-bar :-moz-any(#unified-back-forward-button, #zoom-controls):hover > toolbarbutton:not(:hover):not([open="true"]):not([disabled="true"]),
+#navigator-toolbox[iconsize=large] > #nav-bar :-moz-any(#back-button, #forward-button):not(:hover):not([open="true"]):not([disabled="true"]),
+#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] :not(#window-controls):not(#unified-back-forward-button):not(#zoom-controls) toolbarbutton:not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]),
+#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] > toolbarbutton:not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]) {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.37), /* bottom */
+              inset 0 1px 0 rgba(255,255,255,0.45),
+              inset 1px 0 0 rgba(255,255,255,0.3),
+              inset -1px 0 0 rgba(255,255,255,0.3);
+}
+
+#nav-bar :-moz-any(#unified-back-forward-button, #zoom-controls):hover > toolbarbutton:not(:hover):not([open="true"]):not([disabled="true"]):-moz-lwtheme,
+#navigator-toolbox[iconsize=large] > #nav-bar :-moz-any(#back-button, #forward-button):not(:hover):not([open="true"]):not([disabled="true"]):-moz-lwtheme,
+#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] :not(#window-controls):not(#unified-back-forward-button):not(#zoom-controls) toolbarbutton:not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]):-moz-lwtheme,
+#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] > toolbarbutton:not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]):-moz-lwtheme {
   box-shadow: 0 1px 0 rgba(255,255,255,0.15),
               inset 0 1px 0 rgba(255,255,255,0.3),
               inset 1px 0 0 rgba(255,255,255,0.2),
               inset -1px 0 0 rgba(255,255,255,0.2);
 }
 
+#nav-bar #unified-back-forward-button:hover > :-moz-any(#back-button, #forward-button)[disabled="true"],
 #navigator-toolbox[iconsize=large] > #nav-bar :-moz-any(#back-button, #forward-button)[disabled="true"],
 #navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] toolbarbutton[disabled="true"] {
+  background: #f4f4f2;
+  border-color: #b2b6b2 #b8bbb8 #bdbfbd;
+  box-shadow: none;
+}
+
+#navigator-toolbox[iconsize=large] > #nav-bar :-moz-any(#back-button, #forward-button)[disabled="true"]:-moz-lwtheme,
+#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] toolbarbutton[disabled="true"]:-moz-lwtheme {
   background: rgba(255,255,255,0.3);
   border-color: rgba(50,50,50,.4);
-  box-shadow: none;
 }
 
 #navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] .toolbarbutton-menu-dropmarker {
@@ -232,48 +254,82 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 
 /* ::::: Connected buttons ::::: */
 
-#navigator-toolbox[iconsize=large] > #nav-bar #back-button:not(:active):not([open="true"]),
-#navigator-toolbox[iconsize=large] > #nav-bar #back-button[disabled="true"],
-#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] #zoom-controls toolbarbutton:first-of-type {
-  -moz-border-end-color: rgba(0,0,0,.10) !important;
-}
-#navigator-toolbox[iconsize=large] > #nav-bar #forward-button:not(:active):not([open="true"]),
-#navigator-toolbox[iconsize=large] > #nav-bar #forward-button[disabled="true"],
-#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] #zoom-controls toolbarbutton:last-of-type {
-  -moz-border-start-color: rgba(0,0,0,.10) !important;
+#navigator-toolbox[iconsize=large] > #nav-bar #back-button:not(:active):not([disabled="true"]),
+#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] #zoom-controls toolbarbutton:first-of-type:not(:active):not([disabled="true"]),
+#nav-bar #unified-back-forward-button:hover > #back-button:not(:active):not([disabled="true"]),
+#nav-bar #zoom-controls:hover > toolbarbutton:first-of-type:not(:active):not([disabled="true"]) {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.37),
+              inset 0 1px 0 rgba(255,255,255,0.45),
+              inset 1px 0 0 rgba(255,255,255,0.3),
+              inset -1px 0 0 rgba(0,0,0,0.08);
 }
 
-#nav-bar #unified-back-forward-button:not([forwarddisabled]):hover > #back-button:not([disabled="true"]),
-#nav-bar #zoom-controls:hover > toolbarbutton:first-of-type {
-  -moz-border-end-color: rgba(0,0,0,.10) !important;
+#navigator-toolbox[iconsize=large] > #nav-bar #back-button:not(:active):not([disabled="true"]):-moz-lwtheme,
+#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] #zoom-controls toolbarbutton:first-of-type:not(:active):not([disabled="true"]):-moz-lwtheme,
+#nav-bar #unified-back-forward-button:hover > #back-button:not(:active):not([disabled="true"]):-moz-lwtheme,
+#nav-bar #zoom-controls:hover > toolbarbutton:first-of-type:not(:active):not([disabled="true"]):-moz-lwtheme {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.15),
+              inset 0 1px 0 rgba(255,255,255,0.3),
+              inset 1px 0 0 rgba(255,255,255,0.2),
+              inset -1px 0 0 rgba(0,0,0,0.08);
 }
-#nav-bar #unified-back-forward-button:hover > #back-button:not([disabled="true"]) + #forward-button:not([disabled="true"]),
-#nav-bar #zoom-controls:hover > toolbarbutton:last-of-type {
-  -moz-border-start-color: rgba(0,0,0,.10) !important;
+
+#navigator-toolbox[iconsize=large] > #nav-bar #back-button[disabled="true"],
+#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] #zoom-controls toolbarbutton:first-of-type[disabled="true"],
+#nav-bar #unified-back-forward-button:hover > #back-button[disabled="true"],
+#nav-bar #zoom-controls:hover > toolbarbutton:first-of-type[disabled="true"] {
+  box-shadow: inset -1px 0 0 rgba(0,0,0,0.08);
+}
+
+#navigator-toolbox[iconsize=large] > #nav-bar #forward-button:not(:hover):not(:active):not([disabled="true"]),
+#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] #zoom-controls toolbarbutton:not(:first-of-type):not(:hover):not(:active):not([disabled="true"]),
+#nav-bar #unified-back-forward-button:hover > #forward-button:not(:hover):not(:active):not([disabled="true"]),
+#nav-bar #zoom-controls:hover > toolbarbutton:not(:first-of-type):not(:hover):not(:active):not([disabled="true"]) {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.37),
+              inset 0 1px 0 rgba(255,255,255,0.45),
+              inset 1px 0 0 rgba(255,255,255,0.5),
+              inset -1px 0 0 rgba(255,255,255,0.3);
+}
+
+#navigator-toolbox[iconsize=large] > #nav-bar #forward-button:not(:hover):not(:active):not([disabled="true"]):-moz-lwtheme,
+#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] #zoom-controls toolbarbutton:not(:first-of-type):not(:hover):not(:active):not([disabled="true"]):-moz-lwtheme,
+#nav-bar #unified-back-forward-button:hover > #forward-button:not(:hover):not(:active):not([disabled="true"]):-moz-lwtheme,
+#nav-bar #zoom-controls:hover > toolbarbutton:not(:first-of-type):not(:hover):not(:active):not([disabled="true"]):-moz-lwtheme {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.15),
+              inset 0 1px 0 rgba(255,255,255,0.3),
+              inset 1px 0 0 rgba(255,255,255,0.4),
+              inset -1px 0 0 rgba(255,255,255,0.2);
 }
 
 /* It's universal code (can be used for 3+ buttons in group) */
 
+/*
 #nav-bar :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:not(:first-of-type):not(:last-of-type) {
+  -moz-border-start: 0 !important;
+  -moz-border-end: 0 !important;
   border-radius: 0;
-  -moz-margin-start: -1px !important;
+  -moz-margin-start: 0 !important;
   -moz-margin-end: 0 !important;
+}
+*/
+
+#nav-bar :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:not(:first-of-type) {
+  -moz-border-start-width: 0;
+  -moz-margin-start: 0 !important;
 }
 
-#nav-bar :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type {
+#nav-bar :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:not(:last-of-type) {
+  -moz-border-end-width: 0;
   -moz-margin-end: 0 !important;
-}
-#nav-bar :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type {
-  -moz-margin-start: -1px !important;
 }
 
 #nav-bar:-moz-locale-dir(ltr) :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type,
 #nav-bar:-moz-locale-dir(rtl) :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type {
-  border-radius: 3px 0px 0px 3px;
+  border-radius: 3px 0 0 3px;
 }
 #nav-bar:-moz-locale-dir(ltr) :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:last-of-type,
 #nav-bar:-moz-locale-dir(rtl) :-moz-any(#unified-back-forward-button, #zoom-controls) > toolbarbutton:first-of-type {
-  border-radius: 0px 3px 3px 0px;
+  border-radius: 0 3px 3px 0;
 }
 
 /* */
@@ -285,9 +341,9 @@ toolbar[mode="full"] .toolbarbutton-1 > .toolbarbutton-menubutton-button {
 }
 #nav-bar[customizing]:-moz-locale-dir(ltr) #back-button,
 #nav-bar[customizing]:-moz-locale-dir(rtl) #forward-button {
-  border-radius: 3px 0px 0px 3px;
+  border-radius: 3px 0 0 3px;
 }
 #nav-bar[customizing]:-moz-locale-dir(ltr) #forward-button,
 #nav-bar[customizing]:-moz-locale-dir(rtl) #back-button {
-  border-radius: 0px 3px 3px 0px;
+  border-radius: 0 3px 3px 0;
 }
