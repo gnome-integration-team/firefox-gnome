@@ -66,16 +66,14 @@ a {
 
 .message > .location {
   -moz-margin-start: 6px;
+  display: flex;
   flex: 0 0 auto;
   align-self: flex-start;
+  justify-content: flex-end;
   width: 10em;
   margin-top: 4px;
-  text-align: end;
   color: -moz-nativehyperlinktext;
-  text-overflow: ellipsis;
   text-decoration: none;
-  overflow: hidden;
-  white-space: nowrap;
 }
 
 .message > .location:hover,
@@ -83,15 +81,24 @@ a {
   text-decoration: underline;
 }
 
+.message > .location > .filename {
+  text-overflow: ellipsis;
+  text-align: end;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.message > .location > .line-number {
+  flex: 0 0 auto;
+}
+
 .jsterm-input-container {
-  background: white;
+  border-top-width: 1px;
+  border-top-style: solid;
 }
 
 #output-wrapper {
-  background: #fff;
-  color: #000;
   direction: ltr;
-  border-bottom: 1px solid ThreeDShadow;
   overflow: auto;
 }
 
@@ -101,6 +108,10 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+#output-container.hideTimestamps > .message > .timestamp {
+  display: none;
 }
 
 .filtered-by-type,
@@ -261,20 +272,16 @@ a {
   border: none;
   padding: 0 0 0 16px;
   -moz-appearance: none;
+  background-color: transparent;
 }
 
 .jsterm-input-node {
   background: -moz-image-rect(url("chrome://browser/skin/devtools/commandline-icon.png"), 0, 32, 16, 16) no-repeat;
-  background-position: 0%;
 }
 
 :-moz-any(.jsterm-input-node,
           .jsterm-complete-node) > .textbox-input-box > .textbox-textarea {
   overflow-x: hidden;
-}
-
-.jsterm-complete-node > .textbox-input-box > .textbox-textarea {
-  color: GrayText;
 }
 
 .inlined-variables-view .body {
@@ -284,11 +291,11 @@ a {
 .inlined-variables-view iframe {
   display: block;
   flex: 1;
+  margin-top: 5px;
   margin-bottom: 15px;
   -moz-margin-end: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 0 12px #dfdfdf;
+  border: 1px solid rgba(128, 128, 128, .5);
+  border-radius: 3px;
 }
 
 #webconsole-sidebar > tabs {
@@ -317,7 +324,7 @@ a {
 
 .navigation-marker {
   color: #aaa;
-  background: linear-gradient(#fff, #bbb, #fff) no-repeat left 50%;
+  background: linear-gradient(#aaa, #aaa) no-repeat left 50%;
   background-size: 100% 2px;
   margin-top: 6px;
   margin-bottom: 6px;
@@ -325,10 +332,53 @@ a {
 }
 
 .navigation-marker .url {
-  background: #fff;
   -moz-padding-end: 9px;
   text-decoration: none;
 }
+
+/* Replace these values with CSS variables as available */
+.theme-dark .jsterm-input-container {
+  background-color: #252c33; /* tabToolbarBackgroundColor */
+  border-color: #131c26; /* mainBackgroundColor */
+}
+
+.theme-dark .jsterm-input-node {
+  color: #8fa1b2; /* textColor */
+}
+
+.theme-dark .jsterm-complete-node {
+  color: #5c6773; /* commentColor */
+}
+
+.theme-dark .navigation-marker .url {
+  background: #131c26; /* mainBackgroundColor */
+}
+
+.theme-dark .inlined-variables-view iframe {
+  border-color: #333;
+}
+
+.theme-light .jsterm-input-container {
+  background-color: #fff; /* mainBackgroundColor */
+  border-color: ThreeDShadow;
+}
+
+.theme-light .jsterm-input-node {
+  color: black; /* textColor */
+}
+
+.theme-light .jsterm-complete-node {
+  color: hsl(90,2%,46%); /* commentColor */
+}
+
+.theme-light .navigation-marker .url {
+  background: #fff; /* mainBackgroundColor */
+}
+
+.theme-light .inlined-variables-view iframe {
+  border-color: #ccc;
+}
+
 
 .jsterm-input-node {
   width: 98%;
