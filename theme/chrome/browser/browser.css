@@ -4,9 +4,7 @@
 
 @import url("chrome://global/skin/");
 
-/*
 @import url("chrome://appversion/skin/browser/browser.css");
-*/
 
 @import url("chrome://os/skin/browser/browser.css");
 
@@ -3646,7 +3644,7 @@ chatbox {
 */
 
 /* UI Tour */
-
+/* chrome/appversion/browser/browser.css
 html|div#UITourHighlight {
   border-radius: 20px;
   border: 2px #5B9CD9 solid;
@@ -3668,3 +3666,4 @@ html|div#UITourHighlight {
 #UITourTooltipDescription {
   max-width: 20em;
 }
+*/
