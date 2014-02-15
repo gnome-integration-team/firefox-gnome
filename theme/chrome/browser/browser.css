@@ -984,7 +984,8 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
               inset -1px 0 0 rgba(255,255,255,0.2) !important;
 }
 
-window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled]:hover #back-button[disabled="true"] {
+window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"][mode=icons], #nav-bar:not([currentset])[mode=icons]) > #unified-back-forward-button[forwarddisabled]:hover #back-button[disabled="true"],
+window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icons] > :-moz-any(#nav-bar[currentset*="unified-back-forward-button,urlbar-container"],#nav-bar:not([currentset])) > #unified-back-forward-button[forwarddisabled] #back-button[disabled="true"] {
   box-shadow: none !important;
 }
 
