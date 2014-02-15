@@ -20,7 +20,7 @@ var Tweaks = {
     newtabPage: {
         key: "newtab-page",
         enable: function() {
-            if (!this._isEnabled && GNOMEThemeTweak.prefs.getPrefType(this.key) && GNOMEThemeTweak.prefs.getBoolPref(this.key)) {
+            if (!this._isEnabled && GNOMEThemeTweak.prefs.getBoolPref(this.key)) {
                 GNOMEThemeTweak.loadStyle(this.key);
                 this._isEnabled = true;
             }
@@ -34,7 +34,7 @@ var Tweaks = {
     tabsBorder: {
         key: "tabs-border",
         enable: function() {
-            if (!this._isEnabled && GNOMEThemeTweak.prefs.getPrefType(this.key) && GNOMEThemeTweak.prefs.getBoolPref(this.key)) {
+            if (!this._isEnabled && GNOMEThemeTweak.prefs.getBoolPref(this.key)) {
                 GNOMEThemeTweak.loadStyle(this.key);
                 this._isEnabled = true;
             }
@@ -48,7 +48,7 @@ var Tweaks = {
     urlbarHistoryDropmarker: {
         key: "urlbar-history-dropmarker",
         enable: function() {
-            if (!this._isEnabled && GNOMEThemeTweak.prefs.getPrefType(this.key) && GNOMEThemeTweak.prefs.getBoolPref(this.key)) {
+            if (!this._isEnabled && GNOMEThemeTweak.prefs.getBoolPref(this.key)) {
                 GNOMEThemeTweak.loadStyle(this.key);
                 this._isEnabled = true;
             }
@@ -62,7 +62,7 @@ var Tweaks = {
     forwardButton: {
         key: "forward-button",
         enable: function() {
-            if (!this._isEnabled && GNOMEThemeTweak.prefs.getPrefType(this.key) && GNOMEThemeTweak.prefs.getBoolPref(this.key)) {
+            if (!this._isEnabled && GNOMEThemeTweak.prefs.getBoolPref(this.key)) {
                 GNOMEThemeTweak.loadStyle(this.key);
                 this._isEnabled = true;
             }
@@ -76,7 +76,7 @@ var Tweaks = {
     inactiveState: {
         key: "inactive-state",
         enable: function() {
-            if (!this._isEnabled && GNOMEThemeTweak.prefs.getPrefType(this.key) && GNOMEThemeTweak.prefs.getBoolPref(this.key)) {
+            if (!this._isEnabled && GNOMEThemeTweak.prefs.getBoolPref(this.key)) {
                 GNOMEThemeTweak.loadStyle(this.key);
                 this._isEnabled = true;
             }
@@ -91,7 +91,7 @@ var Tweaks = {
         key: "relief-buttons",
 
         enable: function() {
-            if (!this._isEnabled && GNOMEThemeTweak.prefs.getPrefType(this.key) && GNOMEThemeTweak.prefs.getBoolPref(this.key)) {
+            if (!this._isEnabled && GNOMEThemeTweak.prefs.getBoolPref(this.key)) {
                 GNOMEThemeTweak.addListener("loadWindow", this._setAttributes);
                 GNOMEThemeTweak.launchIntoExistingWindows(this._setAttributes);
                 this._isEnabled = true;

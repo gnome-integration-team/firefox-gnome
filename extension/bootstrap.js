@@ -13,10 +13,29 @@ function include(path) {
     Services.scriptloader.loadSubScript(uri.spec, this);
 };
 
+include("include/DefaultPrefs.js");
 include("include/Tweaks.js");
 
 var GNOMEThemeTweak = {
+    PREF_BRANCH: "extensions.gnome-theme-tweak.",
     prefs: null,
+
+    setDefaultPrefs: function() {
+        let branch = Services.prefs.getDefaultBranch(this.PREF_BRANCH);
+        for (let [key, val] in Iterator(DefaultPrefs)) {
+            switch (typeof val) {
+            case "boolean":
+                branch.setBoolPref(key, val);
+                break;
+            case "number":
+                branch.setIntPref(key, val);
+                break;
+            case "string":
+                branch.setCharPref(key, val);
+                break;
+            }
+        }
+    },
 
     loadStyle: function(name) {
         let sss = Cc["@mozilla.org/content/style-sheet-service;1"].getService(Ci.nsIStyleSheetService);
@@ -109,9 +128,11 @@ var GNOMEThemeTweak = {
     },
 
     init: function() {
+        this.setDefaultPrefs();
+
         this.prefs = Cc["@mozilla.org/preferences-service;1"]
                        .getService(Components.interfaces.nsIPrefService)
-                       .getBranch("extensions.gnome-theme-tweak.");
+                       .getBranch(this.PREF_BRANCH);
 
         // Removing older keys...
         if (this.prefs.getPrefType("restore-button"))
