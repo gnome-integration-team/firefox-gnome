@@ -939,7 +939,7 @@ window:not([chromehidden~=toolbar]) :-moz-any(#nav-bar[currentset*="unified-back
               visibility 200ms ease-out,
               color 200ms ease, 
               border 200ms ease, 
-              box-shadow 200ms ease, 
+              box-shadow 0ms ease,
               background 200ms ease;
 }
 
