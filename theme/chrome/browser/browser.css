@@ -4,9 +4,7 @@
 
 @import url("chrome://global/skin/");
 
-/*
 @import url("chrome://appversion/skin/browser/browser.css");
-*/
 
 @import url("chrome://os/skin/browser/browser.css");
 
@@ -2612,17 +2610,110 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 }
 
 .devtools-responsiveui-toolbar {
+  -moz-appearance: none;
   background: transparent;
+  /* text color is textColor from dark theme, since no theme is applied to
+   * the responsive toolbar.
+   */
+  color: hsl(210,30%,85%);
   margin: 10px 0;
   padding: 0;
   box-shadow: none;
   border-bottom-width: 0;
 }
 
-.devtools-responsiveui-toolbar > menulist,
-.devtools-responsiveui-toolbar > toolbarbutton {
-  min-width: 22px;
+.devtools-responsiveui-menulist,
+.devtools-responsiveui-toolbarbutton {
+  -moz-appearance: none;
+  -moz-box-align: center;
+  min-width: 32px;
+  min-height: 22px;
+  text-shadow: 0 -1px 0 hsla(210,8%,5%,.45);
+  border: 1px solid hsla(210,8%,5%,.45);
   border-radius: 0;
+  background: linear-gradient(hsla(212,7%,57%,.35), hsla(212,7%,57%,.1)) padding-box;
+  box-shadow: 0 1px 0 hsla(210,16%,76%,.15) inset, 0 0 0 1px hsla(210,16%,76%,.15) inset, 0 1px 0 hsla(210,16%,76%,.15);
+  margin: 0 3px;
+  color: inherit;
+}
+
+.devtools-responsiveui-toolbarbutton > .toolbarbutton-menubutton-button {
+  -moz-box-orient: horizontal;
+}
+
+.devtools-responsiveui-menulist:-moz-focusring,
+.devtools-responsiveui-toolbarbutton:-moz-focusring {
+  outline: 1px dotted hsla(210,30%,85%,0.7);
+  outline-offset: -4px;
+}
+
+.devtools-responsiveui-toolbarbutton:not([label]) > .toolbarbutton-text {
+  display: none;
+}
+
+.devtools-responsiveui-toolbarbutton:not([checked=true]):hover:active {
+  border-color: hsla(210,8%,5%,.6);
+  background: linear-gradient(hsla(220,6%,10%,.3), hsla(212,7%,57%,.15) 65%, hsla(212,7%,57%,.3));
+  box-shadow: 0 0 3px hsla(210,8%,5%,.25) inset, 0 1px 3px hsla(210,8%,5%,.25) inset, 0 1px 0 hsla(210,16%,76%,.15);
+}
+
+.devtools-responsiveui-menulist[open=true],
+.devtools-responsiveui-toolbarbutton[open=true],
+.devtools-responsiveui-toolbarbutton[checked=true] {
+  border-color: hsla(210,8%,5%,.6) !important;
+  background: linear-gradient(hsla(220,6%,10%,.6), hsla(210,11%,18%,.45) 75%, hsla(210,11%,30%,.4));
+  box-shadow: 0 1px 3px hsla(210,8%,5%,.25) inset, 0 1px 3px hsla(210,8%,5%,.25) inset, 0 1px 0 hsla(210,16%,76%,.15);
+}
+
+.devtools-responsiveui-toolbarbutton[checked=true] {
+  color: hsl(208,100%,60%);
+}
+
+.devtools-responsiveui-toolbarbutton[checked=true]:hover {
+  background-color: transparent !important;
+}
+
+.devtools-responsiveui-toolbarbutton[checked=true]:hover:active {
+  background-color: hsla(210,8%,5%,.2) !important;
+}
+
+.devtools-responsiveui-menulist > .menulist-label-box {
+  text-align: center;
+}
+
+.devtools-responsiveui-menulist > .menulist-dropmarker {
+  -moz-appearance: none;
+  display: -moz-box;
+  background-color: transparent;
+  list-style-image: url("chrome://browser/skin/devtools/dropmarker.png");
+  -moz-box-align: center;
+  border-width: 0;
+  min-width: 16px;
+}
+
+.devtools-responsiveui-toolbarbutton[type=menu-button] > .toolbarbutton-menubutton-button {
+  -moz-appearance: none;
+  color: inherit;
+  border-width: 0;
+  -moz-border-end: 1px solid hsla(210,8%,5%,.45);
+  box-shadow: -1px 0 0 hsla(210,16%,76%,.15) inset, 1px 0 0 hsla(210,16%,76%,.15);
+}
+
+.devtools-responsiveui-toolbarbutton[type=menu-button]:-moz-locale-dir(rtl) > .toolbarbutton-menubutton-button {
+  box-shadow: 1px 0 0 hsla(210,16%,76%,.15) inset, -1px 0 0 hsla(210,16%,76%,.15);
+}
+
+.devtools-responsiveui-toolbarbutton[type=menu-button] {
+  padding: 0 1px;
+  -moz-box-align: stretch;
+}
+
+.devtools-responsiveui-toolbarbutton[type=menu] > .toolbarbutton-menu-dropmarker,
+.devtools-responsiveui-toolbarbutton[type=menu-button] > .toolbarbutton-menubutton-dropmarker {
+  -moz-appearance: none !important;
+  list-style-image: url("chrome://browser/skin/devtools/dropmarker.png");
+  -moz-box-align: center;
+  padding: 0 3px;
 }
 
 .devtools-responsiveui-toolbar:-moz-locale-dir(ltr) > *:first-child,
@@ -2728,7 +2819,8 @@ html|*.highlighter-nodeinfobar-pseudo-classes {
 }
 
 .highlighter-nodeinfobar-inspectbutton {
-  -moz-margin-end: 6px;
+  -moz-border-end: 1px solid #5a6169;
+  -moz-margin-end: 12px;
   list-style-image: url("chrome://browser/skin/devtools/inspect-button.png");
   -moz-image-region: rect(0px 16px 16px 0px);
 }
@@ -2739,7 +2831,8 @@ html|*.highlighter-nodeinfobar-pseudo-classes {
 }
 
 .highlighter-nodeinfobar-menu {
-  -moz-margin-start: 6px;
+  -moz-border-start: 1px solid #5a6169;
+  -moz-margin-start: 12px;
 }
 
 .highlighter-nodeinfobar-menu > .toolbarbutton-menu-dropmarker {
@@ -2780,6 +2873,7 @@ html|*.highlighter-nodeinfobar-pseudo-classes {
 /* Developer toolbar */
 
 #developer-toolbar {
+  -moz-appearance: none;
   padding: 0;
   min-height: 32px;
   background-image: url(devtools/background-noise-toolbar.png), linear-gradient(#303840, #2d3640);
@@ -2787,7 +2881,7 @@ html|*.highlighter-nodeinfobar-pseudo-classes {
   box-shadow: 0 1px 0 hsla(204,45%,98%,.05) inset, 0 -1px 0 hsla(206,37%,4%,.1) inset;
 }
 
-.developer-toolbar-button {
+#developer-toolbar > toolbarbutton {
   -moz-appearance: none;
   border: none;
   background: transparent;
@@ -2819,6 +2913,34 @@ html|*.highlighter-nodeinfobar-pseudo-classes {
 
 #developer-toolbar-toolbox-button[checked=true] {
   -moz-image-region: rect(0px, 64px, 16px, 48px);
+}
+
+#developer-toolbar-closebutton {
+  list-style-image: url("chrome://browser/skin/devtools/close.png");
+  -moz-appearance: none;
+  border: none;
+  margin: 0 4px;
+  min-width: 16px;
+  width: 16px;
+  opacity: 0.6;
+}
+
+#developer-toolbar-closebutton > .toolbarbutton-icon {
+  /* XXX Buttons have padding in widget/ that we don't want here but can't override with good CSS, so we must
+     use evil CSS to give the impression of smaller content */
+  margin: -4px;
+}
+
+#developer-toolbar-closebutton > .toolbarbutton-text {
+  display: none;
+}
+
+#developer-toolbar-closebutton:hover {
+  opacity: 0.8;
+}
+
+#developer-toolbar-closebutton:hover:active {
+  opacity: 1;
 }
 
 /* GCLI */
@@ -3145,88 +3267,6 @@ toolbar[mode="full"] > #downloads-button > .toolbarbutton-text {
   background-image: linear-gradient(#B4211B, #8A1915);
   border-radius: 1px;
   -moz-margin-end: 2px;
-}
-
-/* UI Tour */
-
-@keyframes uitour-wobble {
-  from {
-    transform: rotate(0deg) translateX(2px) rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg) translateX(2px) rotate(-360deg);
-  }
-}
-
-@keyframes uitour-zoom {
-  from {
-    transform: scale(0.9);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  to {
-    transform: scale(0.9);
-  }
-}
-
-@keyframes uitour-color {
-  from {
-    border-color: #5B9CD9;
-  }
-  50% {
-    border-color: #FF0000;
-  }
-  to {
-    border-color: #5B9CD9;
-  }
-}
-
-html|div#UITourHighlight {
-  display: none;
-  position: absolute;
-  min-height: 32px;
-  min-width: 32px;
-  display: none;
-  border: 2px #5B9CD9 solid;
-  box-shadow: 0 0 2px #5B9CD9, inset 0 0 1px #5B9CD9;
-  border-radius: 20px;
-  z-index: 10000000000;
-}
-
-html|div#UITourHighlight[active] {
-  display: block;
-  animation-delay: 2s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
-}
-
-html|div#UITourHighlight[active="wobble"] {
-  animation-name: uitour-wobble;
-  animation-duration: 1s;
-}
-html|div#UITourHighlight[active="zoom"] {
-  animation-name: uitour-zoom;
-  animation-duration: 1s;
-}
-html|div#UITourHighlight[active="color"] {
-  animation-name: uitour-color;
-  animation-duration: 2s;
-}
-
-#UITourTooltip {
-  max-width: 20em;
-}
-
-#UITourTooltipTitle {
-  font-weight: bold;
-  font-size: 130%;
-  margin: 0 0 5px 0;
-}
-
-#UITourTooltipDescription {
-  max-width: 20em;
 }
 
 /* Social toolbar item */
@@ -3601,5 +3641,30 @@ chatbox {
   content: "";
   background: url("chrome://browser/skin/privatebrowsing-mask.png") center no-repeat;
   width: 40px;
+}
+*/
+
+/* UI Tour */
+/* chrome/appversion/browser/browser.css
+html|div#UITourHighlight {
+  border-radius: 20px;
+  border: 2px #5B9CD9 solid;
+  box-shadow: 0 0 2px #5B9CD9, inset 0 0 1px #5B9CD9;
+  min-height: 32px;
+  min-width: 32px;
+}
+
+#UITourTooltip {
+  max-width: 20em;
+}
+
+#UITourTooltipTitle {
+  font-size: 130%;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+#UITourTooltipDescription {
+  max-width: 20em;
 }
 */
