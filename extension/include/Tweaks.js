@@ -61,16 +61,36 @@ var Tweaks = {
 
     forwardButton: {
         key: "forward-button",
+
         enable: function() {
             if (!this._isEnabled && GNOMEThemeTweak.prefs.getBoolPref(this.key)) {
-                GNOMEThemeTweak.loadStyle(this.key);
+                GNOMEThemeTweak.addListener("loadWindow", this._setAttributes);
+                GNOMEThemeTweak.launchIntoExistingWindows(this._setAttributes);
                 this._isEnabled = true;
             }
         },
+
         disable: function() {
-            this._isEnabled && GNOMEThemeTweak.unloadStyle(this.key); this._isEnabled = false;
+            if (this._isEnabled) {
+                GNOMEThemeTweak.removeListener("loadWindow", this._setAttributes);
+                GNOMEThemeTweak.launchIntoExistingWindows(this._removeAttributes);
+                this._isEnabled = false;
+            }
         },
-        _isEnabled: false
+
+        _isEnabled: false,
+
+        _setAttributes: function(window) {
+            if (!window) return;
+            var toolbaritem = window.document.getElementById("unified-back-forward-button");
+            toolbaritem && toolbaritem.setAttribute("forwardshowalways", true);
+        },
+
+        _removeAttributes: function(window) {
+            if (!window) return;
+            var toolbaritem = window.document.getElementById("unified-back-forward-button");
+            toolbaritem && toolbaritem.removeAttribute("forwardshowalways");
+        },
     },
 
     inactiveState: {
