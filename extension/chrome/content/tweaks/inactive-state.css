@@ -120,22 +120,31 @@ notification .messageImage:-moz-window-inactive {
 }
 
 #main-window:-moz-window-inactive textbox {
-  background: rgba(255,255,255,0.5) !important;
+  background: #f8f8f6 !important;
   box-shadow: none !important;
   color: #6a6f6e !important;
 }
 
-#page-proxy-favicon:-moz-window-inactive {
-  opacity: .5 !important;
+#main-window:-moz-window-inactive #urlbar:-moz-lwtheme,
+#main-window:-moz-window-inactive .searchbar-textbox:-moz-lwtheme {
+  background: rgba(255,255,255,0.5) !important;
 }
 
-#star-button,
-#urlbar-go-button,
-#urlbar-stop-button,
-#urlbar-reload-button,
-.urlbar-history-dropmarker,
-.search-go-container {
+#page-proxy-favicon:-moz-window-inactive {
   opacity: .35 !important;
+}
+
+#star-button:-moz-window-inactive,
+#urlbar-go-button:-moz-window-inactive,
+#urlbar-stop-button:-moz-window-inactive,
+#urlbar-reload-button:-moz-window-inactive,
+.urlbar-history-dropmarker:-moz-window-inactive,
+.search-go-container:-moz-window-inactive {
+  opacity: .35 !important;
+}
+
+#star-button[starred="true"]:-moz-window-inactive {
+  opacity: .7 !important;
 }
 
 #main-window:-moz-window-inactive .tabbrowser-tab {
