@@ -212,4 +212,5 @@ ul {
   /* Fix for inline style */
   color: #2e3436 !important;
   top: 0 !important;
+  left: 0 !important;
 }
