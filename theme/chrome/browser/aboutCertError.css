@@ -41,7 +41,6 @@ p > b {
   margin: 5em auto 0;
   padding: 3em 0;
   -moz-padding-start: 5em;
-  text-align: left;
   background-image: url(chrome://browser/skin/about-pages/connection-untrusted.svg);
   background-repeat: no-repeat;
   background-position: 56px 51px;
@@ -49,7 +48,7 @@ p > b {
 }
 
 #errorPageContainer:-moz-dir(rtl) {
-  background-position: right 0;
+  background-position: right 56px top 51px;
 }
 
 #errorTitle {
