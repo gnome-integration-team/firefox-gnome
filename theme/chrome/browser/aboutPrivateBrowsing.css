@@ -16,6 +16,10 @@ body.normal > #errorPageContainer {
   */
 }
 
+#errorPageContainer {
+  background-position: 51px 37px;
+}
+
 #errorPageContainer:-moz-dir(rtl) {
   background-position: right 51px top 37px;
 }
