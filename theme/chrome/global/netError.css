@@ -103,32 +103,7 @@ ul {
 
 #errorTryAgain {
   margin-top: 2em;
-  -moz-appearance: none;
-  border-radius: 3px;
-  border: 1px solid;
-  -moz-margin-start: 8em;
-  border-color: rgba(0,0,0,.2);
-  -moz-border-start: 1px solid rgba(0,0,0,.15);
-  box-shadow: 0 1px 0 rgba(255,255,255,1) inset,
-              0 1px rgba(255,255,255,1);
-  background-image: linear-gradient(to bottom, #f5f5f5, #dcdcdc);
-  padding: 4px 9px;
-  transition-property: color, border, box-shadow, background-image;
-  transition-duration: 200ms;
-}
-
-#errorTryAgain:hover {
-  color: rgba(0,0,0,0.75);
-  border-color: rgba(0,0,0,0.5);
-}
-
-#errorTryAgain:active {
-  color: rgba(0,0,0,0.75);
-  border-color: rgba(0,0,0,0.3);
-  box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.2) inset,
-              0 1px rgba(255,255,255,1);
-  background-image: linear-gradient(to bottom, #F5F5F5, #DCDCDC);
-  text-shadow: 0px 1px 0px rgba(255,255,255,0.6);
+  -moz-margin-start: calc(80px + 24px);
 }
 
 #brand {
