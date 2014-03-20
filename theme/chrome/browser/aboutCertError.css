@@ -96,3 +96,8 @@ p > b {
 .expander[collapsed] > button:-moz-dir(rtl) {
   background-image: url(chrome://symbolic-icons/skin/go-previous.svg)
 }
+
+#exceptionDialogButton,
+#getMeOutOfHereButton {
+  -moz-margin-start: 17px;
+}

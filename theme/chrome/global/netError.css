@@ -103,7 +103,7 @@ ul {
 
 #errorTryAgain {
   margin-top: 2em;
-  -moz-margin-start: calc(80px + 24px);
+  -moz-margin-start: calc(80px + 24px + 17px);
 }
 
 #brand {
@@ -167,6 +167,10 @@ ul {
   display: none;
 }
 
+:root.blacklist #buttons {
+  -moz-padding-start: 17px;
+}
+
 /* Remove out-of place images in about:robots */
 #errorPageContainer > img {
   display: none;
@@ -215,7 +219,7 @@ ul {
 }
 
 #errorTryAgain {
-  -moz-margin-start: calc(150px + 24px);
+  -moz-margin-start: calc(150px + 24px + 17px);
 }
 
 }
