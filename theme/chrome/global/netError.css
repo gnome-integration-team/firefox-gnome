@@ -189,3 +189,33 @@ ul {
   top: 0 !important;
   left: 0 !important;
 }
+
+/* ::::: File not found ::::: */
+
+@-moz-document url-prefix("about:neterror?e=fileNotFound") {
+
+#errorTitle,
+#errorLongContent {
+  -moz-margin-start: 150px;
+}
+
+#errorPageContainer {
+  background-image: url(chrome://browser/skin/about-pages/file-not-found.svg);
+  background-position: 49px 50px;
+}
+
+#errorPageContainer:-moz-dir(rtl) {
+  background-position: right 49px top 50px;
+}
+
+#errorTitle {
+  color: #3c3591;
+  letter-spacing: 0.02em;
+  text-shadow: none;
+}
+
+#errorTryAgain {
+  -moz-margin-start: calc(150px + 24px);
+}
+
+}
