@@ -1,0 +1,8 @@
+/* DownThemAll!
+ * id: {DDC359D1-844A-42a7-9AA1-88A850A938A8}
+ * URL: https://addons.mozilla.org/firefox/addon/downthemall/ */
+
+#dta-manager-button {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/dta-manager.svg) !important;
+  -moz-image-region: auto !important;
+}

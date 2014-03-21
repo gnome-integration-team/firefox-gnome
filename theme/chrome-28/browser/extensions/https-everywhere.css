@@ -1,0 +1,66 @@
+/* HTTPS-Everywhere
+ * id: https-everywhere@eff.org
+ * URL: https://www.eff.org/https-everywhere */
+
+:-moz-any(#navigator-toolbox, #addon-bar) #https-everywhere-button,
+#nav-bar #https-everywhere-button {
+  padding: 0 !important;
+}
+
+#addon-bar #https-everywhere-button,
+#nav-bar #https-everywhere-button {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#https-everywhere-button > .https-everywhere-button {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/https-everywhere.svg) !important;
+  margin: 0 !important;
+}
+
+#https-everywhere-button[status="disabled"] > .https-everywhere-button > .toolbarbutton-icon {
+  opacity: 0.5 !important;
+}
+
+#rscounter {
+  -moz-margin-start: -5px !important;
+  -moz-margin-end: -15px !important;
+  pointer-events: none;
+  min-width: 20px;
+  text-align: center;
+}
+#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] #rscounter {
+  -moz-margin-start: -3px !important;
+  -moz-margin-end: -18px !important;
+}
+
+#rsapplied {
+  background: none !important;
+  border: none !important;
+}
+
+:-moz-any(#navigator-toolbox, #addon-bar) #https-everywhere-button:not([rulesetsApplied="0"]) > .https-everywhere-button {
+  -moz-padding-start: 8px !important;
+  -moz-padding-end: 0px !important;
+}
+
+/* Font fixes */
+
+#https-everywhere-button menuitem.active-item label {
+  color: inherit !important;
+  font-weight: normal !important;
+}
+#https-everywhere-button menuitem.moot-item label {
+  color: inherit !important;
+  opacity: 0.5 !important;
+  font-weight: normal !important;
+}
+#https-everywhere-button menuitem.breaking-item label {
+  color: inherit !important;
+  font-weight: normal !important;
+}
+#https-everywhere-button menuitem.inactive-item label {
+  color: inherit !important;
+  font-weight: normal !important;
+}

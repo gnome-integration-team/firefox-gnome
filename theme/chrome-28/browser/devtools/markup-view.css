@@ -1,0 +1,16 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.more-nodes {
+  padding-left: 16px;
+}
+
+.styleinspector-propertyeditor {
+  border: 1px solid #CCC;
+}

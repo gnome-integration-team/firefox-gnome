@@ -1,0 +1,25 @@
+/* Pocket
+ * id: isreaditlater@ideashower.com
+ * URL: https://addons.mozilla.org/en-US/firefox/addon/read-it-later/ */
+
+#RIL_toolbar_button,
+#RIL_urlbar_add {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/pocket.svg) !important;
+}
+
+#RIL_urlbar_mark {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/pocket-added.svg) !important;
+}
+
+#RIL_urlbar_add {
+  opacity: 0.35;
+}
+
+#RIL_urlbar_mark {
+  opacity: 0.7;
+}
+
+#RIL_urlbar_add:hover,
+#RIL_urlbar_mark:hover {
+  opacity: 1;
+}

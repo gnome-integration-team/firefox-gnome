@@ -1,0 +1,70 @@
+body.private #errorTitle {
+  -moz-margin-start: 150px;
+}
+
+body.private #errorLongContent {
+  -moz-margin-start: 150px;
+}
+
+body.private > #errorPageContainer {
+  background-image: url(chrome://browser/skin/about-pages/private-browsing.svg);
+}
+
+body.normal > #errorPageContainer {
+  /*
+  background-image: url("moz-icon://stock/gtk-dialog-question?size=dialog");
+  */
+}
+
+#errorPageContainer {
+  background-position: 51px 37px;
+}
+
+#errorPageContainer:-moz-dir(rtl) {
+  background-position: right 51px top 37px;
+}
+
+#errorTitleText.showPrivate {
+  color: #9200a0;
+  letter-spacing: 0.02em;
+  text-shadow: none;
+}
+
+#clearRecentHistoryDesc {
+  margin-top: 2em;
+}
+
+#startPrivateBrowsingDesc > button {
+  -moz-margin-start: 0;
+}
+
+#footerDesc > p {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+#moreInfo {
+  padding: 0;
+}
+
+#moreInfo > p {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+#moreInfoText {
+  margin-bottom: 0;
+}
+
+#moreInfoLinkContainer {
+  margin-top: 0.5em;
+}
+
+#moreInfoLink{
+  color: #3a81cc !important;
+  text-decoration: none;
+}
+
+#moreInfoLink:hover {
+  text-decoration: underline;
+}

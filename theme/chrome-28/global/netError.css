@@ -1,0 +1,307 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/*
+ *  This defines the look-and-feel styling of the error pages.
+ *  (see: netError.xhtml)
+ *
+ *  Original styling by William Price <bugzilla@mob.rice.edu>
+ *  Updated by: Michael Ventnor <m.ventnor@gmail.com>
+ */
+
+html {
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 11pt Cantarell;
+  color: #2e3436;
+  padding: 20px 20px 0 20px;
+  background-color: #f6f6f4;
+  background-image: linear-gradient(to bottom, #eeeeec, #f6f6f4);
+  background-size: 100% 5em;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  margin: 0 0 .3em 0;
+  font-size: 160%;
+}
+
+ul, ol {
+  margin: 0;
+  -moz-margin-start: 1.5em;
+  padding: 0;
+}
+
+ul > li, ol > li {
+  margin-bottom: .5em;
+}
+
+ul {
+  list-style: square;
+}
+
+#errorPageContainer {
+  position: relative;
+  min-width: 13em;
+  max-width: 55em;
+  margin: 5em auto 0;
+  padding: 3em 0;
+  -moz-padding-start: 5em;
+  background-repeat: no-repeat;
+  background-position: 7em 2.5em;
+  color: #2e3436;
+}
+
+#errorPageContainer:-moz-dir(rtl) {
+  background-position: right 7em top 2.5em;
+}
+
+#errorPageContainer > #errorLongContent{
+  padding: 0 24px;
+}
+
+#errorPageContainer h1 {
+  padding: 0 24px;
+}
+
+#errorPageContainer.certerror {
+  background-image: url("chrome://global/skin/icons/sslWarning.png");
+}
+
+#errorTitle {
+  color: #babdb6;
+  text-shadow: 0 1px 0 white;
+  -moz-margin-start: 80px;
+}
+
+#errorLongContent {
+  -moz-margin-start: 80px;
+}
+
+#errorShortDesc > p {
+  overflow: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-weight: bold;
+  white-space: pre-wrap;
+}
+
+#errorLongDesc {
+}
+
+#errorLongDesc > p {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  /*
+  color: grey;
+  */
+}
+
+#errorTryAgain {
+  margin-top: 2em;
+  -moz-margin-start: calc(80px + 24px + 17px);
+}
+
+#brand {
+  position: absolute;
+  right: 0;
+  bottom: -1.5em;
+  -moz-margin-end: 10px;
+  opacity: .4;
+}
+
+#brand:-moz-dir(rtl) {
+  right: auto;
+  left: 0;
+}
+
+#brand > p {
+  margin: 0;
+}
+
+#errorContainer {
+  display: none;
+}
+
+#securityOverrideDiv {
+  padding-top: 10px;
+}
+
+#securityOverrideContent {
+  background-color: InfoBackground;
+  color: InfoText;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Custom styling for 'blacklist' error class */
+
+:root.blacklist #errorTitle {
+  -moz-margin-start: 150px;
+}
+
+:root.blacklist #errorLongContent {
+  -moz-margin-start: 150px;
+}
+
+:root.blacklist #errorPageContainer {
+  background-image: url(chrome://browser/skin/about-pages/danger.svg);
+  background-position: 52px 50px;
+}
+
+:root.blacklist #errorPageContainer:-moz-dir(rtl) {
+  background-position: right 52px top 50px;
+}
+
+:root.blacklist #errorTitle {
+  color: #d8001d;
+  letter-spacing: 0.02em;
+  text-shadow: none;
+}
+
+:root.blacklist #errorTryAgain {
+  display: none;
+}
+
+:root.blacklist #buttons {
+  -moz-padding-start: 17px;
+}
+
+/* Remove out-of place images in about:robots */
+#errorPageContainer > img {
+  display: none;
+}
+
+/* ::::: Ignore warning ::::: */
+
+#ignoreWarning {
+  -moz-margin-start: 80px;
+  padding: 0 24px;
+}
+
+#ignoreWarning:-moz-dir(rtl) {
+  text-align: left;
+}
+
+#ignoreWarningButton {
+  /* Fix for inline style */
+  color: #2e3436 !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+/* ::::: Malware blocked page ::::: */
+
+@-moz-document url-prefix("about:neterror?e=malwareBlocked") {
+
+#errorTitle,
+#errorLongContent {
+  -moz-margin-start: 150px;
+}
+
+#errorPageContainer {
+  background-image: url(chrome://browser/skin/about-pages/danger.svg);
+  background-position: 52px 50px;
+}
+
+#errorPageContainer:-moz-dir(rtl) {
+  background-position: right 52px top 50px;
+}
+
+#errorTitle {
+  color: #d8001d;
+  letter-spacing: 0.02em;
+  text-shadow: none;
+}
+
+#errorTryAgain {
+  -moz-margin-start: calc(150px + 24px + 17px);
+}
+
+}
+
+/* ::::: Offline Mode ::::: */
+
+@-moz-document url-prefix("about:neterror?e=netOffline") {
+
+#errorTitle,
+#errorLongContent {
+  -moz-margin-start: 150px;
+}
+
+#errorPageContainer {
+  background-image: url(chrome://browser/skin/about-pages/offline-mode.svg);
+  background-position: 49px 50px;
+}
+
+#errorPageContainer:-moz-dir(rtl) {
+  background-position: right 49px top 50px;
+}
+
+#errorTitle {
+  color: #3c3591;
+  letter-spacing: 0.02em;
+  text-shadow: none;
+}
+
+#errorTryAgain {
+  -moz-margin-start: calc(150px + 24px + 17px);
+}
+
+}
+
+/* ::::: File not found, <...> pages ::::: */
+
+@-moz-document url-prefix("about:neterror?e=connectionFailure"),
+               url-prefix("about:neterror?e=contentEncodingError"),
+               url-prefix("about:neterror?e=corruptedContentError"),
+               url-prefix("about:neterror?e=cspFrameAncestorBlocked"),
+               url-prefix("about:neterror?e=deniedPortAccess"),
+               url-prefix("about:neterror?e=dnsNotFound"),
+               url-prefix("about:neterror?e=fileNotFound"),
+               url-prefix("about:neterror?e=generic"),
+               url-prefix("about:neterror?e=malformedURI"),
+               url-prefix("about:neterror?e=netInterrupt"),
+               url-prefix("about:neterror?e=netReset"),
+               url-prefix("about:neterror?e=netTimeout"),
+               url-prefix("about:neterror?e=notCached"),
+               url-prefix("about:neterror?e=nssBadCert"),
+               url-prefix("about:neterror?e=nssFailure2"),
+               url-prefix("about:neterror?e=protocolNotFound"), /* For Fx 29- */
+               url-prefix("about:neterror?e=unknownProtocolFound"), /* For Fx 30+ */
+               url-prefix("about:neterror?e=proxyConnectFailure"),
+               url-prefix("about:neterror?e=proxyResolveFailure"),
+               url-prefix("about:neterror?e=redirectLoop"),
+               url-prefix("about:neterror?e=remoteXUL"),
+               url-prefix("about:neterror?e=unknownSocketType"),
+               url-prefix("about:neterror?e=unsafeContentType") {
+
+#errorTitle,
+#errorLongContent {
+  -moz-margin-start: 150px;
+}
+
+#errorPageContainer {
+  background-image: url(chrome://browser/skin/about-pages/file-not-found.svg);
+  background-position: 49px 50px;
+}
+
+#errorPageContainer:-moz-dir(rtl) {
+  background-position: right 49px top 50px;
+}
+
+#errorTitle {
+  color: #3c3591;
+  letter-spacing: 0.02em;
+  text-shadow: none;
+}
+
+#errorTryAgain {
+  -moz-margin-start: calc(150px + 24px + 17px);
+}
+
+}

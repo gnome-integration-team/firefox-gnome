@@ -1,0 +1,16 @@
+/* gTranslator
+ * id: jyboy.yy@gmail.com
+ * URL: https://addons.mozilla.org/firefox/addon/gtranslator/ */
+
+#gTranslator-toolbarbutton > .toolbarbutton-icon,
+#gtStatusBar > #gtStatusIcon {
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-image: url(chrome://symbolic-icons/skin/extensions/gtranslator.svg) !important;
+   -moz-appearance: none !important;
+  min-width: 16px !important;
+  max-width: 16px !important;
+  min-height: 16px !important;
+  -moz-padding-start: 16px !important;
+  overflow: hidden !important;
+}

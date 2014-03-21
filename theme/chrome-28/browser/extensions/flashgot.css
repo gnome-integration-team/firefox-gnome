@@ -1,0 +1,9 @@
+/* FlashGot
+ * id: {19503e42-ca3c-4c27-b1e2-9cdb2170ee34}
+ * URL: https://addons.mozilla.org/firefox/addon/flashgot/ */
+
+/* Replace video icon */
+
+#flashgot-media-tbb {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/flashgot-video.svg) !important;
+}

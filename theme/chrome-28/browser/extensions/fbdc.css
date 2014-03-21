@@ -1,0 +1,7 @@
+/* Facebook Disconnect
+ * id: facebook@disconnect.me
+ * URL: https://addons.mozilla.org/firefox/addon/fbdc/ */
+
+#facebook-disconnect-icon:not([src]) {
+  display: none;
+}

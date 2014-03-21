@@ -1,0 +1,7 @@
+/* Feedly
+ * id: feedly@devhd
+ * URL: https://addons.mozilla.org/firefox/addon/feedly/ */
+
+#feedly-toolbar-button {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/feedly.svg) !important;
+}

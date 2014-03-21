@@ -1,0 +1,104 @@
+/* Tree Style Tab
+ * id: treestyletab@piro.sakura.ne.jp
+ * URL: https://addons.mozilla.org/firefox/addon/tree-style-tab/ */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] {
+  background: Window !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar .tabbrowser-arrowscrollbox {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .scrollbox-innerbox,
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabs-newtab-button {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab,
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab > .tab-stack {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"].tabbrowser-tabs {
+  border-color: #a7a7a7 !important;
+  margin-top: -1px !important;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabs-newtab-button {
+  border-top: 1px solid #a7a7a7 !important;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] #new-tab-button:hover,
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabs-newtab-button:hover {
+  background: transparent !important;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[selected="true"] {
+  background: Highlight !important;
+}
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[selected="true"] > .tab-stack {
+  color: HighlightText !important;
+}
+
+.treestyletab-splitter {
+  -moz-appearance: none !important;
+  background: transparent !important;
+  border-right: 1px solid #a7aba7 !important;
+  min-width: 4px !important;
+  width: 4px !important;
+}
+
+.treestyletab-splitter:hover {
+  background: transparent !important;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] #new-tab-button,
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabs-newtab-button,
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab > .tab-stack {
+  min-height: 26px !important;
+  height: 26px !important;
+  min-width: 26px !important;
+  padding: 0 !important;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[pinned] > .tab-stack {
+  padding: 5px !important;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab {
+  padding: 0 !important;
+}
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab > .tab-stack {
+  margin: 0 !important;
+  -moz-padding-end: 3px !important;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tab-close-button {
+  padding: 2px !important;
+/*  visibility: hidden;*/
+  display: none;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[selected="true"]:not(:-moz-window-inactive) .tab-close-button {
+  list-style-image: url(chrome://symbolic-icons/skin/close_white.svg);
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[pinned] .tab-close-button {
+  display: none !important;
+}
+
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab:hover .tab-close-button,
+#TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[selected="true"] .tab-close-button {
+/*  visibility: visible;*/
+  display: block;
+}

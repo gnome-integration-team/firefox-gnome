@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg height="0" xmlns="http://www.w3.org/2000/svg">
+  <filter id="active" filterRes="512" x="0" y="0" width="16px" height="16px">
+    <feColorMatrix values="0 0 0 0 1
+                           0 0 0 0 1
+                           0 0 0 0 1
+                           0 0 0 1 0" in="SourceGraphic" result="WhiteIcon"/>
+    <feColorMatrix values="0 0 0 0 0.2
+                           0 0 0 0 0.2
+                           0 0 0 0 0.2
+                           0 0 0 1 0  " in="SourceAlpha" result="ShadowColor"/>
+    <feOffset result="offOut" in="ShadowColor" dx="0" dy="1" />
+    <feGaussianBlur result="Shadow" in="offOut" stdDeviation="0" />
+    <feBlend in="WhiteIcon" in2="Shadow" mode="normal" />
+  </filter>
+  
+  <filter id="tab-close" filterRes="512" x="0" y="0" width="16px" height="16px">
+    <feColorMatrix values="0 0 0 0 1
+                           0 0 0 0 1
+                           0 0 0 0 1
+                           0 0 0 1 0" in="SourceGraphic" result="ShadowColor"/>
+    <feOffset result="offOut" in="ShadowColor" dx="0" dy="1" />
+    <feGaussianBlur result="Shadow" in="offOut" stdDeviation="0" />
+    <feBlend in="SourceGraphic" in2="Shadow" mode="normal" />
+  </filter>
+  
+  <filter id="checked-inactive" filterRes="512" x="0" y="0" width="16px" height="16px">
+    <!-- [checked] state in :-moz-window-inactive window -->
+    <feColorMatrix values="0 0 0 0 0.9
+                           0 0 0 0 0.9
+                           0 0 0 0 0.9
+                           0 0 0 1 0  "/>
+  </filter>
+  
+  <filter id="white" filterRes="512" x="0" y="0" width="16px" height="16px">
+    <feColorMatrix values="0 0 0 0 1
+                           0 0 0 0 1
+                           0 0 0 0 1
+                           0 0 0 1 0"/>
+  </filter>
+  
+  <filter id="azure" filterRes="512" x="0" y="0" width="16px" height="16px">
+    <feColorMatrix values="0.91 0    0    0 0
+                           0    2.44 0    0 0
+                           0    0    4.72 0 1
+                           0    0    0    1 0" color-interpolation-filters="sRGB"/>
+  </filter>
+  
+  <filter id="green" filterRes="512" x="0" y="0" width="16px" height="16px">
+    <feColorMatrix values="2.5 0    0    0 0
+                           0   4.04 0    0 0
+                           0   0    0    0 0
+                           0   0    1.15 1 0" color-interpolation-filters="sRGB"/>
+  </filter>
+  
+  <!-- Into input fields (like urlbar) -->
+  <filter id="input-field-yellow" filterRes="512" width="16px" height="16px">
+    <feColorMatrix values="5.48 0    0    0 0
+                           0    3.37 0    0 0
+                           0    0    1.15 0 0
+                           0    0    0    1 0" color-interpolation-filters="sRGB"/>
+  </filter>
+</svg>

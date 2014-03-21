@@ -1,0 +1,20 @@
+/* AddThis
+ * id: {3e0e7d2a-070f-4a47-b019-91fe5385ba79}
+ * URL: https://addons.mozilla.org/firefox/addon/addthis/ */
+
+/* FIXME: Need fix toolbar view. */
+
+#at_toolbarBtn {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/addthis.svg) !important;
+}
+#at_toolbarBtn > .toolbarbutton-icon {
+  -moz-margin-end: 0 !important;
+}
+
+#at_urlbarBtn {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/addthis.svg) !important;
+  opacity: .35;
+}
+#at_urlbarBtn:hover {
+  opacity: 1;
+}

@@ -1,0 +1,14 @@
+/* Adblock Plus
+ * id: {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+ * URL: https://addons.mozilla.org/firefox/addon/adblock-plus/ */
+
+#abp-toolbarbutton {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/adblock-plus.svg) !important;
+  -moz-image-region: auto !important;
+}
+
+#abp-toolbarbutton[abpstate="disabled"] .toolbarbutton-icon,
+#abp-toolbarbutton[abpstate="whitelisted"] .toolbarbutton-icon {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/adblock-plus-stopped.svg) !important;
+  -moz-image-region: auto !important;
+}
