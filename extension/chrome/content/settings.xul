@@ -14,7 +14,7 @@
   <setting pref="extensions.gnome-theme-tweak.newtab-page" type="bool" title="&newtabpage.label;"/>
   <setting pref="extensions.gnome-theme-tweak.relief-buttons" type="bool" title="&reliefbuttons.label;"/>
   <setting pref="extensions.gnome-theme-tweak.inactive-state" type="bool" title="&inactivestate.label;"/>
-  <setting pref="browser.tabs.onTop" type="bool" title="&tabontop.label;"/>
+  <setting pref="extensions.gnome-theme-tweak.tabs-on-top" type="bool" title="&tabontop.label;"/>
   <setting pref="extensions.gnome-theme-tweak.tabs-border" type="bool" title="&tabsborder.label;"/>
   <setting pref="extensions.gnome-theme-tweak.urlbar-history-dropmarker" type="bool" title="&urlbarhistorydropmarker.label;"/>
   <setting pref="extensions.gnome-theme-tweak.forward-button" type="bool" title="&forwardbutton.label;"/>

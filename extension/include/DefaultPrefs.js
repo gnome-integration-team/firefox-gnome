@@ -6,6 +6,7 @@ const DefaultPrefs = {
     "newtab-page": false,
     "relief-buttons": false,
     "inactive-state": false,
+    "tabs-on-top": true,
     "tabs-border": false,
     "urlbar-history-dropmarker": false,
     "forward-button": false,

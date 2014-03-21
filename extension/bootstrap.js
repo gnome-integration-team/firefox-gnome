@@ -85,9 +85,9 @@ var GNOMEThemeTweak = {
         return wm;
     },
 
-    _onLoadWindow: function(window) {
-        if (typeof GNOMEThemeTweak._listeners["loadWindow"] != "undefined") {
-            var listeners = GNOMEThemeTweak._listeners["loadWindow"];
+    _onEvent: function(e, window) {
+        if (typeof GNOMEThemeTweak._listeners[e] != "undefined") {
+            var listeners = GNOMEThemeTweak._listeners[e];
             for (var i=0; i < listeners.length; i++) {
                 listeners[i](window);
             }
@@ -99,10 +99,12 @@ var GNOMEThemeTweak = {
             let domWindow = aWindow.QueryInterface(Ci.nsIInterfaceRequestor).getInterface(Ci.nsIDOMWindowInternal || Ci.nsIDOMWindow);
             domWindow.addEventListener("load", function onLoad() {
                 domWindow.removeEventListener("load", onLoad, false);
-                GNOMEThemeTweak._onLoadWindow(domWindow);
+                GNOMEThemeTweak._onEvent("loadWindow", domWindow);
+            }, false);
+            domWindow.addEventListener("sizemodechange", function onSizeModeChange() {
+                GNOMEThemeTweak._onEvent("sizeModeChange", domWindow);
             }, false);
         },
-
         onCloseWindow: function(aWindow) {},
         onWindowTitleChange: function(aWindow, aTitle) {}
     },
@@ -140,7 +142,13 @@ var GNOMEThemeTweak = {
 
         this.prefs.addObserver("", this, false);
 
-        let wm = Cc["@mozilla.org/appshell/window-mediator;1"].getService(Ci.nsIWindowMediator);
+        var f = function addListener(window) {
+            window.addEventListener("sizemodechange", function onSizeModeChange() {
+                GNOMEThemeTweak._onEvent("sizeModeChange", window);
+            }, false);
+        }
+
+        let wm = this._launchIntoExistingWindows(f);
 
         // Load into any new windows
         wm.addListener(this._windowListener);

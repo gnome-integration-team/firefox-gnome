@@ -73,22 +73,22 @@ notification .messageImage:-moz-window-inactive {
   background: #f8f8f6 !important;
 }
 
-:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton:-moz-window-inactive,
-:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton:-moz-window-inactive:hover {
+#navigator-toolbox toolbarbutton:-moz-window-inactive,
+#navigator-toolbox toolbarbutton:-moz-window-inactive:hover {
   background: transparent !important;
   color: #a7aba7 !important;
 }
 
-:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton:-moz-window-inactive[checked="true"] {
+#navigator-toolbox toolbarbutton:-moz-window-inactive[checked="true"] {
   background: rgba(100,110,100,0.5) !important;
   border-color: transparent !important;
   color: #eaeaea !important;
   text-shadow: 0 0 0 #ffffff;
 }
 
-:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton:not([checked="true"]):-moz-window-inactive > .toolbarbutton-icon,
-:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton:-moz-window-inactive > .toolbarbutton-menu-dropmarker,
-:-moz-any(#navigator-toolbox, #addon-bar) toolbarbutton:-moz-window-inactive > .toolbarbutton-menubutton-dropmarker {
+#navigator-toolbox toolbarbutton:not([checked="true"]):-moz-window-inactive > .toolbarbutton-icon,
+#navigator-toolbox toolbarbutton:-moz-window-inactive > .toolbarbutton-menu-dropmarker,
+#navigator-toolbox toolbarbutton:-moz-window-inactive > .toolbarbutton-menubutton-dropmarker {
   opacity: .5;
 }
 
