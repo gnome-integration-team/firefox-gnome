@@ -187,7 +187,7 @@ notification .messageImage:-moz-window-inactive {
   #main-window:-moz-window-inactive .tabbrowser-tab[selected="true"] > .tab-stack {
     -moz-border-image: url(chrome://browser/skin/tabbrowser/adwaita-tab-selected-inactive@2x.png) 14 16 2 16 fill / 7px 8px 1px 8px stretch !important;
   }
-  
+
   #main-window:-moz-window-inactive .tabbrowser-tab:not([selected="true"]) > .tab-stack {
     -moz-border-image: url(chrome://browser/skin/tabbrowser/adwaita-tab-inactive@2x.png) 14 16 2 16 fill / 7px 8px 1px 8px stretch !important;
   }
@@ -201,7 +201,7 @@ notification .messageImage:-moz-window-inactive {
   #main-window:-moz-window-inactive .tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] ~ .tabbrowser-tab[hidden="true"] + .tabbrowser-tab:not([hidden="true"]):not([selected="true"]) > .tab-stack {
     -moz-border-image: url(chrome://browser/skin/tabbrowser/adwaita-tab-inactive@2x.png) 14 16 2 16 fill / 7px 8px 1px 8px stretch !important;
   }
-  
+
   #main-window:-moz-window-inactive .tabbrowser-tab[titlechanged]:not([selected="true"]) > .tab-stack {
     -moz-border-image: url(chrome://browser/skin/tabbrowser/adwaita-tab-new-inactive@2x.png) 14 16 2 16 fill / 7px 8px 1px 8px stretch !important;
   }
@@ -244,7 +244,7 @@ notification .messageImage:-moz-window-inactive {
  * id: {1018e4d6-728f-4b20-ad56-37578a4de76b}
  * URL: https://addons.mozilla.org/firefox/addon/flagfox/ */
 
-/* flags are intrinsically colorful, so a simple opacity 
+/* flags are intrinsically colorful, so a simple opacity
  * change when window loses focus should be enough */
 
 #flagfox-button > #flagfox-icon:-moz-window-inactive {
