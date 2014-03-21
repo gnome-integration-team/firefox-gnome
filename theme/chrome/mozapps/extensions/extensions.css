@@ -99,6 +99,7 @@
   background: #fff;
   border: 0;
   border-radius: 0;
+  border-top: 1px solid #dbdbdb;
   -moz-border-start: 2px solid;
   -moz-padding-start: 0;
 }
@@ -114,10 +115,10 @@
 #header {
   -moz-appearance: none;
   margin: 0;
-  padding: 0 3px;
+  padding: 8px;
   height: 37px;
-  background: linear-gradient(to bottom, #fff, #f3f3f3);
-  border-bottom: 1px solid #a7a7a7;
+  background: none;
+  border: none;
 }
 
 #header toolbarbutton,

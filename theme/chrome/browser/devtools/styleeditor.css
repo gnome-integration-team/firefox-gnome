@@ -3,23 +3,35 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-#style-editor-chrome {
-  background-color: hsl(208,11%,27%);
-}
-
 .stylesheet-title,
 .stylesheet-name {
   text-decoration: none;
-  color: hsl(207,17%,88%);
 }
 
 .stylesheet-name {
   font-size: 13px;
 }
 
-.stylesheet-rule-count,
-.stylesheet-saveButton {
-  color: hsl(211,12%,60%);
+.theme-dark .stylesheet-title,
+.theme-dark .stylesheet-name {
+  color: #f5f7fa;
+}
+
+.theme-dark .stylesheet-rule-count,
+.theme-dark .stylesheet-linked-file,
+.theme-dark .stylesheet-saveButton {
+  color: #b6babf;
+}
+
+.theme-light .stylesheet-title,
+.theme-light .stylesheet-name {
+  color: #585959;
+}
+
+.theme-light .stylesheet-rule-count,
+.theme-light .stylesheet-linked-file,
+.theme-light .stylesheet-saveButton {
+  color: #18191a;
 }
 
 .stylesheet-saveButton {
@@ -28,13 +40,11 @@
 }
 
 .splitview-active .stylesheet-title,
-.splitview-active .stylesheet-name {
-  color: hsl(0,0%,100%);
-}
-
-.splitview-active .stylesheet-rule-count,
-.splitview-active .stylesheet-saveButton {
-  color: hsl(200,66%,70%);
+.splitview-active .stylesheet-name,
+.theme-light .splitview-active .stylesheet-rule-count,
+.theme-light .splitview-active .stylesheet-linked-file,
+.theme-light .splitview-active .stylesheet-saveButton {
+  color: #f5f7fa;
 }
 
 .splitview-nav:focus {
@@ -65,6 +75,10 @@
   height: 40px;
 }
 
+.theme-light .stylesheet-enabled {
+  background-image: url(itemToggle-light.png);
+}
+
 .disabled > .stylesheet-enabled {
   background-position: -24px 8px;
 }
@@ -74,8 +88,16 @@
   outline: 0;
 }
 
-.stylesheet-error-message {
-  color: red;
+.stylesheet-linked-file:not(:empty){
+  -moz-margin-end: 0.4em;
+}
+
+.stylesheet-linked-file:not(:empty):before {
+  -moz-margin-start: 0.4em;
+}
+
+li.linked-file-error .stylesheet-linked-file:after {
+  font-size: 110%;
 }
 
 .stylesheet-more > h3 {
@@ -86,10 +108,6 @@
 .devtools-searchinput {
   max-width: 25ex;
   font-size: 11px;
-}
-
-.placeholder {
-  color: white;
 }
 
 .placeholder a {

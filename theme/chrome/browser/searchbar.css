@@ -4,8 +4,6 @@
 
 .searchbar-textbox {
   min-height: 22px;
-  width: 6em;
-  min-width: 6em;
   background-color: -moz-field;
 }
 
@@ -34,18 +32,9 @@
   -moz-box-align: center;
   background: transparent;
   box-shadow: none;
-  padding: 3px;
-  min-width: 22px;
-}
-#navigator-toolbox[iconsize=large] > #nav-bar .searchbar-textbox .searchbar-engine-button {
   height: 26px;
-  padding: 5px;
   min-width: 26px;
-}
-#navigator-toolbox[iconsize=small] > #nav-bar .searchbar-textbox .searchbar-engine-button {
-  height: 24px;
-  padding: 4px;
-  min-width: 24px;
+  padding: 5px;
 }
 
 .searchbar-engine-image {
@@ -92,19 +81,9 @@
   list-style-image: url(moz-icon://stock/edit-find-symbolic?size=menu);
   */
   list-style-image: url(chrome://symbolic-icons/skin/edit-find.svg);
-  height: 22px;
-  padding: 3px;
-  min-width: 22px;
-}
-#navigator-toolbox[iconsize=large] > #nav-bar .searchbar-textbox .search-go-button {
   height: 26px;
-  padding: 5px;
   min-width: 26px;
-}
-#navigator-toolbox[iconsize=small] > #nav-bar .searchbar-textbox .search-go-button {
-  height: 24px;
-  padding: 4px;
-  min-width: 24px;
+  padding: 5px;
 }
 
 /* FIXME */

@@ -17,7 +17,6 @@
 @import url("chrome://browser/skin/extensions/flashblock.css");
 @import url("chrome://browser/skin/extensions/flashgot.css");
 @import url("chrome://browser/skin/extensions/foxtophone.css");
-@import url("chrome://browser/skin/extensions/fxbutton.css");
 
 /* G */
 @import url("chrome://browser/skin/extensions/ghostery.css");
@@ -34,9 +33,6 @@
 
 /* L */
 @import url("chrome://browser/skin/extensions/lastpass-password-manager.css");
-
-/* M */
-@import url("chrome://browser/skin/extensions/movable-firefox-button.css");
 
 /* P */
 @import url("chrome://browser/skin/extensions/pinboard-extension.css");

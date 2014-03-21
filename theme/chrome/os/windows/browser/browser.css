@@ -2,134 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-/* ::::: Appmenu button ::::: */
-
-#appmenu-button {
-  -moz-appearance: none !important;
-  background-clip: padding-box !important;
-  border-radius: 0 0 4px 4px !important;
-  border: 1px solid !important;
-  border-top: none !important;
-  color: white !important;
-  text-shadow: 0 0 1px rgba(0,0,0,.7),
-               0 1px 1.5px rgba(0,0,0,.5) !important;
-  font-weight: bold !important;
-  padding: 0 1.5em .05em !important;
-  margin: 0 0 2px !important;
-}
-
-#appmenu-button > .button-box {
-  border-style: none;
-  margin: 0 -1px;
-  padding: 0;
-}
-
-#appmenu-button > .button-box > .button-icon {
-  display: none !important;
-}
-
-#appmenu-button > .button-box > .button-menu-dropmarker {
-  list-style-image: url(chrome://os/skin/browser/appmenu-dropmarker.png);
-  width: auto;
-  height: auto;
-  padding: 0;
-  margin: 0;
-  -moz-margin-start: .5em;
-}
-
-@media (-moz-windows-classic) {
-  #appmenu-button {
-    margin-bottom: 1px !important;
-  }
-}
-
-@media (-moz-windows-default-theme) {
-  #main-window[sizemode="normal"] #appmenu-button {
-    margin-bottom: 5px !important;
-  }
-}
-
-#appmenu-button:hover:active,
-#appmenu-button[open] {
-  border-radius: 0 !important;
-}
-
-/* ::::: Appmenu Popup ::::: */
-
-#appmenu-popup {
-  -moz-appearance: none;
-  background: white;
-  border: 1px solid ThreeDShadow;
-}
-#appmenuPrimaryPane {
-  background-color: rgba(255,255,255,0.5);
-  padding: 2px;
-  -moz-border-end: none;
-}
-#appmenuSecondaryPane {
-  background-color: #f1f5fb;
-  box-shadow: 1px 0 2px rgb(204,214,234) inset;
-  -moz-padding-start: 3px;
-  -moz-padding-end: 2px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  font-family: "Segoe UI Semibold", "Segoe UI", sans-serif;
-}
-#appmenuSecondaryPane:-moz-locale-dir(rtl) {
-  box-shadow: -1px 0 2px rgb(204,214,234) inset;
-}
-
-/* ::::: Default style ::::: */
-
-#appmenu-button {
-  background-image: linear-gradient(rgb(247,182,82), rgb(215,98,10) 95%) !important;
-  border-color: rgba(83,42,6,.9) !important;
-  box-shadow: 0 1px 0 rgba(255,255,255,.25) inset,
-              0 0 0 1px rgba(255,255,255,.25) inset !important;
-}
-#appmenu-button:hover:not(:active):not([open]) {
-  background-image: radial-gradient(farthest-side at bottom, rgba(252,240,89,.5) 10%, rgba(252,240,89,0) 70%),
-                    radial-gradient(farthest-side at bottom, rgb(236,133,0), rgba(255,229,172,0)),
-                    linear-gradient(rgb(246,170,69), rgb(209,74,0) 95%) !important;
-  border-color: rgba(83,42,6,.9) !important;
-  box-shadow: 0 1px 0 rgba(255,255,255,.1) inset,
-              0 0 2px 1px rgba(250,234,169,.7) inset,
-              0 -1px 0 rgba(250,234,169,.5) inset !important;
-}
-#appmenu-button:hover:active,
-#appmenu-button[open] {
-  background-image: linear-gradient(rgb(246,170,69), rgb(209,74,0) 95%) !important;
-  box-shadow: 0 2px 3px rgba(0,0,0,.4) inset,
-              0 1px 1px rgba(0,0,0,.2) inset !important;
-}
-
-@media not all and (-moz-windows-classic) {
-  #main-window[sizemode="normal"] > #titlebar > #titlebar-content > #appmenu-button-container {
-    margin-top: 1px !important;
-  }
-
-  #appmenu-button {
-    border-width: 2px !important;
-    -moz-border-left-colors: rgba(255,255,255,.5) rgba(83,42,6,.9) !important;
-    -moz-border-bottom-colors: rgba(255,255,255,.5) rgba(83,42,6,.9) !important;
-    -moz-border-right-colors: rgba(255,255,255,.5) rgba(83,42,6,.9) !important;
-    margin-bottom: 1px !important;
-    box-shadow: 0 1px 0 rgba(255,255,255,.25) inset,
-                0 0 2px 1px rgba(255,255,255,.25) inset !important;
-  }
-
-  #main-window[privatebrowsingmode=temporary] #appmenu-button {
-    -moz-border-left-colors: rgba(255,255,255,.5) rgba(43,8,65,.9) !important;
-    -moz-border-bottom-colors: rgba(255,255,255,.5) rgba(43,8,65,.9) !important;
-    -moz-border-right-colors: rgba(255,255,255,.5) rgba(43,8,65,.9) !important;
-  }
-
-  #appmenu-popup {
-    margin-top: -1px !important;
-    -moz-margin-start: 1px !important;
-  }
-}
-
 /* ::::: Titlebar ::::: */
 
 #main-window[sizemode="normal"] > #titlebar {
@@ -141,7 +13,7 @@
 }
 
 @media (-moz-windows-classic) {
-  #main-window[sizemode="normal"] > #titlebar > #titlebar-content > #appmenu-button-container {
+  #main-window[tabsintitlebar][sizemode="normal"] > #tab-view-deck > #browser-panel > #navigator-toolbox > #toolbar-menubar {
     margin-top: 4px !important;
   }
 }
@@ -154,10 +26,6 @@
   -moz-appearance: -moz-window-button-box-maximized !important;
 }
 
-.titlebar-placeholder[type="appmenu-button"] {
-  margin-left: 4px !important;
-}
-
 .titlebar-placeholder[type="caption-buttons"] {
   margin-left: 22px !important; /* additional space for Aero Snap */
 }
@@ -166,13 +34,17 @@
   padding-top: 7px !important;
 }
 
+#main-window[sizemode="normal"] #toolbar-menubar[autohide="true"][inactive] ~ #TabsToolbar {
+  margin-top: 16px !important;
+}
+
 /* ::::: Others ::::: */
 
 #main-window[sizemode="maximized"] #TabsToolbar {
   padding-top: 3px !important;
 }
 
-#TabsToolbar[tabsontop=true] {
+#TabsToolbar[tabsontop="true"] {
   background-color: transparent !important;
 }
 
@@ -202,22 +74,22 @@
     -moz-appearance: -moz-win-borderless-glass !important;
     background: transparent !important;
   }
-     
+
   #appcontent {
     -moz-appearance: -moz-win-exclude-glass !important;
   }
-    
+
   #toolbar-menubar,
   #TabsToolbar[tabsontop=true],
   #nav-bar[tabsontop=false],
   #nav-bar + #customToolbars + #PersonalToolbar[collapsed=true] + #TabsToolbar[tabsontop=false]:last-child {
     background: transparent !important;
   }
-  
+
   #navigator-toolbox[tabsontop="false"] {
     background-color: -moz-dialog !important;
   }
-  
+
   #main-window:not([inFullscreen]) #navigator-toolbox[tabsontop=false] {
     border-top: 1px solid rgba(10%,10%,10%,.4) !important;
   }
@@ -243,10 +115,6 @@
 
 #print-preview-toolbar {
   -moz-appearance: toolbox !important;
-}
-
-#browser-bottombox > toolbar {
-  background-color: -moz-dialog !important;
 }
 
 /* ::::: Titlebar command buttons ::::: */
