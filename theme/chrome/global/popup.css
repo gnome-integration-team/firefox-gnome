@@ -11,7 +11,6 @@ panel {
   /*
   -moz-appearance: menupopup;
   */
-  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25);
   min-width: 1px;
   color: MenuText;
 }
@@ -22,6 +21,7 @@ panel {
 
 menupopup {
   background-color: Menu;
+  box-shadow: 0 0 1px 1px rgba(0,0,0,.25);
 }
 
 /* ::::: arrow panel ::::: */
@@ -31,16 +31,42 @@ panel[type="arrow"] {
   -moz-appearance: none;
 }
 
+.panel-arrowcontainer[panelopen] {
+  transition-duration: 200ms, 150ms;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-out;
+}
+
+.panel-arrowcontainer:not([panelopen]) {
+  opacity: 0;
+}
+
+.panel-arrowcontainer:not([panelopen])[side="top"] {
+  transform: translateY(-20px);
+}
+
+.panel-arrowcontainer:not([panelopen])[side="bottom"] {
+  transform: translateY(20px);
+}
+
+.panel-arrowcontainer:not([panelopen])[side="left"] {
+  transform: translateX(-20px);
+}
+
+.panel-arrowcontainer:not([panelopen])[side="right"] {
+  transform: translateX(20px);
+}
+
 panel[type="arrow"][side="top"],
 panel[type="arrow"][side="bottom"] {
-  margin-left: -16px;
-  margin-right: -16px;
+  margin-left: -30px;
+  margin-right: -30px;
 }
 
 panel[type="arrow"][side="left"],
 panel[type="arrow"][side="right"] {
-  margin-top: -16px;
-  margin-bottom: -16px;
+  margin-top: -30px;
+  margin-bottom: -30px;
 }
 
 .panel-arrowcontent {
@@ -48,40 +74,43 @@ panel[type="arrow"][side="right"] {
   color: -moz-DialogText;
   background: -moz-Dialog;
   border: 1px solid ThreeDShadow;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px rgba(0,0,0,.5);
+  margin: 5px 3px;
 }
 
 .panel-arrow[side="top"],
 .panel-arrow[side="bottom"] {
   list-style-image: url("chrome://global/skin/icons/panelarrow-vertical.svg");
   position: relative;
-  margin-left: 6px;
-  margin-right: 6px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .panel-arrow[side="top"] {
-  margin-bottom: -1px;
+  margin-bottom: -6px;
 }
 
 .panel-arrow[side="bottom"] {
   transform: scaleY(-1);
-  margin-top: -1px;
+  margin-top: -6px;
 }
 
 .panel-arrow[side="left"],
 .panel-arrow[side="right"] {
   list-style-image: url("chrome://global/skin/icons/panelarrow-horizontal.svg");
   position: relative;
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .panel-arrow[side="left"] {
-  margin-right: -1px;
+  margin-right: -4px;
 }
 
 .panel-arrow[side="right"] {
   transform: scaleX(-1);
-  margin-left: -1px;
+  margin-left: -4px;
 }
 
 /* ::::: tooltip ::::: */
