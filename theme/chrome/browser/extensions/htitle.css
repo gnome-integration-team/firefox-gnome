@@ -2,16 +2,17 @@
  * id: {c6448328-31f7-4b12-a2e0-5c39d0290307
  * URL: https://addons.mozilla.org/firefox/addon/htitle/ */
 
-#htitle-close-button {
-  list-style-image: url(chrome://symbolic-icons/skin/close.svg) !important;
-}
+/* Icons */
 
 #main-window[sizemode="normal"] #window-controls[htitle="true"] > #restore-button {
   list-style-image: url(chrome://symbolic-icons/skin/window-maximize.svg);
 }
+
 #main-window[sizemode="maximized"] #window-controls[htitle="true"] > #restore-button {
   list-style-image: url(chrome://symbolic-icons/skin/window-restore.svg);
 }
+
+/* Show/hide window controls */
 
 #window-controls[htitle="true"] > #restore-button {
   display: none !important;
@@ -19,5 +20,13 @@
 
 #main-window[sizemode="maximized"] #window-controls[htitle="true"] > #close-button,
 #main-window[sizemode="fullscreen"] #window-controls[htitle="true"] > #restore-button {
+  display: -moz-box !important;
+}
+
+#main-window:not([sizemode="fullscreen"]) #window-controls[htitle="true"][htitle-button-layout*="minimize"] > #minimize-button {
+  display: -moz-box !important;
+}
+
+#window-controls[htitle="true"][htitle-button-layout*="maximize"] > #restore-button {
   display: -moz-box !important;
 }
