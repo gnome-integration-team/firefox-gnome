@@ -1086,6 +1086,8 @@ toolbarpaletteitem[place="palette"] > #zoom-controls > #zoom-in-button {
 
 .urlbar-input-box {
   -moz-margin-start: 0;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 #urlbar-container {
