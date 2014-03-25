@@ -6,8 +6,20 @@
 
 @-moz-document url("chrome://browser/content/browser.xul") {
 
+#toolbar-menubar {
+  -moz-box-ordinal-group: 5;
+}
+
+#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
+  -moz-box-ordinal-group: 50;
+}
+
 #TabsToolbar {
-  -moz-box-ordinal-group: 200; /* default is 100 */
+  -moz-box-ordinal-group: 10;
+}
+
+#TabsToolbar[tabsontop="false"] {
+  -moz-box-ordinal-group: 100;
 }
 
 }
