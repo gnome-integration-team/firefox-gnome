@@ -214,7 +214,8 @@ ul {
                url-prefix("about:neterror?e=proxyResolveFailure"),
                url-prefix("about:neterror?e=redirectLoop"),
                url-prefix("about:neterror?e=remoteXUL"),
-               url-prefix("about:neterror?e=unknownSocketType") {
+               url-prefix("about:neterror?e=unknownSocketType"),
+               url-prefix("about:neterror?e=unsafeContentType") {
 
 #errorTitle,
 #errorLongContent {
