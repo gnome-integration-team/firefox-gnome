@@ -2175,8 +2175,8 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   box-shadow: none !important;
 }
 
-* + .tabbrowser-tabs {
-  -moz-padding-start: 2px;
+.tabbrowser-tabs {
+  -moz-margin-start: 2px;
 }
 
 /* put some space between the newtab-button and regular tabs and align it vetically with the close button*/
