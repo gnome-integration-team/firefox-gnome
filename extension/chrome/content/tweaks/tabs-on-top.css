@@ -10,16 +10,16 @@
   -moz-box-ordinal-group: 5;
 }
 
-#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
-  -moz-box-ordinal-group: 50;
-}
-
-#TabsToolbar {
-  -moz-box-ordinal-group: 10;
+#nav-bar {
+  -moz-box-ordinal-group: 20;
 }
 
 #TabsToolbar[tabsontop="false"] {
   -moz-box-ordinal-group: 100;
+}
+
+#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#nav-bar):not(#TabsToolbar) {
+  -moz-box-ordinal-group: 50;
 }
 
 }

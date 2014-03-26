@@ -4115,29 +4115,37 @@ toolbarpaletteitem[place="toolbar"] {
   background-attachment: fixed;
 }
 
+#main-window[customize-entered] #navigator-toolbox[tabsontop="false"] > #toolbar-menubar {
+  -moz-appearance: none;
+}
+
 #main-window[customize-entered] #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar),
 #main-window[customize-entered] #navigator-toolbox[tabsontop="false"] > toolbar,
 #main-window[customize-entered] #customization-container {
-  border: 3px solid hsla(0,0%,0%,.1);
-  border-top-width: 0;
+  border: 0 3px solid hsla(0,0%,0%,.1);
   background-clip: padding-box;
   background-origin: padding-box;
   -moz-border-right-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
-  -moz-border-bottom-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
   -moz-border-left-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
+}
+
+#main-window[customize-entered] #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar),
+#main-window[customize-entered] #customization-container {
+  border-bottom: 3px solid hsla(0,0%,0%,.1);
+  -moz-border-bottom-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
 }
 
 #main-window[customize-entered] #navigator-toolbox[tabsontop="false"] > #toolbar-menubar:not([autohide="true"]),
 #main-window[customize-entered] #navigator-toolbox[tabsontop="false"] > #toolbar-menubar[autohide="true"] ~ #nav-bar {
-  border-top-width: 3px;
+  border-top: 3px solid hsla(0,0%,0%,.1);
   -moz-border-top-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
 }
 
 #main-window[customize-entered] #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
-  border-bottom-width: 0;
+  border-bottom: 0;
 }
 
-#main-window[customize-entered] #TabsToolbar {
+#main-window[customize-entered] #TabsToolbar:not([tabsontop="false"]) {
   -moz-appearance: none;
   background-clip: padding-box;
   border-right: 3px solid transparent;
