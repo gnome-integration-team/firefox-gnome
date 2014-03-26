@@ -31,4 +31,13 @@
 
   </binding>
 
+  <binding id="label-center">
+
+    <content>
+      <xul:spacer class="tab-spacer" flex="1"/>
+      <children/>
+    </content>
+
+  </binding>
+
 </bindings>

@@ -115,8 +115,12 @@ notification .messageImage:-moz-window-inactive {
 }
 
 /* Recolor tabstrip underline when the window is inactive */
-#main-window:-moz-window-inactive #TabsToolbar:not([tabsontop="true"]) {
+#main-window:-moz-window-inactive #TabsToolbar:not([tabsontop="true"]):not([newstyletabs]) {
   -moz-border-bottom-colors: #a7a7a7 #f8f8f6 #f8f8f6 !important;
+}
+
+#main-window:-moz-window-inactive #TabsToolbar[newstyletabs] {
+  border-top-color: #caccca;
 }
 
 #main-window:-moz-window-inactive textbox {
@@ -149,6 +153,10 @@ notification .messageImage:-moz-window-inactive {
 
 #main-window:-moz-window-inactive .tabbrowser-tab {
   color: #a7aba7 !important;
+}
+
+#main-window:-moz-window-inactive #TabsToolbar[newstyletabs] .tabbrowser-tab[selected=true] .tab-background-middle {
+  -moz-border-bottom-colors: #caccca !important;
 }
 
 #main-window:-moz-window-inactive .tabbrowser-tab[selected="true"] > .tab-stack {
@@ -215,6 +223,10 @@ notification .messageImage:-moz-window-inactive {
   #main-window:-moz-window-inactive .tabbrowser-tabs[overflow] > .tabbrowser-tab[pinned] ~ .tabbrowser-tab[hidden="true"] + .tabbrowser-tab:not([hidden="true"])[titlechanged] > .tab-stack {
     -moz-border-image: url(chrome://browser/skin/tabbrowser/adwaita-tab-new-inactive@2x.png) 14 16 2 16 fill / 7px 8px 1px 8px stretch !important;
   }
+}
+
+#main-window:-moz-window-inactive #TabsToolbar[newstyletabs] .tabbrowser-tab > .tab-stack {
+  border-image: none !important;
 }
 
 #main-window:-moz-window-inactive .tab-throbber,

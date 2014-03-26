@@ -3,6 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 const DefaultPrefs = {
+    "new-style-tabs": false,
     "newtab-page": false,
     "relief-buttons": false,
     "inactive-state": false,

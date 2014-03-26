@@ -17,6 +17,46 @@ var Tweaks = {
     },
     */
 
+    newStyleTabs: {
+        key: "new-style-tabs",
+
+        enable: function() {
+            if (!this._isEnabled && GNOMEThemeTweak.prefs.getBoolPref(this.key)) {
+                GNOMEThemeTweak.addListener("loadWindow", this._setAttributes);
+                GNOMEThemeTweak.launchIntoExistingWindows(this._setAttributes);
+                this._isEnabled = true;
+            }
+        },
+
+        disable: function() {
+            if (this._isEnabled) {
+                GNOMEThemeTweak.removeListener("loadWindow", this._setAttributes);
+                GNOMEThemeTweak.launchIntoExistingWindows(this._removeAttributes);
+                this._isEnabled = false;
+            }
+        },
+
+        _isEnabled: false,
+
+        _setAttributes: function(window) {
+            if (!window) return;
+            var e = ["TabsToolbar"];
+            for (var i=0; i < e.length; i++) {
+                var item = window.document.getElementById(e[i]);
+                item && item.setAttribute("newstyletabs", true);
+            }
+        },
+
+        _removeAttributes: function(window) {
+            if (!window) return;
+            var e = ["TabsToolbar"];
+            for (var i=0; i < e.length; i++) {
+                var item = window.document.getElementById(e[i]);
+                item && item.removeAttribute("newstyletabs");
+            }
+        },
+    },
+
     customizationGnomeTweaksLink: {
         enable: function() {
             if (!this._isEnabled) {

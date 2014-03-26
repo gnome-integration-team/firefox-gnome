@@ -129,17 +129,6 @@
   -moz-margin-end: 0 !important;
 }
 
-/* ::::: ::::: */
-
-#nav-bar .toolbarbutton-1[disabled="true"] {
-  opacity: 1;
-}
-
-#nav-bar .toolbarbutton-1[disabled="true"] > .toolbarbutton-icon,
-#nav-bar .toolbarbutton-1[disabled="true"] > .toolbarbutton-menu-dropmarker {
-  opacity: .5;
-}
-
 /* ::::: Primary toolbarbuttons ::::: */
 
 .toolbarbutton-1 {
@@ -155,6 +144,22 @@
   min-height: 28px;
   min-width: 26px;
   padding: 0px 3px;
+}
+
+#TabsToolbar[newstyletabs] .toolbarbutton-1 {
+  margin: 0;
+  padding: 0 5px;
+}
+
+/* ::::: ::::: */
+
+#nav-bar .toolbarbutton-1[disabled="true"] {
+  opacity: 1;
+}
+
+#nav-bar .toolbarbutton-1[disabled="true"] > .toolbarbutton-icon,
+#nav-bar .toolbarbutton-1[disabled="true"] > .toolbarbutton-menu-dropmarker {
+  opacity: .5;
 }
 
 /* ::::: Relief buttons ::::: */
@@ -344,4 +349,71 @@
 #nav-bar[customizing]:-moz-locale-dir(ltr) #forward-button,
 #nav-bar[customizing]:-moz-locale-dir(rtl) #back-button {
   border-radius: 0 3px 3px 0;
+}
+
+/* ::::: Tabs bar ::::: */
+
+#TabsToolbar[newstyletabs] .toolbarbutton-1,
+#TabsToolbar[newstyletabs] .tabs-newtab-button,
+#TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-up,
+#TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-down {
+  background: transparent;
+  border: 0 solid transparent;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+#TabsToolbar[newstyletabs] .toolbarbutton-1:not(:hover):not([checked="true"]):not([open="true"]):not([disabled="true"]) .toolbarbutton-icon,
+#TabsToolbar[newstyletabs] .tabs-newtab-button:not(:hover) .toolbarbutton-icon,
+#TabsToolbar[newstyletabs] .toolbarbutton-1:not(:hover):not([checked="true"]):not([open="true"]):not([disabled="true"]) > .toolbarbutton-menu-dropmarker {
+  opacity: .7;
+}
+
+#TabsToolbar[newstyletabs] .toolbarbutton-1:-moz-any(:hover, :hover:active, [checked="true"], [open="true"]),
+#TabsToolbar[newstyletabs] .tabs-newtab-button:-moz-any(:hover, :hover:active),
+#TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-any(:hover, :hover:active),
+#TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-any(:hover, :hover:active) {
+  box-shadow: inset 0 3px rgba(0,0,0,0.03), inset 0 2px rgba(0,0,0,0.03), inset 0 1px rgba(0,0,0,0.03);
+}
+
+#TabsToolbar[newstyletabs] .toolbarbutton-1:hover,
+#TabsToolbar[newstyletabs] .tabs-newtab-button:hover,
+#TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-up:hover,
+#TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-down:hover {
+  background: #e6e6e6;
+  border-color: #d2d5d2;
+}
+
+#TabsToolbar[newstyletabs] .toolbarbutton-1:-moz-any(:active:hover, [checked="true"]),
+#TabsToolbar[newstyletabs] .tabs-newtab-button:active:hover,
+#TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-up:active:hover,
+#TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-down:active:hover {
+  background: #c0c0c0;
+  border-color: transparent;
+}
+
+#TabsToolbar[newstyletabs] .toolbarbutton-1[open="true"],
+#TabsToolbar[newstyletabs] .toolbarbutton-1[open="true"]:active,
+#TabsToolbar[newstyletabs] .toolbarbutton-1[open="true"]:active:hover {
+  background: #ededed;
+  border-color: #d2d5d2;
+}
+
+#TabsToolbar[newstyletabs] .toolbarbutton-1[disabled="true"],
+#TabsToolbar[newstyletabs] .toolbarbutton-1[disabled="true"]:active,
+#TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-up[disabled="true"],
+#TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-down[disabled="true"],
+#TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-up[disabled="true"]:active,
+#TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-down[disabled="true"]:active {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+#TabsToolbar[newstyletabs] .toolbarbutton-1[disabled="true"] > .toolbarbutton-icon,
+#TabsToolbar[newstyletabs] .toolbarbutton-1[disabled="true"] > .toolbarbutton-menu-dropmarker {
+  opacity: .3;
 }
