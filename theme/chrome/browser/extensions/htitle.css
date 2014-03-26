@@ -30,3 +30,9 @@
 #window-controls[htitle="true"][htitle-button-layout*="maximize"] > #restore-button {
   display: -moz-box !important;
 }
+
+/* */
+
+#main-window[sizemode="fullscreen"] #navigator-toolbox:not([tabsontop="true"]) #window-controls[htitle="true"] {
+  display: none !important;
+}

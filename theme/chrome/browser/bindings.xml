@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!DOCTYPE window [
+<!ENTITY % browserDTD SYSTEM "chrome://browser/locale/browser.dtd" >
+%browserDTD;
+]>
+
+<bindings id="gnomeBindings"
+          xmlns="http://www.mozilla.org/xbl"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+          xmlns:xbl="http://www.mozilla.org/xbl">
+
+  <binding id="tabs-on-bottom" extends="chrome://browser/content/customizableui/toolbar.xml#toolbar-drag">
+
+    <content default-tabs-position="bottom">
+      <children/>
+      <xul:hbox anonid="gnome-window-controls"
+                id="gnome-window-controls"
+                class="window-controls window-controls-end"
+                pack="end"
+                skipintoolbarset="true"
+                ordinal="1000">
+        <xul:toolbarbutton id="fullscreen-button"
+                           tooltiptext="&fullScreenRestore.tooltip;"
+                           oncommand="BrowserFullScreen();"/>
+      </xul:hbox>
+    </content>
+
+  </binding>
+
+</bindings>

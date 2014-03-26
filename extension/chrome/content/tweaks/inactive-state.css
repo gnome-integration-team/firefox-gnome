@@ -69,7 +69,7 @@ notification .messageImage:-moz-window-inactive {
 }
 
 /* Inactive styling of the tabstrip for tabs on top */
-#main-window:-moz-window-inactive #navigator-toolbox:not([tabsontop="false"]) > #nav-bar {
+#main-window:-moz-window-inactive #navigator-toolbox[tabsontop="true"] > #nav-bar {
   background: #f8f8f6 !important;
 }
 
@@ -115,7 +115,7 @@ notification .messageImage:-moz-window-inactive {
 }
 
 /* Recolor tabstrip underline when the window is inactive */
-#main-window:-moz-window-inactive #TabsToolbar[tabsontop="false"] {
+#main-window:-moz-window-inactive #TabsToolbar:not([tabsontop="true"]) {
   -moz-border-bottom-colors: #a7a7a7 #f8f8f6 #f8f8f6 !important;
 }
 

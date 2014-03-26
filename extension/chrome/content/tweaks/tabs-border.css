@@ -2,7 +2,7 @@
 
 @-moz-document url("chrome://browser/content/browser.xul") {
 
-#TabsToolbar[tabsontop="false"] {
+#TabsToolbar:not([tabsontop="true"]) {
   border-bottom: none !important;
 }
 
