@@ -194,6 +194,36 @@ ul {
   left: 0 !important;
 }
 
+/* ::::: Malware blocked page ::::: */
+
+@-moz-document url-prefix("about:neterror?e=malwareBlocked") {
+
+#errorTitle,
+#errorLongContent {
+  -moz-margin-start: 150px;
+}
+
+#errorPageContainer {
+  background-image: url(chrome://browser/skin/about-pages/danger.svg);
+  background-position: 52px 50px;
+}
+
+#errorPageContainer:-moz-dir(rtl) {
+  background-position: right 52px top 50px;
+}
+
+#errorTitle {
+  color: #d8001d;
+  letter-spacing: 0.02em;
+  text-shadow: none;
+}
+
+#errorTryAgain {
+  -moz-margin-start: calc(150px + 24px + 17px);
+}
+
+}
+
 /* ::::: File not found, <...> pages ::::: */
 
 @-moz-document url-prefix("about:neterror?e=connectionFailure"),
