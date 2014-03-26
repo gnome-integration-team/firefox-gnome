@@ -41,7 +41,7 @@
 #main-window:not([customizing]) #toolbar-menubar:not([autohide="true"]),
 #main-window:not([customizing]) #TabsToolbar:not([tabsontop="false"]),
 #main-window:not([customizing]) #nav-bar[tabsontop="false"] {
-  -moz-binding: url(chrome://global/content/bindings/toolbar.xml#toolbar-drag);
+  -moz-binding: url(chrome://browser/content/customizableui/toolbar.xml#toolbar-drag);
 }
 
 #navigator-toolbox > toolbar:not(#toolbar-menubar) {
