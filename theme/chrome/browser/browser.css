@@ -3906,6 +3906,18 @@ chatbox {
   opacity: .5;
 }
 
+/* Tweaks extension uses this class */
+.customizationmode-link {
+  color: gray;
+  margin: 0 10px;
+  padding: 2px 4px;
+  min-width: 0;
+}
+
+.customizationmode-link:hover {
+  color: #3a81cc;
+}
+
 #customization-titlebar-visibility-button {
   list-style-image: url("chrome://browser/skin/customizableui/customize-titleBar-toggle.png");
   -moz-image-region: rect(0, 24px, 24px, 0);
