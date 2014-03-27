@@ -569,6 +569,11 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
 
 /* ... */
 
+toolbarbutton[type="badged"] > .toolbarbutton-badge-container > .toolbarbutton-icon,
+toolbarbutton[type="socialmark"] > .toolbarbutton-icon {
+  max-width: 32px !important;
+}
+
 /* Help SDK icons fit: */
 toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
   width: 16px;
@@ -675,8 +680,8 @@ window:not([chromehidden~="toolbar"]) #urlbar-container:not([switchingtabs]) > #
   list-style-image: url("chrome://browser/skin/Toolbar.png");
 }
 
-:-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #switch-to-metro-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button):-moz-lwtheme-brighttext,
-#bookmarks-menu-button:-moz-lwtheme-brighttext > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+:-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #switch-to-metro-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button):not(:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true])):-moz-lwtheme-brighttext,
+#bookmarks-menu-button:not(:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true])):-moz-lwtheme-brighttext > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
   list-style-image: url(chrome://browser/skin/Toolbar-inverted.png);
 }
 */
@@ -728,6 +733,12 @@ window:not([chromehidden~="toolbar"]) #urlbar-container:not([switchingtabs]) > #
 #sync-button[cui-areatype="toolbar"] {
   list-style-image: url(chrome://symbolic-icons/skin/emblem-synchronizing.svg);
 }
+
+/*
+#sync-button[cui-areatype="toolbar"][status="active"] > .toolbarbutton-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#azure);
+}
+*/
 
 #feed-button[cui-areatype="toolbar"] {
   list-style-image: url(chrome://symbolic-icons/skin/rss.svg);
@@ -871,6 +882,11 @@ toolbarpaletteitem[place="palette"] > #save-page-button {
 #sync-button[cui-areatype="menu-panel"],
 toolbarpaletteitem[place="palette"] > #sync-button {
   -moz-image-region: rect(0px, 384px, 32px, 352px);
+}
+
+#sync-button[cui-areatype="menu-panel"][status="active"] {
+  list-style-image: url(chrome://browser/skin/syncProgress-menuPanel.png);
+  -moz-image-region: rect(0px, 32px, 32px, 0px);
 }
 
 #feed-button[cui-areatype="menu-panel"],
@@ -3998,7 +4014,7 @@ toolbarpaletteitem[place="toolbar"] {
   max-width: 24px;
   min-width: 24px;
   max-height: 24px;
-  height: 24px;
+  min-height: 24px;
   padding: 4px;
 }
 

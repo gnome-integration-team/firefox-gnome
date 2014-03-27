@@ -597,11 +597,26 @@ panelview .toolbarbutton-1,
   border: none;
 }
 
-.subviewbutton.panel-subview-footer > .toolbarbutton-text,
 .subviewbutton.panel-subview-footer > .menu-text {
-  -moz-padding-start: 0;
-  -moz-padding-end: 12px;
+  -moz-appearance: none;
+  -moz-margin-start: 0px !important;
+  -moz-padding-start: 6px;
+  -moz-padding-end: 6px;
   -moz-box-flex: 0;
+  text-align: center;
+}
+
+.subviewbutton.panel-subview-footer > .toolbarbutton-icon {
+  margin: 0;
+}
+
+.subviewbutton.panel-subview-footer > .toolbarbutton-text {
+  text-align: center;
+  padding: 0;
+}
+
+.subviewbutton.panel-subview-footer > .menu-accel-container {
+  -moz-padding-start: 6px;
 }
 
 .subviewbutton:not(.panel-subview-footer) {
@@ -613,6 +628,16 @@ panelview .toolbarbutton-1,
 .PanelUI-subView .subviewbutton:not(.panel-subview-footer) > .menu-text,
 .PanelUI-subView .subviewbutton:not(.panel-subview-footer) > .menu-iconic-text {
   font: menu;
+}
+
+.PanelUI-subView .subviewbutton[shortcut]::after {
+  content: attr(shortcut);
+  float: right;
+  color: hsl(0,0%,50%);
+}
+
+.PanelUI-subView.cui-widget-panelview .subviewbutton[shortcut]::after {
+  -moz-margin-start: 10px;
 }
 
 /* This is a <label> but it should fit in with the menu font- and colorwise. */
@@ -664,14 +689,16 @@ menuitem.subviewbutton:not([disabled])[_moz-menuactive]:active,
   color: hsl(0,0%,25%)
 }
 
+menuitem.panel-subview-footer:not(:-moz-any([disabled],:active))[_moz-menuactive],
 .subviewbutton.panel-subview-footer:not(:-moz-any([disabled],[open],:active)):hover {
-  background-color: hsla(210,4%,10%,.1);
-  border-top: 1px solid hsla(210,4%,10%,.12);
+  background-color: hsla(210,4%,10%,.15);
+  border-top: 1px solid hsla(210,4%,10%,.14);
 }
 
+menuitem.panel-subview-footer:not([disabled])[_moz-menuactive]:active,
 .subviewbutton.panel-subview-footer:not([disabled]):-moz-any([open],:hover:active) {
-  background-color: hsla(210,4%,10%,.15);
-  border-top: 1px solid hsla(210,4%,10%,.12);
+  background-color: hsla(210,4%,10%,.19);
+  border-top: 1px solid hsla(210,4%,10%,.14);
   box-shadow: 0 1px 0 hsla(210,4%,10%,.05) inset;
 }
 
@@ -812,9 +839,14 @@ toolbarpaletteitem[place="palette"] > #search-container {
   border-color: hsla(210,4%,10%,0);
   border-bottom-color: hsla(210,4%,10%,.1);
   padding: 0;
-  margin-bottom: -1px;
   transition-property: background-color, border-color;
   transition-duration: 150ms;
+}
+
+/* Make direct siblings overlap borders: */
+.toolbaritem-combined-buttons + .toolbaritem-combined-buttons:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true]) {
+  margin-top: -1px;
+  border-top-color: transparent !important;
 }
 
 .toolbaritem-combined-buttons:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true]) > toolbarbutton {
@@ -926,7 +958,7 @@ toolbaritem[overflowedItem=true],
   -moz-box-orient: horizontal;
 }
 
-.widget-overflow-list .toolbarbutton-1 > .toolbarbutton-text,
+.widget-overflow-list .toolbarbutton-1:not(.toolbarbutton-combined) > .toolbarbutton-text,
 .widget-overflow-list .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-text {
   text-align: start;
   -moz-padding-start: .5em;
@@ -989,6 +1021,7 @@ menuitem[checked="true"].subviewbutton > .menu-iconic-left {
 .widget-overflow-list .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   -moz-appearance: none;
   border: 0;
+  -moz-margin-start: 3px;
 }
 
 .widget-overflow-list .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker {
