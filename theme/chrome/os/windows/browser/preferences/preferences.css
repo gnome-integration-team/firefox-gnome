@@ -1,7 +1,0 @@
-#cookiesChildren::-moz-tree-image(domainCol) {
-  list-style-image: url(chrome://mozapps/skin/places/defaultFavicon.png);
-}
-
-#cookiesChildren::-moz-tree-image(domainCol, container) {
-  list-style-image: url(chrome://global/skin/dirListing/folder.png);
-}

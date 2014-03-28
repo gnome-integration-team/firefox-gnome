@@ -8,8 +8,6 @@
 @import url("chrome://appversion/skin/browser/browser.css");
 */
 
-@import url("chrome://os/skin/browser/browser.css");
-
 @import url("chrome://browser/skin/extensions/extensions.css");
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");

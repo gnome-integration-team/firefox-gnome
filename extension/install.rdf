@@ -19,7 +19,6 @@
     <em:bootstrap>true</em:bootstrap>
 
     <em:targetPlatform>Linux</em:targetPlatform>
-    <em:targetPlatform>WINNT</em:targetPlatform>
 
     <em:targetApplication>
       <Description>

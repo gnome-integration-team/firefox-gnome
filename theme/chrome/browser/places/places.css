@@ -2,8 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-@import url("chrome://os/skin/browser/places/places.css");
-
 #placesToolbar {
   -moz-appearance: none;
   background-color: Window;
@@ -38,6 +36,7 @@ treechildren::-moz-tree-image(title) {
   margin: 0px 2px;
   width: 16px;
   height: 16px;
+  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
 }
 
 treechildren::-moz-tree-image(title, livemarkItem) {
@@ -56,7 +55,7 @@ treechildren::-moz-tree-image(title, separator) {
 }
 
 treechildren::-moz-tree-image(title, container) {
-  /* chrome/os */
+  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
 }
 
 treechildren::-moz-tree-image(title, container, livemark) {
@@ -105,11 +104,11 @@ treechildren::-moz-tree-image(title, query, dayContainer) {
 }
 
 treechildren::-moz-tree-image(title, query, hostContainer) {
-  /* chrome/os */
+  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
 }
 
 treechildren::-moz-tree-image(title, query, hostContainer, open) {
-  /* chrome/os */
+  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
 }
 
 treechildren::-moz-tree-image(title, query, OrganizerQuery_History) {
@@ -120,7 +119,7 @@ treechildren::-moz-tree-image(title, query, OrganizerQuery_History) {
 /* We want some queries to look like ordinary folders. This must come
    after the (title, query) selector, or it would get overridden. */
 treechildren::-moz-tree-image(title, query, folder) {
-  /* chrome/os */
+  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
 }
 
 treechildren::-moz-tree-image(cutting) {
