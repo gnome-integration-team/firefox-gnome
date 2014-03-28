@@ -10,6 +10,8 @@
 
 
 
+
+
 #PanelUI-popup #PanelUI-contents:empty {
     height: 128px;
 }
@@ -230,11 +232,19 @@ panelview:not([mainview]) .toolbarbutton-text,
 
 toolbaritem[cui-areatype="menu-panel"][sdkstylewidget="true"]:not(.panel-wide-item),
 .panelUI-grid .toolbarbutton-1,
+toolbarpaletteitem[place="panel"]:not([haswideitem=true]),
 .panel-customization-placeholder-child {
   -moz-appearance: none;
   -moz-box-orient: vertical;
   width: calc((22.35em / 3 - 0.1px));
   height: calc(51px + 2.2em);
+}
+
+/* In order to have button labels constrained appropriately, items inside the toolbarpaletteitem
+ * should have a min-width set so they abide by the width set above (which they do outside of
+ * customize mode because they're in a flexed container) */
+toolbarpaletteitem[place="panel"]:not([haswideitem=true]) > .toolbarbutton-1 {
+  min-width: 0.01px;
 }
 
 /* Help SDK buttons fit in. */
@@ -730,8 +740,17 @@ menuitem.panel-subview-footer:not([disabled])[_moz-menuactive]:active,
 }
 
 #BMB_bookmarksPopup menupopup > .bookmarks-actions-menuseparator {
-  /* Hide bottom separator as the styled footer includes a top border serving the same purpose */
-  display: none;
+  /* Hide bottom separator as the styled footer includes a top border serving the same purpose.
+   * We can't just use display: none here, otherwise scrollbox.xml will flip out and sometimes
+   * refuse to scroll for us (see bug 984156). Instead, we set it to visibility hidden, force
+   * a minimum height, and then negative-margin that single pixel into oblivion. That seems
+   * to be enough to make scrollbox happy.
+   */
+  -moz-appearance: none;
+  visibility: hidden;
+  min-height: 1px;
+  margin: -1px 0 0;
+  border: none;
 }
 
 /* Popups with only one item don't have a footer */
