@@ -14,25 +14,22 @@
 
 /* Show/hide window controls */
 
-#window-controls[htitle="true"] > #restore-button {
+#window-controls[htitle="true"][htitle-button-layout*="minimize"] > #minimize-button,
+#window-controls[htitle="true"][htitle-button-layout*="maximize"] > #restore-button,
+#window-controls[htitle="true"] > #close-button {
+  display: -moz-box !important;
+}
+
+#main-window[sizemode="fullscreen"] #window-controls[htitle="true"] > :-moz-any(#minimize-button, #close-button) {
   display: none !important;
 }
 
-#main-window[sizemode="maximized"] #window-controls[htitle="true"] > #close-button,
-#main-window[sizemode="fullscreen"] #window-controls[htitle="true"] > #restore-button {
+#main-window[sizemode="fullscreen"] #window-controls[htitle="true"] {
   display: -moz-box !important;
 }
 
-#main-window:not([sizemode="fullscreen"]) #window-controls[htitle="true"][htitle-button-layout*="minimize"] > #minimize-button {
-  display: -moz-box !important;
-}
+/* Hide theme's window controls */
 
-#window-controls[htitle="true"][htitle-button-layout*="maximize"] > #restore-button {
-  display: -moz-box !important;
-}
-
-/* */
-
-#main-window[sizemode="fullscreen"] #navigator-toolbox:not([tabsontop="true"]) #window-controls[htitle="true"] {
+#main-window[htitlemode] .window-controls {
   display: none !important;
 }

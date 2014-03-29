@@ -62,7 +62,7 @@
   -moz-binding: url(chrome://browser/content/customizableui/toolbar.xml#toolbar-drag);
 }
 #main-window:not([customizing]) #nav-bar:not([tabsontop="true"]) {
-  -moz-binding: url("chrome://browser/skin/bindings.xml#tabs-on-bottom") !important;
+  -moz-binding: url("chrome://browser/skin/gnomeBindings.xml#tabs-on-bottom") !important;
 }
 
 #navigator-toolbox > toolbar:not(#toolbar-menubar) {
@@ -1029,7 +1029,8 @@ toolbarpaletteitem[place="palette"] > #zoom-controls > #zoom-in-button {
   opacity: 0.4;
 }
 
-/* Fullscreen window controls */
+/* ::::: Fullscreen window controls ::::: */
+
 :-moz-any(#window-controls, .window-controls) {
   overflow: hidden;
   margin: 0 3px !important;
@@ -1056,45 +1057,48 @@ toolbarpaletteitem[place="palette"] > #zoom-controls > #zoom-in-button {
   border-left: 7px solid;
   -moz-border-left-colors: rgba(50,50,50,.2) rgba(255,255,255,0.2) transparent;
 }
+
 :-moz-any(#window-controls, .window-controls):-moz-locale-dir(rtl) {
   border-right: 7px solid;
   -moz-border-right-colors: rgba(50,50,50,.2) rgba(255,255,255,0.2) transparent;
 }
 
+/* Icons */
+
 #minimize-button {
   list-style-image: url(chrome://symbolic-icons/skin/window-minimize.svg);
-  display: none;
-}
-:-moz-any(#restore-button, #fullscreen-button) {
-  list-style-image: url(chrome://symbolic-icons/skin/view-fullscreen.svg);
-}
-#main-window[sizemode="fullscreen"] :-moz-any(#restore-button, #fullscreen-button) {
-  list-style-image: url(chrome://symbolic-icons/skin/view-fullscreen-leave.svg);
-}
-#close-button {
-  list-style-image: url(chrome://symbolic-icons/skin/close.svg);
-  display: none;
 }
 
-:-moz-any(#minimize-button, #restore-button, #close-button) > .toolbarbutton-icon {
+:-moz-any(#restore-button, #fullscreen-leave-button) {
+  list-style-image: url(chrome://symbolic-icons/skin/view-fullscreen-leave.svg);
+}
+
+#close-button {
+  list-style-image: url(chrome://symbolic-icons/skin/close.svg);
+}
+
+:-moz-any(#minimize-button, #restore-button, #fullscreen-leave-button, #close-button) > .toolbarbutton-icon {
   opacity: .8;
 }
 
-:-moz-any(#minimize-button, #restore-button, #close-button):active:hover > .toolbarbutton-icon {
+:-moz-any(#minimize-button, #restore-button, #fullscreen-leave-button, #close-button):active:hover > .toolbarbutton-icon {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
   opacity: 1;
+}
+
+/* Show/hide buttons */
+
+#minimize-button,
+#close-button {
+  display: none;
 }
 
 #TabsToolbar:not([tabsontop="true"]) #window-controls {
   display: none;
 }
 
-.window-controls {
+#main-window:not([sizemode="fullscreen"]) .window-controls {
   display: none;
-}
-
-#main-window[sizemode="fullscreen"] .window-controls {
-  display: -moz-box;
 }
 
 /* ::::: Location bar ::::: */

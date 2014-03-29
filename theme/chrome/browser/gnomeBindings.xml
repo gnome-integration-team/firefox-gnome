@@ -18,13 +18,12 @@
 
     <content default-tabs-position="bottom">
       <children/>
-      <xul:hbox anonid="gnome-window-controls"
-                id="gnome-window-controls"
+      <xul:hbox id="gnome-window-controls"
                 class="window-controls window-controls-end"
                 pack="end"
                 skipintoolbarset="true"
                 ordinal="1000">
-        <xul:toolbarbutton id="fullscreen-button"
+        <xul:toolbarbutton id="fullscreen-leave-button"
                            tooltiptext="&fullScreenRestore.tooltip;"
                            oncommand="BrowserFullScreen();"/>
       </xul:hbox>
