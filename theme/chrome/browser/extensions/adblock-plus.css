@@ -12,3 +12,14 @@
   list-style-image: url(chrome://symbolic-icons/skin/extensions/adblock-plus-stopped.svg) !important;
   -moz-image-region: auto !important;
 }
+
+#abp-toolbarbutton[cui-areatype="menu-panel"] .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] > #abp-toolbarbutton .toolbarbutton-icon {
+  opacity: .6;
+}
+
+#abp-toolbarbutton:-moz-any([abpstate="disabled"], [abpstate="whitelisted"])[cui-areatype="menu-panel"] .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] > #abp-toolbarbutton:-moz-any([abpstate="disabled"], [abpstate="whitelisted"]) .toolbarbutton-icon {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/adblock-plus-stopped-menuPanel.svg) !important;
+  opacity: 1;
+}
