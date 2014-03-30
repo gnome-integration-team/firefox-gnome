@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" inkscape:version="0.48.3.1 r9886" height="16" width="16" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" sodipodi:docname="emblem-shared.svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd">
+<metadata>
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+<dc:title>Gnome Symbolic Icon Theme</dc:title>
+</cc:Work>
+</rdf:RDF>
+</metadata>
+<sodipodi:namedview inkscape:zoom="1" borderopacity="1" inkscape:current-layer="layer15" inkscape:cx="4.4977557" guidetolerance="10" inkscape:snap-grids="true" inkscape:snap-bbox-midpoints="false" inkscape:object-paths="false" inkscape:window-maximized="1" inkscape:snap-bbox="true" showgrid="false" inkscape:snap-nodes="false" inkscape:snap-global="true" showguides="true" bordercolor="#666666" inkscape:window-x="1600" inkscape:guide-bbox="true" objecttolerance="10" inkscape:object-nodes="false" inkscape:window-y="27" inkscape:snap-others="false" inkscape:window-width="2560" inkscape:pageopacity="1" inkscape:snap-to-guides="true" inkscape:pageshadow="2" pagecolor="#3a3b39" gridtolerance="10" inkscape:bbox-paths="false" inkscape:cy="6.6184206" inkscape:window-height="1381" showborder="false">
+<inkscape:grid visible="true" enabled="true" originy="164px" originx="-280px" spacingy="1px" spacingx="1px" snapvisiblegridlinesonly="true" type="xygrid" empspacing="2"/>
+</sodipodi:namedview>
+<title>Gnome Symbolic Icon Theme</title>
+<g transform="translate(-521 -381)" inkscape:groupmode="layer" inkscape:label="emblems" fill="#2e3436">
+<path sodipodi:rx="1.96875" sodipodi:ry="1.96875" style="color:#000000;enable-background:new" sodipodi:type="arc" d="m291 178.03a1.9688 1.9688 0 1 1 -3.9375 0 1.9688 1.9688 0 1 1 3.9375 0z" transform="matrix(1.5079 0 0 1.5079 88.16 120.51)" sodipodi:cy="178.03125" sodipodi:cx="289.03125"/>
+<path sodipodi:rx="1.96875" sodipodi:ry="1.96875" style="color:#000000;enable-background:new" sodipodi:type="arc" d="m291 178.03a1.9688 1.9688 0 1 1 -3.9375 0 1.9688 1.9688 0 1 1 3.9375 0z" transform="matrix(1.5079 0 0 1.5079 98.128 125.51)" sodipodi:cy="178.03125" sodipodi:cx="289.03125"/>
+<path sodipodi:rx="1.96875" sodipodi:ry="1.96875" style="color:#000000;enable-background:new" sodipodi:type="arc" d="m291 178.03a1.9688 1.9688 0 1 1 -3.9375 0 1.9688 1.9688 0 1 1 3.9375 0z" transform="matrix(1.5079 0 0 1.5079 98.128 115.51)" sodipodi:cy="178.03125" sodipodi:cx="289.03125"/>
+<path style="block-progression:tb;text-indent:0;color:#000000;text-transform:none" d="m533.62 383.16-10.062 4.875-1.8125 0.90625 1.8125 0.90625 10.031 5.0625 0.90625-1.8125-8.2188-4.1562 8.2188-4-0.875-1.7812z" inkscape:connector-curvature="0"/>
+</g>
+</svg>
