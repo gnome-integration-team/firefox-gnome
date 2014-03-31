@@ -19,3 +19,26 @@ toolbarpaletteitem[place="palette"] > #https-everywhere-button > .https-everywhe
 toolbarpaletteitem[place="palette"] > #https-everywhere-button[status="disabled"] > .https-everywhere-button > .toolbarbutton-icon {
   opacity: .3 !important;
 }
+
+/* Font fixes */
+
+#https-everywhere-button menuitem.active-item label {
+  color: inherit !important;
+  font-weight: normal !important;
+}
+
+#https-everywhere-button menuitem.moot-item label {
+  color: inherit !important;
+  opacity: 0.5 !important;
+  font-weight: normal !important;
+}
+
+#https-everywhere-button menuitem.breaking-item label {
+  color: inherit !important;
+  font-weight: normal !important;
+}
+
+#https-everywhere-button menuitem.inactive-item label {
+  color: inherit !important;
+  font-weight: normal !important;
+}
