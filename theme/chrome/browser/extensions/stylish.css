@@ -5,6 +5,18 @@
 #stylish-toolbar-button {
   list-style-image: url(chrome://symbolic-icons/skin/extensions/stylish.svg) !important;
 }
+
 #stylish-toolbar-button:not([styles-applied~="site"]) > .toolbarbutton-icon {
   list-style-image: url(chrome://symbolic-icons/skin/extensions/stylish-stopped.svg) !important;
+}
+
+#stylish-toolbar-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] > #stylish-toolbar-button > .toolbarbutton-icon {
+  opacity: .6;
+}
+
+#stylish-toolbar-button:not([styles-applied~="site"])[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] > #stylish-toolbar-button:not([styles-applied~="site"]) > .toolbarbutton-icon {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/stylish-stopped-menuPanel.svg) !important;
+  opacity: 1;
 }
