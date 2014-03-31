@@ -17,7 +17,7 @@
       </linearGradient>
       <linearGradient inkscape:collect="always" xlink:href="#a" id="linearGradient6297" gradientUnits="userSpaceOnUse" gradientTransform="translate(200.82355,981.6732)" x1="1" y1="8" x2="15" y2="8" />
    </defs>
-   <sodipodi:namedview id="base" pagecolor="#454545" bordercolor="#c8c8c8" borderopacity="1" inkscape:pageopacity="1" inkscape:pageshadow="2" inkscape:zoom="1" inkscape:cx="518.92214" inkscape:cy="154.83271" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="false" showborder="false" inkscape:showpageshadow="false" inkscape:snap-global="true" inkscape:window-width="1366" inkscape:window-height="741" inkscape:window-x="0" inkscape:window-y="27" inkscape:window-maximized="1" showguides="false" inkscape:guide-bbox="true" inkscape:object-nodes="false" guidecolor="white" guideopacity="0.71372549" inkscape:snap-bbox="true" inkscape:bbox-nodes="true" borderlayer="true" inkscape:snap-smooth-nodes="false" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0">
+   <sodipodi:namedview id="base" pagecolor="#454545" bordercolor="#c8c8c8" borderopacity="1" inkscape:pageopacity="1" inkscape:pageshadow="2" inkscape:zoom="1" inkscape:cx="562.38456" inkscape:cy="264.18997" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="false" showborder="false" inkscape:showpageshadow="false" inkscape:snap-global="true" inkscape:window-width="1366" inkscape:window-height="741" inkscape:window-x="0" inkscape:window-y="27" inkscape:window-maximized="1" showguides="false" inkscape:guide-bbox="true" inkscape:object-nodes="false" guidecolor="white" guideopacity="0.71372549" inkscape:snap-bbox="true" inkscape:bbox-nodes="true" borderlayer="true" inkscape:snap-smooth-nodes="false" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0">
       <sodipodi:guide orientation="0,1" position="272,95" id="guide3003" />
       <sodipodi:guide orientation="0,1" position="264,82" id="guide3005" />
       <sodipodi:guide orientation="1,0" position="264,89" id="guide7188" />
@@ -338,7 +338,7 @@
       <g id="g7512" transform="translate(0,47.994397)">
          <rect ry="2" rx="2" transform="translate(-256,652.3622)" y="304" x="656" height="16" width="16" id="rect7510" style="opacity:0;color:black;fill:#fafaf7;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
          <g transform="translate(400,-79.5305)" id="g6331">
-            <path sodipodi:type="arc" style="color:black;fill:none;stroke:white;stroke-width:2.40001082;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" id="path6972" sodipodi:cx="11" sodipodi:cy="6" sodipodi:rx="3" sodipodi:ry="3" d="M 14,6 A 3,3 0 1 1 8,6 3,3 0 1 1 14,6 z" transform="matrix(0.83332657,0,0,0.83333272,2.3334279,1039.3983)" />
+            <path sodipodi:type="arc" style="color:black;fill:none;stroke:white;stroke-width:2.40001082;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" id="path6972" sodipodi:cx="11" sodipodi:cy="6" sodipodi:rx="3" sodipodi:ry="3" d="M 14,6 C 14,7.6568542 12.656854,9 11,9 9.3431458,9 8,7.6568542 8,6 8,4.3431458 9.3431458,3 11,3 c 1.656854,0 3,1.3431458 3,3 z" transform="matrix(0.83332657,0,0,0.83333272,2.3334279,1039.3983)" />
             <path style="fill:none;stroke:white;stroke-width:3;stroke-linecap:square;stroke-linejoin:miter;stroke-opacity:1" d="m 7.674073,1044.3983 -5.1721522,0" id="path6974" inkscape:connector-curvature="0" sodipodi:nodetypes="cc" />
             <path style="fill:none;stroke:white;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 2.500035,1044.9501 0,2.9787" id="path7744" inkscape:connector-curvature="0" />
             <path inkscape:connector-curvature="0" id="path7746" d="m 4.500035,1045.2731 0,1.6341" style="fill:none;stroke:white;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" sodipodi:nodetypes="cc" />
@@ -488,5 +488,43 @@
       <text transform="scale(1.0329928,0.96806095)" sodipodi:linespacing="125%" id="text7520" y="557.76581" x="133.48317" style="font-size:42.87352371px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;color:black;fill:#f3770c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.99999994;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Open Sans;-inkscape-font-specification:Open Sans" xml:space="preserve"><tspan style="fill:#f3770c;stroke:none" y="557.76581" x="133.48315" id="tspan7522" sodipodi:role="line">Firefox GNOME</tspan></text>
       <text xml:space="preserve" style="font-size:22.24617577px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;color:black;fill:#fafaf7;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.99999994;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Open Sans;-inkscape-font-specification:Open Sans" x="94.86998" y="591.25598" id="text7524" sodipodi:linespacing="125%" transform="scale(1.0329928,0.96806095)"><tspan sodipodi:role="line" id="tspan7526" x="94.869972" y="591.25598" style="fill:#fafaf7;stroke:none">GNOME Integration Team</tspan></text>
       <text transform="scale(1.0329928,0.96806095)" sodipodi:linespacing="125%" id="text7528" y="623.65802" x="209.9633" style="font-size:16.43958664000000169px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;color:black;fill:#adb0aa;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.99999994000000003;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Open Sans;-inkscape-font-specification:Open Sans" xml:space="preserve"><tspan style="fill:#adb0aa;stroke:none" y="623.65802" x="209.96329" id="tspan7530" sodipodi:role="line">Symbolic icons for Firefox and Popular Extensions</tspan></text>
+      <g id="g6537" transform="translate(592,732.34991)">
+         <g style="display:inline" id="layer9" transform="translate(-223.0002,-647)" inkscape:label="status" />
+         <g id="layer10" transform="translate(-223.0002,-647)" inkscape:label="devices" />
+         <g id="layer11" transform="translate(-223.0002,-647)" inkscape:label="apps" />
+         <g id="layer13" transform="translate(-223.0002,-647)" inkscape:label="places" />
+         <g id="layer14" transform="translate(-223.0002,-647)" inkscape:label="mimetypes" />
+         <g style="display:inline" id="layer15" transform="translate(-223.0002,-647)" inkscape:label="emblems" />
+         <g style="display:inline" id="g71291" transform="translate(-223.0002,-647)" inkscape:label="emotes" />
+         <g style="display:inline" id="g4953" transform="translate(-223.0002,-647)" inkscape:label="categories" />
+         <g style="display:inline" id="layer12" transform="translate(-223.0002,-647)" inkscape:label="actions">
+            <g id="g2999" transform="matrix(1,0,0,0.99836583,223.0002,646.9687)">
+               <g style="display:inline" id="layer9-12" transform="translate(-62,-740)" />
+               <g id="layer10-9" transform="translate(-62,-740)" />
+               <g id="layer11-39" transform="translate(-62,-740)" />
+               <g id="layer12-0" transform="translate(-62,-740)" />
+               <g id="layer13-8" transform="translate(-62,-740)" />
+               <g style="fill:#bebebe;fill-opacity:1" id="layer14-85" transform="translate(-62,-740)">
+                  <path style="color:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill:white" id="path4387" d="m -15.0625,431 c -0.632499,0.0455 -1.027657,0.72053 -0.9375,1.3125 0.0028,4.24996 0.02115,8.50019 0.03125,12.75 0.05698,0.62486 0.692327,1.02649 1.28125,0.9375 3.252979,-0.003 6.497173,-0.0213 9.75,-0.0312 0.624253,-0.0569 1.026385,-0.69174 0.9375,-1.28125 -0.0044,-3.25599 -0.01605,-6.52564 -0.03125,-9.78125 -0.09405,-0.59835 -0.66512,-0.91374 -1.03125,-1.34375 -0.802576,-0.78917 -1.554622,-1.60576 -2.375,-2.375 -0.49046,-0.30313 -1.110769,-0.1456 -1.65625,-0.1875 l -5.96875,0 z m 5.09375,13.51232 -3.71875,-3.71875 c -0.18814,-0.18817 -0.28122,-0.45344 -0.28125,-0.71875 l 0,-1 1,0 c 0.2653,0 0.53058,0.0931 0.71875,0.28125 l 1.28125,1.28125 -0.03125,-5.625 2,0 0.0625,5.59375 1.25,-1.25 c 0.18818,-0.18811 0.45344,-0.28129 0.71875,-0.28125 l 1,0 0,1 c 0,0.26528 -0.093,0.53057 -0.28125,0.71875 z" inkscape:connector-curvature="0" transform="matrix(1,0,0,1.0016368,80,309.3275)" sodipodi:nodetypes="ccccccccccccccccsccccccccscc" />
+                  <g style="fill:#bebebe;fill-opacity:1;display:inline" id="g4956-09" transform="matrix(0,1,-1,0,375.43749,722.03155)" />
+               </g>
+               <g id="layer15-6" transform="translate(-62,-740)" />
+               <rect style="fill-opacity:0;fill-rule:nonzero" width="16" height="15.999999" id="rect2998" y="0.031346321" x="0" />
+            </g>
+            <g id="g2999-5" transform="matrix(1,0,0,0.99915351,223.0002,647)">
+               <g style="display:inline" id="layer9-1" transform="translate(-79.99995,-682)">
+                  <g style="opacity:0.25" id="g35737-6-3" transform="translate(60.0002,390)" />
+                  <g id="g4956-7" transform="matrix(0,1,-1,0,393.99991,665.00021)" />
+               </g>
+               <g id="layer10-4" transform="translate(-79.99995,-682)" />
+               <g id="layer11-3" transform="translate(-79.99995,-682)" />
+               <g id="layer12-1" transform="translate(-79.99995,-682)" />
+               <g id="layer13-4" transform="translate(-79.99995,-682)" />
+               <g id="layer14-6" transform="translate(-79.99995,-682)" />
+               <g style="display:inline" id="layer15-9" transform="translate(-79.99995,-682)" />
+               <g style="display:inline" id="g4953-8" transform="translate(-79.99995,-682)" />
+            </g>
+         </g>
+      </g>
    </g>
 </svg>
