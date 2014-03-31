@@ -6,7 +6,7 @@
   min-width: 32px !important;
 }
 
-#ghostery-button[image*="Icon-16"] > .toolbarbutton-icon {
+#ghostery-button[image*="icon19"] > .toolbarbutton-icon {
   background: url(chrome://symbolic-icons/skin/extensions/ghostery.svg) no-repeat center !important;
   width: 16px !important;
   height: 16px !important;
@@ -14,13 +14,22 @@
   overflow: hidden !important;
 }
 
-#ghostery-button[image*="Icon-16-off"] > .toolbarbutton-icon {
-  background: url(chrome://symbolic-icons/skin/extensions/ghostery-grayscale.svg) no-repeat center !important;
+#ghostery-button[image*="icon19_off"] > .toolbarbutton-icon {
+  background-image: url(chrome://symbolic-icons/skin/extensions/ghostery-grayscale.svg) !important;
   opacity: 0.5;
-  width: 16px !important;
-  height: 16px !important;
-  -moz-padding-start: 16px !important;
-  overflow: hidden !important;
+}
+
+toolbaritem[cui-areatype="menu-panel"] #ghostery-button > .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] #ghostery-button > .toolbarbutton-icon {
+  background-size: 32px 32px !important;
+  width: 32px !important;
+  height: 32px !important;
+  -moz-padding-start: 32px !important;
+}
+
+toolbaritem[cui-areatype="menu-panel"] #ghostery-button[image*="off"] > .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] #ghostery-button[image*="off"] > .toolbarbutton-icon {
+  opacity: .3;
 }
 
 #ghostery-button-badge {
