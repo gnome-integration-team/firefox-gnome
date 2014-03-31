@@ -6,3 +6,8 @@
   list-style-image: url(chrome://symbolic-icons/skin/extensions/dta-manager.svg) !important;
   -moz-image-region: auto !important;
 }
+
+#dta-manager-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] > #dta-manager-button > .toolbarbutton-icon {
+  opacity: .6;
+}

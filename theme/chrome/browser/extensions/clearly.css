@@ -5,3 +5,8 @@
 #readable_by_evernote__button {
   list-style-image: url(chrome://symbolic-icons/skin/extensions/clearly.svg) !important;
 }
+
+#readable_by_evernote__button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] > #readable_by_evernote__button > .toolbarbutton-icon {
+  opacity: .6;
+}

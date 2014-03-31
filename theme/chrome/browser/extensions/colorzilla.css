@@ -2,7 +2,11 @@
  * id: {6AC85730-7D0F-4de0-B3FA-21142DD85326}
  * URL: https://addons.mozilla.org/firefox/addon/colorzilla/ */
 
-#wrapper-colorzilla-navbar-button .toolbarbutton-icon,
-#colorzilla-navbar-button .toolbarbutton-icon {
+:-moz-any(#wrapper-colorzilla-navbar-button, #colorzilla-navbar-button) .toolbarbutton-icon {
   list-style-image: url(chrome://symbolic-icons/skin/extensions/colorzilla.svg) !important;
+}
+
+:-moz-any(#wrapper-colorzilla-navbar-button, #colorzilla-navbar-button)[cui-areatype="menu-panel"] .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] > :-moz-any(#wrapper-colorzilla-navbar-button, #colorzilla-navbar-button) .toolbarbutton-icon {
+  opacity: .6;
 }
