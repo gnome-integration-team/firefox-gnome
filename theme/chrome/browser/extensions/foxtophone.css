@@ -6,3 +6,8 @@
   list-style-image: url(chrome://symbolic-icons/skin/extensions/foxtophone.svg) !important;
   -moz-image-region: auto !important;
 }
+
+#sendtophone-toolbar-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] > #sendtophone-toolbar-button > .toolbarbutton-icon {
+  opacity: .6;
+}

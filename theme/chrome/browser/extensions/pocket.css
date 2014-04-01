@@ -2,7 +2,19 @@
  * id: isreaditlater@ideashower.com
  * URL: https://addons.mozilla.org/en-US/firefox/addon/read-it-later/ */
 
-#RIL_toolbar_button,
+/* Toolbar button */
+
+#RIL_toolbar_button {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/pocket.svg) !important;
+}
+
+#RIL_toolbar_button[cui-areatype="menu-panel"] > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] > #RIL_toolbar_button > .toolbarbutton-menubutton-button > .toolbarbutton-icon {
+  opacity: .6;
+}
+
+/* URL-bar icon */
+
 #RIL_urlbar_add {
   list-style-image: url(chrome://symbolic-icons/skin/extensions/pocket.svg) !important;
 }

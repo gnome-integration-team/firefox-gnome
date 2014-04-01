@@ -6,15 +6,20 @@
 /* TODO: Add icons for all buttons */
 
 #foxmarks-toolbar-my > .toolbarbutton-icon {
-  -moz-appearance: none !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-image: url(chrome://symbolic-icons/skin/extensions/xmarks-sync-grayscale.svg) !important;
-  min-width: 16px !important;
-  max-width: 16px !important;
-  min-height: 16px !important;
+  background: url(chrome://symbolic-icons/skin/extensions/xmarks-sync-grayscale.svg) no-repeat center !important;
+  width: 16px !important;
+  height: 16px !important;
   -moz-padding-start: 16px !important;
   overflow: hidden !important;
+}
+
+#foxmarks-toolbar-my[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] #foxmarks-toolbar-my > .toolbarbutton-icon {
+  background-size: 32px 32px !important;
+  width: 32px !important;
+  height: 32px !important;
+  -moz-padding-start: 32px !important;
+  opacity: .6;
 }
 
 /* On status bar */

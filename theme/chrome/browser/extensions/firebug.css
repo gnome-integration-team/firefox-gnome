@@ -4,20 +4,28 @@
 
 #firebug-button {
   filter: none !important;
-  list-style-image: url(chrome://symbolic-icons/skin/extensions/firebug.svg) !important;
+  list-style-image: none !important;
   -moz-image-region: rect(16px, 16px, 32px, 0) !important;
 }
 
-#firebug-button > .fb-toolbarbutton image {
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-image: url(chrome://symbolic-icons/skin/extensions/firebug.svg) !important;
+#firebug-button > .fb-toolbarbutton > .toolbarbutton-icon {
+  background: url(chrome://symbolic-icons/skin/extensions/firebug.svg) no-repeat center !important;
   opacity: 0.5;
 }
 
-#firebug-button[firebugActive="true"] > .fb-toolbarbutton image {
-  background-image: url(chrome://symbolic-icons/skin/extensions/firebug.svg) !important;
+#firebug-button[firebugActive="true"] > .fb-toolbarbutton > .toolbarbutton-icon {
   opacity: 1;
+}
+
+#firebug-button[cui-areatype="menu-panel"] > .fb-toolbarbutton > .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] > #firebug-button > .fb-toolbarbutton > .toolbarbutton-icon {
+  background-size: 32px 32px !important;
+  opacity: .3;
+}
+
+#firebug-button[firebugActive="true"][cui-areatype="menu-panel"] > .fb-toolbarbutton > .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] > #firebug-button[firebugActive="true"] > .fb-toolbarbutton > .toolbarbutton-icon {
+  opacity: .6;
 }
 
 #firebug-button .badge > .label {

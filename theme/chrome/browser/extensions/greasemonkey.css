@@ -5,3 +5,13 @@
 #greasemonkey-tbb {
   list-style-image: url(chrome://symbolic-icons/skin/extensions/greasemonkey.svg) !important;
 }
+
+#greasemonkey-tbb[cui-areatype="menu-panel"] > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] > #greasemonkey-tbb > .toolbarbutton-menubutton-button > .toolbarbutton-icon {
+  opacity: .6;
+}
+
+#greasemonkey-tbb[disabled="true"][cui-areatype="menu-panel"] > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] > #greasemonkey-tbb[disabled="true"] > .toolbarbutton-menubutton-button > .toolbarbutton-icon {
+  opacity: .3;
+}

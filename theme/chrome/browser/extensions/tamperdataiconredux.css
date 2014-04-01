@@ -5,3 +5,8 @@
 #tdiconmenu-button {
   list-style-image: url(chrome://symbolic-icons/skin/extensions/tamperdataiconredux.svg) !important;
 }
+
+#tdiconmenu-button[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] > #tdiconmenu-button > .toolbarbutton-icon {
+  opacity: .6;
+}
