@@ -90,9 +90,11 @@
   margin-top: -1px; /* Move up 1px into the TabsToolbar */
 }
 
+/* What it is?
 #nav-bar-overflow-button {
   -moz-image-region: rect(-5px, 12px, 11px, -4px);
 }
+*/
 
 #nav-bar ~ toolbar {
   background: transparent;
@@ -693,10 +695,6 @@ window:not([chromehidden~="toolbar"]) #urlbar-container:not([switchingtabs]) > #
 
 /* Menu panel buttons */
 
-:-moz-any(#nav-bar-overflow-button) { /* FIXME */
-  list-style-image: url("chrome://browser/skin/Toolbar.png");
-}
-
 #back-button {
   list-style-image: url(chrome://symbolic-icons/skin/go-previous.svg);
 }
@@ -826,8 +824,8 @@ window:not([chromehidden~="toolbar"]) #urlbar-container:not([switchingtabs]) > #
 }
 
 #nav-bar-overflow-button {
-  /* FIXME */
-  -moz-image-region: rect(0, 612px, 18px, 594px);
+  list-style-image: url(chrome://symbolic-icons/skin/overflow-button.svg);
+  -moz-image-region: auto;
 }
 
 #nav-bar-overflow-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
