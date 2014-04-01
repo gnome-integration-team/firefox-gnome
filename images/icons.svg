@@ -17,7 +17,7 @@
       </linearGradient>
       <linearGradient inkscape:collect="always" xlink:href="#a" id="linearGradient6297" gradientUnits="userSpaceOnUse" gradientTransform="translate(200.82355,981.6732)" x1="1" y1="8" x2="15" y2="8" />
    </defs>
-   <sodipodi:namedview id="base" pagecolor="#454545" bordercolor="#c8c8c8" borderopacity="1" inkscape:pageopacity="1" inkscape:pageshadow="2" inkscape:zoom="64" inkscape:cx="693.75253" inkscape:cy="392.15068" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="true" showborder="false" inkscape:showpageshadow="false" inkscape:snap-global="true" inkscape:window-width="1366" inkscape:window-height="741" inkscape:window-x="0" inkscape:window-y="27" inkscape:window-maximized="1" showguides="false" inkscape:guide-bbox="true" inkscape:object-nodes="false" guidecolor="white" guideopacity="0.71372549" inkscape:snap-bbox="true" inkscape:bbox-nodes="true" borderlayer="true" inkscape:snap-smooth-nodes="false" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0">
+   <sodipodi:namedview id="base" pagecolor="#454545" bordercolor="#c8c8c8" borderopacity="1" inkscape:pageopacity="1" inkscape:pageshadow="2" inkscape:zoom="22.627417" inkscape:cx="886.05562" inkscape:cy="390.50745" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="true" showborder="false" inkscape:showpageshadow="false" inkscape:snap-global="true" inkscape:window-width="1366" inkscape:window-height="741" inkscape:window-x="0" inkscape:window-y="27" inkscape:window-maximized="1" showguides="false" inkscape:guide-bbox="true" inkscape:object-nodes="false" guidecolor="white" guideopacity="0.71372549" inkscape:snap-bbox="true" inkscape:bbox-nodes="true" borderlayer="true" inkscape:snap-smooth-nodes="false" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0">
       <sodipodi:guide orientation="0,1" position="272,95" id="guide3003" />
       <sodipodi:guide orientation="0,1" position="264,82" id="guide3005" />
       <sodipodi:guide orientation="1,0" position="264,89" id="guide7188" />
@@ -525,6 +525,10 @@
                <g style="display:inline" id="g4953-8" transform="translate(-79.99995,-682)" />
             </g>
          </g>
+      </g>
+      <g id="g7450">
+         <rect transform="translate(-256,652.3622)" y="80" x="880" height="16" width="16" id="rect7439" style="color:black;fill:#fafaf7;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;opacity:0" />
+         <path sodipodi:nodetypes="cccccccccccccc" inkscape:connector-curvature="0" id="rect7441" d="m 626,735.3622 5,5 -5,5 3,0 5,-5 -5,-5 z m 5,0 5,5 -5,5 3,0 5,-5 -5,-5 z" style="color:black;fill:#fafaf7;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
       </g>
    </g>
 </svg>
