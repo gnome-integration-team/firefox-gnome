@@ -61,6 +61,7 @@
 }
 
 #newtab-undo-close-button {
+  -moz-appearance: none;
   padding: 0;
   border: none;
   list-style-image: url(chrome://symbolic-icons/skin/close.svg);
