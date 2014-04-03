@@ -391,7 +391,7 @@
   filter: none;
   min-width: 34px;
   -moz-margin-start: 7px;
-  padding: 3px;
+  padding: 3px 8px;
   text-shadow: none;
 /*  transition-property: background, border, box-shadow;
   transition-duration: 200ms, 200ms, 0ms; */
@@ -426,33 +426,36 @@
 
 menuitem.addon-control {
   -moz-appearance: menuitem;
+  background: none !important;
   border: none;
   border-radius: 0;
   color: MenuText;
+  margin: 0;
   max-width: none;
-  opacity: 1;
-  padding: 1px 5px;
+  padding: 5px 12px;
+  /*
   transition-property: none;
+  */
 }
 
 menuitem.addon-control:hover {
-  color: -moz-menuhovertext;
-  background-color: -moz-menuhover;
-  border: none !important;
-  box-shadow: none !important;
+  color: -moz-menuhovertext !important;
+  background: -moz-menuhover !important;
+  border: none;
+  box-shadow: none;
 }
 
-.addon-control.enable .button-icon,
-.addon-control.disable .button-icon,
-.addon-control.preferences .button-icon {
+.addon-control:-moz-any(.enable, .disable, .preferences) .button-icon {
   display: -moz-box !important;
   -moz-margin-end: 0;
 }
 
-.addon-control.enable .button-text,
-.addon-control.disable .button-text,
-.addon-control.preferences .button-text {
+.addon-control:-moz-any(.enable, .disable, .preferences) .button-text {
   display: none;
+}
+
+.addon-control.preferences {
+  list-style-image: url(chrome://symbolic-icons/skin/emblem-system.svg);
 }
 
 /* Switches */
@@ -465,12 +468,26 @@ menuitem.addon-control:hover {
   list-style-image: url(chrome://adwaita-mozapps/skin/extensions/on.png);
 }
 
-.addon-control.enable,
-.addon-control.disable {
+/* FIXME: Needs for HiDPI support (#196)
+@media (min-resolution: 2dppx) {
+  .addon-control.enable {
+    list-style-image: url(chrome://adwaita-mozapps/skin/extensions/off@2x.png);
+  }
+
+  .addon-control.disable {
+    list-style-image: url(chrome://adwaita-mozapps/skin/extensions/on@2x.png);
+  }
+}
+*/
+
+.addon-control:-moz-any(.enable, .disable) {
   border-color: transparent !important;
   background: none !important;
   box-shadow: none !important;
+  padding: 3px;
 }
+
+/* Colored buttons */
 
 .addon-control:-moz-any(.remove, .update, .install) {
   color: #fff;
@@ -478,11 +495,6 @@ menuitem.addon-control:hover {
   padding: 4px 11px;
   box-shadow: 0 1px 0 rgba(255,255,255,0.37),
               inset 0 1px 0 rgba(255,255,255,0.2);
-}
-
-.addon-control.remove {
-  background-image: linear-gradient(to bottom, #e24a53, #cf3641);
-  border-color: #825e5f;
 }
 
 .addon-control.remove {
@@ -518,9 +530,7 @@ menuitem.addon-control:hover {
   box-shadow: 0 0 2px 1px rgba(0,0,0,0.2) inset;
 }
 
-.addon-control.preferences {
-  list-style-image: url(chrome://symbolic-icons/skin/emblem-system.svg);
-}
+/* Other buttons */
 
 .addon-control.state .menulist-dropmarker {
   -moz-appearance: none;
@@ -530,6 +540,8 @@ menuitem.addon-control:hover {
   margin: 2px 0;
   max-height: 16px;
 }
+
+/* Links */
 
 .button-link {
   color: #4b4b4b;
