@@ -5,8 +5,7 @@
 @import url("chrome://browser/skin/extensions/all-in-one-sidebar.css");
 
 #addons-page {
-  background: #ebebeb url(chrome://browser/skin/devtools/noise.png);
-  background-attachment: fixed;
+  background: #eaeaea;
   padding: 0;
 }
 
@@ -29,23 +28,20 @@
 
 #categories {
   margin: 0;
-  -moz-margin-end: -12px;
 }
 
 #categories > .category:first-of-type {
-  margin-top: 39px;
+  margin-top: 55px;
 }
 
 .category {
   color: #606060;
-  margin: 10px 0 0 0;
-
+  margin: 8px 0 0 0;
+  border: 0;
   -moz-border-start: 1px solid transparent;
-  -moz-border-end: 12px solid transparent;
   border-radius: 0 !important;
-
   padding: 5px 0 4px 0;
-  -moz-padding-start: 25px;
+  -moz-padding-start: 16px;
 }
 
 .category[disabled] + .category {
@@ -57,17 +53,10 @@
 }
 
 .category[selected] {
-  background: #007fe1;
+  background: #7487e4;
   background-clip: padding-box;
-  -moz-border-start: 1px solid #99c6e8;
+  border-color: #bdc9e8;
   color: #fff !important;
-}
-
-.category[selected]:-moz-locale-dir(ltr) {
-  border-image: url(chrome://adwaita-mozapps/skin/extensions/addons-category-border.png) 0 12 0 0 / 0px 12px 0px 0px stretch;
-}
-.category[selected]:-moz-locale-dir(rtl) {
-  border-image: url(chrome://adwaita-mozapps/skin/extensions/addons-category-border-rtl.png) 0 0 0 12 / 0px 0px 0px 12px stretch;
 }
 
 .category-name {
@@ -86,7 +75,6 @@
   border-radius: 0;
   color: inherit;
   margin: 0;
-  -moz-margin-end: 10px;
 }
 
 .category-icon {
@@ -96,7 +84,7 @@
 /*** view-port-container ***/
 
 #view-port-container {
-  background: #fff;
+  background: #efefef;
   border: 0;
   border-radius: 0;
   -moz-border-start: 2px solid;
@@ -251,8 +239,10 @@
 
 .addon {
   border-top: 1px solid transparent;
-  border-bottom: 1px solid #dfdfde;
+  border-bottom: 1px solid #e7e7e7;
   color: #222;
+  padding: 4px 15px 5px 15px !important;
+  -moz-padding-end: 6px !important;
 }
 
 .addon:first-child {
@@ -264,9 +254,11 @@
 }
 
 .addon[selected] {
-  background: #efefef;
+  background: #e3e3e3;
   -moz-border-top-colors: none;
   border-image: none;
+  border-bottom-color: #d1d1d1;
+  box-shadow: 0px -1px #eaeaea inset;
   color: #414141;
 }
 
@@ -278,15 +270,8 @@
   color: gray;
 }
 
-.addon[active="false"]:not(:hover) .addon-control {
-  opacity: 0.4;
-}
-
 .icon-container {
-  background-color: #dfdfdf;
-  box-shadow: 0px 0px 5px rgba(0,0,0,0.1) inset;
-  border: 1px solid #c0c0c0;
-  border-radius: 5px;
+  -moz-margin-end: 9px;
 }
 
 .icon {
@@ -296,12 +281,14 @@
 
 .name-container {
   font-size: 1.05em;
+  margin-top: 3px;
+  margin-bottom: -4px;
 }
 
 .version {
   color: gray;
-  font-size: 0.8em;
-  padding: 2px;
+  font-size: 0.74em;
+  padding: 1px 2px;
 }
 
 .description {
@@ -392,29 +379,39 @@
 
 .addon-control {
   -moz-appearance: none !important;
-  background: transparent;
+  background-image: linear-gradient(to bottom, #f8f8f8, #ededed 40%, #dbdbdb);
   border: 1px solid transparent;
-  border-radius: 3px;
+  border-color: #b2b6b2 #b8bbb8 #bdbfbd;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.37),
+              inset 0 1px 0 rgba(255,255,255,0.45),
+              inset 1px 0 0 rgba(255,255,255,0.3),
+              inset -1px 0 0 rgba(255,255,255,0.3);
+  border-radius: 6px;
+  color: #2e3436;
   filter: none;
+  min-width: 34px;
+  -moz-margin-start: 7px;
   padding: 3px;
-  min-width: 32px;
-  opacity: 0.8;
-  transition-property: border, box-shadow, background;
-  transition-duration: 200ms;
+  text-shadow: none;
+  transition-property: background, border, box-shadow;
+  transition-duration: 200ms, 200ms, 0ms;
 }
 
 .addon-control:not([disabled="true"]):hover {
-  border-color: rgba(0,0,0,.25) !important;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.69),
-              0 1px 0 rgba(255,255,255,0.69) inset;
+  background-image: linear-gradient(to bottom, #fff, #ebebeb);
+  border-color: #b2b6b2 #b8bbb8 #bdbfbd;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.37),
+              inset 0 1px 0 rgba(255,255,255,0.45),
+              inset 1px 0 0 rgba(255,255,255,0.3),
+              inset -1px 0 0 rgba(255,255,255,0.3);
 }
 
 .addon-control:not([disabled="true"]):active:hover,
 .addon-control[checked="true"],
 .addon-control[checked="true"]:hover {
-  background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4);
-  border-color: rgba(0,0,0,.25);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.69);
+  background-image: linear-gradient(to bottom, #a6aaa6, #e2e2e2);
+  border-color: #b2b6b2 #b8bbb8 #bdbfbd;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.37);
 }
 
 .addon-control[open="true"],
@@ -447,7 +444,6 @@ menuitem.addon-control:hover {
 
 .addon-control.enable .button-icon,
 .addon-control.disable .button-icon,
-.addon-control.remove .button-icon,
 .addon-control.preferences .button-icon {
   display: -moz-box !important;
   -moz-margin-end: 0;
@@ -455,7 +451,6 @@ menuitem.addon-control:hover {
 
 .addon-control.enable .button-text,
 .addon-control.disable .button-text,
-.addon-control.remove .button-text,
 .addon-control.preferences .button-text {
   display: none;
 }
@@ -470,51 +465,44 @@ menuitem.addon-control:hover {
   list-style-image: url(chrome://adwaita-mozapps/skin/extensions/on.png);
 }
 
-.addon-control.enable:hover,
-.addon-control.disable:hover,
-.addon-control.enable:active,
-.addon-control.disable:active{
+.addon-control.enable,
+.addon-control.disable {
   border-color: transparent !important;
   background: none !important;
-  background-image: none !important;
   box-shadow: none !important;
 }
 
-button.addon[active="false"] .addon-control.enable,
-button.addon[active="false"] .addon-control.disable{
-  opacity: 1;
+.addon-control:-moz-any(.remove, .update, .install) {
+  color: #fff;
+  text-shadow: 0px 1px 0px rgba(0,0,0,.3);
+  padding: 4px 11px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.37),
+              inset 0 1px 0 rgba(255,255,255,0.2);
 }
 
 .addon-control.remove {
-  list-style-image: url(chrome://symbolic-icons/skin/user-trash.svg);
-}
-
-.addon-control.preferences {
-  list-style-image: url(chrome://symbolic-icons/skin/emblem-system.svg);
+  background-image: linear-gradient(to bottom, #e24a53, #cf3641);
+  border-color: #825e5f;
 }
 
 .addon-control.update {
-  color: #fff;
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
   background-image: linear-gradient(to bottom, #4294F7, #004EAD);
-  padding: 4px 15px;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset;
-  border: 1px solid #003372;
+  border-color: #003372;
 }
 
 .addon-control.install {
-  color: #fff;
-  text-shadow: 0px -1px 0px rgba(0,0,0,0.3);
   background-image: linear-gradient(to bottom, #89C400, #5B9C00);
-  padding: 4px 15px;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset;
-  border: 1px solid #316D0E;
+  border-color: #316d0e;
 }
 
 .addon-control.install:active:hover {
   color: #203006;
   text-shadow: 0px 1px 0px rgba(255,255,255,0.3);
   box-shadow: 0 0 2px 1px rgba(0,0,0,0.2) inset;
+}
+
+.addon-control.preferences {
+  list-style-image: url(chrome://symbolic-icons/skin/emblem-system.svg);
 }
 
 .addon-control.state .menulist-dropmarker {
