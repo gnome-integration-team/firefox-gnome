@@ -595,11 +595,6 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
   width: 16px;
 }
 
-:-moz-any(#TabsToolbar, #nav-bar) toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
-  /* XXXgijs box models strike again: this is 16px + 2 * 7px padding + 2 * 1px border (from the rules above) */
-  width: 32px;
-}
-
 window:not([chromehidden~="toolbar"]) #urlbar-container:not([switchingtabs]) > #forward-button {
   transition: 150ms ease-out;
 }
