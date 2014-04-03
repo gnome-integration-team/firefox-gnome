@@ -393,8 +393,8 @@
   -moz-margin-start: 7px;
   padding: 3px;
   text-shadow: none;
-  transition-property: background, border, box-shadow;
-  transition-duration: 200ms, 200ms, 0ms;
+/*  transition-property: background, border, box-shadow;
+  transition-duration: 200ms, 200ms, 0ms; */
 }
 
 .addon-control:not([disabled="true"]):hover {
@@ -485,14 +485,31 @@ menuitem.addon-control:hover {
   border-color: #825e5f;
 }
 
+.addon-control.remove {
+  background-image: linear-gradient(to bottom, #e24a53, #cf3641);
+  border-color: #825e5f;
+}
+
+.addon-control.remove:hover {   
+  background-image: linear-gradient(to bottom, #ea7980, #d5505a);
+}
+    
 .addon-control.update {
-  background-image: linear-gradient(to bottom, #4294F7, #004EAD);
+  background-image: linear-gradient(to bottom, #4294f7, #004ead);
   border-color: #003372;
 }
 
+.addon-control.update:hover {
+  background-image: linear-gradient(to bottom, #519df8, #0061d6);
+}
+
 .addon-control.install {
-  background-image: linear-gradient(to bottom, #89C400, #5B9C00);
+  background-image: linear-gradient(to bottom, #89c400, #5b9c00);
   border-color: #316d0e;
+}
+
+.addon-control.install:hover {
+  background-image: linear-gradient(to bottom, #9de000, #6ab500);
 }
 
 .addon-control.install:active:hover {
