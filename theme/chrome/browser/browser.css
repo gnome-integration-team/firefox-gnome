@@ -2412,7 +2412,6 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 /* In-tab close button */
 #TabsToolbar .tab-close-button {
   -moz-appearance: none;
-  list-style-image: url(chrome://symbolic-icons/skin/close.svg);
   margin: 1px 0;
   -moz-margin-end: -3px;
   padding: 0;
@@ -2420,18 +2419,11 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   border: 1px solid transparent !important;
   box-shadow: none !important;
 }
-#TabsToolbar .tab-close-button > .toolbarbutton-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#tab-close);
-  opacity: .4;
-}
 
 #TabsToolbar .tab-close-button:hover {
   background: none !important;
   border-color: rgba(0, 0, 0, 0.1) !important;
   box-shadow: none !important;
-}
-#TabsToolbar .tab-close-button:hover > .toolbarbutton-icon {
-  opacity: 1;
 }
 
 #TabsToolbar .tab-close-button:active:hover {
@@ -2439,6 +2431,18 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   border-color: rgba(0, 0, 0, 0.12) !important;
   border-top-color: rgba(0, 0, 0, 0.27) !important;
   box-shadow: none !important;
+}
+
+#TabsToolbar .tab-close-button > .toolbarbutton-icon {
+  background-image: -moz-image-rect(url(chrome://browser/skin/tabbrowser/close.svg), 0, 16, 16, 0);
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+#TabsToolbar .tab-close-button:hover > .toolbarbutton-icon {
+  background-image: -moz-image-rect(url(chrome://browser/skin/tabbrowser/close.svg), 0, 32, 16, 16);
 }
 
 /* Tabstrip new tab button */

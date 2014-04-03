@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg version="1.1"
+     id="tab-close-icon"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0px"
+     y="0px"
+     width="32px"
+     height="16px"
+     viewBox="0 0 32 16">
+
+  <defs>
+    <style type="text/css"><![CDATA[
+      /* X Glyph Styles */
+
+      .glyphShape-style-default {
+        fill: #abadae;
+      }
+
+      .glyphShape-style-default-shadow {
+        fill: #fff;
+        fill-opacity: 0.4;
+      }
+
+      .glyphShape-style-hover {
+        fill: #2e3436;
+      }
+
+      .glyphShape-style-hover-shadow {
+        fill: #fff;
+        fill-opacity: 0.4;
+      }
+
+      ]]></style>
+
+    <path id="glyphShape-close" d="m4,4c0.4067,0.013306 0.81823,-0.029724 1.221249,0.02771c0.438862,0.107605 0.689842,0.512817 1.009823,0.796875c0.589558,0.589355 1.179119,1.17865 1.768677,1.767944c0.788082,-0.772583 1.567272,-1.554871 2.360912,-2.321289c0.271568,-0.274048 0.664501,-0.281921 1.023918,-0.268738c0.205051,0 0.41011,0 0.61517,0c-0.015587,0.468933 0.038483,0.944397 -0.044128,1.407654c-0.106361,0.338562 -0.430309,0.532837 -0.65406,0.790527c-0.611,0.611023 -1.222008,1.222046 -1.833008,1.833008c0.770618,0.776123 1.552639,1.541626 2.316048,2.324402c0.314072,0.390137 0.189201,0.90979 0.214951,1.369995c-0.014759,0.122375 0.067268,0.341553 -0.135818,0.275635c-0.401653,-0.017883 -0.812881,0.045288 -1.205921,-0.053589c-0.38369,-0.134399 -0.611149,-0.496033 -0.90535,-0.755737c-0.584221,-0.583984 -1.168442,-1.167908 -1.752659,-1.751892c-0.786163,0.780945 -1.562912,1.57196 -2.355003,2.346558c-0.390358,0.312561 -0.909557,0.1875 -1.369377,0.21344c-0.122391,-0.014832 -0.34156,0.067261 -0.27562,-0.135803c0.017937,-0.401672 -0.045292,-0.812927 0.053608,-1.205933c0.133362,-0.384705 0.49789,-0.609314 0.75948,-0.901611c0.583122,-0.575134 1.166241,-1.150269 1.749359,-1.725403c-0.793949,-0.80011 -1.601597,-1.58783 -2.386799,-2.395752c-0.26926,-0.353394 -0.14859,-0.812683 -0.175198,-1.222839c-0.000172,-0.138367 0.000347,-0.276794 -0.000252,-0.415161z"/>
+
+  </defs>
+
+  <g id="icon-close-default">
+    <use xlink:href="#glyphShape-close" class="glyphShape-style-default-shadow" transform="translate(0,1)" />
+    <use xlink:href="#glyphShape-close" class="glyphShape-style-default" />
+  </g>
+
+  <g id="icon-close-hover" transform="translate(16)">
+    <use xlink:href="#glyphShape-close" class="glyphShape-style-hover-shadow" transform="translate(0,1)" />
+    <use xlink:href="#glyphShape-close" class="glyphShape-style-hover" />
+  </g>
+
+</svg>
