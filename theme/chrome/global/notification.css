@@ -72,31 +72,33 @@ notification[value="missing-plugins"] .messageImage {
   background: url(chrome://symbolic-icons/skin/plugin.svg) no-repeat center !important;
 }
 
-.messageCloseButton {
-<<<<<<< HEAD
+notification .messageCloseButton {
   background: transparent !important;
   border: 1px solid transparent !important;
   list-style-image: url(chrome://symbolic-icons/skin/close.svg);
-  margin-top: 5px !important;
-  margin-bottom: 5px !important;
+  margin-top: 3px !important;
+  margin-bottom: 3px !important;
   -moz-margin-end: 10px;
   -moz-margin-start: 5px;
   padding: 1px !important;
 }
 
-.messageCloseButton > .toolbarbutton-icon {
-  opacity: 0.4;
+notification .messageCloseButton > .toolbarbutton-icon {
+  opacity: .4;
+  min-width: 16px;
+  min-height: 16px;
 }
 
-.messageCloseButton:hover > .toolbarbutton-icon {
+notification .messageCloseButton:hover > .toolbarbutton-icon {
   opacity: 1;
-=======
+}
+
+:not(notification) .messageCloseButton {
   -moz-appearance: none;
   width: 16px;
   height: 16px;
   padding-left: 11px;
   padding-right: 11px;
->>>>>>> 36feb04... Upgrade to Firefox 29.0 beta 4
 }
 
 /* Popup notification */
@@ -108,10 +110,3 @@ notification[value="missing-plugins"] .messageImage {
 .popup-notification-button-container {
   margin-top: 17px;
 }
-<<<<<<< HEAD
-
-.popup-notification-closeitem {
-  list-style-image: url(chrome://symbolic-icons/skin/close.svg);
-}
-=======
->>>>>>> 36feb04... Upgrade to Firefox 29.0 beta 4

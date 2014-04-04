@@ -90,7 +90,7 @@ html[dir=rtl] .favicon {
   right: 6px;
   width: 16px;
   height: 16px;
-  opacity: 0.2;
+  opacity: .2 !important;
   background: url(chrome://symbolic-icons/skin/close.svg) no-repeat;
 }
 
@@ -101,7 +101,7 @@ html[dir=rtl] .close {
 
 .close:hover,
 .appTabIcon:hover {
-  opacity: 1.0;
+  opacity: 1 !important;
 }
 
 .expander {

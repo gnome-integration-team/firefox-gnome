@@ -62,10 +62,12 @@
 
 #newtab-undo-close-button {
   -moz-appearance: none;
+  background: none;
   padding: 0;
   border: none;
   list-style-image: url(chrome://symbolic-icons/skin/close.svg);
-  -moz-user-focus: normal;
+  height: 16px;
+  width: 16px;
 }
 
 #newtab-undo-close-button > .toolbarbutton-icon {

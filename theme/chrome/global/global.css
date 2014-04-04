@@ -337,7 +337,6 @@ notification toolbarbutton:active:hover {
 
 /* :::::: Close button icons ::::: */
 
-/* FIXME
 .close-icon {
   background-image: -moz-image-rect(url("chrome://global/skin/icons/close.svg"), 0, 16, 16, 0);
   background-position: center center;
@@ -351,7 +350,6 @@ notification toolbarbutton:active:hover {
 .close-icon:hover:active {
   background-image: -moz-image-rect(url("chrome://global/skin/icons/close.svg"), 0, 48, 16, 32);
 }
-*/
 
 /* about:addons */
 #addons-page .button-link {

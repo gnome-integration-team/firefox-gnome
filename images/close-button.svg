@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   viewBox="0 0 96 16"
+   id="svg2"
+   inkscape:version="0.48.4 r9939"
+   width="100%"
+   height="100%"
+   sodipodi:docname="close-button.svg">
+  <defs
+     id="defs50" />
+  <sodipodi:namedview
+     pagecolor="#555753"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview48"
+     showgrid="false"
+     showborder="false"
+     inkscape:zoom="9.1039998"
+     inkscape:cx="45.62805"
+     inkscape:cy="3.849013"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <title
+     id="title4">Gnome Symbolic Icon Theme</title>
+  <metadata
+     id="metadata6">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Gnome Symbolic Icon Theme</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     fill="#888a85"
+     transform="translate(-60,-518)"
+     id="g8">
+    <g
+       fill="#888a85"
+       transform="translate(19,-242)"
+       id="g10">
+      <path
+         style="color:#2e3436;text-transform:none;text-indent:0;"
+         d="m45,764h1c0.01037-0.00012,0.02079-0.00046,0.03125,0,0.25495,0.0112,0.50987,0.12858,0.6875,0.3125l2.281,2.28,2.312-2.28c0.266-0.23,0.447-0.3,0.688-0.31h1v1c0,0.28647-0.03434,0.55065-0.25,0.75l-2.2812,2.2812,2.25,2.25c0.188,0.19,0.281,0.45,0.281,0.72v1h-1c-0.2653-0.00001-0.53059-0.0931-0.71875-0.28125l-2.281-2.28-2.281,2.28c-0.188,0.19-0.454,0.28-0.719,0.28h-1v-1c-0.000003-0.26529,0.09306-0.53058,0.28125-0.71875l2.2812-2.25-2.281-2.28c-0.21-0.19-0.303-0.47-0.281-0.75v-1z"
+         fill="#888a85"
+         id="path12" />
+    </g>
+  </g>
+  <path
+     d="M16,8a8,8,0,1,1,-16,0,8,8,0,1,1,16,0z"
+     transform="translate(16.001577,-0.00173309)"
+     fill="#babdb6"
+     id="path14" />
+  <g
+     fill="#FFF"
+     transform="translate(-43.998423,-518.00173)"
+     id="g16">
+    <g
+       fill="#FFF"
+       transform="translate(19,-242)"
+       id="g18">
+      <path
+         style="color:#2e3436;text-transform:none;text-indent:0;"
+         d="m45,764h1c0.01037-0.00012,0.02079-0.00046,0.03125,0,0.25495,0.0112,0.50987,0.12858,0.6875,0.3125l2.281,2.28,2.312-2.28c0.266-0.23,0.447-0.3,0.688-0.31h1v1c0,0.28647-0.03434,0.55065-0.25,0.75l-2.2812,2.2812,2.25,2.25c0.188,0.19,0.281,0.45,0.281,0.72v1h-1c-0.2653-0.00001-0.53059-0.0931-0.71875-0.28125l-2.281-2.28-2.281,2.28c-0.188,0.19-0.454,0.28-0.719,0.28h-1v-1c-0.000003-0.26529,0.09306-0.53058,0.28125-0.71875l2.2812-2.25-2.281-2.28c-0.21-0.19-0.303-0.47-0.281-0.75v-1z"
+         fill="#FFF"
+         id="path20" />
+    </g>
+  </g>
+  <path
+     d="M16,8a8,8,0,1,1,-16,0,8,8,0,1,1,16,0z"
+     transform="translate(32.001577,-0.00173609)"
+     fill="#888a85"
+     id="path22" />
+  <g
+     fill="#FFF"
+     transform="translate(-27.998423,-518.00173)"
+     id="g24">
+    <g
+       fill="#FFF"
+       transform="translate(19,-242)"
+       id="g26">
+      <path
+         style="color:#2e3436;text-transform:none;text-indent:0;"
+         d="m45,764h1c0.01037-0.00012,0.02079-0.00046,0.03125,0,0.25495,0.0112,0.50987,0.12858,0.6875,0.3125l2.281,2.28,2.312-2.28c0.266-0.23,0.447-0.3,0.688-0.31h1v1c0,0.28647-0.03434,0.55065-0.25,0.75l-2.2812,2.2812,2.25,2.25c0.188,0.19,0.281,0.45,0.281,0.72v1h-1c-0.2653-0.00001-0.53059-0.0931-0.71875-0.28125l-2.281-2.28-2.281,2.28c-0.188,0.19-0.454,0.28-0.719,0.28h-1v-1c-0.000003-0.26529,0.09306-0.53058,0.28125-0.71875l2.2812-2.25-2.281-2.28c-0.21-0.19-0.303-0.47-0.281-0.75v-1z"
+         fill="#FFF"
+         id="path28" />
+    </g>
+  </g>
+  <g
+     fill="#FFF"
+     transform="translate(-11.998423,-518.00173)"
+     id="g30">
+    <g
+       fill="#FFF"
+       transform="translate(19,-242)"
+       id="g32">
+      <path
+         style="color:#2e3436;text-transform:none;text-indent:0;"
+         d="m45,764h1c0.01037-0.00012,0.02079-0.00046,0.03125,0,0.25495,0.0112,0.50987,0.12858,0.6875,0.3125l2.281,2.28,2.312-2.28c0.266-0.23,0.447-0.3,0.688-0.31h1v1c0,0.28647-0.03434,0.55065-0.25,0.75l-2.2812,2.2812,2.25,2.25c0.188,0.19,0.281,0.45,0.281,0.72v1h-1c-0.2653-0.00001-0.53059-0.0931-0.71875-0.28125l-2.281-2.28-2.281,2.28c-0.188,0.19-0.454,0.28-0.719,0.28h-1v-1c-0.000003-0.26529,0.09306-0.53058,0.28125-0.71875l2.2812-2.25-2.281-2.28c-0.21-0.19-0.303-0.47-0.281-0.75v-1z"
+         fill="#FFF"
+         id="path34" />
+    </g>
+  </g>
+  <g
+     opacity="0.8"
+     fill="#FFF"
+     transform="translate(4.0015774,-518.00173)"
+     id="g36">
+    <g
+       fill="#FFF"
+       transform="translate(19,-242)"
+       id="g38">
+      <path
+         style="color:#2e3436;text-transform:none;text-indent:0;"
+         d="m45,764h1c0.01037-0.00012,0.02079-0.00046,0.03125,0,0.25495,0.0112,0.50987,0.12858,0.6875,0.3125l2.281,2.28,2.312-2.28c0.266-0.23,0.447-0.3,0.688-0.31h1v1c0,0.28647-0.03434,0.55065-0.25,0.75l-2.2812,2.2812,2.25,2.25c0.188,0.19,0.281,0.45,0.281,0.72v1h-1c-0.2653-0.00001-0.53059-0.0931-0.71875-0.28125l-2.281-2.28-2.281,2.28c-0.188,0.19-0.454,0.28-0.719,0.28h-1v-1c-0.000003-0.26529,0.09306-0.53058,0.28125-0.71875l2.2812-2.25-2.281-2.28c-0.21-0.19-0.303-0.47-0.281-0.75v-1z"
+         fill="#FFF"
+         id="path40" />
+    </g>
+  </g>
+  <g
+     opacity="0.8"
+     fill="#000"
+     transform="translate(20.001577,-518.00173)"
+     id="g42">
+    <g
+       fill="#000"
+       transform="translate(19,-242)"
+       id="g44">
+      <path
+         style="color:#2e3436;text-transform:none;text-indent:0;"
+         d="m45,764h1c0.01037-0.00012,0.02079-0.00046,0.03125,0,0.25495,0.0112,0.50987,0.12858,0.6875,0.3125l2.281,2.28,2.312-2.28c0.266-0.23,0.447-0.3,0.688-0.31h1v1c0,0.28647-0.03434,0.55065-0.25,0.75l-2.2812,2.2812,2.25,2.25c0.188,0.19,0.281,0.45,0.281,0.72v1h-1c-0.2653-0.00001-0.53059-0.0931-0.71875-0.28125l-2.281-2.28-2.281,2.28c-0.188,0.19-0.454,0.28-0.719,0.28h-1v-1c-0.000003-0.26529,0.09306-0.53058,0.28125-0.71875l2.2812-2.25-2.281-2.28c-0.21-0.19-0.303-0.47-0.281-0.75v-1z"
+         fill="#000"
+         id="path46" />
+    </g>
+  </g>
+</svg>

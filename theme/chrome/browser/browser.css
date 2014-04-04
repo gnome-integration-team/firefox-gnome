@@ -2041,9 +2041,6 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 
 .panel-promo-closebutton {
   -moz-appearance: none;
-  list-style-image: url("moz-icon://stock/gtk-close?size=menu");
-  margin-top: 0;
-  margin-bottom: 0;
   height: 16px;
   width: 16px;
 }

@@ -16,30 +16,19 @@
       /* X Glyph Styles */
 
       .glyphShape-style-foreground {
-        fill: ButtonText;
-        fill-opacity: .8;
+        fill: #888a85;
       }
 
       .glyphShape-style-background {
-        fill: -moz-MenuBarText;
-        fill-opacity: .8;
+        fill: #fff;
       }
 
       .glyphShape-style-hover {
         fill: #fff;
       }
 
-      .glyphShape-style-hover-shadow {
-        fill: #b32c12;
-      }
-
       .glyphShape-style-hover-active {
         fill: #fff;
-        fill-opacity: .8;
-      }
-
-      .glyphShape-style-hover-active-shadow {
-        fill: #99260f;
       }
 
       .glyphShape-style-LWT-bright {
@@ -52,54 +41,45 @@
         fill-opacity: .8;
       }
 
-
       /* Close Button Background Styles */
 
       .icon-background-hover {
-        fill: #d93616;
+        fill: #babdb6;
       }
 
       .icon-background-hover-active {
-        fill: #b32c12;
+        fill: #888a85;
       }
       ]]></style>
 
-    <polygon id="glyphShape-close" points="4,5.5 5.5,4 8,6.5 10.5,4 12,5.5 9.5,8 12,10.5 10.5,12 8,9.5 5.5,12 4,10.5 6.5,8"/>
-    <polygon id="glyphShape-close-topHighlight" points="4,5.5 5.5,4 8,6.5 10.5,4 12,5.5 9.5,8 11.5,6 10.5,5 8,7.5 5.5,5 4.5,6"/>
-    <rect    id="glyphShape-background" x="2" y="2" rx="2" width="12" height="12"/>
-
+    <path id="glyphShape-close" d="m4,4l1,0c0.010368,-0.000122 0.02079,-0.000488 0.03125,0c0.254951,0.01123 0.509869,0.128601 0.6875,0.3125l2.280998,2.280029l2.312,-2.280029c0.266003,-0.22998 0.447002,-0.299988 0.688,-0.309998l1,0l0,1c0,0.286438 -0.03434,0.550659 -0.25,0.75l-2.281197,2.281189l2.25,2.25c0.188,0.190002 0.280998,0.450012 0.280998,0.720032l0,1l-1,0c-0.265301,-0.000061 -0.53059,-0.09314 -0.71875,-0.28125l-2.280998,-2.280029l-2.281002,2.280029c-0.188,0.190002 -0.453999,0.279968 -0.718998,0.279968l-1,0l0,-1c0,-0.265259 0.09306,-0.530579 0.28125,-0.71875l2.281197,-2.25l-2.280998,-2.279968c-0.209999,-0.190002 -0.303001,-0.470032 -0.280998,-0.75l0,-1l-0.000252,-0.003723z"/>
+    <circle id="glyphShape-background" cx="8" cy="8" r="8" />
   </defs>
 
   <g id="icon-closeForeground-default">
     <use xlink:href="#glyphShape-close" class="glyphShape-style-foreground" />
-    <use xlink:href="#glyphShape-close-topHighlight" class="glyphShape-style-foreground" />
   </g>
 
   <g id="icon-close-hover" transform="translate(16)">
     <use xlink:href="#glyphShape-background" class="icon-background-hover" />
-    <use xlink:href="#glyphShape-close" class="glyphShape-style-hover-shadow" transform="translate(0,1)" />
     <use xlink:href="#glyphShape-close" class="glyphShape-style-hover" />
   </g>
 
   <g id="icon-close-hover-active" transform="translate(32)">
     <use xlink:href="#glyphShape-background" class="icon-background-hover-active" />
-    <use xlink:href="#glyphShape-close" class="glyphShape-style-hover-active-shadow" transform="translate(0,1)" />
     <use xlink:href="#glyphShape-close" class="glyphShape-style-hover-active" />
   </g>
 
   <g id="icon-closeBackground-default" transform="translate(48)">
     <use xlink:href="#glyphShape-close" class="glyphShape-style-background" />
-    <use xlink:href="#glyphShape-close-topHighlight" class="glyphShape-style-background" />
   </g>
 
   <g id="icon-close-LWT-bright" transform="translate(64)">
     <use xlink:href="#glyphShape-close" class="glyphShape-style-LWT-bright" />
-    <use xlink:href="#glyphShape-close-topHighlight" class="glyphShape-style-LWT-bright" />
   </g>
 
   <g id="icon-close-LWT-dark" transform="translate(80)">
     <use xlink:href="#glyphShape-close" class="glyphShape-style-LWT-dark" />
-    <use xlink:href="#glyphShape-close-topHighlight" class="glyphShape-style-LWT-dark" />
   </g>
 
 </svg>

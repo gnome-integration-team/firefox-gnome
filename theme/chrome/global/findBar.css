@@ -70,17 +70,11 @@ findbar toolbarbutton[disabled="true"]:active:hover {
 }
 
 .findbar-closebutton {
-  list-style-image: url(chrome://symbolic-icons/skin/close.svg);
-  -moz-margin-start: 6px;
-}
-
-.findbar-closebutton > .toolbarbutton-icon {
-  margin: -3px;
-  opacity: 0.5;
-}
-
-.findbar-closebutton:hover > .toolbarbutton-icon {
-  opacity: 1;
+  -moz-appearance: none;
+  border: none;
+  width: 16px;
+  height: 16px;
+  margin: 1px 8px;
 }
 
 /* Search field */

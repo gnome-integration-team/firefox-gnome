@@ -61,14 +61,11 @@ label {
   color: -moz-activehyperlinktext;
 }
 
-.alertCloseButton {
-  list-style-image: url(chrome://symbolic-icons/skin/close.svg);
-  height: 24px;
-  width: 24px;
-}
-
 .alertCloseButton > .toolbarbutton-icon {
-  margin: -4px;
+  -moz-appearance: none;
+  height: 16px;
+  padding: 4px 2px;
+  width: 16px;
 }
 
 .alertCloseButton > .toolbarbutton-text {
