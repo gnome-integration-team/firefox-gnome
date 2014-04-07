@@ -17,43 +17,45 @@ var Tweaks = {
     },
     */
 
-    customizationGnomeTweaksButton: {
+    customizationGnomeTweaksLink: {
         enable: function() {
             if (!this._isEnabled) {
-                GNOMEThemeTweak.loadStyle("customization-gnome-tweaks-button");
-                GNOMEThemeTweak.addListener("loadWindow", this._addButton);
-                GNOMEThemeTweak.launchIntoExistingWindows(this._addButton);
+                GNOMEThemeTweak.addListener("loadWindow", this._addLink);
+                GNOMEThemeTweak.launchIntoExistingWindows(this._addLink);
                 this._isEnabled = true;
             }
         },
 
         disable: function() {
             if (this._isEnabled) {
-                GNOMEThemeTweak.removeListener("loadWindow", this._addButton);
-                GNOMEThemeTweak.launchIntoExistingWindows(this._removeButton);
-                GNOMEThemeTweak.unloadStyle("customization-gnome-tweaks-button");
+                GNOMEThemeTweak.removeListener("loadWindow", this._addLink);
+                GNOMEThemeTweak.launchIntoExistingWindows(this._removeLink);
                 this._isEnabled = false;
             }
         },
 
         _isEnabled: false,
 
-        _addButton: function(window) {
+        _addLink: function(window) {
             if (!window) return;
 
             var element = window.document.getElementById("customization-toolbar-visibility-button");
             if (!element) return;
 
-            var button = window.document.createElement("button");
-            button.setAttribute("id", "customization-gnome-tweaks-button");
-            button.setAttribute("class", "customizationmode-button");
+            var open_prefs = "BrowserOpenAddonsMgr('addons://detail/' + encodeURIComponent('{05f1cdaa-7474-43fa-9f69-c697555f4ea8}') + '/preferences');"
 
-            element.parentNode.insertBefore(button, element.nextSibling);
+            var link = window.document.createElement("label");
+            link.setAttribute("id", "customization-gnome-tweaks-link");
+            link.setAttribute("class", "text-link customizationmode-link");
+            link.setAttribute("value", "GNOME Tweaks"); // Localization?
+            link.setAttribute("onclick", open_prefs);
+
+            element.parentNode.insertBefore(link, element.nextSibling);
         },
 
-        _removeButton: function(window) {
+        _removeLink: function(window) {
             if (!window) return;
-            var button = window.document.getElementById("customization-gnome-tweaks-button");
+            var button = window.document.getElementById("customization-gnome-tweaks-link");
             button && button.remove();
         },
     },
