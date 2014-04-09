@@ -50,7 +50,7 @@
 #nav-bar {
   background-image: linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
   box-shadow: 0 1px 0 rgba(255,255,255,.3) inset;
-  margin-top: -1px; /* Move up 1px into the TabsToolbar */
+  margin-top: -1px; /* Move up into the TabsToolbar */
   padding-top: 2px;
   padding-bottom: 2px;
   /* Position the toolbar above the bottom of background tabs */
@@ -2215,12 +2215,11 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-margin-start: -1.5px;
   -moz-margin-end: -1.5px;
   background-image: url(chrome://browser/skin/tabbrowser/tab-separator.png);
-  background-position: left bottom;
+  background-position: left bottom 1px;
   background-repeat: no-repeat;
   background-size: 3px 100%;
   content: "";
   display: -moz-box;
-  margin-bottom: 1px;
   width: 3px;
 }
 
@@ -2354,7 +2353,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tabbrowser-arrowscrollbox > .scrollbutton-up,
 .tabbrowser-arrowscrollbox > .scrollbutton-down {
   -moz-appearance: none;
-  margin: 0;
+  margin: 0 0 1px;
 }
 
 .tabbrowser-arrowscrollbox > .scrollbutton-up {
@@ -2386,6 +2385,10 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   border-width: 0 0 0 2px;
   border-style: solid;
   border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill;
+}
+
+#TabsToolbar .toolbarbutton-1 {
+  margin-bottom: 1px;
 }
 
 #TabsToolbar .toolbarbutton-1 > .toolbarbutton-icon,
@@ -3602,10 +3605,12 @@ chatbox {
 
 /* Customization mode */
 
-#main-window:-moz-any([customize-entering],[customize-entered]) #content-deck {
-  margin: 0 2em 2em;
+#main-window:-moz-any([customize-entering],[customize-entered]) #browser-bottombox {
+  margin-bottom: 2em;
 }
 
+#main-window:-moz-any([customize-entering],[customize-entered]) #content-deck,
+#main-window:-moz-any([customize-entering],[customize-entered]) #browser-bottombox,
 #main-window:-moz-any([customize-entering],[customize-entered]) #navigator-toolbox {
   margin-left: 2em;
   margin-right: 2em;
@@ -3701,8 +3706,12 @@ chatbox {
   background-image: linear-gradient(to bottom, #3e86ce, #3878ba);
 }
 
+#main-window:-moz-any([customize-entering],[customize-entered]) #browser-bottombox,
 #customization-footer {
   background-color: rgb(236,236,236);
+}
+
+#customization-footer {
   border-top: 1px solid rgb(221,221,221);
   padding: 15px;
 }
@@ -3948,6 +3957,7 @@ toolbarpaletteitem[place="toolbar"] {
   background-attachment: fixed;
 }
 
+#main-window[customize-entered] #browser-bottombox,
 #main-window[customize-entered] #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar),
 #main-window[customize-entered] #customization-container {
   border: 3px solid hsla(0,0%,0%,.1);
@@ -3959,6 +3969,7 @@ toolbarpaletteitem[place="toolbar"] {
   -moz-border-left-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
 }
 
+#main-window[customize-entered] #customization-container,
 #main-window[customize-entered] #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
   border-bottom-width: 0;
 }
