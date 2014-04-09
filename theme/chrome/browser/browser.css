@@ -2560,6 +2560,10 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 /* */
 
 /*
+#TabsToolbar .toolbarbutton-1 {
+  margin-bottom: 1px;
+}
+
 #TabsToolbar .toolbarbutton-1 > .toolbarbutton-icon,
 #TabsToolbar .toolbarbutton-1 > .toolbarbutton-menu-dropmarker,
 #TabsToolbar .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-icon {
@@ -3795,10 +3799,12 @@ chatbox {
   background: Window;
 }
 
-#main-window:-moz-any([customize-entering],[customize-entered]) #content-deck {
-  margin: 0 2em 2em;
+#main-window:-moz-any([customize-entering],[customize-entered]) #browser-bottombox {
+  margin-bottom: 2em;
 }
 
+#main-window:-moz-any([customize-entering],[customize-entered]) #content-deck,
+#main-window:-moz-any([customize-entering],[customize-entered]) #browser-bottombox,
 #main-window:-moz-any([customize-entering],[customize-entered]) #navigator-toolbox {
   margin-left: 2em;
   margin-right: 2em;
@@ -3898,8 +3904,12 @@ chatbox {
   background-image: linear-gradient(to bottom, #3e86ce, #3878ba);
 }
 
+#main-window:-moz-any([customize-entering],[customize-entered]) #browser-bottombox,
 #customization-footer {
   background-color: rgb(236,236,236);
+}
+
+#customization-footer {
   border-top: 1px solid rgb(221,221,221);
   padding: 15px;
 }
@@ -4159,6 +4169,7 @@ toolbarpaletteitem[place="toolbar"] {
   -moz-appearance: none;
 }
 
+#main-window[customize-entered] #browser-bottombox,
 #main-window[customize-entered] #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar),
 #main-window[customize-entered] #navigator-toolbox:not([tabsontop="true"]) > toolbar:not(#TabsToolbar),
 #main-window[customize-entered] #customization-container {
@@ -4169,8 +4180,7 @@ toolbarpaletteitem[place="toolbar"] {
   -moz-border-left-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
 }
 
-#main-window[customize-entered] #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar),
-#main-window[customize-entered] #customization-container {
+#main-window[customize-entered] #browser-bottombox {
   border-bottom: 3px solid hsla(0,0%,0%,.1);
   -moz-border-bottom-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
 }
@@ -4179,10 +4189,6 @@ toolbarpaletteitem[place="toolbar"] {
 #main-window[customize-entered] #navigator-toolbox:not([tabsontop="true"]) > #toolbar-menubar[autohide="true"] ~ #nav-bar {
   border-top: 3px solid hsla(0,0%,0%,.1);
   -moz-border-top-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
-}
-
-#main-window[customize-entered] #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
-  border-bottom: 0;
 }
 
 #main-window[customize-entered] #TabsToolbar[tabsontop="true"] {
