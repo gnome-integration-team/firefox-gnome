@@ -165,10 +165,17 @@ toolbarpaletteitem[place="palette"] > #personal-bookmarks > #bookmarks-toolbar-p
 /* ----- BOOKMARK STAR ANIMATION ----- */
 
 @keyframes animation-bookmarkAdded {
-  from { transform: rotate(0deg) translateX(-14px) rotate(0deg) scale(1); opacity: 0; }
-  60%  { transform: rotate(180deg) translateX(-14px) rotate(-180deg) scale(2.2); opacity: 1; }
+  from { transform: rotate(0deg) translateX(-13px) rotate(0deg) scale(1); opacity: 0; }
+  60%  { transform: rotate(180deg) translateX(-13px) rotate(-180deg) scale(2.2); opacity: 1; }
   80%  { opacity: 1; }
-  to   { transform: rotate(180deg) translateX(-14px) rotate(-180deg) scale(1); opacity: 0; }
+  to   { transform: rotate(180deg) translateX(-13px) rotate(-180deg) scale(1); opacity: 0; }
+}
+
+@keyframes animation-bookmarkAddedRB {
+  from { transform: rotate(0deg) translateX(-16px) rotate(0deg) scale(1); opacity: 0; }
+  60%  { transform: rotate(180deg) translateX(-16px) rotate(-180deg) scale(2.2); opacity: 1; }
+  80%  { opacity: 1; }
+  to   { transform: rotate(180deg) translateX(-16px) rotate(-180deg) scale(1); opacity: 0; }
 }
 
 @keyframes animation-bookmarkPulse {
@@ -210,6 +217,10 @@ toolbarpaletteitem[place="palette"] > #personal-bookmarks > #bookmarks-toolbar-p
   background-image: url("chrome://browser/skin/places/bookmarks-notification-finish.png");
   animation: animation-bookmarkAdded 800ms;
   animation-timing-function: ease, ease, ease;
+}
+
+#bookmarked-notification-anchor[reliefbuttons="true"][notification="finish"] > #bookmarked-notification {
+  animation-name: animation-bookmarkAddedRB;
 }
 
 #bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {

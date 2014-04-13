@@ -223,14 +223,20 @@ var Tweaks = {
 
         _setAttributes: function(window) {
             if (!window) return;
-            var navbar = window.document.getElementById("nav-bar");
-            navbar && navbar.setAttribute("reliefbuttons", true);
+            var e = ["nav-bar", "bookmarked-notification-anchor"];
+            for (var i=0; i < e.length; i++) {
+                var item = window.document.getElementById(e[i]);
+                item && item.setAttribute("reliefbuttons", true);
+            }
         },
 
         _removeAttributes: function(window) {
             if (!window) return;
-            var navbar = window.document.getElementById("nav-bar");
-            navbar && navbar.removeAttribute("reliefbuttons");
+            var e = ["nav-bar", "bookmarked-notification-anchor"];
+            for (var i=0; i < e.length; i++) {
+                var item = window.document.getElementById(e[i]);
+                item && item.removeAttribute("reliefbuttons");
+            }
         },
     },
 }
