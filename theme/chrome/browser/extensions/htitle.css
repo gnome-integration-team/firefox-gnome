@@ -14,6 +14,10 @@
 
 /* Show/hide window controls */
 
+#window-controls[htitle="true"] > :-moz-any(#minimize-button, #restore-button) {
+  display: none !important;
+}
+
 #window-controls[htitle="true"][htitle-button-layout*="minimize"] > #minimize-button,
 #window-controls[htitle="true"][htitle-button-layout*="maximize"] > #restore-button,
 #window-controls[htitle="true"] > #close-button {
