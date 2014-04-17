@@ -228,7 +228,6 @@ panelview:not([mainview]) .toolbarbutton-text,
 
 toolbaritem[cui-areatype="menu-panel"][sdkstylewidget="true"]:not(.panel-wide-item),
 .panelUI-grid .toolbarbutton-1,
-toolbarpaletteitem[place="panel"]:not([haswideitem=true]),
 .panel-customization-placeholder-child {
   -moz-appearance: none;
   -moz-box-orient: vertical;
@@ -330,7 +329,10 @@ toolbaritem[cui-areatype="menu-panel"][sdkstylewidget="true"] > iframe {
 
 #PanelUI-multiView[viewtype="subview"] #PanelUI-mainView > #PanelUI-contents-scroller > #PanelUI-contents > .panel-wide-item,
 #PanelUI-multiView[viewtype="subview"] #PanelUI-mainView > #PanelUI-contents-scroller > #PanelUI-contents > .toolbarbutton-1:not([panel-multiview-anchor="true"]),
-#PanelUI-multiView[viewtype="subview"] #PanelUI-mainView > #PanelUI-footer {
+#PanelUI-multiView[viewtype="subview"] #PanelUI-mainView > #PanelUI-footer > #PanelUI-fxa-status,
+#PanelUI-multiView[viewtype="subview"] #PanelUI-mainView > #PanelUI-footer > #PanelUI-footer-inner > toolbarseparator,
+#PanelUI-multiView[viewtype="subview"] #PanelUI-mainView > #PanelUI-footer > #PanelUI-footer-inner > #PanelUI-customize,
+#PanelUI-multiView[viewtype="subview"] #PanelUI-mainView > #PanelUI-footer > #PanelUI-footer-inner > #PanelUI-help:not([panel-multiview-anchor="true"]) {
   opacity: .5;
 }
 
@@ -424,6 +426,10 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
   border-top: 1px solid hsla(210,4%,10%,.14);
 }
 
+#PanelUI-multiView[viewtype="subview"] #PanelUI-footer-inner {
+  position: relative;
+}
+
 #PanelUI-footer-inner > toolbarseparator {
   border: 0;
   border-left: 1px solid hsla(210,4%,10%,.14);
@@ -444,7 +450,6 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
   min-height: 2em;
   -moz-appearance: none;
   box-shadow: none;
-  background-image: none;
   border: none;  
   border-radius: 0;
   transition: background-color;
@@ -534,6 +539,10 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
 #PanelUI-help:not([disabled]):hover:active,
 #PanelUI-quit:not([disabled]):hover:active {
   -moz-image-region: rect(0, 48px, 16px, 32px);
+}
+
+#PanelUI-help[panel-multiview-anchor="true"] {
+  -moz-image-region: rect(0, 64px, 16px, 48px);
 }
 
 #PanelUI-help[disabled],
@@ -818,29 +827,45 @@ menupopup[placespopup=true][singleitempopup=true] > hbox > .popup-internal-box >
   height: 16px;
 }
 
-#PanelUI-footer > #PanelUI-footer-inner[panel-multiview-anchor=true],
-toolbarbutton[panel-multiview-anchor=true] {
+toolbarbutton[panel-multiview-anchor="true"],
+toolbarbutton[panel-multiview-anchor="true"] > .toolbarbutton-menubutton-button {
+  color: HighlightText;
   background-color: Highlight;
-  background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0));
 }
 
-toolbarbutton[panel-multiview-anchor=true] {
+#PanelUI-help[panel-multiview-anchor="true"] + toolbarseparator {
+  display: none;
+}
+
+#PanelUI-help[panel-multiview-anchor="true"] {
+  background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0));
+  background-position: 0;
+}
+
+#PanelUI-help[panel-multiview-anchor="true"]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 38px;
+  background-image: url(chrome://browser/skin/customizableui/subView-arrow-back-inverted.png),
+                    linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0));
+  background-repeat: no-repeat;
+  background-color: Highlight;
+  background-position: left 10px center, 0; /* this doesn't need to be changed for RTL */
+}
+
+toolbarbutton[panel-multiview-anchor="true"] {
   background-image: url(chrome://browser/skin/customizableui/subView-arrow-back-inverted.png),
                     linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0));
   background-position: right 5px center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat, repeat;
 }
 
-toolbarbutton[panel-multiview-anchor=true]:-moz-locale-dir(rtl) {
+toolbarbutton[panel-multiview-anchor="true"]:-moz-locale-dir(rtl) {
   background-image: url(chrome://browser/skin/customizableui/subView-arrow-back-inverted-rtl.png),
-                    linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0.3));
+                    linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0));
   background-position: left 5px center;
-}
-
-#PanelUI-footer > #PanelUI-footer-inner[panel-multiview-anchor=true],
-toolbarbutton[panel-multiview-anchor=true],
-toolbarbutton[panel-multiview-anchor=true] > .toolbarbutton-menubutton-button {
-  color: HighlightText;
 }
 
 toolbarpaletteitem[place="palette"] > .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,
@@ -876,8 +901,12 @@ toolbarpaletteitem[place="palette"] > #search-container {
 
 /* Make direct siblings overlap borders: */
 .toolbaritem-combined-buttons + .toolbaritem-combined-buttons:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true]) {
-  margin-top: -1px;
   border-top-color: transparent !important;
+}
+
+.toolbaritem-combined-buttons + .toolbaritem-combined-buttons:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true]),
+toolbarpaletteitem[haswideitem][place="panel"] + toolbarpaletteitem[haswideitem][place="panel"] {
+  margin-top: -1px;
 }
 
 .toolbaritem-combined-buttons:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true]) > toolbarbutton {

@@ -1130,6 +1130,9 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#home-button, #print-button, #do
 }
 
 #urlbar-container {
+  /*
+  -moz-box-align: center;
+  */
   -moz-box-orient: horizontal;
   -moz-box-align: stretch;
 }
@@ -1239,7 +1242,8 @@ window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([fo
   min-width: calc(54px + 11ch);
 }
 
-/* Identity indicator */
+/* ::::: Identity box ::::: */
+
 #identity-box {
   padding: 1px;
   margin: 0;
@@ -1420,6 +1424,7 @@ window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([fo
 }
 
 /* ::::: Identity popup icons ::::: */
+
 #identity-popup-icon {
   height: 64px;
   width: 64px;
@@ -4237,7 +4242,9 @@ toolbarpaletteitem[place="toolbar"] {
   background-image: radial-gradient(50% 100%, rgba(0,149,220,0.4) 50%, rgba(0,149,220,0.6) 100%);
   border-radius: 40px;
   border: 1px solid white;
-  box-shadow: 0 0 3px 0 rgba(0,0,0,0.5);
+  /* The box-shadow opacity needs to be < 0.5 so it doesn't appear at 100% opacity
+     on Linux without an X compositor where opacity is either 0 or 1. */
+  box-shadow: 0 0 3px 0 rgba(0,0,0,0.49);
   min-height: 32px;
   min-width: 32px;
 }
@@ -4363,6 +4370,19 @@ toolbarpaletteitem[place="toolbar"] {
 
 #UITourTooltipButtons > button.button-primary:not(:active):hover {
   background-color: rgb(105,173,61);
+}
+
+#UITourHighlight {
+  /* Below are some fixes for people without an X compositor on Linux.
+     This is why we can't have nice things: */
+  /* Animations don't repaint properly without an X compositor. */
+  animation-name: none !important;
+  /* Opacity rounds to 0 or 1 on Linux without an X compositor so make the
+     background be transparent in that case by having all alpha values < 0.5 */
+  background-image: radial-gradient(50% 100%, rgba(0,149,220,0.3) 50%, rgba(0,149,220,0.49) 100%);
+  /* The highlight isn't anti-aliased without an X compositor so make it thicker.
+     Make it a darker color since we don't have the box-shadow in this case. */
+  border: 4px solid rgb(0,149,220);
 }
 
 #UITourTooltipDescription {
