@@ -1,7 +1,0 @@
-/* Greasemonkey
- * id: {e4a8a97b-f2ed-450b-b12d-ee082ba24781}
- * URL: https://addons.mozilla.org/firefox/addon/greasemonkey/ */
-
-#greasemonkey-tbb {
-  list-style-image: url(chrome://symbolic-icons/skin/extensions/greasemonkey.svg) !important;
-}
