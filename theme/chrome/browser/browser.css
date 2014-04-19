@@ -1914,6 +1914,10 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   list-style-image: url(chrome://symbolic-icons/skin/go-down.svg);
 }
 
+#urlbar[hidehistorydropmarker] .urlbar-history-dropmarker {
+  display: none;
+}
+
 #urlbar-go-button,
 #urlbar-stop-button,
 #urlbar-reload-button,
