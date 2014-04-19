@@ -1018,13 +1018,23 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#home-button, #print-button, #do
 /* ::::: Fullscreen window controls ::::: */
 
 :-moz-any(#window-controls, .window-controls) {
+  background: linear-gradient(rgba(197,197,197,0), rgba(197,197,197,0.9) 18%, rgba(197,197,197,1), rgba(197,197,197,0.9) 82%, rgba(197,197,197,0)) no-repeat,
+              linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.5), rgba(255,255,255,0.1)) no-repeat;
+  background-size: 1px 100%, 1px 100%;
+  background-position: 0 0, 1px 0;
+
   overflow: hidden;
-  margin: 0 3px !important;
+  margin: -1px 3px !important;
+  -moz-margin-start: 3px !important;
+  padding: 1px 0;
+  -moz-padding-start: 7px;
 }
 
 #toolbar-menubar > :-moz-any(#window-controls, .window-controls) {
-  margin: 2px !important;
+  margin: 0 2px !important;
   -moz-margin-end: 6px !important;
+  padding: 2px 0;
+  -moz-padding-start: 7px;
 }
 
 #TabsToolbar > :-moz-any(#window-controls, .window-controls) {
@@ -1037,16 +1047,6 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#home-button, #print-button, #do
   min-width: 28px !important;
   margin: 0 !important;
   position: relative;
-}
-
-:-moz-any(#window-controls, .window-controls):-moz-locale-dir(ltr) {
-  border-left: 7px solid;
-  -moz-border-left-colors: rgba(50,50,50,.2) rgba(255,255,255,0.2) transparent;
-}
-
-:-moz-any(#window-controls, .window-controls):-moz-locale-dir(rtl) {
-  border-right: 7px solid;
-  -moz-border-right-colors: rgba(50,50,50,.2) rgba(255,255,255,0.2) transparent;
 }
 
 /* Icons */
