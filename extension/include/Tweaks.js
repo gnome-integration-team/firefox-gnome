@@ -36,7 +36,9 @@ var Tweaks = {
 
     urlbarHistoryDropmarker: {
         key: "urlbar-history-dropmarker",
-        type: "stylesheet"
+        type: "attribute",
+        nodes: ["urlbar"],
+        attribute: "hidehistorydropmarker"
     },
 
     forwardButton: {
