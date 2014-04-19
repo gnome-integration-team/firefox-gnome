@@ -24,12 +24,13 @@
   display: -moz-box !important;
 }
 
-#main-window[sizemode="fullscreen"] #window-controls[htitle="true"] > :-moz-any(#minimize-button, #close-button) {
-  display: none !important;
+#main-window[sizemode="fullscreen"] #window-controls[htitle="true"],
+#main-window[sizemode="fullscreen"] #window-controls[htitle="true"] > #restore-button {
+  display: -moz-box !important;
 }
 
-#main-window[sizemode="fullscreen"] #window-controls[htitle="true"] {
-  display: -moz-box !important;
+#main-window[sizemode="fullscreen"] #window-controls[htitle="true"] > :-moz-any(#minimize-button, #close-button) {
+  display: none !important;
 }
 
 /* Hide theme's window controls */
