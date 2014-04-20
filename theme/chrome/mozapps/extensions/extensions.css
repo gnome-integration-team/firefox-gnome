@@ -70,11 +70,18 @@
 }
 
 .category-badge {
-  background-color: transparent;
-  padding: 0;
-  border-radius: 0;
-  color: inherit;
-  margin: 0;
+  background-color: #7487e4;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 0.9em;
+  padding: 2px 6px;
+  margin: 0 1px;
+  -moz-margin-end: 10px;
+}
+
+.category[selected] .category-badge {
+  background-color: #eaeaea;
+  color: #7487e4;
 }
 
 .category-icon {
