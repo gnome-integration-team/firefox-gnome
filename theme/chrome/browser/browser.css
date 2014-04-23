@@ -2181,6 +2181,10 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   padding-bottom: 0;
 }
 
+#TabsToolbar:not([tabsontop="true"])[bottomborder="false"] {
+  border-bottom: 0;
+}
+
 /*
  * Draw the bottom border of the tabstrip:
  */

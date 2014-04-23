@@ -31,7 +31,10 @@ var Tweaks = {
 
     tabsBorder: {
         key: "tabs-border",
-        type: "stylesheet"
+        type: "attribute",
+        elements: ["TabsToolbar"],
+        attributeName: "bottomborder",
+        attributeValue: "false"
     },
 
     urlbarHistoryDropmarker: {
