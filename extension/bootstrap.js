@@ -210,7 +210,7 @@ var GNOMEThemeTweak = {
             this.log("type is not defined in " + tweakName + " tweak", "WARNING", sourceName);
         }
         else if (tweak.type == "stylesheet") {
-            if (!key) {
+            if (typeof tweak.cssPath == "undefined" && !key) {
                 this.log("CSS rules not found in " + tweakName + " tweak", "ERROR", sourceName);
                 return false;
             }
@@ -254,11 +254,23 @@ var GNOMEThemeTweak = {
         return true;
     },
 
+    _getCssPathFromTweak: function(tweak) {
+        var css_file_name;
+        switch (typeof tweak.cssPath) {
+            case "string":
+                css_file_name = tweak.cssPath;
+                break;
+            default:
+                css_file_name = "skin/" + tweak.key + ".css";
+        }
+        return css_file_name;
+    },
+
     _enableTweak: function(tweak) {
         switch(tweak.type) {
             case "stylesheet":
                 if (!tweak.isEnabled && this.prefs.getBoolPref(tweak.key)) {
-                    this.loadStyle("skin/" + tweak.key + ".css");
+                    this.loadStyle(this._getCssPathFromTweak(tweak));
                     tweak.isEnabled = true;
                 }
                 break;
@@ -310,7 +322,7 @@ var GNOMEThemeTweak = {
         switch(tweak.type) {
             case "stylesheet":
                 if (tweak.isEnabled) {
-                    GNOMEThemeTweak.unloadStyle("skin/" + tweak.key + ".css");
+                    this.unloadStyle(this._getCssPathFromTweak(tweak));
                     tweak.isEnabled = false;
                 }
                 break;
