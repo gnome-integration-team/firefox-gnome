@@ -175,7 +175,18 @@ var GNOMEThemeTweak = {
                 break;
             case "attribute":
                 if (!tweak.isEnabled && this.prefs.getBoolPref(tweak.key)) {
-                    let item = [tweak.attributeName, "true"];
+                    let value;
+                    switch (typeof tweak.attributeValue) {
+                        case "string":
+                            value = tweak.attributeValue;
+                            break;
+                        case "function":
+                            value = tweak.attributeValue();
+                            break;
+                        default:
+                            value = "true";
+                    }
+                    let item = [tweak.attributeName, value];
                     let tmp_attr = {};
                     for (let i=0; i < tweak.elements.length; i++) {
                         let element_id = tweak.elements[i];
