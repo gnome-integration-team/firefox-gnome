@@ -18,6 +18,7 @@ include("include/DefaultPrefs.js");
 include("include/Tweaks.js");
 
 var GNOMEThemeTweak = {
+    DEBUG: false,
     PREF_BRANCH: "extensions.gnome-theme-tweak.",
     prefs: null,
 
@@ -56,10 +57,37 @@ var GNOMEThemeTweak = {
         this._launchIntoExistingWindows(targetFunction);
     },
 
-    log: function(message) {
+    log: function(message, level="ERROR", sourceName) {
+        if (!this.DEBUG && level == "DEBUG")
+            return;
+
+        if (!sourceName)
+            sourceName = Services.io.newURI("bootstrap.js", null, Services.io.newURI(__SCRIPT_URI_SPEC__, null, null)).spec;
+
         var console = Cc["@mozilla.org/consoleservice;1"]
                         .getService(Ci.nsIConsoleService);
-        console.logStringMessage(message);
+
+        var flag;
+        switch (level) {
+            case "ERROR":
+                flag = 0;
+                break;
+            case "WARNING":
+                flag = 1;
+                break;
+            default:
+                flag = 4;
+        }
+
+        if (flag == 4) {
+            console.logStringMessage("GNOME Theme Tweak: " + message);
+        }
+        else {
+            let console_message = Cc["@mozilla.org/scripterror;1"]
+                                    .createInstance(Ci.nsIScriptError);
+            console_message.init("GNOME Theme Tweak: " + message, sourceName, null, null, null, flag, null);
+            console.logMessage(console_message);
+        }
     },
 
     /* ::::: "Private" methods and properties ::::: */
@@ -165,6 +193,67 @@ var GNOMEThemeTweak = {
         }
     },
 
+    _validateTweak: function(tweak, tweakName="Tweak", sourceName="GNOME Theme Tweak") {
+        if (typeof tweak != "object") {
+            // ERROR: Uncorrect type of tweak
+            this.log("Tweak." + tweakName + "has uncorrect type", "ERROR", sourceName);
+            return false;
+        }
+
+        var key = true;
+        if (typeof tweak.key == "undefined") {
+            this.log("key is not defined in " + tweakName + " tweak", "WARNING", sourceName);
+            key = false;
+        }
+
+        if (typeof tweak.type == "undefined") {
+            this.log("type is not defined in " + tweakName + " tweak", "WARNING", sourceName);
+        }
+        else if (tweak.type == "stylesheet") {
+            if (!key) {
+                this.log("CSS rules not found in " + tweakName + " tweak", "ERROR", sourceName);
+                return false;
+            }
+
+            return true;
+        }
+        else if (tweak.type == "attribute") {
+            if (typeof tweak.elements == "undefined") {
+                this.log("elements is not defined in " + tweakName + " tweak", "ERROR", sourceName);
+                return false;
+            }
+
+            if (typeof tweak.attributeName == "undefined") {
+                this.log("attributeName is not defined in " + tweakName + " tweak", "ERROR", sourceName);
+                return false;
+            }
+
+            if (typeof tweak.attributeValue == "undefined") {
+                this.log("attributeValue is not defined in " + tweakName + " tweak", "WARNING", sourceName);
+            }
+            else if (typeof tweak.attributeValue == "function" && typeof tweak.attributeValue() != "string") {
+                this.log("attributeValue method should return string value (" + tweakName + ")", "ERROR", sourceName);
+                return false;
+            }
+
+            return true;
+        }
+        else {
+            this.log("Uncorrect type of " + tweakName + " tweak", "ERROR", sourceName);
+        }
+
+        if (typeof tweak.enable == "undefined") {
+            this.log("enable() method is not defined in " + tweakName + " tweak", "ERROR", sourceName);
+            return false;
+        }
+        if (typeof tweak.disable == "undefined") {
+            this.log("disable() method is not defined in " + tweakName + " tweak", "ERROR", sourceName);
+            return false;
+        }
+
+        return true;
+    },
+
     _enableTweak: function(tweak) {
         switch(tweak.type) {
             case "stylesheet":
@@ -262,6 +351,10 @@ var GNOMEThemeTweak = {
                        .getService(Ci.nsIPrefService)
                        .getBranch(this.PREF_BRANCH);
 
+        if (this.prefs.getPrefType("debug") == this.prefs.PREF_BOOL && this.prefs.getBoolPref("debug")) {
+            this.DEBUG = true;
+        }
+
         // Removing older keys...
         if (this.prefs.getPrefType("restore-button"))
             this.prefs.clearUserPref("restore-button");
@@ -284,7 +377,14 @@ var GNOMEThemeTweak = {
         this.addListener("loadWindow", CustomizationMode._addLink);
         this.launchIntoExistingWindows(CustomizationMode._addLink);
 
+        var tweaks_url = Services.io.newURI("include/Tweaks.js", null, Services.io.newURI(__SCRIPT_URI_SPEC__, null, null)).spec;
+
         for (let i in Tweaks) {
+            if (this.DEBUG && !this._validateTweak(Tweaks[i], i, tweaks_url)) {
+                delete Tweaks[i];
+                continue;
+            }
+
             this._enableTweak(Tweaks[i]);
         }
     },
