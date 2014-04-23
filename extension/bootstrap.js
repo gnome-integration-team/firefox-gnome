@@ -21,16 +21,16 @@ var GNOMEThemeTweak = {
     PREF_BRANCH: "extensions.gnome-theme-tweak.",
     prefs: null,
 
-    loadStyle: function(name) {
+    loadStyle: function(path) {
         var sss = Cc["@mozilla.org/content/style-sheet-service;1"].getService(Ci.nsIStyleSheetService);
-        var uri = Services.io.newURI("chrome://gnome-theme-tweak/content/tweaks/" + name + ".css", null, null);
+        var uri = Services.io.newURI("chrome://gnome-theme-tweak/" + path, null, null);
         if (!sss.sheetRegistered(uri, sss.USER_SHEET))
             sss.loadAndRegisterSheet(uri, sss.USER_SHEET);
     },
 
-    unloadStyle: function(name) {
+    unloadStyle: function(path) {
         var sss = Cc["@mozilla.org/content/style-sheet-service;1"].getService(Ci.nsIStyleSheetService);
-        var uri = Services.io.newURI("chrome://gnome-theme-tweak/content/tweaks/" + name + ".css", null, null);
+        var uri = Services.io.newURI("chrome://gnome-theme-tweak/" + path, null, null);
         if (sss.sheetRegistered(uri, sss.USER_SHEET))
             sss.unregisterSheet(uri, sss.USER_SHEET);
     },
@@ -56,6 +56,14 @@ var GNOMEThemeTweak = {
         this._launchIntoExistingWindows(targetFunction);
     },
 
+    log: function(message) {
+        var console = Cc["@mozilla.org/consoleservice;1"]
+                        .getService(Ci.nsIConsoleService);
+        console.logStringMessage(message);
+    },
+
+    /* ::::: "Private" methods and properties ::::: */
+
     _listeners: {},
     _attributes: {},
 
@@ -72,7 +80,7 @@ var GNOMEThemeTweak = {
                 case "string":
                     branch.setCharPref(key, val);
                     break;
-                }
+            }
         }
     },
 
@@ -91,24 +99,24 @@ var GNOMEThemeTweak = {
         return wm;
     },
 
-    _setAttributes: function(window, el_attr) {
-        for (let id in el_attr) {
+    _setAttributes: function(window, elAttr) {
+        for (let id in elAttr) {
             let element = window.document.getElementById(id);
             if (!element)
                 continue;
-            let attr_list = el_attr[id];
+            let attr_list = elAttr[id];
             for (let i=0; i < attr_list.length; i++) {
                 element.setAttribute(attr_list[i][0], attr_list[i][1]);
             }
         }
     },
 
-    _removeAttributes: function(window, el_attr) {
-        for (let id in el_attr) {
+    _removeAttributes: function(window, elAttr) {
+        for (let id in elAttr) {
             let element = window.document.getElementById(id);
             if (!element)
                 continue;
-            let attr_list = el_attr[id];
+            let attr_list = elAttr[id];
             for (let i=0; i < attr_list.length; i++) {
                 element.removeAttribute(attr_list[i][0]);
             }
@@ -161,24 +169,24 @@ var GNOMEThemeTweak = {
         switch(tweak.type) {
             case "stylesheet":
                 if (!tweak.isEnabled && this.prefs.getBoolPref(tweak.key)) {
-                    this.loadStyle(tweak.key);
+                    this.loadStyle("skin/" + tweak.key + ".css");
                     tweak.isEnabled = true;
                 }
                 break;
             case "attribute":
                 if (!tweak.isEnabled && this.prefs.getBoolPref(tweak.key)) {
-                    let value = [tweak.attribute, "true"];
+                    let item = [tweak.attributeName, "true"];
                     let tmp_attr = {};
-                    for (let i=0; i < tweak.nodes.length; i++) {
-                        let node_id = tweak.nodes[i];
-                        tmp_attr[node_id] = [value];
-                        if (typeof this._attributes[node_id] == "undefined") {
-                            this._attributes[node_id] = [];
+                    for (let i=0; i < tweak.elements.length; i++) {
+                        let element_id = tweak.elements[i];
+                        tmp_attr[element_id] = [item];
+                        if (typeof this._attributes[element_id] == "undefined") {
+                            this._attributes[element_id] = [];
                         }
                         else {
-                            let attr = this._attributes[node_id];
+                            let attr = this._attributes[element_id];
                             for (let j=0; j < attr.length; j++) {
-                                if (attr[j][0] === value[0]) {
+                                if (attr[j][0] === item[0]) {
                                     // Attribute already exists
                                     var flag = true;
                                     break;
@@ -187,7 +195,7 @@ var GNOMEThemeTweak = {
                             if (flag)
                                 continue;
                         }
-                        this._attributes[node_id].push(value);
+                        this._attributes[element_id].push(item);
                     }
                     GNOMEThemeTweak._launchIntoExistingWindows(GNOMEThemeTweak._setAttributes, tmp_attr);
                     tweak.isEnabled = true;
@@ -202,27 +210,27 @@ var GNOMEThemeTweak = {
         switch(tweak.type) {
             case "stylesheet":
                 if (tweak.isEnabled) {
-                    GNOMEThemeTweak.unloadStyle(tweak.key);
+                    GNOMEThemeTweak.unloadStyle("skin/" + tweak.key + ".css");
                     tweak.isEnabled = false;
                 }
                 break;
             case "attribute":
                 if (tweak.isEnabled) {
                     let rm_attr = {};
-                    for (let i=0; i < tweak.nodes.length; i++) {
-                        let node_id = tweak.nodes[i];
-                        if (typeof this._attributes[node_id] == "undefined") {
+                    for (let i=0; i < tweak.elements.length; i++) {
+                        let element_id = tweak.elements[i];
+                        if (typeof this._attributes[element_id] == "undefined") {
                             continue;
                         }
-                        rm_attr[node_id] = [[tweak.attribute]];
-                        let al = this._attributes[node_id];
+                        rm_attr[element_id] = [[tweak.attributeName]];
+                        let al = this._attributes[element_id];
                         for (let j=al.length-1; j>=0; j--) {
-                            if (al[j][0] === tweak.attribute) {
+                            if (al[j][0] === tweak.attributeName) {
                                 al.splice(j, 1);
                             }
                         }
                         if (al.length == 0) {
-                            delete this._attributes[node_id];
+                            delete this._attributes[element_id];
                         }
                     }
                     GNOMEThemeTweak._launchIntoExistingWindows(GNOMEThemeTweak._removeAttributes, rm_attr);
@@ -234,17 +242,13 @@ var GNOMEThemeTweak = {
         }
     },
 
-    log: function(message) {
-        var console = Cc["@mozilla.org/consoleservice;1"]
-                        .getService(Ci.nsIConsoleService);
-        console.logStringMessage(message);
-    },
+    /* ::::: Start/stop methods ::::: */
 
     init: function() {
         this._setDefaultPrefs();
 
         this.prefs = Cc["@mozilla.org/preferences-service;1"]
-                       .getService(Components.interfaces.nsIPrefService)
+                       .getService(Ci.nsIPrefService)
                        .getBranch(this.PREF_BRANCH);
 
         // Removing older keys...

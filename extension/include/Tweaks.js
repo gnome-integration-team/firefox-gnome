@@ -25,8 +25,8 @@ var Tweaks = {
     tabsOnTop: {
         key: "tabs-on-top",
         type: "attribute",
-        nodes: ["navigator-toolbox", "nav-bar", "TabsToolbar"],
-        attribute: "tabsontop"
+        elements: ["navigator-toolbox", "nav-bar", "TabsToolbar"],
+        attributeName: "tabsontop"
     },
 
     tabsBorder: {
@@ -37,15 +37,15 @@ var Tweaks = {
     urlbarHistoryDropmarker: {
         key: "urlbar-history-dropmarker",
         type: "attribute",
-        nodes: ["urlbar"],
-        attribute: "hidehistorydropmarker"
+        elements: ["urlbar"],
+        attributeName: "hidehistorydropmarker"
     },
 
     forwardButton: {
         key: "forward-button",
         type: "attribute",
-        nodes: ["urlbar-container"],
-        attribute: "forwardshowalways"
+        elements: ["urlbar-container"],
+        attributeName: "forwardshowalways"
     },
 
     inactiveState: {
@@ -56,7 +56,7 @@ var Tweaks = {
     reliefButtons: {
         key: "relief-buttons",
         type: "attribute",
-        nodes: ["nav-bar", "bookmarked-notification-anchor"],
-        attribute: "reliefbuttons"
+        elements: ["nav-bar", "bookmarked-notification-anchor"],
+        attributeName: "reliefbuttons"
     },
 }
