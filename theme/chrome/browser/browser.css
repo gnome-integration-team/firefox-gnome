@@ -1015,6 +1015,14 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#home-button, #print-button, #do
   opacity: 1;
 }
 
+#main-window:not([customizing]) .toolbarbutton-1[cui-areatype="menu-panel"][disabled=true] > .toolbarbutton-icon,
+#main-window:not([customizing]) .toolbarbutton-1[cui-areatype="menu-panel"][disabled=true] > .toolbarbutton-menu-dropmarker,
+#main-window:not([customizing]) .toolbarbutton-1[cui-areatype="menu-panel"][disabled=true] > .toolbarbutton-menubutton-dropmarker,
+#main-window:not([customizing]) .toolbarbutton-1[cui-areatype="menu-panel"][disabled=true] > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
+#main-window:not([customizing]) .toolbarbutton-1[cui-areatype="menu-panel"] > .toolbarbutton-menubutton-button[disabled=true] > .toolbarbutton-icon {
+  opacity: .3;
+}
+
 /* ::::: Fullscreen window controls ::::: */
 
 :-moz-any(#window-controls, .window-controls) {
@@ -4086,7 +4094,7 @@ toolbarpaletteitem[place="toolbar"] {
   width: 16px;
 }
 
-#wrapper-edit-controls > #edit-controls > toolbarbutton > .toolbarbutton-icon {
+#wrapper-edit-controls:not([place="toolbar"]) > #edit-controls > toolbarbutton > .toolbarbutton-icon {
   opacity: .6; /* To ensure these buttons always look enabled in customize mode */
 }
 
