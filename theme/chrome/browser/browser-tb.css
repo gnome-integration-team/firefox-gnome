@@ -47,9 +47,10 @@
 :-moz-any(#TabsToolbar, #nav-bar) .toolbarbutton-1[checked="true"],
 :-moz-any(#TabsToolbar, #nav-bar) .toolbarbutton-1[checked="true"]:hover,
 :-moz-any(#window-controls, .window-controls) > toolbarbutton:active:hover {
-  background-image: linear-gradient(to bottom, #a6aaa6, #e2e2e2);
+  background-image: linear-gradient(to bottom, #c7cac7, #cccfcc 20%, #d6d9d6);
   border-color: #b2b6b2 #b8bbb8 #bdbfbd;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.37);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.08),
+              0 1px 0 rgba(255,255,255,0.37);
 }
 
 :-moz-any(#TabsToolbar, #nav-bar) .toolbarbutton-1:not([disabled="true"]):active:hover:-moz-lwtheme,
@@ -58,9 +59,10 @@
 :-moz-any(#TabsToolbar, #nav-bar) .toolbarbutton-1[checked="true"]:-moz-lwtheme,
 :-moz-any(#TabsToolbar, #nav-bar) .toolbarbutton-1[checked="true"]:hover:-moz-lwtheme,
 :-moz-any(#window-controls, .window-controls) > toolbarbutton:active:hover:-moz-lwtheme {
-  background-image: linear-gradient(to bottom, rgba(0,10,0,0.3), rgba(200,200,200,0.3));
+  background-image: linear-gradient(to bottom, rgba(169,172,169,0.5), rgba(174,177,174,0.5) 20%, rgba(174,177,174,0.5));
   border-color: rgba(180,180,180,1);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.15);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.08),
+              0 1px 0 rgba(255,255,255,0.15);
 }
 
 :-moz-any(#TabsToolbar, #nav-bar) .toolbarbutton-1[type="menu"][open="true"],
