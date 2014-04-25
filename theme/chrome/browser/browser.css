@@ -2505,6 +2505,11 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   -moz-padding-start: 7px;
 }
 
+#TabsToolbar[newstyletabs] .tabbrowser-tab[titlechanged]:not([selected="true"]) > .tab-stack > .tab-content {
+  background-image: radial-gradient(ellipse 30px 6px at 50% 100%, rgba(255,255,255,1), rgba(255,255,255,1) 5%, rgba(187,201,217,1) 30%, rgba(187,201,217,0.1) 70%);
+  background-repeat: no-repeat;
+}
+
 #TabsToolbar:not([newstyletabs]) .tab-content > .tab-spacer {
   display: none;
 }
