@@ -16,16 +16,16 @@
       /* X Glyph Styles */
 
       .glyphShape-style-background {
-        fill: #d0d1d2;
+        fill: #2e3436;
       }
 
       .glyphShape-style-default {
-        fill: #abadae;
+        fill: #2e3436;
       }
 
       .glyphShape-style-default-shadow {
         fill: #fff;
-        fill-opacity: 0.4;
+        fill-opacity: 1;
       }
 
       .glyphShape-style-hover {

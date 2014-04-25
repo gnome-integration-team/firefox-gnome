@@ -2513,7 +2513,11 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 
 #TabsToolbar[newstyletabs] .tab-label {
-  transition: color 200ms ease-in;
+  transition: color 200ms ease-out;
+}
+
+#TabsToolbar[newstyletabs] .tabbrowser-tab:-moz-any([selected="true"], :hover) .tab-label {
+  transition-timing-function: ease-in;
 }
 
 .tab-throbber,
@@ -2590,15 +2594,26 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   border-radius: 3px;
   box-shadow: none !important;
 }
+#TabsToolbar[newstyletabs] .tab-close-button {
+  transition-property: background, border;
+  transition-duration: 200ms, 200ms;
+  transition-timing-function: ease-out;
+}
 
 #TabsToolbar .tab-close-button:hover {
   border-color: rgba(0, 0, 0, 0.1) !important;
+}
+#TabsToolbar[newstyletabs] .tab-close-button:hover {
+  transition-timing-function: ease-in;
 }
 
 #TabsToolbar .tab-close-button:active:hover {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.13) 1px, rgba(0, 0, 0, 0.08) 2px, rgba(0, 0, 0, 0.07) 100%) !important;
   border-color: rgba(0, 0, 0, 0.12) !important;
   border-top-color: rgba(0, 0, 0, 0.27) !important;
+}
+#TabsToolbar[newstyletabs] .tab-close-button:active:hover {
+  transition-timing-function: ease-in;
 }
 
 #TabsToolbar .tab-close-button > .toolbarbutton-icon {
@@ -2607,14 +2622,24 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   background-repeat: no-repeat;
   width: 16px;
   height: 16px;
+  opacity: .31;
+}
+#TabsToolbar[newstyletabs] .tab-close-button > .toolbarbutton-icon {
+  transition: opacity 200ms ease-in;
 }
 
 #TabsToolbar[newstyletabs] .tabbrowser-tab:not(:hover):not([selected="true"]) .tab-close-button > .toolbarbutton-icon {
   background-image: -moz-image-rect(url(chrome://browser/skin/tabbrowser/close.svg), 0, 16, 16, 0);
+  opacity: .1;
+  transition-timing-function: ease-out;
 }
 
 #TabsToolbar .tab-close-button:hover > .toolbarbutton-icon {
   background-image: -moz-image-rect(url(chrome://browser/skin/tabbrowser/close.svg), 0, 48, 16, 32);
+  opacity: 1;
+}
+#TabsToolbar[newstyletabs] .tab-close-button:hover > .toolbarbutton-icon {
+  transition-timing-function: ease-in;
 }
 
 /* Tabstrip new tab button */
