@@ -13,7 +13,7 @@
     <em:creator>GNOME Integration Team</em:creator>
     <em:contributor>Alexander Seleznev</em:contributor>
 
-    <em:optionsURL>chrome://gnome-theme-tweak/content/settings.xul</em:optionsURL>
+    <em:optionsURL>chrome://gnome-theme-tweak/content/options.xul</em:optionsURL>
     <em:optionsType>2</em:optionsType>
 
     <em:bootstrap>true</em:bootstrap>
