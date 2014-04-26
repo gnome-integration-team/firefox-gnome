@@ -2591,8 +2591,11 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 .tab-drop-indicator {
   list-style-image: url(chrome://browser/skin/tabbrowser/tabDragIndicator.png);
   margin-bottom: -11px;
-  -moz-padding-end: 9px;
   z-index: 3;
+}
+
+#TabsToolbar:not([newstyletabs]) .tab-drop-indicator {
+  -moz-padding-end: 9px;
 }
 
 /* Tabstrip close button */
