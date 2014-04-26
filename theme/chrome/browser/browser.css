@@ -90,7 +90,7 @@
   position: relative;
   z-index: 1;
 }
-#nav-bar[tabsontop="true"] {
+#nav-bar[tabsontop="true"]:not([newstyletabs]) {
   margin-top: -1px; /* Move up 1px into the TabsToolbar */
 }
 
