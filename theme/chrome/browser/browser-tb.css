@@ -137,7 +137,7 @@
 
 /* ::::: ::::: */
 
-:-moz-any(#TabsToolbar, #nav-bar) toolbarbutton-1[disabled="true"] {
+:-moz-any(#TabsToolbar, #nav-bar) .toolbarbutton-1[disabled="true"] {
   opacity: 1;
 }
 
