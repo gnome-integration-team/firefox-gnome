@@ -7,21 +7,25 @@
      xmlns:xlink="http://www.w3.org/1999/xlink"
      x="0px"
      y="0px"
-     width="32px"
+     width="48px"
      height="16px"
-     viewBox="0 0 32 16">
+     viewBox="0 0 48 16">
 
   <defs>
     <style type="text/css"><![CDATA[
       /* X Glyph Styles */
 
+      .glyphShape-style-background {
+        fill: #2e3436;
+      }
+
       .glyphShape-style-default {
-        fill: #abadae;
+        fill: #2e3436;
       }
 
       .glyphShape-style-default-shadow {
         fill: #fff;
-        fill-opacity: 0.4;
+        fill-opacity: 1;
       }
 
       .glyphShape-style-hover {
@@ -39,12 +43,16 @@
 
   </defs>
 
-  <g id="icon-close-default">
+  <g id="icon-close-background">
+    <use xlink:href="#glyphShape-close" class="glyphShape-style-background" />
+  </g>
+
+  <g id="icon-close-default" transform="translate(16)">
     <use xlink:href="#glyphShape-close" class="glyphShape-style-default-shadow" transform="translate(0,1)" />
     <use xlink:href="#glyphShape-close" class="glyphShape-style-default" />
   </g>
 
-  <g id="icon-close-hover" transform="translate(16)">
+  <g id="icon-close-hover" transform="translate(32)">
     <use xlink:href="#glyphShape-close" class="glyphShape-style-hover-shadow" transform="translate(0,1)" />
     <use xlink:href="#glyphShape-close" class="glyphShape-style-hover" />
   </g>

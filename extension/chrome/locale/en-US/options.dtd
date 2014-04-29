@@ -6,6 +6,7 @@
 <!ENTITY reliefbuttons.label           "Relief buttons on the navigation toolbar">
 <!ENTITY inactivestate.label           "Enable different style for unfocused windows">
 <!ENTITY tabontop.label                "Show tabs on top">
+<!ENTITY newstyletabs.label            "GNOME 3.12 style tabs">
 <!ENTITY tabsborder.label              "Hide white border after tabs toolbar">
 <!ENTITY urlbarhistorydropmarker.label "Hide the history dropmarker in the URL bar">
 <!ENTITY forwardbutton.label           "Always show forward button">

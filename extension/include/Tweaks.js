@@ -17,6 +17,14 @@ var Tweaks = {
     },
     */
 
+    newStyleTabs: {
+        key: "new-style-tabs",
+        type: "attribute",
+        elements: ["nav-bar", "TabsToolbar"],
+        attributeName: "newstyletabs",
+        attributeValue: "true"
+    },
+
     newtabPage: {
         key: "newtab-page",
         type: "stylesheet"
