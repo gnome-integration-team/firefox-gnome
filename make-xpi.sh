@@ -36,19 +36,14 @@ do
 done
 
 if [ ! $BUILD_EXTENSION_ONLY ]; then
-    cd theme
-    zip -FS -r ../gnome-firefox-theme.xpi *
-    cd -
+    ./make-xpi.py extension
 fi
 
 if [ ! $BUILD_THEME_ONLY ]; then
-    cd extension
-    zip -FS -r ../gnome-firefox-extension.xpi *
-    cd -
+    ./make-xpi.py theme
 fi
 
 if [ ! $BUILD_THEME_ONLY ] && [ ! $BUILD_EXTENSION_ONLY ]; then
-    VERSION=$(grep em:version install.rdf | cut -f2 -d'>' | cut -f1 -d'<')
-    zip -FS -r gnome-firefox-$VERSION.xpi gnome-firefox-theme.xpi gnome-firefox-extension.xpi install.rdf
+    ./make-xpi.py all
 fi
 

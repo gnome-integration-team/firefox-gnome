@@ -1,0 +1,10 @@
+{
+  "xpi": {
+    "theme": "gnome-firefox-theme.xpi",
+    "extension": "gnome-firefox-extension.xpi",
+    "package": "gnome-firefox-package.xpi"
+  },
+  "directory-structure": {
+    "shared-dir": "chrome"
+  }
+}
