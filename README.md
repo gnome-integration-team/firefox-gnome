@@ -22,6 +22,8 @@ Tabs on top:
 
 Tabs on bottom:
 
-(Visit to `about:config` in your URL bar and change **browser.tabs.onTop** to **false**.)
-
 ![Screenshot](https://raw.github.com/gnome-integration-team/firefox-gnome/master/screenshots/screenshot-tabs-on-bottom.png)
+
+If you'd like to change tab positions or any additional settings, 
+please install [GNOME Tweak Tool](https://addons.mozilla.org/en-US/firefox/addon/gnome-theme-tweak/)
+(an extension we also make).
