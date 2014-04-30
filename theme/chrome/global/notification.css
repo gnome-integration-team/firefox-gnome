@@ -107,6 +107,16 @@ notification .messageCloseButton:hover > .toolbarbutton-icon {
   max-width: 24em;
 }
 
+%if APP_VERSION != 29
+.popup-notification-learnmore-link {
+  margin-top: 1em !important;
+}
+
+.popup-notification-learnmore-link:not([href]) {
+  display: none;
+}
+%endif
+
 .popup-notification-button-container {
   margin-top: 17px;
 }

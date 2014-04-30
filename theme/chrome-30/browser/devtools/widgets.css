@@ -1,0 +1,1101 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* vim:set ts=2 sw=2 sts=2 et: */
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* Generic pane helpers */
+
+.generic-toggled-side-pane {
+  -moz-margin-start: 0 !important;
+  /* Unfortunately, transitions don't work properly with locale-aware properties,
+     so both the left and right margins are set via js, while the start margin
+     is always overridden here. */
+}
+
+.generic-toggled-side-pane[animated] {
+  transition: margin 0.25s ease-in-out;
+}
+
+/* Responsive container */
+
+.devtools-responsive-container {
+  -moz-box-orient: horizontal;
+}
+
+@media (max-width: 700px) {
+  .devtools-responsive-container {
+    -moz-box-orient: vertical;
+  }
+
+  .devtools-responsive-container > .devtools-side-splitter {
+    border-width: 0;
+    border-top-width: 1px;
+    border-top-style: solid;
+    margin: 0;
+    min-height: 3px;
+    height: 3px;
+    margin-bottom: -3px;
+    /* In some edge case the cursor is not changed to n-resize */
+    cursor: n-resize;
+  }
+
+  .devtools-responsive-container > .devtools-sidebar-tabs {
+    min-height: 35vh;
+    max-height: 75vh;
+  }
+}
+
+/* BreacrumbsWidget */
+
+.breadcrumbs-widget-container {
+  -moz-margin-end: 3px;
+  max-height: 25px; /* Set max-height for proper sizing on linux */
+  height: 25px; /* Set height to prevent starting small waiting for content */
+  /* A fake 1px-shadow is included in the border-images of the
+     breadcrumbs-widget-items, to match toolbar-buttons style.
+     This negative margin compensates the extra row of pixels created
+     by the shadow.*/
+  margin-bottom: -1px;
+}
+
+.scrollbutton-up,
+.scrollbutton-down {
+  -moz-appearance: none;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+.scrollbutton-up > .toolbarbutton-icon,
+.scrollbutton-down > .toolbarbutton-icon {
+  -moz-appearance: none;
+  width: 7px;
+  height: 16px;
+  background-size: 14px 16px;
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  background-image: url("breadcrumbs-scrollbutton.png");
+  list-style-image: none;
+  margin: 0 8px;
+  padding: 0;
+}
+
+@media (min-resolution: 2dppx) {
+  .scrollbutton-up > .toolbarbutton-icon,
+  .scrollbutton-down > .toolbarbutton-icon {
+    background-image: url("breadcrumbs-scrollbutton@2x.png");
+  }
+}
+
+.scrollbutton-up:not([disabled]):active:hover > .toolbarbutton-icon,
+.scrollbutton-down:not([disabled]):active:hover > .toolbarbutton-icon {
+  background-position: -7px center;
+}
+
+.scrollbutton-up[disabled] > .toolbarbutton-icon,
+.scrollbutton-down[disabled] > .toolbarbutton-icon {
+  opacity: 0.5;
+}
+
+/* Draw shadows to indicate there is more content 'behind' scrollbuttons. */
+.scrollbutton-up:-moz-locale-dir(ltr),
+.scrollbutton-down:-moz-locale-dir(rtl) {
+  border-right: solid 1px rgba(255, 255, 255, .1);
+  border-left: solid 1px transparent;
+  box-shadow: 3px 0px 3px -3px #181d20;
+}
+
+.scrollbutton-down:-moz-locale-dir(ltr),
+.scrollbutton-up:-moz-locale-dir(rtl) {
+  border-right: solid 1px transparent;
+  border-left: solid 1px rgba(255, 255, 255, .1);
+  box-shadow: -3px 0px 3px -3px #181d20;
+}
+
+.scrollbutton-up[disabled],
+.scrollbutton-down[disabled] {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.scrollbutton-up > .toolbarbutton-icon:-moz-locale-dir(rtl),
+.scrollbutton-down > .toolbarbutton-icon:-moz-locale-dir(ltr) {
+  transform: scaleX(-1);
+}
+
+/* The breadcrumb separator elements are used as background images with
+ * -moz-element, so we position them offscreen since we don't care about
+ * seeing the original elements.
+ */
+.breadcrumb-separator-container {
+  position: fixed;
+  top: -1000px;
+  left: -1000px;
+}
+
+#breadcrumb-separator-before,
+#breadcrumb-separator-after,
+#breadcrumb-separator-normal {
+  width: 12px;
+  height: 25px;
+  overflow: hidden;
+}
+
+.theme-dark #breadcrumb-separator-before,
+.theme-dark #breadcrumb-separator-after:after {
+  background: #1d4f73; /* Select Highlight Blue */
+}
+
+.theme-dark #breadcrumb-separator-after,
+.theme-dark #breadcrumb-separator-before:after {
+  background: #343c45; /* Toolbars */
+}
+
+.theme-light #breadcrumb-separator-before,
+.theme-light #breadcrumb-separator-after:after {
+  background: #4c9ed9; /* Select Highlight Blue */
+}
+
+.theme-light #breadcrumb-separator-after,
+.theme-light #breadcrumb-separator-before:after {
+  background: #f0f1f2; /* Toolbars */
+}
+
+/* This chevron arrow cannot be replicated easily in CSS, so we are using
+ * a background image for it (still keeping it in a separate element so
+ * we can handle RTL support with a CSS transform).
+ */
+#breadcrumb-separator-normal {
+  background: url(breadcrumbs-divider@2x.png) no-repeat center right;
+  background-size: 12px 24px;
+}
+
+/* Fake a triangle by rotating a rectangle inside the elements */
+#breadcrumb-separator-before:after,
+#breadcrumb-separator-after:after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  transform: translateX(-18px) rotate(45deg);
+  -moz-box-sizing: border-box;
+}
+
+.breadcrumbs-widget-item {
+  background-color: transparent;
+  -moz-appearance: none;
+  min-height: 25px;
+  min-width: 65px;
+  margin: 0;
+  padding: 0 8px 0 20px;
+  border: none;
+  outline: none;
+  color: hsl(210,30%,85%);
+}
+
+.breadcrumbs-widget-item:not([checked]) {
+  background: -moz-element(#breadcrumb-separator-normal) no-repeat center left;
+}
+
+.breadcrumbs-widget-item[checked] + .breadcrumbs-widget-item {
+  background: -moz-element(#breadcrumb-separator-after) no-repeat 0 0;
+}
+
+.breadcrumbs-widget-item[checked] {
+  background: -moz-element(#breadcrumb-separator-before) no-repeat 0 0;
+}
+
+.theme-dark .breadcrumbs-widget-item[checked] {
+  background-color: #1d4f73; /* Select Highlight Blue */
+}
+
+.theme-light .breadcrumbs-widget-item[checked] {
+  background-color: #4c9ed9; /* Select Highlight Blue */
+}
+
+.breadcrumbs-widget-item:first-child {
+  background-image: none;
+}
+
+/* RTL support: move the images that were on the left to the right,
+ * and move images that were on the right to the left.
+ */
+.breadcrumbs-widget-item:-moz-locale-dir(rtl) {
+  padding: 0 20px 0 8px;
+}
+
+.breadcrumbs-widget-item:-moz-locale-dir(rtl),
+.breadcrumbs-widget-item[checked] + .breadcrumbs-widget-item:-moz-locale-dir(rtl) {
+  background-position: center right;
+}
+
+#breadcrumb-separator-before:-moz-locale-dir(rtl),
+#breadcrumb-separator-after:-moz-locale-dir(rtl),
+#breadcrumb-separator-normal:-moz-locale-dir(rtl) {
+  transform: scaleX(-1);
+}
+
+#breadcrumb-separator-before:-moz-locale-dir(rtl):after,
+#breadcrumb-separator-after:-moz-locale-dir(rtl):after {
+  transform: translateX(-5px) rotate(45deg);
+}
+
+.breadcrumbs-widget-item[checked] .breadcrumbs-widget-item-id,
+.breadcrumbs-widget-item[checked] .breadcrumbs-widget-item-tag,
+.breadcrumbs-widget-item[checked] .breadcrumbs-widget-item-pseudo-classes,
+.breadcrumbs-widget-item[checked] .breadcrumbs-widget-item-classes {
+  color: #f5f7fa; /* Foreground (Text) - Light */
+}
+
+.theme-dark .breadcrumbs-widget-item {
+  color: #f5f7fa; /* Foreground (Text) - Light */
+}
+
+.theme-light .breadcrumbs-widget-item {
+  color: #18191a; /* Foreground (Text) - Dark */
+}
+
+.theme-dark .breadcrumbs-widget-item-id {
+  color: #b6babf; /* Foreground (Text) - Grey */
+}
+
+.theme-light .breadcrumbs-widget-item-id {
+  color: #585959; /* Foreground (Text) - Grey */
+}
+
+.theme-dark .breadcrumbs-widget-item-classes {
+  color: #a9bacb; /* Content (Text) - Light */
+}
+
+.theme-light .breadcrumbs-widget-item-classes {
+  color: #667380; /* Content (Text) - Dark Grey */
+}
+
+.theme-dark .breadcrumbs-widget-item-pseudo-classes {
+  color: #d99b28; /* Light Orange */
+}
+
+.theme-light .breadcrumbs-widget-item-pseudo-classes {
+  color: #d97e00; /* Light Orange */
+}
+
+.theme-dark .breadcrumbs-widget-item:not([checked]):hover label {
+  color: white;
+}
+
+.theme-light .breadcrumbs-widget-item:not([checked]):hover label {
+  color: black;
+}
+
+/* SimpleListWidget */
+
+.simple-list-widget-container {
+  /* Hack: force hardware acceleration */
+  transform: translateZ(1px);
+}
+
+.theme-dark .simple-list-widget-item.selected {
+  background-color: #1d4f73; /* Select Highlight Blue */
+  color: #f5f7fa; /* Light foreground text */
+}
+
+.theme-light .simple-list-widget-item.selected {
+  background-color: #4c9ed9; /* Select Highlight Blue */
+  color: #f5f7fa; /* Light foreground text */
+}
+
+.theme-dark .simple-list-widget-item:not(.selected):hover {
+  background-color: rgba(255,255,255,.05);
+}
+
+.theme-light .simple-list-widget-item:not(.selected):hover {
+  background-color: rgba(0,0,0,.05);
+}
+
+.simple-list-widget-empty-text,
+.simple-list-widget-perma-text {
+  padding: 4px 8px;
+}
+
+.theme-dark .simple-list-widget-empty-text,
+.theme-dark .simple-list-widget-perma-text {
+  color: #b6babf; /* Light foreground text */
+}
+
+.theme-light .simple-list-widget-empty-text,
+.theme-light .simple-list-widget-perma-text {
+  color: #585959; /* Grey foreground text */
+}
+
+/* FastListWidget */
+
+.fast-list-widget-container {
+  /* Hack: force hardware acceleration */
+  transform: translateZ(1px);
+}
+
+.fast-list-widget-empty-text {
+  padding: 4px 8px;
+}
+
+.theme-dark .fast-list-widget-empty-text {
+  color: #b6babf; /* Light foreground text */
+}
+
+.theme-light .fast-list-widget-empty-text {
+  color: #585959; /* Grey foreground text */
+}
+
+/* SideMenuWidget */
+
+
+.side-menu-widget-container {
+  /* Hack: force hardware acceleration */
+  transform: translateZ(1px);
+}
+
+/* SideMenuWidget container */
+
+.theme-dark .side-menu-widget-container,
+.theme-dark .side-menu-widget-empty-text {
+  background: url(background-noise-toolbar.png), #343c45; /* Toolbars */
+}
+
+.theme-dark .side-menu-widget-container:-moz-locale-dir(ltr),
+.theme-dark .side-menu-widget-empty-text:-moz-locale-dir(ltr) {
+  box-shadow: inset -1px 0 0 #000;
+}
+
+.theme-dark .side-menu-widget-container:-moz-locale-dir(rtl),
+.theme-dark .side-menu-widget-empty-text:-moz-locale-dir(rtl) {
+  box-shadow: inset 1px 0 0 #000;
+}
+
+.side-menu-widget-container:-moz-locale-dir(ltr),
+.side-menu-widget-empty-text:-moz-locale-dir(ltr) {
+  box-shadow: inset -1px 0 0 #aaa;
+}
+
+.side-menu-widget-container:-moz-locale-dir(rtl),
+.side-menu-widget-empty-text:-moz-locale-dir(rtl) {
+  box-shadow: inset 1px 0 0 #aaa;
+}
+
+.side-menu-widget-group {
+  /* To allow visibility of the dark margin shadow. */
+  -moz-margin-end: 1px;
+}
+
+.side-menu-widget-container[with-arrows=true] .side-menu-widget-item {
+  /* To compensate for the arrow image's dark margin. */
+  -moz-margin-end: -1px;
+}
+
+/* SideMenuWidget groups */
+
+.side-menu-widget-group-title {
+  padding: 4px;
+}
+
+.theme-dark .side-menu-widget-group-title {
+  background-color: #252c33; /* Tab toolbar */
+  color: #a9bacb; /* Light content text */
+}
+
+.theme-light .side-menu-widget-group-title {
+  background-color: #ebeced; /* Tab toolbar */
+  color: #667380; /* Dark grey content text */
+}
+
+/* SideMenuWidget items */
+
+.side-menu-widget-item {
+  /* To compensate for the top and bottom borders */
+  margin-top: -1px;
+  margin-bottom: -1px;
+  background-clip: padding-box;
+}
+
+.theme-dark .side-menu-widget-item {
+  border-top: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(128,128,128,0.15);
+  color: #f5f7fa; /* Light foreground text */
+}
+
+.theme-dark .side-menu-widget-item:last-of-type {
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.2);
+}
+
+.theme-light .side-menu-widget-item {
+  border-top: 1px solid rgba(128,128,128,0.15);
+  border-bottom: 1px solid transparent;
+  color: #18191a; /* Dark foreground text */
+}
+
+.theme-light .side-menu-widget-item:last-of-type {
+  box-shadow: inset 0 -1px 0 rgba(128,128,128,0.15);
+}
+
+.theme-dark .side-menu-widget-item.selected {
+  background-color: #1d4f73; /* Select Highlight Blue */
+  color: #f5f7fa; /* Light foreground text */
+}
+
+.theme-light .side-menu-widget-item.selected {
+  background-color: #4c9ed9; /* Select Highlight Blue */
+  color: #f5f7fa; /* Light foreground text */
+}
+
+.side-menu-widget-item-arrow {
+  -moz-margin-start: -7px;
+  width: 7px; /* The image's width is 7 pixels */
+  /* Cover the border of the side-menu-widget-item */
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
+
+.side-menu-widget-item.selected > .side-menu-widget-item-arrow {
+  background-size: auto, 1px 100%;
+  background-repeat: no-repeat;
+}
+
+.side-menu-widget-item.selected > .side-menu-widget-item-arrow:-moz-locale-dir(ltr) {
+  background-position: center right, top right;
+}
+
+.side-menu-widget-item.selected > .side-menu-widget-item-arrow:-moz-locale-dir(rtl) {
+  background-position: center left, top left;
+}
+
+.theme-dark .side-menu-widget-item.selected > .side-menu-widget-item-arrow:-moz-locale-dir(ltr) {
+  background-image: url(itemArrow-dark-ltr.png), linear-gradient(to right, #000, #000);
+}
+
+.theme-dark .side-menu-widget-item.selected > .side-menu-widget-item-arrow:-moz-locale-dir(rtl) {
+  background-image: url(itemArrow-dark-rtl.png), linear-gradient(to right, #000, #000);
+}
+
+.theme-light .side-menu-widget-item.selected > .side-menu-widget-item-arrow:-moz-locale-dir(ltr) {
+  background-image: url(itemArrow-ltr.svg), linear-gradient(to right, #aaa, #aaa);
+}
+
+.theme-light .side-menu-widget-item.selected > .side-menu-widget-item-arrow:-moz-locale-dir(rtl) {
+  background-image: url(itemArrow-rtl.svg), linear-gradient(to right, #aaa, #aaa);
+}
+
+/* SideMenuWidget items contents */
+
+.side-menu-widget-item-contents {
+  padding: 4px;
+  /* To avoid having content overlapping the arrow image. */
+  -moz-padding-end: 8px;
+}
+
+.side-menu-widget-item-other {
+  /* To avoid having content overlapping the arrow image. */
+  -moz-padding-end: 8px;
+  /* To compensate for the .side-menu-widget-item-contents padding. */
+  -moz-margin-start: -4px;
+  -moz-margin-end: -8px;
+}
+
+.side-menu-widget-item-other:first-of-type {
+  margin-top: 4px;
+}
+
+.side-menu-widget-item-other:last-of-type {
+  margin-bottom: -4px;
+}
+
+.theme-dark .side-menu-widget-item-other {
+  background: url(background-noise-toolbar.png), rgba(0,0,0,.1);
+}
+
+.theme-light .side-menu-widget-item-other {
+  background: url(background-noise-toolbar.png), rgba(128,128,128,.1);
+}
+
+.theme-dark .side-menu-widget-item.selected .side-menu-widget-item-other {
+  background-color: rgba(0,0,0,.2); /* Darken the selection by 20% */
+  color: #f5f7fa; /* Light foreground text */
+}
+
+.theme-light .side-menu-widget-item.selected .side-menu-widget-item-other {
+  background-color: rgba(255,255,255,.8); /* Lighten the selection by 20% */
+  color: #18191a; /* Dark foreground text */
+}
+
+.theme-dark .side-menu-widget-item.selected .side-menu-widget-item-other.selected {
+  background-color: transparent;
+  color: #f5f7fa; /* Light foreground text */
+}
+
+.theme-light .side-menu-widget-item.selected .side-menu-widget-item-other.selected {
+  background-color: transparent;
+  color: #f5f7fa; /* Light foreground text */
+}
+
+/* SideMenuWidget checkboxes */
+
+.side-menu-widget-group-checkbox {
+  margin: 0;
+  -moz-margin-end: 4px;
+}
+
+.side-menu-widget-item-checkbox {
+  margin: 0;
+  -moz-margin-start: 4px;
+}
+
+/* SideMenuWidget misc */
+
+.side-menu-widget-empty-text {
+  padding: 4px 8px;
+}
+
+.theme-dark .side-menu-widget-empty-text {
+  color: #b6babf; /* Foreground (Text) - Grey */
+}
+
+.theme-light .side-menu-widget-empty-text {
+  color: #585959; /* Grey foreground text */
+}
+
+/* VariablesView */
+
+.variables-view-container {
+  /* Hack: force hardware acceleration */
+  transform: translateZ(1px);
+}
+
+.variables-view-empty-notice {
+  padding: 2px;
+}
+
+.theme-dark .variables-view-empty-notice {
+  color: #b6babf; /* Foreground (Text) - Grey */
+}
+
+.theme-light .variables-view-empty-notice {
+  color: #585959; /* Grey foreground text */
+}
+
+.theme-dark .variables-view-scope:focus > .title,
+.theme-dark .variable-or-property:focus > .title {
+  background-color: #1d4f73; /* Selection colors */
+  color: #f5f7fa;
+}
+
+.theme-light .variables-view-scope:focus > .title,
+.theme-light .variable-or-property:focus > .title {
+  background-color: #4c9ed9; /* Selection colors */
+  color: #f5f7fa;
+}
+
+.variables-view-scope > .title {
+  border-top-width: 1px;
+  border-top-style: solid;
+  margin-top: -1px;
+}
+
+/* Generic variables traits */
+
+.variables-view-variable:not(:last-child) {
+  border-bottom: 1px solid rgba(128, 128, 128, .15);
+}
+
+.variables-view-variable > .title > .name {
+  font-weight: 600;
+}
+
+/* Generic variables *and* properties traits */
+
+.variable-or-property:focus > .title > label {
+  color: inherit !important;
+}
+
+.variable-or-property > .title > .value {
+  -moz-box-flex: 1;
+}
+
+.variable-or-property > .title > .arrow {
+  -moz-margin-start: 3px;
+}
+
+.variable-or-property:not([untitled]) > .variables-view-element-details {
+  -moz-margin-start: 7px;
+}
+
+/* Traits applied when variables or properties are changed or overridden */
+
+.variable-or-property:not([overridden]) {
+  transition: background 1s ease-in-out;
+}
+
+.variable-or-property:not([overridden])[changed] {
+  transition-duration: .4s;
+}
+
+.variable-or-property[overridden] {
+  background: rgba(128,128,128,0.05);
+}
+
+.variable-or-property[overridden] .title > label {
+  /* Cross out the title for this variable and all child properties. */
+  font-style: italic;
+  text-decoration: line-through;
+  border-bottom: none !important;
+  color: rgba(128,128,128,0.9);
+  opacity: 0.7;
+}
+
+/* Traits applied when variables or properties are editable */
+
+.variable-or-property[editable] > .title > .value {
+  cursor: text;
+}
+
+.variable-or-property[overridden] .title > .value {
+  /* Disallow editing this variable and all child properties. */
+  pointer-events: none;
+}
+
+/* Custom configurable/enumerable/writable or frozen/sealed/extensible
+ * variables and properties */
+
+.variable-or-property[non-enumerable]:not([self]):not([pseudo-item]) > .title > .name {
+  opacity: 0.6;
+}
+
+.variable-or-property[non-configurable]:not([pseudo-item]) > .title > .name {
+  border-bottom: 1px dashed #99f;
+}
+
+.variable-or-property[non-writable]:not([pseudo-item]) > .title > .name {
+  border-bottom: 1px dashed #f99;
+}
+
+.variable-or-property[safe-getter]:not([pseudo-item]) > .title > .name {
+  border-bottom: 1px dashed #8b0;
+}
+
+.variable-or-property-non-writable-icon {
+  background: url("chrome://browser/skin/devtools/vview-lock.png") no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+/*@media (min-resolution: 2dppx) {
+  .variable-or-property-non-writable-icon {
+    background-image: url("chrome://browser/skin/identity-icons-https@2x.png");
+    background-size: 32px;
+  }
+}
+*/
+.variable-or-property-frozen-label,
+.variable-or-property-sealed-label,
+.variable-or-property-non-extensible-label {
+  -moz-padding-end: 4px;
+}
+
+.variable-or-property:not(:focus) > .title > .variable-or-property-frozen-label,
+.variable-or-property:not(:focus) > .title > .variable-or-property-sealed-label,
+.variable-or-property:not(:focus) > .title > .variable-or-property-non-extensible-label {
+  color: #666;
+}
+
+/* Aligned values */
+
+.variables-view-container[aligned-values] .title > .separator {
+  -moz-box-flex: 1;
+}
+
+.variables-view-container[aligned-values] .title > .value {
+  -moz-box-flex: 0;
+  width: 70vw;
+}
+
+.variables-view-container[aligned-values] .title > .element-value-input {
+  width: calc(70vw - 10px);
+}
+
+/* Actions first */
+
+.variables-view-container[actions-first] .variables-view-delete,
+.variables-view-container[actions-first] .variables-view-open-inspector,
+.variables-view-container[actions-first] .variables-view-add-property {
+  -moz-box-ordinal-group: 0;
+}
+
+.variables-view-container[actions-first] [invisible] {
+  visibility: hidden;
+}
+
+/* Variables and properties tooltips */
+
+.variable-or-property > tooltip > label {
+  margin: 0 2px 0 2px;
+}
+
+.variable-or-property[non-enumerable] > tooltip > label.enumerable,
+.variable-or-property[non-configurable] > tooltip > label.configurable,
+.variable-or-property[non-writable] > tooltip > label.writable,
+.variable-or-property[non-extensible] > tooltip > label.extensible {
+  color: #800;
+  text-decoration: line-through;
+}
+
+.variable-or-property[overridden] > tooltip > label.overridden {
+  -moz-padding-start: 4px;
+  -moz-border-start: 1px dotted #000;
+}
+
+.variable-or-property[safe-getter] > tooltip > label.WebIDL {
+  -moz-padding-start: 4px;
+  -moz-border-start: 1px dotted #000;
+  color: #080;
+}
+
+/* Variables and properties editing */
+
+.variables-view-delete {
+  list-style-image: url("chrome://browser/skin/devtools/vview-delete.png");
+  -moz-image-region: rect(0,16px,16px,0);
+}
+
+.variables-view-delete:hover {
+  -moz-image-region: rect(0,48px,16px,32px);
+}
+
+.variables-view-delete:active {
+  -moz-image-region: rect(0,32px,16px,16px);
+}
+
+.variable-or-property:focus .variables-view-delete {
+  -moz-image-region: rect(0,16px,16px,0);
+}
+
+.variables-view-edit {
+  list-style-image: url("chrome://browser/skin/devtools/vview-edit.png");
+  -moz-image-region: rect(0,16px,16px,0);
+  cursor: pointer;
+  padding-left: 2px;
+}
+
+.variables-view-edit:hover {
+  -moz-image-region: rect(0,48px,16px,32px);
+}
+
+.variables-view-edit:active {
+  -moz-image-region: rect(0,32px,16px,16px);
+}
+
+.variable-or-property:focus .variables-view-edit {
+  -moz-image-region: rect(0,16px,16px,0);
+}
+
+.variables-view-open-inspector {
+  list-style-image: url("chrome://browser/skin/devtools/vview-open-inspector.png");
+  -moz-image-region: rect(0,16px,16px,0);
+  cursor: pointer;
+}
+
+.variables-view-open-inspector:hover {
+  -moz-image-region: rect(0,48px,16px,32px);
+}
+
+.variables-view-open-inspector:active {
+  -moz-image-region: rect(0,32px,16px,16px);
+}
+
+.variable-or-property:focus .variables-view-open-inspector {
+  -moz-image-region: rect(0,16px,16px,0);
+}
+
+.variables-view-throbber {
+  background: url("chrome://global/skin/icons/loading_16.png") center no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.element-value-input {
+  -moz-margin-start: -2px !important;
+  -moz-margin-end: 2px !important;
+}
+
+.element-name-input {
+  -moz-margin-start: -2px !important;
+  -moz-margin-end: 2px !important;
+  font-weight: 600;
+}
+
+.element-value-input,
+.element-name-input {
+  border: 1px solid rgba(128, 128, 128, .5) !important;
+  border-radius: 0;
+  color: inherit;
+}
+
+/* Variables and properties searching */
+
+.variables-view-searchinput {
+  min-height: 24px;
+}
+
+.variable-or-property[unmatched] {
+  border: none;
+  margin: 0;
+}
+
+/* Expand/collapse arrow */
+
+.arrow {
+  -moz-appearance: treetwisty;
+  width: 20px;
+  height: 20px;
+}
+
+.arrow[open] {
+  -moz-appearance: treetwistyopen;
+}
+
+.arrow[invisible] {
+  visibility: hidden;
+}
+
+/* Charts */
+
+.generic-chart-container {
+  /* Hack: force hardware acceleration */
+  transform: translateZ(1px);
+}
+
+.theme-dark .generic-chart-container {
+  color: #f5f7fa; /* Light foreground text */
+}
+
+.theme-light .generic-chart-container {
+  color: #585959; /* Grey foreground text */
+}
+
+.theme-dark .chart-colored-blob {
+  fill: #a9bacb; /* Light content text */
+  background: #a9bacb;
+}
+
+.theme-light .chart-colored-blob {
+  fill: #8fa1b2; /* Grey content text */
+  background: #8fa1b2;
+}
+
+/* Charts: Pie */
+
+.pie-chart-slice {
+  stroke-width: 1px;
+  cursor: pointer;
+}
+
+.theme-dark .pie-chart-slice {
+  stroke: rgba(0,0,0,0.2);
+}
+
+.theme-light .pie-chart-slice {
+  stroke: rgba(255,255,255,0.8);
+}
+
+.theme-dark .pie-chart-slice[largest] {
+  stroke-width: 2px;
+  stroke: #fff;
+}
+
+.theme-light .pie-chart-slice[largest] {
+  stroke: #000;
+}
+
+.pie-chart-label {
+  text-anchor: middle;
+  dominant-baseline: middle;
+  pointer-events: none;
+}
+
+.theme-dark .pie-chart-label {
+  fill: #000;
+}
+
+.theme-light .pie-chart-label {
+  fill: #fff;
+}
+
+.pie-chart-container[slices="1"] > .pie-chart-slice {
+  stroke-width: 0px;
+}
+
+.pie-chart-slice,
+.pie-chart-label {
+  transition: all 0.1s ease-out;
+}
+
+.pie-chart-slice:not(:hover):not([focused]),
+.pie-chart-slice:not(:hover):not([focused]) + .pie-chart-label {
+  transform: none !important;
+}
+
+/* Charts: Table */
+
+.table-chart-title {
+  padding-bottom: 10px;
+  font-size: 120%;
+  font-weight: 600;
+}
+
+.table-chart-row {
+  margin-top: 1px;
+  cursor: pointer;
+}
+
+.table-chart-grid:hover > .table-chart-row {
+  transition: opacity 0.1s ease-in-out;
+}
+
+.table-chart-grid:not(:hover) > .table-chart-row {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.generic-chart-container:hover > .table-chart-grid:hover > .table-chart-row:not(:hover),
+.generic-chart-container:hover ~ .table-chart-container > .table-chart-grid > .table-chart-row:not([focused]) {
+  opacity: 0.4;
+}
+
+.table-chart-row-box {
+  width: 8px;
+  height: 1.5em;
+  -moz-margin-end: 10px;
+}
+
+.table-chart-row-label {
+  width: 8em;
+  -moz-padding-end: 6px;
+  cursor: inherit;
+}
+
+.table-chart-totals {
+  margin-top: 8px;
+  padding-top: 6px;
+}
+
+.theme-dark .table-chart-totals {
+  border-top: 1px solid #b6babf; /* Grey foreground text */
+}
+
+.theme-light .table-chart-totals {
+  border-top: 1px solid #585959; /* Grey foreground text */
+}
+
+.table-chart-summary-label {
+  font-weight: 600;
+  padding: 1px 0px;
+}
+
+.theme-dark .table-chart-summary-label {
+  color: #f5f7fa; /* Light foreground text */
+}
+
+.theme-light .table-chart-summary-label {
+  color: #18191a; /* Dark foreground text */
+}
+
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* Manifest Editor overrides */
+
+.variables-view-container.manifest-editor {
+  background-color: #F5F5F5;
+  padding: 20px 2px;
+}
+
+.manifest-editor .variable-or-property:focus > .title {
+  background-color: #EDEDED;
+  color: #000;
+  border-radius: 4px;
+}
+
+.manifest-editor .variables-view-property > .title > .name {
+  color: #27406A;
+}
+
+.manifest-editor .variable-or-property > .title > label,
+.manifest-editor textbox  {
+  font-family: monospace;
+}
+
+.manifest-editor .variable-or-property > .title > .token-string {
+  color: #54BC6A;
+  font-weight: bold;
+}
+
+.manifest-editor .variable-or-property > .title > .token-boolean,
+.manifest-editor .variable-or-property > .title > .token-number {
+  color: #009BD4;
+  font-weight: bold;
+}
+
+.manifest-editor .variable-or-property > .title > .token-undefined {
+  color: #bbb;
+}
+
+.manifest-editor .variable-or-property > .title > .token-null {
+  color: #999;
+}
+
+.manifest-editor .variable-or-property > .title > .token-other {
+  color: #333;
+}
+
+.manifest-editor .variables-view-variable {
+  border-bottom: none;
+}
+
+.manifest-editor .variables-view-delete,
+.manifest-editor .variables-view-delete:hover,
+.manifest-editor .variables-view-delete:active,
+.manifest-editor .variable-or-property:focus .variables-view-delete,
+.manifest-editor .variables-view-add-property,
+.manifest-editor .variables-view-add-property:hover,
+.manifest-editor .variables-view-add-property:active,
+.manifest-editor .variable-or-property:focus .variables-view-add-property {
+  list-style-image: none;
+  -moz-image-region: initial;
+}
+
+.manifest-editor .variables-view-delete::before,
+.manifest-editor .variables-view-add-property::before {
+  width: 11px;
+  height: 11px;
+  content: "";
+  display: inline-block;
+  background-size: 11px auto;
+}
+
+.manifest-editor .variables-view-delete::before {
+  background-image: url("app-manager/remove.svg");
+}
+
+.manifest-editor .variables-view-add-property::before {
+  background-image: url("app-manager/add.svg");
+  -moz-margin-end: 2px;
+}
+
+.side-menu-widget-group-checkbox .checkbox-spacer-box,
+.side-menu-widget-item-checkbox .checkbox-spacer-box {
+  margin: 0;
+  border: none;
+}

@@ -17,6 +17,13 @@
              moveY 3.4s linear 0s infinite alternate;
 }
 
+%if APP_VERSION != 29
+#PanelUI-popup #PanelUI-contents:-moz-locale-dir(rtl):empty::before {
+  animation: moveXRTL 3.05s linear 0s infinite alternate,
+             moveY 3.4s linear 0s infinite alternate;
+}
+%endif
+
 #PanelUI-popup #PanelUI-contents:empty:hover::before {
   background-image: url(chrome://browser/skin/customizableui/whimsy.png);
 }
@@ -35,16 +42,28 @@
   /* These values are adjusted for the padding on the panel. */
   from { margin-left: -15px; } to { margin-left: calc(100% - 49px); }
 }
+
+%if APP_VERSION != 29
+@keyframes moveXRTL {
+  /* These values are adjusted for the padding on the panel. */
+  from { margin-right: -15px; } to { margin-right: calc(100% - 49px); }
+}
+%endif
+
 @keyframes moveY {
   /* These values are adjusted for the padding and height of the panel. */
+%if APP_VERSION == 29
   from { margin-top: -6px; } to { margin-top: 58px; }
+%else
+  from { margin-top: -.5em; } to { margin-top: calc(64px - .5em); }
+%endif
 }
 
 #PanelUI-button {
   /*
-  background-image: -moz-linear-gradient(hsla(0,0%,100%,0), hsla(0,0%,100%,.3) 30%, hsla(0,0%,100%,.3) 70%, hsla(0,0%,100%,0)),
-                    -moz-linear-gradient(hsla(210,54%,20%,0), hsla(210,54%,20%,.3) 30%, hsla(210,54%,20%,.3) 70%, hsla(210,54%,20%,0)),
-                    -moz-linear-gradient(hsla(0,0%,100%,0), hsla(0,0%,100%,.3) 30%, hsla(0,0%,100%,.3) 70%, hsla(0,0%,100%,0));
+  background-image: linear-gradient(to bottom, hsla(0,0%,100%,0), hsla(0,0%,100%,.3) 30%, hsla(0,0%,100%,.3) 70%, hsla(0,0%,100%,0)),
+                    linear-gradient(to bottom, hsla(210,54%,20%,0), hsla(210,54%,20%,.3) 30%, hsla(210,54%,20%,.3) 70%, hsla(210,54%,20%,0)),
+                    linear-gradient(to bottom, hsla(0,0%,100%,0), hsla(0,0%,100%,.3) 30%, hsla(0,0%,100%,.3) 70%, hsla(0,0%,100%,0));
   background-size: 1px calc(100% - 1px), 1px calc(100% - 1px), 1px  calc(100% - 1px) !important;
   background-position: 0px 0px, 1px 0px, 2px 0px;
   background-repeat: no-repeat;
@@ -1046,6 +1065,12 @@ toolbaritem[overflowedItem=true],
   background: url("chrome://global/skin/menu/shared-menu-check.png") center left 7px / 11px 11px no-repeat transparent;
 }
 
+%if APP_VERSION != 29
+.subviewbutton[checked="true"]:-moz-locale-dir(rtl) {
+  background-position: center right 7px;
+}
+%endif
+
 .subviewbutton > .menu-iconic-left {
   -moz-appearance: none;
   -moz-margin-end: 3px;
@@ -1099,6 +1124,16 @@ menuitem[checked="true"].subviewbutton > .menu-iconic-left {
 .subviewbutton.bookmark-item > .toolbarbutton-icon {
   -moz-margin-start: 3px;
 }
+
+%if APP_VERSION != 29
+/* subviewbutton entries for social sidebars have images that come from external
+/* sources, and are not guaranteed to be the size we want, so force the size on
+/* those icons. */
+toolbarbutton.social-provider-menuitem > .toolbarbutton-icon {
+  width: 16px;
+  height: 16px;
+}
+%endif
 
 .subviewbutton:-moz-any([image],[targetURI],.cui-withicon, .restoreallitem, .bookmark-item)[checked="true"] > .toolbarbutton-icon {
   visibility: hidden;
