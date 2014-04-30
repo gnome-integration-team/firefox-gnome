@@ -1,2 +1,5 @@
 *.jar
 *.xpi
+*.pyc
+.build
+.tmp
