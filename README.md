@@ -25,5 +25,5 @@ Tabs on bottom:
 ![Screenshot](https://raw.github.com/gnome-integration-team/firefox-gnome/master/screenshots/screenshot-tabs-on-bottom.png)
 
 If you'd like to change tab positions or any additional settings, 
-please install [GNOME Tweak Tool](https://addons.mozilla.org/en-US/firefox/addon/gnome-theme-tweak/)
+please install [GNOME Theme Tweak](https://addons.mozilla.org/en-US/firefox/addon/gnome-theme-tweak/)
 (an extension we also make).
