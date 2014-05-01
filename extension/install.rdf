@@ -13,6 +13,13 @@
     <em:creator>GNOME Integration Team</em:creator>
     <em:contributor>Alexander Seleznev</em:contributor>
 
+    <em:localized>
+      <Description em:locale="pl">
+        <em:name>GNOME Theme Tweak</em:name>
+        <em:description>Rozszerzenie do dostosowywania motywu GNOME.</em:description>
+      </Description>
+    </em:localized>
+
     <em:optionsURL>chrome://gnome-theme-tweak/content/options.xul</em:optionsURL>
     <em:optionsType>2</em:optionsType>
 
