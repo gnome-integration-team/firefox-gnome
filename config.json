@@ -1,8 +1,11 @@
 {
+  "version": "29.1",
+  "min-version": "29.0",
+  "max-version": "31.0a1",
   "xpi": {
     "theme": "gnome-firefox-theme.xpi",
     "extension": "gnome-firefox-extension.xpi",
-    "package": "gnome-firefox-package.xpi"
+    "package": "gnome-firefox-@VERSION@.xpi"
   },
   "directory-structure": {
     "shared-dir": "chrome"

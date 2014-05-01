@@ -7,7 +7,7 @@
     <em:id>{451500c0-902c-11e0-91e4-0800200c9a66}</em:id>
     <em:type>4</em:type>
     <em:name>GNOME</em:name>
-    <em:version>29.1</em:version>
+    <em:version>@VERSION@</em:version>
     <em:description>GNOME theme for Firefox</em:description>
     <em:creator>GNOME Integration Team</em:creator>
     <em:contributor>GNOME Integration Team</em:contributor>
@@ -46,8 +46,8 @@
     <em:targetApplication>
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
-        <em:minVersion>29.0</em:minVersion>
-        <em:maxVersion>31.0a1</em:maxVersion>
+        <em:minVersion>@MIN_VERSION@</em:minVersion>
+        <em:maxVersion>@MAX_VERSION@</em:maxVersion>
       </Description>
     </em:targetApplication>
 
