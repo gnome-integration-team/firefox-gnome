@@ -21,6 +21,13 @@
     </em:localized>
 
     <em:localized>
+      <Description em:locale="ru">
+        <em:name>GNOME Theme Tweak</em:name>
+        <em:description>Расширение для настройки темы GNOME.</em:description>
+      </Description>
+    </em:localized>
+
+    <em:localized>
       <Description em:locale="uk">
         <em:name>GNOME Theme Tweak</em:name>
         <em:description>Розширення для налаштування теми GNOME.</em:description>

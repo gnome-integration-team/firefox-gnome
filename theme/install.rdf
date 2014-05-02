@@ -35,7 +35,7 @@
     </em:localized>
 
     <em:localized>
-      <Description em:locale="ru-RU">
+      <Description em:locale="ru">
         <em:name>GNOME</em:name>
         <em:description>Тема GNOME для Firefox</em:description>
       </Description>
