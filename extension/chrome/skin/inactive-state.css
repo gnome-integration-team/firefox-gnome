@@ -120,7 +120,7 @@ notification .messageImage:-moz-window-inactive {
 }
 
 #main-window:-moz-window-inactive #TabsToolbar[newstyletabs] {
-  border-top-color: #caccca;
+  border-top-color: #caccca !important;
 }
 
 #main-window:-moz-window-inactive textbox {

@@ -27,16 +27,12 @@
   border-top: none;
 }
 
-#navigator-toolbox[tabsontop="true"]::after {
+#navigator-toolbox:-moz-any([tabsontop="true"], [newstyletabs])::after {
   content: "";
   display: -moz-box;
   -moz-box-ordinal-group: 101; /* tabs toolbar is 100 */
   height: 1px;
   background-color: #a7aba7;
-}
-
-#navigator-toolbox[newstyletabs]::after {
-  display: none;
 }
 
 /* Toolbars */
@@ -2199,13 +2195,17 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 
 #TabsToolbar[newstyletabs] {
   background: #e2e2e2;
-  border-bottom: 1px solid #a7aba7;
   border-top: 1px solid #969a96;
+  border-bottom: 0;
   box-shadow: 0 -1px #e2e2e2,
               inset 0 3px rgba(0,0,0,0.03),
               inset 0 2px rgba(0,0,0,0.03),
               inset 0 1px rgba(0,0,0,0.03);
   padding: 0 10px !important;
+}
+
+#TabsToolbar[newstyletabs][tabsontop="true"] {
+  border-bottom: 1px solid #a7aba7;
 }
 
 /*

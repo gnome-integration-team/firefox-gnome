@@ -20,7 +20,7 @@ var Tweaks = {
     newStyleTabs: {
         key: "new-style-tabs",
         type: "attribute",
-        elements: ["nav-bar", "TabsToolbar"],
+        elements: ["navigator-toolbox", "nav-bar", "TabsToolbar"],
         attributeName: "newstyletabs",
         attributeValue: "true"
     },
