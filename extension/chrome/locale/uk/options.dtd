@@ -1,0 +1,12 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY newtabpage.label              "Біле тло на сторінці нової вкладки">
+<!ENTITY reliefbuttons.label           "Об’ємний стиль кнопок панелі навігації">
+<!ENTITY inactivestate.label           "Змінювати стиль для неактивних вікон">
+<!ENTITY tabontop.label                "Панель вкладок зверху панелі навігації">
+<!ENTITY newstyletabs.label            "Новий стиль панелі вкладок">
+<!ENTITY tabsborder.label              "Сховати білу межу внизу панелі вкладок">
+<!ENTITY urlbarhistorydropmarker.label "Сховати кнопку випадаючої історії в полі вводу адреси">
+<!ENTITY forwardbutton.label           "Завжди показувати кнопку переходу вперед">

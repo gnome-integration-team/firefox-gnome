@@ -41,6 +41,13 @@
       </Description>
     </em:localized>
 
+    <em:localized>
+      <Description em:locale="uk">
+        <em:name>GNOME</em:name>
+        <em:description>Тема GNOME для Firefox</em:description>
+      </Description>
+    </em:localized>
+
     <em:targetPlatform>Linux</em:targetPlatform>
 
     <em:targetApplication>
