@@ -2301,6 +2301,12 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   max-width: 0.1px;
 }
 
+/* Hide the tab if there's only one tab */
+#tabbrowser-tabs tab[first-tab='true'][last-tab='true'],
+#tabbrowser-tabs tab[first-tab='true'][last-tab='true'] + * {
+ display: none;
+}
+
 #TabsToolbar[newstyletabs] .tabbrowser-tab[selected=true] {
   position: relative;
   z-index: 2;
