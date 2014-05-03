@@ -14,12 +14,8 @@ import subprocess
 import zipfile
 
 class AddonBuilder():
-    def __init__(self, src_dir=".", build_dir=".build", config_file="config.json"):
-        self.config = self._load_config(config_file)
-        if "VERSION" in os.environ:
-            self.config["override-version"] = True
-            self.config["version"] = os.environ.get("VERSION")
-        self.config = self._validate_config(self.config)
+    def __init__(self, config, src_dir=".", build_dir=".build"):
+        self.config = self._validate_config(config)
 
         self.src_dir = os.path.normpath(src_dir)
         self.build_dir = os.path.normpath(build_dir)
@@ -27,19 +23,6 @@ class AddonBuilder():
         self.dependencies = {}
 
         os.makedirs(self.build_dir, exist_ok=True)
-
-    def _load_config(self, path):
-        try:
-            with open(path, "r") as config_file:
-                config = json.load(config_file)
-                return config
-        except FileNotFoundError:
-            print("%s: %s not found" % (sys.argv[0], path))
-            sys.exit(1)
-        except ValueError as e:
-            print("%s: parse error: %s" % (sys.argv[0], path))
-            print(e)
-            sys.exit(1)
 
     class ConfigError(RuntimeError):
         def __init__(self, message):
@@ -71,18 +54,11 @@ class AddonBuilder():
 
     def build(self):
         self.result_files = []
-
         for base, dirs, files in os.walk(self.src_dir):
             for name in files:
                 source = os.path.join(base, name)[len(self.src_dir)+1:]
                 self._process_file(source)
-
-        xpi = zipfile.ZipFile(self.xpi_file, "w")
-        for i in self.result_files:
-            xpi.write(i[0], i[1]) # source, path_inside_xpi
-        xpi.close()
-
-        del self.result_files
+        self._create_xpi()
 
     def _process_file(self, source):
         if source == "install.rdf.in":
@@ -163,6 +139,15 @@ class AddonBuilder():
             self._update_dependencies(source, deps)
 
         #os.remove(deps_tmp_file)
+
+    def _create_xpi(self, files_map=None):
+        if not files_map:
+            files_map = self.result_files
+
+        xpi = zipfile.ZipFile(self.xpi_file, "w", compression=zipfile.ZIP_STORED)
+        for i in files_map:
+            xpi.write(i[0], i[1]) # source, path_inside_xpi
+        xpi.close()
 
     def _update_dependencies(self, source, deps):
         if len(deps) == 0 and source in self.dependencies:

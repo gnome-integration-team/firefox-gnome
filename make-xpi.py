@@ -18,6 +18,7 @@ import sys
 import os
 import shutil
 import json
+import argparse
 
 sys.path.insert(0, "./build")
 
@@ -26,16 +27,17 @@ from extensionbuilder import ExtensionBuilder
 from packagebuilder import PackageBuilder
 
 def main():
-    args = sys.argv[1:]
-    if len(args) == 1:
-        action = args[0]
-    else:
-        action = "all"
+    parser = argparse.ArgumentParser()
+    parser.add_argument("action", nargs='?', default="all",
+                        choices=["all", "theme", "extension", "clean"],
+                        help="build theme, extension, package or clean sources")
+    parser.add_argument("--version",
+                        help="override version from config.json")
+    parser.add_argument("--target-version", type=int,
+                        help="build for a certain version only")
+    args = parser.parse_args()
 
-    if not action in ["all", "theme", "extension", "clean"]:
-        print(sys.argv[0] + ": uncorrect target")
-        print("Availible targets: all, theme, extension, clean")
-        sys.exit(1)
+    action = args.action
 
     #
     # Clean up
@@ -52,11 +54,35 @@ def main():
         sys.exit(0)
 
     #
+    # Create config = argparse + config.json
+    #
+
+    try:
+        with open("config.json", "r") as config_file:
+            config = json.load(config_file)
+    except FileNotFoundError:
+        print("%s: %s not found" % (sys.argv[0], "config.json"))
+        sys.exit(1)
+    except ValueError as e:
+        print("%s: parse error: %s" % (sys.argv[0], "config.json"))
+        print(e)
+        sys.exit(1)
+
+    if "VERSION" in os.environ:
+        config["version"] = os.environ.get("VERSION")
+        config["override-version"] = True
+    if args.version:
+        config["version"] = args.version
+        config["override-version"] = True
+    if args.target_version:
+        config["target-version"] = args.target_version
+
+    #
     # Theme building
     #
 
     if action in ["theme", "all"]:
-        builder = ThemeBuilder()
+        builder = ThemeBuilder(config)
         print(":: Starting build theme...")
         builder.build()
 
@@ -65,7 +91,7 @@ def main():
     #
 
     if action in ["extension", "all"]:
-        builder = ExtensionBuilder()
+        builder = ExtensionBuilder(config)
         print(":: Starting build extension...")
         builder.build()
 
@@ -73,8 +99,8 @@ def main():
     # Package building
     #
 
-    if action in ["all"]:
-        builder = PackageBuilder()
+    if action == "all":
+        builder = PackageBuilder(config)
         print(":: Starting make package...")
         builder.build()
 
