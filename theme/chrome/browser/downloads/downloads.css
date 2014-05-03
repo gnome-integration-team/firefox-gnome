@@ -41,7 +41,7 @@
 
 %if APP_VERSION == 29 || APP_VERSION == 30
 #downloadsPanel[hasdownloads] > #downloadsFooter {
-else
+%else
 #downloadsFooter {
 %endif
   border-top: 1px solid ThreeDShadow;
