@@ -2293,14 +2293,13 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   text-shadow: none;
 }
 
-/*
+/* Expand tabs to full width */
 #TabsToolbar[newstyletabs] .tabbrowser-tab:not([pinned]) {
   max-width: none;
 }
 #TabsToolbar[newstyletabs] .tabbrowser-tab:not([pinned]):not([fadein]) {
   max-width: 0.1px;
 }
-*/
 
 #TabsToolbar[newstyletabs] .tabbrowser-tab[selected=true] {
   position: relative;
