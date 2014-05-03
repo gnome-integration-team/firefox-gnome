@@ -63,9 +63,18 @@ class AddonBuilder():
     def _process_file(self, source):
         if source == "install.rdf.in":
             target = source[:-3]
-            if self._is_need_update(target, source) or "override-version" in self.config:
+            override = False
+            if "override-version" in self.config or "target-version" in self.config:
+                target = target + ".override"
+                override = True
+
+            if override or self._is_need_update(target, source):
                 self._generate_install_manifest(source, target)
-            self.result_files.append([os.path.join(self.build_dir, target), target])
+
+            if override:
+                self.result_files.append([os.path.join(self.build_dir, target), target[:-9]])
+            else:
+                self.result_files.append([os.path.join(self.build_dir, target), target])
         else:
             target = source
             self.result_files.append([os.path.join(self.src_dir, source), target])
@@ -97,7 +106,8 @@ class AddonBuilder():
     def _generate_install_manifest(self, source, target):
         source = os.path.join(self.src_dir, source)
         target = os.path.join(self.build_dir, target)
-        print("Convert %s to %s" % (source, target))
+        if self.config["verbose"]:
+            print("Convert %s to %s" % (source, target))
         os.makedirs(os.path.dirname(target), exist_ok=True)
         cmd = "sed"
         cmd = cmd + " -e s,[@]VERSION[@]," + self.config["version"] + ",g"
@@ -109,7 +119,8 @@ class AddonBuilder():
     def _preprocess(self, source, target, app_version=None):
         source_full = os.path.join(self.src_dir, source)
         target_full = os.path.join(self.build_dir, target)
-        print("Convert %s to %s" % (source_full, target_full))
+        if self.config["verbose"]:
+            print("Convert %s to %s" % (source_full, target_full))
 
         deps_tmp_file = os.path.join(self.build_dir, "deps.tmp")
         os.makedirs(os.path.dirname(deps_tmp_file), exist_ok=True)
@@ -144,8 +155,10 @@ class AddonBuilder():
         if not files_map:
             files_map = self.result_files
 
-        xpi = zipfile.ZipFile(self.xpi_file, "w", compression=zipfile.ZIP_STORED)
+        xpi = zipfile.ZipFile(self.xpi_file, "w", compression=zipfile.ZIP_DEFLATED)
         for i in files_map:
+            if self.config["verbose"] >= 2:
+                print("Archiving %s to %s" % (i[0], i[1]))
             xpi.write(i[0], i[1]) # source, path_inside_xpi
         xpi.close()
 

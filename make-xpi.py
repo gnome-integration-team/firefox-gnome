@@ -35,6 +35,8 @@ def main():
                         help="override version from config.json")
     parser.add_argument("--target-version", type=int,
                         help="build for a certain version only")
+    parser.add_argument("-v", "--verbose", action="count",
+                        help="increase output verbosity")
     args = parser.parse_args()
 
     action = args.action
@@ -76,6 +78,10 @@ def main():
         config["override-version"] = True
     if args.target_version:
         config["target-version"] = args.target_version
+
+    config["verbose"] = 0
+    if args.verbose:
+        config["verbose"] = args.verbose
 
     #
     # Theme building
