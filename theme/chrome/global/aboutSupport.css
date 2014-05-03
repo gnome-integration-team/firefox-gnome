@@ -89,6 +89,9 @@ td {
   -moz-margin-end: 0;
   padding: 16px;
   width: 30%;
+%if APP_VERSION != 29 && APP_VERSION != 30
+  visibility: hidden;
+%endif
 }
 
 #reset-box:-moz-dir(rtl) {
@@ -103,3 +106,13 @@ td {
   display: block;
   margin: auto;
 }
+
+%if APP_VERSION != 29 && APP_VERSION != 30
+.block {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+%endif

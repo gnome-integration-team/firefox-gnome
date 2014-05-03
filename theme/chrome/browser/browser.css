@@ -90,12 +90,12 @@
 #nav-bar {
   border-top: none;
   padding: 4px 3px !important;
+}
+#TabsToolbar:not([collapsed="true"]) + #nav-bar[tabsontop="true"]:not([newstyletabs]) {
+  margin-top: -1px; /* Move up into the TabsToolbar */
   /* Position the toolbar above the bottom of background tabs */
   position: relative;
   z-index: 1;
-}
-#nav-bar[tabsontop="true"]:not([newstyletabs]) {
-  margin-top: -1px; /* Move up 1px into the TabsToolbar */
 }
 
 /* What it is?
@@ -791,6 +791,16 @@ window:not([chromehidden~="toolbar"]) #urlbar-container:not([switchingtabs]) > #
   list-style-image: url(chrome://symbolic-icons/skin/new-window.svg);
 }
 
+%if APP_VERSION != 29 && APP_VERSION != 30
+#e10s-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://symbolic-icons/skin/new-window.svg);
+}
+
+#e10s-button > .toolbarbutton-icon {
+  transform: scaleY(-1);
+}
+%endif
+
 #new-tab-button[cui-areatype="toolbar"] {
   list-style-image: url(chrome://symbolic-icons/skin/tab-new.svg);
 }
@@ -947,6 +957,13 @@ toolbarpaletteitem[place="palette"] > #new-window-button {
   list-style-image: url(chrome://symbolic-icons/skin/new-window.svg);
 }
 
+%if APP_VERSION != 29 && APP_VERSION != 30
+#e10s-button[cui-areatype="menu-panel"],
+toolbarpaletteitem[place="palette"] > #e10s-button {
+  list-style-image: url(chrome://symbolic-icons/skin/new-window.svg);
+}
+%endif
+
 #new-tab-button[cui-areatype="menu-panel"],
 toolbarpaletteitem[place="palette"] > #new-tab-button {
   list-style-image: url(chrome://symbolic-icons/skin/tab-new.svg);
@@ -1038,8 +1055,13 @@ toolbarpaletteitem[place="palette"] > #zoom-controls > #zoom-in-button {
 /* */
 
 /*toolbaritem[sdkstylewidget="true"] > toolbarbutton .toolbarbutton-icon,*/
+%if APP_VERSION == 29 || APP_VERSION == 30
 :-moz-any(#home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #characterencoding-button, #email-link-button)[cui-areatype="menu-panel"] .toolbarbutton-icon,
 toolbarpaletteitem[place="palette"] > :-moz-any(#home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #characterencoding-button, #email-link-button) .toolbarbutton-icon {
+%else
+:-moz-any(#home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #characterencoding-button, #email-link-button)[cui-areatype="menu-panel"] .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] > :-moz-any(#home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #characterencoding-button, #email-link-button, #e10s-button) .toolbarbutton-icon {
+%endif
   opacity: .6;
 }
 
@@ -1835,6 +1857,20 @@ window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([fo
 #pointerLock-cancel {
   margin: 0px;
 }
+
+%if APP_VERSION != 29 && APP_VERSION != 30
+.translate-notification-icon,
+#translate-notification-icon {
+  list-style-image: url(chrome://browser/skin/translation-16.png);
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+.translated-notification-icon,
+#translated-notification-icon {
+  list-style-image: url(chrome://browser/skin/translation-16.png);
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+%endif
 
 #treecolAutoCompleteImage {
   max-width : 36px;
@@ -2646,10 +2682,18 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   -moz-padding-end: 9px;
 }
 
+%if APP_VERSION == 29 || APP_VERSION == 30
+.tabs-closebutton > .toolbarbutton-icon {
+  /* XXX Buttons have padding in widget/ that we don't want here but can't override with good CSS, so we must
+     use evil CSS to give the impression of smaller content */
+  margin: -2px;
+}
+
 /* Tabstrip close button */
 .tabs-closebutton {
   /* FIXME */
 }
+%endif
 
 /* In-tab close button */
 #TabsToolbar .tab-close-button {
@@ -2751,6 +2795,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   filter: none;
 }
 
+%if APP_VERSION == 29 || APP_VERSION == 30
 .customization-tipPanel-closeBox > .close-icon {
   -moz-appearance: none;
   width: 16px;
@@ -2761,12 +2806,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 .customization-tipPanel-closeBox > .close-icon:active {
   background-image: -moz-image-rect(url("chrome://global/skin/icons/close.svg"), 0, 48, 16, 32);
 }
-
-.tabs-closebutton > .toolbarbutton-icon {
-  /* XXX Buttons have padding in widget/ that we don't want here but can't override with good CSS, so we must
-     use evil CSS to give the impression of smaller content */
-  margin: -2px;
-}
+%endif
 
 /* Tabbrowser arrowscrollbox arrows */
 
@@ -2938,11 +2978,13 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   box-shadow: inset -5px 0 ThreeDShadow;
 }
 
+%if APP_VERSION == 29 || APP_VERSION == 30
 /* Sidebar */
 #sidebar-header > .tabs-closebutton {
   margin-bottom: 0px !important;
   padding: 0px 2px 0px 2px !important;
 }
+%endif
 
 #sidebar-throbber[loading="true"] {
   list-style-image: url("chrome://global/skin/icons/loading_16.png");
@@ -4572,6 +4614,13 @@ toolbarpaletteitem[place="toolbar"] {
   border-right: 3px solid transparent;
   border-left: 3px solid transparent;
 }
+
+%if APP_VERSION != 29 && APP_VERSION != 30
+/* The :hover:active style from toolkit doesn't seem to work in this panel so just use :active. */
+.customization-tipPanel-closeBox > .close-icon:active {
+  background-image: -moz-image-rect(url("chrome://global/skin/icons/close.svg"), 0, 48, 16, 32);
+}
+%endif
 
 /* End customization mode */
 

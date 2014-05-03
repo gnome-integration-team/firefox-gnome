@@ -94,9 +94,11 @@ notification .messageCloseButton:hover > .toolbarbutton-icon {
 }
 
 :not(notification) .messageCloseButton {
+%if APP_VERSION == 29 || APP_VERSION == 30
   -moz-appearance: none;
   width: 16px;
   height: 16px;
+%endif
   padding-left: 11px;
   padding-right: 11px;
 }
