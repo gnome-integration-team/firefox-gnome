@@ -2295,17 +2295,22 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 
 /* Expand tabs to full width */
 #TabsToolbar[newstyletabs] .tabbrowser-tab:not([pinned]) {
-  max-width: none;
+  max-width: 200em;
 }
 #TabsToolbar[newstyletabs] .tabbrowser-tab:not([pinned]):not([fadein]) {
   max-width: 0.1px;
 }
 
-/* Hide the tab if there's only one tab */
-#tabbrowser-tabs tab[first-tab='true'][last-tab='true'],
-#tabbrowser-tabs tab[first-tab='true'][last-tab='true'] + * {
- display: none;
+
+#TabsToolbar[newstyletabs] .tabs-newtab-button {
+ -moz-box-flex: 100;
 }
+
+/*
+#TabsToolbar[newstyletabs] .tabs-newtab-button:nth-child(3) {
+ max-width: 200em;
+}
+*/
 
 #TabsToolbar[newstyletabs] .tabbrowser-tab[selected=true] {
   position: relative;
