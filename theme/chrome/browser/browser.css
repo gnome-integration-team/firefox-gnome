@@ -16,6 +16,16 @@
 @namespace svg url("http://www.w3.org/2000/svg");
 %endif
 
+%filter substitution
+
+%define nestedButtons #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button
+%if APP_VERSION == 29
+%define primaryToolbarButtons #back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, @nestedButtons@
+%elif APP_VERSION == 30
+%define primaryToolbarButtons #back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, @nestedButtons@
+%else
+%define primaryToolbarButtons #back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, @nestedButtons@, #e10s-button
+%endif
 
 #menubar-items {
   -moz-box-orient: vertical; /* for flex hack */
@@ -713,12 +723,6 @@ window:not([chromehidden~="toolbar"]) #urlbar-container:not([switchingtabs]) > #
 
 /* Menu panel buttons */
 
-%if APP_VERSION != 29
-:-moz-any(#sidebar-button) {
-  list-style-image: url("chrome://browser/skin/Toolbar.png");
-}
-%endif
-
 #back-button {
   list-style-image: url(chrome://symbolic-icons/skin/go-previous.svg);
 }
@@ -872,19 +876,13 @@ window:not([chromehidden~="toolbar"]) #urlbar-container:not([switchingtabs]) > #
 
 %if APP_VERSION != 29
 #sidebar-button[cui-areatype="toolbar"] {
-  -moz-image-region: rect(0, 684px, 18px, 666px);
+  list-style-image: url(chrome://symbolic-icons/skin/sidebar.svg);
 }
 %endif
 
 /* Menu panel and palette styles */
 
-%if APP_VERSION == 29
 toolbaritem[sdkstylewidget="true"] > toolbarbutton {
-%else
-toolbaritem[sdkstylewidget="true"] > toolbarbutton,
-:-moz-any(#sidebar-button)[cui-areatype="menu-panel"],
-toolbarpaletteitem[place="palette"] > :-moz-any(#sidebar-button) {
-%endif
   /* FIXME */
   list-style-image: url(chrome://browser/skin/menuPanel.png);
 }
@@ -1008,11 +1006,7 @@ toolbarpaletteitem[place="palette"] > #email-link-button {
 %if APP_VERSION != 29
 #sidebar-button[cui-areatype="menu-panel"],
 toolbarpaletteitem[place="palette"] > #sidebar-button {
-  -moz-image-region: rect(0, 864px, 32px, 832px);
-}
-
-#sidebar-button[cui-areatype="menu-panel"][panel-multiview-anchor=true] {
-  -moz-image-region: rect(32px, 864px, 64px, 832px);
+  list-style-image: url(chrome://symbolic-icons/skin/sidebar.svg);
 }
 %endif
 
@@ -1051,17 +1045,12 @@ toolbarpaletteitem[place="palette"] > #zoom-controls > #zoom-in-button {
 /* */
 
 /*toolbaritem[sdkstylewidget="true"] > toolbarbutton .toolbarbutton-icon,*/
-%if APP_VERSION == 29 || APP_VERSION == 30
-:-moz-any(#home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #characterencoding-button, #email-link-button)[cui-areatype="menu-panel"] .toolbarbutton-icon,
-toolbarpaletteitem[place="palette"] > :-moz-any(#home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #characterencoding-button, #email-link-button) .toolbarbutton-icon {
-%else
-:-moz-any(#home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #characterencoding-button, #email-link-button)[cui-areatype="menu-panel"] .toolbarbutton-icon,
-toolbarpaletteitem[place="palette"] > :-moz-any(#home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #characterencoding-button, #email-link-button, #e10s-button) .toolbarbutton-icon {
-%endif
+:-moz-any(@primaryToolbarButtons@)[cui-areatype="menu-panel"] .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] > :-moz-any(@primaryToolbarButtons@) .toolbarbutton-icon {
   opacity: .6;
 }
 
-:-moz-any(#bookmarks-menu-button, #history-panelmenu, #characterencoding-button, #developer-button)[cui-areatype="menu-panel"][panel-multiview-anchor=true] .toolbarbutton-icon {
+:-moz-any(@primaryToolbarButtons@)[cui-areatype="menu-panel"][panel-multiview-anchor=true] .toolbarbutton-icon {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
   opacity: 1;
 }
@@ -1857,14 +1846,13 @@ window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([fo
 %if APP_VERSION != 29 && APP_VERSION != 30
 .translate-notification-icon,
 #translate-notification-icon {
-  list-style-image: url(chrome://browser/skin/translation-16.png);
-  -moz-image-region: rect(0px, 16px, 16px, 0px);
+  list-style-image: url(chrome://symbolic-icons/skin/translate.svg);
+  opacity: .3;
 }
 
 .translated-notification-icon,
 #translated-notification-icon {
-  list-style-image: url(chrome://browser/skin/translation-16.png);
-  -moz-image-region: rect(0px, 32px, 16px, 16px);
+  list-style-image: url(chrome://symbolic-icons/skin/translate.svg);
 }
 %endif
 
