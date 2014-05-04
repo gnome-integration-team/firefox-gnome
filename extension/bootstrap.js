@@ -254,6 +254,17 @@ var GNOMEThemeTweak = {
         return true;
     },
 
+    _isNeedEnable: function(key) {
+        var type = this.prefs.getPrefType(key);
+        if (type == this.prefs.PREF_BOOL) {
+            return this.prefs.getBoolPref(key)
+        }
+        else if (type == this.prefs.PREF_INT) {
+            return this.prefs.getIntPref(key) != 0
+        }
+        return true;
+    },
+
     _getCssPathFromTweak: function(tweak) {
         var css_file_name;
         switch (typeof tweak.cssPath) {
@@ -269,13 +280,13 @@ var GNOMEThemeTweak = {
     _enableTweak: function(tweak) {
         switch(tweak.type) {
             case "stylesheet":
-                if (!tweak.isEnabled && this.prefs.getBoolPref(tweak.key)) {
+                if (!tweak.isEnabled && this._isNeedEnable(tweak.key)) {
                     this.loadStyle(this._getCssPathFromTweak(tweak));
                     tweak.isEnabled = true;
                 }
                 break;
             case "attribute":
-                if (!tweak.isEnabled && this.prefs.getBoolPref(tweak.key)) {
+                if (!tweak.isEnabled && this._isNeedEnable(tweak.key)) {
                     let value;
                     switch (typeof tweak.attributeValue) {
                         case "string":
