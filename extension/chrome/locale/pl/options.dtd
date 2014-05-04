@@ -7,6 +7,12 @@
 <!ENTITY inactivestate.label           "Inny wygląd nieaktywnych okien">
 <!ENTITY tabontop.label                "Karty na górze">
 <!ENTITY newstyletabs.label            "Karty w stylu GNOME 3.12">
+<!ENTITY maxtabwidth.label             "Maximum tab width">
+<!ENTITY default.label                 "Default">
+<!ENTITY small.label                   "Small">
+<!ENTITY normal.label                  "Normal">
+<!ENTITY large.label                   "Large">
+<!ENTITY stretch.label                 "Stretch">
 <!ENTITY tabsborder.label              "Ukrywanie białej ramki za paskiem narzędziowym kart">
 <!ENTITY urlbarhistorydropmarker.label "Ukrywanie przycisku rozwijania paska adresu">
 <!ENTITY forwardbutton.label           "Wyświetlanie przycisku Do przodu">

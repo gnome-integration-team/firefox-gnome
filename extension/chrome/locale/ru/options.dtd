@@ -7,6 +7,12 @@
 <!ENTITY inactivestate.label           "Включить отдельный стиль для неактивных окон">
 <!ENTITY tabontop.label                "Показывать панель вкладок сверху">
 <!ENTITY newstyletabs.label            "Панель вкладок в стиле GNOME 3.12">
+<!ENTITY maxtabwidth.label             "Максимальная ширина вкладки">
+<!ENTITY default.label                 "По умолчанию">
+<!ENTITY small.label                   "Малый">
+<!ENTITY normal.label                  "Нормальный">
+<!ENTITY large.label                   "Большой">
+<!ENTITY stretch.label                 "Во всю ширину">
 <!ENTITY tabsborder.label              "Скрыть белый бордюр после панели вкладок">
 <!ENTITY urlbarhistorydropmarker.label "Скрыть кнопку показа истории в поле ввода адреса">
 <!ENTITY forwardbutton.label           "Всегда показывать кнопку Вперёд">

@@ -2377,14 +2377,22 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   text-shadow: none;
 }
 
-/*
-#TabsToolbar[newstyletabs] .tabbrowser-tab:not([pinned]) {
+#tabbrowser-tabs[tabmaxwidth="small"] .tabbrowser-tab:not([pinned]) {
+  max-width: 170px;
+}
+#tabbrowser-tabs[tabmaxwidth="normal"] .tabbrowser-tab:not([pinned]) {
+  max-width: 210px;
+}
+#tabbrowser-tabs[tabmaxwidth="large"] .tabbrowser-tab:not([pinned]) {
+  max-width: 350px;
+}
+#tabbrowser-tabs[tabmaxwidth="stretch"] .tabbrowser-tab:not([pinned]) {
   max-width: none;
 }
-#TabsToolbar[newstyletabs] .tabbrowser-tab:not([pinned]):not([fadein]) {
+
+#tabbrowser-tabs .tabbrowser-tab:not([pinned]):not([fadein]) {
   max-width: 0.1px;
 }
-*/
 
 #TabsToolbar[newstyletabs] .tabbrowser-tab[selected=true] {
   position: relative;
