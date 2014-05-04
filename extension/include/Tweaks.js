@@ -17,6 +17,27 @@ var Tweaks = {
     },
     */
 
+    tabMaxWidth: {
+        key: "tab-max-width",
+        type: "attribute",
+        elements: ["tabbrowser-tabs"],
+        attributeName: "tabmaxwidth",
+        attributeValue: function() {
+            switch (GNOMEThemeTweak.prefs.getIntPref(this.key)) {
+                case 1:
+                    return "small";
+                case 2:
+                    return "normal";
+                case 3:
+                    return "large";
+                case 4:
+                    return "stretch";
+                default:
+                    return "default";
+            }
+        }
+    },
+
     newStyleTabs: {
         key: "new-style-tabs",
         type: "attribute",

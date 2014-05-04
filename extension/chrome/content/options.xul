@@ -17,6 +17,24 @@
            type="bool" title="&tabontop.label;"/>
   <setting pref="extensions.gnome-theme-tweak.new-style-tabs"
            type="bool" title="&newstyletabs.label;"/>
+
+  <setting pref="extensions.gnome-theme-tweak.tab-max-width"
+           type="radio" title="&maxtabwidth.label;">
+    <radiogroup>
+      <vbox>
+        <radio value="0" label="&default.label;"/>
+      </vbox>
+      <vbox>
+        <radio value="1" label="&small.label;"/>
+        <radio value="2" label="&normal.label;"/>
+        <radio value="3" label="&large.label;"/>
+      </vbox>
+      <vbox>
+        <radio value="4" label="&stretch.label;"/>
+      </vbox>
+    </radiogroup>
+  </setting>
+
   <setting pref="extensions.gnome-theme-tweak.tabs-border"
            type="bool" title="&tabsborder.label;"/>
   <setting pref="extensions.gnome-theme-tweak.urlbar-history-dropmarker"
