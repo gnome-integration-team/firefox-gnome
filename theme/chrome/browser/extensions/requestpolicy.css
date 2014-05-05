@@ -14,6 +14,9 @@ toolbar[requestpolicyBlocked="true"] #requestpolicyToolbarButton,
 toolbar[requestpolicyPermissive="true"] #requestpolicyToolbarButton,
 [requestpolicyPermissive="true"] toolbar #requestpolicyToolbarButton {
   list-style-image: url(chrome://symbolic-icons/skin/extensions/requestpolicy.svg) !important;
+}
+toolbar[requestpolicyPermissive="true"] #requestpolicyToolbarButton .toolbarbutton-icon,
+[requestpolicyPermissive="true"] toolbar #requestpolicyToolbarButton .toolbarbutton-icon {
   opacity: .5;
 }
 
