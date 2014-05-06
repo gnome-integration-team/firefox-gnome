@@ -411,7 +411,7 @@
 #TabsToolbar[newstyletabs] .tabs-closebutton:-moz-any(:hover, :hover:active),
 #TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-any(:hover, :hover:active),
 #TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-any(:hover, :hover:active) {
-  box-shadow: inset 0 3px rgba(0,0,0,0.03), inset 0 2px rgba(0,0,0,0.03), inset 0 1px rgba(0,0,0,0.03);
+  box-shadow: inset 0 3px hsla(0,0%,0%,.03), inset 0 2px hsla(0,0%,0%,.03), inset 0 1px hsla(0,0%,0%,.03);
 }
 
 #TabsToolbar[newstyletabs] .toolbarbutton-1:hover,
@@ -423,6 +423,14 @@
   border-color: #d2d5d2;
 }
 
+#TabsToolbar[newstyletabs] .toolbarbutton-1:hover:-moz-lwtheme,
+#TabsToolbar[newstyletabs] .tabs-newtab-button:hover:-moz-lwtheme,
+#TabsToolbar[newstyletabs] .tabs-closebutton:hover:-moz-lwtheme,
+#TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-up:hover:-moz-lwtheme,
+#TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-down:hover:-moz-lwtheme {
+  background: hsla(0,0%,100%,.15);
+}
+
 #TabsToolbar[newstyletabs] .toolbarbutton-1:-moz-any(:active:hover, [checked="true"]),
 #TabsToolbar[newstyletabs] .tabs-newtab-button:active:hover,
 #TabsToolbar[newstyletabs] .tabs-closebutton:active:hover,
@@ -432,11 +440,25 @@
   border-color: transparent;
 }
 
+#TabsToolbar[newstyletabs] .toolbarbutton-1:-moz-any(:active:hover, [checked="true"]):-moz-lwtheme,
+#TabsToolbar[newstyletabs] .tabs-newtab-button:active:hover:-moz-lwtheme,
+#TabsToolbar[newstyletabs] .tabs-closebutton:active:hover:-moz-lwtheme,
+#TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-up:active:hover:-moz-lwtheme,
+#TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-down:active:hover:-moz-lwtheme {
+  background: hsla(0,0%,0%,.15);
+}
+
 #TabsToolbar[newstyletabs] .toolbarbutton-1[open="true"],
 #TabsToolbar[newstyletabs] .toolbarbutton-1[open="true"]:active,
 #TabsToolbar[newstyletabs] .toolbarbutton-1[open="true"]:active:hover {
   background: #ededed;
   border-color: #d2d5d2;
+}
+
+#TabsToolbar[newstyletabs] .toolbarbutton-1[open="true"]:-moz-lwtheme,
+#TabsToolbar[newstyletabs] .toolbarbutton-1[open="true"]:active:-moz-lwtheme,
+#TabsToolbar[newstyletabs] .toolbarbutton-1[open="true"]:active:hover:-moz-lwtheme {
+  background: hsla(0,0%,100%,.38);
 }
 
 #TabsToolbar[newstyletabs] .toolbarbutton-1[disabled="true"],
