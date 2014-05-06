@@ -12,12 +12,12 @@
 }
 
 #addons-button.aios-tbutton {
-  list-style-image: url(chrome://symbolic-icons/skin/addon.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/addon.svg) !important;
   -moz-image-region: auto !important;
 }
 
 #pageinfo-button.aios-tbutton {
-  list-style-image: url(chrome://symbolic-icons/skin/information.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/information.svg) !important;
   -moz-image-region: auto !important;
 }
 
