@@ -1,0 +1,26 @@
+/* RequestPolicy
+ * id: requestpolicy@requestpolicy.com
+ * URL: https://addons.mozilla.org/firefox/addon/requestpolicy/ */
+
+#requestpolicyToolbarButton {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/requestpolicy.svg) !important;
+}
+
+toolbar[requestpolicyBlocked="true"] #requestpolicyToolbarButton,
+[requestpolicyBlocked="true"] toolbar #requestpolicyToolbarButton {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/requestpolicy-blocked.svg) !important;
+}
+
+toolbar[requestpolicyPermissive="true"] #requestpolicyToolbarButton,
+[requestpolicyPermissive="true"] toolbar #requestpolicyToolbarButton {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/requestpolicy.svg) !important;
+}
+toolbar[requestpolicyPermissive="true"] #requestpolicyToolbarButton .toolbarbutton-icon,
+[requestpolicyPermissive="true"] toolbar #requestpolicyToolbarButton .toolbarbutton-icon {
+  opacity: .5;
+}
+
+#requestpolicyToolbarButton[cui-areatype="menu-panel"] .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] > #requestpolicyToolbarButton .toolbarbutton-icon {
+  opacity: .6;
+}

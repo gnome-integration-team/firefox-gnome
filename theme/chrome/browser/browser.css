@@ -2204,30 +2204,8 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 
 #sidebar-header > .tabs-closebutton {
-  -moz-appearance: none;
-  list-style-image: url(chrome://symbolic-icons/skin/close.svg);
   margin-bottom: 0px !important;
-  padding: 2px;
-
-  /* FIXME */
-  border: 1px solid transparent;
-  border-radius: 3px;
-  transition-property: border, box-shadow, background;
-  transition-duration: 200ms;
-}
-
-/* FIXME */
-#sidebar-header > .tabs-closebutton:hover {
-  background-image: linear-gradient(to bottom, #ffffff, #ebebeb);
-  border-color: rgba(50,50,50,.4);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.37);
-}
-
-/* FIXME */
-#sidebar-header > .tabs-closebutton:active:hover {
-  background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4);
-  border-color: rgba(50,50,50,.4);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.37);
+  padding: 2px !important;
 }
 
 #sidebar-header > .tabs-closebutton > .toolbarbutton-icon {
@@ -2679,18 +2657,21 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   -moz-padding-end: 9px;
 }
 
-%if APP_VERSION == 29 || APP_VERSION == 30
-.tabs-closebutton > .toolbarbutton-icon {
-  /* XXX Buttons have padding in widget/ that we don't want here but can't override with good CSS, so we must
-     use evil CSS to give the impression of smaller content */
-  margin: -2px;
-}
-
 /* Tabstrip close button */
 .tabs-closebutton {
-  /* FIXME */
+  list-style-image: url(chrome://symbolic-icons/skin/close.svg);
+  -moz-image-region: auto;
+  padding: 3px;
 }
-%endif
+
+.tabs-closebutton > .toolbarbutton-icon {
+  margin: 0;
+}
+
+#TabsToolbar[newstyletabs] .tabs-closebutton {
+  margin: 0;
+  padding: 0 5px;
+}
 
 /* In-tab close button */
 #TabsToolbar .tab-close-button {
@@ -2973,19 +2954,6 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 .alltabs-item[tabIsVisible] {
   /* box-shadow instead of background-color to work around native styling */
   box-shadow: inset -5px 0 ThreeDShadow;
-}
-
-%if APP_VERSION == 29 || APP_VERSION == 30
-/* Sidebar */
-#sidebar-header > .tabs-closebutton {
-  margin-bottom: 0px !important;
-  padding: 0px 2px 0px 2px !important;
-}
-%endif
-
-#sidebar-throbber[loading="true"] {
-  list-style-image: url("chrome://global/skin/icons/loading_16.png");
-  -moz-margin-end: 4px;
 }
 
 toolbarbutton.chevron {

@@ -38,6 +38,9 @@
 @import url("chrome://browser/skin/extensions/pinboard-extension.css");
 @import url("chrome://browser/skin/extensions/pocket.css");
 
+/* R */
+@import url("chrome://browser/skin/extensions/requestpolicy.css");
+
 /* S */
 @import url("chrome://browser/skin/extensions/stylish.css");
 
