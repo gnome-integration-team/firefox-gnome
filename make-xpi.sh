@@ -35,15 +35,15 @@ do
     esac
 done
 
-if [ ! $BUILD_EXTENSION_ONLY ]; then
+if [ $BUILD_EXTENSION_ONLY ]; then
     ./make-xpi.py extension
+    exit
 fi
 
-if [ ! $BUILD_THEME_ONLY ]; then
+if [ $BUILD_THEME_ONLY ]; then
     ./make-xpi.py theme
+    exit
 fi
 
-if [ ! $BUILD_THEME_ONLY ] && [ ! $BUILD_EXTENSION_ONLY ]; then
-    ./make-xpi.py all
-fi
+./make-xpi.py all
 
