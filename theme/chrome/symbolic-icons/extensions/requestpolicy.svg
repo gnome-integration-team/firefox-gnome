@@ -1,14 +1,18 @@
-<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="16" height="16" viewBox="0 0 16 16">
-  <metadata>
-    <rdf:RDF>
-      <cc:Work rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-        <dc:title/>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <defs/>
-  <g transform="translate(1.14,1)"/>
-  <path d="m 2.6 11.1 c 0 0 0.9 -0.8 2.6 -0.8 2.1 0 3.7 1.5 5.5 1.5 1.5 0 2.6 -0.7 3.2 -1.3 0.2 -0.2 0.3 -0.5 0.3 -0.8 V 2.6 c 0 -0.4 -0.2 -0.6 -0.6 -0.6 -0.2 0 -0.4 0.1 -0.6 0.3 -0.2 0.2 -1 0.8 -2.7 0.8 -1.6 0 -2.9 -1.5 -4.9 -1.5 -2 0 -2.8 0.6 -2.8 0.6 V 1.7 c 0 -0.4 -0.3 -0.7 -0.7 -0.7 -0.4 0 -0.7 0.3 -0.7 0.7 v 12.5 c 0 0.4 0.3 0.7 0.7 0.7 0.4 0 0.7 -0.3 0.7 -0.7 v -3.2 z m 1.2 -7.2 v 4.7 c 0 0.3 -0.3 0.6 -0.6 0.6 -0.3 0 -0.6 -0.3 -0.6 -0.6 l 0 -4.7 c 0 -0.3 0.3 -0.6 0.6 -0.6 0.3 0 0.6 0.3 0.6 0.6 z" style="fill:#2e3436"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="16" height="16" viewBox="0 0 16 16" id="svg6222" inkscape:version="0.48.4 r9939" sodipodi:docname="requestpolicy.svg">
+   <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1366" inkscape:window-height="741" id="namedview6232" showgrid="false" inkscape:snap-bbox="true" inkscape:bbox-paths="true" inkscape:object-nodes="true" inkscape:zoom="1.84375" inkscape:cx="172.5027" inkscape:cy="85.11476" inkscape:window-x="0" inkscape:window-y="27" inkscape:window-maximized="1" inkscape:current-layer="svg6222">
+      <inkscape:grid type="xygrid" id="grid6234" />
+   </sodipodi:namedview>
+   <metadata id="metadata6224">
+      <rdf:RDF>
+         <cc:Work rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <dc:title />
+         </cc:Work>
+      </rdf:RDF>
+   </metadata>
+   <defs id="defs6226" />
+   <g transform="translate(1.14,1)" id="g6228" />
+   <path style="fill:#2e3436" d="M 2 1 C 1.446 1 1 1.446 1 2 L 1 14 C 1 14.554 1.446 15 2 15 C 2.554 15 3 14.554 3 14 L 3 11 C 3 11 3.4817308 10.375 5.3125 10.375 C 7.5740385 10.375 9.2802887 11.875 11.21875 11.875 C 12.834135 11.875 14.041346 11.166817 14.6875 10.5625 C 14.902885 10.361061 15 10.052159 15 9.75 L 15 2.625 C 15 2.2221223 14.774519 2 14.34375 2 C 14.128366 2 13.934135 2.1110612 13.71875 2.3125 C 13.503366 2.5139389 12.643269 3.125 10.8125 3.125 C 9.0894231 3.125 7.6850962 1.59375 5.53125 1.59375 C 4.2312955 1.59375 3.4531566 1.8254541 3 2 C 3 1.446 2.554 1 2 1 z M 3.5 3 C 3.777 3 4 3.223 4 3.5 L 4 8.65625 C 4 8.93325 3.777 9.15625 3.5 9.15625 C 3.223 9.15625 3 8.93325 3 8.65625 L 3 3.5 C 3 3.223 3.223 3 3.5 3 z " id="path6230" />
 </svg>
