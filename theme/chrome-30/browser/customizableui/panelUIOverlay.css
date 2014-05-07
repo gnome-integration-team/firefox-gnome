@@ -720,7 +720,7 @@ menuitem.subviewbutton:not(:-moz-any([disabled],:active))[_moz-menuactive],
   border-color: hsla(210,4%,10%,.11);
 }
 
-panelview .toolbarbutton-1:not([disabled]):-moz-any([open],:hover:active),
+panelview .toolbarbutton-1:-moz-any(:not([disabled]):-moz-any([open],:hover:active),[checked=true]),
 toolbarbutton.subviewbutton:not([disabled]):-moz-any([open],:hover:active),
 menu.subviewbutton:not([disabled])[_moz-menuactive]:active,
 menuitem.subviewbutton:not([disabled])[_moz-menuactive]:active,
