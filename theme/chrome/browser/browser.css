@@ -2249,10 +2249,19 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   border-top: 1px solid #969a96;
   border-bottom: 0;
   box-shadow: 0 -1px #e2e2e2,
-              inset 0 3px rgba(0,0,0,0.03),
-              inset 0 2px rgba(0,0,0,0.03),
-              inset 0 1px rgba(0,0,0,0.03);
+              inset 0 3px hsla(0,0%,0%,.03),
+              inset 0 2px hsla(0,0%,0%,.03),
+              inset 0 1px hsla(0,0%,0%,.03);
   padding: 0 10px !important;
+}
+
+#TabsToolbar[newstyletabs]:-moz-lwtheme {
+  background: hsla(0,0%,0%,.048);
+  border-top-color: hsla(120,100%,2.8%,.338);
+  box-shadow: 0 -1px hsla(0,0%,0%,.048),
+              inset 0 3px hsla(0,0%,0%,.03),
+              inset 0 2px hsla(0,0%,0%,.03),
+              inset 0 1px hsla(0,0%,0%,.03);
 }
 
 #TabsToolbar[newstyletabs][tabsontop="true"] {
@@ -2382,7 +2391,11 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 
 #TabsToolbar[newstyletabs] .tabbrowser-tab:-moz-any([selected=true], :hover) .tab-background-middle {
-  box-shadow: inset 0 3px rgba(0,0,0,0.03), inset 0 2px rgba(0,0,0,0.03), inset 0 1px rgba(0,0,0,0.03);
+  box-shadow: inset 0 3px hsla(0,0%,0%,.03), inset 0 2px hsla(0,0%,0%,.03), inset 0 1px hsla(0,0%,0%,.03);
+}
+
+#TabsToolbar[newstyletabs] .tabbrowser-tab:-moz-any([selected=true], :hover) .tab-background-middle:-moz-lwtheme {
+  box-shadow: inset 0 3px hsla(0,0%,0%,.01), inset 0 2px hsla(0,0%,0%,.01), inset 0 1px hsla(0,0%,0%,.01);
 }
 
 #TabsToolbar[newstyletabs] .tabbrowser-tab[selected=true] .tab-background-middle {
@@ -2390,9 +2403,17 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   -moz-border-bottom-colors: Highlight;
 }
 
+#TabsToolbar[newstyletabs] .tabbrowser-tab[selected=true] .tab-background-middle:-moz-lwtheme {
+  background: hsla(0,0%,100%,.38);
+}
+
 #TabsToolbar[newstyletabs] .tabbrowser-tab:not([selected=true]):hover .tab-background-middle {
   background: #e6e6e6;
   -moz-border-bottom-colors: #c1c4c1;
+}
+
+#TabsToolbar[newstyletabs] .tabbrowser-tab:not([selected=true]):hover .tab-background-middle:-moz-lwtheme {
+  background: hsla(0,0%,100%,.15);
 }
 
 #TabsToolbar[newstyletabs] .tab-background-start,
