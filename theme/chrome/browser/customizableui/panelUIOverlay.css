@@ -720,7 +720,7 @@ menuitem.subviewbutton:not(:-moz-any([disabled],:active))[_moz-menuactive],
   border-color: hsla(210,4%,10%,.11);
 }
 
-%if APP_VERSION == 29 || APP_VERSION == 30
+%if APP_VERSION == 29
 panelview .toolbarbutton-1:not([disabled]):-moz-any([open],:hover:active),
 %else
 panelview .toolbarbutton-1:-moz-any(:not([disabled]):-moz-any([open],:hover:active),[checked=true]),
