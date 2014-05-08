@@ -5,23 +5,14 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-"""
-Usage:
-
-./make-xpi.py
-./make-xpi.py theme
-./make-xpi.py extension
-./make-xpi.py clean
-"""
-
 import sys
 import os
 import shutil
-import json
 import argparse
 
 sys.path.insert(0, "./build")
 
+import addonconf
 from themebuilder import ThemeBuilder
 from extensionbuilder import ExtensionBuilder
 from packagebuilder import PackageBuilder
@@ -41,33 +32,9 @@ def main():
 
     action = args.action
 
-    #
-    # Clean up
-    #
-
-    if action == "clean":
-        if os.path.isdir(".build"):
-            shutil.rmtree(".build")
-        if os.path.isdir("build/__pycache__"):
-            shutil.rmtree("build/__pycache__")
-        for name in os.listdir("build"):
-            if name.endswith(".pyc"):
-                os.remove(os.path.join("build", name))
-        sys.exit(0)
-
-    #
     # Create config = argparse + config.json
-    #
-
-    try:
-        with open("config.json", "r") as config_file:
-            config = json.load(config_file)
-    except FileNotFoundError:
-        print("%s: %s not found" % (sys.argv[0], "config.json"))
-        sys.exit(1)
-    except ValueError as e:
-        print("%s: parse error: %s" % (sys.argv[0], "config.json"))
-        print(e)
+    config = addonconf.load("config.json")
+    if not config:
         sys.exit(1)
 
     if "VERSION" in os.environ:
@@ -76,6 +43,7 @@ def main():
     if args.version:
         config["version"] = args.version
         config["override-version"] = True
+
     if args.target_version:
         config["target-version"] = args.target_version
 
@@ -83,28 +51,55 @@ def main():
     if args.verbose:
         config["verbose"] = args.verbose
 
-    #
-    # Theme building
-    #
+    config = addonconf.validate(config, action)
+    if not config:
+        sys.exit(1)
 
+    # Clean up
+    if action == "clean":
+        clean_paths = []
+        if os.path.isdir(".build"):
+            for base, dirs, files in os.walk(".build", topdown=False):
+                for name in files:
+                    clean_paths.append(os.path.join(base, name))
+                for name in dirs:
+                    clean_paths.append(os.path.join(base, name))
+            clean_paths.append(".build")
+
+        for base, dirs, files in os.walk("build"):
+            for name in files:
+                if name.endswith(".pyc"):
+                    clean_paths.append(os.path.join(base, name))
+        clean_paths.append("build/__pycache__")
+
+        for i in config["xpi"]:
+            clean_paths.append(config["xpi"][i])
+
+        for path in clean_paths:
+            path = os.path.abspath(path)
+            if not os.path.exists(path):
+                continue
+            print("Remove " + path)
+            if os.path.isfile(path):
+                os.remove(path)
+            else:
+                os.rmdir(path)
+
+        sys.exit(0)
+
+    # Theme building
     if action in ["theme", "all"]:
         builder = ThemeBuilder(config)
         print(":: Starting build theme...")
         builder.build()
 
-    #
     # Extension building
-    #
-
     if action in ["extension", "all"]:
         builder = ExtensionBuilder(config)
         print(":: Starting build extension...")
         builder.build()
 
-    #
     # Package building
-    #
-
     if action == "all":
         builder = PackageBuilder(config)
         print(":: Starting make package...")

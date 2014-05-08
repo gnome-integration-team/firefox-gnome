@@ -7,8 +7,6 @@
 
 import os
 import re
-import time
-import subprocess
 
 from addonbuilder import AddonBuilder
 
@@ -25,15 +23,6 @@ class ThemeBuilder(AddonBuilder):
             "install.rdf.in": ["../config.json"],
             "chrome.manifest.in": ["../config.json"]
         }
-
-    def _validate_config(self, config):
-        config = AddonBuilder._validate_config(self, config)
-
-        if not "directory-structure" in config:
-            config["directory-structure"] = {}
-            config["directory-structure"]["shared-dir"] = "shared"
-
-        return config
 
     def build(self):
         self.app_versions = []
@@ -63,11 +52,18 @@ class ThemeBuilder(AddonBuilder):
         target = os.path.join(self.build_dir, target)
         if self.config["verbose"]:
             print("Convert %s to %s" % (source, target))
+
         os.makedirs(os.path.dirname(target), exist_ok=True)
-        subprocess.call(["build/manifest.sh",
-                        "-m", str(min_version),
-                        "-M", str(max_version),
-                        source, target])
+
+        with open(source, "rt") as source_file:
+            with open(target, "wt") as target_file:
+                for line in source_file:
+                    line = line.strip()
+                    for version in range(min_version, max_version+1):
+                        w = line.replace("@VERSION@", str(version))
+                        if version != min_version:
+                            w = w + " appversion>=" + str(version) + "a1"
+                        target_file.write(w + "\n")
 
     def _process_file(self, source):
         if source in ["chrome.manifest.in", "install.rdf.in"]:

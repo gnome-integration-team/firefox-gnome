@@ -15,7 +15,7 @@ import zipfile
 
 class AddonBuilder():
     def __init__(self, config, src_dir=".", build_dir=".build"):
-        self.config = self._validate_config(config)
+        self.config = config
 
         self.src_dir = os.path.normpath(src_dir)
         self.build_dir = os.path.normpath(build_dir)
@@ -23,34 +23,6 @@ class AddonBuilder():
         self.dependencies = {}
 
         os.makedirs(self.build_dir, exist_ok=True)
-
-    class ConfigError(RuntimeError):
-        def __init__(self, message):
-            self.message = message
-
-    def _validate_config(self, config):
-        try:
-            if not "version" in config and not "override-version" in config:
-                raise AddonBuilder.ConfigError("version is not specified")
-
-            if not "min-version" in config:
-                raise AddonBuilder.ConfigError("min-version is not specified")
-
-            if not "max-version" in config:
-                raise AddonBuilder.ConfigError("max-version is not specified")
-
-            if not "xpi" in config:
-                raise AddonBuilder.ConfigError("file name for *.xpi is not specified")
-        except AddonBuilder.ConfigError as e:
-            print("%s: %s" % (sys.argv[0], e.message))
-            sys.exit(1)
-
-        x = "xpi"
-        for i in ["theme", "extension", "package"]:
-            if i in config[x]:
-                config[x][i] = config[x][i].replace("@VERSION@", config["version"])
-
-        return config
 
     def build(self):
         self.result_files = []
@@ -108,13 +80,16 @@ class AddonBuilder():
         target = os.path.join(self.build_dir, target)
         if self.config["verbose"]:
             print("Convert %s to %s" % (source, target))
+
         os.makedirs(os.path.dirname(target), exist_ok=True)
-        cmd = "sed"
-        cmd = cmd + " -e s,[@]VERSION[@]," + self.config["version"] + ",g"
-        cmd = cmd + " -e s,[@]MIN_VERSION[@]," + self.config["min-version"] + ",g"
-        cmd = cmd + " -e s,[@]MAX_VERSION[@]," + self.config["max-version"] + ",g"
-        cmd = cmd + " < '" + source + "' > '" + target + "'"
-        subprocess.call(cmd, shell=True)
+
+        with open(source, "rt") as source_file:
+            with open(target, "wt") as target_file:
+                for l in source_file:
+                    l = l.replace("@VERSION@", str(self.config["version"]))
+                    l = l.replace("@MIN_VERSION@", str(self.config["min-version"]))
+                    l = l.replace("@MAX_VERSION@", str(self.config["max-version"]))
+                    target_file.write(l)
 
     def _preprocess(self, source, target, app_version=None):
         source_full = os.path.join(self.src_dir, source)
@@ -137,7 +112,11 @@ class AddonBuilder():
         cmd = cmd + variables
         cmd = cmd + ["--output="+target_full, source_full]
 
-        subprocess.call(cmd)
+        if subprocess.call(cmd):
+            print("BuildError: preprocessor.py returned no zero code")
+            print("Full command was: \"%s\"" % " ".join(str(e) for e in cmd))
+            os.remove(target_full)
+            sys.exit(2)
 
         line = open(deps_tmp_file, "r").readline()
         line = re.sub(r"^[^:]*:", "", line)
