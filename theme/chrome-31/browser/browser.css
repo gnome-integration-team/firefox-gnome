@@ -737,6 +737,7 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
 }
 
 #forward-button {
+  -moz-box-align: stretch; /* let the button shape grow vertically with the location bar */
   padding: 0;
 }
 
@@ -1228,7 +1229,7 @@ toolbarpaletteitem[place="palette"] > #zoom-controls > #zoom-in-button {
   padding: 1px;
   border: 1px solid ThreeDShadow;
   border-radius: 2px;
-  margin: 1px 3px;
+  margin: 0 3px;
 }
 
 #urlbar[focused],
