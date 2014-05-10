@@ -2,7 +2,7 @@
 
 PROFILE=default
 
-./make-xpi.sh -t
+./make-xpi.py theme
 
 for directory in ~/.mozilla/firefox/*.${PROFILE}
 do
