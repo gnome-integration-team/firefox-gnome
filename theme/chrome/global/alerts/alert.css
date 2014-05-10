@@ -61,10 +61,10 @@ label {
   color: -moz-activehyperlinktext;
 }
 
-.alertCloseButton > .toolbarbutton-icon {
+.alertCloseButton {
   -moz-appearance: none;
   height: 16px;
-  padding: 4px 2px;
+  margin: 2px;
   width: 16px;
 }
 
