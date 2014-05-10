@@ -1,56 +1,56 @@
 /* A */
-@import url("chrome://browser/skin/extensions/adblock-plus.css");
-@import url("chrome://browser/skin/extensions/addthis.css");
-@import url("chrome://browser/skin/extensions/all-in-one-sidebar.css");
+%include adblock-plus.inc.css
+%include addthis.inc.css
+%include all-in-one-sidebar.inc.css
 
 /* C */
-@import url("chrome://browser/skin/extensions/clearly.css");
-@import url("chrome://browser/skin/extensions/colorzilla.css");
+%include clearly.inc.css
+%include colorzilla.inc.css
 
 /* D */
-@import url("chrome://browser/skin/extensions/dta.css");
+%include dta.inc.css
 
 /* F */
-@import url("chrome://browser/skin/extensions/fbdc.css");
-@import url("chrome://browser/skin/extensions/feedly.css");
-@import url("chrome://browser/skin/extensions/firebug.css");
-@import url("chrome://browser/skin/extensions/flagfox.css");
-@import url("chrome://browser/skin/extensions/flashblock.css");
-@import url("chrome://browser/skin/extensions/flashgot.css");
-@import url("chrome://browser/skin/extensions/foxtophone.css");
+%include fbdc.inc.css
+%include feedly.inc.css
+%include firebug.inc.css
+%include flagfox.inc.css
+%include flashblock.inc.css
+%include flashgot.inc.css
+%include foxtophone.inc.css
 
 /* G */
-@import url("chrome://browser/skin/extensions/ghostery.css");
-@import url("chrome://browser/skin/extensions/greasefire.css");
-@import url("chrome://browser/skin/extensions/greasemonkey.css");
+%include ghostery.inc.css
+%include greasefire.inc.css
+%include greasemonkey.inc.css
 
 /* H */
-@import url("chrome://browser/skin/extensions/https-everywhere.css");
-@import url("chrome://browser/skin/extensions/htitle.css");
+%include https-everywhere.inc.css
+%include htitle.inc.css
 
 /* K */
-@import url("chrome://browser/skin/extensions/keefox.css");
+%include keefox.inc.css
 
 /* L */
-@import url("chrome://browser/skin/extensions/lastpass-password-manager.css");
+%include lastpass-password-manager.inc.css
 
 /* P */
-@import url("chrome://browser/skin/extensions/pinboard-extension.css");
-@import url("chrome://browser/skin/extensions/pocket.css");
+%include pinboard-extension.inc.css
+%include pocket.inc.css
 
 /* R */
-@import url("chrome://browser/skin/extensions/requestpolicy.css");
+%include requestpolicy.inc.css
 
 /* S */
-@import url("chrome://browser/skin/extensions/stylish.css");
+%include stylish.inc.css
 
 /* T */
-@import url("chrome://browser/skin/extensions/tamperdataiconredux.css");
-@import url("chrome://browser/skin/extensions/toomanytabs.css");
-@import url("chrome://browser/skin/extensions/tree-style-tab.css");
+%include tamperdataiconredux.inc.css
+%include toomanytabs.inc.css
+%include tree-style-tab.inc.css
 
 /* U */
-@import url("chrome://browser/skin/extensions/ubufox.css");
+%include ubufox.inc.css
 
 /* X */
-@import url("chrome://browser/skin/extensions/xmarks-sync.css");
+%include xmarks-sync.inc.css
