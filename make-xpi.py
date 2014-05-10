@@ -26,7 +26,9 @@ def main():
                         help="override version from config.json")
     parser.add_argument("--target-version", type=int,
                         help="build for a certain version only")
-    parser.add_argument("-v", "--verbose", action="count",
+    parser.add_argument("--force-rebuild", action="store_true",
+                        help="regenerate all needed files")
+    parser.add_argument("-v", "--verbose", action="count", default=0,
                         help="increase output verbosity")
     args = parser.parse_args()
 
@@ -47,9 +49,8 @@ def main():
     if args.target_version:
         config["target-version"] = args.target_version
 
-    config["verbose"] = 0
-    if args.verbose:
-        config["verbose"] = args.verbose
+    config["force-rebuild"] = args.force_rebuild
+    config["verbose"] = args.verbose
 
     config = addonconf.validate(config, action)
     if not config:

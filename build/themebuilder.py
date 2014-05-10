@@ -50,8 +50,7 @@ class ThemeBuilder(AddonBuilder):
     def _generate_chrome_manifest(self, source, target, min_version, max_version):
         source = os.path.join(self.src_dir, source)
         target = os.path.join(self.build_dir, target)
-        if self.config["verbose"]:
-            print("Convert %s to %s" % (source, target))
+        print("Convert %s to %s" % (source, target))
 
         os.makedirs(os.path.dirname(target), exist_ok=True)
 
