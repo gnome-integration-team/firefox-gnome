@@ -58,11 +58,14 @@ class ThemeBuilder(AddonBuilder):
             with open(target, "wt") as target_file:
                 for line in source_file:
                     line = line.strip()
-                    for version in range(min_version, max_version+1):
-                        w = line.replace("@VERSION@", str(version))
-                        if version != min_version:
-                            w = w + " appversion>=" + str(version) + "a1"
-                        target_file.write(w + "\n")
+                    if "@VERSION@" in line:
+                        for version in range(min_version, max_version+1):
+                            nl = line.replace("@VERSION@", str(version))
+                            if version != min_version:
+                                nl = nl + " appversion>=%ia1" % version
+                            target_file.write(nl + "\n")
+                    else:
+                        target_file.write(line + "\n")
 
     def _process_file(self, source):
         if source in ["chrome.manifest.in", "install.rdf.in"]:
