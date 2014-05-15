@@ -7,12 +7,12 @@
 <!ENTITY inactivestate.label           "Змінювати стиль для неактивних вікон">
 <!ENTITY tabontop.label                "Панель вкладок зверху панелі навігації">
 <!ENTITY newstyletabs.label            "Новий стиль панелі вкладок">
-<!ENTITY maxtabwidth.label             "Maximum tab width">
-<!ENTITY default.label                 "Default">
-<!ENTITY small.label                   "Small">
-<!ENTITY normal.label                  "Normal">
-<!ENTITY large.label                   "Large">
-<!ENTITY stretch.label                 "Stretch">
+<!ENTITY maxtabwidth.label             "Максимальна ширина вкладок">
+<!ENTITY default.label                 "За замовчуванням">
+<!ENTITY small.label                   "Мала">
+<!ENTITY normal.label                  "Середня">
+<!ENTITY large.label                   "Велика">
+<!ENTITY stretch.label                 "У всю ширину">
 <!ENTITY tabsborder.label              "Сховати білу межу внизу панелі вкладок">
 <!ENTITY urlbarhistorydropmarker.label "Сховати кнопку випадаючої історії в полі вводу адреси">
 <!ENTITY forwardbutton.label           "Завжди показувати кнопку переходу вперед">
