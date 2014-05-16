@@ -2,7 +2,8 @@
 
 @-moz-document url("about:newtab") {
 
-#newtab-scrollbox:not([page-disabled]) {
+#newtab-scrollbox:not([page-disabled]),
+#newtab-scrollbox:not([page-disabled]) #newtab-margin-bottom {
   background-color: #fff !important;
   background-image: none !important;
   background-attachment: fixed;
