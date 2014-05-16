@@ -642,10 +642,6 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
   width: 16px;
 }
 
-window:not([chromehidden~="toolbar"]) #urlbar-container:not([switchingtabs]) > #forward-button {
-  transition: 150ms ease-out;
-}
-
 #back-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
 #forward-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
   transform: scaleX(-1);
@@ -1188,6 +1184,11 @@ toolbarpaletteitem[place="palette"] > :-moz-any(@primaryToolbarButtons@) .toolba
 
 /* ::::: Autohide forward button ::::: */
 
+%if APP_VERSION == 29 || APP_VERSION == 30
+window:not([chromehidden~="toolbar"]) #urlbar-container:not([switchingtabs]) > #forward-button {
+  transition: 150ms ease-out;
+}
+
 window:not([chromehidden~="toolbar"]) #urlbar-container > #urlbar-wrapper {
   -moz-padding-start: 28px;
   -moz-margin-start: -28px;
@@ -1251,6 +1252,7 @@ window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([fo
 window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([forwardshowalways]) > #back-button[disabled="true"] {
   box-shadow: none !important;
 }
+%endif
 
 /* FIXME */
 

@@ -1,4 +1,5 @@
 content  gnome-theme-tweak               chrome/content/
+content  gnome-theme-tweak               chrome-31/content/  appversion>=31a1
 skin     gnome-theme-tweak  classic/1.0  chrome/skin/
 
 locale   gnome-theme-tweak  en-US        chrome/locale/en-US/

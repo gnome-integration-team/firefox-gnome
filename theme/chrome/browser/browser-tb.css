@@ -340,7 +340,7 @@
   display: none;
 }
 
-#nav-bar :-moz-any(#urlbar-container, #edit-controls, #zoom-controls) > .toolbarbutton-1:not(:first-of-type):not(:last-of-type) {
+#nav-bar :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:not(:first-of-type):not(:last-of-type) {
   -moz-border-start: 0 !important;
   -moz-border-end: 0 !important;
   border-radius: 0;
@@ -348,38 +348,26 @@
   -moz-margin-end: 0 !important;
 }
 
-#nav-bar :-moz-any(#urlbar-container, #edit-controls, #zoom-controls) > .toolbarbutton-1:not(:first-of-type) {
+#nav-bar :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:not(:first-of-type),
+#nav-bar :-moz-any(#forward-button:-moz-locale-dir(ltr), #back-button:-moz-locale-dir(rtl)) {
   -moz-border-start-width: 0;
   -moz-margin-start: 0 !important;
 }
 
-#nav-bar :-moz-any(#urlbar-container, #edit-controls, #zoom-controls) > .toolbarbutton-1:not(:last-of-type) {
+#nav-bar :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:not(:last-of-type),
+#nav-bar :-moz-any(#back-button:-moz-locale-dir(ltr), #forward-button:-moz-locale-dir(rtl)) {
   -moz-border-end-width: 0;
   -moz-margin-end: 0 !important;
 }
 
-#nav-bar:-moz-locale-dir(ltr) :-moz-any(#urlbar-container, #edit-controls, #zoom-controls) > .toolbarbutton-1:first-of-type,
-#nav-bar:-moz-locale-dir(rtl) :-moz-any(#urlbar-container, #edit-controls, #zoom-controls) > .toolbarbutton-1:last-of-type {
+#nav-bar:-moz-locale-dir(ltr) :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:first-of-type,
+#nav-bar:-moz-locale-dir(rtl) :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:last-of-type,
+#nav-bar :-moz-any(#back-button:-moz-locale-dir(ltr), #forward-button:-moz-locale-dir(rtl)) {
   border-radius: 3px 0 0 3px;
 }
-#nav-bar:-moz-locale-dir(ltr) :-moz-any(#urlbar-container, #edit-controls, #zoom-controls) > .toolbarbutton-1:last-of-type,
-#nav-bar:-moz-locale-dir(rtl) :-moz-any(#urlbar-container, #edit-controls, #zoom-controls) > .toolbarbutton-1:first-of-type {
-  border-radius: 0 3px 3px 0;
-}
-
-/* */
-#nav-bar[customizing] :-moz-any(#back-button, #zoom-out-button) {
-  -moz-margin-end: 0 !important;
-}
-#nav-bar[customizing] :-moz-any(#forward-button, #zoom-in-button) {
-  -moz-margin-start: -1px !important;
-}
-#nav-bar[customizing]:-moz-locale-dir(ltr) #back-button,
-#nav-bar[customizing]:-moz-locale-dir(rtl) #forward-button {
-  border-radius: 3px 0 0 3px;
-}
-#nav-bar[customizing]:-moz-locale-dir(ltr) #forward-button,
-#nav-bar[customizing]:-moz-locale-dir(rtl) #back-button {
+#nav-bar:-moz-locale-dir(ltr) :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:last-of-type,
+#nav-bar:-moz-locale-dir(rtl) :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:first-of-type,
+#nav-bar :-moz-any(#forward-button:-moz-locale-dir(ltr), #back-button:-moz-locale-dir(rtl)) {
   border-radius: 0 3px 3px 0;
 }
 
