@@ -223,7 +223,11 @@ panelview:not([mainview]) .toolbarbutton-text,
 
 #PanelUI-contents {
   display: block;
+%if APP_VERSION == 29
   flex: auto;
+%else
+  flex: 1 0 auto;
+%endif
   margin-left: auto;
   margin-right: auto;
   padding: .5em 0;
@@ -797,7 +801,11 @@ menuitem.panel-subview-footer:not([disabled])[_moz-menuactive]:active,
 }
 
 /* Popups with only one item don't have a footer */
+%if APP_VERSION == 29
 menupopup[placespopup=true][singleitempopup=true] > hbox > .popup-internal-box > .arrowscrollbox-scrollbox > .scrollbox-innerbox,
+%else
+#BMB_bookmarksPopup menupopup[placespopup=true][singleitempopup=true] > hbox > .popup-internal-box > .arrowscrollbox-scrollbox > .scrollbox-innerbox,
+%endif
 /* These popups never have a footer */
 #BMB_bookmarksToolbarPopup > hbox > .popup-internal-box > .arrowscrollbox-scrollbox > .scrollbox-innerbox,
 #BMB_unsortedBookmarksPopup > hbox > .popup-internal-box > .arrowscrollbox-scrollbox > .scrollbox-innerbox {

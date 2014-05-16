@@ -3665,7 +3665,11 @@ notification.pluginVulnerable .messageImage {
 }
 
 #downloads-button[cui-areatype="toolbar"][attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
+%if APP_VERSION == 29
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#green);
+%else
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#azure);
+%endif
 }
 
 #downloads-button[cui-areatype="menu-panel"][attention] {
@@ -3683,7 +3687,11 @@ notification.pluginVulnerable .messageImage {
 }
 
 #downloads-button:not([counter])[attention] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
+%if APP_VERSION == 29
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#green);
+%else
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#azure);
+%endif
 }
 
 /*** Download notifications ***/
