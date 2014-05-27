@@ -849,8 +849,8 @@ window:not([chromehidden~="toolbar"]) #urlbar-wrapper:not(:hover) > #forward-but
   list-style-image: url("chrome://browser/skin/Toolbar.png");
 }
 
-:-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #switch-to-metro-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button):not(:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true])):-moz-lwtheme-brighttext,
-#bookmarks-menu-button:not(:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true])):-moz-lwtheme-brighttext > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+toolbar[brighttext] :-moz-any(#back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #switch-to-metro-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button, #e10s-button),
+toolbar[brighttext] #bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
   list-style-image: url(chrome://browser/skin/Toolbar-inverted.png);
 }
 
@@ -908,8 +908,8 @@ window:not([chromehidden~="toolbar"]) #urlbar-wrapper:not(:hover) > #forward-but
   -moz-image-region: rect(0, 18px, 18px, 0px);
 }
 
-#sync-button[cui-areatype="toolbar"][status="active"]:-moz-lwtheme-brighttext,
-#sync-button[cui-areatype="toolbar"][status="active"]:-moz-lwtheme-brighttext:hover:active:not([disabled="true"]) {
+toolbar[brighttext] #sync-button[status="active"],
+toolbar[brighttext] #sync-button[status="active"]:hover:active:not([disabled="true"]) {
   list-style-image: url("chrome://browser/skin/syncProgress-toolbar-inverted.png");
 }
 
@@ -3247,7 +3247,7 @@ notification.pluginVulnerable .messageImage {
   min-height: 18px;
 }
 
-#downloads-button[cui-areatype="toolbar"] > #downloads-indicator-anchor > #downloads-indicator-icon:-moz-lwtheme-brighttext {
+toolbar[brighttext] #downloads-button[cui-areatype="toolbar"]:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon {
   background: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"),
                               0, 198, 18, 180) center no-repeat;
 }
@@ -3270,8 +3270,7 @@ notification.pluginVulnerable .messageImage {
   background-size: 12px;
 }
 
-#downloads-button:not([counter]) > #downloads-indicator-anchor >
-#downloads-button-progress-area > #downloads-indicator-counter:-moz-lwtheme-brighttext {
+toolbar[brighttext] #downloads-button:not([counter]):not([attention]) > #downloads-indicator-anchor > #downloads-button-progress-area > #downloads-indicator-counter {
   background-image: -moz-image-rect(url("chrome://browser/skin/Toolbar-inverted.png"), 0, 198, 18, 180);
 }
 
@@ -3336,7 +3335,7 @@ notification.pluginVulnerable .messageImage {
   text-align: center;
 }
 
-#downloads-indicator-counter:-moz-lwtheme-brighttext {
+toolbar[brighttext] #downloads-indicator-counter {
   color: white;
   text-shadow: 0 0 1px rgba(0,0,0,.7),
                0 1px 1.5px rgba(0,0,0,.5);
