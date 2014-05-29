@@ -195,7 +195,7 @@
 .newtab-site[type=affiliate] .newtab-thumbnail,
 .newtab-site[type=organic] .newtab-thumbnail,
 .newtab-site[type=sponsored] .newtab-thumbnail {
-  background-position: top center;
+  background-position: 50% calc(50% - (24px / 2)); /* Half height, compensate for text title */
   background-size: auto;
 }
 %endif
@@ -223,6 +223,7 @@
 
 %if APP_VERSION != 29 && APP_VERSION != 30
 .newtab-site[type=sponsored] .newtab-title {
+  -moz-padding-start: 24px;
   -moz-padding-end: 24px;
 }
 %endif
@@ -272,9 +273,14 @@
 }
 
 %if APP_VERSION != 29 && APP_VERSION != 30
-/* FIXME
 .newtab-control-sponsored {
+  background: transparent url(chrome://browser/skin/newtab/controls.png);
   background-position: -249px -1px;
+  border: none;
+  padding: 1px 2px 3px;
+  /* Override chrome://browser/content/newtab/newTab.css */
+  -moz-margin-end: 0 !important;
+  bottom: 5px !important;
 }
 
 .newtab-control-sponsored:hover {
@@ -284,7 +290,6 @@
 .newtab-control-sponsored[panelShown] {
   background-position: -281px -1px;
 }
-*/
 %endif
 
 .newtab-control-pin,
