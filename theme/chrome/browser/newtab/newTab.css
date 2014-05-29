@@ -21,15 +21,12 @@
   background-attachment: fixed;
 }
 
+%if APP_VERSION == 29 || APP_VERSION == 30
 /* SIDE MARGIN */
 .newtab-side-margin {
-%if APP_VERSION == 29 || APP_VERSION == 30
   width: 350px; /* Should give a nice squarish thumbnails */
-%else
-  width: 150px;
-%endif
-  min-width: 10px;
 }
+%endif
 
 /* UNDO */
 #newtab-undo-container {
