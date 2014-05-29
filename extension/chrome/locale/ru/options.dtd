@@ -16,3 +16,4 @@
 <!ENTITY tabsborder.label              "Скрыть белый бордюр после панели вкладок">
 <!ENTITY urlbarhistorydropmarker.label "Скрыть кнопку показа истории в поле ввода адреса">
 <!ENTITY forwardbutton.label           "Всегда показывать кнопку Вперёд">
+<!ENTITY disablepopupanimation.label   "Отключить анимацию всплывающих меню">

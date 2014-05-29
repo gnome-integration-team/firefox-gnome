@@ -91,4 +91,9 @@ var Tweaks = {
         elements: ["nav-bar", "bookmarked-notification-anchor"],
         attributeName: "reliefbuttons"
     },
+
+    disablePopupAnimation: {
+        key: "disable-popup-animation",
+        type: "stylesheet"
+    },
 }
