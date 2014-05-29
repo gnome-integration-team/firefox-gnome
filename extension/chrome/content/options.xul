@@ -41,4 +41,6 @@
            type="bool" title="&urlbarhistorydropmarker.label;"/>
   <setting pref="extensions.gnome-theme-tweak.forward-button"
            type="bool" title="&forwardbutton.label;"/>
+  <setting pref="extensions.gnome-theme-tweak.disable-popup-animation"
+           type="bool" title="&disablepopupanimation.label;"/>
 </vbox>

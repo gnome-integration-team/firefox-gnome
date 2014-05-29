@@ -16,3 +16,4 @@
 <!ENTITY tabsborder.label              "Сховати білу межу внизу панелі вкладок">
 <!ENTITY urlbarhistorydropmarker.label "Сховати кнопку випадаючої історії в полі вводу адреси">
 <!ENTITY forwardbutton.label           "Завжди показувати кнопку переходу вперед">
+<!ENTITY disablepopupanimation.label   "Disable animation of popups">
