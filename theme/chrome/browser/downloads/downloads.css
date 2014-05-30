@@ -18,7 +18,7 @@
   display: none;
 }
 
-%if APP_VERSION != 29 && APP_VERSION != 30
+%if APP_VERSION != 30
 #downloadsPanel[hasdownloads] > #emptyDownloads {
   display: none;
 }
@@ -39,7 +39,7 @@
 	color: #3A81CC;
 }
 
-%if APP_VERSION == 29 || APP_VERSION == 30
+%if APP_VERSION == 30
 #downloadsPanel[hasdownloads] > #downloadsFooter {
 %else
 #downloadsFooter {

@@ -78,7 +78,7 @@ th:hover > a {
 }
 
 
-%if APP_VERSION == 29 || APP_VERSION == 30
+%if APP_VERSION == 30
 tbody > tr:hover {
 %else
 body > table > tbody > tr:hover {

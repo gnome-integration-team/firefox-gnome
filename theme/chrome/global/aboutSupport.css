@@ -89,7 +89,7 @@ td {
   -moz-margin-end: 0;
   padding: 16px;
   width: 30%;
-%if APP_VERSION != 29 && APP_VERSION != 30
+%if APP_VERSION != 30
   visibility: hidden;
 %endif
 }
@@ -107,7 +107,7 @@ td {
   margin: auto;
 }
 
-%if APP_VERSION != 29 && APP_VERSION != 30
+%if APP_VERSION != 30
 .block {
   display: block;
 }

@@ -9,7 +9,7 @@
 }
 
 /* SCROLLBOX */
-%if APP_VERSION == 29 || APP_VERSION == 30
+%if APP_VERSION == 30
 #newtab-scrollbox:not([page-disabled]) {
 %else
 #newtab-scrollbox:not([page-disabled]),
@@ -21,7 +21,7 @@
   background-attachment: fixed;
 }
 
-%if APP_VERSION == 29 || APP_VERSION == 30
+%if APP_VERSION == 30
 /* SIDE MARGIN */
 .newtab-side-margin {
   width: 350px; /* Should give a nice squarish thumbnails */
@@ -103,7 +103,7 @@
   background-position: -232px 0;
 }
 
-%if APP_VERSION == 29 || APP_VERSION == 30
+%if APP_VERSION == 30
 /* ROWS */
 .newtab-row {
   margin-bottom: 20px;
@@ -116,7 +116,7 @@
 
 /* CELLS */
 .newtab-cell {
-%if APP_VERSION == 29 || APP_VERSION == 30
+%if APP_VERSION == 30
   -moz-margin-end: 20px;
 %else
   height: 162px;
@@ -135,13 +135,13 @@
   border-color: rgba(8,22,37,.15) rgba(8,22,37,.17) rgba(8,22,37,.19);
 }
 
-%if APP_VERSION == 29 || APP_VERSION == 30
+%if APP_VERSION == 30
 .newtab-cell:last-child {
   -moz-margin-end: 0px;
 }
 %endif
 
-%if APP_VERSION == 29 || APP_VERSION == 30
+%if APP_VERSION == 30
 .newtab-cell:hover:not(:empty):not([dragged]) {
 %else
 .newtab-cell:hover:not(:empty):not([dragged]):not([ignorehover]) {
@@ -161,7 +161,7 @@
   background-position: 50% calc(50% - (24px / 2)); /* Half height, compensate for text title */
 }
 
-%if APP_VERSION == 29 || APP_VERSION == 30
+%if APP_VERSION == 30
 .newtab-site:hover,
 %else
 .newtab-cell:not([ignorehover]) > .newtab-site:hover,
@@ -182,13 +182,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
-%if APP_VERSION != 29 && APP_VERSION != 30
+%if APP_VERSION != 30
   border-radius: 3px;
 %endif
   opacity: 1;
 }
 
-%if APP_VERSION != 29 && APP_VERSION != 30
+%if APP_VERSION != 30
 .newtab-site[type=affiliate] .newtab-thumbnail,
 .newtab-site[type=organic] .newtab-thumbnail,
 .newtab-site[type=sponsored] .newtab-thumbnail {
@@ -199,7 +199,7 @@
 
 /* TITLES */
 .newtab-title {
-%if APP_VERSION != 29 && APP_VERSION != 30
+%if APP_VERSION != 30
   bottom: 0;
 %endif
   padding: 0 8px;
@@ -218,7 +218,7 @@
   text-align: center;
 }
 
-%if APP_VERSION != 29 && APP_VERSION != 30
+%if APP_VERSION != 30
 .newtab-site[type=sponsored] .newtab-title {
   -moz-padding-start: 24px;
   -moz-padding-end: 24px;
@@ -269,7 +269,7 @@
   background-color: rgba(0,0,0,0.85);
 }
 
-%if APP_VERSION != 29 && APP_VERSION != 30
+%if APP_VERSION != 30
 .newtab-control-sponsored {
   background: transparent url(chrome://browser/skin/newtab/controls.png);
   background-position: -249px -1px;

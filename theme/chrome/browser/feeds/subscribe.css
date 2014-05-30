@@ -87,11 +87,7 @@ h1 {
 }
 
 h2 {
-%if APP_VERSION == 29
-  color: ThreeDDarkShadow;
-%else
   color: GrayText;
-%endif
   font-size: 110%;
   font-weight: normal;
   margin: 0 0 .6em 0;

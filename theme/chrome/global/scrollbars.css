@@ -19,7 +19,7 @@ scrollbar {
   pointer-events: auto;
 }
 
-%if APP_VERSION == 29 || APP_VERSION == 30
+%if APP_VERSION == 30
 scrollbar[root="true"] {
   position: relative;
   z-index: 2147483647; /* largest positive value of a signed 32-bit integer */
@@ -31,7 +31,7 @@ scrollbar[orient="vertical"] {
 %endif
 
 @media all and (-moz-overlay-scrollbars) {
-%if APP_VERSION != 29 && APP_VERSION != 30
+%if APP_VERSION != 30
 scrollbar[root="true"] {
   position: relative;
   z-index: 2147483647; /* largest positive value of a signed 32-bit integer */
@@ -44,7 +44,7 @@ scrollbar[root="true"] {
   }
 }
 
-%if APP_VERSION != 29 && APP_VERSION != 30
+%if APP_VERSION != 30
 scrollbar[orient="vertical"] {
   -moz-appearance: scrollbartrack-vertical;
 }

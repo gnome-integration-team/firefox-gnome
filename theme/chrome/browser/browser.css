@@ -12,20 +12,16 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
-%if APP_VERSION != 29
 @namespace svg url("http://www.w3.org/2000/svg");
-%endif
 
 %filter substitution
 
 %define nestedButtons #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button
-%define primaryToolbarButtons #back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button
-%if APP_VERSION == 29
+%define primaryToolbarButtons #back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button
+%if APP_VERSION == 30
 %define primaryToolbarButtons @primaryToolbarButtons@, @nestedButtons@
-%elif APP_VERSION == 30
-%define primaryToolbarButtons @primaryToolbarButtons@, #sidebar-button, @nestedButtons@
 %else
-%define primaryToolbarButtons @primaryToolbarButtons@, #sidebar-button, @nestedButtons@, #e10s-button
+%define primaryToolbarButtons @primaryToolbarButtons@, @nestedButtons@, #e10s-button
 %endif
 
 #menubar-items {
@@ -788,7 +784,7 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
   list-style-image: url(chrome://symbolic-icons/skin/new-window.svg);
 }
 
-%if APP_VERSION != 29 && APP_VERSION != 30
+%if APP_VERSION != 30
 #e10s-button[cui-areatype="toolbar"] {
   list-style-image: url(chrome://symbolic-icons/skin/new-window.svg);
 }
@@ -871,11 +867,9 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
   list-style-image: url(chrome://symbolic-icons/skin/mail-unread.svg);
 }
 
-%if APP_VERSION != 29
 #sidebar-button[cui-areatype="toolbar"] {
   list-style-image: url(chrome://symbolic-icons/skin/sidebar.svg);
 }
-%endif
 
 /* Menu panel and palette styles */
 
@@ -948,7 +942,7 @@ toolbarpaletteitem[place="palette"] > #new-window-button {
   list-style-image: url(chrome://symbolic-icons/skin/new-window.svg);
 }
 
-%if APP_VERSION != 29 && APP_VERSION != 30
+%if APP_VERSION != 30
 #e10s-button[cui-areatype="menu-panel"],
 toolbarpaletteitem[place="palette"] > #e10s-button {
   list-style-image: url(chrome://symbolic-icons/skin/new-window.svg);
@@ -1000,12 +994,10 @@ toolbarpaletteitem[place="palette"] > #email-link-button {
   list-style-image: url(chrome://symbolic-icons/skin/mail-unread.svg);
 }
 
-%if APP_VERSION != 29
 #sidebar-button[cui-areatype="menu-panel"],
 toolbarpaletteitem[place="palette"] > #sidebar-button {
   list-style-image: url(chrome://symbolic-icons/skin/sidebar.svg);
 }
-%endif
 
 toolbaritem[sdkstylewidget="true"] > toolbarbutton {
   /* FIXME */
@@ -1184,7 +1176,7 @@ toolbarpaletteitem[place="palette"] > :-moz-any(@primaryToolbarButtons@) .toolba
 
 /* ::::: Autohide forward button ::::: */
 
-%if APP_VERSION == 29 || APP_VERSION == 30
+%if APP_VERSION == 30
 window:not([chromehidden~="toolbar"]) #urlbar-container:not([switchingtabs]) > #forward-button {
   transition: 150ms ease-out;
 }
@@ -1639,12 +1631,10 @@ window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([fo
   list-style-image: url(chrome://browser/skin/webRTC-shareDevice-64.png);
 }
 
-%if APP_VERSION != 29
 .popup-notification-icon[popupid="webRTC-sharingMicrophone"],
 .popup-notification-icon[popupid="webRTC-shareMicrophone"] {
   list-style-image: url(chrome://browser/skin/webRTC-shareMicrophone-64.png);
 }
-%endif
 
 .popup-notification-icon[popupid="pointerLock"] {
   list-style-image: url(chrome://browser/skin/pointerLock-64.png);
@@ -1822,7 +1812,6 @@ window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([fo
   list-style-image: url(chrome://symbolic-icons/skin/webRTC-sharing-device.svg);
 }
 
-%if APP_VERSION != 29
 .webRTC-shareMicrophone-notification-icon,
 #webRTC-shareMicrophone-notification-icon {
   list-style-image: url(chrome://browser/skin/webRTC-shareMicrophone-16.png);
@@ -1832,7 +1821,6 @@ window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([fo
 #webRTC-sharingMicrophone-notification-icon {
   list-style-image: url(chrome://browser/skin/webRTC-sharingMicrophone-16.png);
 }
-%endif
 
 .web-notifications-notification-icon,
 #web-notifications-notification-icon {
@@ -1846,7 +1834,7 @@ window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([fo
   margin: 0px;
 }
 
-%if APP_VERSION != 29 && APP_VERSION != 30
+%if APP_VERSION != 30
 .translate-notification-icon,
 #translate-notification-icon {
   list-style-image: url(chrome://symbolic-icons/skin/translate.svg);
@@ -2796,7 +2784,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   filter: none;
 }
 
-%if APP_VERSION == 29 || APP_VERSION == 30
+%if APP_VERSION == 30
 .customization-tipPanel-closeBox > .close-icon {
   -moz-appearance: none;
   width: 16px;
@@ -3036,9 +3024,7 @@ toolbarbutton.chevron > .toolbarbutton-icon {
 /* Sync Panel */
 
 .sync-panel-icon {
-%if APP_VERSION != 29
   height: 32px;
-%endif
   width: 32px;
   background: url("chrome://browser/content/abouthome/sync.png") top left no-repeat;
 }
@@ -3054,13 +3040,9 @@ toolbarbutton.chevron > .toolbarbutton-icon {
 
 #sync-error-panel-title,
 #sync-start-panel-title {
-%if APP_VERSION != 29
   font-size: 120%;
-%endif
   font-weight: bold;
-%if APP_VERSION != 29
   margin-bottom: 5px;
-%endif
 }
 
 #sync-start-panel-subtitle,
@@ -3289,15 +3271,6 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   background-image: url("chrome://browser/skin/devtools/responsive-se-resizer.png");
 }
 
-%if APP_VERSION == 29
-/* Highlighter */
-
-.highlighter-outline {
-  box-shadow: 0 0 0 1px black;
-  outline: 1px dashed white;
-  outline-offset: -1px;
-}
-%else
 /* Box model highlighter */
 svg|g.box-model-container {
   opacity: 0.4;
@@ -3333,7 +3306,6 @@ svg|line.box-model-guide-left {
   stroke: #08C;
   stroke-dasharray: 5 3;
 }
-%endif
 
 /* Highlighter - Node Infobar */
 
@@ -3665,11 +3637,7 @@ notification.pluginVulnerable .messageImage {
 }
 
 #downloads-button[cui-areatype="toolbar"][attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
-%if APP_VERSION == 29
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#green);
-%else
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#azure);
-%endif
 }
 
 #downloads-button[cui-areatype="menu-panel"][attention] {
@@ -3687,11 +3655,7 @@ notification.pluginVulnerable .messageImage {
 }
 
 #downloads-button:not([counter])[attention] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
-%if APP_VERSION == 29
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#green);
-%else
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#azure);
-%endif
 }
 
 /*** Download notifications ***/
@@ -3858,12 +3822,7 @@ toolbar[iconsize="small"] .toolbarbutton-badge-container {
 #servicesInstall-notification-icon {
   list-style-image: url(chrome://browser/skin/social/services-16.png);
 }
-%if APP_VERSION == 29
-#social-undoactivation-button,
-#servicesInstall-learnmore-link {
-%else
 #social-undoactivation-button {
-%endif
   -moz-margin-start: 0; /* override default label margin to match description margin */
 }
 
@@ -4611,7 +4570,7 @@ toolbarpaletteitem[place="toolbar"] {
   border-left: 3px solid transparent;
 }
 
-%if APP_VERSION != 29 && APP_VERSION != 30
+%if APP_VERSION != 30
 /* The :hover:active style from toolkit doesn't seem to work in this panel so just use :active. */
 .customization-tipPanel-closeBox > .close-icon:active {
   background-image: -moz-image-rect(url("chrome://global/skin/icons/close.svg"), 0, 48, 16, 32);
