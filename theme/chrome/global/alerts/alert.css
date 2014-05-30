@@ -33,6 +33,13 @@
   background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.1));
 }
 
+%if APP_VERSION != 30 && APP_VERSION != 31
+#alertNotification[clickable="true"]:hover .alertTextBox,
+#alertNotification[clickable="true"]:hover .alertCloseBox {
+  background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.3));
+}
+%endif
+
 .alertTitle {
   font-weight: bold;
   font-size: 110%;
@@ -52,6 +59,7 @@ label {
   cursor: inherit;
 }
 
+%if APP_VERSION == 30 || APP_VERSION == 31
 .alertText[clickable="true"] {
   color: -moz-nativehyperlinktext;
   text-decoration: underline;
@@ -60,6 +68,7 @@ label {
 .alertText[clickable="true"]:hover:active {
   color: -moz-activehyperlinktext;
 }
+%endif
 
 .alertCloseButton {
   -moz-appearance: none;

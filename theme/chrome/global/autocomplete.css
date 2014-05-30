@@ -14,7 +14,11 @@
 /* .padded is used by autocomplete widgets that don't have an icon. Gross. -dwh */
 textbox:not(.padded) {
   cursor: default;
+%if APP_VERSION == 30 || APP_VERSION == 31
   padding: 0 1px;
+%else
+  padding: 0;
+%endif
 }
 
 textbox[enablehistory="true"] {
