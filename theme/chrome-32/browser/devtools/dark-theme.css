@@ -922,6 +922,10 @@ div.CodeMirror span.eval-text {
   background-image: url("chrome://browser/skin/devtools/command-paintflashing.png");
 }
 
+#command-button-screenshot > image {
+  background-image: url("chrome://browser/skin/devtools/command-screenshot.png");
+}
+
 #command-button-responsive > image {
   background-image: url("chrome://browser/skin/devtools/command-responsivemode.png");
 }
@@ -950,6 +954,10 @@ div.CodeMirror span.eval-text {
 @media (min-resolution: 2dppx) {
   #command-button-paintflashing > image {
     background-image: url("chrome://browser/skin/devtools/command-paintflashing@2x.png");
+  }
+
+  #command-button-screenshot > image {
+    background-image: url("chrome://browser/skin/devtools/command-screenshot@2x.png");
   }
 
   #command-button-responsive > image {
@@ -1077,7 +1085,7 @@ div.CodeMirror span.eval-text {
   opacity: 1;
 }
 
-.theme-dark .devtools-tab[selected] {
+.theme-dark .devtools-tabbar .devtools-tab[selected] {
   color: #f5f7fa;
   background-color: #1a4666;
   box-shadow: 0 2px 0 #d7f1ff inset,
@@ -1085,7 +1093,7 @@ div.CodeMirror span.eval-text {
               0 -2px 0 rgba(0,0,0,.2) inset;
 }
 
-.theme-light .devtools-tab[selected] {
+.theme-light .devtools-tabbar .devtools-tab[selected] {
   color: #f5f7fa;
   background-color: #4c9ed9;
   box-shadow: 0 2px 0 #d7f1ff inset,

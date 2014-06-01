@@ -14,12 +14,16 @@ page {
   background-image: linear-gradient(#FFFFFF, #EDEDED 100px);
 }
 
+* {
+  -moz-user-select: text;
+}
+
 caption {
   -moz-appearance: none;
   margin: 0;
 }
 
-.caption-text {
+caption > label {
   font-size: 1.3rem;
   font-weight: bold;
   line-height: 22px;
@@ -845,6 +849,10 @@ description > html|a {
   /* center the links */
   margin-top: 8px;
   margin-bottom: 8px;
+}
+
+.indent {
+  -moz-margin-start: 33px;
 }
 
 button > .button-box,
