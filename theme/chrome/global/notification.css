@@ -59,7 +59,7 @@ notification[type="critical"] {
 
 notification:-moz-any(@replaceIconValues@) .messageImage {
   background: no-repeat center !important;
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
+  filter: url(chrome://global/skin/filters.svg#notification-icon);
   min-width: 16px !important;
   max-width: 16px !important;
   min-height: 16px !important;
