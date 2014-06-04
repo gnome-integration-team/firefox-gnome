@@ -1,0 +1,23 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* I have no idea why this code doesn't work in notification.css */
+
+notification :-moz-any(button, .messageCloseButton) {
+  -moz-appearance: none;
+  background: hsla(0,0%,100%,.2);
+  background-clip: padding-box;
+  border: 1px solid hsla(0,0%,100%,.6);
+  border-radius: 5px;
+  color: white;
+  margin: 0 5px;
+  padding: 2px 12px 3px;
+  transition-property: color, border, box-shadow, background;
+  transition-duration: 200ms;
+}
+
+notification :-moz-any(button, .messageCloseButton):not([disabled="true"]):hover {
+  background-color: hsla(0,0%,100%,.5);
+  text-shadow: 0px 1px hsla(0,0%,0%,.2);
+}
