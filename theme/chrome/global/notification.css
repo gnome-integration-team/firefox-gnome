@@ -3,7 +3,6 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 %filter substitution
-
 %define infoIconValues [value="popup-blocked"], [value="refresh-blocked"], [value="offline-app-usage"], [value*="offline-app-requested-"]
 %define pluginIconValues [value="missing-plugins"]
 %define replaceIconValues @infoIconValues@, @pluginIconValues@
@@ -55,7 +54,7 @@ notification[type="critical"] {
   list-style-image: url("chrome://symbolic-icons/skin/critical.svg");
 }
 
-/* Replace icons */
+/* Replace custom icons */
 
 notification:-moz-any(@replaceIconValues@) .messageImage {
   background: no-repeat center !important;
@@ -90,6 +89,10 @@ notification .messageCloseButton > .toolbarbutton-icon {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
   min-width: 16px;
   min-height: 16px;
+}
+
+notification .messageCloseButton:hover > .toolbarbutton-icon {
+  filter: url(chrome://global/skin/filters.svg#notification-icon);
 }
 
 :not(notification) .messageCloseButton {
