@@ -3262,7 +3262,11 @@ toolbarbutton.chevron > .toolbarbutton-icon {
 /* Responsive Mode */
 
 .browserContainer[responsivemode] {
+%if APP_VERSION == 30 || APP_VERSION == 31
   background: #222 url("chrome://browser/skin/devtools/responsive-background.png");
+%else
+  background-color: #222;
+%endif
   padding: 0 20px 20px 20px;
 }
 
@@ -3297,6 +3301,13 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   margin: 0 3px;
   color: inherit;
 }
+
+%if APP_VERSION != 30 && APP_VERSION != 31
+.devtools-responsiveui-toolbarbutton > .toolbarbutton-icon {
+  width: 16px;
+  height: 16px;
+}
+%endif
 
 .devtools-responsiveui-toolbarbutton > .toolbarbutton-menubutton-button {
   -moz-box-orient: horizontal;
@@ -3346,7 +3357,11 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   -moz-appearance: none;
   display: -moz-box;
   background-color: transparent;
+%if APP_VERSION == 30 || APP_VERSION == 31
   list-style-image: url("chrome://browser/skin/devtools/dropmarker.png");
+%else
+  list-style-image: url("chrome://browser/skin/devtools/dropmarker.svg");
+%endif
   -moz-box-align: center;
   border-width: 0;
   min-width: 16px;
@@ -3372,7 +3387,11 @@ toolbarbutton.chevron > .toolbarbutton-icon {
 .devtools-responsiveui-toolbarbutton[type=menu] > .toolbarbutton-menu-dropmarker,
 .devtools-responsiveui-toolbarbutton[type=menu-button] > .toolbarbutton-menubutton-dropmarker {
   -moz-appearance: none !important;
+%if APP_VERSION == 30 || APP_VERSION == 31
   list-style-image: url("chrome://browser/skin/devtools/dropmarker.png");
+%else
+  list-style-image: url("chrome://browser/skin/devtools/dropmarker.svg");
+%endif
   -moz-box-align: center;
   padding: 0 3px;
 }
@@ -3390,6 +3409,18 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   list-style-image: url("chrome://browser/skin/devtools/responsiveui-rotate.png");
 }
 
+%if APP_VERSION != 30 && APP_VERSION != 31
+@media (min-resolution: 2dppx) {
+  .devtools-responsiveui-close {
+    list-style-image: url("chrome://browser/skin/devtools/close@2x.png");
+  }
+
+  .devtools-responsiveui-rotate {
+    list-style-image: url("chrome://browser/skin/devtools/responsiveui-rotate@2x.png");
+  }
+}
+%endif
+
 .devtools-responsiveui-touch {
   list-style-image: url("chrome://browser/skin/devtools/responsiveui-touch.png");
   -moz-image-region: rect(0px,16px,16px,0px);
@@ -3399,15 +3430,39 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   -moz-image-region: rect(0px,32px,16px,16px);
 }
 
+%if APP_VERSION != 30 && APP_VERSION != 31
+@media (min-resolution: 2dppx) {
+  .devtools-responsiveui-touch {
+    list-style-image: url("chrome://browser/skin/devtools/responsiveui-touch@2x.png");
+    -moz-image-region: rect(0px,32px,32px,0px);
+  }
+
+  .devtools-responsiveui-touch[checked] {
+    -moz-image-region: rect(0px,64px,32px,32px);
+  }
+}
+%endif
+
 .devtools-responsiveui-screenshot {
   list-style-image: url("chrome://browser/skin/devtools/responsiveui-screenshot.png");
 }
+
+%if APP_VERSION != 30 && APP_VERSION != 31
+@media (min-resolution: 2dppx) {
+  .devtools-responsiveui-screenshot {
+    list-style-image: url("chrome://browser/skin/devtools/responsiveui-screenshot@2x.png");
+  }
+}
+%endif
 
 .devtools-responsiveui-resizebarV {
   width: 7px;
   height: 24px;
   cursor: ew-resize;
   transform: translate(12px, -12px);
+%if APP_VERSION != 30 && APP_VERSION != 31
+  background-size: cover;
+%endif
   background-image: url("chrome://browser/skin/devtools/responsive-vertical-resizer.png");
 }
 
@@ -3416,6 +3471,9 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   height: 7px;
   cursor: ns-resize;
   transform: translate(-12px, 12px);
+%if APP_VERSION != 30 && APP_VERSION != 31
+  background-size: cover;
+%endif
   background-image: url("chrome://browser/skin/devtools/responsive-horizontal-resizer.png");
 }
 
@@ -3424,8 +3482,27 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   height: 16px;
   cursor: se-resize;
   transform: translate(12px, 12px);
+%if APP_VERSION != 30 && APP_VERSION != 31
+  background-size: cover;
+%endif
   background-image: url("chrome://browser/skin/devtools/responsive-se-resizer.png");
 }
+
+%if APP_VERSION != 30 && APP_VERSION != 31
+@media (min-resolution: 2dppx) {
+  .devtools-responsiveui-resizebarV {
+    background-image: url("chrome://browser/skin/devtools/responsive-vertical-resizer@2x.png");
+  }
+
+  .devtools-responsiveui-resizebarH {
+    background-image: url("chrome://browser/skin/devtools/responsive-horizontal-resizer@2x.png");
+  }
+
+  .devtools-responsiveui-resizehandle {
+    background-image: url("chrome://browser/skin/devtools/responsive-se-resizer@2x.png");
+  }
+}
+%endif
 
 /* Box model highlighter */
 svg|g.box-model-container {

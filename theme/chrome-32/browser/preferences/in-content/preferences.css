@@ -11,7 +11,7 @@
 
 page {
   -moz-appearance: none;
-  background-image: linear-gradient(#FFFFFF, #EDEDED 100px);
+  background-color: white;
 }
 
 * {
@@ -83,10 +83,9 @@ tabpanels {
 tabs {
   -moz-margin-start: 60px;
   margin-bottom: 15px;
-  border-top: 2px solid;
-  border-bottom: 2px solid;
-  -moz-border-top-colors: #BBBBBB #F9F9F9;
-  -moz-border-bottom-colors: #F9F9F9 #BBBBBB;
+  border-top: 1px solid #c1c1c1;
+  border-bottom: 1px solid #c1c1c1;
+  background-color: #fbfbfb;
 }
 
 .tabs-left,
@@ -97,38 +96,26 @@ tabs {
 tab {
   -moz-appearance: none;
   margin-top: 0;
-  padding: 0;
-  -moz-margin-end: 30px;
-  min-height: 60px;
-  background-color: transparent;
+  padding: 0 20px;
+  min-height: 44px;
+  color: #424f5a;
+  background-color: #fbfbfb;
   border-width: 0;
-  border-bottom: 3px solid transparent;
+  transition: background-color 50ms ease 0s;
+}
+
+tab:hover {
+  background-color: #ebebeb;
 }
 
 tab[selected] {
-  border-bottom-color: #FF9500;
+  background-color: #ebebeb;
+  box-shadow: inset 0 -4px 0 0 #ff9500;
 }
 
 .tab-text {
   font-size: 1.3rem;
   line-height: 22px;
-  color: #333333;
-  border: 1px solid transparent;
-  border-radius: 5px;
-}
-
-tab:not([selected]):hover > .tab-middle > .tab-text {
-  background-color: rgba(255,255,255,0.5);
-  border-color: #FFFFFF;
-}
-
-tab:not([selected]):hover:active > .tab-middle > .tab-text {
-  background-color: rgba(0,0,0,0.03);
-}
-
-tab[selected] > .tab-middle > .tab-text {
-  font-weight: bold;
-  color: #424E5A;
 }
 
 /* buttons and menulists */
@@ -825,6 +812,14 @@ description > html|a {
 
 .indent {
   -moz-margin-start: 33px;
+}
+
+tab[selected] {
+  /* Override styles for tab[selected] from
+     toolkit/themes/linux/global/tabbox.css */
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 button > .button-box,
