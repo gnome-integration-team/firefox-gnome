@@ -389,16 +389,16 @@
   background-image: linear-gradient(to bottom, #f8f8f8, #ededed 40%, #dbdbdb);
   border: 1px solid transparent;
   border-color: #b2b6b2 #b8bbb8 #bdbfbd;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.37),
+  box-shadow: 0 1px 0 rgba(255,255,255,0.46),
               inset 0 1px 0 rgba(255,255,255,0.45),
               inset 1px 0 0 rgba(255,255,255,0.3),
               inset -1px 0 0 rgba(255,255,255,0.3);
-  border-radius: 6px;
+  border-radius: 4px;
   color: #2e3436;
   filter: none;
   min-width: 34px;
   -moz-margin-start: 7px;
-  padding: 3px 8px;
+	padding: 3px 9px;
   text-shadow: none;
 /*  transition-property: background, border, box-shadow;
   transition-duration: 200ms, 200ms, 0ms; */
@@ -497,44 +497,73 @@ menuitem.addon-control:hover {
 /* Colored buttons */
 
 .addon-control:-moz-any(.remove, .update, .install) {
+  min-width: 72px;
   color: #fff;
-  text-shadow: 0px 1px 0px rgba(0,0,0,.3);
-  padding: 4px 11px;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.37),
+  text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
+/*  padding: 4px 11px;*/
+  box-shadow: 0 1px 0 rgba(255,255,255,0.46),
               inset 0 1px 0 rgba(255,255,255,0.2);
 }
 
 .addon-control.remove {
   background-image: linear-gradient(to bottom, #e24a53, #cf3641);
-  border-color: #825e5f;
+  border-color: #816060;
 }
 
 .addon-control.remove:hover {   
-  background-image: linear-gradient(to bottom, #ea7980, #d5505a);
+  background-image: linear-gradient(to bottom, #F27979, #E06767);
+}
+
+.addon-control.remove:active:hover {
+  background-image: linear-gradient(to bottom, #F27979, #E06767);
+  color: #f1f1f1;
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.2) inset;
 }
     
 .addon-control.update {
   background-image: linear-gradient(to bottom, #4294f7, #004ead);
-  border-color: #003372;
+  border-color: #00234F;
 }
 
 .addon-control.update:hover {
   background-image: linear-gradient(to bottom, #519df8, #0061d6);
 }
 
+.addon-control.update:active:hover {
+  background-image: linear-gradient(to bottom, #519df8, #0061d6);
+  color: #f1f1f1;
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.2) inset;
+}
+
 .addon-control.install {
-  background-image: linear-gradient(to bottom, #89c400, #5b9c00);
-  border-color: #316d0e;
+  background-image: linear-gradient(to bottom, #70DC5A, #5ECA48);
+  border-color: #738564;
+}
+
+.addon-control.install {
+  background-image: linear-gradient(to bottom, #70DC5A, #5ECA48);
+  border-color: #738564;
 }
 
 .addon-control.install:hover {
-  background-image: linear-gradient(to bottom, #9de000, #6ab500);
+  background-image: linear-gradient(to bottom, #8CF279, #7AE067);
 }
 
 .addon-control.install:active:hover {
-  color: #203006;
-  text-shadow: 0px 1px 0px rgba(255,255,255,0.3);
-  box-shadow: 0 0 2px 1px rgba(0,0,0,0.2) inset;
+  background-image: linear-gradient(to bottom, #8CF279, #7AE067);
+  color: #f1f1f1;
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.2) inset;
+}
+
+.addon-control.install:active,
+.addon-control.update:active,
+.addon-control.update:active {
+  color: #f1f1f1;
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.2) inset;
 }
 
 /* Other buttons */
