@@ -8,9 +8,9 @@
 
 notification :-moz-any(button, .messageCloseButton) {
   -moz-appearance: none;
-  background: hsla(0,0%,100%,.2);
+  background: hsla(0,0%,100%,.17);
   background-clip: padding-box;
-  border: 1px solid hsla(0,0%,100%,.6);
+  border: 1px solid hsla(0,0%,100%,.58);
   border-radius: 5px;
   color: white;
   margin: 0 5px;
@@ -20,6 +20,6 @@ notification :-moz-any(button, .messageCloseButton) {
 }
 
 notification :-moz-any(button, .messageCloseButton):not([disabled="true"]):hover {
-  background-color: hsla(0,0%,100%,.5);
-  text-shadow: 0px 1px hsla(0,0%,0%,.2);
+  background-color: hsla(0,0%,100%,.47);
+  text-shadow: 0px 1px hsla(0,0%,0%,.18);
 }
