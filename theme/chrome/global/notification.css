@@ -10,14 +10,14 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 notification {
-  background: #e6ce58;
+  background: #69a8e9;
   color: white;
   font-weight: bold;
   text-shadow: 0px 1px hsla(0,0%,0%,.2);
 }
 
 notification[type="info"] {
-  background-color: #7195ee;
+  background-color: #69e981;
 }
 
 notification[type="critical"] {
