@@ -4,7 +4,7 @@
 
 %filter substitution
 %define infoIconValues [value="popup-blocked"], [value="refresh-blocked"], [value="offline-app-usage"], [value*="offline-app-requested-"]
-%define pluginIconValues [value="missing-plugins"]
+%define pluginIconValues [value="missing-plugins"], [value="plugin-hidden"], [value="plugin-crashed"]
 %define replaceIconValues @infoIconValues@, @pluginIconValues@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
