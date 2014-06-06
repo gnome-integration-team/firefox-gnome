@@ -2,8 +2,6 @@
  * id: treestyletab@piro.sakura.ne.jp
  * URL: https://addons.mozilla.org/firefox/addon/tree-style-tab/ */
 
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
 #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] {
   background: Window !important;
   border: none !important;

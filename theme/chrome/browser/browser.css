@@ -2846,10 +2846,10 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   margin: 1px 0;
   -moz-margin-end: -3px;
   padding: 0;
-  background: none !important;
-  border: 1px solid transparent !important;
+  background: none;
+  border: 1px solid transparent;
   border-radius: 3px;
-  box-shadow: none !important;
+  box-shadow: none;
 }
 #TabsToolbar[newstyletabs] .tab-close-button {
   transition-property: background, border;
@@ -2858,16 +2858,16 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 
 #TabsToolbar .tab-close-button:hover {
-  border-color: rgba(0, 0, 0, 0.1) !important;
+  border-color: rgba(0, 0, 0, 0.1);
 }
 #TabsToolbar[newstyletabs] .tab-close-button:hover {
   transition-timing-function: ease-in;
 }
 
 #TabsToolbar .tab-close-button:active:hover {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.13) 1px, rgba(0, 0, 0, 0.08) 2px, rgba(0, 0, 0, 0.07) 100%) !important;
-  border-color: rgba(0, 0, 0, 0.12) !important;
-  border-top-color: rgba(0, 0, 0, 0.27) !important;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.13) 1px, rgba(0, 0, 0, 0.08) 2px, rgba(0, 0, 0, 0.07) 100%);
+  border-color: rgba(0, 0, 0, 0.12);
+  border-top-color: rgba(0, 0, 0, 0.27);
 }
 #TabsToolbar[newstyletabs] .tab-close-button:active:hover {
   transition-timing-function: ease-in;
@@ -2877,8 +2877,8 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   background-image: -moz-image-rect(url(chrome://browser/skin/tabbrowser/close.svg), 0, 32, 16, 16);
   background-position: center center;
   background-repeat: no-repeat;
-  width: 16px;
-  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
   opacity: .31;
 }
 #TabsToolbar[newstyletabs] .tab-close-button > .toolbarbutton-icon {
@@ -4404,7 +4404,7 @@ chatbox {
 
 /* Customization mode */
 
-#main-window[customizing] #navigator-toolbox:not([tabsontop="true"]) toolbar {
+#main-window[customizing] #navigator-toolbox {
   background: Window;
 }
 
@@ -4419,7 +4419,7 @@ chatbox {
   margin-right: 2em;
 }
 
-#main-window:-moz-any([customize-entering],[customize-entered]) #navigator-toolbox:not([tabsontop="true"]) {
+#main-window:-moz-any([customize-entering],[customize-entered]) #navigator-toolbox {
   margin-top: 2em;
 }
 
@@ -4774,19 +4774,25 @@ toolbarpaletteitem[place="toolbar"] {
   background-attachment: fixed;
 }
 
-#main-window[customize-entered] #navigator-toolbox:not([tabsontop="true"]) > #toolbar-menubar {
+#main-window[customize-entered] #toolbar-menubar,
+#main-window[customize-entered] #TabsToolbar[tabsontop="true"] {
   -moz-appearance: none;
 }
 
 #main-window[customize-entered] #browser-bottombox,
-#main-window[customize-entered] #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar),
-#main-window[customize-entered] #navigator-toolbox:not([tabsontop="true"]) > toolbar:not(#TabsToolbar),
+#main-window[customize-entered] #navigator-toolbox,
 #main-window[customize-entered] #customization-container {
-  border: 0 3px solid hsla(0,0%,0%,.1);
+  border-left: 3px solid hsla(0,0%,0%,.1);
+  border-right: 3px solid hsla(0,0%,0%,.1);
   background-clip: padding-box;
   background-origin: padding-box;
   -moz-border-right-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
   -moz-border-left-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
+}
+
+#main-window[customize-entered] #navigator-toolbox {
+  border-top: 3px solid hsla(0,0%,0%,.1);
+  -moz-border-top-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
 }
 
 #main-window[customize-entered] #browser-bottombox {
@@ -4794,17 +4800,8 @@ toolbarpaletteitem[place="toolbar"] {
   -moz-border-bottom-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
 }
 
-#main-window[customize-entered] #navigator-toolbox:not([tabsontop="true"]) > #toolbar-menubar:not([autohide="true"]),
-#main-window[customize-entered] #navigator-toolbox:not([tabsontop="true"]) > #toolbar-menubar[autohide="true"] ~ #nav-bar {
-  border-top: 3px solid hsla(0,0%,0%,.1);
-  -moz-border-top-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
-}
-
 #main-window[customize-entered] #TabsToolbar[tabsontop="true"] {
-  -moz-appearance: none;
-  background-clip: padding-box;
-  border-right: 3px solid transparent;
-  border-left: 3px solid transparent;
+  margin-top: 3px;
 }
 
 %if APP_VERSION != 30
