@@ -4072,7 +4072,7 @@ chatbox {
 
 /* Customization mode */
 
-#main-window[customizing] #navigator-toolbox:not([tabsontop="true"]) toolbar {
+#main-window[customizing] #navigator-toolbox {
   background: Window;
 }
 
@@ -4087,7 +4087,7 @@ chatbox {
   margin-right: 2em;
 }
 
-#main-window:-moz-any([customize-entering],[customize-entered]) #navigator-toolbox:not([tabsontop="true"]) {
+#main-window:-moz-any([customize-entering],[customize-entered]) #navigator-toolbox {
   margin-top: 2em;
 }
 
@@ -4442,19 +4442,25 @@ toolbarpaletteitem[place="toolbar"] {
   background-attachment: fixed;
 }
 
-#main-window[customize-entered] #navigator-toolbox:not([tabsontop="true"]) > #toolbar-menubar {
+#main-window[customize-entered] #toolbar-menubar,
+#main-window[customize-entered] #TabsToolbar[tabsontop="true"] {
   -moz-appearance: none;
 }
 
 #main-window[customize-entered] #browser-bottombox,
-#main-window[customize-entered] #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar),
-#main-window[customize-entered] #navigator-toolbox:not([tabsontop="true"]) > toolbar:not(#TabsToolbar),
+#main-window[customize-entered] #navigator-toolbox,
 #main-window[customize-entered] #customization-container {
-  border: 0 3px solid hsla(0,0%,0%,.1);
+  border-left: 3px solid hsla(0,0%,0%,.1);
+  border-right: 3px solid hsla(0,0%,0%,.1);
   background-clip: padding-box;
   background-origin: padding-box;
   -moz-border-right-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
   -moz-border-left-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
+}
+
+#main-window[customize-entered] #navigator-toolbox {
+  border-top: 3px solid hsla(0,0%,0%,.1);
+  -moz-border-top-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
 }
 
 #main-window[customize-entered] #browser-bottombox {
@@ -4462,17 +4468,8 @@ toolbarpaletteitem[place="toolbar"] {
   -moz-border-bottom-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
 }
 
-#main-window[customize-entered] #navigator-toolbox:not([tabsontop="true"]) > #toolbar-menubar:not([autohide="true"]),
-#main-window[customize-entered] #navigator-toolbox:not([tabsontop="true"]) > #toolbar-menubar[autohide="true"] ~ #nav-bar {
-  border-top: 3px solid hsla(0,0%,0%,.1);
-  -moz-border-top-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
-}
-
 #main-window[customize-entered] #TabsToolbar[tabsontop="true"] {
-  -moz-appearance: none;
-  background-clip: padding-box;
-  border-right: 3px solid transparent;
-  border-left: 3px solid transparent;
+  margin-top: 3px;
 }
 
 /* End customization mode */
