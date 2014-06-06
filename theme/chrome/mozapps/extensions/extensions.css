@@ -542,11 +542,6 @@ menuitem.addon-control:hover {
   border-color: #738564;
 }
 
-.addon-control.install {
-  background-image: linear-gradient(to bottom, #70DC5A, #5ECA48);
-  border-color: #738564;
-}
-
 .addon-control.install:hover {
   background-image: linear-gradient(to bottom, #8CF279, #7AE067);
 }
