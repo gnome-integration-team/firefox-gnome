@@ -491,7 +491,7 @@ menuitem.addon-control:hover {
   border-color: transparent !important;
   background: none !important;
   box-shadow: none !important;
-  padding: 3px;
+  padding: 0;
 }
 
 /* Colored buttons */
