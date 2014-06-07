@@ -3670,7 +3670,7 @@ html|*.highlighter-nodeinfobar-dimensions {
 %if APP_VERSION != 30 && APP_VERSION != 31
 @media (min-resolution: 2dppx) {
   #developer-toolbar-toolbox-button {
-    list-style-image: url("chrome://browser/skin/devtools/toggle-tools@2x.png")
+    list-style-image: url("chrome://browser/skin/devtools/toggle-tools@2x.png");
     -moz-image-region: rect(0px, 32px, 32px, 0px);
   }
 
@@ -3800,7 +3800,7 @@ html|*#gcli-output-frame {
 
 @media (min-resolution: 2dppx) {
   .gclitoolbar-input-node::before {
-    background-image: url("chrome://browser/skin/devtools/commandline-icon@2x.p
+    background-image: url("chrome://browser/skin/devtools/commandline-icon@2x.png");
   }
 }
 %endif
