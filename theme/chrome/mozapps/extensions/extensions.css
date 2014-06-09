@@ -452,12 +452,23 @@ menuitem.addon-control:hover {
   box-shadow: none;
 }
 
+/*
 .addon-control:-moz-any(.enable, .disable, .preferences) .button-icon {
   display: -moz-box !important;
   -moz-margin-end: 0;
 }
 
 .addon-control:-moz-any(.enable, .disable, .preferences) .button-text {
+  display: none;
+}
+*/
+
+.addon-control.preferences .button-icon{
+	display: -moz-box !important;
+  -moz-margin-end: 0;
+}
+
+.addon-control.preferences .button-text{
   display: none;
 }
 
@@ -467,13 +478,14 @@ menuitem.addon-control:hover {
 
 /* Switches */
 
-.addon-control.enable {
-  list-style-image: url(chrome://adwaita-mozapps/skin/extensions/off.png);
+/*.addon-control.enable {
+   list-style-image: url(chrome://adwaita-mozapps/skin/extensions/off.png);
 }
 
 .addon-control.disable {
   list-style-image: url(chrome://adwaita-mozapps/skin/extensions/on.png);
 }
+*/
 
 /* FIXME: Needs for HiDPI support (#196)
 @media (min-resolution: 2dppx) {
@@ -488,11 +500,15 @@ menuitem.addon-control:hover {
 */
 
 .addon-control:-moz-any(.enable, .disable) {
+/*
   border-color: transparent !important;
   background: none !important;
   box-shadow: none !important;
-  padding: 0;
+ padding: 0;
+*/ 
+   min-width: 72px;
 }
+
 
 /* Colored buttons */
 
@@ -556,9 +572,7 @@ menuitem.addon-control:hover {
   box-shadow: 0 1px 2px 0px rgba(0,0,0,0.2) inset;
 }
 
-.addon-control.install:active,
-.addon-control.update:active,
-.addon-control.update:active {
+.addon-control:-moz-any(.remove, .update, .install):active {
   color: #f1f1f1;
   text-shadow: 0px -1px 0px rgba(0,0,0,0.1);
   box-shadow: 0 1px 2px 0px rgba(0,0,0,0.2) inset;
