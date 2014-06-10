@@ -876,6 +876,8 @@ div.CodeMirror span.eval-text {
   background-repeat: no-repeat;
   background-position: 0, 1px, 2px;
 }
+
+#toolbox-buttons:empty + #toolbox-controls-separator,
 #toolbox-controls-separator[invisible] {
   visibility: hidden;
 }
