@@ -14,7 +14,7 @@ notification :-moz-any(button, .messageCloseButton) {
   border-radius: 5px;
   color: white;
   margin: 0 5px;
-  padding: 2px 12px 3px;
+  padding: 2px 12px;
   transition-property: color, border, box-shadow, background;
   transition-duration: 200ms;
 }
