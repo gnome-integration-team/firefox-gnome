@@ -12,12 +12,15 @@ import argparse
 
 sys.path.insert(0, "./build")
 
+import console
 import addonconf
 from themebuilder import ThemeBuilder
 from extensionbuilder import ExtensionBuilder
 from packagebuilder import PackageBuilder
 
 def main():
+    console.start_timer()
+
     parser = argparse.ArgumentParser()
     parser.add_argument("action", nargs='?', default="all",
                         choices=["all", "theme", "extension", "clean"],
@@ -80,7 +83,7 @@ def main():
             path = os.path.abspath(path)
             if not os.path.exists(path):
                 continue
-            print("Remove " + path)
+            console.log("removing", path)
             if os.path.isfile(path):
                 os.remove(path)
             else:

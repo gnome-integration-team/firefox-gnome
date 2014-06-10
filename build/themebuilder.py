@@ -8,6 +8,7 @@
 import os
 import re
 
+import console
 from addonbuilder import AddonBuilder
 
 class ThemeBuilder(AddonBuilder):
@@ -50,7 +51,10 @@ class ThemeBuilder(AddonBuilder):
     def _generate_chrome_manifest(self, source, target, min_version, max_version):
         source = os.path.join(self.src_dir, source)
         target = os.path.join(self.build_dir, target)
-        print("Convert %s to %s" % (source, target))
+        if not self.config["verbose"]:
+            console.log("generating", target)
+        else:
+            console.log("generating", "%s from %s" % (target, source))
 
         os.makedirs(os.path.dirname(target), exist_ok=True)
 

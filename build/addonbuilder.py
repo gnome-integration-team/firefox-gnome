@@ -13,6 +13,8 @@ import json
 import subprocess
 import zipfile
 
+import console
+
 class AddonBuilder():
     def __init__(self, config, src_dir=".", build_dir=".build"):
         self.config = config
@@ -81,7 +83,10 @@ class AddonBuilder():
     def _generate_install_manifest(self, source, target):
         source = os.path.join(self.src_dir, source)
         target = os.path.join(self.build_dir, target)
-        print("Convert %s to %s" % (source, target))
+        if not self.config["verbose"]:
+            console.log("generating", target)
+        else:
+            console.log("generating", "%s from %s" % (target, source))
 
         os.makedirs(os.path.dirname(target), exist_ok=True)
 
@@ -97,9 +102,9 @@ class AddonBuilder():
         source_full = os.path.join(self.src_dir, source)
         target_full = os.path.join(self.build_dir, target)
         if not self.config["verbose"]:
-            print("Generate %s" % target_full)
+            console.log("preprocessor.py", "... %s" % target_full)
         else:
-            print("Generate %s from %s" % (target_full, source_full))
+            console.log("preprocessor.py", "... %s from %s" % (target_full, source_full))
 
         deps_tmp_file = os.path.join(self.build_dir, "deps.tmp")
         os.makedirs(os.path.dirname(deps_tmp_file), exist_ok=True)
@@ -152,10 +157,10 @@ class AddonBuilder():
 
         xpi = zipfile.ZipFile(self.xpi_file, "w", compression=zipfile.ZIP_DEFLATED)
         if not self.config["verbose"]:
-            print("Create %s" % self.xpi_file)
+            console.log("building xpi", self.xpi_file)
         for i in files_map:
             if self.config["verbose"]:
-                print("Archive %s to @%s@/%s" % (i[0], self.xpi_file, i[1]))
+                console.log("archiving", "%s to @%s@/%s" % (i[0], self.xpi_file, i[1]))
             xpi.write(i[0], i[1]) # source, path_inside_xpi
         xpi.close()
 
