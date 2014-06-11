@@ -14,18 +14,14 @@ notification {
   color: white;
   font-weight: bold;
   text-shadow: 0px 1px hsla(0,0%,0%,.2);
-  border-bottom: 1px solid;
-  border-color: #154f8c;
 }
 
 notification[type="info"] {
   background-color: #69e981;
-  border-color: #2db847;
 }
 
 notification[type="critical"] {
   background-color: #f55a62;
-  border-color: #a30a12;
 }
 
 .notification-inner {
