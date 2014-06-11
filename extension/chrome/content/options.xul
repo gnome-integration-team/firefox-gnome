@@ -6,39 +6,133 @@
 
 <!DOCTYPE window SYSTEM "chrome://gnome-theme-tweak/locale/options.dtd">
 
-<vbox xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-  <setting pref="extensions.gnome-theme-tweak.newtab-page"
-           type="bool" title="&newtabpage.label;"/>
-  <setting pref="extensions.gnome-theme-tweak.relief-buttons"
-           type="bool" title="&reliefbuttons.label;"/>
-  <setting pref="extensions.gnome-theme-tweak.inactive-state"
-           type="bool" title="&inactivestate.label;"/>
-  <setting pref="extensions.gnome-theme-tweak.tabs-on-top"
-           type="bool" title="&tabontop.label;"/>
-  <setting pref="extensions.gnome-theme-tweak.new-style-tabs"
-           type="bool" title="&newstyletabs.label;"/>
+<?xml-stylesheet href="chrome://global/skin/global.css"?>
 
-  <setting pref="extensions.gnome-theme-tweak.tab-max-width"
-           type="radio" title="&maxtabwidth.label;">
-    <radiogroup>
-      <vbox>
-        <radio value="0" label="&default.label;"/>
-      </vbox>
-      <vbox>
-        <radio value="1" label="&small.label;"/>
-        <radio value="2" label="&normal.label;"/>
-        <radio value="3" label="&large.label;"/>
-      </vbox>
-      <vbox>
-        <radio value="4" label="&stretch.label;"/>
-      </vbox>
-    </radiogroup>
-  </setting>
+<?xml-stylesheet href="chrome://mozapps/content/preferences/preferences.css"?>
 
-  <setting pref="extensions.gnome-theme-tweak.tabs-border"
-           type="bool" title="&tabsborder.label;"/>
-  <setting pref="extensions.gnome-theme-tweak.urlbar-history-dropmarker"
-           type="bool" title="&urlbarhistorydropmarker.label;"/>
-  <setting pref="extensions.gnome-theme-tweak.disable-popup-animation"
-           type="bool" title="&disablepopupanimation.label;"/>
-</vbox>
+<?xml-stylesheet href="chrome://browser/skin/preferences/preferences.css"?>
+<?xml-stylesheet
+  href="chrome://browser/skin/preferences/in-content/preferences.css"?>
+<?xml-stylesheet
+  href="chrome://browser/content/preferences/handlers.css"?>
+<?xml-stylesheet href="chrome://browser/skin/preferences/applications.css"?>
+
+<?xml-stylesheet href="chrome://gnome-theme-tweak/skin/options.css"?>
+
+<page id="gnome-theme-tweak-options"
+      title="GNOME Theme Tweaks"
+      disablefastfind="true"
+      xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+      xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+<xhtml:link rel="shortcut icon" href="chrome://gnome-theme-tweak/skin/gnome-16.png"/>
+
+<script type="application/javascript" src="chrome://gnome-theme-tweak/content/options.js"/>
+
+  <hbox flex="1">
+    <richlistbox id="categories">
+      <richlistitem id="category-general" class="category" value="paneGeneral"
+                    tooltiptext="&general.label;" align="center"
+                    current="true" selected="true">
+        <image class="category-icon"/>
+        <label class="category-name" flex="1">&general.label;</label>
+      </richlistitem>
+      <richlistitem id="category-tabs" class="category" value="paneTabs"
+                    tooltiptext="&tabs.label;" align="center">
+        <image class="category-icon"/>
+        <label class="category-name" flex="1">&tabs.label;</label>
+      </richlistitem>
+    </richlistbox>
+
+    <vbox class="main-content" flex="1">
+      <prefpane id="mainPrefPane">
+        <preferences id="feedsPreferences">
+          <preference id="extensions.gnome-theme-tweak.newtab-page"
+                      name="extensions.gnome-theme-tweak.newtab-page"
+                      type="bool"/>
+          <preference id="extensions.gnome-theme-tweak.relief-buttons"
+                      name="extensions.gnome-theme-tweak.relief-buttons"
+                      type="bool"/>
+          <preference id="extensions.gnome-theme-tweak.inactive-state"
+                      name="extensions.gnome-theme-tweak.inactive-state"
+                      type="bool"/>
+          <preference id="extensions.gnome-theme-tweak.tabs-on-top"
+                      name="extensions.gnome-theme-tweak.tabs-on-top"
+                      type="bool"/>
+          <preference id="extensions.gnome-theme-tweak.new-style-tabs"
+                      name="extensions.gnome-theme-tweak.new-style-tabs"
+                      type="bool"/>
+          <preference id="extensions.gnome-theme-tweak.tab-max-width"
+                      name="extensions.gnome-theme-tweak.tab-max-width"
+                      type="int"/>
+          <preference id="extensions.gnome-theme-tweak.tabs-border"
+                      name="extensions.gnome-theme-tweak.tabs-border"
+                      type="bool"/>
+          <preference id="extensions.gnome-theme-tweak.urlbar-history-dropmarker"
+                      name="extensions.gnome-theme-tweak.urlbar-history-dropmarker"
+                      type="bool"/>
+          <preference id="extensions.gnome-theme-tweak.disable-popup-animation"
+                      name="extensions.gnome-theme-tweak.disable-popup-animation"
+                      type="bool"/>
+        </preferences>
+
+        <hbox id="header-general"
+              class="header"
+              hidden="true"
+              data-category="paneGeneral">
+          <image class="header-icon"/>
+          <label class="header-name">&general.label;</label>
+        </hbox>
+
+        <!-- General preferences -->
+        <groupbox data-category="paneGeneral"
+                  hidden="true" align="start">
+            <checkbox id="newTabPage" label="&newtabpage.label;"
+                      preference="extensions.gnome-theme-tweak.newtab-page"/>
+            <checkbox id="reliefButtons" label="&reliefbuttons.label;"
+                      preference="extensions.gnome-theme-tweak.relief-buttons"/>
+            <checkbox id="inactiveState" label="&inactivestate.label;"
+                      preference="extensions.gnome-theme-tweak.inactive-state"/>
+            <checkbox id="urlbarHistoryDropmarker" label="&urlbarhistorydropmarker.label;"
+                      preference="extensions.gnome-theme-tweak.urlbar-history-dropmarker"/>
+            <checkbox id="disablePopupAnimation" label="&disablepopupanimation.label;"
+                      preference="extensions.gnome-theme-tweak.disable-popup-animation"/>
+        </groupbox>
+
+        <hbox id="header-tabs"
+              class="header"
+              hidden="true"
+              data-category="paneTabs">
+          <image class="header-icon"/>
+          <label class="header-name">&tabs.label;</label>
+        </hbox>
+
+        <!-- Tab preferences -->
+        <groupbox data-category="paneTabs"
+                  hidden="true" align="start">
+            <checkbox id="tabOnTop" label="&tabontop.label;"
+                      preference="extensions.gnome-theme-tweak.tabs-on-top"/>
+            <checkbox id="newStyleTabs" label="&newstyletabs.label;"
+                      preference="extensions.gnome-theme-tweak.new-style-tabs"/>
+            <checkbox id="tabsBorder" label="&tabsborder.label;"
+                      preference="extensions.gnome-theme-tweak.tabs-border"/>
+        </groupbox>
+
+        <groupbox data-category="paneTabs"
+                  hidden="true" align="start">
+            <caption><label>&maxtabwidth.label;</label></caption>
+            <radiogroup id="maxTabWidth"
+                        preference="extensions.gnome-theme-tweak.tab-max-width">
+                <radio value="0" label="&default.label;"/>
+                <radio value="1" label="&small.label;"/>
+                <radio value="2" label="&normal.label;"/>
+                <radio value="3" label="&large.label;"/>
+                <radio value="4" label="&stretch.label;"/>
+            </radiogroup>
+        </groupbox>
+
+      </prefpane>
+    </vbox>
+
+  </hbox>
+</page>

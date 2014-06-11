@@ -2,6 +2,9 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
+<!ENTITY general.label                 "Загальне">
+<!ENTITY tabs.label                    "Вкладки">
+
 <!ENTITY newtabpage.label              "Біле тло на сторінці нової вкладки">
 <!ENTITY reliefbuttons.label           "Об’ємний стиль кнопок панелі навігації">
 <!ENTITY inactivestate.label           "Змінювати стиль для неактивних вікон">

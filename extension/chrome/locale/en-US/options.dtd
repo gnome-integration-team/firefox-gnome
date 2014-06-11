@@ -2,6 +2,9 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
+<!ENTITY general.label                 "General">
+<!ENTITY tabs.label                    "Tabs">
+
 <!ENTITY newtabpage.label              "White background for a newtab page">
 <!ENTITY reliefbuttons.label           "Relief buttons on the navigation toolbar">
 <!ENTITY inactivestate.label           "Enable different style for unfocused windows">

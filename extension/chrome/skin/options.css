@@ -1,0 +1,25 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@namespace html "http://www.w3.org/1999/xhtml";
+
+#category-tabs > .category-icon {
+  -moz-image-region: rect(0, 168px, 24px, 144px);
+}
+
+@media (min-resolution: 2dppx) {
+  #category-tabs > .category-icon {
+    -moz-image-region: rect(0, 336px, 48px, 288px);
+  }
+}
+
+#header-tabs > .header-icon {
+  -moz-image-region: rect(0, 280px, 40px, 240px);
+}
+
+@media (min-resolution: 2dppx) {
+  #header-tabs > .header-icon {
+    -moz-image-region: rect(0, 560px, 80px, 480px);
+  }
+}

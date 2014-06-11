@@ -9,13 +9,13 @@ var CustomizationMode = {
         var element = window.document.getElementById("customization-toolbar-visibility-button");
         if (!element) return;
 
-        var open_prefs = "BrowserOpenAddonsMgr('addons://detail/' + encodeURIComponent('{05f1cdaa-7474-43fa-9f69-c697555f4ea8}') + '/preferences');"
+        var cmd = "openUILinkIn('chrome://gnome-theme-tweak/content/options.xul', 'current');"; // 'tab'
 
         var link = window.document.createElement("label");
         link.setAttribute("id", "customization-gnome-tweaks-link");
         link.setAttribute("class", "text-link customizationmode-link");
         link.setAttribute("value", "GNOME Tweaks"); // Localization?
-        link.setAttribute("onclick", open_prefs);
+        link.setAttribute("onclick", cmd);
 
         element.parentNode.insertBefore(link, element.nextSibling);
     },

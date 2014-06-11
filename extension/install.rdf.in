@@ -35,7 +35,7 @@
     </em:localized>
 
     <em:optionsURL>chrome://gnome-theme-tweak/content/options.xul</em:optionsURL>
-    <em:optionsType>2</em:optionsType>
+    <em:optionsType>3</em:optionsType>
 
     <em:bootstrap>true</em:bootstrap>
 
