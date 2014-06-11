@@ -55,6 +55,10 @@ notification[type="critical"] {
   list-style-image: url("chrome://symbolic-icons/skin/critical.svg");
 }
 
+.messageImage:not([image]) {
+  filter: url(chrome://global/skin/filters.svg#notification-icon);
+}
+
 /* Replace custom icons */
 
 notification:-moz-any(@replaceIconValues@) .messageImage {
