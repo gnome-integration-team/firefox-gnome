@@ -4570,6 +4570,10 @@ chatbox {
 
 #customization-container {
   background-color: rgb(247,247,247);
+%if APP_VERSION != 30 && APP_VERSION != 31
+  color: black;
+  text-shadow: none;
+%endif
 }
 
 #customization-palette,
@@ -4841,6 +4845,7 @@ toolbarpaletteitem[place="toolbar"] {
   list-style-image: url("chrome://browser/skin/customizableui/panelarrow-customizeTip.png");
 }
 
+%if APP_VERSION == 30 || APP_VERSION == 31
 #main-window[customizing] > #tab-view-deck {
   background: linear-gradient(to bottom, #bcbcbc, #b5b5b5);
 }
@@ -4851,6 +4856,32 @@ toolbarpaletteitem[place="toolbar"] {
                     linear-gradient(to bottom, #bcbcbc, #b5b5b5);
   background-attachment: fixed;
 }
+%else
+#main-window[customize-entered] > #tab-view-deck {
+  background-image: url("chrome://browser/skin/customizableui/customizeMode-gridTexture.png"),
+                    linear-gradient(to bottom, #bcbcbc, #b5b5b5);
+  background-attachment: fixed;
+}
+
+#main-window[customization-lwtheme] > #tab-view-deck:-moz-lwtheme {
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+  /* The image will get set from CustomizeMode.jsm */
+  background-image: none;
+  background-color: transparent;
+}
+
+#main-window[customization-lwtheme]:-moz-lwtheme {
+  background-image: url("chrome://browser/skin/customizableui/customizeMode-gridTexture.png"),
+                    url("chrome://browser/skin/customizableui/background-noise-toolbar.png"),
+                    linear-gradient(to bottom, #bcbcbc, #b5b5b5);
+  background-color: #b5b5b5;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: left top;
+}
+%endif
 
 #main-window[customize-entered] #toolbar-menubar,
 #main-window[customize-entered] #TabsToolbar[tabsontop="true"] {
