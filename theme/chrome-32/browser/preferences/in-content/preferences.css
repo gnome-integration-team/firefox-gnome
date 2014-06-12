@@ -6,7 +6,7 @@
 
 page {
   -moz-appearance: none;
-  background-color: white;
+  background-color: #eaeaea;
 }
 
 * {
@@ -26,8 +26,16 @@ caption > label {
 }
 
 .main-content {
-  padding: 40px 48px 48px;
+  background: #efefef;
+  -moz-border-start: 2px solid;
   overflow: auto;
+  padding: 40px 48px 48px;
+}
+.main-content:-moz-locale-dir(ltr) {
+  -moz-border-left-colors: #dbdbdb #fafafa;
+}
+.main-content:-moz-locale-dir(rtl) {
+  -moz-border-right-colors: #dbdbdb #fafafa;
 }
 
 prefpane {
@@ -454,105 +462,35 @@ radio[disabled="true"] > .radio-check {
 
 #categories {
   -moz-appearance: none;
-  background-color: #424f5a;
-  padding-top: 39px;
+  background-color: transparent;
+  padding-top: 55px;
   margin: 0;
 }
 
 .category {
   -moz-appearance: none;
-  color: #c1c1c1;
-  -moz-border-end-width: 0;
-  -moz-padding-start: 15px;
-  -moz-padding-end: 21px;
-  min-height: 40px;
-  transition: background-color 150ms;
-}
-
-.category:hover {
-  background-color: #5e6972;
+  color: #606060;
+  margin: 8px 0 0 0;
+  border: 0;
+  -moz-border-start: 1px solid transparent;
+  padding: 5px 0 4px 0;
+  -moz-padding-start: 16px;
+  -moz-padding-end: 42px;
 }
 
 .category[selected] {
-  background-color: #343f48;
-  color: #f2f2f2;
-  box-shadow: inset 4px 0 0 0 #FF9500;
+  background: #7487e4;
+  background-clip: padding-box;
+  border-color: #bdc9e8;
+  color: #fff;
 }
 
 .category-name {
-  line-height: 22px;
-  font-size: 1.25rem;
-  padding-bottom: 2px;
-  -moz-padding-start: 9px;
-  margin: 0;
+  font-size: 1.03em;
 }
 
 .category-icon {
-  width: 24px;
-  height: 24px;
-  list-style-image: url("chrome://browser/skin/preferences/in-content/icons.png");
-}
-
-#category-general > .category-icon {
-  -moz-image-region: rect(0, 24px, 24px, 0);
-}
-
-#category-content > .category-icon {
-  -moz-image-region: rect(0, 48px, 24px, 24px);
-}
-
-#category-application > .category-icon {
-  -moz-image-region: rect(0, 72px, 24px, 48px);
-}
-
-#category-privacy > .category-icon {
-  -moz-image-region: rect(0, 96px, 24px, 72px);
-}
-
-#category-security > .category-icon {
-  -moz-image-region: rect(0, 120px, 24px, 96px);
-}
-
-#category-sync > .category-icon {
-  -moz-image-region: rect(0, 144px, 24px, 120px);
-}
-
-#category-advanced > .category-icon {
-  -moz-image-region: rect(0, 168px, 24px, 144px);
-}
-
-@media (min-resolution: 2dppx) {
-  .category-icon {
-    list-style-image: url("chrome://browser/skin/preferences/in-content/icons@2x.png");
-  }
-
-  #category-general > .category-icon {
-    -moz-image-region: rect(0, 48px, 48px, 0);
-  }
-
-  #category-content > .category-icon {
-    -moz-image-region: rect(0, 96px, 48px, 48px);
-  }
-
-  #category-application > .category-icon {
-    -moz-image-region: rect(0, 144px, 48px, 96px);
-  }
-
-  #category-privacy > .category-icon {
-    -moz-image-region: rect(0, 192px, 48px, 144px);
-  }
-
-  #category-security > .category-icon {
-    -moz-image-region: rect(0, 240px, 48px, 192px);
-  }
-
-  #category-sync > .category-icon {
-    -moz-image-region: rect(0, 288px, 48px, 240px);
-  }
-
-  #category-advanced > .category-icon {
-    -moz-image-region: rect(0, 336px, 48px, 288px);
-  }
+  display: none;
 }
 
 /* header */
