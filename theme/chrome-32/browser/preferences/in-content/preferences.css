@@ -19,9 +19,9 @@ caption {
 }
 
 caption > label {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: bold;
-  line-height: 22px;
+  line-height: 20px;
   margin: 0 !important;
 }
 
@@ -42,8 +42,8 @@ prefpane {
   max-width: 800px;
   padding: 0;
   font: message-box;
-  font-size: 1.25rem;
-  line-height: 22px;
+  font-size: 1.0rem;
+  line-height: 20px;
   color: #424E5A;
 }
 
@@ -56,13 +56,12 @@ prefpane > .content-box {
 groupbox {
   -moz-appearance: none;
   border: none;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  -moz-margin-start: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   -moz-margin-end: 0;
   -moz-padding-start: 0;
   -moz-padding-end: 0;
-  font-size: 1.25rem;
+  font-size: 1.0rem;
 }
 
 groupbox label {
@@ -75,8 +74,8 @@ groupbox label {
 
 tabpanels {
   -moz-appearance: none;
-  font-size: 1.25rem;
-  line-height: 22px;
+  font-size: 1.0rem;
+  line-height: 20px;
   color: #424E5A;
   border: none;
   padding: 0;
@@ -84,8 +83,7 @@ tabpanels {
 }
 
 tabs {
-  -moz-margin-start: 60px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   border-top: 1px solid #c1c1c1;
   border-bottom: 1px solid #c1c1c1;
   background-color: #fbfbfb;
@@ -117,8 +115,8 @@ tab[selected] {
 }
 
 .tab-text {
-  font-size: 1.3rem;
-  line-height: 22px;
+  font-size: 1.2rem;
+  line-height: 20px;
 }
 
 /* buttons and menulists */
@@ -294,8 +292,8 @@ menulist > menupopup menuitem,
 button[type="menu"] > menupopup menu,
 button[type="menu"] > menupopup menuitem {
   -moz-appearance: none;
-  font-size: 1.25rem;
-  line-height: 22px;
+  font-size: 1.0rem;
+  line-height: 20px;
   height: 40px;
   color: #333333;
   -moz-padding-start: 10px;
@@ -361,8 +359,8 @@ textbox[disabled="true"] {
 .text-link,
 .inline-link,
 html|a.inline-link {
-  font-size: 1.25rem;
-  line-height: 22px;
+  font-size: 1.0rem;
+  line-height: 20px;
   color: #0095DD;
 }
 
@@ -496,83 +494,18 @@ radio[disabled="true"] > .radio-check {
 /* header */
 
 .header {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .header-icon {
-  width: 40px;
-  max-height: 40px;
-  -moz-margin-end: 20px;
-  list-style-image: url("chrome://browser/skin/preferences/in-content/header.png");
+  display: none;
 }
 
 .header-name {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   font-weight: normal;
-  line-height: 40px;
+  line-height: 32px;
   margin: 0;
-}
-
-#header-general > .header-icon {
-  -moz-image-region: rect(0, 40px, 40px, 0);
-}
-
-#header-content > .header-icon {
-  -moz-image-region: rect(0, 80px, 40px, 40px);
-}
-
-#header-application > .header-icon {
-  -moz-image-region: rect(0, 120px, 40px, 80px);
-}
-
-#header-privacy > .header-icon {
-  -moz-image-region: rect(0, 160px, 40px, 120px);
-}
-
-#header-security > .header-icon {
-  -moz-image-region: rect(0, 200px, 40px, 160px);
-}
-
-#header-sync > .header-icon {
-  -moz-image-region: rect(0, 240px, 40px, 200px);
-}
-
-#header-advanced > .header-icon {
-  -moz-image-region: rect(0, 280px, 40px, 240px);
-}
-
-@media (min-resolution: 2dppx) {
-  .header-icon {
-    list-style-image: url("chrome://browser/skin/preferences/in-content/header@2x.png");
-  }
-
-  #header-general > .header-icon {
-    -moz-image-region: rect(0, 80px, 80px, 0);
-  }
-
-  #header-content > .header-icon {
-    -moz-image-region: rect(0, 160px, 80px, 80px);
-  }
-
-  #header-application > .header-icon {
-    -moz-image-region: rect(0, 240px, 80px, 160px);
-  }
-
-  #header-privacy > .header-icon {
-    -moz-image-region: rect(0, 320px, 80px, 240px);
-  }
-
-  #header-security > .header-icon {
-    -moz-image-region: rect(0, 400px, 80px, 320px);
-  }
-
-  #header-sync > .header-icon {
-    -moz-image-region: rect(0, 480px, 80px, 400px);
-  }
-
-  #header-advanced > .header-icon {
-    -moz-image-region: rect(0, 560px, 80px, 480px);
-  }
 }
 
 /* General Pane */
@@ -601,7 +534,6 @@ filefield {
 /* Applications Pane Styles */
 
 #applicationsContent {
-  -moz-margin-start: 60px;
   padding: 15px 0;
 }
 
@@ -612,8 +544,8 @@ filefield {
 #handlersView {
   -moz-appearance: none;
   -moz-margin-start: 0;
-  font-size: 1.25rem;
-  line-height: 22px;
+  font-size: 1.0rem;
+  line-height: 20px;
   color: #333333;
   border: 1px solid #C1C1C1;
   border-radius: 2px;
@@ -728,8 +660,7 @@ description > html|a {
 }
 
 #encryptionPanel {
-  margin-top: 15px;
-  -moz-margin-start: 60px;
+  margin-top: 10px;
 }
 
 #telemetryLearnMore,
@@ -802,8 +733,8 @@ spinbuttons {
 
 .actionsMenu {
   font-family: "Clear Sans", sans-serif;
-  font-size: 1.25rem;
-  line-height: 22px;
+  font-size: 1.0rem;
+  line-height: 20px;
 }
 
 .actionsMenu > .menulist-label-box > .menulist-icon {
