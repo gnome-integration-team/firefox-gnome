@@ -396,6 +396,7 @@
   border-radius: 4px;
   color: #2e3436;
   filter: none;
+  min-height: 30px;
   min-width: 34px;
   -moz-margin-start: 7px;
   padding: 3px 9px;
@@ -440,6 +441,7 @@ menuitem.addon-control {
   border-radius: 0;
   color: MenuText;
   margin: 0;
+  min-height: none;
   max-width: none;
   padding: 5px 12px;
   /*
@@ -493,10 +495,7 @@ menuitem.addon-control:hover {
   background-image: linear-gradient(to bottom, #e24a53, #cf3641);
   border-color: #816060;
 }
-.addon-control.remove:hover {
-  background-image: linear-gradient(to bottom, #F27979, #E06767);
-  border-color: #816060;
-}
+.addon-control.remove:hover,
 .addon-control.remove:active:hover {
   background-image: linear-gradient(to bottom, #F27979, #E06767);
   border-color: #816060;
@@ -506,10 +505,7 @@ menuitem.addon-control:hover {
   background-image: linear-gradient(to bottom, #4294f7, #004ead);
   border-color: #00234F;
 }
-.addon-control.update:hover {
-  background-image: linear-gradient(to bottom, #519df8, #0061d6);
-  border-color: #00234F;
-}
+.addon-control.update:hover,
 .addon-control.update:active:hover {
   background-image: linear-gradient(to bottom, #519df8, #0061d6);
   border-color: #00234F;
@@ -519,10 +515,7 @@ menuitem.addon-control:hover {
   background-image: linear-gradient(to bottom, #70DC5A, #5ECA48);
   border-color: #738564;
 }
-.addon-control.install:hover {
-  background-image: linear-gradient(to bottom, #8CF279, #7AE067);
-  border-color: #738564;
-}
+.addon-control.install:hover,
 .addon-control.install:active:hover {
   background-image: linear-gradient(to bottom, #8CF279, #7AE067);
   border-color: #738564;
