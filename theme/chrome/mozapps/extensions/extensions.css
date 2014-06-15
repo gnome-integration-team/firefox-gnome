@@ -465,6 +465,7 @@ menuitem.addon-control:hover {
 
 .addon-control.preferences {
   list-style-image: url(chrome://symbolic-icons/skin/emblem-system.svg);
+  border-radius: 50%;
   min-width: 30px;
   padding: 6px;
 }
