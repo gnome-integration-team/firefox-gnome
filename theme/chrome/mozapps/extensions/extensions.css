@@ -496,6 +496,7 @@ menuitem.addon-control:hover {
 }
 .addon-control.remove:active:hover {
   background-image: linear-gradient(to bottom, #F27979, #E06767);
+  border-color: #816060;
 }
     
 .addon-control.update {
@@ -508,6 +509,7 @@ menuitem.addon-control:hover {
 }
 .addon-control.update:active:hover {
   background-image: linear-gradient(to bottom, #519df8, #0061d6);
+  border-color: #00234F;
 }
 
 .addon-control.install {
@@ -520,6 +522,7 @@ menuitem.addon-control:hover {
 }
 .addon-control.install:active:hover {
   background-image: linear-gradient(to bottom, #8CF279, #7AE067);
+  border-color: #738564;
 }
 
 /* Other buttons */
