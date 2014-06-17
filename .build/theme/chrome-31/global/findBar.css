@@ -1,0 +1,223 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+findbar {
+  -moz-appearance: none;
+  background: linear-gradient(to bottom, #d4d4d4, #ececec);
+  padding: 4px 8px;
+  border-top: 2px solid;
+  -moz-border-top-colors: ThreeDShadow ThreeDHighlight;
+  min-width: 1px;
+  transition-property: margin-bottom, opacity, visibility;
+  transition-duration: 150ms, 150ms, 0s;
+  transition-timing-function: ease-in-out, ease-in-out, linear;
+}
+
+findbar[hidden] {
+  /* Override display:none to make the transition work. */
+  display: -moz-box;
+  visibility: collapse;
+  margin-bottom: -1em;
+  opacity: 0;
+  transition-delay: 0s, 0s, 150ms;
+}
+
+/* Buttons */
+
+findbar toolbarbutton {
+  -moz-appearance: none;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: #2e3436;
+  padding: 3px 5px;
+  transition-property: border, box-shadow, background;
+  transition-duration: 200ms;
+}
+
+findbar toolbarbutton:not([disabled="true"]):hover {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(255,255,255,0.8) 40%, rgba(220,220,220,0.5));
+  border-color: rgba(50,50,50,.4);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.37);
+}
+
+findbar toolbarbutton:not([disabled="true"]):not([open="true"]):active:hover,
+findbar toolbarbutton[checked="true"],
+findbar toolbarbutton[checked="true"]:hover {
+  background-image: linear-gradient(to bottom, rgba(0,10,0,0.3), rgba(200,200,200,0.3));
+  border-color: rgba(180,180,180,1);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.37);
+}
+
+findbar toolbarbutton[open="true"],
+findbar toolbarbutton[open="true"]:hover,
+findbar toolbarbutton[open="true"]:active,
+findbar toolbarbutton[open="true"]:active:hover {
+  background: rgba(255,255,255,0.8);
+  border-color: rgba(255,255,255,0.8);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.37);
+  border-radius: 3px 3px 0 0;
+}
+
+findbar toolbarbutton[disabled="true"],
+findbar toolbarbutton[disabled="true"]:hover,
+findbar toolbarbutton[disabled="true"]:active,
+findbar toolbarbutton[disabled="true"]:active:hover {
+  color: #a7aba7;
+}
+
+.findbar-closebutton {
+  -moz-appearance: none;
+  border: none;
+  width: 16px;
+  height: 16px;
+  margin: 1px 8px;
+}
+
+/* Search field */
+
+.findbar-textbox {
+  -moz-appearance: none;
+  border: 1px solid rgba(50,50,50,.4);
+  background-image: linear-gradient(to bottom, #f2f2f2, #fdfdfd);
+  box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15),
+                    0px 1px 0 0 rgba(255,255,255,0.89);
+  color: rgba(0,0,0,0.9);
+  margin: 0;
+  padding: 3px;
+  width: 14em;
+}
+
+.findbar-textbox:-moz-locale-dir(ltr) {
+  border-radius: 3px 0 0 3px;
+  border-right-width: 0;
+}
+
+.findbar-textbox:-moz-locale-dir(rtl) {
+  border-radius: 0 3px 3px 0;
+  border-left-width: 0;
+}
+
+.findbar-textbox[focused="true"] {
+  border-color: Highlight;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.6),
+              inset 0 1px 2px 0 rgba(0,106,221,0.3);
+}
+
+.findbar-textbox[status="notfound"] {
+  background: #f66;
+  border-color: #f66;
+  box-shadow: inset 0 0 0 1em #f66;
+  color: white;
+}
+
+.findbar-textbox[flash="true"] {
+  box-shadow: inset 0 0 0 1em yellow;
+  color: black;
+}
+
+.findbar-textbox.minimal {
+  border-width: 1px;
+  border-radius: 3px;
+}
+
+.findbar-find-previous,
+.findbar-find-next {
+  line-height: 1em;
+  margin: 0 !important;
+  padding: 5px !important;
+  width: 30px;
+}
+
+:-moz-any(.findbar-find-next, .findbar-find-previous):not(:hover):not([disabled="true"]) {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.6), rgba(200,200,200,0.5)) !important;
+  border: 1px solid rgba(50,50,50,.4) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.37), inset 0 1px 0 rgba(255,255,255,0.45), inset 1px 0 0 rgba(255,255,255,0.3), inset -1px 0 0 rgba(255,255,255,0.3) !important;
+}
+
+:-moz-any(.findbar-find-next, .findbar-find-previous)[disabled="true"] {
+  background: rgba(255,255,255,0.3) !important;
+  border-color: rgba(50,50,50,.4) !important;
+  box-shadow: none !important;
+}
+
+.findbar-find-previous:focus,
+.findbar-find-next:focus {
+  border-color: Highlight;
+  box-shadow: inset 0 0 1px 0 Highlight;
+}
+
+.findbar-find-previous:not([disabled]):active,
+.findbar-find-next:not([disabled]):active {
+  background: rgba(23,50,76,.2);
+  border: 1px solid ThreeDShadow;
+  box-shadow: 0 1px 2px rgba(10,31,51,.2) inset;
+}
+
+.findbar-find-previous {
+  list-style-image: url(chrome://symbolic-icons/skin/go-up.svg);
+  border-radius: 0 !important;
+  -moz-margin-end: -1px !important;
+}
+
+.findbar-find-next {
+  list-style-image: url(chrome://symbolic-icons/skin/go-down.svg);
+  border-radius: 0 3px 3px 0 !important;
+}
+
+.findbar-find-previous > .toolbarbutton-icon,
+.findbar-find-next > .toolbarbutton-icon {
+  margin: 0;
+}
+
+.findbar-find-previous > .toolbarbutton-text,
+.findbar-find-next > .toolbarbutton-text {
+  display: none;
+}
+
+.findbar-find-previous[disabled="true"] > .toolbarbutton-icon,
+.findbar-find-next[disabled="true"] > .toolbarbutton-icon {
+  opacity: .5;
+}
+
+.findbar-find-next:-moz-locale-dir(ltr) {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.findbar-find-next:-moz-locale-dir(rtl) {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.findbar-find-previous:focus + .findbar-find-next {
+  -moz-border-start-width: 0 !important;
+}
+
+.findbar-find-previous:focus {
+  -moz-border-end-width: 1px;
+}
+
+.findbar-highlight,
+.findbar-case-sensitive {
+  -moz-margin-start: 5px;
+}
+
+.findbar-highlight {
+  list-style-image: url(chrome://symbolic-icons/skin/highlight.svg);
+}
+.findbar-highlight[disabled="true"] {
+  opacity: 0.5;
+}
+
+.findbar-find-status {
+  margin: 0 !important;
+  -moz-margin-start: 12px !important;
+}
+
+.find-status-icon[status="pending"] {
+  list-style-image: url("chrome://global/skin/icons/loading_16.png");
+}

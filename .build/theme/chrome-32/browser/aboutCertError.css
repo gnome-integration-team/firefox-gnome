@@ -1,0 +1,103 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+html {
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 11pt cantarell;
+  color: #2e3436;
+  padding: 20px 20px 0 20px;
+  background-color: #f6f6f4;
+  background-image: linear-gradient(to bottom, #eeeeec, #f6f6f4);
+  background-size: 100% 5em;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: 160%;
+  margin: 0 0 .3em 0;
+  padding: 0 24px;
+}
+
+h2 {
+  font-size: 130%;
+  font-weight: normal;
+}
+
+/*Replace the bold text with a nicer alternative*/
+p > b {
+  font-weight: normal;
+  color: #868883;
+}
+
+#errorPageContainer {
+  position: relative;
+  min-width: 13em;
+  max-width: 55em;
+  margin: 5em auto 0;
+  padding: 3em 0;
+  -moz-padding-start: 5em;
+  background-image: url(chrome://browser/skin/about-pages/connection-untrusted.svg);
+  background-repeat: no-repeat;
+  background-position: 56px 51px;
+  color: #2e3436;
+}
+
+#errorPageContainer:-moz-dir(rtl) {
+  background-position: right 56px top 51px;
+}
+
+#errorTitle {
+  -moz-margin-start: 150px;
+}
+
+#errorLongContent {
+  -moz-margin-start: 150px;
+  padding: 0 24px;
+}
+
+#introContentP1 {
+  margin-top: 2em;
+  font-weight: bold;
+}
+
+#introContentP1 > b {
+  color: #f59506;
+  font-weight: bold;
+}
+
+#errorTitleText {
+  color: #f59506;
+  letter-spacing: 0.02em;
+  text-shadow: none;
+}
+
+.expander > button {
+  -moz-padding-start: 20px;
+  background: url(chrome://symbolic-icons/skin/go-down.svg) left center no-repeat;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.expander > button:-moz-dir(rtl) {
+  background-position: right center;
+}
+
+.expander[collapsed] > button {
+  background-image: url(chrome://symbolic-icons/skin/go-next.svg)
+}
+
+.expander[collapsed] > button:-moz-dir(rtl) {
+  background-image: url(chrome://symbolic-icons/skin/go-previous.svg)
+}
+
+#exceptionDialogButton,
+#getMeOutOfHereButton {
+  -moz-margin-start: 17px;
+}

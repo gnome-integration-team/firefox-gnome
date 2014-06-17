@@ -1,0 +1,93 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+#downloadManager {
+  background-color: Window;
+}
+
+/* Download View */
+#downloadView {
+  background-color: #ffffff;
+  border-bottom: none;
+  -moz-box-ordinal-group: 2;
+}
+
+windowdragbox#search {
+  border-bottom: 1px solid #a7aba7;
+  -moz-box-ordinal-group: 1;
+  -moz-binding: url(chrome://global/content/bindings/toolbar.xml#toolbar-drag);
+}
+
+/* Download View Items */
+richlistitem[type="download"] {
+  padding: 7px;
+  -moz-padding-start: 4px;
+  -moz-padding-end: 8px;
+}
+
+richlistitem[type="download"][selected="true"] {
+  background-image: none;
+}
+
+richlistitem[type="download"]:not([selected="true"]):nth-child(odd) {
+  background-color: transparent;
+}
+
+richlistitem[type="download"] .name {
+  margin-bottom: 5px;
+}
+
+richlistitem[type="download"] .dateTime,
+richlistitem[type="download"] .status {
+  font-size: smaller;
+}
+
+richlistitem[type="download"] progressmeter {
+  margin-bottom: 5px;
+}
+
+.cancel {
+  list-style-image: url(chrome://symbolic-icons/skin/playback-stop.svg);
+}
+
+.pause {
+  list-style-image: url(chrome://symbolic-icons/skin/playback-pause.svg);
+}
+.pause[disabled="true"] {
+  opacity: 0.5;
+}
+
+.resume {
+  list-style-image: url(chrome://symbolic-icons/skin/playback-start.svg);
+}
+
+.retry {
+  list-style-image: url(chrome://symbolic-icons/skin/redo.svg);
+}
+.retry:-moz-locale-dir(rtl) {
+  list-style-image: url(chrome://symbolic-icons/skin/redo-rtl.svg);
+}
+
+/* prevent flickering when changing states */
+.downloadTypeIcon {
+  padding: 8px;
+}
+
+#clearListButton {
+  list-style-image: url(chrome://symbolic-icons/skin/edit-clear-all.svg) !important;
+  margin-top: 0;
+  min-width: 30px;
+}
+
+#clearListButton .button-text {
+  display: none;
+}
+
+#clearListButton .button-icon {
+  display: block !important;
+  -moz-margin-end: 0;
+}
+#clearListButton[disabled="true"] .button-icon {
+  opacity: .5;
+}

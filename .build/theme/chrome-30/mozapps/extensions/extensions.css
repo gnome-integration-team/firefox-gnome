@@ -1,0 +1,604 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* All-in-One Sidebar
+ * id: {097d3191-e6fa-4728-9826-b533d755359d}
+ * URL: https://addons.mozilla.org/firefox/addon/all-in-one-sidebar/ */
+
+@-moz-document url("chrome://browser/content/browser.xul") {
+
+#aios-sbhtoolbar > .tabs-closebutton {
+  list-style-image: url(chrome://symbolic-icons/skin/close.svg);
+}
+#aios-sbhtoolbar > .tabs-closebutton > .toolbarbutton-icon {
+  margin: 0;
+}
+
+#addons-button.aios-tbutton {
+  list-style-image: url(chrome://symbolic-icons/skin/addon.svg) !important;
+  -moz-image-region: auto !important;
+}
+
+#pageinfo-button.aios-tbutton {
+  list-style-image: url(chrome://symbolic-icons/skin/information.svg) !important;
+  -moz-image-region: auto !important;
+}
+
+#multipanel-button.aios-tbutton {
+}
+
+}
+
+@-moz-document url("about:addons") {
+
+#addons-page[aios-inSidebar] {
+  background: none;
+}
+
+#addons-page[aios-inSidebar] #header {
+  border-top: 1px solid #a7a7a7;
+}
+
+#addons-page[aios-inSidebar] .category-icon {
+  display: -moz-box;
+}
+
+#addons-page[aios-inSidebar] .category {
+  border: none;
+}
+
+}
+
+#addons-page {
+  background: #ebebeb url(chrome://browser/skin/devtools/noise.png);
+  background-attachment: fixed;
+  padding: 0;
+}
+
+/*** notification icons ***/
+
+.warning-icon {
+  list-style-image: url(chrome://symbolic-icons/skin/important.svg);
+}
+
+.error-icon {
+  list-style-image: url(chrome://symbolic-icons/skin/error.svg);
+}
+
+.pending-icon,
+.info-icon {
+  list-style-image: url(chrome://symbolic-icons/skin/information.svg);
+}
+
+/*** category selector ***/
+
+#categories {
+  margin: 0;
+  -moz-margin-end: -12px;
+}
+
+#categories > .category:first-of-type {
+  margin-top: 39px;
+}
+
+.category {
+  color: #606060;
+  margin: 10px 0 0 0;
+
+  -moz-border-start: 1px solid transparent;
+  -moz-border-end: 12px solid transparent;
+  border-radius: 0 !important;
+
+  padding: 5px 0 4px 0;
+  -moz-padding-start: 25px;
+}
+
+.category[disabled] + .category {
+  margin-top: 0;
+}
+
+.category:not([disabled]) {
+  height: auto;
+}
+
+.category[selected] {
+  background: #007fe1;
+  background-clip: padding-box;
+  -moz-border-start: 1px solid #99c6e8;
+  color: #fff !important;
+}
+
+.category[selected]:-moz-locale-dir(ltr) {
+  border-image: url(chrome://adwaita-mozapps/skin/extensions/addons-category-border.png) 0 12 0 0 / 0px 12px 0px 0px stretch;
+}
+.category[selected]:-moz-locale-dir(rtl) {
+  border-image: url(chrome://adwaita-mozapps/skin/extensions/addons-category-border-rtl.png) 0 0 0 12 / 0px 0px 0px 12px stretch;
+}
+
+.category-name {
+  font-size: 1.03em;
+}
+
+@media (max-width: 800px) {
+  .category-name {
+    display: -moz-box;
+  }
+}
+
+.category-badge {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  color: inherit;
+  margin: 0;
+  -moz-margin-end: 10px;
+}
+
+.category-icon {
+  display: none;
+}
+
+/*** view-port-container ***/
+
+#view-port-container {
+  background: #fff;
+  border: 0;
+  border-radius: 0;
+  border-top: 1px solid #dbdbdb;
+  -moz-border-start: 2px solid;
+  -moz-padding-start: 0;
+}
+#view-port-container:-moz-locale-dir(ltr) {
+  -moz-border-left-colors: #dbdbdb #fafafa;
+}
+#view-port-container:-moz-locale-dir(rtl) {
+  -moz-border-right-colors: #dbdbdb #fafafa;
+}
+
+/*** header ***/
+
+#header {
+  -moz-appearance: none;
+  margin: 0;
+  padding: 8px;
+  height: 37px;
+  background: none;
+  border: none;
+}
+
+#header toolbarbutton,
+#header textbox {
+  margin: 2px 3px;
+}
+
+#header toolbarbutton {
+  -moz-appearance: none;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  border-radius: 3px;
+  color: #2e3436 !important;
+  filter: none;
+  padding: 1px !important;
+  min-width: 32px;
+  min-height: 28px;
+  text-shadow: none;
+  transition-property: color, border, box-shadow, background;
+  transition-duration: 200ms;
+}
+
+#header toolbarbutton:not([disabled="true"]):hover,
+#header .toolbarbutton-menubutton-dropmarker:hover {
+  background-image: linear-gradient(to bottom, #ffffff, #ebebeb) !important;
+  border: 1px solid rgba(0,0,0,.25) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
+}
+
+#header toolbarbutton:not([disabled="true"]):active:hover,
+#header toolbarbutton[checked="true"],
+#header toolbarbutton[checked="true"]:hover {
+  background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4) !important;
+/*  border-color: #72a0cf;*/
+  border: 1px solid rgba(0,0,0,.25) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
+}
+
+#header toolbarbutton[open="true"],
+#header toolbarbutton[open="true"]:hover,
+#header toolbarbutton[open="true"]:active,
+#header toolbarbutton[open="true"]:active:hover {
+  background: #ffffff !important;
+  border: 1px solid #ffffff !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.89) !important;
+  border-radius: 3px 3px 0 0;
+}
+
+#header toolbarbutton[disabled="true"],
+#header toolbarbutton[disabled="true"]:hover,
+#header toolbarbutton[disabled="true"]:active,
+#header toolbarbutton[disabled="true"]:active:hover {
+  color: #a7aba7 !important;
+}
+
+#back-btn {
+  -moz-margin-end: 1px !important;
+}
+
+#forward-btn {
+  -moz-margin-start: 1px !important;
+}
+
+#back-btn:-moz-locale-dir(ltr),
+#forward-btn:-moz-locale-dir(rtl) {
+  list-style-image: url(chrome://symbolic-icons/skin/go-previous.svg) !important;
+}
+
+#back-btn:-moz-locale-dir(rtl),
+#forward-btn:-moz-locale-dir(ltr) {
+  list-style-image: url(chrome://symbolic-icons/skin/go-next.svg) !important;
+}
+
+#back-btn[disabled="true"] > .toolbarbutton-icon,
+#forward-btn[disabled="true"] > .toolbarbutton-icon {
+  opacity: 0.5;
+}
+
+#header-utils-btn > .toolbarbutton-icon {
+  list-style-image: url(chrome://symbolic-icons/skin/preferences-system.svg);
+ -moz-margin-end: 0;
+}
+
+#header-utils-btn > .toolbarbutton-menu-dropmarker {
+  display: none;
+}
+
+#header-utils-btn:-moz-focusring > .button-box {
+  border: none;
+}
+
+#header-search {
+  min-height: 28px;
+}
+
+/***  ***/
+
+.view-header {
+  background-color: transparent;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+#list-view > hbox {
+  -moz-margin-start: -2px;
+  padding: 4px;
+  border-top-color: #dbdbdb;
+  border-bottom-color: #dbdbdb;
+}
+
+.view-header button:not(.button-link) {
+  -moz-appearance: button !important;
+  padding: 0 3px !important;
+}
+
+/*** sorters ***/
+
+.sorter[checkState="1"] .button-icon {
+  list-style-image: url(chrome://symbolic-icons/skin/go-up.svg);
+}
+
+.sorter[checkState="2"] .button-icon {
+  list-style-image: url(chrome://symbolic-icons/skin/go-down.svg);
+}
+
+/*** list ***/
+
+.addon.addon-view {
+  -moz-padding-start: 20px;
+  -moz-padding-end: 20px;
+}
+
+.addon {
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid #dfdfde;
+  color: #222;
+}
+
+.addon:first-child {
+  border-top: 0;
+}
+
+.addon:not([selected]):hover {
+  background-color: rgba(255,255,255,0.3);
+}
+
+.addon[selected] {
+  background: #efefef;
+  -moz-border-top-colors: none;
+  border-image: none;
+  color: #414141;
+}
+
+.addon[active="false"] .version {
+}
+
+.addon[active="false"] .details.button-link,
+.addon[active="false"] .name-container {
+  color: gray;
+}
+
+.addon[active="false"]:not(:hover) .addon-control {
+  opacity: 0.4;
+}
+
+.icon-container {
+  background-color: #dfdfdf;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.1) inset;
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
+}
+
+.icon {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.name-container {
+  font-size: 1.05em;
+}
+
+.version {
+  color: gray;
+  font-size: 0.8em;
+  padding: 2px;
+}
+
+.description {
+  color: #979797;
+  font-size: 1em;
+}
+
+.addon .button-link {
+  font-size: 1em;
+}
+
+.details.button-link {
+  -moz-margin-start: 10px;
+}
+
+.warning,
+.pending,
+.error {
+  -moz-margin-start: 10px;
+  padding-bottom: 10px
+}
+
+.addon[active="false"] {
+  background-image: none;
+}
+
+.addon[active="false"] .relnotes-container {
+  color: gray;
+}
+
+.addon .relnotes-toggle {
+  list-style-image: url(chrome://symbolic-icons/skin/go-down.svg);
+  margin-top: 10px;
+}
+
+.addon[active="false"] .relnotes-toggle {
+  color: gray;
+}
+
+.addon[active="false"] .relnotes-toggle > .button-box > .button-icon {
+  opacity: 0.4;
+}
+
+.addon[show-relnotes] .relnotes-toggle {
+  list-style-image: url(chrome://symbolic-icons/skin/go-up.svg);
+}
+
+/*** search view ***/
+
+#search-filter {
+  font-size: inherit;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+/*** detail view ***/
+
+.detail-view-container {
+  font-size: inherit;
+}
+
+#detail-view[active="false"]:not([pending]):not([notification]) {
+  background-image: none;
+}
+
+/*** rating ***/
+
+.meta-rating[showrating="average"] > .star {
+  list-style-image: url(chrome://adwaita-mozapps/skin/extensions/rating-not-won.png);
+}
+
+.meta-rating > .star[on="true"],
+.meta-rating[showrating="user"] > .star[hover] {
+  list-style-image: url(chrome://adwaita-mozapps/skin/extensions/rating-won.png);
+}
+
+/*** ***/
+
+#update-actions {
+  border-top: 1px solid #dbdbdb;
+  -moz-box-ordinal-group: 2; /* Move panel with Install Updates button to bottom */
+}
+
+/*** buttons ***/
+
+.status-control-wrapper {
+  -moz-margin-start: 5em;
+}
+
+.addon-control {
+  -moz-appearance: none !important;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  filter: none;
+  padding: 3px;
+  min-width: 32px;
+  opacity: 0.8;
+  transition-property: border, box-shadow, background;
+  transition-duration: 200ms;
+}
+
+.addon-control:not([disabled="true"]):hover {
+  border-color: rgba(0,0,0,.25) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.69),
+              0 1px 0 rgba(255,255,255,0.69) inset;
+}
+
+.addon-control:not([disabled="true"]):active:hover,
+.addon-control[checked="true"],
+.addon-control[checked="true"]:hover {
+  background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4);
+  border-color: rgba(0,0,0,.25);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.69);
+}
+
+.addon-control[open="true"],
+.addon-control[open="true"]:hover,
+.addon-control[open="true"]:active,
+.addon-control[open="true"]:active:hover {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.69);
+  border-radius: 3px 3px 0 0;
+}
+
+menuitem.addon-control {
+  -moz-appearance: menuitem;
+  border: none;
+  border-radius: 0;
+  color: MenuText;
+  max-width: none;
+  opacity: 1;
+  padding: 1px 5px;
+  transition-property: none;
+}
+
+menuitem.addon-control:hover {
+  color: -moz-menuhovertext;
+  background-color: -moz-menuhover;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.addon-control.enable .button-icon,
+.addon-control.disable .button-icon,
+.addon-control.remove .button-icon,
+.addon-control.preferences .button-icon {
+  display: -moz-box !important;
+  -moz-margin-end: 0;
+}
+
+.addon-control.enable .button-text,
+.addon-control.disable .button-text,
+.addon-control.remove .button-text,
+.addon-control.preferences .button-text {
+  display: none;
+}
+
+/* Switches */
+
+.addon-control.enable {
+  list-style-image: url(chrome://adwaita-mozapps/skin/extensions/off.png);
+}
+
+.addon-control.disable {
+  list-style-image: url(chrome://adwaita-mozapps/skin/extensions/on.png);
+}
+
+.addon-control.enable:hover,
+.addon-control.disable:hover,
+.addon-control.enable:active,
+.addon-control.disable:active{
+  border-color: transparent !important;
+  background: none !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+button.addon[active="false"] .addon-control.enable,
+button.addon[active="false"] .addon-control.disable{
+  opacity: 1;
+}
+
+.addon-control.remove {
+  list-style-image: url(chrome://symbolic-icons/skin/user-trash.svg);
+}
+
+.addon-control.preferences {
+  list-style-image: url(chrome://symbolic-icons/skin/emblem-system.svg);
+}
+
+.addon-control.update {
+  color: #fff;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(to bottom, #4294F7, #004EAD);
+  padding: 4px 15px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset;
+  border: 1px solid #003372;
+}
+
+.addon-control.install {
+  color: #fff;
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.3);
+  background-image: linear-gradient(to bottom, #89C400, #5B9C00);
+  padding: 4px 15px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset;
+  border: 1px solid #316D0E;
+}
+
+.addon-control.install:active:hover {
+  color: #203006;
+  text-shadow: 0px 1px 0px rgba(255,255,255,0.3);
+  box-shadow: 0 0 2px 1px rgba(0,0,0,0.2) inset;
+}
+
+.addon-control.state .menulist-dropmarker {
+  -moz-appearance: none;
+  display: -moz-box;
+  list-style-image: url(chrome://symbolic-icons/skin/dropmarker.svg);
+  padding: 3px;
+  margin: 2px 0;
+  max-height: 16px;
+}
+
+.button-link {
+  color: #4b4b4b;
+}
+
+.button-link:hover {
+  color: #3b6aa7;
+  text-decoration: underline;
+  box-shadow: none;
+}
+
+.button-link:active {
+  text-decoration: underline;
+  box-shadow: none;
+}
+
+.button-link .button-box {
+  padding: 0;
+  border: none !important;
+}
+
+.text-link {
+  color: #3b6aa7;
+  text-decoration: none;
+}
+
+.text-link:hover,
+.text-link:active {
+  text-decoration: underline;
+}

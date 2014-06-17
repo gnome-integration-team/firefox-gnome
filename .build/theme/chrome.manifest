@@ -1,0 +1,19 @@
+skin    browser            Adwaita    chrome-30/browser/
+skin    browser            Adwaita    chrome-31/browser/ appversion>=31a1
+skin    browser            Adwaita    chrome-32/browser/ appversion>=32a1
+skin    global             Adwaita    chrome-30/global/
+skin    global             Adwaita    chrome-31/global/ appversion>=31a1
+skin    global             Adwaita    chrome-32/global/ appversion>=32a1
+skin    symbolic-icons     Adwaita    chrome-30/symbolic-icons/
+skin    symbolic-icons     Adwaita    chrome-31/symbolic-icons/ appversion>=31a1
+skin    symbolic-icons     Adwaita    chrome-32/symbolic-icons/ appversion>=32a1
+skin    adwaita-mozapps    Adwaita    chrome-30/mozapps/
+skin    adwaita-mozapps    Adwaita    chrome-31/mozapps/ appversion>=31a1
+skin    adwaita-mozapps    Adwaita    chrome-32/mozapps/ appversion>=32a1
+
+style  chrome://browser/content/browser.xul                chrome://browser/skin/browser-tb.css
+
+style  about:addons                                        chrome://adwaita-mozapps/skin/extensions/extensions.css
+style  chrome://mozapps/content/extensions/extensions.xul  chrome://adwaita-mozapps/skin/extensions/extensions.css
+
+style  chrome://mozapps/content/downloads/downloads.xul    chrome://adwaita-mozapps/skin/downloads/downloads.css

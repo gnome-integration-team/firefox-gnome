@@ -1,0 +1,96 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+.searchbar-textbox {
+  min-height: 22px;
+  background-color: -moz-field;
+}
+
+.autocomplete-textbox-container {
+  -moz-box-align: stretch;
+}
+
+.textbox-input-box {
+  margin: 0;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.searchbar-engine-menuitem[selected="true"] > .menu-iconic-text {
+  font-weight: bold;
+}
+
+/* Engine button */
+
+.searchbar-engine-button {
+  -moz-appearance: none;
+  min-width: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  -moz-box-align: center;
+  background: transparent;
+  box-shadow: none;
+  height: 26px;
+  min-width: 26px;
+  padding: 5px;
+}
+
+.searchbar-engine-image {
+  height: 16px;
+  width: 16px;
+  list-style-image: url(chrome://mozapps/skin/places/defaultFavicon.png);
+}
+
+.searchbar-engine-button > .button-box {
+  -moz-appearance: none;
+  padding: 0;
+  border: 0;
+}
+
+.searchbar-engine-button:active, .searchbar-engine-button[open="true"] {
+  background-image: linear-gradient(to bottom, #d1d1d1, #ffffff) !important;
+  box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.15) !important;
+}
+
+.searchbar-dropmarker-image {
+/*  -moz-appearance: toolbarbutton-dropdown !important;*/
+/*  width: 12px;*/
+/*  height: 12px;*/
+  display: none;
+}
+
+/* Search go button */
+.search-go-container {
+  -moz-box-align: center;
+  opacity: .35;
+}
+
+.search-go-container:hover {
+  opacity: 1;
+}
+
+.search-go-container:active {
+  background-image: linear-gradient(to bottom, #d1d1d1, #ffffff) !important;
+  box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.15) !important;
+}
+
+.search-go-button {
+  /*
+  list-style-image: url(moz-icon://stock/edit-find-symbolic?size=menu);
+  */
+  list-style-image: url(chrome://symbolic-icons/skin/edit-find.svg);
+  height: 26px;
+  min-width: 26px;
+  padding: 5px;
+}
+
+/* FIXME */
+menuitem[cmd="cmd_clearhistory"] {
+  list-style-image: url(moz-icon://stock/gtk-clear?size=menu);
+}
+
+menuitem[cmd="cmd_clearhistory"][disabled] {
+  list-style-image: url(moz-icon://stock/gtk-clear?size=menu&state=disabled);
+}
