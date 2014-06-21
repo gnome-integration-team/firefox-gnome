@@ -77,6 +77,8 @@ label {
   width: 16px;
 }
 
+%if APP_VERSION == 30 || APP_VERSION == 31 || APP_VERSION == 32
 .alertCloseButton > .toolbarbutton-text {
   display: none;
 }
+%endif

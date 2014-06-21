@@ -1,6 +1,8 @@
+%if 0
 /* - This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this file,
    - You can obtain one at http://mozilla.org/MPL/2.0/. */
+%endif
 
 @namespace html "http://www.w3.org/1999/xhtml";
 
@@ -483,6 +485,13 @@ radio[disabled="true"] > .radio-check {
   color: #fff;
 }
 
+%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+#categories[keyboard-navigation="true"]:-moz-focusring > .category[current] {
+  border-top: 1px #ffffff dotted;
+  border-bottom: 1px #ffffff dotted;
+}
+%endif
+
 .category-name {
   font-size: 1.03em;
 }
@@ -551,6 +560,9 @@ filefield {
   border-radius: 2px;
   background-color: #FBFBFB;
   overflow-y: auto;
+%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+  height: 500px;
+%endif
 }
 
 #typeColumn,
@@ -654,6 +666,28 @@ description > html|a {
   border-radius: 2px;
   background-color: #FBFBFB;
 }
+
+%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+#weavePrefsDeck {
+  -moz-margin-start: 60px;
+}
+
+#noFxaAccount {
+  /* Overriding the margins from the base preferences.css theme file.
+     These overrides can be simplified by fixing bug 1027174 */
+  margin: 0;
+}
+
+#weavePrefsDeck > vbox > label,
+#weavePrefsDeck > vbox > groupbox,
+#weavePrefsDeck > vbox > description,
+#weavePrefsDeck > vbox > #pairDevice > label,
+#weavePrefsDeck > #needsUpdate > hbox > #loginError,
+#weavePrefsDeck > #hasFxaAccount > hbox:not(#tosPP) > label {
+  /* no margin-start for elements at the begin of a line */
+  -moz-margin-start: 0;
+}
+%endif
 
 #advancedPrefs {
   padding-bottom: 0; /* no padding needed in inContent prefs */

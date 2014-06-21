@@ -68,6 +68,25 @@
   -moz-box-ordinal-group: 50;
 }
 
+%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar) {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar):not(#addon-bar) {
+  overflow: -moz-hidden-unscrollable;
+  max-height: 4em;
+  transition: min-height 170ms ease-out, max-height 170ms ease-out;
+}
+
+#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar):not(#addon-bar)[collapsed=true] {
+  min-height: 0.1px;
+  max-height: 0;
+  transition: min-height 170ms ease-out, max-height 170ms ease-out, visibility 170ms linear;
+}
+%endif
+
 #main-window:not([customizing]) #toolbar-menubar:not([autohide="true"]),
 #main-window:not([customizing]) #TabsToolbar[tabsontop="true"] {
   -moz-binding: url(chrome://browser/content/customizableui/toolbar.xml#toolbar-drag);
@@ -1889,6 +1908,7 @@ notification[value="translation"] menulist > .menulist-dropmarker {
   padding: 5px 0;
 }
 
+%if APP_VERSION == 32
 .translation-menupopup arrowscrollbox {
   padding-bottom: 0;
 }
@@ -1906,6 +1926,7 @@ notification[value="translation"] menulist > .menulist-dropmarker {
 .translation-attribution > image {
   width: 70px;
 }
+%endif
 
 notification[value="translation"] {
   min-height: 40px;
@@ -2151,6 +2172,13 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   opacity: .5;
 }
 
+%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+/* Loop */
+#loop-call-button {
+  list-style-image: url("chrome://global/skin/loop/loop-call.png");
+}
+%endif
+
 /* social share panel */
 
 .social-share-frame {
@@ -2303,7 +2331,9 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 
 .panel-promo-closebutton > .toolbarbutton-text {
   padding: 0;
+%if APP_VERSION == 30 || APP_VERSION == 31 || APP_VERSION == 32
   margin: 0;
+%endif
 }
 
 /* Sidebar */
@@ -3565,6 +3595,7 @@ toolbarbutton.chevron > .toolbarbutton-icon {
 %endif
 
 /* Box model highlighter */
+
 svg|g.box-model-container {
   opacity: 0.4;
 }
@@ -3669,6 +3700,28 @@ html|*.highlighter-nodeinfobar-dimensions {
 .highlighter-nodeinfobar-container[hide-arrow] > .highlighter-nodeinfobar {
   margin: 7px 0;
 }
+
+%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+/* Css transform highlighter */
+
+svg|polygon.css-transform-transformed {
+  fill: #80d4ff;
+  opacity: 0.8;
+}
+
+svg|polygon.css-transform-untransformed {
+  fill: #66cc52;
+  opacity: 0.8;
+}
+
+svg|polygon.css-transform-transformed,
+svg|polygon.css-transform-untransformed,
+svg|line.css-transform-line {
+  stroke: #08C;
+  stroke-dasharray: 5 3;
+  stroke-width: 2;
+}
+%endif
 
 /* Developer toolbar */
 

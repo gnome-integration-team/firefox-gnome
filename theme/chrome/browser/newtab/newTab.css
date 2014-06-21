@@ -82,9 +82,11 @@
   opacity: 1;
 }
 
+%if APP_VERSION == 30 || APP_VERSION == 31 || APP_VERSION == 32
 #newtab-undo-close-button > .toolbarbutton-text {
   display: none;
 }
+%endif
 
 #newtab-undo-close-button:-moz-focusring {
   outline: 1px dotted;
@@ -102,6 +104,15 @@
 #newtab-toggle[page-disabled] {
   background-position: -232px 0;
 }
+
+%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+@media (min-resolution: 2dppx) {
+  #newtab-toggle {
+    background-image: url(chrome://browser/skin/newtab/controls@2x.png);
+    background-size: 296px;
+  }
+}
+%endif
 
 %if APP_VERSION == 30
 /* ROWS */
@@ -287,6 +298,15 @@
 .newtab-control-sponsored[panelShown] {
   background-position: -281px -1px;
 }
+
+%if APP_VERSION != 31 && APP_VERSION != 32
+@media (min-resolution: 2dppx) {
+  .newtab-control-sponsored {
+    background-image: url(chrome://browser/skin/newtab/controls@2x.png);
+    background-size: 296px;
+  }
+}
+%endif
 %endif
 
 .newtab-control-pin,
