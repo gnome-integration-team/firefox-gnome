@@ -487,8 +487,8 @@ radio[disabled="true"] > .radio-check {
 
 %if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
 #categories[keyboard-navigation="true"]:-moz-focusring > .category[current] {
-  border-top: 1px #ffffff dotted;
-  border-bottom: 1px #ffffff dotted;
+  outline: 1px dotted #fff;
+  outline-offset: -5px;
 }
 %endif
 
