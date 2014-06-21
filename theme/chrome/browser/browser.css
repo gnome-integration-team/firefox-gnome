@@ -1889,6 +1889,24 @@ notification[value="translation"] menulist > .menulist-dropmarker {
   padding: 5px 0;
 }
 
+.translation-menupopup arrowscrollbox {
+  padding-bottom: 0;
+}
+
+.translation-attribution {
+  cursor: pointer;
+  -moz-box-align: end;
+  font-size: small;
+}
+
+.translation-attribution > label {
+  margin-bottom: 0;
+}
+
+.translation-attribution > image {
+  width: 70px;
+}
+
 notification[value="translation"] {
   min-height: 40px;
 }
@@ -3065,6 +3083,48 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 #TabsToolbar[newstyletabs] :-moz-any(.scrollbutton-up, .scrollbutton-down)[disabled="true"] > .toolbarbutton-icon {
   opacity: .18;
 }
+
+%if APP_VERSION != 30 && APP_VERSION != 31
+/* Tab Overflow */
+
+/*
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-start-indicator:not([collapsed]),
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-end-indicator:not([collapsed]) {
+  background-image: url(chrome://browser/skin/tabbrowser/tab-overflow-indicator.png);
+  background-size: 100% 100%;
+  width: 14px;
+  margin-bottom: 1px;
+  pointer-events: none;
+  position: relative;
+  z-index: 3;
+}
+
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-start-indicator:-moz-locale-dir(rtl),
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-end-indicator:-moz-locale-dir(ltr) {
+  transform: scaleX(-1);
+}
+
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-start-indicator:not([collapsed]) {
+  -moz-margin-start: -2px;
+  -moz-margin-end: -12px;
+}
+
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-end-indicator:not([collapsed]) {
+  -moz-margin-start: -12px;
+  -moz-margin-end: -2px;
+}
+
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-start-indicator[collapsed],
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-end-indicator[collapsed] {
+  opacity: 0;
+}
+
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-start-indicator,
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-end-indicator {
+  transition: opacity 150ms ease;
+}
+*/
+%endif
 
 /* */
 
