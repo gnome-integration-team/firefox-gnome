@@ -1846,6 +1846,24 @@ notification[value="translation"] menulist > .menulist-dropmarker {
   padding: 5px 0;
 }
 
+.translation-menupopup arrowscrollbox {
+  padding-bottom: 0;
+}
+
+.translation-attribution {
+  cursor: pointer;
+  -moz-box-align: end;
+  font-size: small;
+}
+
+.translation-attribution > label {
+  margin-bottom: 0;
+}
+
+.translation-attribution > image {
+  width: 70px;
+}
+
 notification[value="translation"] {
   min-height: 40px;
 }
@@ -2336,6 +2354,43 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   -moz-padding-start: 15px;
 }
 
+/* Tab Overflow */
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-start-indicator:not([collapsed]),
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-end-indicator:not([collapsed]) {
+  background-image: url(chrome://browser/skin/tabbrowser/tab-overflow-indicator.png);
+  background-size: 100% 100%;
+  width: 14px;
+  margin-bottom: 1px;
+  pointer-events: none;
+  position: relative;
+  z-index: 3; /* the selected tab's z-index + 1 */
+}
+
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-start-indicator:-moz-locale-dir(rtl),
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-end-indicator:-moz-locale-dir(ltr) {
+  transform: scaleX(-1);
+}
+
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-start-indicator:not([collapsed]) {
+  -moz-margin-start: -2px;
+  -moz-margin-end: -12px;
+}
+
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-end-indicator:not([collapsed]) {
+  -moz-margin-start: -12px;
+  -moz-margin-end: -2px;
+}
+
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-start-indicator[collapsed],
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-end-indicator[collapsed] {
+  opacity: 0;
+}
+
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-start-indicator,
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-end-indicator {
+  transition: opacity 150ms ease;
+}
+
 .tab-background-start[selected=true]::after,
 .tab-background-start[selected=true]::before,
 .tab-background-start,
@@ -2589,14 +2644,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   margin: 0 0 1px;
 }
 
-.tabbrowser-arrowscrollbox > .scrollbutton-up {
-  -moz-border-start: 0;
-  -moz-border-end: 2px solid transparent;
-}
-
 .tabbrowser-arrowscrollbox > .scrollbutton-down {
-  -moz-border-start: 2px solid transparent;
-  -moz-border-end: 0;
   transition: 1s box-shadow ease-out;
   border-radius: 4px;
 }
@@ -2604,20 +2652,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tabbrowser-arrowscrollbox > .scrollbutton-down[notifybgtab] {
   box-shadow: 0 0 5px 5px Highlight inset;
   transition: none;
-}
-
-.tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled]):-moz-locale-dir(ltr),
-.tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled]):-moz-locale-dir(rtl) {
-  border-width: 0 2px 0 0;
-  border-style: solid;
-  border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill;
-}
-
-.tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled]):-moz-locale-dir(ltr),
-.tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled]):-moz-locale-dir(rtl) {
-  border-width: 0 0 0 2px;
-  border-style: solid;
-  border-image: url("chrome://browser/skin/tabbrowser/tab-overflow-border.png") 0 2 0 2 fill;
 }
 
 #TabsToolbar .toolbarbutton-1 {
