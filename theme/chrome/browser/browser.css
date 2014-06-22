@@ -2175,7 +2175,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 %if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
 /* Loop */
 #loop-call-button {
-  list-style-image: url("chrome://global/skin/loop/loop-call.png");
+  list-style-image: url(chrome://symbolic-icons/skin/call-start.svg);
 }
 %endif
 
