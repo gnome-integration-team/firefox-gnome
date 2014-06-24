@@ -4475,10 +4475,15 @@ toolbarpaletteitem[place="toolbar"] {
 /* End customization mode */
 
 #main-window[privatebrowsingmode=temporary] #private-browsing-indicator {
-  background: url(chrome://symbolic-icons/skin/privatebrowsing.svg) center no-repeat;
-  width: 36px;
-  -moz-margin-start: -10px;
-  opacity: 0.4;
+  background: url(chrome://browser/skin/privatebrowsing-128.png) center no-repeat;
+  background-position: top -24px left 0px;
+  -moz-box-ordinal-group: 10;
+  -moz-margin-start: -128px;
+  opacity: .05;
+  position: relative;
+  pointer-events: none;
+  width: 128px;
+  z-index: 10;
 }
 
 /* UI Tour */
