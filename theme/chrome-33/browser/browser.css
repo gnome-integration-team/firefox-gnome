@@ -1858,6 +1858,24 @@ notification[value="translation"] menulist > .menulist-dropmarker {
   padding: 5px 0;
 }
 
+.translation-menupopup arrowscrollbox {
+  padding-bottom: 0;
+}
+
+.translation-attribution {
+  cursor: pointer;
+  -moz-box-align: end;
+  font-size: small;
+}
+
+.translation-attribution > label {
+  margin-bottom: 0;
+}
+
+.translation-attribution > image {
+  width: 70px;
+}
+
 notification[value="translation"] {
   min-height: 40px;
 }
