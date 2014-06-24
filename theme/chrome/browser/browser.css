@@ -1908,7 +1908,6 @@ notification[value="translation"] menulist > .menulist-dropmarker {
   padding: 5px 0;
 }
 
-%if APP_VERSION == 32
 .translation-menupopup arrowscrollbox {
   padding-bottom: 0;
 }
@@ -1926,7 +1925,6 @@ notification[value="translation"] menulist > .menulist-dropmarker {
 .translation-attribution > image {
   width: 70px;
 }
-%endif
 
 notification[value="translation"] {
   min-height: 40px;
