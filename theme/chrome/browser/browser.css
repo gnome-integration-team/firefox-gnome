@@ -3627,6 +3627,9 @@ svg|line.box-model-guide-bottom,
 svg|line.box-model-guide-left {
   stroke: #08C;
   stroke-dasharray: 5 3;
+%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+  shape-rendering: crispEdges;
+%endif
 }
 
 /* Highlighter - Node Infobar */

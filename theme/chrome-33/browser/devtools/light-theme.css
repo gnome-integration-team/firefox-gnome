@@ -448,6 +448,12 @@ div.CodeMirror span.eval-text {
   min-width: 32px;
 }
 
+#toolbox-buttons .devtools-toolbarbutton[text-as-image] {
+  -moz-padding-start: 5px;
+  -moz-padding-end: 5px;
+  min-width: inherit;
+}
+
 .devtools-toolbarbutton:not([label]) > .toolbarbutton-text {
   display: none;
 }
@@ -498,7 +504,6 @@ div.CodeMirror span.eval-text {
   color: #a9bacb; /* Body text - high contrast */
   background-color: #343c45; /* Toolbars */
   border-color: rgba(0, 0, 0, .4); /* Splitters */
-  color: inherit;
 }
 .theme-light .devtools-menulist,
 .theme-light .devtools-toolbarbutton {
@@ -508,28 +513,34 @@ div.CodeMirror span.eval-text {
 }
 
 /* Text-only buttons */
-.theme-light .devtools-toolbarbutton[label]:not([text-as-image]):not([type=menu-button]) {
+.theme-light .devtools-toolbarbutton[label]:not([text-as-image]):not([type=menu-button]),
+.theme-light #toolbox-buttons .devtools-toolbarbutton[text-as-image] {
   background-color: rgba(170, 170, 170, .2); /* Splitter */
 }
-.theme-dark .devtools-toolbarbutton[label]:not([text-as-image]):not([type=menu-button]) {
+.theme-dark .devtools-toolbarbutton[label]:not([text-as-image]):not([type=menu-button]),
+.theme-dark #toolbox-buttons .devtools-toolbarbutton[text-as-image] {
   background-color: rgba(0, 0, 0, .2); /* Splitter */
 }
 
 /* Button States */
 .theme-dark .devtools-toolbarbutton:hover,
+.theme-dark #toolbox-buttons .devtools-toolbarbutton[text-as-image]:hover,
 .theme-dark .devtools-toolbarbutton[label]:not([text-as-image]):not([type=menu-button]):hover {
   background: rgba(0, 0, 0, .3); /* Splitters */
 }
 .theme-light .devtools-toolbarbutton:hover,
+.theme-light #toolbox-buttons .devtools-toolbarbutton[text-as-image]:hover,
 .theme-light .devtools-toolbarbutton[label]:not([text-as-image]):not([type=menu-button]):hover {
   background: rgba(170, 170, 170, .3); /* Splitters */
 }
 
 .theme-dark .devtools-toolbarbutton:hover:active,
+.theme-dark #toolbox-buttons .devtools-toolbarbutton[text-as-image]:hover:active,
 .theme-dark .devtools-toolbarbutton[label]:not([text-as-image]):not([type=menu-button]):hover:active {
   background: rgba(0, 0, 0, .4); /* Splitters */
 }
 .theme-light .devtools-toolbarbutton:hover:active,
+.theme-light #toolbox-buttons .devtools-toolbarbutton[text-as-image]:hover:active,
 .theme-light .devtools-toolbarbutton[label]:not([text-as-image]):not([type=menu-button]):hover:active {
   background: rgba(170, 170, 170, .4); /* Splitters */
 }
@@ -540,7 +551,8 @@ div.CodeMirror span.eval-text {
 .theme-dark .devtools-toolbarbutton[open=true]:hover,
 .theme-dark .devtools-toolbarbutton[open=true]:hover:active,
 .theme-dark .devtools-toolbarbutton[checked=true],
-.theme-dark .devtools-toolbarbutton[checked=true]:hover {
+.theme-dark .devtools-toolbarbutton[checked=true]:hover,
+.theme-dark #toolbox-buttons .devtools-toolbarbutton[text-as-image][checked] {
   background: rgba(29, 79, 115, .7); /* Select highlight blue */
   color: #f5f7fa;
 }
@@ -549,7 +561,8 @@ div.CodeMirror span.eval-text {
 .theme-light .devtools-toolbarbutton[open=true]:hover,
 .theme-light .devtools-toolbarbutton[open=true]:hover:active,
 .theme-light .devtools-toolbarbutton[checked=true],
-.theme-light .devtools-toolbarbutton[checked=true]:hover {
+.theme-light .devtools-toolbarbutton[checked=true]:hover,
+.theme-light #toolbox-buttons .devtools-toolbarbutton[text-as-image][checked] {
   background: rgba(76, 158, 217, .2); /* Select highlight blue */
 }
 

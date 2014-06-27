@@ -6,9 +6,18 @@
 
 @namespace html "http://www.w3.org/1999/xhtml";
 
+%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+#dialogBox,
+dialog,
+prefwindow,
+.windowDialog,
+%endif
 page {
   -moz-appearance: none;
   background-color: #eaeaea;
+%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+  color: #424E5A;
+%endif
 }
 
 * {
@@ -46,7 +55,9 @@ prefpane {
   font: message-box;
   font-size: 1.0rem;
   line-height: 20px;
+%if APP_VERSION == 30 || APP_VERSION == 31 || APP_VERSION == 32
   color: #424E5A;
+%endif
 }
 
 prefpane > .content-box {
@@ -191,6 +202,9 @@ button[type="menu"] > .button-box > .button-menu-dropmarker {
   background-image: none;
 }
 
+%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+.close-icon > .button-box,
+%endif
 .help-button > .button-box {
   padding-top: 0;
   padding-bottom: 0;
@@ -708,6 +722,46 @@ description > html|a {
 .indent {
   -moz-margin-start: 33px;
 }
+
+%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+/**
+ * Sub-dialog
+ */
+
+#dialogOverlay {
+  background-color: rgba(0,0,0,0.5);
+  visibility: hidden;
+}
+
+#dialogBox {
+  border: 1px solid #666;
+  display: -moz-box;
+}
+
+.close-icon {
+  background-color: transparent !important;
+  border: none;
+  box-shadow: none;
+  height: 18px;
+  padding: 0;
+  min-width: 18px;
+}
+
+#dialogBox > .groupbox-body {
+  -moz-appearance: none;
+  padding: 0;
+}
+
+#dialogFrame {
+  /* Default dialog dimensions */
+  height: 30em;
+  width: 30em;
+}
+
+/**
+ * End sub-dialog
+ */
+%endif
 
 tab[selected] {
   /* Override styles for tab[selected] from
