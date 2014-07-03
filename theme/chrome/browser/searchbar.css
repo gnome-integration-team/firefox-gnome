@@ -49,9 +49,10 @@
   border: 0;
 }
 
-.searchbar-engine-button:active, .searchbar-engine-button[open="true"] {
+.searchbar-engine-button:active,
+.searchbar-engine-button[open="true"] {
   background-image: linear-gradient(to bottom, #d1d1d1, #ffffff) !important;
-  box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.15) !important;
+  box-shadow: inset 0 1px 1px 0 hsla(0,0%,0%,.15) !important;
 }
 
 .searchbar-dropmarker-image {
@@ -73,7 +74,7 @@
 
 .search-go-container:active {
   background-image: linear-gradient(to bottom, #d1d1d1, #ffffff) !important;
-  box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.15) !important;
+  box-shadow: inset 0 1px 1px 0 hsla(0,0%,0%,.15) !important;
 }
 
 .search-go-button {

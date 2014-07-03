@@ -95,7 +95,7 @@
   -moz-binding: url("chrome://browser/skin/gnomeBindings.xml#tabs-on-bottom") !important;
 }
 
-#navigator-toolbox > toolbar:not(#toolbar-menubar) {
+#navigator-toolbox > toolbar {
   -moz-appearance: none;
 }
 
@@ -118,6 +118,15 @@
   /* Position the toolbar above the bottom of background tabs */
   position: relative;
   z-index: 1;
+}
+
+#nav-bar-customization-target {
+  /* FIXME: It needs for shadow under buttons */
+  margin-bottom: -1px;
+  padding-bottom: 1px;
+  /*
+  overflow: visible;
+  */
 }
 
 /* What it is?
@@ -1331,45 +1340,44 @@ window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([fo
   -moz-padding-end: 5px;
 }
 
-#identity-box:hover:active,
-#identity-box[open="true"],
-#identity-box:hover:active:before,
-#identity-box[open="true"]:before {
+#identity-box:-moz-any(:hover:active, [open="true"]),
+#identity-box:-moz-any(:hover:active, [open="true"]):before {
   background: linear-gradient(to bottom, #d1d1d1, #fff);
-  box-shadow: inset 0 1px 1px -1px rgba(0,0,0,0.15);
+  box-shadow: inset 0 1px 1px -1px hsla(0,0%,0%,.15);
 }
 
+/* */
 #urlbar[pageproxystate="valid"] > #identity-box.chromeUI,
 #urlbar[pageproxystate="valid"] > #identity-box.chromeUI:before {
-  background: rgba(200, 200, 200, 0.15);
-}
-#urlbar[pageproxystate="valid"] > #identity-box.chromeUI {
-  -moz-border-end: 1px solid rgba(100, 100, 100, 0.25);
-  -moz-margin-end: 4px;
-}
-#urlbar[pageproxystate="valid"] > #identity-box.chromeUI:hover:active,
-#urlbar[pageproxystate="valid"] > #identity-box.chromeUI[open="true"],
-#urlbar[pageproxystate="valid"] > #identity-box.chromeUI:hover:active:before,
-#urlbar[pageproxystate="valid"] > #identity-box.chromeUI[open="true"]:before {
-  background: linear-gradient(to bottom, #d1d1d1, #fff);
-  box-shadow: inset 0 1px 1px -1px rgba(0,0,0,0.15);
+  background: hsla(0,0%,78%,.15);
 }
 
+#urlbar[pageproxystate="valid"] > #identity-box.chromeUI {
+  -moz-border-end: 1px solid hsla(0,0%,39%,.25);
+  -moz-margin-end: 4px;
+}
+
+#urlbar[pageproxystate="valid"] > #identity-box.chromeUI:-moz-any(:hover:active, [open="true"]),
+#urlbar[pageproxystate="valid"] > #identity-box.chromeUI:-moz-any(:hover:active, [open="true"]):before {
+  background: linear-gradient(to bottom, #d1d1d1, #fff);
+  box-shadow: inset 0 1px 1px -1px hsla(0,0%,0%,.15);
+}
+
+/* */
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity,
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:before {
-  background: rgba(115, 210, 22, 0.15);
+  background: hsla(90,81%,45%,.15);
 }
+
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity {
-  -moz-border-end: 1px solid rgba(115, 210, 22, 0.25);
+  -moz-border-end: 1px solid hsla(90,81%,45%,.25);
   color: #00aa00;
   -moz-margin-end: 4px;
 }
 
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:hover:active,
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity[open="true"],
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:hover:active:before,
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity[open="true"]:before {
-  background: linear-gradient(to bottom, rgba(115, 210, 22, 0.25), rgba(115, 210, 22, 0.05));
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:-moz-any(:hover:active, [open="true"]),
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:-moz-any(:hover:active, [open="true"]):before {
+  background: linear-gradient(to bottom, hsla(90,81%,45%,.25), hsla(90,81%,45%,.05));
 }
 
 /* page proxy icon */
@@ -1428,69 +1436,8 @@ window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([fo
   max-width: 50ch;
 }
 
-#identity-box:hover #page-proxy-favicon,
-#identity-box:active #page-proxy-favicon,
-#identity-box[open="true"] #page-proxy-favicon {
+#identity-box:-moz-any(:hover, :active, [open="true"]) > #page-proxy-favicon {
   opacity: 1;
-}
-
-/* Identity indicator */
-#identity-box {
-  padding: 1px;
-  margin: 0;
-  font-size: .9em;
-  min-width: 26px;
-}
-
-#identity-box:-moz-focusring {
-  outline: 1px dotted #000;
-  outline-offset: -3px;
-}
-
-#identity-icon-labels {
-  -moz-padding-start: 2px;
-  -moz-padding-end: 5px;
-}
-
-#identity-box:hover:active,
-#identity-box[open="true"],
-#identity-box:hover:active:before,
-#identity-box[open="true"]:before {
-  background: linear-gradient(to bottom, #d1d1d1, #fff);
-  box-shadow: inset 0 1px 1px -1px rgba(0,0,0,0.15);
-}
-
-#urlbar[pageproxystate="valid"] > #identity-box.chromeUI,
-#urlbar[pageproxystate="valid"] > #identity-box.chromeUI:before {
-  background: rgba(200, 200, 200, 0.15);
-}
-#urlbar[pageproxystate="valid"] > #identity-box.chromeUI {
-  -moz-border-end: 1px solid rgba(100, 100, 100, 0.25);
-  -moz-margin-end: 4px;
-}
-#urlbar[pageproxystate="valid"] > #identity-box.chromeUI:hover:active,
-#urlbar[pageproxystate="valid"] > #identity-box.chromeUI[open="true"],
-#urlbar[pageproxystate="valid"] > #identity-box.chromeUI:hover:active:before,
-#urlbar[pageproxystate="valid"] > #identity-box.chromeUI[open="true"]:before {
-  background: linear-gradient(to bottom, #d1d1d1, #fff);
-  box-shadow: inset 0 1px 1px -1px rgba(0,0,0,0.15);
-}
-
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity,
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:before {
-  background: rgba(115, 210, 22, 0.15);
-}
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity {
-  -moz-border-end: 1px solid rgba(115, 210, 22, 0.25);
-  color: #00aa00;
-  -moz-margin-end: 4px;
-}
-
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:hover:active,
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity[open="true"],
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:hover:active:before,
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity[open="true"]:before {
-  background: linear-gradient(to bottom, rgba(115, 210, 22, 0.25), rgba(115, 210, 22, 0.05));
 }
 
 /* ::::: Identity popup icons ::::: */
@@ -2507,12 +2454,12 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   /*  transition-duration: 30s !important;*/
 }
 
-#TabsToolbar[newstyletabs] .tabbrowser-tab {
-  -moz-box-align: stretch;
-}
-
 .tabbrowser-tab:-moz-lwtheme-brighttext {
   text-shadow: none;
+}
+
+#TabsToolbar[newstyletabs] .tabbrowser-tab {
+  -moz-box-align: stretch;
 }
 
 #tabbrowser-tabs[tabmaxwidth="small"] .tabbrowser-tab:not([pinned]) {
@@ -4996,11 +4943,6 @@ toolbarpaletteitem[place="toolbar"] {
   background-position: left top;
 }
 %endif
-
-#main-window[customize-entered] #toolbar-menubar,
-#main-window[customize-entered] #TabsToolbar[tabsontop="true"] {
-  -moz-appearance: none;
-}
 
 #main-window[customize-entered] #browser-bottombox,
 #main-window[customize-entered] #navigator-toolbox,
