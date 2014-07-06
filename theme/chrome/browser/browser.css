@@ -4856,13 +4856,21 @@ chatbox {
 
 #customization-footer {
   border-top: 1px solid rgb(221,221,221);
+%if APP_VERSION == 30 || APP_VERSION == 31 || APP_VERSION == 32
   padding: 15px;
+%else
+  padding: 10px;
+%endif
 }
 
 .customizationmode-button {
   border: 1px solid rgb(192,192,192);
   border-radius: 3px;
+%if APP_VERSION == 30 || APP_VERSION == 31 || APP_VERSION == 32
   margin: 0;
+%else
+  margin: 5px;
+%endif
   padding: 2px 12px;
   background-color: rgb(251,251,251);
   color: rgb(71,71,71);
@@ -4885,17 +4893,32 @@ chatbox {
   min-width: 0;
 }
 
+%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+.customizationmode-button > .box-inherit > .box-inherit > .button-icon,
+.customizationmode-button > .button-box > .button-icon {
+  height: 24px;
+}
+%endif
+
 #customization-titlebar-visibility-button {
   list-style-image: url("chrome://browser/skin/customizableui/customize-titleBar-toggle.png");
   -moz-image-region: rect(0, 24px, 24px, 0);
   padding: 2px 7px;
+%if APP_VERSION == 30 || APP_VERSION == 31 || APP_VERSION == 32
   -moz-margin-end: 10px;
+%endif
 }
 
 #customization-titlebar-visibility-button > .button-box > .button-text {
   /* Sadly, button.css thinks its margins are perfect for everyone. */
   -moz-margin-start: 6px !important;
 }
+
+%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+#customization-titlebar-visibility-button > .button-box > .button-icon {
+  vertical-align: middle;
+}
+%endif
 
 #customization-titlebar-visibility-button[checked] {
   -moz-image-region: rect(0, 48px, 24px, 24px);
@@ -4906,9 +4929,11 @@ chatbox {
               inset 0 1px rgb(196, 196, 196);
 }
 
+%if APP_VERSION == 30 || APP_VERSION == 31 || APP_VERSION == 32
 #customization-undo-reset-button {
   -moz-margin-end: 10px;
 }
+%endif
 
 #main-window[customize-entered] #customization-panel-container {
   background-image: url("chrome://browser/skin/customizableui/customizeMode-separatorHorizontal.png"),
