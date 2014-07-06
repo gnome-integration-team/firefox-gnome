@@ -49,6 +49,7 @@
     </em:localized>
 
     <em:targetPlatform>Linux</em:targetPlatform>
+    <em:targetPlatform>FreeBSD</em:targetPlatform>
 
     <em:targetApplication>
       <Description>

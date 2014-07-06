@@ -397,7 +397,7 @@
   border-radius: 4px;
   color: #2e3436;
   filter: none;
-  min-height: 30px;
+  min-height: 28px;
   min-width: 34px;
   -moz-margin-start: 7px;
   padding: 3px 9px;
@@ -470,7 +470,11 @@ menuitem.addon-control:hover {
   list-style-image: url(chrome://symbolic-icons/skin/emblem-system.svg);
   border-radius: 50%;
   min-width: 30px;
+  height: 30px;
+  width: 30px;
   padding: 6px;
+  margin-top: 0;
+  margin-bottom: 1px;
 }
 
 .addon-control:-moz-any(.enable, .disable) {
