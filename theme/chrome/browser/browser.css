@@ -5178,6 +5178,10 @@ toolbarpaletteitem[place="toolbar"] {
   -moz-border-top-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
 }
 
+#main-window[customize-entered] #navigator-toolbox@darkTheme@ {
+  background-clip: content-box !important; /* FIXME: padding-box */
+}
+
 #main-window[customize-entered] #browser-bottombox {
   border-bottom: 3px solid hsla(0,0%,0%,.1);
   -moz-border-bottom-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
