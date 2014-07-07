@@ -96,6 +96,7 @@
   border-radius: 0;
   border-top: 1px solid #dbdbdb;
   -moz-border-start: 2px solid;
+  color: #434343;
   -moz-padding-start: 0;
 }
 #view-port-container:-moz-locale-dir(ltr) {
