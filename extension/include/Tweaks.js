@@ -100,7 +100,8 @@ var Tweaks = {
     darkVariant: {
         key: "dark-variant",
         type: "attribute",
-        elements: ["main-window", "navigator-toolbox", "TabsToolbar", "nav-bar",
+        elements: ["main-window", "navigator-toolbox",
+                   "TabsToolbar", "nav-bar", "PersonalToolbar",
                    "urlbar", "identity-box", "notification-popup-box"],
         attributeName: "darkvariant",
         attributeValue: function() {

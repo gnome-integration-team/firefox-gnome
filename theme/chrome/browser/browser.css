@@ -386,6 +386,10 @@ menuitem.bookmark-item {
   opacity: 0.7;
 }
 
+#main-window@darkTheme@ .bookmark-item:-moz-any([container], [container][livemark], [container][query]:not([tagContainer]):not([dayContainer]), [query][hostContainer]) .toolbarbutton-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
+}
+
 /* Stock icons for the menu bar items */
 menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
   -moz-binding: url("chrome://global/content/bindings/menu.xml#menuitem-iconic");

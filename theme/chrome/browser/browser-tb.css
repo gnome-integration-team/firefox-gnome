@@ -6,16 +6,11 @@
 
 /* ::::: General style ::::: */
 
-:-moz-any(#TabsToolbar, #nav-bar) .toolbarbutton-1 > .toolbarbutton-menubutton-button,
 :-moz-any(#TabsToolbar, #nav-bar) .toolbarbutton-1,
 :-moz-any(#window-controls, .window-controls) > toolbarbutton,
+#PersonalToolbar@darkThemeToolbar@ :-moz-any(toolbarbutton.bookmark-item:not(.subviewbutton), .toolbarbutton-1),
 .tabs-closebutton {
   -moz-appearance: none;
-}
-
-:-moz-any(#TabsToolbar, #nav-bar) .toolbarbutton-1,
-:-moz-any(#window-controls, .window-controls) > toolbarbutton,
-.tabs-closebutton {
   background: transparent;
   border: 1px solid transparent;
   border-radius: 3px;
@@ -25,8 +20,17 @@
   transition-duration: 200ms, 200ms, 0ms;
 }
 
-:-moz-any(#TabsToolbar, #nav-bar)@darkTheme@ .toolbarbutton-1 {
+:-moz-any(#TabsToolbar, #nav-bar) .toolbarbutton-1 > .toolbarbutton-menubutton-button {
+  -moz-appearance: none;
+}
+
+:-moz-any(#TabsToolbar, #nav-bar)@darkTheme@ .toolbarbutton-1,
+#PersonalToolbar@darkThemeToolbar@ :-moz-any(toolbarbutton.bookmark-item:not(.subviewbutton), .toolbarbutton-1) {
   color: #ffffff;
+}
+
+#PersonalToolbar@darkThemeToolbar@ :-moz-any(toolbarbutton.bookmark-item:not(.subviewbutton), .toolbarbutton-1) {
+  padding: 2px 6px;
 }
 
 /* :hover */
@@ -53,7 +57,8 @@
 }
 
 :-moz-any(#TabsToolbar, #nav-bar)@darkTheme@ .toolbarbutton-1:not([disabled="true"]):hover,
-#main-window@darkTheme@ :-moz-any(#window-controls, .window-controls) > toolbarbutton:hover {
+#main-window@darkTheme@ :-moz-any(#window-controls, .window-controls) > toolbarbutton:hover,
+#PersonalToolbar@darkThemeToolbar@ :-moz-any(toolbarbutton.bookmark-item:not(.subviewbutton), .toolbarbutton-1):not([disabled="true"]):hover {
   background-image: linear-gradient(to bottom, #475050, #434c4c 40%, #3b4242);
   border-color: #1b2021 #1f2325 #24282a;
   box-shadow: 0 1px 0 rgba(255,255,255,0.1);
@@ -91,7 +96,11 @@
 :-moz-any(#TabsToolbar, #nav-bar)@darkTheme@ .toolbarbutton-1[open="true"]:hover,
 :-moz-any(#TabsToolbar, #nav-bar)@darkTheme@ .toolbarbutton-1[checked="true"],
 :-moz-any(#TabsToolbar, #nav-bar)@darkTheme@ .toolbarbutton-1[checked="true"]:hover,
-#main-window@darkTheme@ :-moz-any(#window-controls, .window-controls) > toolbarbutton:active:hover {
+#main-window@darkTheme@ :-moz-any(#window-controls, .window-controls) > toolbarbutton:active:hover,
+#PersonalToolbar@darkThemeToolbar@ :-moz-any(toolbarbutton.bookmark-item:not(.subviewbutton), .toolbarbutton-1):not([disabled="true"]):active:hover,
+#PersonalToolbar@darkThemeToolbar@ :-moz-any(toolbarbutton.bookmark-item:not(.subviewbutton), .toolbarbutton-1)[open="true"],
+#PersonalToolbar@darkThemeToolbar@ :-moz-any(toolbarbutton.bookmark-item:not(.subviewbutton), .toolbarbutton-1)[open="true"]:hover,
+#PersonalToolbar@darkThemeToolbar@ :-moz-any(toolbarbutton.bookmark-item:not(.subviewbutton), .toolbarbutton-1)[checked="true"] {
   background-image: linear-gradient(to bottom, #282b2b, #2c2f2f 20%, #2f3333);
   border-color: #1b2021 #1f2325 #24282a;
   box-shadow: inset 0 1px 1px rgba(0,0,0,0.08),
@@ -189,6 +198,10 @@
 #main-window:not([customizing]) :-moz-any(#TabsToolbar, #nav-bar) .toolbarbutton-1[disabled="true"] > .toolbarbutton-menubutton-dropmarker,
 #main-window:not([customizing]) :-moz-any(#TabsToolbar, #nav-bar) .toolbarbutton-1[disabled="true"] > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
 #main-window:not([customizing]) :-moz-any(#TabsToolbar, #nav-bar) .toolbarbutton-1 > .toolbarbutton-menubutton-button[disabled="true"] > .toolbarbutton-icon {
+  opacity: .5;
+}
+
+#main-window:not([customizing]) #PersonalToolbar@darkThemeToolbar@ :-moz-any(toolbarbutton.bookmark-item:not(.subviewbutton), .toolbarbutton-1)[disabled="true"] .toolbarbutton-icon {
   opacity: .5;
 }
 
