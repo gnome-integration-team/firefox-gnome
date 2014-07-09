@@ -26,7 +26,7 @@ richlistitem[type="download"] {
   -moz-padding-end: 8px;
 }
 
-%if APP_VERSION == 30 || APP_VERSION == 31
+%if APP_VERSION == 31
 richlistitem[type="download"][selected="true"] {
   background-image: none;
 }

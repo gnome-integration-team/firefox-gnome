@@ -30,7 +30,7 @@ html|*.textbox-input,
 html|*.textbox-textarea {
   margin: 0px !important;
   border: none !important;
-%if APP_VERSION == 30 || APP_VERSION == 31
+%if APP_VERSION == 31
   padding: 0px !important;
 %else
   padding: 0px 1px !important;
@@ -69,7 +69,7 @@ textbox.plain {
   border: none !important;
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
 textbox.plain html|*.textbox-input,
 textbox.plain html|*.textbox-textarea {
   padding: 0px !important;

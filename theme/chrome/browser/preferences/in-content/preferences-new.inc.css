@@ -6,7 +6,7 @@
 
 @namespace html "http://www.w3.org/1999/xhtml";
 
-%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 31 && APP_VERSION != 32
 #dialogBox,
 dialog,
 prefwindow,
@@ -15,7 +15,7 @@ prefwindow,
 page {
   -moz-appearance: none;
   background-color: #eaeaea;
-%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 31 && APP_VERSION != 32
   color: #424E5A;
 %endif
 }
@@ -55,7 +55,7 @@ prefpane {
   font: message-box;
   font-size: 1.0rem;
   line-height: 20px;
-%if APP_VERSION == 30 || APP_VERSION == 31 || APP_VERSION == 32
+%if APP_VERSION == 31 || APP_VERSION == 32
   color: #424E5A;
 %endif
 }
@@ -202,7 +202,7 @@ button[type="menu"] > .button-box > .button-menu-dropmarker {
   background-image: none;
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 31 && APP_VERSION != 32
 .close-icon > .button-box,
 %endif
 .help-button > .button-box {
@@ -499,7 +499,7 @@ radio[disabled="true"] > .radio-check {
   color: #fff;
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 31 && APP_VERSION != 32
 #categories[keyboard-navigation="true"]:-moz-focusring > .category[current] {
   outline: 1px dotted #fff;
   outline-offset: -5px;
@@ -574,7 +574,7 @@ filefield {
   border-radius: 2px;
   background-color: #FBFBFB;
   overflow-y: auto;
-%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 31 && APP_VERSION != 32
   height: 500px;
 %endif
 }
@@ -681,7 +681,7 @@ description > html|a {
   background-color: #FBFBFB;
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 31 && APP_VERSION != 32
 #weavePrefsDeck {
   -moz-margin-start: 60px;
 }
@@ -723,7 +723,7 @@ description > html|a {
   -moz-margin-start: 33px;
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 31 && APP_VERSION != 32
 /**
  * Sub-dialog
  */

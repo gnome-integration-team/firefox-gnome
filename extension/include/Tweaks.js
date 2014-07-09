@@ -73,13 +73,6 @@ var Tweaks = {
         attributeName: "hidehistorydropmarker"
     },
 
-    forwardButton: {
-        key: "forward-button",
-        type: "attribute",
-        elements: ["urlbar-container"],
-        attributeName: "forwardshowalways"
-    },
-
     inactiveState: {
         key: "inactive-state",
         type: "stylesheet"

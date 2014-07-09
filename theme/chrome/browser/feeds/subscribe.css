@@ -158,7 +158,7 @@ a[href] img {
   margin-left: 2px;
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
 .handlersMenuList > .menulist-label-box > .menulist-icon {
   max-width: 16px;
   max-height: 16px;

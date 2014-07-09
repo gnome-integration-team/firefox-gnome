@@ -44,7 +44,7 @@ label.small {
   margin: 5px;
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
 /* Content Pane */
 #translationAttributionImage {
   width: 70px;

@@ -1,7 +1,7 @@
 {
   "version": "30.1",
-  "min-version": "30.0",
-  "max-version": "33.0a1",
+  "min-version": "31.0",
+  "max-version": "34.0a1",
   "xpi": {
     "theme": "gnome-firefox-theme.xpi",
     "extension": "gnome-firefox-extension.xpi",

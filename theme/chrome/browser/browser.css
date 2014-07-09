@@ -19,12 +19,8 @@
 %include variables.inc.css
 
 %define nestedButtons #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button
-%define primaryToolbarButtons #back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button
-%if APP_VERSION == 30
+%define primaryToolbarButtons #back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #e10s-button
 %define primaryToolbarButtons @primaryToolbarButtons@, @nestedButtons@
-%else
-%define primaryToolbarButtons @primaryToolbarButtons@, @nestedButtons@, #e10s-button
-%endif
 
 #menubar-items {
   -moz-box-orient: vertical; /* for flex hack */
@@ -78,7 +74,7 @@
   -moz-box-ordinal-group: 50;
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 31 && APP_VERSION != 32
 #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar) {
   padding-top: 1px;
   padding-bottom: 1px;
@@ -545,7 +541,7 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
   list-style-image: url("moz-icon://stock/gtk-preferences?size=menu");
 }
 
-%if APP_VERSION == 30 || APP_VERSION == 31
+%if APP_VERSION == 31
 #context-stop {
   list-style-image: url("moz-icon://stock/gtk-stop?size=menu");
 }
@@ -556,14 +552,14 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
 %endif
 
 #placesContext_reload,
-%if APP_VERSION == 30 || APP_VERSION == 31
+%if APP_VERSION == 31
 #context-reload,
 %endif
 #context-reloadframe {
   list-style-image: url("moz-icon://stock/gtk-refresh?size=menu");
 }
 
-%if APP_VERSION == 30 || APP_VERSION == 31
+%if APP_VERSION == 31
 #context-reload[disabled] {
   list-style-image: url("moz-icon://stock/gtk-refresh?size=menu&state=disabled");
 }
@@ -581,7 +577,7 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
   list-style-image: url("moz-icon://stock/gtk-zoom-100?size=menu");
 }
 
-%if APP_VERSION == 30 || APP_VERSION == 31
+%if APP_VERSION == 31
 #context-back {
   list-style-image: url("moz-icon://stock/gtk-go-back-ltr?size=menu");
 }
@@ -842,7 +838,6 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
   list-style-image: url(chrome://symbolic-icons/skin/new-window.svg);
 }
 
-%if APP_VERSION != 30
 #e10s-button[cui-areatype="toolbar"] {
   list-style-image: url(chrome://symbolic-icons/skin/new-window.svg);
 }
@@ -850,7 +845,6 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
 #e10s-button > .toolbarbutton-icon {
   transform: scaleY(-1);
 }
-%endif
 
 #new-tab-button[cui-areatype="toolbar"] {
   list-style-image: url(chrome://symbolic-icons/skin/tab-new.svg);
@@ -1007,12 +1001,10 @@ toolbarpaletteitem[place="palette"] > #new-window-button {
   list-style-image: url(chrome://symbolic-icons/skin/new-window.svg);
 }
 
-%if APP_VERSION != 30
 #e10s-button[cui-areatype="menu-panel"],
 toolbarpaletteitem[place="palette"] > #e10s-button {
   list-style-image: url(chrome://symbolic-icons/skin/new-window.svg);
 }
-%endif
 
 #new-tab-button[cui-areatype="menu-panel"],
 toolbarpaletteitem[place="palette"] > #new-tab-button {
@@ -1255,80 +1247,6 @@ toolbarpaletteitem[place="palette"] > :-moz-any(@primaryToolbarButtons@) .toolba
   -moz-box-orient: horizontal;
   -moz-box-align: stretch;
 }
-
-/* ::::: Autohide forward button ::::: */
-
-%if APP_VERSION == 30
-window:not([chromehidden~="toolbar"]) #urlbar-container:not([switchingtabs]) > #forward-button {
-  transition: 150ms ease-out;
-}
-
-window:not([chromehidden~="toolbar"]) #urlbar-container > #urlbar-wrapper {
-  -moz-padding-start: 28px;
-  -moz-margin-start: -28px;
-  position: relative;
-  pointer-events: none;
-}
-
-window:not([chromehidden~="toolbar"]) #urlbar-container > #urlbar-wrapper > #urlbar {
-  pointer-events: all;
-}
-
-window:not([chromehidden~="toolbar"]) #urlbar-container:not([switchingtabs]) > #urlbar-wrapper > #urlbar {
-  transition: margin-left 200ms ease-out,
-              margin-right 200ms ease-out;
-}
-
-window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([forwardshowalways]) > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr) {
-  margin-left: -28px;
-}
-window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([forwardshowalways]) > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl) {
-  margin-right: -28px;
-}
-
-window:not([chromehidden~="toolbar"]) #urlbar-container > #forward-button {
-  transition: opacity 200ms ease-in,
-              visibility 200ms ease-out,
-              color 200ms ease,
-              border 200ms ease,
-              box-shadow 0ms ease,
-              background 200ms ease;
-}
-
-window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([forwardshowalways]) > #forward-button {
-  opacity: 0 !important;
-  pointer-events: none;
-  visibility: hidden;
-}
-
-window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([forwardshowalways]) > #back-button {
-  -moz-border-end-width: 1px !important;
-}
-
-window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([forwardshowalways]) > #back-button:not([open="true"]) {
-  border-radius: 3px !important;
-}
-
-window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([forwardshowalways]) > #back-button:not(:active):not([disabled="true"]):not([open="true"]) {
-  box-shadow: 0 1px 0 rgba(255,255,255,0.37),
-              inset 0 1px 0 rgba(255,255,255,0.45),
-              inset 1px 0 0 rgba(255,255,255,0.3),
-              inset -1px 0 0 rgba(255,255,255,0.3) !important;
-}
-
-window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([forwardshowalways]) > #back-button:not(:active):not([disabled="true"]):not([open="true"]):-moz-lwtheme {
-  box-shadow: 0 1px 0 rgba(255,255,255,0.15),
-              inset 0 1px 0 rgba(255,255,255,0.3),
-              inset 1px 0 0 rgba(255,255,255,0.2),
-              inset -1px 0 0 rgba(255,255,255,0.2) !important;
-}
-
-window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([forwardshowalways]) > #back-button[disabled="true"] {
-  box-shadow: none !important;
-}
-%endif
-
-/* FIXME */
 
 #urlbar-icons {
   -moz-box-align: center;
@@ -1897,7 +1815,7 @@ window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([fo
   margin: 0px;
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
 /* Translation infobar */
 
 notification[value="translation"] .messageImage {
@@ -2033,7 +1951,6 @@ notification[value="translation"] menulist > .menulist-dropmarker {
 }
 %endif
 
-%if APP_VERSION != 30
 .translate-notification-icon,
 #translate-notification-icon {
   list-style-image: url(chrome://symbolic-icons/skin/translate.svg);
@@ -2044,7 +1961,6 @@ notification[value="translation"] menulist > .menulist-dropmarker {
 #translated-notification-icon {
   list-style-image: url(chrome://symbolic-icons/skin/translate.svg);
 }
-%endif
 
 #notification-popup-box@darkTheme@ .notification-anchor-icon {
   opacity: 0.4;
@@ -2241,7 +2157,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   opacity: .5;
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 31 && APP_VERSION != 32
 /* Loop */
 #loop-call-button {
   list-style-image: url(chrome://symbolic-icons/skin/call-start.svg);
@@ -2396,7 +2312,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 
 .panel-promo-closebutton > .toolbarbutton-text {
   padding: 0;
-%if APP_VERSION == 30 || APP_VERSION == 31 || APP_VERSION == 32
+%if APP_VERSION == 31 || APP_VERSION == 32
   margin: 0;
 %endif
 }
@@ -2912,7 +2828,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   list-style-image: url(chrome://browser/skin/tabbrowser/connecting.png);
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
 /* FIXME
 @keyframes throbber-loading {
   to {
@@ -2938,7 +2854,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 
 .tab-throbber[progress] {
   list-style-image: url(chrome://browser/skin/tabbrowser/loading.png);
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
   /*
   animation-duration: 800ms;
   animation-name: throbber-loading;
@@ -3117,19 +3033,6 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
 
-%if APP_VERSION == 30
-.customization-tipPanel-closeBox > .close-icon {
-  -moz-appearance: none;
-  width: 16px;
-  height: 16px;
-}
-
-/* The :hover:active style from toolkit doesn't seem to work in this panel so just use :active. */
-.customization-tipPanel-closeBox > .close-icon:active {
-  background-image: -moz-image-rect(url("chrome://global/skin/icons/close.svg"), 0, 48, 16, 32);
-}
-%endif
-
 /* Tabbrowser arrowscrollbox arrows */
 
 #TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox {
@@ -3249,7 +3152,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
 /* Tab Overflow */
 
 /*
@@ -3491,7 +3394,7 @@ toolbarbutton.chevron > .toolbarbutton-icon {
 /* Responsive Mode */
 
 .browserContainer[responsivemode] {
-%if APP_VERSION == 30 || APP_VERSION == 31
+%if APP_VERSION == 31
   background: #222 url("chrome://browser/skin/devtools/responsive-background.png");
 %else
   background-color: #222;
@@ -3531,7 +3434,7 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   color: inherit;
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
 .devtools-responsiveui-toolbarbutton > .toolbarbutton-icon {
   width: 16px;
   height: 16px;
@@ -3586,7 +3489,7 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   -moz-appearance: none;
   display: -moz-box;
   background-color: transparent;
-%if APP_VERSION == 30 || APP_VERSION == 31
+%if APP_VERSION == 31
   list-style-image: url("chrome://browser/skin/devtools/dropmarker.png");
 %else
   list-style-image: url("chrome://browser/skin/devtools/dropmarker.svg");
@@ -3616,7 +3519,7 @@ toolbarbutton.chevron > .toolbarbutton-icon {
 .devtools-responsiveui-toolbarbutton[type=menu] > .toolbarbutton-menu-dropmarker,
 .devtools-responsiveui-toolbarbutton[type=menu-button] > .toolbarbutton-menubutton-dropmarker {
   -moz-appearance: none !important;
-%if APP_VERSION == 30 || APP_VERSION == 31
+%if APP_VERSION == 31
   list-style-image: url("chrome://browser/skin/devtools/dropmarker.png");
 %else
   list-style-image: url("chrome://browser/skin/devtools/dropmarker.svg");
@@ -3638,7 +3541,7 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   list-style-image: url("chrome://browser/skin/devtools/responsiveui-rotate.png");
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
 @media (min-resolution: 2dppx) {
   .devtools-responsiveui-close {
     list-style-image: url("chrome://browser/skin/devtools/close@2x.png");
@@ -3659,7 +3562,7 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   -moz-image-region: rect(0px,32px,16px,16px);
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
 @media (min-resolution: 2dppx) {
   .devtools-responsiveui-touch {
     list-style-image: url("chrome://browser/skin/devtools/responsiveui-touch@2x.png");
@@ -3676,7 +3579,7 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   list-style-image: url("chrome://browser/skin/devtools/responsiveui-screenshot.png");
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
 @media (min-resolution: 2dppx) {
   .devtools-responsiveui-screenshot {
     list-style-image: url("chrome://browser/skin/devtools/responsiveui-screenshot@2x.png");
@@ -3689,7 +3592,7 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   height: 24px;
   cursor: ew-resize;
   transform: translate(12px, -12px);
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
   background-size: cover;
 %endif
   background-image: url("chrome://browser/skin/devtools/responsive-vertical-resizer.png");
@@ -3700,7 +3603,7 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   height: 7px;
   cursor: ns-resize;
   transform: translate(-12px, 12px);
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
   background-size: cover;
 %endif
   background-image: url("chrome://browser/skin/devtools/responsive-horizontal-resizer.png");
@@ -3711,13 +3614,13 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   height: 16px;
   cursor: se-resize;
   transform: translate(12px, 12px);
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
   background-size: cover;
 %endif
   background-image: url("chrome://browser/skin/devtools/responsive-se-resizer.png");
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
 @media (min-resolution: 2dppx) {
   .devtools-responsiveui-resizebarV {
     background-image: url("chrome://browser/skin/devtools/responsive-vertical-resizer@2x.png");
@@ -3768,7 +3671,7 @@ svg|line.box-model-guide-bottom,
 svg|line.box-model-guide-left {
   stroke: #08C;
   stroke-dasharray: 5 3;
-%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 31 && APP_VERSION != 32
   shape-rendering: crispEdges;
 %endif
 }
@@ -3807,7 +3710,7 @@ html|*.highlighter-nodeinfobar-pseudo-classes {
   color: hsl(200,74%,57%);
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
 html|*.highlighter-nodeinfobar-dimensions {
   color: hsl(210,30%,85%);
   -moz-border-start: 1px solid #5a6169;
@@ -3843,7 +3746,7 @@ html|*.highlighter-nodeinfobar-dimensions {
   margin: 7px 0;
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 31 && APP_VERSION != 32
 /* Css transform highlighter */
 
 svg|polygon.css-transform-transformed {
@@ -3871,7 +3774,7 @@ svg|line.css-transform-line {
   -moz-appearance: none;
   padding: 0;
   min-height: 32px;
-%if APP_VERSION == 30 || APP_VERSION == 31
+%if APP_VERSION == 31
   background-image: url(devtools/background-noise-toolbar.png), linear-gradient(#303840, #2d3640);
 %else
   background-color: #343C45; /* Toolbars */
@@ -3893,7 +3796,7 @@ svg|line.css-transform-line {
   margin: auto 10px;
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
 .developer-toolbar-button > .toolbarbutton-icon,
 #developer-toolbar-closebutton > .toolbarbutton-icon {
   width: 16px;
@@ -3922,7 +3825,7 @@ svg|line.css-transform-line {
   -moz-image-region: rect(0px, 64px, 16px, 48px);
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
 @media (min-resolution: 2dppx) {
   #developer-toolbar-toolbox-button {
     list-style-image: url("chrome://browser/skin/devtools/toggle-tools@2x.png");
@@ -3953,7 +3856,7 @@ svg|line.css-transform-line {
   opacity: 0.6;
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
 @media (min-resolution: 2dppx) {
   #developer-toolbar-closebutton {
     list-style-image: url("chrome://browser/skin/devtools/close@2x.png");
@@ -4011,7 +3914,7 @@ html|*#gcli-output-frame {
 .gclitoolbar-input-node {
   -moz-appearance: none;
   color: hsl(210,30%,85%);
-%if APP_VERSION == 30 || APP_VERSION == 31
+%if APP_VERSION == 31
   padding-left: 20px;
 %endif
   background-color: #242b33;
@@ -4022,7 +3925,7 @@ html|*#gcli-output-frame {
               -1px 0 0 hsla(206,37%,4%,.2) inset;
   line-height: 32px;
   outline-style: none;
-%if APP_VERSION == 30 || APP_VERSION == 31
+%if APP_VERSION == 31
   background-image: -moz-image-rect(url("chrome://browser/skin/devtools/commandline-icon.png"), 0, 16, 16, 0);
 %else
   padding: 0;
@@ -4030,13 +3933,13 @@ html|*#gcli-output-frame {
 }
 
 .gclitoolbar-input-node[focused="true"] {
-%if APP_VERSION == 30 || APP_VERSION == 31
+%if APP_VERSION == 31
   background-image: -moz-image-rect(url("chrome://browser/skin/devtools/commandline-icon.png"), 0, 32, 16, 16);
 %endif
   background-color: #232e38;
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
 .gclitoolbar-input-node::before {
   content: "";
   display: inline-block;
@@ -4828,7 +4731,7 @@ chatbox {
 
 #customization-container {
   background-color: rgb(247,247,247);
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
   color: black;
   text-shadow: none;
 %endif
@@ -4860,7 +4763,7 @@ chatbox {
 
 #customization-footer {
   border-top: 1px solid rgb(221,221,221);
-%if APP_VERSION == 30 || APP_VERSION == 31 || APP_VERSION == 32
+%if APP_VERSION == 31 || APP_VERSION == 32
   padding: 15px;
 %else
   padding: 10px;
@@ -4870,7 +4773,7 @@ chatbox {
 .customizationmode-button {
   border: 1px solid rgb(192,192,192);
   border-radius: 3px;
-%if APP_VERSION == 30 || APP_VERSION == 31 || APP_VERSION == 32
+%if APP_VERSION == 31 || APP_VERSION == 32
   margin: 0;
 %else
   margin: 5px;
@@ -4897,7 +4800,7 @@ chatbox {
   min-width: 0;
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 31 && APP_VERSION != 32
 .customizationmode-button > .box-inherit > .box-inherit > .button-icon,
 .customizationmode-button > .button-box > .button-icon {
   height: 24px;
@@ -4908,7 +4811,7 @@ chatbox {
   list-style-image: url("chrome://browser/skin/customizableui/customize-titleBar-toggle.png");
   -moz-image-region: rect(0, 24px, 24px, 0);
   padding: 2px 7px;
-%if APP_VERSION == 30 || APP_VERSION == 31 || APP_VERSION == 32
+%if APP_VERSION == 31 || APP_VERSION == 32
   -moz-margin-end: 10px;
 %endif
 }
@@ -4918,7 +4821,7 @@ chatbox {
   -moz-margin-start: 6px !important;
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 31 && APP_VERSION != 32
 #customization-titlebar-visibility-button > .button-box > .button-icon {
   vertical-align: middle;
 }
@@ -4933,7 +4836,7 @@ chatbox {
               inset 0 1px rgb(196, 196, 196);
 }
 
-%if APP_VERSION == 30 || APP_VERSION == 31 || APP_VERSION == 32
+%if APP_VERSION == 31 || APP_VERSION == 32
 #customization-undo-reset-button {
   -moz-margin-end: 10px;
 }
@@ -5128,7 +5031,7 @@ toolbarpaletteitem[place="toolbar"] {
   list-style-image: url("chrome://browser/skin/customizableui/panelarrow-customizeTip.png");
 }
 
-%if APP_VERSION == 30 || APP_VERSION == 31
+%if APP_VERSION == 31
 #main-window[customizing] > #tab-view-deck {
   background: linear-gradient(to bottom, #bcbcbc, #b5b5b5);
 }
@@ -5195,12 +5098,10 @@ toolbarpaletteitem[place="toolbar"] {
   margin-top: 3px;
 }
 
-%if APP_VERSION != 30
 /* The :hover:active style from toolkit doesn't seem to work in this panel so just use :active. */
 .customization-tipPanel-closeBox > .close-icon:active {
   background-image: -moz-image-rect(url("chrome://global/skin/icons/close.svg"), 0, 48, 16, 32);
 }
-%endif
 
 /* End customization mode */
 
@@ -5384,7 +5285,7 @@ toolbarpaletteitem[place="toolbar"] {
   margin-bottom: -10px;
 }
 
-%if APP_VERSION != 30 && APP_VERSION != 31
+%if APP_VERSION != 31
 menugroup > .menuitem-iconic[disabled="true"] > .menu-iconic-left {
   opacity: .3;
 }

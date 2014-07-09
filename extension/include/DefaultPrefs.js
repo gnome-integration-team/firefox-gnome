@@ -11,7 +11,6 @@ const DefaultPrefs = {
     "tabs-on-top": false,
     "tabs-border": false,
     "urlbar-history-dropmarker": false,
-    "forward-button": false,
     "disable-popup-animation": false,
     "dark-variant": 0,
 }

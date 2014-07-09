@@ -213,7 +213,7 @@ findbar toolbarbutton[disabled="true"]:active:hover {
   opacity: 0.5;
 }
 
-%if APP_VERSION == 30 || APP_VERSION == 31
+%if APP_VERSION == 31
 .findbar-find-status {
 %else
 .findbar-find-status,

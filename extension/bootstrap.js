@@ -381,16 +381,8 @@ var GNOMEThemeTweak = {
         // Removing older keys...
         if (this.prefs.getPrefType("restore-button"))
             this.prefs.clearUserPref("restore-button");
-
-        var app_info = Cc["@mozilla.org/xre/app-info;1"]
-                         .getService(Ci.nsIXULAppInfo);
-        var vc = Cc["@mozilla.org/xpcom/version-comparator;1"]
-                   .getService(Ci.nsIVersionComparator);
-
-        if (vc.compare(app_info.version, "31.0a1") >= 0) {
-            if (this.prefs.getPrefType("forward-button"))
-                this.prefs.clearUserPref("forward-button");
-        }
+        if (this.prefs.getPrefType("forward-button"))
+            this.prefs.clearUserPref("forward-button");
 
         this.prefs.addObserver("", this, false);
 
