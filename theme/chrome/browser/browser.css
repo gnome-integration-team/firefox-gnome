@@ -266,6 +266,10 @@ toolbarpaletteitem[place="palette"] > #personal-bookmarks > #bookmarks-toolbar-p
   visibility: hidden;
 }
 
+#main-window@darkTheme@ #bookmarked-notification-dropmarker-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
+}
+
 #bookmarked-notification-anchor[notification="finish"] > #bookmarked-notification {
   background-image: url("chrome://browser/skin/places/bookmarks-notification-finish.png");
   animation: animation-bookmarkAdded 800ms;
@@ -2319,10 +2323,6 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   -moz-padding-start: 6px;
   -moz-margin-start: 0;
   -moz-box-align: center;
-}
-
-#bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
-  list-style-image: url(chrome://symbolic-icons/skin/view-more-bookmarks.svg);
 }
 
 #bookmarks-menu-button[disabled][cui-areatype="toolbar"] > .toolbarbutton-icon,
