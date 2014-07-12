@@ -4770,7 +4770,7 @@ chatbox {
 
 #customization-footer {
   border-top: 1px solid rgb(221,221,221);
-%if APP_VERSION == 31 || APP_VERSION == 32
+%if APP_VERSION == 31
   padding: 15px;
 %else
   padding: 10px;
@@ -4780,7 +4780,7 @@ chatbox {
 .customizationmode-button {
   border: 1px solid rgb(192,192,192);
   border-radius: 3px;
-%if APP_VERSION == 31 || APP_VERSION == 32
+%if APP_VERSION == 31
   margin: 0;
 %else
   margin: 5px;
@@ -4807,7 +4807,7 @@ chatbox {
   min-width: 0;
 }
 
-%if APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 31
 .customizationmode-button > .box-inherit > .box-inherit > .button-icon,
 .customizationmode-button > .button-box > .button-icon {
   height: 24px;
@@ -4818,7 +4818,7 @@ chatbox {
   list-style-image: url("chrome://browser/skin/customizableui/customize-titleBar-toggle.png");
   -moz-image-region: rect(0, 24px, 24px, 0);
   padding: 2px 7px;
-%if APP_VERSION == 31 || APP_VERSION == 32
+%if APP_VERSION == 31
   -moz-margin-end: 10px;
 %endif
 }
@@ -4828,7 +4828,7 @@ chatbox {
   -moz-margin-start: 6px !important;
 }
 
-%if APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 31
 #customization-titlebar-visibility-button > .button-box > .button-icon {
   vertical-align: middle;
 }
@@ -4843,7 +4843,7 @@ chatbox {
               inset 0 1px rgb(196, 196, 196);
 }
 
-%if APP_VERSION == 31 || APP_VERSION == 32
+%if APP_VERSION == 31
 #customization-undo-reset-button {
   -moz-margin-end: 10px;
 }
