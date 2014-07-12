@@ -719,6 +719,13 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
   list-style-image: url(chrome://symbolic-icons/skin/tabview-3.svg);
 }
 
+%if APP_VERSION != 31 && APP_VERSION != 32
+/* undo close tab menu item */
+#alltabs_undoCloseTab {
+  list-style-image: url(chrome://browser/skin/undoCloseTab.png);
+}
+%endif
+
 /* FIXME: I don't have ideas, what this code doing.
 #bookmarks-button {
   list-style-image: url(chrome://symbolic-icons/skin/user-bookmarks.svg);
