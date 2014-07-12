@@ -73,32 +73,35 @@ notification .messageImage:-moz-window-inactive {
   background: #f8f8f6 !important;
 }
 
-#navigator-toolbox toolbarbutton:-moz-window-inactive,
-#navigator-toolbox toolbarbutton:-moz-window-inactive:hover {
+#navigator-toolbox .toolbarbutton-1:-moz-window-inactive,
+#navigator-toolbox .toolbarbutton-1:-moz-window-inactive:hover {
   background: transparent !important;
   color: #a7aba7 !important;
 }
 
-#navigator-toolbox toolbarbutton:-moz-window-inactive[checked="true"] {
+#navigator-toolbox .toolbarbutton-1:-moz-window-inactive[checked="true"] {
   background: rgba(100,110,100,0.5) !important;
   border-color: transparent !important;
   color: #eaeaea !important;
   text-shadow: 0 0 0 #ffffff;
 }
 
-#navigator-toolbox toolbarbutton:not([checked="true"]):-moz-window-inactive > .toolbarbutton-icon,
-#navigator-toolbox toolbarbutton:-moz-window-inactive > .toolbarbutton-menu-dropmarker,
-#navigator-toolbox toolbarbutton:-moz-window-inactive > .toolbarbutton-menubutton-dropmarker {
+#navigator-toolbox .toolbarbutton-1:not([checked="true"]):-moz-window-inactive .toolbarbutton-icon,
+#navigator-toolbox .toolbarbutton-1:-moz-window-inactive .toolbarbutton-menu-dropmarker,
+#navigator-toolbox .toolbarbutton-1:-moz-window-inactive .toolbarbutton-menubutton-dropmarker {
   opacity: .5;
 }
 
-#nav-bar[iconsize=large] #back-button:-moz-window-inactive,
-#nav-bar[iconsize=large] #forward-button:-moz-window-inactive,
 /* Relief buttons */
-#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] > :-moz-any(toolbarbutton:not(#close-button), .toolbarbutton-menubutton-dropmarker):-moz-window-inactive:not([checked="true"]),
-#navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] > toolbaritem:not(#urlbar):not(#unified-back-forward-button) > :-moz-any(toolbarbutton:not(#close-button), .toolbarbutton-menubutton-dropmarker):-moz-window-inactive:not([checked="true"]) {
+#nav-bar :-moz-any(#back-button, #forward-button):-moz-window-inactive,
+#nav-bar[reliefbuttons="true"] .toolbarbutton-1:-moz-window-inactive {
   background: transparent !important;
   box-shadow: none !important;
+}
+
+#nav-bar[darkvariant] :-moz-any(#back-button, #forward-button):-moz-window-inactive,
+#nav-bar[reliefbuttons="true"][darkvariant] .toolbarbutton-1:-moz-window-inactive {
+  border-color: #545959 !important;
 }
 
 :-moz-any(
@@ -123,6 +126,10 @@ notification .messageImage:-moz-window-inactive {
   border-top-color: #caccca !important;
 }
 
+#main-window:-moz-window-inactive #TabsToolbar[newstyletabs][darkvariant] {
+  border-top-color: #464c4c !important;
+}
+
 #main-window:-moz-window-inactive textbox {
   background: #f8f8f6 !important;
   box-shadow: none !important;
@@ -132,6 +139,13 @@ notification .messageImage:-moz-window-inactive {
 #main-window:-moz-window-inactive #urlbar:-moz-lwtheme,
 #main-window:-moz-window-inactive .searchbar-textbox:-moz-lwtheme {
   background: rgba(255,255,255,0.5) !important;
+}
+
+#main-window:-moz-window-inactive #navigator-toolbox[darkvariant] #urlbar,
+#main-window:-moz-window-inactive #navigator-toolbox[darkvariant] .searchbar-textbox {
+  background: #333333 !important;
+  border-color: #545959 !important;
+  color: #c9c9c7 !important;
 }
 
 #page-proxy-favicon:-moz-window-inactive {
@@ -157,6 +171,10 @@ notification .messageImage:-moz-window-inactive {
 
 #main-window:-moz-window-inactive #TabsToolbar[newstyletabs] .tabbrowser-tab[selected=true] .tab-background-middle {
   -moz-border-bottom-colors: #caccca !important;
+}
+
+#main-window:-moz-window-inactive #TabsToolbar[newstyletabs][darkvariant] .tabbrowser-tab[selected=true] .tab-background-middle {
+  -moz-border-bottom-colors: #464c4c !important;
 }
 
 #main-window:-moz-window-inactive .tabbrowser-tab[selected="true"] > .tab-stack {
