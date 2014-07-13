@@ -1,0 +1,155 @@
+%if 0
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+%endif
+
+body {
+  font: 11pt Cantarell;
+  font-weight: normal;
+  color: #2e3436;
+  margin: 0;
+  background-color: #f6f6f4;
+  background-image: linear-gradient(to bottom, #eeeeec, #f6f6f4);
+  background-size: 100% 5em;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: 160%;
+  margin: 0 0 .3em 0;
+}
+
+@-moz-document url-prefix("about:neterror") {
+
+  h1 {
+    margin: 0 0 .3em 0 !important;
+  }
+
+  ul, ol {
+    -moz-margin-start: 1.5em !important;
+  }
+
+  ul {
+    list-style: square !important;
+  }
+
+  #errorPageContainer {
+    background-position: 0 15px;
+    background-repeat: no-repeat;
+    color: #2e3436;
+    position: relative;
+    min-width: 13em !important;
+    max-width: 45em !important;
+    margin: auto 0;
+    -moz-margin-start: 50px;
+    padding: 1em 0 3em 0;
+    -moz-padding-start: calc(160px + 14px);
+  }
+
+  #errorPageContainer:-moz-dir(rtl) {
+    background-position: right 0 top 15px;
+  }
+
+  @media (max-width: 675px) {
+    #errorPageContainer {
+      -moz-margin-start: 0;
+      -moz-padding-start: 0;
+      background-image: none !important;
+    }
+  }
+
+  #errorPageContainer > #errorTitle,
+  #errorPageContainer > #errorLongContent {
+    padding: 0 24px;
+  }
+
+  #errorTitle {
+    color: #babdb6;
+    text-shadow: 0 1px 0 white;
+    font-weight: bold !important;
+  }
+
+  #errorTitleText {
+    background: none !important;
+    -moz-padding-start: 0 !important;
+    -moz-margin-start: 0 !important;
+  }
+
+  #errorLongContent {
+  }
+
+  #errorShortDesc > p {
+    overflow: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-weight: bold;
+    white-space: pre-wrap;
+  }
+
+  #errorLongDesc {
+  }
+
+  #errorLongDesc > p {
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+  }
+
+  #errorTryAgain {
+    margin-top: 2em !important;
+    -moz-margin-start: calc(24px + 17px);
+    min-width: 0 !important;
+  }
+
+}
+
+/* ::::: File not found, <...> pages ::::: */
+
+@-moz-document url-prefix("about:neterror?e=connectionFailure"),
+               url-prefix("about:neterror?e=contentEncodingError"),
+               url-prefix("about:neterror?e=corruptedContentError"),
+               url-prefix("about:neterror?e=cspFrameAncestorBlocked"),
+               url-prefix("about:neterror?e=deniedPortAccess"),
+               url-prefix("about:neterror?e=dnsNotFound"),
+               url-prefix("about:neterror?e=fileNotFound"),
+               url-prefix("about:neterror?e=generic"),
+               url-prefix("about:neterror?e=malformedURI"),
+               url-prefix("about:neterror?e=netInterrupt"),
+               url-prefix("about:neterror?e=netReset"),
+               url-prefix("about:neterror?e=netTimeout"),
+               url-prefix("about:neterror?e=notCached"),
+               url-prefix("about:neterror?e=nssBadCert"),
+               url-prefix("about:neterror?e=nssFailure2"),
+               url-prefix("about:neterror?e=unknownProtocolFound"),
+               url-prefix("about:neterror?e=proxyConnectFailure"),
+               url-prefix("about:neterror?e=proxyResolveFailure"),
+               url-prefix("about:neterror?e=redirectLoop"),
+               url-prefix("about:neterror?e=remoteXUL"),
+               url-prefix("about:neterror?e=unknownSocketType"),
+               url-prefix("about:neterror?e=unsafeContentType") {
+
+  #errorPageContainer {
+    background-image: url(chrome://browser/skin/about-pages/file-not-found.svg);
+  }
+
+  #errorTitle {
+    color: #3c3591;
+    text-shadow: none;
+  }
+
+}
+
+/* ::::: Offline Mode ::::: */
+
+@-moz-document url-prefix("about:neterror?e=netOffline") {
+
+  #errorPageContainer {
+    background-image: url(chrome://browser/skin/about-pages/offline-mode.svg);
+  }
+
+  #errorTitle {
+    color: #646f6c;
+    text-shadow: none;
+  }
+
+}

@@ -60,7 +60,7 @@ ul {
   background-position: right 7em top 2.5em;
 }
 
-#errorPageContainer > #errorLongContent{
+#errorPageContainer > #errorLongContent {
   padding: 0 24px;
 }
 
@@ -96,9 +96,6 @@ ul {
 #errorLongDesc > p {
   margin-top: 1.2em;
   margin-bottom: 1.2em;
-  /*
-  color: grey;
-  */
 }
 
 #errorTryAgain {
@@ -159,7 +156,6 @@ ul {
 
 :root.blacklist #errorTitle {
   color: #d8001d;
-  letter-spacing: 0.02em;
   text-shadow: none;
 }
 
@@ -214,7 +210,6 @@ ul {
 
 #errorTitle {
   color: #d8001d;
-  letter-spacing: 0.02em;
   text-shadow: none;
 }
 
@@ -224,6 +219,7 @@ ul {
 
 }
 
+%if APP_VERSION == 31
 /* ::::: Offline Mode ::::: */
 
 @-moz-document url-prefix("about:neterror?e=netOffline") {
@@ -244,7 +240,6 @@ ul {
 
 #errorTitle {
   color: #646f6c;
-  letter-spacing: 0.02em;
   text-shadow: none;
 }
 
@@ -271,8 +266,7 @@ ul {
                url-prefix("about:neterror?e=notCached"),
                url-prefix("about:neterror?e=nssBadCert"),
                url-prefix("about:neterror?e=nssFailure2"),
-               url-prefix("about:neterror?e=protocolNotFound"), /* For Fx 29- */
-               url-prefix("about:neterror?e=unknownProtocolFound"), /* For Fx 30+ */
+               url-prefix("about:neterror?e=unknownProtocolFound"),
                url-prefix("about:neterror?e=proxyConnectFailure"),
                url-prefix("about:neterror?e=proxyResolveFailure"),
                url-prefix("about:neterror?e=redirectLoop"),
@@ -296,7 +290,6 @@ ul {
 
 #errorTitle {
   color: #3c3591;
-  letter-spacing: 0.02em;
   text-shadow: none;
 }
 
@@ -305,3 +298,4 @@ ul {
 }
 
 }
+%endif
