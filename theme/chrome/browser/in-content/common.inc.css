@@ -30,25 +30,20 @@ h1 {
     -moz-margin-start: 1.5em !important;
   }
 
-  ul {
-    list-style: square !important;
-  }
-
   #errorPageContainer {
-    background-position: 0 15px;
+    background-position: 35px 15px;
     background-repeat: no-repeat;
     color: #2e3436;
-    position: relative;
-    min-width: 13em !important;
-    max-width: 45em !important;
+    min-width: 280px !important;
+    width: 610px !important;
+    max-width: 610px !important;
     margin: auto 0;
-    -moz-margin-start: 50px;
     padding: 1em 0 3em 0;
-    -moz-padding-start: calc(160px + 14px);
+    -moz-padding-start: calc(35px + 160px + 35px);
   }
 
   #errorPageContainer:-moz-dir(rtl) {
-    background-position: right 0 top 15px;
+    background-position: right 35px top 15px;
   }
 
   @media (max-width: 675px) {
@@ -57,11 +52,6 @@ h1 {
       -moz-padding-start: 0;
       background-image: none !important;
     }
-  }
-
-  #errorPageContainer > #errorTitle,
-  #errorPageContainer > #errorLongContent {
-    padding: 0 24px;
   }
 
   #errorTitle {
@@ -97,7 +87,7 @@ h1 {
 
   #errorTryAgain {
     margin-top: 2em !important;
-    -moz-margin-start: calc(24px + 17px);
+    -moz-margin-start: 1.2em;
     min-width: 0 !important;
   }
 
