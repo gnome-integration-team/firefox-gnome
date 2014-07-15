@@ -25,6 +25,9 @@ toolbar {
 
 menubar, toolbar[type="menubar"] {
   -moz-appearance: menubar;
+%if APP_VERSION != 31 && APP_VERSION != 32
+  color: -moz-menubartext;
+%endif
   min-width: 1px;
   min-height: 20px;
   padding: 0;

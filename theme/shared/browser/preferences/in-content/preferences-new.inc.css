@@ -25,6 +25,13 @@ page {
   -moz-user-select: text;
 }
 
+%if APP_VERSION != 31 && APP_VERSION != 32
+treecol {
+  /* override the * rule to let the treecol be sortable */
+  -moz-user-select: none;
+}
+%endif
+
 caption {
   -moz-appearance: none;
   margin: 0;
