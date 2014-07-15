@@ -6,8 +6,11 @@
 
 /* chrome://global/skin/popup.css */
 
-.panel-arrowcontainer {
+.panel-arrowcontainer[panelopen] {
+  transition: all 0s ease 0s !important;
+}
+
+.panel-arrowcontainer:not([panelopen]) {
   opacity: 1 !important;
   transform: none !important;
-  transition: none !important;
 }
