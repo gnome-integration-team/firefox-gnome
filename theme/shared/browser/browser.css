@@ -4801,7 +4801,11 @@ chatbox {
 .customizationmode-link {
   color: #4a90d9;
   text-decoration: underline;
+%if APP_VERSION == 31
   margin: 0;
+%else
+  margin: 5px;
+%endif
   -moz-margin-start: 10px;
   padding: 2px 4px;
   min-width: 0;
