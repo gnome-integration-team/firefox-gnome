@@ -265,3 +265,9 @@
   transition-property: background-color, color, text-shadow;
   transition-duration: 0.4s;
 }
+
+/* SEARCH */
+#newtab-search-text,
+#newtab-search-submit {
+  color: #2e3436; /* see bug1038607 */
+}
