@@ -6,8 +6,5 @@
     "theme": "gnome-firefox-theme.xpi",
     "extension": "gnome-firefox-extension.xpi",
     "package": "gnome-firefox-@VERSION@.xpi"
-  },
-  "directory-structure": {
-    "shared-dir": "chrome"
   }
 }
