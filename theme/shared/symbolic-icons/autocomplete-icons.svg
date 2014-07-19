@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0px" y="0px"
+     height="16" width="16"
+     viewBox="0 0 16 16"
+     enable-background="new 0 0 16 16">
+
+  <defs>
+    <style type="text/css"><![CDATA[
+      g:not(:target) {
+        display: none;
+      }
+
+      .default {
+        fill: menutext;
+      }
+
+      .active {
+        fill: -moz-menuhovertext;
+      }
+      ]]></style>
+
+    <path id="glyphShape-bookmark" d="m12.283169,14.049303c-0.811398,0.584738 -3.323244,-1.968449 -4.323313,-1.972573c-1.000517,-0.004138 -3.534343,2.527986 -4.341592,1.936825c-0.806865,-0.590988 0.845173,-3.768848 0.540016,-4.721312c-0.305224,-0.952815 -3.496509,-2.580179 -3.183667,-3.530563c0.312782,-0.949968 3.845646,-0.36083 4.65711,-0.945344c0.811908,-0.584758 1.373471,-4.122714 2.373922,-4.118784c1.000132,0.003821 1.531515,3.54588 2.338253,4.137061c0.806996,0.591419 4.345261,0.032214 4.650867,0.984945c0.305348,0.952366 -2.899091,2.552246 -3.212065,3.502216c-0.3131,0.950274 1.312119,4.142566 0.500405,4.727626l0.000064,-0.000096z"/>
+    <path id="glyphShape-keyword" d="m6.5,1.031189c-3.0289,0 -5.5,2.474609 -5.5,5.5c0,3.025513 2.4711,5.499817 5.5,5.499817c1.151993,0 2.237701,-0.358032 3.125,-0.968994l3.686996,3.687988a1.0055,1.0055 0 1 0 1.407005,-1.437988l-3.687996,-3.687012c0.610992,-0.885925 0.999992,-1.943909 0.999992,-3.093811c0,-3.025391 -2.502205,-5.5 -5.530998,-5.5zm0,2c1.947403,0 3.5,1.554932 3.5,3.5c0,1.94519 -1.552597,3.499817 -3.5,3.499817s-3.5,-1.554626 -3.5,-3.499817c0,-1.945068 1.552597,-3.5 3.5,-3.5z"/>
+    <path id="glyphShape-tag" d="m5.5,2c-0.5745,0 -0.817,0.4862 -1.0741,1l-1.4259,3l-0.037,6.9631c-0.003,0.575 0.4626,1.033999 1.037,1.037l6.963,0.037c0.573999,0 1.037,-0.462 1.037,-1.037l0,-7l-1.5,-3c-0.272,-0.5448 -0.425,-1.0001 -1,-1l-4,-0.0001zm1.9999,0.9984c1.1133,-0.0001 2.0157,0.8954 2.0157,2.0009c-0.0001,1.105 -0.9025,2.0007 -2.0156,2.0007c-1.1134,0.0001 -2.0158,-0.8957 -2.0157,-2.0008c0,-1.1053 0.9023,-2.0009 2.0156,-2.0008z"/>
+    <path id="glyphShape-tab" d="m3,2c-0.883583,0 -2,1.106873 -2,2l0,8l-1,0l0,2l3,0l0,-10l10,0l0,10l3,0l0,-2l-1,0l0,-8c0,-0.893127 -1.116394,-2 -2,-2l-10,0z"/>
+  </defs>
+
+  <g id="bookmark">
+    <use xlink:href="#glyphShape-bookmark" class="default"/>
+  </g>
+  <g id="keyword">
+    <use xlink:href="#glyphShape-keyword" class="default"/>
+  </g>
+  <g id="tag">
+    <use xlink:href="#glyphShape-tag" class="default"/>
+  </g>
+  <g id="tab">
+    <use xlink:href="#glyphShape-tab" class="default"/>
+  </g>
+
+  <g id="bookmark-active">
+    <use xlink:href="#glyphShape-bookmark" class="active"/>
+  </g>
+  <g id="keyword-active">
+    <use xlink:href="#glyphShape-keyword" class="active"/>
+  </g>
+  <g id="tag-active">
+    <use xlink:href="#glyphShape-tag" class="active"/>
+  </g>
+  <g id="tab-active">
+    <use xlink:href="#glyphShape-tab" class="active"/>
+  </g>
+
+</svg>

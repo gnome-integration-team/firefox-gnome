@@ -2020,40 +2020,40 @@ notification[value="translation"] menulist > .menulist-dropmarker {
 /* */
 
 #treecolAutoCompleteImage {
-  max-width : 36px;
+  max-width: 36px;
 }
 
 .ac-result-type-bookmark,
 .autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage) {
-  list-style-image: url(chrome://symbolic-icons/skin/user-bookmarks.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/autocomplete-icons.svg#bookmark);
   width: 16px;
   height: 16px;
 }
 richlistitem[selected="true"] .ac-result-type-bookmark,
 richlistitem[selected="true"] .autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage) {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
+  list-style-image: url(chrome://symbolic-icons/skin/autocomplete-icons.svg#bookmark-active);
 }
 
 .ac-result-type-keyword,
 .autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage) {
-  list-style-image: url(chrome://symbolic-icons/skin/edit-find.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/autocomplete-icons.svg#keyword);
   width: 16px;
   height: 16px;
 }
 richlistitem[selected="true"] .ac-result-type-keyword,
 richlistitem[selected="true"] .autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage) {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
+  list-style-image: url(chrome://symbolic-icons/skin/autocomplete-icons.svg#keyword-active);
 }
 
 .ac-result-type-tag,
 .autocomplete-treebody::-moz-tree-image(tag, treecolAutoCompleteImage) {
-  list-style-image: url(chrome://symbolic-icons/skin/tag.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/autocomplete-icons.svg#tag);
   width: 16px;
   height: 16px;
 }
 richlistitem[selected="true"] .ac-result-type-tag,
 richlistitem[selected="true"] .autocomplete-treebody::-moz-tree-image(tag, treecolAutoCompleteImage) {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
+  list-style-image: url(chrome://symbolic-icons/skin/autocomplete-icons.svg#tag-active);
 }
 
 .ac-comment {
@@ -2079,12 +2079,11 @@ richlistitem {
 }
 
 richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-icon {
-  list-style-image: url(chrome://symbolic-icons/skin/actionicon-tab.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/autocomplete-icons.svg#tab);
   padding: 0 3px;
-
 }
 richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
+  list-style-image: url(chrome://symbolic-icons/skin/autocomplete-icons.svg#tab-active);
 }
 
 .autocomplete-treebody::-moz-tree-cell-text(treecolAutoCompleteComment) {
