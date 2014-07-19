@@ -1396,41 +1396,47 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   margin-bottom: 2px;
   -moz-margin-start: 4px;
   -moz-margin-end: 3px;
-  list-style-image: url(chrome://symbolic-icons/skin/identity-icons-generic.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/identity-icons.svg#generic);
   opacity: 0.35;
 }
 
-#urlbar@darkTheme@ #page-proxy-favicon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
+@darkTheme@ > #page-proxy-favicon {
+  list-style-image: url(chrome://symbolic-icons/skin/identity-icons.svg#generic-bright);
   opacity: 0.2;
 }
 
 .chromeUI > #page-proxy-favicon[pageproxystate="valid"] {
-  list-style-image: url(chrome://symbolic-icons/skin/identity-icons-brand.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/identity-icons.svg#brand);
+}
+.chromeUI@darkTheme@ > #page-proxy-favicon[pageproxystate="valid"] {
+  list-style-image: url(chrome://symbolic-icons/skin/identity-icons.svg#brand-bright);
 }
 
 .verifiedDomain > #page-proxy-favicon[pageproxystate="valid"] {
-  list-style-image: url(chrome://symbolic-icons/skin/identity-icons-https.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/identity-icons.svg#https);
+}
+.verifiedDomain@darkTheme@ > #page-proxy-favicon[pageproxystate="valid"] {
+  list-style-image: url(chrome://symbolic-icons/skin/identity-icons.svg#https-bright);
 }
 
 .verifiedIdentity > #page-proxy-favicon[pageproxystate="valid"] {
-  list-style-image: url(chrome://symbolic-icons/skin/identity-icons-https-ev.svg);
-  opacity: 0.6;
-}
-#urlbar@darkTheme@ .verifiedIdentity > #page-proxy-favicon[pageproxystate="valid"] {
-  filter: none;
+  list-style-image: url(chrome://symbolic-icons/skin/identity-icons.svg#https-ev);
   opacity: 0.6;
 }
 
 .mixedActiveContent > #page-proxy-favicon[pageproxystate="valid"] {
-  list-style-image: url(chrome://symbolic-icons/skin/identity-icons-https-mixed-active.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/identity-icons.svg#https-mixed-active);
   opacity: 0.6;
 }
 
 .mixedDisplayContent > #page-proxy-favicon[pageproxystate="valid"],
 .mixedDisplayContentLoadedActiveBlocked > #page-proxy-favicon[pageproxystate="valid"] {
-  list-style-image: url(chrome://symbolic-icons/skin/identity-icons-https-mixed-display.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/identity-icons.svg#https-mixed-display);
   opacity: 0.5;
+}
+.mixedDisplayContent@darkTheme@ > #page-proxy-favicon[pageproxystate="valid"],
+.mixedDisplayContentLoadedActiveBlocked@darkTheme@ > #page-proxy-favicon[pageproxystate="valid"] {
+  list-style-image: url(chrome://symbolic-icons/skin/identity-icons.svg#https-mixed-display-bright);
 }
 
 #page-proxy-favicon[pageproxystate="invalid"] {
@@ -1452,8 +1458,7 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   max-width: 50ch;
 }
 
-#identity-box:-moz-any(:hover, :active, [open="true"]) > #page-proxy-favicon,
-#urlbar@darkTheme@ #identity-box:-moz-any(:hover, :active, [open="true"]) > #page-proxy-favicon {
+#identity-box:-moz-any(:hover, :active, [open="true"]) > #page-proxy-favicon {
   opacity: 1;
 }
 
