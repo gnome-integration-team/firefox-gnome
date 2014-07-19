@@ -931,6 +931,11 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
 }
 
 #main-window@darkTheme@ :-moz-any(#window-controls, .window-controls) .toolbarbutton-icon,
+#main-window@darkTheme@ :-moz-any(#back-button, #forward-button, #nav-bar-overflow-button, #PanelUI-menu-button) > .toolbarbutton-icon,
+#main-window@darkTheme@ :-moz-any(#edit-controls, #zoom-controls)[cui-areatype="toolbar"] > .toolbarbutton-1 > .toolbarbutton-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
+}
+
 #main-window@darkTheme@ :-moz-any(@primaryToolbarButtons@)[cui-areatype="toolbar"] > .toolbarbutton-icon,
 #main-window@darkTheme@ :-moz-any(@primaryToolbarButtons@)[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon,
 #main-window@darkTheme@ :-moz-any(@primaryToolbarButtons@)[cui-areatype="toolbar"] > .toolbarbutton-menubutton-button > .toolbarbutton-icon {
@@ -1099,11 +1104,14 @@ toolbarpaletteitem[place="palette"] > #zoom-controls > #zoom-in-button {
 
 /*toolbaritem[sdkstylewidget="true"] > toolbarbutton .toolbarbutton-icon,*/
 :-moz-any(@primaryToolbarButtons@)[cui-areatype="menu-panel"] .toolbarbutton-icon,
-toolbarpaletteitem[place="palette"] > :-moz-any(@primaryToolbarButtons@) .toolbarbutton-icon {
+:-moz-any(#edit-controls, #zoom-controls)[cui-areatype="menu-panel"] .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] > :-moz-any(@primaryToolbarButtons@) .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) .toolbarbutton-icon {
   opacity: .6;
 }
 
-#main-window@darkThemeFull@ :-moz-any(@primaryToolbarButtons@)[cui-areatype="menu-panel"] .toolbarbutton-icon {
+#main-window@darkThemeFull@ :-moz-any(@primaryToolbarButtons@)[cui-areatype="menu-panel"] .toolbarbutton-icon,
+#main-window@darkThemeFull@ :-moz-any(#edit-controls, #zoom-controls)[cui-areatype="menu-panel"] .toolbarbutton-icon {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
   opacity: .8;
 }
