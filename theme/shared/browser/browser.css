@@ -4155,6 +4155,16 @@ notification.pluginVulnerable .messageImage {
 #downloads-button > #downloads-indicator-anchor {
   min-width: 16px;
   min-height: 16px;
+  filter: none;
+}
+
+#downloads-button > #downloads-indicator-anchor {
+  min-width: 16px;
+  min-height: 16px;
+}
+
+#navigator-toolbox@darkTheme@ #downloads-button > #downloads-indicator-anchor {
+  filter: none;
 }
 
 /*** Main indicator icon ***/
@@ -4162,10 +4172,10 @@ notification.pluginVulnerable .messageImage {
 #downloads-button[cui-areatype="toolbar"] > #downloads-indicator-anchor > #downloads-indicator-icon {
   background: -moz-image-rect(url(chrome://symbolic-icons/skin/download.svg),
                               0, 16, 16, 0) center no-repeat;
-  /* Is it needed?
-  min-width: 18px;
-  min-height: 18px;
-  */
+}
+
+#navigator-toolbox@darkTheme@ #downloads-button[cui-areatype="toolbar"]:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
 
 #downloads-button[cui-areatype="toolbar"][attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
@@ -4184,6 +4194,10 @@ notification.pluginVulnerable .messageImage {
   background: -moz-image-rect(url(chrome://symbolic-icons/skin/download.svg),
                               0, 16, 16, 0) center no-repeat;
   background-size: 12px;
+}
+
+#navigator-toolbox@darkTheme@ #downloads-button:not([counter]):not([attention]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
 
 #downloads-button:not([counter])[attention] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
@@ -4247,6 +4261,10 @@ notification.pluginVulnerable .messageImage {
   text-align: center;
 }
 
+#navigator-toolbox@darkTheme@ #downloads-indicator-counter {
+  color: #eeeeec;
+}
+
 #downloads-indicator-progress {
   width: 16px;
   height: 4px;
@@ -4270,6 +4288,10 @@ notification.pluginVulnerable .messageImage {
   border-radius: 2px 0 0 2px;
 }
 
+#navigator-toolbox@darkTheme@ #downloads-indicator-progress > .progress-bar {
+  border-color: hsla(0,0%,100%,.2);
+}
+
 #downloads-indicator-progress > .progress-remainder {
   -moz-appearance: none;
   min-width: 0;
@@ -4281,8 +4303,12 @@ notification.pluginVulnerable .messageImage {
   border-radius: 0 2px 2px 0;
 }
 
+#navigator-toolbox@darkTheme@ #downloads-indicator-progress > .progress-remainder {
+  border-color: hsla(0,0%,100%,.2);
+}
+
 #downloads-button[paused] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-progress > .progress-bar {
-  background-color: rgb(220, 230, 81);
+  background-color: #dce651;
 }
 
 #downloads-button[paused] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-progress > .progress-remainder {
