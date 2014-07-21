@@ -177,17 +177,18 @@ ul {
 #ignoreWarning {
   -moz-margin-start: 80px;
   padding: 0 24px;
-}
-
-#ignoreWarning:-moz-dir(rtl) {
-  text-align: left;
+  text-align: end !important;
 }
 
 #ignoreWarningButton {
   /* Fix for inline style */
   color: #2e3436 !important;
-  top: 0 !important;
-  left: 0 !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+#ignoreWarningButton:-moz-dir(rtl) {
+  right: auto !important; /* Bug 1039175 */
 }
 
 /* ::::: Malware blocked page ::::: */
