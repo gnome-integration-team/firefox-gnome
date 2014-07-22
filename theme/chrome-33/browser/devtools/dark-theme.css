@@ -33,7 +33,7 @@
 
 .theme-bg-contrast,
 .variable-or-property:not([overridden])[changed] { /* contrast bg color to attract attention on a container */
-  background: #a18650;
+  background: #B28025; /* Background - Attention */
 }
 
 .theme-link,
@@ -1200,7 +1200,8 @@ div.CodeMirror span.eval-text {
 .theme-light #black-boxed-message-button .button-icon,
 .theme-light #canvas-debugging-empty-notice-button .button-icon,
 .theme-light #requests-menu-perf-notice-button .button-icon,
-.theme-light #requests-menu-network-summary-button .button-icon {
+.theme-light #requests-menu-network-summary-button .button-icon,
+.theme-light .event-tooltip-debugger-icon {
   filter: url(filters.svg#invert);
 }
 
