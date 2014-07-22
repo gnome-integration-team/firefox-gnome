@@ -1627,6 +1627,13 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   list-style-image: url(chrome://browser/skin/webRTC-shareMicrophone-64.png);
 }
 
+%if APP_VERSION != 31 && APP_VERSION != 32
+.popup-notification-icon[popupid="webRTC-sharingScreen"],
+.popup-notification-icon[popupid="webRTC-shareScreen"] {
+  list-style-image: url(chrome://browser/skin/webRTC-shareScreen-64.png);
+}
+%endif
+
 .popup-notification-icon[popupid="pointerLock"] {
   list-style-image: url(chrome://browser/skin/pointerLock-64.png);
 }
@@ -1817,6 +1824,18 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
 #webRTC-sharingMicrophone-notification-icon {
   list-style-image: url(chrome://browser/skin/webRTC-sharingMicrophone-16.png);
 }
+
+%if APP_VERSION != 31 && APP_VERSION != 32
+.webRTC-shareScreen-notification-icon,
+#webRTC-shareScreen-notification-icon {
+  list-style-image: url(chrome://browser/skin/webRTC-shareScreen-16.png);
+}
+
+.webRTC-sharingScreen-notification-icon,
+#webRTC-sharingScreen-notification-icon {
+  list-style-image: url(chrome://browser/skin/webRTC-sharingScreen-16.png);
+}
+%endif
 
 .web-notifications-notification-icon,
 #web-notifications-notification-icon {
@@ -3448,6 +3467,23 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   margin: 0 3px;
   color: inherit;
 }
+
+%if APP_VERSION != 31 && APP_VERSION != 32
+.devtools-responsiveui-menulist .menulist-editable-box {
+  -moz-appearance: none;
+  background-color: transparent;
+}
+
+.devtools-responsiveui-menulist html|*.menulist-editable-input {
+  -moz-appearance: none;
+  color: inherit;
+  text-align: center;
+}
+
+.devtools-responsiveui-menulist html|*.menulist-editable-input::-moz-selection {
+  background: hsla(212,7%,57%,.35);
+}
+%endif
 
 %if APP_VERSION != 31
 .devtools-responsiveui-toolbarbutton > .toolbarbutton-icon {
