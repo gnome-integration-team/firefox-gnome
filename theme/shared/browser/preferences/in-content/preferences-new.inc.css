@@ -143,6 +143,9 @@ tab[selected] {
 /* buttons and menulists */
 
 button,
+%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+colorpicker[type="button"],
+%endif
 menulist {
   -moz-appearance: none;
   height: 30px;
@@ -159,19 +162,35 @@ menulist {
 }
 
 button:not([disabled="true"]):hover,
+%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+colorpicker[type="button"]:not([disabled="true"]):hover,
+%endif
 menulist:not([disabled="true"]):hover {
   background-color: #EBEBEB;
 }
 
 button:not([disabled="true"]):hover:active,
+%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+colorpicker[type="button"]:not([disabled="true"]):hover:active,
+%endif
 menulist[open="true"]:not([disabled="true"]) {
   background-color: #DADADA;
 }
 
 button[disabled="true"],
+%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+colorpicker[type="button"][disabled="true"],
+%endif
 menulist[disabled="true"] {
   opacity: 0.5;
 }
+
+%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+colorpicker[type="button"] {
+  padding: 6px;
+  width: 50px;
+}
+%endif
 
 button > .button-box,
 menulist > .menulist-label-box {
@@ -781,6 +800,13 @@ description > html|a {
 tree:not(#rejectsTree) {
   min-height: 15em;
 }
+
+%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+:-moz-any(dialog, window, prefwindow) groupbox {
+  -moz-margin-start: 8px;
+  -moz-margin-end: 8px;
+}
+%endif
 
 /**
  * End sub-dialog
