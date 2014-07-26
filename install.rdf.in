@@ -6,7 +6,7 @@
   <Description about="urn:mozilla:install-manifest">
     <em:id>{451500c0-902c-11e0-91e4-0800200c9a66}</em:id>
     <em:type>32</em:type>
-    <em:name>GNOME</em:name>
+    <em:name>GNOME 3</em:name>
     <em:version>@VERSION@</em:version>
 
     <em:targetApplication>
