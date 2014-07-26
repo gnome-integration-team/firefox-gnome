@@ -6,9 +6,9 @@
   <Description about="urn:mozilla:install-manifest">
     <em:id>{451500c0-902c-11e0-91e4-0800200c9a66}</em:id>
     <em:type>4</em:type>
-    <em:name>GNOME 3</em:name>
+    <em:name>GNOME</em:name>
     <em:version>@VERSION@</em:version>
-    <em:description>GNOME 3 theme for Firefox</em:description>
+    <em:description>GNOME theme for Firefox</em:description>
     <em:creator>GNOME Integration Team</em:creator>
     <em:contributor>GNOME Integration Team</em:contributor>
     <em:internalName>Adwaita</em:internalName>
@@ -22,29 +22,29 @@
 
     <em:localized>
       <Description em:locale="cs">
-        <em:name>GNOME 3</em:name>
-        <em:description>Motiv GNOME 3 pro Firefox</em:description>
+        <em:name>GNOME</em:name>
+        <em:description>Motiv GNOME pro Firefox</em:description>
       </Description>
     </em:localized>
 
     <em:localized>
       <Description em:locale="pl">
-        <em:name>GNOME 3</em:name>
-        <em:description>Motyw GNOME 3 dla Firefoksa</em:description>
+        <em:name>GNOME</em:name>
+        <em:description>Motyw GNOME dla Firefoksa</em:description>
       </Description>
     </em:localized>
 
     <em:localized>
       <Description em:locale="ru">
-        <em:name>GNOME 3</em:name>
-        <em:description>Тема GNOME 3 для Firefox</em:description>
+        <em:name>GNOME</em:name>
+        <em:description>Тема GNOME для Firefox</em:description>
       </Description>
     </em:localized>
 
     <em:localized>
       <Description em:locale="uk">
-        <em:name>GNOME 3</em:name>
-        <em:description>Тема GNOME 3 для Firefox</em:description>
+        <em:name>GNOME</em:name>
+        <em:description>Тема GNOME для Firefox</em:description>
       </Description>
     </em:localized>
 
