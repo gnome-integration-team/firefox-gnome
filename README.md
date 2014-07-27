@@ -1,6 +1,8 @@
 # GNOME theme for Firefox
 
-You can install latest stable version from [Mozilla's Add-ons](https://addons.mozilla.org/firefox/addon/adwaita/) or get bleeding edge releases from [Launchpad](https://launchpad.net/gnome-integration/firefox-gnome/firefox-gnome-releases).
+The latest stable version is always available from [Mozilla's Add-ons](https://addons.mozilla.org/firefox/addon/adwaita/).
+
+Bleeding-edge releases are usually made avilable on [Launchpad](https://launchpad.net/gnome-integration/firefox-gnome/firefox-gnome-releases) and early-access builds are also on [our GitHub releases page](https://github.com/gnome-integration-team/firefox-gnome/releases).
 
 List of current issues is available at our [bug tracker](https://github.com/gnome-integration-team/firefox-gnome/issues).
 
