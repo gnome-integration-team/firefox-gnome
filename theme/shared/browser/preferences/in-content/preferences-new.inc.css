@@ -545,11 +545,24 @@ radio[disabled="true"] > .radio-check {
 
 .header {
   margin-bottom: 10px;
+%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+  border-bottom: 1px solid #c8c8c8;
+  padding-bottom: 10px;
+%endif
 }
 
+%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
 .header-icon {
   display: none;
 }
+%endif
+
+%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+#header-advanced {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+%endif
 
 .header-name {
   font-size: 2.0rem;
@@ -580,6 +593,33 @@ filefield {
   -moz-margin-start: -26px;
   -moz-padding-start: 36px;
 }
+
+%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
+textbox:-moz-locale-dir(rtl),
+.fileFieldLabel:-moz-locale-dir(rtl),
+textbox + button:-moz-locale-dir(ltr),
+filefield + button:-moz-locale-dir(ltr) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+textbox:-moz-locale-dir(ltr),
+.fileFieldLabel:-moz-locale-dir(ltr),
+textbox + button:-moz-locale-dir(rtl),
+filefield + button:-moz-locale-dir(rtl) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+textbox + button,
+filefield + button {
+  -moz-border-start: none;
+}
+
+#downloadFolder {
+  -moz-margin-start: 0;
+}
+%endif
 
 /* Applications Pane Styles */
 
@@ -709,10 +749,6 @@ description > html|a {
 }
 
 %if APP_VERSION != 31 && APP_VERSION != 32
-#weavePrefsDeck {
-  -moz-margin-start: 60px;
-}
-
 #noFxaAccount {
   /* Overriding the margins from the base preferences.css theme file.
      These overrides can be simplified by fixing bug 1027174 */
@@ -768,9 +804,18 @@ description > html|a {
   padding-left: 6px;
 }
 
+%if APP_VERSION == 33
 #dialogTitle {
   -moz-margin-start: 5px !important;
 }
+%else
+#dialogBox[resizable="true"] {
+  resize: both;
+  overflow: hidden;
+  min-height: 30em;
+  min-width: 66ch;
+}
+%endif
 
 .close-icon {
   background-color: transparent !important;
@@ -786,11 +831,20 @@ description > html|a {
   padding: 0;
 }
 
+%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+#dialogFrame {
+  -moz-box-flex: 1;
+  /* Default dialog dimensions */
+  height: 30em;
+  width: 66ch;
+}
+%else
 #dialogFrame {
   /* Default dialog dimensions */
   height: 20em;
   width: 66ch;
 }
+%endif
 
 /* needs to be removed with bug 1035625 */
 :-moz-any(dialog, window, prefwindow) resizer {
@@ -821,6 +875,14 @@ tab[selected] {
   border-bottom-right-radius: 0;
 }
 
+%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+button,
+colorpicker[type="button"],
+menulist {
+  margin: 2px 4px;
+}
+%endif
+
 button > .button-box,
 menulist > .menulist-label-box {
   -moz-appearance: none;
@@ -833,6 +895,12 @@ button[type="menu"] > .button-box > .button-menu-dropmarker {
 .help-button > .button-box > .button-icon {
   -moz-margin-end: 0;
 }
+
+%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+menulist {
+  font-size: inherit;
+}
+%endif
 
 menulist:not([editable="true"]) > .menulist-dropmarker {
   display: -moz-box;
@@ -889,3 +957,19 @@ menulist.actionsMenu > .menulist-dropmarker {
   margin-top: 11px;
   margin-bottom: 11px;
 }
+
+%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+textbox + button,
+filefield + button {
+  -moz-margin-start: -4px;
+}
+
+#dialogTitle {
+  -moz-margin-start: 12px !important;
+}
+
+.actionButtons {
+  margin-right: 8px !important;
+  margin-left: 8px !important;
+}
+%endif
