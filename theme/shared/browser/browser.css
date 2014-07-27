@@ -905,9 +905,15 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
   list-style-image: url(chrome://symbolic-icons/skin/zoom-in.svg);
 }
 
+%if APP_VERSION == 31 || APP_VERSION == 32
 #webrtc-status-button:not(:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true])) {
   list-style-image: url(chrome://symbolic-icons/skin/webRTC-share-device.svg);
 }
+%else
+#webrtc-status-button {
+  list-style-image: url(chrome://symbolic-icons/skin/webRTC-share-device.svg);
+}
+%endif
 
 #nav-bar-overflow-button {
   list-style-image: url(chrome://symbolic-icons/skin/overflow-button.svg);
