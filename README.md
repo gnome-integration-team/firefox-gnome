@@ -26,8 +26,8 @@ For more details please check
 
 Default:
 
-![Screenshot](screenshots/screenshot-theme.png)
+![Screenshot: default](screenshots/screenshot-theme.png)
 
-With some tweaks enabled:
+With some tweaks, made available by [GNOME Theme Tweak](https://addons.mozilla.org/firefox/addon/gnome-theme-tweak/) ([repo](https://github.com/gnome-integration-team/firefox-gnome-tweak)), Firefox can even look close to native on GNOME 3.12+:
 
-![Screenshot](screenshots/screenshot-tweaks.png)
+![Screenshot with tweaks](screenshots/screenshot-tweaks.png)
