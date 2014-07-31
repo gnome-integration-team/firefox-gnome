@@ -117,6 +117,9 @@
 #navigator-toolbox > #nav-bar[tabsontop="true"] {
   background: linear-gradient(to bottom, #fff, #f3f3f3);
 }
+#navigator-toolbox@darkTheme@ > #nav-bar[tabsontop="true"] {
+  background: linear-gradient(to bottom, #393f3f, #2f3535);
+}
 #navigator-toolbox > :-moz-any(#toolbar-menubar, #TabsToolbar) {
   background: transparent;
 }
@@ -157,6 +160,9 @@
 #nav-bar[tabsontop="true"] ~ toolbar {
   /* FIXME */
   background: #f3f3f3;
+}
+#nav-bar[tabsontop="true"]@darkTheme@ ~ toolbar {
+  background: #2f3535;
 }
 
 /* This only has an effect when this element is placed on the bookmarks toolbar.
