@@ -913,6 +913,41 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
   list-style-image: url(chrome://symbolic-icons/skin/sidebar.svg);
 }
 
+%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+#loop-call-button > .toolbarbutton-badge-container {
+  list-style-image: url(chrome://browser/skin/loop/toolbar.png);
+  -moz-image-region: rect(0, 18px, 18px, 0);
+}
+
+toolbar[brighttext] #loop-call-button > .toolbarbutton-badge-container {
+  list-style-image: url(chrome://browser/skin/loop/toolbar-inverted.png);
+}
+
+#loop-call-button[disabled="true"] > .toolbarbutton-badge-container {
+  -moz-image-region: rect(0, 36px, 18px, 18px);
+}
+
+#loop-call-button:not([disabled="true"])[state="error"] > .toolbarbutton-badge-container {
+  -moz-image-region: rect(0, 54px, 18px, 36px);
+}
+
+#loop-call-button:not([disabled="true"])[state="action"] > .toolbarbutton-badge-container {
+  -moz-image-region: rect(0, 72px, 18px, 54px);
+}
+
+#loop-call-button:not([disabled="true"])[state="action"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container {
+  -moz-image-region: rect(0, 90px, 18px, 72px);
+}
+
+#loop-call-button:not([disabled="true"])[state="active"] > .toolbarbutton-badge-container {
+  -moz-image-region: rect(0, 108px, 18px, 90px);
+}
+
+#loop-call-button:not([disabled="true"])[state="active"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container {
+  -moz-image-region: rect(0, 126px, 18px, 108px);
+}
+%endif
+
 #main-window@darkTheme@ :-moz-any(#window-controls, .window-controls) .toolbarbutton-icon,
 #main-window@darkTheme@ :-moz-any(#back-button, #forward-button, #nav-bar-overflow-button, #PanelUI-menu-button) > .toolbarbutton-icon,
 #main-window@darkTheme@ :-moz-any(#edit-controls, #zoom-controls)[cui-areatype="toolbar"] > .toolbarbutton-1 > .toolbarbutton-icon {
@@ -5440,9 +5475,11 @@ toolbarpaletteitem[place="toolbar"] {
   margin: 7px;
 }
 
+%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
 #context-navigation {
   padding-top: 4px;
 }
+%endif
 
 #context-navigation > .menuitem-iconic > .menu-iconic-left {
   visibility: visible;
