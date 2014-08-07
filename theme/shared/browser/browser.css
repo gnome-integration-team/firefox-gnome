@@ -269,8 +269,8 @@ toolbarpaletteitem[place="palette"] > #personal-bookmarks > #bookmarks-toolbar-p
 }
 
 #bookmarked-notification-dropmarker-icon {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   visibility: hidden;
 }
 
