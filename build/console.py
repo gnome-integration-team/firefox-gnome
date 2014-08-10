@@ -12,14 +12,14 @@ def start_timer():
     start_time = int(round(time.time()*1000))
 
 def log(operation=None, message=None, timestamp=True):
-    current_time = int(round(time.time()*1000))
+    current_time = int(round(time.time() * 1000))
     d = datetime.timedelta(milliseconds=current_time-start_time)
     m = d.seconds // 60
     s = d.seconds - (m * 60)
-    ms = d.microseconds//10000
-    timestamp = "{:02}:{:02}.{:02}".format(m, s, ms)
+    ms = d.microseconds // 10000
+    timestamp = "{:2}:{:02}.{:02}".format(m, s, ms)
     if operation:
-        print("{}  {:^15s} {}".format(timestamp, operation, message))
+        print("\033[34m{}\033[0m {:^15s} {}".format(timestamp, operation, message))
     else:
-        print("{}  {}".format(timestamp, message))
+        print("\033[34m{}\033[0m  {}".format(timestamp, message))
 

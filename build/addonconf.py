@@ -14,22 +14,16 @@ def load(path="config.json"):
     try:
         with open(path, "r") as config_file:
             config = json.load(config_file)
-    except FileNotFoundError:
+    except IOError: # FileNotFoundError
         print("%s: %s not found" % (sys.argv[0], path))
     except ValueError as e:
         print("%s: parse error: %s" % (sys.argv[0], path))
         print(e)
     return config
 
-def validate(config, action):
+def validate(config):
     try:
         main_validate(config)
-        if action in ["theme", "all"]:
-            theme_validate(config)
-        if action in ["extension", "all"]:
-            extension_validate(config)
-        if action == "all":
-            package_validate(config)
         return config
     except ConfigError as e:
         print("%s: %s" % (sys.argv[0], e.message))
@@ -45,25 +39,12 @@ def main_validate(config):
     if not "max-version" in config:
         raise ConfigError("max-version is not specified")
 
-    if not "xpi" in config:
-        raise ConfigError("file name for *.xpi is not specified")
+    for addon in ["theme", "extension", "package"]:
+        if not addon in config:
+            continue
 
-    for i in config["xpi"]:
-        config["xpi"][i] = config["xpi"][i].replace("@VERSION@", config["version"])
+        if not "xpi" in config[addon]:
+            raise ConfigError("file name for %s's .xpi is not specified" % addon)
 
-def theme_validate(config):
-    if not "theme" in config["xpi"]:
-        raise ConfigError("file name for theme's .xpi is not specified")
-
-    if not "directory-structure" in config:
-        config["directory-structure"] = {}
-        config["directory-structure"]["shared-dir"] = "shared"
-
-def extension_validate(config):
-    if not "extension" in config["xpi"]:
-        raise ConfigError("file name for extension's .xpi is not specified")
-
-def package_validate(config):
-    if not "package" in config["xpi"]:
-        raise ConfigError("file name for package's .xpi is not specified")
+        config[addon]["xpi"] = config[addon]["xpi"].replace("@VERSION@", config["version"])
 

@@ -9,15 +9,15 @@ class PackageBuilder(AddonBuilder):
         AddonBuilder.__init__(self, config=config,
                               src_dir=src_dir, build_dir=build_dir)
 
-        self.xpi_file = self.config["xpi"]["package"]
+        self.xpi_file = self.config["package"]["xpi"]
 
         self.dependencies = {
-            "install.rdf.in": ["config.json"]
+            "install.rdf": ["config.json"]
         }
 
     def build(self):
         self.result_files = []
-        for source in [self.config["xpi"]["theme"], self.config["xpi"]["extension"], "install.rdf.in"]:
+        for source in [self.config["theme"]["xpi"], self.config["extension"]["xpi"], "install.rdf.in"]:
             self._process_file(source)
         self._create_xpi()
 

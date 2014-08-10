@@ -20,9 +20,23 @@ from packagebuilder import PackageBuilder
 def main():
     console.start_timer()
 
+    config = addonconf.load("config.json")
+    if not config:
+        sys.exit(1)
+
+    available_actions = []
+    package_is_avaliable = True
+    for t in ["theme", "extension"]:
+        if t in config:
+            available_actions = available_actions + [t]
+        else:
+            package_is_avaliable = False
+    if package_is_avaliable and "package" in config:
+        available_actions = available_actions + ["package"]
+
     parser = argparse.ArgumentParser()
     parser.add_argument("action", nargs='?', default="all",
-                        choices=["all", "theme", "extension", "clean"],
+                        choices=["all"] + available_actions + ["clean"],
                         help="build theme, extension, package or clean sources")
     parser.add_argument("--version",
                         help="override version from config.json")
@@ -36,11 +50,7 @@ def main():
 
     action = args.action
 
-    # Create config = argparse + config.json
-    config = addonconf.load("config.json")
-    if not config:
-        sys.exit(1)
-
+    # Override preferences from config.json
     if "VERSION" in os.environ:
         config["version"] = os.environ.get("VERSION")
         config["override-version"] = True
@@ -54,7 +64,7 @@ def main():
     config["force-rebuild"] = args.force_rebuild
     config["verbose"] = args.verbose
 
-    config = addonconf.validate(config, action)
+    config = addonconf.validate(config)
     if not config:
         sys.exit(1)
 
@@ -75,8 +85,8 @@ def main():
                     clean_paths.append(os.path.join(base, name))
         clean_paths.append("build/__pycache__")
 
-        for i in config["xpi"]:
-            clean_paths.append(config["xpi"][i])
+        for i in available_actions:
+            clean_paths.append(config[i]["xpi"])
 
         for path in clean_paths:
             path = os.path.abspath(path)
@@ -91,19 +101,19 @@ def main():
         sys.exit(0)
 
     # Theme building
-    if action in ["theme", "all"]:
+    if action in ["theme", "all"] and "theme" in available_actions:
         builder = ThemeBuilder(config)
         print(":: Starting build theme...")
         builder.build()
 
     # Extension building
-    if action in ["extension", "all"]:
+    if action in ["extension", "all"] and "extension" in available_actions:
         builder = ExtensionBuilder(config)
         print(":: Starting build extension...")
         builder.build()
 
     # Package building
-    if action == "all":
+    if action in ["package", "all"] and "package" in available_actions:
         builder = PackageBuilder(config)
         print(":: Starting make package...")
         builder.build()

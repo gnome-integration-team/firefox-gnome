@@ -2,9 +2,13 @@
   "version": "31.1",
   "min-version": "31.0",
   "max-version": "34.0a1",
-  "xpi": {
-    "theme": "gnome-firefox-theme.xpi",
-    "extension": "gnome-firefox-extension.xpi",
-    "package": "gnome-firefox-@VERSION@.xpi"
+  "theme": {
+    "xpi": "gnome-firefox-theme.xpi"
+  },
+  "extension": {
+    "xpi": "gnome-firefox-extension.xpi"
+  },
+  "package": {
+    "xpi": "gnome-firefox-@VERSION@.xpi"
   }
 }
