@@ -266,7 +266,11 @@ panelview:not([mainview]) .toolbarbutton-text,
 
 #PanelUI-contents {
   display: block;
+%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
   flex: 1 0 auto;
+%else
+  flex: 1 0 main-size;
+%endif
   margin-left: auto;
   margin-right: auto;
   padding: .5em 0;

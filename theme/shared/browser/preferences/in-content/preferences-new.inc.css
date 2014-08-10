@@ -6,14 +6,23 @@
 
 @namespace html "http://www.w3.org/1999/xhtml";
 
-%if APP_VERSION != 31 && APP_VERSION != 32
+
+%if APP_VERSION == 31 || APP_VERSION == 32
+page {
+%elif APP_VERSION == 33
 #dialogBox,
 dialog,
 window,
 prefwindow,
 .windowDialog,
-%endif
 page {
+%else
+#dialogBox,
+dialog,
+window,
+prefwindow,
+.windowDialog {
+%endif
   -moz-appearance: none;
   background-color: #eaeaea;
 %if APP_VERSION != 31 && APP_VERSION != 32
@@ -21,6 +30,7 @@ page {
 %endif
 }
 
+%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
 * {
   -moz-user-select: text;
 }
@@ -56,6 +66,7 @@ caption > label {
 .main-content:-moz-locale-dir(rtl) {
   -moz-border-right-colors: #dbdbdb #fafafa;
 }
+%endif
 
 prefpane {
   max-width: 800px;
@@ -68,6 +79,7 @@ prefpane {
 %endif
 }
 
+%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
 prefpane > .content-box {
   overflow: visible;
 }
@@ -498,9 +510,11 @@ radio[disabled="true"] > .radio-check {
   -moz-margin-end: 10px;
   -moz-padding-start: 0;
 }
+%endif
 
 /* Category List */
 
+%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
 #categories {
   -moz-appearance: none;
   background-color: transparent;
@@ -536,6 +550,7 @@ radio[disabled="true"] > .radio-check {
 .category-name {
   font-size: 1.03em;
 }
+%endif
 
 .category-icon {
   display: none;
@@ -543,6 +558,7 @@ radio[disabled="true"] > .radio-check {
 
 /* header */
 
+%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
 .header {
   margin-bottom: 10px;
 %if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
@@ -550,6 +566,7 @@ radio[disabled="true"] > .radio-check {
   padding-bottom: 10px;
 %endif
 }
+%endif
 
 %if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
 .header-icon {
@@ -564,15 +581,18 @@ radio[disabled="true"] > .radio-check {
 }
 %endif
 
+%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
 .header-name {
   font-size: 2.0rem;
   font-weight: normal;
   line-height: 32px;
   margin: 0;
 }
+%endif
 
 /* General Pane */
 
+%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
 filefield {
   -moz-appearance: none;
   background-color: transparent;
@@ -594,7 +614,6 @@ filefield {
   -moz-padding-start: 36px;
 }
 
-%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
 textbox:-moz-locale-dir(rtl),
 .fileFieldLabel:-moz-locale-dir(rtl),
 textbox + button:-moz-locale-dir(ltr),
@@ -615,11 +634,11 @@ textbox + button,
 filefield + button {
   -moz-border-start: none;
 }
+%endif
 
 #downloadFolder {
   -moz-margin-start: 0;
 }
-%endif
 
 /* Applications Pane Styles */
 
@@ -867,6 +886,7 @@ tree:not(#rejectsTree) {
  */
 %endif
 
+%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
 tab[selected] {
   /* Override styles for tab[selected] from
      toolkit/themes/linux/global/tabbox.css */
@@ -874,14 +894,6 @@ tab[selected] {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-
-%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
-button,
-colorpicker[type="button"],
-menulist {
-  margin: 2px 4px;
-}
-%endif
 
 button > .button-box,
 menulist > .menulist-label-box {
@@ -895,12 +907,6 @@ button[type="menu"] > .button-box > .button-menu-dropmarker {
 .help-button > .button-box > .button-icon {
   -moz-margin-end: 0;
 }
-
-%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
-menulist {
-  font-size: inherit;
-}
-%endif
 
 menulist:not([editable="true"]) > .menulist-dropmarker {
   display: -moz-box;
@@ -927,6 +933,7 @@ radio {
   -moz-appearance: none;
   border-width: 0;
 }
+%endif
 
 spinbuttons {
   -moz-appearance: none;
