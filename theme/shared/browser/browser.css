@@ -4849,7 +4849,7 @@ chatbox {
   font-size: 1.5em;
   line-height: 1.5em;
   color: rgb(64,100,128);
-  font-weight: lighter;
+  font-weight: 300;
   margin-bottom: 1em;
   padding: 25px 25px 0;
 }
