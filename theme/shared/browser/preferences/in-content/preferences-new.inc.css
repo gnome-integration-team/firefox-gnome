@@ -705,7 +705,11 @@ filefield + button {
 #typeColumn > .treecol-sortdirection[sortDirection=descending],
 #actionColumn > .treecol-sortdirection[sortDirection=descending] {
   -moz-appearance: none;
+%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
   list-style-image: url("chrome://browser/skin/preferences/in-content/sorter.png");
+%else
+  list-style-image: url("chrome://browser/skin/in-content/sorter.png");
+%endif
 }
 
 #typeColumn > .treecol-sortdirection[sortDirection=descending],
@@ -720,7 +724,11 @@ filefield + button {
   #actionColumn > .treecol-sortdirection[sortDirection=descending] {
     width: 12px;
     height: 8px;
+%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
     list-style-image: url("chrome://browser/skin/preferences/in-content/sorter@2x.png");
+%else
+    list-style-image: url("chrome://browser/skin/in-content/sorter@2x.png");
+%endif
   }
 }
 
