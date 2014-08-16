@@ -13,4 +13,5 @@ const DefaultPrefs = {
     "urlbar-history-dropmarker": false,
     "disable-popup-animation": false,
     "dark-variant": 0,
+    "three-line-menu-icon": false,
 }

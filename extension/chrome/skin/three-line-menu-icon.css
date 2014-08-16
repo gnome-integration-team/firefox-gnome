@@ -1,0 +1,18 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+@-moz-document url("chrome://browser/content/browser.xul") {
+
+#preferences-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://symbolic-icons/skin/emblem-system.svg) !important;
+}
+
+#preferences-button[cui-areatype="menu-panel"],
+toolbarpaletteitem[place="palette"] > #preferences-button {
+  list-style-image: url(chrome://symbolic-icons/skin/emblem-system.svg) !important;
+}
+
+#PanelUI-menu-button {
+  list-style-image: url(chrome://symbolic-icons/skin/open-menu.svg) !important;
+}
+
+}
