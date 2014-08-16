@@ -27,7 +27,7 @@ menupopup {
 /* ::::: arrow panel ::::: */
 
 panel[type="arrow"] {
-%if APP_VERSION == 31 || APP_VERSION == 32
+%if APP_VERSION == 32
   transition: opacity 300ms;
 %endif
   -moz-appearance: none;

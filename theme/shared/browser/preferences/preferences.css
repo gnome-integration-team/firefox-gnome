@@ -44,13 +44,11 @@ label.small {
   margin: 5px;
 }
 
-%if APP_VERSION != 31
 /* Content Pane */
 #translationAttributionImage {
   width: 70px;
   cursor: pointer;
 }
-%endif
 
 /* Applications Pane */
 #BrowserPreferences[animated="true"] #handlersView {
@@ -162,7 +160,7 @@ label.small {
   margin-bottom: 0.6em;
 }
 
-%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
+%if APP_VERSION == 32 || APP_VERSION == 33
 #fxa-pweng-help-link > label {
   margin: 0;
 }

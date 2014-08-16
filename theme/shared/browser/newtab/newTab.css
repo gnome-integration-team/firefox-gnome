@@ -75,7 +75,7 @@
   opacity: 1;
 }
 
-%if APP_VERSION == 31 || APP_VERSION == 32
+%if APP_VERSION == 32
 #newtab-undo-close-button > .toolbarbutton-text {
   display: none;
 }
@@ -85,7 +85,7 @@
   outline: 1px dotted;
 }
 
-%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
+%if APP_VERSION == 32 || APP_VERSION == 33
 /* TOGGLE */
 #newtab-toggle {
   width: 16px;
@@ -165,7 +165,7 @@
   background-color: rgb(242,242,242);
 }
 
-%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+%if APP_VERSION != 32 && APP_VERSION != 33
 /* LINKS */
 .newtab-link {
   border-radius: 10px;
@@ -180,20 +180,20 @@
   background-size: cover;
   background-position: 0 0;
   border-radius: 3px;
-%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+%if APP_VERSION != 32 && APP_VERSION != 33
   transition: opacity 100ms ease-out;
 %endif
   opacity: 1;
 }
 
-%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+%if APP_VERSION != 32 && APP_VERSION != 33
 .newtab-thumbnail.enhanced-content:hover {
   opacity: 0;
 }
 %endif
 
 .newtab-site[type=affiliate] .newtab-thumbnail,
-%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+%if APP_VERSION != 32 && APP_VERSION != 33
 .newtab-site[type=enhanced] .newtab-thumbnail,
 %endif
 .newtab-site[type=organic] .newtab-thumbnail,
@@ -280,7 +280,7 @@
   bottom: 5px !important;
 }
 
-%if APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 32
 @media (min-resolution: 2dppx) {
   .newtab-control-sponsored {
     background-image: url(chrome://browser/skin/newtab/controls@2x.png);

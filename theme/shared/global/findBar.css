@@ -213,12 +213,8 @@ findbar toolbarbutton[disabled="true"]:active:hover {
   opacity: 0.5;
 }
 
-%if APP_VERSION == 31
-.findbar-find-status {
-%else
 .findbar-find-status,
 .findbar-matches {
-%endif
   margin: 0 !important;
   -moz-margin-start: 12px !important;
 }

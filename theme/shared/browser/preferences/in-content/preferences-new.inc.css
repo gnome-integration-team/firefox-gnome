@@ -7,7 +7,7 @@
 @namespace html "http://www.w3.org/1999/xhtml";
 
 
-%if APP_VERSION == 31 || APP_VERSION == 32
+%if APP_VERSION == 32
 page {
 %elif APP_VERSION == 33
 #dialogBox,
@@ -25,17 +25,17 @@ prefwindow,
 %endif
   -moz-appearance: none;
   background-color: #eaeaea;
-%if APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 32
   color: #424E5A;
 %endif
 }
 
-%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
+%if APP_VERSION == 32 || APP_VERSION == 33
 * {
   -moz-user-select: text;
 }
 
-%if APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 32
 treecol {
   /* override the * rule to let the treecol be sortable */
   -moz-user-select: none;
@@ -74,12 +74,12 @@ prefpane {
   font: message-box;
   font-size: 1.0rem;
   line-height: 20px;
-%if APP_VERSION == 31 || APP_VERSION == 32
+%if APP_VERSION == 32
   color: #424E5A;
 %endif
 }
 
-%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
+%if APP_VERSION == 32 || APP_VERSION == 33
 prefpane > .content-box {
   overflow: visible;
 }
@@ -155,7 +155,7 @@ tab[selected] {
 /* buttons and menulists */
 
 button,
-%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+%if APP_VERSION != 32 && APP_VERSION != 33
 colorpicker[type="button"],
 %endif
 menulist {
@@ -174,7 +174,7 @@ menulist {
 }
 
 button:not([disabled="true"]):hover,
-%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+%if APP_VERSION != 32 && APP_VERSION != 33
 colorpicker[type="button"]:not([disabled="true"]):hover,
 %endif
 menulist:not([disabled="true"]):hover {
@@ -182,7 +182,7 @@ menulist:not([disabled="true"]):hover {
 }
 
 button:not([disabled="true"]):hover:active,
-%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+%if APP_VERSION != 32 && APP_VERSION != 33
 colorpicker[type="button"]:not([disabled="true"]):hover:active,
 %endif
 menulist[open="true"]:not([disabled="true"]) {
@@ -190,14 +190,14 @@ menulist[open="true"]:not([disabled="true"]) {
 }
 
 button[disabled="true"],
-%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+%if APP_VERSION != 32 && APP_VERSION != 33
 colorpicker[type="button"][disabled="true"],
 %endif
 menulist[disabled="true"] {
   opacity: 0.5;
 }
 
-%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+%if APP_VERSION != 32 && APP_VERSION != 33
 colorpicker[type="button"] {
   padding: 6px;
   width: 50px;
@@ -241,7 +241,7 @@ button[type="menu"] > .button-box > .button-menu-dropmarker {
   background-image: none;
 }
 
-%if APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 32
 .close-icon > .button-box,
 %endif
 .help-button > .button-box {
@@ -514,7 +514,7 @@ radio[disabled="true"] > .radio-check {
 
 /* Category List */
 
-%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
+%if APP_VERSION == 32 || APP_VERSION == 33
 #categories {
   -moz-appearance: none;
   background-color: transparent;
@@ -540,7 +540,7 @@ radio[disabled="true"] > .radio-check {
   color: #fff;
 }
 
-%if APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 32
 #categories[keyboard-navigation="true"]:-moz-focusring > .category[current] {
   outline: 1px dotted #fff;
   outline-offset: -5px;
@@ -558,30 +558,30 @@ radio[disabled="true"] > .radio-check {
 
 /* header */
 
-%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
+%if APP_VERSION == 32 || APP_VERSION == 33
 .header {
   margin-bottom: 10px;
-%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+%if APP_VERSION != 32 && APP_VERSION != 33
   border-bottom: 1px solid #c8c8c8;
   padding-bottom: 10px;
 %endif
 }
 %endif
 
-%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
+%if APP_VERSION == 32 || APP_VERSION == 33
 .header-icon {
   display: none;
 }
 %endif
 
-%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+%if APP_VERSION != 32 && APP_VERSION != 33
 #header-advanced {
   border-bottom: none;
   padding-bottom: 0;
 }
 %endif
 
-%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
+%if APP_VERSION == 32 || APP_VERSION == 33
 .header-name {
   font-size: 2.0rem;
   font-weight: normal;
@@ -592,7 +592,7 @@ radio[disabled="true"] > .radio-check {
 
 /* General Pane */
 
-%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
+%if APP_VERSION == 32 || APP_VERSION == 33
 filefield {
   -moz-appearance: none;
   background-color: transparent;
@@ -660,7 +660,7 @@ filefield + button {
   border-radius: 2px;
   background-color: #FBFBFB;
   overflow-y: auto;
-%if APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 32
   height: 500px;
 %endif
 }
@@ -705,7 +705,7 @@ filefield + button {
 #typeColumn > .treecol-sortdirection[sortDirection=descending],
 #actionColumn > .treecol-sortdirection[sortDirection=descending] {
   -moz-appearance: none;
-%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
+%if APP_VERSION == 32 || APP_VERSION == 33
   list-style-image: url("chrome://browser/skin/preferences/in-content/sorter.png");
 %else
   list-style-image: url("chrome://global/skin/in-content/sorter.png");
@@ -724,7 +724,7 @@ filefield + button {
   #actionColumn > .treecol-sortdirection[sortDirection=descending] {
     width: 12px;
     height: 8px;
-%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
+%if APP_VERSION == 32 || APP_VERSION == 33
     list-style-image: url("chrome://browser/skin/preferences/in-content/sorter@2x.png");
 %else
     list-style-image: url("chrome://global/skin/in-content/sorter@2x.png");
@@ -775,7 +775,7 @@ description > html|a {
   background-color: #FBFBFB;
 }
 
-%if APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 32
 #noFxaAccount {
   /* Overriding the margins from the base preferences.css theme file.
      These overrides can be simplified by fixing bug 1027174 */
@@ -813,7 +813,7 @@ description > html|a {
   -moz-margin-start: 33px;
 }
 
-%if APP_VERSION != 31 && APP_VERSION != 32
+%if APP_VERSION != 32
 /**
  * Sub-dialog
  */
@@ -858,7 +858,7 @@ description > html|a {
   padding: 0;
 }
 
-%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+%if APP_VERSION != 32 && APP_VERSION != 33
 #dialogFrame {
   -moz-box-flex: 1;
   /* Default dialog dimensions */
@@ -882,7 +882,7 @@ tree:not(#rejectsTree) {
   min-height: 15em;
 }
 
-%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+%if APP_VERSION != 32 && APP_VERSION != 33
 :-moz-any(dialog, window, prefwindow) groupbox {
   -moz-margin-start: 8px;
   -moz-margin-end: 8px;
@@ -894,7 +894,7 @@ tree:not(#rejectsTree) {
  */
 %endif
 
-%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
+%if APP_VERSION == 32 || APP_VERSION == 33
 tab[selected] {
   /* Override styles for tab[selected] from
      toolkit/themes/linux/global/tabbox.css */
@@ -973,7 +973,7 @@ menulist.actionsMenu > .menulist-dropmarker {
   margin-bottom: 11px;
 }
 
-%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+%if APP_VERSION != 32 && APP_VERSION != 33
 textbox + button,
 filefield + button {
   -moz-margin-start: -4px;

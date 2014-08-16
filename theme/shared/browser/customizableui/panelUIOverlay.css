@@ -13,41 +13,27 @@
   width: 64px;
   height: 64px;
   position: absolute;
-%if APP_VERSION == 31
-  animation: moveX 3.05s linear 0s infinite alternate,
-             moveY 3.4s linear 0s infinite alternate;
-%else
   transition: transform 1s ease-out;
   animation: whimsyMoveX 3.05s linear 0s infinite alternate,
              whimsyMoveY 3.4s linear 0s infinite alternate;
-%endif
 }
 
-%if APP_VERSION != 31
 #PanelUI-popup #PanelUI-contents:active:empty::before {
   animation: whimsyMoveX 3.05s linear 0s infinite alternate,
              whimsyMoveY 3.4s linear 0s infinite alternate,
              whimsyRotate 1s linear 0s infinite normal;
 }
-%endif
 
 #PanelUI-popup #PanelUI-contents:-moz-locale-dir(rtl):empty::before {
-%if APP_VERSION == 31
-  animation: moveXRTL 3.05s linear 0s infinite alternate,
-             moveY 3.4s linear 0s infinite alternate;
-%else
   animation: whimsyMoveXRTL 3.05s linear 0s infinite alternate,
              whimsyMoveY 3.4s linear 0s infinite alternate;
-%endif
 }
 
-%if APP_VERSION != 31
 #PanelUI-popup #PanelUI-contents:-moz-locale-dir(rtl):active:empty::before {
   animation: whimsyMoveXRTL 3.05s linear 0s infinite alternate,
              whimsyMoveY 3.4s linear 0s infinite alternate,
              whimsyRotate 1s linear 0s infinite normal;
 }
-%endif
 
 #PanelUI-popup #PanelUI-contents:empty:hover::before {
   background-image: url(chrome://browser/skin/customizableui/whimsy.png);
@@ -63,38 +49,24 @@
   }
 }
 
-%if APP_VERSION == 31
-@keyframes moveX {
-%else
 @keyframes whimsyMoveX {
-%endif
   /* These values are adjusted for the padding on the panel. */
   from { margin-left: -15px; } to { margin-left: calc(100% - 49px); }
 }
 
-%if APP_VERSION == 31
-@keyframes moveXRTL {
-%else
 @keyframes whimsyMoveXRTL {
-%endif
   /* These values are adjusted for the padding on the panel. */
   from { margin-right: -15px; } to { margin-right: calc(100% - 49px); }
 }
 
-%if APP_VERSION == 31
-@keyframes moveY {
-%else
 @keyframes whimsyMoveY {
-%endif
   /* These values are adjusted for the padding and height of the panel. */
   from { margin-top: -.5em; } to { margin-top: calc(64px - .5em); }
 }
 
-%if APP_VERSION != 31
 @keyframes whimsyRotate {
   to { transform: perspective(5000px) rotateY(360deg); }
 }
-%endif
 
 #PanelUI-button {
   /*
@@ -151,7 +123,7 @@ panelmultiview[nosubviews=true] > .panel-viewcontainer > .panel-viewstack > .pan
 
 .panel-subview-header,
 .subviewbutton.panel-subview-footer {
-%if APP_VERSION == 31 || APP_VERSION == 32
+%if APP_VERSION == 32
   padding: 12px;
 %else
   box-sizing: border-box;
@@ -266,7 +238,7 @@ panelview:not([mainview]) .toolbarbutton-text,
 
 #PanelUI-contents {
   display: block;
-%if APP_VERSION == 31 || APP_VERSION == 32 || APP_VERSION == 33
+%if APP_VERSION == 32 || APP_VERSION == 33
   flex: 1 0 auto;
 %else
   flex: 1 0 main-size;
@@ -423,7 +395,7 @@ toolbaritem[cui-areatype="menu-panel"][sdkstylewidget="true"]:not(.panel-wide-it
 .panelUI-grid .toolbarbutton-1 > .toolbarbutton-badge-container,
 .customization-palette .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
 .customization-palette .toolbarbutton-1 > .toolbarbutton-icon,
-%if APP_VERSION != 31 && APP_VERSION != 32 && APP_VERSION != 33
+%if APP_VERSION != 32 && APP_VERSION != 33
 .customization-palette .toolbarbutton-1 > .toolbarbutton-badge-container,
 %endif
 .panelUI-grid #bookmarks-toolbar-placeholder > .toolbarbutton-icon,
@@ -515,7 +487,7 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
 #PanelUI-customize,
 #PanelUI-quit {
   margin: 0;
-%if APP_VERSION == 31 || APP_VERSION == 32
+%if APP_VERSION == 32
   padding: 10px 0;
   min-height: 2em;
 %else

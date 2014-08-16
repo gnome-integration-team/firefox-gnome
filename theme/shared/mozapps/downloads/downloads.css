@@ -26,12 +26,6 @@ richlistitem[type="download"] {
   -moz-padding-end: 8px;
 }
 
-%if APP_VERSION == 31
-richlistitem[type="download"][selected="true"] {
-  background-image: none;
-}
-%endif
-
 richlistitem[type="download"]:not([selected="true"]):nth-child(odd) {
   background-color: transparent;
 }
