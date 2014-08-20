@@ -4863,8 +4863,8 @@ chatbox {
 }
 
 #customization-container {
-  background-color: rgb(247,247,247);
-  color: black;
+  background-color: -moz-Field;
+  color: -moz-FieldText;
   text-shadow: none;
 }
 
@@ -4889,23 +4889,23 @@ chatbox {
 
 #main-window:-moz-any([customize-entering],[customize-entered]) #browser-bottombox,
 #customization-footer {
-  background-color: rgb(236,236,236);
+  background-color: Window;
 }
 
 #customization-footer {
-  border-top: 1px solid rgb(221,221,221);
+  border-top: 1px solid hsla(0,0%,0%,0.1);
   padding: 10px;
 }
 
 .customizationmode-button {
-  border: 1px solid rgb(192,192,192);
+  border: 1px solid hsla(0,0%,0%,0.2);
   border-radius: 3px;
   margin: 5px;
   padding: 2px 12px;
-  background-color: rgb(251,251,251);
-  color: rgb(71,71,71);
-  box-shadow: 0 1px rgba(255, 255, 255, 0.5),
-              inset 0 1px rgba(255, 255, 255, 0.5);
+  background-color: -moz-Field;
+  color: -moz-FieldText;
+  box-shadow: 0 1px hsla(0,0%,100%,0.04),
+              inset 0 1px hsla(0,0%,100%,0.04);
   -moz-appearance: none;
 }
 
