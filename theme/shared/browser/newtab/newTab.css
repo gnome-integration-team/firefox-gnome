@@ -112,9 +112,10 @@
 #newtab-customize-button {
   background-color: transparent;
   background-image: -moz-image-rect(url(chrome://browser/skin/newtab/controls.svg), 0, 32, 32, 0);
+  background-size: 28px;
   border: none;
-  height: 32px;
-  width: 32px;
+  height: 28px;
+  width: 28px;
 }
 
 #newtab-customize-button:-moz-any(:hover, :active, [active]) {

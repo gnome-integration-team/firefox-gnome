@@ -592,6 +592,13 @@ radio[disabled="true"] > .radio-check {
 
 /* General Pane */
 
+%if APP_VERSION != 32 && APP_VERSION != 33
+/* General Pane */
+#isNotDefaultLabel {
+  font-weight: bold;
+}
+%endif
+
 %if APP_VERSION == 32 || APP_VERSION == 33
 filefield {
   -moz-appearance: none;
