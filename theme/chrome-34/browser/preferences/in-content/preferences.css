@@ -99,6 +99,10 @@ prefpane {
 
 /* General Pane */
 
+#isNotDefaultLabel {
+  font-weight: bold;
+}
+
 #downloadFolder {
   -moz-margin-start: 0;
 }
