@@ -2871,7 +2871,11 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   list-style-image: url(chrome://browser/skin/tabbrowser/connecting.png);
 }
 
-/* FIXME
+.tab-throbber[progress] {
+  list-style-image: url(chrome://browser/skin/tabbrowser/loading.png);
+}
+
+/* FIXME: Fx 34+
 @keyframes throbber-loading {
   to {
     transform: rotate(360deg);
@@ -2891,15 +2895,13 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   animation-name: throbber-connecting;
   animation-timing-function: linear;
 }
-*/
 
 .tab-throbber[progress] {
   list-style-image: url(chrome://browser/skin/tabbrowser/loading.png);
-  /*
   animation-duration: 800ms;
   animation-name: throbber-loading;
-  */
 }
+*/
 
 .tab-throbber[pinned],
 .tab-icon-image[pinned],
