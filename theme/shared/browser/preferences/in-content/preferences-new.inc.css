@@ -880,10 +880,12 @@ description > html|a {
 }
 %endif
 
+%if APP_VERSION == 32 || APP_VERSION == 33
 /* needs to be removed with bug 1035625 */
 :-moz-any(dialog, window, prefwindow) resizer {
   display: none;
 }
+%endif
 
 tree:not(#rejectsTree) {
   min-height: 15em;
