@@ -4957,7 +4957,6 @@ chatbox {
   color: #4a90d9;
   text-decoration: underline;
   margin: 5px;
-  -moz-margin-start: 10px;
   padding: 2px 4px;
   min-width: 0;
 }

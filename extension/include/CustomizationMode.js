@@ -6,8 +6,12 @@ var CustomizationMode = {
     _addLink: function(window) {
         if (!window) return;
 
-        var element = window.document.getElementById("customization-toolbar-visibility-button");
-        if (!element) return;
+        var button1 = window.document.getElementById("customization-toolbar-visibility-button");
+        var button2 = window.document.getElementById("customization-lwtheme-button"); // Fx 34+
+
+        var element = button2 ? button2 : button1;
+        if (!element)
+            return;
 
         var open_prefs = "BrowserOpenAddonsMgr('addons://detail/' + encodeURIComponent('{05f1cdaa-7474-43fa-9f69-c697555f4ea8}') + '/preferences');"
 
