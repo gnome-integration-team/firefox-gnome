@@ -27,27 +27,44 @@
   max-width: 40ch;
 }
 
+#downloadsFooter {
+  color: hsl(0,0%,25%);
+}
+
 #downloadsHistory {
   background: transparent;
-  color: gray;
-  cursor: pointer;
-}
-
-#downloadsHistory:hover {
-	color: #3A81CC;
-}
-
-#downloadsFooter {
-  border-top: 1px solid ThreeDShadow;
-  background-image: linear-gradient(to bottom, hsla(0,0%,0%,.15), hsla(0,0%,0%,.08) 6px);
+  color: inherit;
+  min-height: 41px;
 }
 
 #downloadsHistory > .button-box {
-  margin: 1em;
+  margin: 11px 12px;
 }
 
 #downloadsPanel[keyfocus] > #downloadsFooter > #downloadsHistory:focus > .button-box {
   outline: 1px -moz-dialogtext dotted;
+}
+
+/*** Downloads Footer Background ***/
+
+#downloadsHistory,
+#downloadsSummary {
+  background-color: hsla(210,4%,10%,.07);
+  border-top: 1px solid !important;
+  border-top-color: hsla(210,4%,10%,.12) !important;
+}
+
+#downloadsHistory:hover,
+#downloadsSummary:hover {
+  background-color: hsla(210,4%,10%,.15);
+  border-top-color: hsla(210,4%,10%,.14) !important;
+}
+
+#downloadsHistory:hover:active,
+#downloadsSummary:hover:active {
+  background-color: hsla(210,4%,10%,.19);
+  border-top-color: hsla(210,4%,10%,.14) !important;
+  box-shadow: 0 1px 0 hsla(210,4%,10%,.05) inset;
 }
 
 /*** Downloads Summary and List items ***/
@@ -61,7 +78,6 @@ richlistitem[type="download"] {
 
 #downloadsSummary {
   padding: 8px 38px 8px 12px;
-  cursor: pointer;
   -moz-user-focus: normal;
 }
 
@@ -72,10 +88,6 @@ richlistitem[type="download"] {
 
 #downloadsSummary > .downloadTypeIcon {
   list-style-image: url("chrome://browser/skin/downloads/downloadIcon.png");
-}
-
-#downloadsSummaryDescription {
-  color: -moz-nativehyperlinktext;
 }
 
 richlistitem[type="download"] {
