@@ -764,7 +764,6 @@ menuitem.subviewbutton:not([disabled])[_moz-menuactive]:active,
   background-color: hsla(210,4%,10%,.07);
   border-top: 1px solid hsla(210,4%,10%,.12);
   border-radius: 0;
-  color: hsl(0,0%,25%)
 }
 
 menuitem.panel-subview-footer:not(:-moz-any([disabled],:active))[_moz-menuactive],
