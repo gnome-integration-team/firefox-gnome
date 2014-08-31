@@ -672,6 +672,14 @@ filefield + button {
 %endif
 }
 
+%if APP_VERSION != 32 && APP_VERSION != 33
+#handlersView > listheader {
+  -moz-appearance: none;
+  border: 0;
+  padding: 0;
+}
+%endif
+
 #typeColumn,
 #actionColumn {
   -moz-appearance: none;
@@ -794,7 +802,12 @@ description > html|a {
 #weavePrefsDeck > vbox > description,
 #weavePrefsDeck > vbox > #pairDevice > label,
 #weavePrefsDeck > #needsUpdate > hbox > #loginError,
+%if APP_VERSION != 32 && APP_VERSION != 33
+#weavePrefsDeck > #hasFxaAccount > hbox:not(#tosPP-normal) > label,
+#weavePrefsDeck > #hasFxaAccount > hbox:not(#tosPP-small) > label {
+%else
 #weavePrefsDeck > #hasFxaAccount > hbox:not(#tosPP) > label {
+%endif
   /* no margin-start for elements at the begin of a line */
   -moz-margin-start: 0;
 }

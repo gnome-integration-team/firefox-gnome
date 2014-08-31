@@ -69,6 +69,7 @@ label.small {
   -moz-box-flex: 1;
 }
 
+%if APP_VERSION == 32 || APP_VERSION == 33
 /* Privacy Pane */
 
 /* styles for the link elements copied from .text-link in global.css */
@@ -80,6 +81,7 @@ label.small {
 .inline-link:hover {
   text-decoration: underline;
 }
+%endif
 
 /* Modeless Window Dialogs */
 .windowDialog,
