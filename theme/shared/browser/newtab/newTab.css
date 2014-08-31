@@ -85,7 +85,7 @@
   outline: 1px dotted;
 }
 
-%if APP_VERSION == 32 || APP_VERSION == 33
+%if APP_VERSION == 32
 /* TOGGLE */
 #newtab-toggle {
   width: 16px;
@@ -98,15 +98,6 @@
 #newtab-toggle[page-disabled] {
   background-position: -232px 0;
 }
-
-%if APP_VERSION == 33
-@media (min-resolution: 2dppx) {
-  #newtab-toggle {
-    background-image: url(chrome://browser/skin/newtab/controls@2x.png);
-    background-size: 296px;
-  }
-}
-%endif
 %else
 /* CUSTOMIZE */
 #newtab-customize-button,
@@ -167,7 +158,7 @@
   background-color: rgb(242,242,242);
 }
 
-%if APP_VERSION != 32 && APP_VERSION != 33
+%if APP_VERSION != 32
 /* LINKS */
 .newtab-link {
   border-radius: 10px;
@@ -182,20 +173,20 @@
   background-size: cover;
   background-position: 0 0;
   border-radius: 3px;
-%if APP_VERSION != 32 && APP_VERSION != 33
+%if APP_VERSION != 32
   transition: opacity 100ms ease-out;
 %endif
   opacity: 1;
 }
 
-%if APP_VERSION != 32 && APP_VERSION != 33
+%if APP_VERSION != 32
 .newtab-thumbnail.enhanced-content:hover {
   opacity: 0;
 }
 %endif
 
 .newtab-site[type=affiliate] .newtab-thumbnail,
-%if APP_VERSION != 32 && APP_VERSION != 33
+%if APP_VERSION != 32
 .newtab-site[type=enhanced] .newtab-thumbnail,
 %endif
 .newtab-site[type=organic] .newtab-thumbnail,
@@ -203,6 +194,23 @@
   background-position: 50% calc(50% - (24px / 2)); /* Half height, compensate for text title */
   background-size: auto;
 }
+
+%if APP_VERSION != 32
+/* Use a pseudo-element to overlay a gradient on the thumbnail */
+/*
+.newtab-site[type=history]:not(:hover) .newtab-thumbnail:first-child::after {
+  background-image: linear-gradient(0deg, rgba(251, 251, 251, 0.8), rgba(251, 251, 251, 0) 33%);
+  border-radius: inherit;
+  bottom: 0;
+  content: "";
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+*/
+%endif
 
 /* TITLES */
 .newtab-title {
@@ -223,7 +231,7 @@
   text-align: center;
 }
 
-%if APP_VERSION == 32 || APP_VERSION == 33
+%if APP_VERSION == 32
 .newtab-site[type=sponsored] .newtab-title {
   -moz-padding-start: 24px;
   -moz-padding-end: 24px;
@@ -274,7 +282,7 @@
   background-color: rgba(0,0,0,0.85);
 }
 
-%if APP_VERSION == 32 || APP_VERSION == 33
+%if APP_VERSION == 32
 .newtab-control-sponsored {
   background: transparent url(chrome://browser/skin/newtab/controls.png);
   background-position: -249px -1px;
@@ -284,15 +292,6 @@
   -moz-margin-end: 0 !important;
   bottom: 5px !important;
 }
-
-%if APP_VERSION != 32
-@media (min-resolution: 2dppx) {
-  .newtab-control-sponsored {
-    background-image: url(chrome://browser/skin/newtab/controls@2x.png);
-    background-size: 296px;
-  }
-}
-%endif
 
 .newtab-control-sponsored:hover {
   background-position: -265px -1px;
@@ -310,7 +309,7 @@
   transition-duration: 0.4s;
 }
 
-%if APP_VERSION != 32 && APP_VERSION != 33
+%if APP_VERSION != 32
 /*
 #newtab-intro-panel {
   font-family: sans-serif;
