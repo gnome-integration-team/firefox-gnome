@@ -36,6 +36,9 @@ html|h1 {
 }
 
 @-moz-document url-prefix("about:neterror") {
+  /*
+  https://bugzilla.mozilla.org/show_bug.cgi?id=1035536
+  */
 
   html|h1 {
     margin: 0 0 .3em 0 !important;
@@ -159,6 +162,51 @@ html|h1 {
 
 }
 
+/* ::::: Private Browsing ::::: */
+
+@-moz-document url-prefix("about:privatebrowsing") {
+
+  html|*#pageContainer {
+    background-image: url(chrome://browser/skin/about-pages/private-browsing.svg);
+    background-position: 35px 15px;
+    background-repeat: no-repeat;
+    color: #2e3436;
+    min-width: 280px !important;
+    width: 610px !important;
+    max-width: 610px !important;
+    margin: auto 0;
+    padding: 1em 0 3em 0;
+    -moz-padding-start: calc(35px + 160px + 35px);
+  }
+
+  html|*#pageContainer:-moz-dir(rtl) {
+    background-position: right 35px top 15px;
+  }
+
+  @media (max-width: 675px) {
+    html|*#pageContainer {
+      -moz-margin-start: 0;
+      -moz-padding-start: 0;
+      background-image: none !important;
+    }
+  }
+
+  html|*.titleText {
+    color: #9200a0;
+    text-shadow: none;
+    font-weight: bold !important;
+    background: none !important;
+    -moz-padding-start: 0 !important;
+    -moz-margin-start: 0 !important;
+  }
+
+  html|p {
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+  }
+
+}
+
 /* ::::: ... ::::: */
 
 xul|caption {
@@ -267,7 +315,6 @@ xul|*.tab-text {
 }
 
 /* html buttons */
-/* FIXME */
 
 html|button {
   -moz-user-select: none;
@@ -275,10 +322,7 @@ html|button {
 
 /* xul buttons and menulists */
 
-/*
 *|button,
-*/
-xul|button,
 xul|colorpicker[type="button"],
 xul|menulist {
   -moz-appearance: none;
@@ -295,27 +339,21 @@ xul|menulist {
   background-color: #fbfbfb;
 }
 
-/*
 html|button:enabled:hover,
-*/
 xul|button:not([disabled="true"]):hover,
 xul|colorpicker[type="button"]:not([disabled="true"]):hover,
 xul|menulist:not([disabled="true"]):hover {
   background-color: #ebebeb;
 }
 
-/*
 html|button:enabled:hover:active,
-*/
 xul|button:not([disabled="true"]):hover:active,
 xul|colorpicker[type="button"]:not([disabled="true"]):hover:active,
 xul|menulist[open="true"]:not([disabled="true"]) {
   background-color: #dadada;
 }
 
-/*
 html|button:disabled,
-*/
 xul|button[disabled="true"],
 xul|colorpicker[type="button"][disabled="true"],
 xul|menulist[disabled="true"] {
