@@ -15,5 +15,5 @@
 <!ENTITY stretch.label                 "У всю ширину">
 <!ENTITY tabsborder.label              "Сховати білу межу внизу панелі вкладок">
 <!ENTITY urlbarhistorydropmarker.label "Сховати кнопку випадаючої історії в полі вводу адреси">
-<!ENTITY disablepopupanimation.label   "Disable animation of popups">
-<!ENTITY threelinemenuicon.label       "Three line icon for the menu button">
+<!ENTITY disablepopupanimation.label   "Вимкнути анімацію при відкритті меню">
+<!ENTITY threelinemenuicon.label       "Використати три лінії для піктограми меню">
