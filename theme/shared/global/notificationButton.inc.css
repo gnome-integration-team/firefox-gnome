@@ -6,7 +6,8 @@
 
 /* I have no idea why this code doesn't work in notification.css */
 
-notification :-moz-any(.notification-button, .messageCloseButton) {
+notification :-moz-any(.notification-button, .messageCloseButton),
+notification[value="translation"] :-moz-any(button, menulist) {
   -moz-appearance: none;
   background: hsla(0,0%,100%,.17);
   background-clip: padding-box;
@@ -19,13 +20,43 @@ notification :-moz-any(.notification-button, .messageCloseButton) {
   transition-duration: 200ms;
 }
 
-notification :-moz-any(.notification-button, .messageCloseButton):not([disabled="true"]):hover {
+notification[value="translation"] menulist {
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+}
+
+notification :-moz-any(.notification-button, .messageCloseButton):not([disabled="true"]):hover,
+notification[value="translation"] :-moz-any(button, menulist):not([disabled="true"]):hover {
   background-color: hsla(0,0%,100%,.47);
   text-shadow: 0px 1px hsla(0,0%,0%,.18);
 }
 
-notification :-moz-any(.notification-button, .messageCloseButton):not([disabled="true"]):active:hover {
+notification :-moz-any(.notification-button, .messageCloseButton):not([disabled="true"]):active:hover,
+notification[value="translation"] :-moz-any(button, menulist):not([disabled="true"]):active:hover,
+notification[value="translation"] :-moz-any(button, menulist)[open="true"],
+notification[value="translation"] :-moz-any(button, menulist)[open="true"]:hover,
+notification[value="translation"] :-moz-any(button, menulist)[open="true"]:active:hover {
   background-color: hsla(0,0%,0%,.06);
   border-color: hsla(0,0%,0%,.19);
   color: hsla(0,0%,100%,.73);
+}
+
+/* Dropmarkers */
+
+notification[value="translation"] menulist > .menulist-dropmarker {
+  -moz-appearance: none;
+  display: -moz-box;
+  -moz-box-align: center;
+  background-color: transparent;
+  border: none;
+  margin: auto;
+  list-style-image: url(chrome://symbolic-icons/skin/dropmarker.svg);
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
+}
+
+notification[value="translation"] button[type="menu"] .button-menu-dropmarker {
+  -moz-appearance: none !important;
+  -moz-margin-start: 10px;
+  list-style-image: url(chrome://symbolic-icons/skin/dropmarker.svg);
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
