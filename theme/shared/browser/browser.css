@@ -2887,6 +2887,14 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   list-style-image: url(chrome://browser/skin/tabbrowser/loading.png);
 }
 
+#TabsToolbar[newstyletabs]@darkTheme@ .tab-throbber {
+  list-style-image: url(chrome://browser/skin/tabbrowser/connecting-inverted.png);
+}
+
+#TabsToolbar[newstyletabs]@darkTheme@ .tab-throbber[progress] {
+  list-style-image: url(chrome://browser/skin/tabbrowser/loading-inverted.png);
+}
+
 /* FIXME: Fx 34+
 @keyframes throbber-loading {
   to {
