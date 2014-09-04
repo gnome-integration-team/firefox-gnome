@@ -956,6 +956,7 @@ toolbar[brighttext] #loop-call-button > .toolbarbutton-badge-container {
   list-style-image: url(chrome://browser/skin/loop/toolbar-inverted.png);
 }
 
+#loop-call-button[state="disabled"] > .toolbarbutton-badge-container,
 #loop-call-button[disabled="true"] > .toolbarbutton-badge-container {
   -moz-image-region: rect(0, 36px, 18px, 18px);
 }
@@ -1142,6 +1143,7 @@ toolbarpaletteitem[place="palette"] > #loop-call-button > .toolbarbutton-badge-c
   -moz-image-region: rect(0, 32px, 32px, 0) !important;
 }
 
+#loop-call-button[cui-areatype="menu-panel"][state="disabled"] > .toolbarbutton-badge-container,
 #loop-call-button[cui-areatype="menu-panel"][disabled="true"] > .toolbarbutton-badge-container {
   -moz-image-region: rect(0, 64px, 32px, 32px);
 }
@@ -1420,11 +1422,11 @@ window:not([chromehidden~="toolbar"]) #urlbar-wrapper:not(:hover) > #forward-but
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.chromeUI {
-  color: rgb(0,33,71);
-  background-image: linear-gradient(rgba(0,33,71,0),
-                                    rgba(0,33,71,.5) 35%,
-                                    rgba(0,33,71,.5) 65%,
-                                    rgba(0,33,71,0));
+  color: rgb(51,30,84);
+  background-image: linear-gradient(rgba(51,30,84,0),
+                                    rgba(51,30,84,.5) 35%,
+                                    rgba(51,30,84,.5) 65%,
+                                    rgba(51,30,84,0));
 }
 
 /* page proxy icon */
