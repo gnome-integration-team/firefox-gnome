@@ -4442,20 +4442,42 @@ toolbar[iconsize="small"] .toolbarbutton-badge-container {
 .chat-toolbarbutton {
   -moz-appearance: none;
   border: none;
+%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
   padding: 0;
+%else
+  padding: 0 3px;
+%endif
   margin: 0;
   background: none;
+%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
   width: 16px;
+%endif
 }
+
+%if APP_VERSION != 32 && APP_VERSION != 33 && APP_VERSION != 34
+.chat-toolbarbutton:hover {
+  background-color: rgba(255,255,255,.35);
+}
+
+.chat-toolbarbutton:hover:active {
+  background-color: rgba(255,255,255,.5);
+}
+%endif
 
 .chat-toolbarbutton > .toolbarbutton-text {
   display: none;
 }
 
 .chat-toolbarbutton > .toolbarbutton-icon {
+%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
   width: inherit;
+%else
+  width: 16px;
+  height: 16px;
+%endif
 }
 
+%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
 .chat-close-button {
   list-style-image: url('chrome://browser/skin/social/chat-icons.png');
   -moz-image-region: rect(0, 16px, 16px, 0);
@@ -4561,6 +4583,36 @@ chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover:active {
     -moz-image-region: rect(64px, 96px, 96px, 64px);
   }
 }
+%else
+.chat-close-button {
+  list-style-image: url("chrome://browser/skin/social/chat-icons.svg#close");
+}
+
+.chat-close-button:-moz-any(:hover,:hover:active) {
+  list-style-image: url("chrome://browser/skin/social/chat-icons.svg#close-active");
+}
+
+.chat-minimize-button {
+  list-style-image: url("chrome://browser/skin/social/chat-icons.svg#minimize");
+}
+
+.chat-minimize-button:-moz-any(:hover,:hover:active) {
+  list-style-image: url("chrome://browser/skin/social/chat-icons.svg#minimize-active");
+}
+
+.chat-swap-button {
+  list-style-image: url("chrome://browser/skin/social/chat-icons.svg#expand");
+  transform: rotate(180deg);
+}
+
+.chat-swap-button:-moz-any(:hover,:hover:active) {
+  list-style-image: url("chrome://browser/skin/social/chat-icons.svg#expand-active");
+}
+
+chatbar > chatbox > .chat-titlebar > .chat-swap-button {
+  transform: none;
+}
+%endif
 
 .chat-title {
   font-weight: bold;
@@ -4570,12 +4622,21 @@ chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover:active {
 }
 
 .chat-titlebar {
+%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
   height: 20px;
   min-height: 20px;
+%else
+  height: 30px;
+  min-height: 30px;
+%endif
   width: 100%;
   margin: 0;
+%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
   padding: 2px;
   -moz-padding-start: 6px;
+%else
+  padding: 7px 6px;
+%endif
   border: none;
   border-bottom: 1px solid #ccc;
   cursor: pointer;
@@ -4596,6 +4657,20 @@ chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover:active {
   background-size: 100% 20px;
   background-position: 0 -10px;
 }
+
+%if APP_VERSION != 32 && APP_VERSION != 33 && APP_VERSION != 34
+chatbox[dark=true] > .chat-titlebar,
+chatbox[dark=true] > .chat-titlebar[selected] {
+  border-bottom: none;
+  background-color: #000;
+  background-image: none;
+}
+
+chatbox[dark=true] > .chat-titlebar > hbox > .chat-title {
+  font-weight: normal;
+  color: #c1c1c1;
+}
+%endif
 
 .chat-frame {
   padding: 0;
