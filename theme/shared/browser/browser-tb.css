@@ -484,14 +484,14 @@
   -moz-margin-end: 0 !important;
 }
 
-#nav-bar :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:not(:first-of-type),
-#nav-bar :-moz-any(#forward-button:-moz-locale-dir(ltr), #back-button:-moz-locale-dir(rtl)) {
+#nav-bar #forward-button,
+#nav-bar :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:not(:first-of-type) {
   -moz-border-start-width: 0;
   -moz-margin-start: 0 !important;
 }
 
-#nav-bar :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:not(:last-of-type),
-#nav-bar :-moz-any(#back-button:-moz-locale-dir(ltr), #forward-button:-moz-locale-dir(rtl)) {
+#nav-bar #back-button,
+#nav-bar :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:not(:last-of-type) {
   -moz-border-end-width: 0;
   -moz-margin-end: 0 !important;
 }
