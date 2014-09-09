@@ -1,1 +1,145 @@
-/* This deliberately left empty for themes to use/override. */
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@import url("chrome://global/skin/in-content/common.css");
+
+body {
+  display: flex;
+  box-sizing: padding-box;
+  min-height: 100vh;
+  padding: 0 48px;
+  align-items: center;
+  justify-content: center;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  -moz-margin-start: 1.5em;
+}
+
+ul > li, ol > li {
+  margin-bottom: .5em;
+}
+
+ul {
+  list-style: disc;
+}
+
+h1 {
+  margin: 0 0 .3em 0 !important;
+}
+
+#errorPageContainer {
+  background-position: 35px 15px;
+  background-repeat: no-repeat;
+  color: #2e3436;
+  min-width: 280px;
+  width: 610px;
+  max-width: 610px;
+  margin: auto 0;
+  padding: 1em 0 3em 0;
+  -moz-padding-start: calc(35px + 160px + 35px);
+}
+
+#errorPageContainer:-moz-dir(rtl) {
+  background-position: right 35px top 15px;
+}
+
+@media (max-width: 675px) {
+  #errorPageContainer {
+    -moz-margin-start: 0;
+    -moz-padding-start: 0;
+    background-image: none !important;
+  }
+}
+
+#errorTitle {
+  color: #babdb6;
+  text-shadow: 0 1px 0 white;
+  font-weight: bold;
+}
+
+#errorTitleText {
+}
+
+#errorShortDesc > p {
+  overflow: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-weight: bold;
+  white-space: pre-wrap;
+}
+
+#errorLongDesc > p {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+#errorTryAgain {
+  margin-top: 2em;
+  -moz-margin-start: 1.2em;
+}
+
+#errorContainer {
+  display: none;
+}
+
+/* Pressing the retry button will cause the cursor to flicker from a pointer to
+ * not-allowed. Override the disabled cursor behaviour since we will never show
+ * the button disabled as the initial state. */
+button:disabled {
+  cursor: pointer;
+}
+
+/* ::::: File not found, <...> pages ::::: */
+
+@-moz-document url-prefix("about:neterror?e=connectionFailure"),
+               url-prefix("about:neterror?e=contentEncodingError"),
+               url-prefix("about:neterror?e=corruptedContentError"),
+               url-prefix("about:neterror?e=cspFrameAncestorBlocked"),
+               url-prefix("about:neterror?e=deniedPortAccess"),
+               url-prefix("about:neterror?e=dnsNotFound"),
+               url-prefix("about:neterror?e=fileNotFound"),
+               url-prefix("about:neterror?e=generic"),
+               url-prefix("about:neterror?e=malformedURI"),
+               url-prefix("about:neterror?e=netInterrupt"),
+               url-prefix("about:neterror?e=netReset"),
+               url-prefix("about:neterror?e=netTimeout"),
+               url-prefix("about:neterror?e=notCached"),
+               url-prefix("about:neterror?e=nssBadCert"),
+               url-prefix("about:neterror?e=nssFailure2"),
+               url-prefix("about:neterror?e=unknownProtocolFound"),
+               url-prefix("about:neterror?e=proxyConnectFailure"),
+               url-prefix("about:neterror?e=proxyResolveFailure"),
+               url-prefix("about:neterror?e=redirectLoop"),
+               url-prefix("about:neterror?e=remoteXUL"),
+               url-prefix("about:neterror?e=unknownSocketType"),
+               url-prefix("about:neterror?e=unsafeContentType") {
+
+  #errorPageContainer {
+    background-image: url(chrome://browser/skin/about-pages/file-not-found.svg);
+  }
+
+  #errorTitle {
+    color: #3c3591;
+    text-shadow: none;
+  }
+
+}
+
+/* ::::: Offline Mode ::::: */
+
+@-moz-document url-prefix("about:neterror?e=netOffline") {
+
+  #errorPageContainer {
+    background-image: url(chrome://browser/skin/about-pages/offline-mode.svg);
+  }
+
+  #errorTitle {
+    color: #646f6c;
+    text-shadow: none;
+  }
+
+}
