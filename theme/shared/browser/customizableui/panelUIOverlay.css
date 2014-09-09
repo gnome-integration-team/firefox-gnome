@@ -686,7 +686,7 @@ panelview .toolbarbutton-1,
 }
 
 .subviewbutton.panel-subview-footer > .toolbarbutton-icon {
-  margin: 0;
+  display none;
 }
 
 .subviewbutton.panel-subview-footer > .toolbarbutton-text {
