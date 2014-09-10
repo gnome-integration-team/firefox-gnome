@@ -28,7 +28,7 @@
 }
 
 #downloadsFooter {
-  color: hsl(0,0%,25%);
+  color: inherit;
 }
 
 #downloadsHistory {

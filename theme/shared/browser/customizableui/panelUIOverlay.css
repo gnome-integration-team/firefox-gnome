@@ -764,6 +764,7 @@ menuitem.subviewbutton:not([disabled])[_moz-menuactive]:active,
   background-color: hsla(210,4%,10%,.07);
   border-top: 1px solid hsla(210,4%,10%,.12);
   border-radius: 0;
+  color: inherit;
 }
 
 menuitem.panel-subview-footer:not(:-moz-any([disabled],:active))[_moz-menuactive],
@@ -1103,7 +1104,8 @@ menuitem[checked="true"].subviewbutton > .menu-iconic-left {
 }
 
 .panel-subviews {
-  background-color: -moz-dialog;
+  background-color: -moz-Dialog;
+  color: -moz-DialogText;
 }
 
 #BMB_bookmarksPopup > menuitem[type="checkbox"] {
