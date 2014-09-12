@@ -61,13 +61,34 @@ class AddonBuilder():
                 target = target + ".override"
                 override = True
 
-            if override or self._is_need_update(target, source):
+            # Force update chrome.manifest after adding/removing one of
+            # chrome-* dirs
+            force_update = False
+            if source == "chrome.manifest.in" and hasattr(self, "app_versions") and len(self.app_versions) > 0:
+                old_deps = self._get_dependencies(source, target)
+                new_deps = []
+                if target in self.default_dependencies:
+                    new_deps = self.default_dependencies[target]
+                for i in self.app_versions:
+                    new_deps.append("chrome-%d" % i)
+
+                self._update_dependencies(target, new_deps)
+
+                if len(new_deps)+1 != len(old_deps):
+                    force_update = True
+                else:
+                    for i in new_deps:
+                        if i not in old_deps:
+                            force_update = True
+                            break
+
+            if override or force_update or self._is_need_update(target, source):
                 if source == "install.rdf.in":
                     self._generate_install_manifest(source, target)
                 else:
                     self._generate_chrome_manifest(source, target,
-                                               min(self.app_versions),
-                                               max(self.app_versions))
+                                                   min(self.app_versions),
+                                                   max(self.app_versions))
 
             if override:
                 self.result_files.append([os.path.join(self.build_dir, target), target[:-9]])
