@@ -763,7 +763,7 @@ menuitem.subviewbutton:not([disabled])[_moz-menuactive]:active,
 .subviewbutton.panel-subview-footer {
   margin: 4px -4px -4px;
   background-color: hsla(210,4%,10%,.07);
-  border-top: 1px solid hsla(210,4%,10%,.12);
+  border-top: 1px solid hsla(210,4%,10%,.14);
   border-radius: 0;
   color: inherit;
 }

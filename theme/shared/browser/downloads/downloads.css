@@ -51,7 +51,7 @@
 #downloadsSummary {
   background-color: hsla(210,4%,10%,.07);
   border-top: 1px solid !important;
-  border-top-color: hsla(210,4%,10%,.12) !important;
+  border-top-color: hsla(210,4%,10%,.14) !important;
 }
 
 #downloadsHistory:hover,
