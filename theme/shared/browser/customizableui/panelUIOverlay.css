@@ -486,6 +486,7 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
 #PanelUI-fxa-status,
 #PanelUI-customize,
 #PanelUI-quit {
+  color: inherit;
   margin: 0;
 %if APP_VERSION == 32
   padding: 10px 0;
