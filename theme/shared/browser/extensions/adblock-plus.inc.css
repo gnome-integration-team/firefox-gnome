@@ -1,6 +1,8 @@
+%if 0
 /* Adblock Plus
  * id: {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
  * URL: https://addons.mozilla.org/firefox/addon/adblock-plus/ */
+%endif
 
 #abp-toolbarbutton {
   list-style-image: url(chrome://symbolic-icons/skin/extensions/adblock-plus.svg) !important;

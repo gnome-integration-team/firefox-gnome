@@ -1,6 +1,8 @@
+%if 0
 /* Tamperdataiconredux
  * id: tamperdataiconredux@frizzip.com
  * URL: https://addons.mozilla.org/firefox/addon/tamper-data-icon-redux/ */
+%endif
 
 #tdiconmenu-button {
   list-style-image: url(chrome://symbolic-icons/skin/extensions/tamperdataiconredux.svg) !important;

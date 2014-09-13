@@ -1,6 +1,8 @@
+%if 0
 /* TooManyTabs
  * id: TooManyTabs@visibotech.com
  * URL: https://addons.mozilla.org/firefox/addon/toomanytabs-saves-your-memory/ */
+%endif
 
 #visibo-tmt-palette-button {
   list-style-image: url(chrome://symbolic-icons/skin/extensions/toomanytabs-toggle-button.png) !important;

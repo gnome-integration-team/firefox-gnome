@@ -1,6 +1,8 @@
+%if 0
 /* Flagfox
  * id: {1018e4d6-728f-4b20-ad56-37578a4de76b}
  * URL: https://addons.mozilla.org/firefox/addon/flagfox/ */
+%endif
 
 #flagfox-button {
   padding: 0 !important;

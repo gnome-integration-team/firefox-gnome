@@ -1,16 +1,22 @@
-/* A */
+%if 0
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+%endif
+
+% A
 %include adblock-plus.inc.css
 %include addthis.inc.css
 %include all-in-one-sidebar.inc.css
 
-/* C */
+% C
 %include clearly.inc.css
 %include colorzilla.inc.css
 
-/* D */
+% D
 %include dta.inc.css
 
-/* F */
+% F
 %include fbdc.inc.css
 %include feedly.inc.css
 %include firebug.inc.css
@@ -19,41 +25,41 @@
 %include flashgot.inc.css
 %include foxtophone.inc.css
 
-/* G */
+% G
 %include ghostery.inc.css
 %include greasefire.inc.css
 %include greasemonkey.inc.css
 
-/* H */
+% H
 %include https-everywhere.inc.css
 %include htitle.inc.css
 
-/* K */
+% K
 %include keefox.inc.css
 
-/* L */
+% L
 %include lastpass-password-manager.inc.css
 
-/* O */
+% O
 %include omnibar.inc.css
 
-/* P */
+% P
 %include pinboard-extension.inc.css
 %include pocket.inc.css
 
-/* R */
+% R
 %include requestpolicy.inc.css
 
-/* S */
+% S
 %include stylish.inc.css
 
-/* T */
+% T
 %include tamperdataiconredux.inc.css
 %include toomanytabs.inc.css
 %include tree-style-tab.inc.css
 
-/* U */
+% U
 %include ubufox.inc.css
 
-/* X */
+% X
 %include xmarks-sync.inc.css

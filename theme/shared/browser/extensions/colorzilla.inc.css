@@ -1,6 +1,8 @@
+%if 0
 /* ColorZilla
  * id: {6AC85730-7D0F-4de0-B3FA-21142DD85326}
  * URL: https://addons.mozilla.org/firefox/addon/colorzilla/ */
+%endif
 
 :-moz-any(#wrapper-colorzilla-navbar-button, #colorzilla-navbar-button) .toolbarbutton-icon {
   list-style-image: url(chrome://symbolic-icons/skin/extensions/colorzilla.svg) !important;

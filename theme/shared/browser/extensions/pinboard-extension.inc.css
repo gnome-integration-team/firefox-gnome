@@ -1,6 +1,8 @@
+%if 0
 /* Pinboard Extension
  * id: pinboardff@pinboard.in
  * URL: https://addons.mozilla.org/firefox/addon/pinboard-extension/ */
+%endif
 
 #pbff-pinmenu {
   list-style-image: url(chrome://symbolic-icons/skin/extensions/pinboard-extension.svg) !important;

@@ -1,6 +1,8 @@
+%if 0
 /* Ubuntu Firefox Modifications
  * id: ubufox@ubuntu.com
  * URL: https://launchpad.net/ubufox/ */
+%endif
 
 #ubufox-restart-notification-icon {
   list-style-image: url(chrome://symbolic-icons/skin/reboot-notifier.svg) !important;

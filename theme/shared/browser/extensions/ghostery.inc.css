@@ -1,6 +1,8 @@
+%if 0
 /* Ghostery
  * id: firefox@ghostery.com
  * URL: https://addons.mozilla.org/firefox/addon/ghostery/ */
+%endif
 
 #navigator-toolbox[iconsize=large] > #nav-bar[reliefbuttons="true"] #ghostery-button {
   min-width: 32px !important;

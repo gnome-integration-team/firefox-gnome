@@ -1,6 +1,8 @@
+%if 0
 /* Clearly
  * id: readable@evernote.com
  * URL: https://addons.mozilla.org/firefox/addon/clearly/ */
+%endif
 
 #readable_by_evernote__button {
   list-style-image: url(chrome://symbolic-icons/skin/extensions/clearly.svg) !important;

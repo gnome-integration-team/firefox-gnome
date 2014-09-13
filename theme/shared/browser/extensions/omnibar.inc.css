@@ -1,6 +1,8 @@
+%if 0
 /* Omnibar
  * id: omnibar@ajitk.com
  * URL: https://addons.mozilla.org/firefox/addon/omnibar/ */
+%endif
 
 #omnibar-defaultEngineName {
   color: -moz-FieldText !important;

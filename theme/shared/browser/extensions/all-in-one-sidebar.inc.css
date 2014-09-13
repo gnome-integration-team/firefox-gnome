@@ -1,6 +1,8 @@
+%if 0
 /* All-in-One Sidebar
  * id: {097d3191-e6fa-4728-9826-b533d755359d}
  * URL: https://addons.mozilla.org/firefox/addon/all-in-one-sidebar/ */
+%endif
 
 @-moz-document url("chrome://browser/content/browser.xul") {
 

@@ -4,12 +4,6 @@
 
 @import url("chrome://global/skin/");
 
-/*
-@import url("chrome://appversion/skin/browser/browser.css");
-*/
-
-@import url("chrome://browser/skin/extensions/extensions.css");
-
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
 @namespace svg url("http://www.w3.org/2000/svg");
@@ -5521,3 +5515,7 @@ toolbarpaletteitem[place="toolbar"] {
   -moz-padding-end: 0 !important;
   -moz-margin-end: 0 !important;
 }
+
+/* ::::: Extensions ::::: */
+
+%include extensions/extensions.inc.css

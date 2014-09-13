@@ -1,6 +1,8 @@
+%if 0
 /* Firebug
  * id: firebug@software.joehewitt.com
  * URL: https://addons.mozilla.org/firefox/addon/firebug/ */
+%endif
 
 #firebug-button {
   filter: none !important;

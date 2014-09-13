@@ -1,6 +1,8 @@
+%if 0
 /* HTTPS-Everywhere
  * id: https-everywhere@eff.org
  * URL: https://www.eff.org/https-everywhere */
+%endif
 
 #https-everywhere-button > .https-everywhere-button {
   list-style-image: url(chrome://symbolic-icons/skin/extensions/https-everywhere.svg) !important;
