@@ -34,6 +34,9 @@
 /* L */
 %include lastpass-password-manager.inc.css
 
+/* O */
+%include omnibar.inc.css
+
 /* P */
 %include pinboard-extension.inc.css
 %include pocket.inc.css
