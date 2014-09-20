@@ -67,6 +67,7 @@ menuitem.spell-suggestion {
 
 /* ::::: menu/menuitems in menulist popups ::::: */
 
+%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
 .menulist-menupopup > menuitem,
 menulist > menupopup > menuitem,
 .menulist-menupopup > menu,
@@ -75,6 +76,14 @@ menulist > menupopup > menu {
   max-width: none;
   font: message-box;
 }
+%else
+menulist > menupopup > menuitem,
+menulist > menupopup > menu {
+  padding: 1px 5px;
+  max-width: none;
+  font: message-box;
+}
+%endif
 
 /* ..... internal content .... */
 
@@ -150,12 +159,19 @@ menulist > menupopup > menu {
 }
 
 
+%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
 .menulist-menupopup > menuitem > .menu-iconic-left,
 menulist > menupopup > menuitem > .menu-iconic-left,
 .menulist-menupopup > menu > .menu-iconic-left,
 menulist > menupopup > menu > .menu-iconic-left {
   display: none;
 }
+%else
+menulist > menupopup > menuitem > .menu-iconic-left,
+menulist > menupopup > menu > .menu-iconic-left {
+  display: none;
+}
+%endif
 
 /* ::::: checkbox menuitem ::::: */
 
@@ -187,11 +203,18 @@ menuseparator {
   border-width: 1px 0 0;
 }
 
+%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
 menulist > menupopup > menuseparator,
 .menulist-menupopup > menuseparator {
   border-top: 1px solid #000000;
   border-bottom: none;
 }
+%else
+menulist > menupopup > menuseparator {
+  border-top: 1px solid #000000;
+  border-bottom: none;
+}
+%endif
 
 /* ::::: autocomplete ::::: */
 

@@ -1282,7 +1282,11 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   -moz-margin-end: 3px;
 }
 
+%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
 #urlbar-display {
+%else
+.urlbar-display {
+%endif
   margin-top: 0;
   margin-bottom: 0;
   -moz-margin-start: 0;
@@ -1587,9 +1591,11 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   list-style-image: url(chrome://mozapps/skin/plugins/pluginBlocked-64.png);
 }
 
+%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
 .popup-notification-icon[popupid="plugins-not-found"] {
   list-style-image: url(chrome://browser/skin/pluginInstall-64.png);
 }
+%endif
 
 .popup-notification-icon[popupid="web-notifications"] {
   list-style-image: url(chrome://browser/skin/notification-64.png);
@@ -1619,6 +1625,13 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
 %else
 .popup-notification-icon[popupid="bad-content"] {
   list-style-image: url(chrome://browser/skin/bad-content-blocked-64.png);
+}
+%endif
+
+%if APP_VERSION != 32 && APP_VERSION != 33 && APP_VERSION != 34
+.popup-notification-icon[popupid="bad-content"][mixedblockdisabled],
+.popup-notification-icon[popupid="bad-content"][trackingblockdisabled] {
+  list-style-image: url(chrome://browser/skin/bad-content-unblocked-64.png);
 }
 %endif
 
@@ -1781,9 +1794,11 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   list-style-image: url(chrome://symbolic-icons/skin/plugin-blocked.svg);
 }
 
+%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
 #plugin-install-notification-icon {
   list-style-image: url(chrome://symbolic-icons/skin/plugin-install.svg);
 }
+%endif
 
 #notification-popup-box[hidden] {
   /* Override display:none to make the pluginBlockedNotification animation work
@@ -1943,8 +1958,8 @@ notification[value="translation"][state="translating"] .messageImage {
   width: 16px;
   height: 16px;
 }
-richlistitem[selected="true"] .ac-result-type-bookmark,
-richlistitem[selected="true"] .autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage) {
+.ac-result-type-bookmark[selected="true"],
+.autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage, selected) {
   list-style-image: url(chrome://symbolic-icons/skin/autocomplete-icons.svg#bookmark-active);
 }
 
@@ -1954,8 +1969,8 @@ richlistitem[selected="true"] .autocomplete-treebody::-moz-tree-image(bookmark, 
   width: 16px;
   height: 16px;
 }
-richlistitem[selected="true"] .ac-result-type-keyword,
-richlistitem[selected="true"] .autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage) {
+.ac-result-type-keyword[selected="true"],
+.autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage, selected) {
   list-style-image: url(chrome://symbolic-icons/skin/autocomplete-icons.svg#keyword-active);
 }
 
@@ -1965,8 +1980,8 @@ richlistitem[selected="true"] .autocomplete-treebody::-moz-tree-image(keyword, t
   width: 16px;
   height: 16px;
 }
-richlistitem[selected="true"] .ac-result-type-tag,
-richlistitem[selected="true"] .autocomplete-treebody::-moz-tree-image(tag, treecolAutoCompleteImage) {
+.ac-result-type-tag[selected="true"],
+.autocomplete-treebody::-moz-tree-image(tag, treecolAutoCompleteImage, selected) {
   list-style-image: url(chrome://symbolic-icons/skin/autocomplete-icons.svg#tag-active);
 }
 
@@ -4103,6 +4118,13 @@ notification.pluginVulnerable .messageImage {
 .popup-notification-item-message[popupid="bad-content"] {
   width: 17em;
 }
+
+%if APP_VERSION != 32 && APP_VERSION != 33 && APP_VERSION != 34
+.popup-notification-item-message[popupid="bad-content"][mixedblockdisabled]:not(.popup-notification-item-message-critical),
+.popup-notification-item-message[popupid="bad-content"][trackingblockdisabled]:not(.popup-notification-item-message-critical) {
+  color: GrayText;
+}
+%endif
 
 .popup-notification-item-message-critical[popupid="bad-content"] {
   color: #d74345;

@@ -82,7 +82,7 @@ html|*.menulist-editable-input {
   font: inherit;
 }
 
-
+%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
 /* ::::: compact menulists ::::: */
 
 .menulist-compact {
@@ -133,3 +133,4 @@ html|*.menulist-editable-input {
 .menulist-compact:focus > .menulist-label-box {
   border: 1px dotted;
 }
+%endif

@@ -79,6 +79,18 @@ prefpane {
 %endif
 }
 
+%if APP_VERSION != 32 && APP_VERSION != 33 && APP_VERSION != 34
+* {
+  -moz-user-select: text;
+}
+
+button,
+treecol {
+  /* override the * rule */
+  -moz-user-select: none;
+}
+%endif
+
 %if APP_VERSION == 32 || APP_VERSION == 33
 prefpane > .content-box {
   overflow: visible;

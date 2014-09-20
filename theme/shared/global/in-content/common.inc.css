@@ -15,6 +15,7 @@ xul|page {
   color: #424e5a;
 }
 
+%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
 *|* {
   -moz-user-select: text;
 }
@@ -23,6 +24,7 @@ xul|treecol {
   /* override the * rule to let the treecol be sortable */
   -moz-user-select: none;
 }
+%endif
 
 html|body {
   font-size: 15px;

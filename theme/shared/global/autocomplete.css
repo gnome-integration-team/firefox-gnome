@@ -117,6 +117,17 @@ treechildren.autocomplete-treebody::-moz-tree-cell-text(selected) {
   color: MenuText;
 }
 
+%if APP_VERSION != 32 && APP_VERSION != 33 && APP_VERSION != 34
+.autocomplete-richlistitem[type~="autofill"] .ac-url-box {
+  display: none;
+}
+
+.autocomplete-richlistitem[type~="autofill"] .ac-title-box {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+%endif
+
 .ac-url-box {
   margin-top: 1px;
 }
