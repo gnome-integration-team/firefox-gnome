@@ -195,7 +195,7 @@
   background-size: auto;
 }
 
-%if APP_VERSION != 32
+%if APP_VERSION == 33 || APP_VERSION == 34
 /* Use a pseudo-element to overlay a gradient on the thumbnail */
 /*
 .newtab-site[type=history]:not(:hover) .newtab-thumbnail:first-child::after {
