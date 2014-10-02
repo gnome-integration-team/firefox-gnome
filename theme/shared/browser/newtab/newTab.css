@@ -195,7 +195,7 @@
   background-size: auto;
 }
 
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 34
 /* Use a pseudo-element to overlay a gradient on the thumbnail */
 /*
 .newtab-site[type=history]:not(:hover) .newtab-thumbnail:first-child::after {
@@ -231,6 +231,13 @@
   text-align: center;
 }
 
+%if APP_VERSION == 33
+#newtab-intro-what,
+.newtab-sponsored {
+  color: rgba(0,0,0,0.55);
+}
+%endif
+
 %if APP_VERSION == 32
 .newtab-site[type=sponsored] .newtab-title {
   -moz-padding-start: 24px;
@@ -244,6 +251,29 @@
   color: rgba(255,255,255,0.8);
   text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
 }
+
+%if APP_VERSION == 33
+/*
+.newtab-site[pinned] .newtab-title {
+  padding: 0 15px;
+}
+
+.newtab-site[pinned] .newtab-title::before {
+  background-image: -moz-image-rect(url("chrome://browser/skin/newtab/controls.svg"), 7, 278, 28, 266);
+  background-size: 10px;
+  content: "";
+  height: 17px;
+  left: 0;
+  position: absolute;
+  width: 10px;
+}
+
+.newtab-site[pinned] .newtab-title:-moz-locale-dir(rtl)::before {
+  left: auto;
+  right: 0;
+}
+*/
+%endif
 
 /* CONTROLS */
 .newtab-control {
