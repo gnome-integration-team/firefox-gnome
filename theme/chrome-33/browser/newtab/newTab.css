@@ -138,31 +138,34 @@
   background-size: auto;
 }
 
-/* Use a pseudo-element to overlay a gradient on the thumbnail */
-.newtab-site[type=history]:not(:hover) .newtab-thumbnail:first-child::after {
-  background-image: linear-gradient(0deg, rgba(251, 251, 251, 0.8), rgba(251, 251, 251, 0) 33%);
-  border-radius: inherit;
-  bottom: 0;
-  content: "";
-  left: 0;
-  pointer-events: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
 /* TITLES */
+#newtab-intro-what,
+.newtab-sponsored,
 .newtab-title {
-  color: #737373;
+  color: #5c5c5c;
 }
 
 .newtab-site:hover .newtab-title {
-  color: #4a4a4a;
+  color: #222;
 }
 
 .newtab-site[pinned] .newtab-title {
-  color: #2c72c4;
-  font-weight: bold;
+  padding: 0 15px;
+}
+
+.newtab-site[pinned] .newtab-title::before {
+  background-image: -moz-image-rect(url("chrome://browser/skin/newtab/controls.svg"), 7, 278, 28, 266);
+  background-size: 10px;
+  content: "";
+  height: 17px;
+  left: 0;
+  position: absolute;
+  width: 10px;
+}
+
+.newtab-site[pinned] .newtab-title:-moz-locale-dir(rtl)::before {
+  left: auto;
+  right: 0;
 }
 
 /* CONTROLS */
