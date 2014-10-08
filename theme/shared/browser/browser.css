@@ -16,6 +16,8 @@
 
 %if APP_VERSION == 32
 %define primaryToolbarButtons #back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #e10s-button
+%elif APP_VERSION == 34
+%define primaryToolbarButtons #back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #e10s-button, #panic-button
 %else
 %define primaryToolbarButtons #back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #e10s-button
 %endif
@@ -849,6 +851,21 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
   list-style-image: url(chrome://symbolic-icons/skin/sidebar.svg);
 }
 
+%if APP_VERSION == 34
+#panic-button[cui-areatype="toolbar"] {
+  list-style-image: url("chrome://browser/skin/Toolbar.png");
+  -moz-image-region: rect(0, 702px, 18px, 684px);
+}
+
+#panic-button[cui-areatype="toolbar"][open] {
+  -moz-image-region: rect(18px, 702px, 36px, 684px);
+}
+
+#panic-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
+  transform: scaleX(-1);
+}
+%endif
+
 %if APP_VERSION != 32 && APP_VERSION != 33
 #loop-call-button > .toolbarbutton-badge-container {
   list-style-image: url(chrome://browser/skin/loop/toolbar.png);
@@ -1022,6 +1039,19 @@ toolbarpaletteitem[place="palette"] > #email-link-button {
 toolbarpaletteitem[place="palette"] > #sidebar-button {
   list-style-image: url(chrome://symbolic-icons/skin/sidebar.svg);
 }
+
+%if APP_VERSION == 34
+#panic-button[cui-areatype="menu-panel"],
+toolbarpaletteitem[place="palette"] > #panic-button {
+  /* FIXME */
+  list-style-image: url(chrome://browser/skin/menuPanel.png);
+  -moz-image-region: rect(0, 896px, 32px, 864px);
+}
+
+#panic-button[cui-areatype="menu-panel"][panel-multiview-anchor=true] {
+  -moz-image-region: rect(32px, 896px, 64px, 864px);
+}
+%endif
 
 toolbaritem[sdkstylewidget="true"] > toolbarbutton {
   /* FIXME */

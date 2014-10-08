@@ -195,23 +195,6 @@
   background-size: auto;
 }
 
-%if APP_VERSION == 34
-/* Use a pseudo-element to overlay a gradient on the thumbnail */
-/*
-.newtab-site[type=history]:not(:hover) .newtab-thumbnail:first-child::after {
-  background-image: linear-gradient(0deg, rgba(251, 251, 251, 0.8), rgba(251, 251, 251, 0) 33%);
-  border-radius: inherit;
-  bottom: 0;
-  content: "";
-  left: 0;
-  pointer-events: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-*/
-%endif
-
 /* TITLES */
 .newtab-title {
   bottom: 0;
@@ -231,7 +214,7 @@
   text-align: center;
 }
 
-%if APP_VERSION == 33
+%if APP_VERSION == 33 || APP_VERSION == 34
 #newtab-intro-what,
 .newtab-sponsored {
   color: rgba(0,0,0,0.55);
@@ -252,7 +235,7 @@
   text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
 }
 
-%if APP_VERSION == 33
+%if APP_VERSION == 33 || APP_VERSION == 34
 /*
 .newtab-site[pinned] .newtab-title {
   padding: 0 15px;
