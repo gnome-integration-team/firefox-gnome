@@ -4494,19 +4494,19 @@ toolbar[iconsize="small"] .toolbarbutton-badge-container {
 .chat-toolbarbutton {
   -moz-appearance: none;
   border: none;
-%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 32 || APP_VERSION == 33
   padding: 0;
 %else
   padding: 0 3px;
 %endif
   margin: 0;
   background: none;
-%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 32 || APP_VERSION == 33
   width: 16px;
 %endif
 }
 
-%if APP_VERSION != 32 && APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 32 && APP_VERSION != 33
 .chat-toolbarbutton:hover {
   background-color: rgba(255,255,255,.35);
 }
@@ -4521,7 +4521,7 @@ toolbar[iconsize="small"] .toolbarbutton-badge-container {
 }
 
 .chat-toolbarbutton > .toolbarbutton-icon {
-%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 32 || APP_VERSION == 33
   width: inherit;
 %else
   width: 16px;
@@ -4529,7 +4529,7 @@ toolbar[iconsize="small"] .toolbarbutton-badge-container {
 %endif
 }
 
-%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 32 || APP_VERSION == 33
 .chat-close-button {
   list-style-image: url('chrome://browser/skin/social/chat-icons.png');
   -moz-image-region: rect(0, 16px, 16px, 0);
@@ -4674,7 +4674,7 @@ chatbar > chatbox > .chat-titlebar > .chat-swap-button {
 }
 
 .chat-titlebar {
-%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 32 || APP_VERSION == 33
   height: 20px;
   min-height: 20px;
 %else
@@ -4683,7 +4683,7 @@ chatbar > chatbox > .chat-titlebar > .chat-swap-button {
 %endif
   width: 100%;
   margin: 0;
-%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 32 || APP_VERSION == 33
   padding: 2px;
   -moz-padding-start: 6px;
 %else
@@ -4710,7 +4710,7 @@ chatbar > chatbox > .chat-titlebar > .chat-swap-button {
   background-position: 0 -10px;
 }
 
-%if APP_VERSION != 32 && APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 32 && APP_VERSION != 33
 chatbox[dark=true] > .chat-titlebar,
 chatbox[dark=true] > .chat-titlebar[selected] {
   border-bottom: none;
