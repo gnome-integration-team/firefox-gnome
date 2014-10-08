@@ -180,9 +180,15 @@
 }
 
 %if APP_VERSION != 32
+%if APP_VERSION == 33 || APP_VERSION == 34
 .newtab-thumbnail.enhanced-content:hover {
   opacity: 0;
 }
+%else
+.newtab-site:hover .newtab-thumbnail.enhanced-content {
+  opacity: 0;
+}
+%endif
 %endif
 
 .newtab-site[type=affiliate] .newtab-thumbnail,
@@ -214,7 +220,7 @@
   text-align: center;
 }
 
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION != 32
 #newtab-intro-what,
 .newtab-sponsored {
   color: rgba(0,0,0,0.55);
@@ -235,7 +241,7 @@
   text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
 }
 
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION != 32
 /*
 .newtab-site[pinned] .newtab-title {
   padding: 0 15px;

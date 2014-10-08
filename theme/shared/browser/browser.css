@@ -14,12 +14,14 @@
 
 %define nestedButtons #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button
 
-%if APP_VERSION == 32
-%define primaryToolbarButtons #back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #e10s-button
+%define primaryToolbarButtons #back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button
+
+%if APP_VERSION == 32 || APP_VERSION == 33
+%define primaryToolbarButtons @primaryToolbarButtons@, #e10s-button
 %elif APP_VERSION == 34
-%define primaryToolbarButtons #back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #webrtc-status-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #e10s-button, #panic-button
+%define primaryToolbarButtons @primaryToolbarButtons@, #e10s-button, #panic-button
 %else
-%define primaryToolbarButtons #back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #e10s-button
+%define primaryToolbarButtons @primaryToolbarButtons@, #e10s-button, #panic-button, #web-apps-button
 %endif
 
 %define primaryToolbarButtons @primaryToolbarButtons@, @nestedButtons@
@@ -637,7 +639,11 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
 
 /* ... */
 
+%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
 toolbarbutton[type="badged"] > .toolbarbutton-badge-container > .toolbarbutton-icon,
+%else
+toolbarbutton.badged-button > .toolbarbutton-badge-container > .toolbarbutton-icon,
+%endif
 toolbarbutton[type="socialmark"] > .toolbarbutton-icon {
   max-width: 32px !important;
 }
@@ -851,7 +857,7 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
   list-style-image: url(chrome://symbolic-icons/skin/sidebar.svg);
 }
 
-%if APP_VERSION == 34
+%if APP_VERSION != 32 && APP_VERSION != 33
 #panic-button[cui-areatype="toolbar"] {
   list-style-image: url("chrome://browser/skin/Toolbar.png");
   -moz-image-region: rect(0, 702px, 18px, 684px);
@@ -863,6 +869,13 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
 
 #panic-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
   transform: scaleX(-1);
+}
+%endif
+
+%if APP_VERSION != 32 && APP_VERSION != 33 && APP_VERSION != 34
+#web-apps-button[cui-areatype="toolbar"] {
+  list-style-image: url("chrome://browser/skin/Toolbar.png");
+  -moz-image-region: rect(0, 720px, 18px, 702px);
 }
 %endif
 
@@ -1040,7 +1053,7 @@ toolbarpaletteitem[place="palette"] > #sidebar-button {
   list-style-image: url(chrome://symbolic-icons/skin/sidebar.svg);
 }
 
-%if APP_VERSION == 34
+%if APP_VERSION != 32 && APP_VERSION != 33
 #panic-button[cui-areatype="menu-panel"],
 toolbarpaletteitem[place="palette"] > #panic-button {
   /* FIXME */
@@ -1050,6 +1063,15 @@ toolbarpaletteitem[place="palette"] > #panic-button {
 
 #panic-button[cui-areatype="menu-panel"][panel-multiview-anchor=true] {
   -moz-image-region: rect(32px, 896px, 64px, 864px);
+}
+%endif
+
+%if APP_VERSION != 32 && APP_VERSION != 33 && APP_VERSION != 34
+#web-apps-button[cui-areatype="menu-panel"],
+toolbarpaletteitem[place="palette"] > #web-apps-button {
+  /* FIXME */
+  list-style-image: url(chrome://browser/skin/menuPanel.png);
+  -moz-image-region: rect(0, 928px, 32px, 896px);
 }
 %endif
 
@@ -1976,6 +1998,33 @@ notification[value="translation"][state="translating"] .messageImage {
   }
 }
 
+%if APP_VERSION != 32 && APP_VERSION != 33 && APP_VERSION != 34
+.translation-welcome-panel {
+  width: 305px;
+}
+
+.translation-welcome-logo {
+  height: 32px;
+  width: 32px;
+  list-style-image: url(chrome://browser/skin/translation-16@2x.png);
+  -moz-image-region: rect(0, 64px, 32px, 32px);
+}
+
+.translation-welcome-content {
+  -moz-margin-start: 16px;
+}
+
+.translation-welcome-headline {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.translation-welcome-body {
+  padding: 1em 0;
+  margin: 0 0;
+}
+%endif
+
 /* */
 
 #treecolAutoCompleteImage {
@@ -1994,13 +2043,23 @@ notification[value="translation"][state="translating"] .messageImage {
 }
 
 .ac-result-type-keyword,
+%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
 .autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage) {
+%else
+.autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage),
+richlistitem[type~="action"][actiontype="searchengine"] > .ac-title-box > .ac-site-icon {
+%endif
   list-style-image: url(chrome://symbolic-icons/skin/autocomplete-icons.svg#keyword);
   width: 16px;
   height: 16px;
 }
 .ac-result-type-keyword[selected="true"],
+%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
 .autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage, selected) {
+%else
+.autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage, selected),
+richlistitem[type~="action"][actiontype="searchengine"][selected="true"] > .ac-title-box > .ac-site-icon {
+%endif
   list-style-image: url(chrome://symbolic-icons/skin/autocomplete-icons.svg#keyword-active);
 }
 
@@ -2816,7 +2875,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   list-style-image: url(chrome://mozapps/skin/places/defaultFavicon.png);
 }
 
-.tab-throbber {
+.tab-throbber[busy] {
   list-style-image: url(chrome://browser/skin/tabbrowser/connecting.png);
 }
 
@@ -2831,34 +2890,6 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 #TabsToolbar[newstyletabs]@darkTheme@ .tab-throbber[progress] {
   list-style-image: url(chrome://browser/skin/tabbrowser/loading-inverted.png);
 }
-
-/* FIXME: Fx 34+
-@keyframes throbber-loading {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes throbber-connecting {
-  from {
-    transform: rotate(360deg);
-  }
-}
-
-.tab-throbber[busy] {
-  list-style-image: url("chrome://browser/skin/tabbrowser/connecting.png");
-  animation-duration: 960ms;
-  animation-iteration-count: infinite;
-  animation-name: throbber-connecting;
-  animation-timing-function: linear;
-}
-
-.tab-throbber[progress] {
-  list-style-image: url(chrome://browser/skin/tabbrowser/loading.png);
-  animation-duration: 800ms;
-  animation-name: throbber-loading;
-}
-*/
 
 .tab-throbber[pinned],
 .tab-icon-image[pinned],
@@ -4374,6 +4405,7 @@ notification.pluginVulnerable .messageImage {
   display: none;
 }
 
+%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
 .toolbarbutton-badge-container {
   margin: 5px 3px;
   position: relative;
@@ -4402,6 +4434,7 @@ toolbar[iconsize="small"] .toolbarbutton-badge-container {
   left: 2px;
   right: auto;
 }
+%endif
 
 .popup-notification-icon[popupid="servicesInstall"] {
   list-style-image: url(chrome://browser/skin/social/services-64.png);
@@ -5162,6 +5195,12 @@ toolbarpaletteitem[place="toolbar"] {
   -moz-padding-start: 0;
 }
 
+%if APP_VERSION != 32 && APP_VERSION != 33 && APP_VERSION != 34
+.customization-lwtheme-menu-theme[defaulttheme] {
+  list-style-image: url(chrome://browser/skin/theme-switcher-icon.png);
+}
+%endif
+
 .customization-lwtheme-menu-theme[active="true"],
 .customization-lwtheme-menu-theme:hover {
   background-color: hsla(210,4%,10%,.08);
@@ -5207,6 +5246,9 @@ toolbarpaletteitem[place="toolbar"] {
 }
 
 #customization-lwtheme-menu-footer {
+%if APP_VERSION != 32 && APP_VERSION != 33 && APP_VERSION != 34
+  background: linear-gradient(hsla(210,4%,10%,.05) 60%, hsla(210,4%,10%,0)) border-box;
+%endif
   border-top: 1px solid hsla(210,4%,10%,.05);
   margin-bottom: -10px;
 }
@@ -5215,19 +5257,33 @@ toolbarpaletteitem[place="toolbar"] {
   -moz-appearance: none;
   -moz-box-flex: 1;
   color: hsl(0,0%,50%);
+%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
   border: 1px solid transparent;
+%else
+  border-style: none;
+%endif
   padding: 10px;
   margin-left: 0;
   margin-right: 0;
 }
 
 .customization-lwtheme-menu-footeritem:hover {
+%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
   background-color: hsla(210,4%,10%,.15);
+%else
+  background: linear-gradient(hsla(210,4%,10%,.08) 40%, hsla(210,4%,10%,0)) padding-box;
+%endif
 }
 
+%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
 #customization-lwtheme-menu-footer:not(:hover) > .customization-lwtheme-menu-footeritem:first-child {
   -moz-border-end: 1px solid hsla(210,4%,10%,.15);
 }
+%else
+.customization-lwtheme-menu-footeritem:first-child {
+  -moz-border-end: 1px solid hsla(210,4%,10%,.15);
+}
+%endif
 
 #customization-lwtheme-menu-footer:hover > .customization-lwtheme-menu-footeritem:first-child {
   -moz-border-end-color: transparent;
