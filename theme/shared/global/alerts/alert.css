@@ -63,9 +63,3 @@ label {
   margin: 2px;
   width: 16px;
 }
-
-%if APP_VERSION == 32
-.alertCloseButton > .toolbarbutton-text {
-  display: none;
-}
-%endif

@@ -82,7 +82,7 @@ html|*.menulist-editable-input {
   font: inherit;
 }
 
-%if APP_VERSION == 32 || APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 33 || APP_VERSION == 34
 /* ::::: compact menulists ::::: */
 
 .menulist-compact {

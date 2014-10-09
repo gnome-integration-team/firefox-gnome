@@ -101,7 +101,7 @@ toolbarbutton[type="menu-button"][disabled="true"]:hover:active {
   -moz-box-orient: vertical;
 }
 
-%if APP_VERSION != 32 && APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 33 && APP_VERSION != 34
 /* ::::: toolbarbutton badged ::::: */
 
 .toolbarbutton-badge {

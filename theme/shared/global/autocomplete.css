@@ -117,7 +117,7 @@ treechildren.autocomplete-treebody::-moz-tree-cell-text(selected) {
   color: MenuText;
 }
 
-%if APP_VERSION != 32 && APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 33 && APP_VERSION != 34
 .autocomplete-richlistitem[actiontype="keyword"] .ac-url-box,
 .autocomplete-richlistitem[actiontype="searchengine"] .ac-url-box,
 .autocomplete-richlistitem[actiontype="visiturl"] .ac-url-box,
