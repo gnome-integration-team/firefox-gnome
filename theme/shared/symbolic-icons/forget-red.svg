@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:version="0.48.5 r10040" height="16px" width="16px" version="1.1" sodipodi:docname="forget.svg" id="svg6494">
+   <defs id="defs6508" />
+   <sodipodi:namedview bordercolor="#666666" inkscape:pageshadow="2" inkscape:window-y="27" pagecolor="#ffffff" inkscape:zoom="16" inkscape:grid-bbox="true" inkscape:window-maximized="1" inkscape:window-x="0" showgrid="true" borderopacity="1.0" inkscape:current-layer="g6502" inkscape:cx="12.775858" inkscape:cy="8.42879" inkscape:window-height="741" inkscape:pageopacity="0.0" inkscape:window-width="1366" inkscape:document-units="px" id="namedview6496" inkscape:object-nodes="true">
+      <inkscape:grid type="xygrid" id="grid6498" />
+   </sodipodi:namedview>
+   <metadata id="metadata6500">
+      <rdf:RDF>
+         <cc:Work rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <dc:title></dc:title>
+         </cc:Work>
+      </rdf:RDF>
+   </metadata>
+   <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="g6502">
+      <rect y="-3" x="-14" height="16" width="16" id="rect8633" style="opacity:0;color:black;fill:#2e3436;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path inkscape:connector-curvature="0" id="path8614" d="m 7.96875,1 c -3.865995,0 -7,3.1340067 -7,7 0,3.865993 3.134005,7 7,7 3.865995,0 7,-3.134007 7,-7 0,-3.8659933 -3.134005,-7 -7,-7 z M 2.90625,5.75 4.4375,7.28125 C 5.3562,6.355781 6.59595,5.75 8,5.75 c 2.51004,0 4.59804,1.850169 5,4.25 l -1.75,0 C 10.87558,8.536483 9.58576,7.46875 8,7.46875 c -0.94154,0 -1.77064,0.385405 -2.375,1 L 7.15625,10 4.75,10 3,10 l -0.0937,0 0,-4.25 z" style="color:black;fill:#ef2929;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" sodipodi:nodetypes="sssssccsccsccccccc" />
+   </g>
+</svg>
