@@ -849,12 +849,11 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
 
 %if APP_VERSION != 33
 #panic-button[cui-areatype="toolbar"] {
-  list-style-image: url("chrome://browser/skin/Toolbar.png");
-  -moz-image-region: rect(0, 702px, 18px, 684px);
+  list-style-image: url(chrome://symbolic-icons/skin/forget.svg);
 }
 
 #panic-button[cui-areatype="toolbar"][open] {
-  -moz-image-region: rect(18px, 702px, 36px, 684px);
+  list-style-image: url(chrome://symbolic-icons/skin/forget-red.svg);
 }
 
 #panic-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
@@ -864,8 +863,7 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
 
 %if APP_VERSION != 33 && APP_VERSION != 34
 #web-apps-button[cui-areatype="toolbar"] {
-  list-style-image: url("chrome://browser/skin/Toolbar.png");
-  -moz-image-region: rect(0, 720px, 18px, 702px);
+  list-style-image: url(chrome://symbolic-icons/skin/moz-apps.svg);
 }
 %endif
 
@@ -1046,22 +1044,14 @@ toolbarpaletteitem[place="palette"] > #sidebar-button {
 %if APP_VERSION != 33
 #panic-button[cui-areatype="menu-panel"],
 toolbarpaletteitem[place="palette"] > #panic-button {
-  /* FIXME */
-  list-style-image: url(chrome://browser/skin/menuPanel.png);
-  -moz-image-region: rect(0, 896px, 32px, 864px);
-}
-
-#panic-button[cui-areatype="menu-panel"][panel-multiview-anchor=true] {
-  -moz-image-region: rect(32px, 896px, 64px, 864px);
+  list-style-image: url(chrome://symbolic-icons/skin/forget.svg);
 }
 %endif
 
 %if APP_VERSION != 33 && APP_VERSION != 34
 #web-apps-button[cui-areatype="menu-panel"],
 toolbarpaletteitem[place="palette"] > #web-apps-button {
-  /* FIXME */
-  list-style-image: url(chrome://browser/skin/menuPanel.png);
-  -moz-image-region: rect(0, 928px, 32px, 896px);
+  list-style-image: url(chrome://symbolic-icons/skin/moz-apps.svg);
 }
 %endif
 
