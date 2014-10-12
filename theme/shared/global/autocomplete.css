@@ -118,25 +118,34 @@ treechildren.autocomplete-treebody::-moz-tree-cell-text(selected) {
 }
 
 %if APP_VERSION != 33 && APP_VERSION != 34
+.ac-url-box {
+  /* When setting a vertical margin here, half of that needs to be added
+     .ac-title-box's translateY for when .ac-url-box is hidden (see below). */
+  margin-top: 1px;
+}
+
 .autocomplete-richlistitem[actiontype="keyword"] .ac-url-box,
 .autocomplete-richlistitem[actiontype="searchengine"] .ac-url-box,
 .autocomplete-richlistitem[actiontype="visiturl"] .ac-url-box,
 .autocomplete-richlistitem[type~="autofill"] .ac-url-box {
-  display: none;
+  visibility: hidden;
 }
 
 .autocomplete-richlistitem[actiontype="keyword"] .ac-title-box,
 .autocomplete-richlistitem[actiontype="searchengine"] .ac-title-box,
 .autocomplete-richlistitem[actiontype="visiturl"] .ac-title-box,
 .autocomplete-richlistitem[type~="autofill"] .ac-title-box {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  /* Center the title by moving it down by half of .ac-url-box's height,
+     including vertical margins (if any). */
+  transform: translateY(.5em);
 }
 %endif
 
+%if APP_VERSION == 33 || APP_VERSION == 34
 .ac-url-box {
   margin-top: 1px;
 }
+%endif
 
 .ac-site-icon {
   width: 16px; 
