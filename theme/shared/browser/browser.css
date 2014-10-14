@@ -1981,7 +1981,7 @@ notification[value="translation"][state="translating"] .messageImage {
   }
 }
 
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 33
 .translation-welcome-panel {
   width: 305px;
 }
