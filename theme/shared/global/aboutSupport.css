@@ -102,7 +102,9 @@ td {
 
 #reset-box > button {
   display: block;
+%if APP_VERSION == 33 || APP_VERSION == 34
   margin: auto;
+%endif
 }
 
 .block {

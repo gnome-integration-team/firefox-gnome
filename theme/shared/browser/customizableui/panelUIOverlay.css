@@ -136,7 +136,7 @@ panelmultiview[nosubviews=true] > .panel-viewcontainer > .panel-viewstack > .pan
   color: hsl(0,0%,50%);
 %else
   color: GrayText;
-  text-transform: uppercase;
+  font-variant: small-caps;
 %endif
 }
 
