@@ -34,6 +34,9 @@ menubar, toolbar[type="menubar"] {
 menubar:-moz-lwtheme,
 toolbar:-moz-lwtheme {
   -moz-appearance: none;
+%if APP_VERSION != 33 && APP_VERSION != 34
+  color: inherit;
+%endif
 }
 
 /* in browser.xul, the menubar is inside a toolbar... */
