@@ -78,9 +78,4 @@ var Tweaks = {
             }
         }
     },
-
-    threeLineMenuIcon: {
-        key: "three-line-menu-icon",
-        type: "stylesheet"
-    },
 }

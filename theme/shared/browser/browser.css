@@ -765,11 +765,11 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
 }
 
 #preferences-button[cui-areatype="toolbar"] {
-  list-style-image: url(chrome://symbolic-icons/skin/preferences-system.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/emblem-system.svg);
 }
 
 #PanelUI-menu-button {
-  list-style-image: url(chrome://symbolic-icons/skin/emblem-system.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/open-menu.svg);
 }
 
 #edit-controls:not(:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true])) > #cut-button {
@@ -1030,7 +1030,7 @@ toolbarpaletteitem[place="palette"] > #developer-button {
 
 #preferences-button[cui-areatype="menu-panel"],
 toolbarpaletteitem[place="palette"] > #preferences-button {
-  list-style-image: url(chrome://symbolic-icons/skin/preferences-system.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/emblem-system.svg);
 }
 
 #email-link-button[cui-areatype="menu-panel"],

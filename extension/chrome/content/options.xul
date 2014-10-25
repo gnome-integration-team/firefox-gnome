@@ -33,6 +33,4 @@
            type="bool" title="&urlbarhistorydropmarker.label;"/>
   <setting pref="extensions.gnome-theme-tweak.disable-popup-animation"
            type="bool" title="&disablepopupanimation.label;"/>
-  <setting pref="extensions.gnome-theme-tweak.three-line-menu-icon"
-           type="bool" title="&threelinemenuicon.label;"/>
 </vbox>
