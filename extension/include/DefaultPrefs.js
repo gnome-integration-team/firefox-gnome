@@ -4,7 +4,6 @@
 
 const DefaultPrefs = {
     "tab-max-width": 0,
-    "newtab-page": false,
     "relief-buttons": false,
     "inactive-state": false,
     "urlbar-history-dropmarker": false,

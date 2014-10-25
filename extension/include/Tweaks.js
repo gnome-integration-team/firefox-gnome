@@ -38,11 +38,6 @@ var Tweaks = {
         }
     },
 
-    newtabPage: {
-        key: "newtab-page",
-        type: "stylesheet"
-    },
-
     urlbarHistoryDropmarker: {
         key: "urlbar-history-dropmarker",
         type: "attribute",

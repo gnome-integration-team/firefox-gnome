@@ -7,8 +7,6 @@
 <!DOCTYPE window SYSTEM "chrome://gnome-theme-tweak/locale/options.dtd">
 
 <vbox xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-  <setting pref="extensions.gnome-theme-tweak.newtab-page"
-           type="bool" title="&newtabpage.label;"/>
   <setting pref="extensions.gnome-theme-tweak.relief-buttons"
            type="bool" title="&reliefbuttons.label;"/>
   <setting pref="extensions.gnome-theme-tweak.inactive-state"

@@ -2,7 +2,6 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
-<!ENTITY newtabpage.label              "Белый фон для страницы about:newtab">
 <!ENTITY reliefbuttons.label           "Объемные кнопки на панели навигации">
 <!ENTITY inactivestate.label           "Включить отдельный стиль для неактивных окон">
 <!ENTITY maxtabwidth.label             "Максимальная ширина вкладки">
