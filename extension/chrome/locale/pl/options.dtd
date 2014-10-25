@@ -5,15 +5,12 @@
 <!ENTITY newtabpage.label              "Białe tło na stronie nowej karty">
 <!ENTITY reliefbuttons.label           "Wypukłe przyciski na pasku narzędziowym nawigacji">
 <!ENTITY inactivestate.label           "Inny wygląd nieaktywnych okien">
-<!ENTITY tabontop.label                "Karty na górze">
-<!ENTITY newstyletabs.label            "Karty w stylu GNOME 3.12">
 <!ENTITY maxtabwidth.label             "Maksymalna szerokość kart">
 <!ENTITY default.label                 "Domyślna">
 <!ENTITY small.label                   "Mała">
 <!ENTITY normal.label                  "Zwykła">
 <!ENTITY large.label                   "Duża">
 <!ENTITY stretch.label                 "Rozciąganie">
-<!ENTITY tabsborder.label              "Ukrywanie białej ramki za paskiem narzędziowym kart">
 <!ENTITY urlbarhistorydropmarker.label "Ukrywanie przycisku rozwijania paska adresu">
 <!ENTITY disablepopupanimation.label   "Wyłączenie animacji wyskakujących okien">
 <!ENTITY threelinemenuicon.label       "Ikona z trzema liniami jako przycisk menu">

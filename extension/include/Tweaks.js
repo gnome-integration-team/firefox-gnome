@@ -38,32 +38,9 @@ var Tweaks = {
         }
     },
 
-    newStyleTabs: {
-        key: "new-style-tabs",
-        type: "attribute",
-        elements: ["navigator-toolbox", "nav-bar", "TabsToolbar"],
-        attributeName: "newstyletabs",
-        attributeValue: "true"
-    },
-
     newtabPage: {
         key: "newtab-page",
         type: "stylesheet"
-    },
-
-    tabsOnTop: {
-        key: "tabs-on-top",
-        type: "attribute",
-        elements: ["navigator-toolbox", "nav-bar", "TabsToolbar"],
-        attributeName: "tabsontop"
-    },
-
-    tabsBorder: {
-        key: "tabs-border",
-        type: "attribute",
-        elements: ["TabsToolbar"],
-        attributeName: "bottomborder",
-        attributeValue: "false"
     },
 
     urlbarHistoryDropmarker: {

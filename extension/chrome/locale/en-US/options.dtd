@@ -5,15 +5,12 @@
 <!ENTITY newtabpage.label              "White background for a newtab page">
 <!ENTITY reliefbuttons.label           "Relief buttons on the navigation toolbar">
 <!ENTITY inactivestate.label           "Enable different style for unfocused windows">
-<!ENTITY tabontop.label                "Show tabs on top">
-<!ENTITY newstyletabs.label            "GNOME 3.12 style tabs">
 <!ENTITY maxtabwidth.label             "Maximum tab width">
 <!ENTITY default.label                 "Default">
 <!ENTITY small.label                   "Small">
 <!ENTITY normal.label                  "Normal">
 <!ENTITY large.label                   "Large">
 <!ENTITY stretch.label                 "Stretch">
-<!ENTITY tabsborder.label              "Hide white border after tabs toolbar">
 <!ENTITY urlbarhistorydropmarker.label "Hide the history dropmarker in the URL bar">
 <!ENTITY disablepopupanimation.label   "Disable animation of popups">
 <!ENTITY threelinemenuicon.label       "Three line icon for the menu button">

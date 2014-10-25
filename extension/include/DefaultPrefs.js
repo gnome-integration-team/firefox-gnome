@@ -4,12 +4,9 @@
 
 const DefaultPrefs = {
     "tab-max-width": 0,
-    "new-style-tabs": false,
     "newtab-page": false,
     "relief-buttons": false,
     "inactive-state": false,
-    "tabs-on-top": false,
-    "tabs-border": false,
     "urlbar-history-dropmarker": false,
     "disable-popup-animation": false,
     "dark-variant": 0,

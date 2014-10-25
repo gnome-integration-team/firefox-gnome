@@ -5,15 +5,12 @@
 <!ENTITY newtabpage.label              "Біле тло на сторінці нової вкладки">
 <!ENTITY reliefbuttons.label           "Об’ємний стиль кнопок панелі навігації">
 <!ENTITY inactivestate.label           "Змінювати стиль для неактивних вікон">
-<!ENTITY tabontop.label                "Панель вкладок зверху панелі навігації">
-<!ENTITY newstyletabs.label            "Новий стиль панелі вкладок">
 <!ENTITY maxtabwidth.label             "Максимальна ширина вкладок">
 <!ENTITY default.label                 "За замовчуванням">
 <!ENTITY small.label                   "Мала">
 <!ENTITY normal.label                  "Середня">
 <!ENTITY large.label                   "Велика">
 <!ENTITY stretch.label                 "У всю ширину">
-<!ENTITY tabsborder.label              "Сховати білу межу внизу панелі вкладок">
 <!ENTITY urlbarhistorydropmarker.label "Сховати кнопку випадаючої історії в полі вводу адреси">
 <!ENTITY disablepopupanimation.label   "Вимкнути анімацію при відкритті меню">
 <!ENTITY threelinemenuicon.label       "Використати три лінії для піктограми меню">
