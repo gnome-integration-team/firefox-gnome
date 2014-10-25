@@ -44,7 +44,7 @@
   background-color: #393f3f;
 }
 
-#navigator-toolbox:-moz-any([tabsontop="true"], [newstyletabs])::after {
+#navigator-toolbox:-moz-any([tabsontop="true"])::after {
   content: "";
   display: -moz-box;
   -moz-box-ordinal-group: 101; /* tabs toolbar is 100 */
@@ -2497,10 +2497,10 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 
 #TabsToolbar[newstyletabs] {
-  background: #e2e2e2;
-  border-top: 1px solid #969a96;
+  background: #d6d6d6;
+  border-top: 1px solid #a1a1a1;
   border-bottom: 0;
-  box-shadow: 0 -1px #e2e2e2,
+  box-shadow: 0 -1px #d9d9d9,
               inset 0 3px hsla(0,0%,0%,.03),
               inset 0 2px hsla(0,0%,0%,.03),
               inset 0 1px hsla(0,0%,0%,.03);
@@ -2554,7 +2554,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 
 #TabsToolbar[newstyletabs]::after {
-  display: none;
+  border-bottom: 1px solid #a1a1a1;
 }
 
 /*
@@ -2648,14 +2648,14 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 
 #TabsToolbar[newstyletabs] .tabbrowser-tab:not([selected=true]) {
-  color: #7a7e7f;
+  color: #8d9091;
 }
 #TabsToolbar[newstyletabs]@darkTheme@ .tabbrowser-tab:not([selected=true]) {
   color: #a6a8a7;
 }
 
 #TabsToolbar[newstyletabs] .tabbrowser-tab:not([selected=true]):hover {
-  color: #4a5051;
+  color: #5d6263;
 }
 #TabsToolbar[newstyletabs]@darkTheme@ .tabbrowser-tab:not([selected=true]):hover {
   color: #d3d4d2;
@@ -2665,7 +2665,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   -moz-box-flex: 1;
   background-clip: padding-box;
   margin: 0;
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
 }
 
 #TabsToolbar[newstyletabs] .tabbrowser-tab:-moz-any([selected=true], :hover) .tab-background-middle {
@@ -2677,7 +2677,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 
 #TabsToolbar[newstyletabs] .tabbrowser-tab[selected=true] .tab-background-middle {
-  background: #ededed;
+  background: #e1e1e1;
   -moz-border-bottom-colors: Highlight;
 }
 
@@ -2695,8 +2695,8 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 
 #TabsToolbar[newstyletabs] .tabbrowser-tab:not([selected=true]):hover .tab-background-middle {
-  background: #e6e6e6;
-  -moz-border-bottom-colors: #c1c4c1;
+  background: #dadada;
+  -moz-border-bottom-colors: #a1a1a1;
 }
 
 #TabsToolbar[newstyletabs] .tabbrowser-tab:not([selected=true]):hover .tab-background-middle:-moz-lwtheme {
@@ -2716,19 +2716,19 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 
 #TabsToolbar[newstyletabs] .tab-background-start[selected=true],
 #TabsToolbar[newstyletabs] .tab-background-end[selected=true] {
-  background: #cacdca;
-  background-image: linear-gradient(to top, Highlight, #cacdca 2px, #cacdca);
+  background: #c0c0c0;
+  background-image: linear-gradient(to top, Highlight, #c0c0c0 2px, #c0c0c0);
 }
 
 #TabsToolbar[newstyletabs]@darkTheme@ .tab-background-start[selected=true],
 #TabsToolbar[newstyletabs]@darkTheme@ .tab-background-end[selected=true] {
-  background: #cacdca;
+  background: #2a3033;
   background-image: linear-gradient(to top, #346099, #2a3033 2px, #2a3033);
 }
 
 #TabsToolbar[newstyletabs] .tabbrowser-tab:hover .tab-background-start:not([selected=true]),
 #TabsToolbar[newstyletabs] .tabbrowser-tab:hover .tab-background-end:not([selected=true]) {
-  background: #d2d5d2;
+  background: #c9c9c9;
 }
 
 #TabsToolbar[newstyletabs]@darkTheme@ .tabbrowser-tab:hover .tab-background-start:not([selected=true]),
@@ -3190,11 +3190,11 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 
 #TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled]):not(:active) {
-  -moz-border-end-color: #cacdca !important;
+  -moz-border-end-color: #c0c0c0 !important;
 }
 
 #TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled]):not(:active) {
-  -moz-border-start-color: #cacdca !important;
+  -moz-border-start-color: #c0c0c0 !important;
 }
 
 #TabsToolbar[newstyletabs]@darkTheme@ .tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled]):not(:active) {

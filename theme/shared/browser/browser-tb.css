@@ -544,7 +544,7 @@
 #TabsToolbar[newstyletabs] .tabs-closebutton:hover,
 #TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-up:hover,
 #TabsToolbar[newstyletabs] .tabbrowser-arrowscrollbox > .scrollbutton-down:hover {
-  background: #e6e6e6;
+  background: #e1e1e1;
   border-color: #d2d5d2;
 }
 
@@ -596,7 +596,7 @@
 #TabsToolbar[newstyletabs] .toolbarbutton-1[open="true"],
 #TabsToolbar[newstyletabs] .toolbarbutton-1[open="true"]:active,
 #TabsToolbar[newstyletabs] .toolbarbutton-1[open="true"]:active:hover {
-  background: #ededed;
+  background: #e1e1e1;
   border-color: #d2d5d2;
 }
 
