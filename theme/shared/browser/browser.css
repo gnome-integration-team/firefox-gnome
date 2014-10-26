@@ -2450,9 +2450,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   border-top: 1px solid #a1a1a1;
   border-bottom: 0;
   box-shadow: 0 -1px #d9d9d9,
-              inset 0 3px hsla(0,0%,0%,.03),
-              inset 0 2px hsla(0,0%,0%,.03),
-              inset 0 1px hsla(0,0%,0%,.03);
+              inset 0 2px 3px -1px hsla(0,0%,0%,.15);
   min-height: 0;
   padding: 0 10px !important; /* FIXME */
   position: relative;
@@ -2462,17 +2460,13 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   background: hsla(0,0%,0%,.048);
   border-top-color: hsla(120,100%,2.8%,.338);
   box-shadow: 0 -1px hsla(0,0%,0%,.048),
-              inset 0 3px hsla(0,0%,0%,.03),
-              inset 0 2px hsla(0,0%,0%,.03),
-              inset 0 1px hsla(0,0%,0%,.03);
+              inset 0 2px 3px -1px hsla(0,0%,0%,.15);
 }
 
 #TabsToolbar@darkTheme@ {
   background: #363b3b;
   border-top-color: transparent;
-  box-shadow: inset 0 3px hsla(0,0%,0%,.03),
-              inset 0 2px hsla(0,0%,0%,.03),
-              inset 0 1px hsla(0,0%,0%,.03);
+  box-shadow: inset 0 2px 3px -1px hsla(0,0%,0%,.15);
 }
 
 #main-window[privatebrowsingmode=temporary] #TabsToolbar {
@@ -2591,7 +2585,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 
 .tabbrowser-tab:-moz-any([selected=true], :hover) .tab-background-middle {
-  box-shadow: inset 0 3px hsla(0,0%,0%,.03), inset 0 2px hsla(0,0%,0%,.03), inset 0 1px hsla(0,0%,0%,.03);
+  box-shadow: inset 0 3px hsla(0,0%,0%,.025), inset 0 2px hsla(0,0%,0%,.025), inset 0 1px hsla(0,0%,0%,.025);
 }
 
 .tabbrowser-tab:-moz-any([selected=true], :hover) .tab-background-middle:-moz-lwtheme {
@@ -2650,7 +2644,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 
 .tabbrowser-tab:hover .tab-background-start:not([selected=true]),
 .tabbrowser-tab:hover .tab-background-end:not([selected=true]) {
-  background: #c9c9c9;
+  background: hsla(0,0%,68%,.3); /* #c9c9c9 */
 }
 
 #TabsToolbar@darkTheme@ .tabbrowser-tab:hover .tab-background-start:not([selected=true]),
