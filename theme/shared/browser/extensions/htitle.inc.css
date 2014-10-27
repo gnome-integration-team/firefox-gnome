@@ -20,7 +20,9 @@
   display: none !important;
 }
 
+#window-controls[htitle="true"][htitlebuttonlayout*="minimize"] > #minimize-button, /* HTitle 3+ */
 #window-controls[htitle="true"][htitle-button-layout*="minimize"] > #minimize-button,
+#window-controls[htitle="true"][htitlebuttonlayout*="maximize"] > #restore-button,
 #window-controls[htitle="true"][htitle-button-layout*="maximize"] > #restore-button,
 #window-controls[htitle="true"] > #close-button {
   display: -moz-box !important;
