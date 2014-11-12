@@ -1108,7 +1108,19 @@ menuitem[checked="true"].subviewbutton > .menu-iconic-left {
   visibility: hidden;
 }
 
-%if APP_VERSION != 33
+%if APP_VERSION == 33
+#customizationui-widget-multiview[mainViewId="PanelUI-panicView"] > .panel-viewcontainer,
+#customizationui-widget-multiview[mainViewId="PanelUI-panicView"] > .panel-viewcontainer > .panel-viewstack,
+#customizationui-widget-multiview[mainViewId="PanelUI-panicView"] > .panel-viewcontainer > .panel-viewstack > .panel-mainview,
+/* NB: currentsubview attribute is temporary as a safe workaround for a layout problem with this
+ * panel. Do not rely on it, it *will* go away again. */
+#PanelUI-multiView[currentsubview="PanelUI-panicView"] > .panel-viewcontainer > .panel-viewstack > .panel-subviews,
+#PanelUI-panicView > .panel-subview-body,
+#PanelUI-panicView {
+  overflow: visible;
+}
+%endif
+
 #PanelUI-panicView.cui-widget-panelview {
   min-width: 280px;
 }
@@ -1165,9 +1177,7 @@ menuitem[checked="true"].subviewbutton > .menu-iconic-left {
 .subviewradio {
   -moz-binding: url(chrome://global/content/bindings/radio.xml#radio);
   -moz-appearance: none;
-%if APP_VERSION != 33
   -moz-box-align: center;
-%endif
   padding: 1px;
   margin: 0 0 2px;
   background-color: hsla(210,4%,10%,0);
@@ -1295,7 +1305,6 @@ menuitem[checked="true"].subviewbutton > .menu-iconic-left {
   background-color: #d0d0d0;
   border-color: #aaa;
 }
-%endif
 
 .panel-subviews {
   background-color: -moz-Dialog;
@@ -1390,8 +1399,6 @@ menu.subviewbutton > .menu-right:-moz-locale-dir(rtl) {
   -moz-appearance: none !important;
 }
 
-%if APP_VERSION != 33
 .subviewradio > .radio-label-box {
   -moz-appearance: none;
 }
-%endif

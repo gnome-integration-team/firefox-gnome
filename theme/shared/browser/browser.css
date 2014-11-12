@@ -16,9 +16,7 @@
 
 %define primaryToolbarButtons #back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button
 
-%if APP_VERSION == 33
-%define primaryToolbarButtons @primaryToolbarButtons@, #e10s-button
-%elif APP_VERSION == 34
+%if APP_VERSION == 33 || APP_VERSION == 34
 %define primaryToolbarButtons @primaryToolbarButtons@, #e10s-button, #panic-button
 %else
 %define primaryToolbarButtons @primaryToolbarButtons@, #e10s-button, #panic-button, #web-apps-button
@@ -811,7 +809,6 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
   list-style-image: url(chrome://symbolic-icons/skin/sidebar.svg);
 }
 
-%if APP_VERSION != 33
 #panic-button[cui-areatype="toolbar"] {
   list-style-image: url(chrome://symbolic-icons/skin/forget.svg);
 }
@@ -823,7 +820,6 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
 #panic-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
   transform: scaleX(-1);
 }
-%endif
 
 %if APP_VERSION != 33 && APP_VERSION != 34
 #web-apps-button[cui-areatype="toolbar"] {
@@ -1041,12 +1037,10 @@ toolbarpaletteitem[place="palette"] > #sidebar-button {
   list-style-image: url(chrome://symbolic-icons/skin/sidebar.svg);
 }
 
-%if APP_VERSION != 33
 #panic-button[cui-areatype="menu-panel"],
 toolbarpaletteitem[place="palette"] > #panic-button {
   list-style-image: url(chrome://symbolic-icons/skin/forget.svg);
 }
-%endif
 
 %if APP_VERSION != 33 && APP_VERSION != 34
 #web-apps-button[cui-areatype="menu-panel"],
