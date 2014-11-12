@@ -49,6 +49,14 @@ label.small {
 
 %if APP_VERSION != 33
 /* General Pane */
+
+%if APP_VERSION != 34
+#useFirefoxSync,
+#getStarted {
+  font-size: 90%;
+}
+%endif
+
 #isNotDefaultLabel {
   font-weight: bold;
 }

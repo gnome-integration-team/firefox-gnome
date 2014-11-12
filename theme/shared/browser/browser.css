@@ -19,10 +19,31 @@
 %if APP_VERSION == 33 || APP_VERSION == 34
 %define primaryToolbarButtons @primaryToolbarButtons@, #e10s-button, #panic-button
 %else
-%define primaryToolbarButtons @primaryToolbarButtons@, #e10s-button, #panic-button, #web-apps-button
+%define primaryToolbarButtons @primaryToolbarButtons@, #e10s-button, #panic-button, #web-apps-button, #webide-button
 %endif
 
 %define primaryToolbarButtons @primaryToolbarButtons@, @nestedButtons@
+
+%if APP_VERSION != 33 && APP_VERSION != 34
+/*
+:root {
+  --toolbarbutton-hover-background: hsla(0,0%,100%,.3) linear-gradient(hsla(0,0%,100%,.7), hsla(0,0%,100%,.2));
+  --toolbarbutton-hover-boxshadow: 0 1px 0 hsla(0,0%,100%,.3) inset, 0 0 0 1px hsla(0,0%,100%,.2) inset, 0 1px 0 hsla(0,0%,0%,.03);
+  --toolbarbutton-hover-bordercolor: rgb(154,154,154);
+
+  --toolbarbutton-active-boxshadow: 0 1px 1px hsla(0,0%,0%,.1) inset, 0 0 1px hsla(0,0%,0%,.3) inset;
+  --toolbarbutton-active-bordercolor: rgb(154,154,154);
+  --toolbarbutton-active-background: rgba(154,154,154,.5) linear-gradient(hsla(0,0%,100%,.7), hsla(0,0%,100%,.4));
+
+  --toolbarbutton-checkedhover-backgroundcolor: rgba(90%,90%,90%,.4);
+
+  --toolbarbutton-combined-boxshadow: 0 0 0 1px hsla(0,0%,100%,.2);
+  --toolbarbutton-combined-backgroundimage: linear-gradient(hsla(210,54%,20%,.2) 0, hsla(210,54%,20%,.2) 18px);
+
+  --verified-identity-box-backgroundcolor: #fff;
+}
+*/
+%endif
 
 #menubar-items {
   -moz-box-orient: vertical; /* for flex hack */
@@ -825,10 +846,14 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
 #web-apps-button[cui-areatype="toolbar"] {
   list-style-image: url(chrome://symbolic-icons/skin/moz-apps.svg);
 }
+
+#webide-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://browser/skin/Toolbar.png);
+  -moz-image-region: rect(0, 738px, 18px, 720px);
+}
 %endif
 
 %if APP_VERSION != 33
-%if APP_VERSION == 34
 #loop-button-throttled > .toolbarbutton-badge-container {
   list-style-image: url(chrome://browser/skin/loop/toolbar.png);
   -moz-image-region: rect(0, 18px, 18px, 0);
@@ -862,41 +887,6 @@ toolbar[brighttext] #loop-button-throttled > .toolbarbutton-badge-container {
 #loop-button-throttled:not([disabled="true"])[state="active"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container {
   -moz-image-region: rect(0, 126px, 18px, 108px);
 }
-%else
-#loop-call-button > .toolbarbutton-badge-container {
-  list-style-image: url(chrome://browser/skin/loop/toolbar.png);
-  -moz-image-region: rect(0, 18px, 18px, 0);
-}
-
-toolbar[brighttext] #loop-call-button > .toolbarbutton-badge-container {
-  list-style-image: url(chrome://browser/skin/loop/toolbar-inverted.png);
-}
-
-#loop-call-button[state="disabled"] > .toolbarbutton-badge-container,
-#loop-call-button[disabled="true"] > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 36px, 18px, 18px);
-}
-
-#loop-call-button:not([disabled="true"])[state="error"] > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 54px, 18px, 36px);
-}
-
-#loop-call-button:not([disabled="true"])[state="action"] > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 72px, 18px, 54px);
-}
-
-#loop-call-button:not([disabled="true"])[state="action"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 90px, 18px, 72px);
-}
-
-#loop-call-button:not([disabled="true"])[state="active"] > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 108px, 18px, 90px);
-}
-
-#loop-call-button:not([disabled="true"])[state="active"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 126px, 18px, 108px);
-}
-%endif
 %endif
 
 #main-window@darkTheme@ :-moz-any(#window-controls, .window-controls) .toolbarbutton-icon,
@@ -1047,6 +1037,12 @@ toolbarpaletteitem[place="palette"] > #panic-button {
 toolbarpaletteitem[place="palette"] > #web-apps-button {
   list-style-image: url(chrome://symbolic-icons/skin/moz-apps.svg);
 }
+
+#webide-button[cui-areatype="menu-panel"],
+toolbarpaletteitem[place="palette"] > #webide-button {
+  list-style-image: url(chrome://browser/skin/menuPanel.png);
+  -moz-image-region: rect(0px, 960px, 32px, 928px);
+}
 %endif
 
 toolbaritem[sdkstylewidget="true"] > toolbarbutton {
@@ -1055,7 +1051,6 @@ toolbaritem[sdkstylewidget="true"] > toolbarbutton {
 }
 
 %if APP_VERSION != 33
-%if APP_VERSION == 34
 #loop-button-throttled[cui-areatype="menu-panel"] > .toolbarbutton-badge-container,
 toolbarpaletteitem[place="palette"] > #loop-button-throttled > .toolbarbutton-badge-container {
   list-style-image: url(chrome://browser/skin/loop/menuPanel.png);
@@ -1091,43 +1086,6 @@ toolbarpaletteitem[place="palette"] > #loop-button-throttled > .toolbarbutton-ba
 #loop-button-throttled[cui-areatype="menu-panel"]:not([disabled="true"])[state="active"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container {
   -moz-image-region: rect(0, 224px, 32px, 192px);
 }
-%else
-#loop-call-button[cui-areatype="menu-panel"] > .toolbarbutton-badge-container,
-toolbarpaletteitem[place="palette"] > #loop-call-button > .toolbarbutton-badge-container {
-  list-style-image: url(chrome://browser/skin/loop/menuPanel.png);
-  -moz-image-region: rect(0, 32px, 32px, 0);
-}
-
-/* Make sure that the state icons are not shown in the customization palette. */
-toolbarpaletteitem[place="palette"] > #loop-call-button > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 32px, 32px, 0) !important;
-}
-
-#loop-call-button[cui-areatype="menu-panel"][state="disabled"] > .toolbarbutton-badge-container,
-#loop-call-button[cui-areatype="menu-panel"][disabled="true"] > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 64px, 32px, 32px);
-}
-
-#loop-call-button[cui-areatype="menu-panel"]:not([disabled="true"])[state="error"] > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 96px, 32px, 64px);
-}
-
-#loop-call-button[cui-areatype="menu-panel"]:not([disabled="true"])[state="action"] > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 128px, 32px, 96px);
-}
-
-#loop-call-button[cui-areatype="menu-panel"]:not([disabled="true"])[state="action"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 160px, 32px, 128px);
-}
-
-#loop-call-button[cui-areatype="menu-panel"]:not([disabled="true"])[state="active"] > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 192px, 32px, 160px);
-}
-
-#loop-call-button[cui-areatype="menu-panel"]:not([disabled="true"])[state="active"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 224px, 32px, 192px);
-}
-%endif
 %endif
 
 /* Wide panel control icons */
@@ -2224,11 +2182,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 
 /* Loop */
-%if APP_VERSION == 34
 #loop-button-throttled {
-%else
-#loop-call-button {
-%endif
   list-style-image: url(chrome://symbolic-icons/skin/call-start.svg);
 }
 
@@ -3001,6 +2955,12 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 toolbarbutton.chevron {
   list-style-image: url("chrome://global/skin/toolbar/chevron.gif") !important;
 }
+
+%if APP_VERSION != 33 && APP_VERSION != 34
+toolbar[brighttext] toolbarbutton.chevron:not(:hover):not([open="true"]) {
+  list-style-image: url("chrome://global/skin/toolbar/chevron-inverted.png") !important;
+}
+%endif
 
 toolbarbutton.chevron:-moz-locale-dir(rtl) > .toolbarbutton-icon {
   transform: scaleX(-1);
