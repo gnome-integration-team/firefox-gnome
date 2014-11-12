@@ -239,7 +239,7 @@ panelview:not([mainview]) .toolbarbutton-text,
 
 #PanelUI-contents {
   display: block;
-%if APP_VERSION == 33
+%if APP_VERSION == 33 || APP_VERSION == 34
   flex: 1 0 auto;
 %else
   flex: 1 0 main-size;
@@ -1108,7 +1108,7 @@ menuitem[checked="true"].subviewbutton > .menu-iconic-left {
   visibility: hidden;
 }
 
-%if APP_VERSION == 33
+%if APP_VERSION == 33 || APP_VERSION == 34
 #customizationui-widget-multiview[mainViewId="PanelUI-panicView"] > .panel-viewcontainer,
 #customizationui-widget-multiview[mainViewId="PanelUI-panicView"] > .panel-viewcontainer > .panel-viewstack,
 #customizationui-widget-multiview[mainViewId="PanelUI-panicView"] > .panel-viewcontainer > .panel-viewstack > .panel-mainview,

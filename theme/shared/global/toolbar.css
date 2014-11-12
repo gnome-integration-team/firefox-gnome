@@ -34,7 +34,7 @@ menubar, toolbar[type="menubar"] {
 menubar:-moz-lwtheme,
 toolbar:-moz-lwtheme {
   -moz-appearance: none;
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 33
   color: inherit;
 %endif
 }
