@@ -14,16 +14,18 @@ use:not(:target) {
 }
 
 use {
-  color: menutext;
-  fill: menutext;
+  color: MenuText;
+  fill: MenuText;
 }
 
 use[id$="-active"] {
+  color: -moz-menuhovertext;
   fill: -moz-menuhovertext;
 }
 
 use[id$="-disabled"] {
-  fill: graytext;
+  color: GrayText;
+  fill: GrayText;
 }
 </style>
 <defs style="display:none">
