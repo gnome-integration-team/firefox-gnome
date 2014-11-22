@@ -64,6 +64,14 @@ h1 {
 #errorTitleText {
 }
 
+%if APP_VERSION != 33 && APP_VERSION != 34
+/*
+#errorTitleText[sslv3] {
+  background-image: url("aboutNetError_alert.svg");
+}
+*/
+%endif
+
 #errorShortDesc > p {
   overflow: auto;
   margin-top: 2em;
