@@ -376,6 +376,12 @@ xul|menulist > xul|*.menulist-label-box {
   padding-left: 10px !important;
 }
 
+%if APP_VERSION == 34
+xul|menulist > xul|*.menulist-label-box > xul|*.menulist-icon {
+  -moz-margin-end: 5px;
+}
+%endif
+
 xul|button[type="menu"] > xul|*.button-box > xul|*.button-menu-dropmarker {
   -moz-appearance: none;
   margin: 1px 0;
@@ -652,6 +658,12 @@ xul|*.checkbox-label-box {
                       linear-gradient(#fff, rgba(255,255,255,0.8)) !important;
   }
 }
+
+%if APP_VERSION == 34
+xul|richlistitem > xul|*.checkbox-check {
+  margin: 3px 6px;
+}
+%endif
 
 xul|*.radio-check {
   -moz-appearance: none;
