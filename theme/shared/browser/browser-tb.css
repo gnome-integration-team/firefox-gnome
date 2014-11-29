@@ -218,7 +218,7 @@
   padding: 3px;
 }
 
-.toolbarbutton-1 > .toolbarbutton-icon {
+.toolbarbutton-1 .toolbarbutton-icon {
   -moz-margin-end: 0;
 }
 
