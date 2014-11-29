@@ -7,6 +7,5 @@ const DefaultPrefs = {
     "relief-buttons": false,
     "inactive-state": false,
     "urlbar-history-dropmarker": false,
-    "disable-popup-animation": false,
     "dark-variant": 0,
 }

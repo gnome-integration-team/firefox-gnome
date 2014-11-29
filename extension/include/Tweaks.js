@@ -57,11 +57,6 @@ var Tweaks = {
         attributeName: "reliefbuttons"
     },
 
-    disablePopupAnimation: {
-        key: "disable-popup-animation",
-        type: "stylesheet"
-    },
-
     darkVariant: {
         key: "dark-variant",
         type: "attribute",

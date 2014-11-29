@@ -31,6 +31,4 @@
 
   <setting pref="extensions.gnome-theme-tweak.urlbar-history-dropmarker"
            type="bool" title="&urlbarhistorydropmarker.label;"/>
-  <setting pref="extensions.gnome-theme-tweak.disable-popup-animation"
-           type="bool" title="&disablepopupanimation.label;"/>
 </vbox>
