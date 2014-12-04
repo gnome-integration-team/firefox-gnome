@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 34
 /*
 :root {
   --panel-ui-button-background-image:
@@ -142,11 +142,11 @@ panelmultiview[nosubviews=true] > .panel-viewcontainer > .panel-viewstack > .pan
 
 .panel-subview-header {
   margin: -4px -4px 4px;
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 34
   background-color: hsla(210,4%,10%,.05);
 %endif
   box-shadow: 0 -1px 0 hsla(210,4%,10%,.05) inset;
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 34
   color: hsl(0,0%,50%);
 %else
   color: GrayText;
@@ -253,7 +253,7 @@ panelview:not([mainview]) .toolbarbutton-text,
 
 #PanelUI-contents {
   display: block;
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 34
   flex: 1 0 auto;
 %else
   flex: 1 0 main-size;
@@ -383,7 +383,7 @@ toolbaritem[cui-areatype="menu-panel"][sdkstylewidget="true"] > iframe {
 #PanelUI-multiView[viewtype="subview"] #PanelUI-mainView > #PanelUI-contents-scroller > #PanelUI-contents > .panel-wide-item,
 #PanelUI-multiView[viewtype="subview"] #PanelUI-mainView > #PanelUI-contents-scroller > #PanelUI-contents > .toolbarbutton-1:not([panel-multiview-anchor="true"]),
 #PanelUI-multiView[viewtype="subview"] #PanelUI-mainView > #PanelUI-footer > #PanelUI-fxa-status,
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 34
 #PanelUI-multiView[viewtype="subview"] #PanelUI-mainView > #PanelUI-footer > #PanelUI-update-status,
 %endif
 #PanelUI-multiView[viewtype="subview"] #PanelUI-mainView > #PanelUI-footer > #PanelUI-footer-inner > toolbarseparator,
@@ -413,9 +413,7 @@ toolbaritem[cui-areatype="menu-panel"][sdkstylewidget="true"]:not(.panel-wide-it
 .panelUI-grid .toolbarbutton-1 > .toolbarbutton-badge-container,
 .customization-palette .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
 .customization-palette .toolbarbutton-1 > .toolbarbutton-icon,
-%if APP_VERSION != 33
 .customization-palette .toolbarbutton-1 > .toolbarbutton-badge-container,
-%endif
 .panelUI-grid #bookmarks-toolbar-placeholder > .toolbarbutton-icon,
 .customization-palette #bookmarks-toolbar-placeholder > .toolbarbutton-icon,
 .panel-customization-placeholder-child > .toolbarbutton-icon {
@@ -500,7 +498,7 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
   margin: 0;
 }
 
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 34
 #PanelUI-update-status,
 %endif
 #PanelUI-help,
@@ -520,7 +518,7 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
   -moz-box-orient: horizontal;
 }
 
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 34
 #PanelUI-update-status,
 %endif
 #PanelUI-fxa-status {
@@ -529,7 +527,7 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
   margin-bottom: -1px;
 }
 
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 34
 #PanelUI-update-status > .toolbarbutton-text,
 %endif
 #PanelUI-fxa-status > .toolbarbutton-text {
@@ -541,7 +539,7 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
   min-width: 46px;
 }
 
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 34
 #PanelUI-update-status > .toolbarbutton-text,
 %endif
 #PanelUI-fxa-status > .toolbarbutton-text,
@@ -556,7 +554,7 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
   display: none;
 }
 
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 34
 #PanelUI-update-status > .toolbarbutton-icon,
 %endif
 #PanelUI-fxa-status > .toolbarbutton-icon,
@@ -573,7 +571,7 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
   -moz-border-start-style: none;
 }
 
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 34
 #PanelUI-update-status {
   width: calc(22.35em + 30px);
   -moz-padding-start: 15px;
@@ -660,7 +658,7 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
   outline: none;
 }
 
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 34
 #PanelUI-update-status[update-status="succeeded"] {
   background-color: hsla(96, 65%, 75%, 0.1);
 }
@@ -780,7 +778,7 @@ panelview .toolbarbutton-1,
 .PanelUI-subView .subviewbutton[shortcut]::after {
   content: attr(shortcut);
   float: right;
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 34
   color: hsl(0,0%,50%);
 %else
   color: GrayText;
@@ -924,7 +922,7 @@ menuitem.panel-subview-footer:not([disabled])[_moz-menuactive]:active,
   -moz-box-pack: start;
   -moz-margin-start: 10px;
   -moz-margin-end: auto;
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 34
   color: hsl(0,0%,50%);
 %else
   color: GrayText;
@@ -1180,7 +1178,7 @@ menuitem[checked="true"].subviewbutton > .menu-iconic-left {
   visibility: hidden;
 }
 
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 34
 #customizationui-widget-multiview[mainViewId="PanelUI-panicView"] > .panel-viewcontainer,
 #customizationui-widget-multiview[mainViewId="PanelUI-panicView"] > .panel-viewcontainer > .panel-viewstack,
 #customizationui-widget-multiview[mainViewId="PanelUI-panicView"] > .panel-viewcontainer > .panel-viewstack > .panel-mainview,
@@ -1193,7 +1191,7 @@ menuitem[checked="true"].subviewbutton > .menu-iconic-left {
 }
 %endif
 
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 34
 .panel-mainview[panelid=customizationui-widget-panel],
 #customizationui-widget-multiview > .panel-viewcontainer,
 #customizationui-widget-multiview > .panel-viewcontainer > .panel-viewstack,

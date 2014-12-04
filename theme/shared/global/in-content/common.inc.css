@@ -15,7 +15,7 @@ xul|page {
   color: #424e5a;
 }
 
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 34
 *|* {
   -moz-user-select: text;
 }
@@ -37,7 +37,7 @@ html|h1 {
   margin: 0 0 .3em 0;
 }
 
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 34
 @-moz-document url-prefix("about:neterror") {
   /*
   https://bugzilla.mozilla.org/show_bug.cgi?id=1035536

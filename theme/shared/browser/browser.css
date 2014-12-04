@@ -16,7 +16,7 @@
 
 %define primaryToolbarButtons #back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button
 
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 34
 %define primaryToolbarButtons @primaryToolbarButtons@, #e10s-button, #panic-button
 %else
 %define primaryToolbarButtons @primaryToolbarButtons@, #e10s-button, #panic-button, #web-apps-button, #webide-button
@@ -24,7 +24,7 @@
 
 %define primaryToolbarButtons @primaryToolbarButtons@, @nestedButtons@
 
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 34
 /*
 :root {
   --toolbarbutton-hover-background: hsla(0,0%,100%,.3) linear-gradient(hsla(0,0%,100%,.7), hsla(0,0%,100%,.2));
@@ -620,7 +620,7 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
 
 /* ... */
 
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 34
 toolbarbutton[type="badged"] > .toolbarbutton-badge-container > .toolbarbutton-icon,
 %else
 toolbarbutton.badged-button > .toolbarbutton-badge-container > .toolbarbutton-icon,
@@ -842,7 +842,7 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
   transform: scaleX(-1);
 }
 
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 34
 #web-apps-button[cui-areatype="toolbar"] {
   list-style-image: url(chrome://symbolic-icons/skin/moz-apps.svg);
 }
@@ -853,7 +853,6 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
 }
 %endif
 
-%if APP_VERSION != 33
 #loop-button-throttled > .toolbarbutton-badge-container {
   list-style-image: url(chrome://browser/skin/loop/toolbar.png);
   -moz-image-region: rect(0, 18px, 18px, 0);
@@ -887,7 +886,6 @@ toolbar[brighttext] #loop-button-throttled > .toolbarbutton-badge-container {
 #loop-button-throttled:not([disabled="true"])[state="active"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container {
   -moz-image-region: rect(0, 126px, 18px, 108px);
 }
-%endif
 
 #main-window@darkTheme@ :-moz-any(#window-controls, .window-controls) .toolbarbutton-icon,
 #main-window@darkTheme@ :-moz-any(#back-button, #forward-button, #nav-bar-overflow-button, #PanelUI-menu-button) > .toolbarbutton-icon,
@@ -1032,7 +1030,7 @@ toolbarpaletteitem[place="palette"] > #panic-button {
   list-style-image: url(chrome://symbolic-icons/skin/forget.svg);
 }
 
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 34
 #web-apps-button[cui-areatype="menu-panel"],
 toolbarpaletteitem[place="palette"] > #web-apps-button {
   list-style-image: url(chrome://symbolic-icons/skin/moz-apps.svg);
@@ -1050,7 +1048,6 @@ toolbaritem[sdkstylewidget="true"] > toolbarbutton {
   -moz-image-region: rect(0, 832px, 32px, 800px);
 }
 
-%if APP_VERSION != 33
 #loop-button-throttled[cui-areatype="menu-panel"] > .toolbarbutton-badge-container,
 toolbarpaletteitem[place="palette"] > #loop-button-throttled > .toolbarbutton-badge-container {
   list-style-image: url(chrome://browser/skin/loop/menuPanel.png);
@@ -1086,7 +1083,6 @@ toolbarpaletteitem[place="palette"] > #loop-button-throttled > .toolbarbutton-ba
 #loop-button-throttled[cui-areatype="menu-panel"]:not([disabled="true"])[state="active"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container {
   -moz-image-region: rect(0, 224px, 32px, 192px);
 }
-%endif
 
 /* Wide panel control icons */
 
@@ -1115,7 +1111,7 @@ toolbarpaletteitem[place="palette"] > #zoom-controls > #zoom-in-button {
   list-style-image: url(chrome://symbolic-icons/skin/zoom-in.svg);
 }
 
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 34
 #add-share-provider {
   list-style-image: url(chrome://browser/skin/menuPanel-small.png);
   -moz-image-region: rect(0px, 96px, 16px, 80px);
@@ -1311,7 +1307,7 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   -moz-margin-end: 3px;
 }
 
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 34
 #urlbar-display {
 %else
 .urlbar-display {
@@ -1620,7 +1616,7 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   list-style-image: url(chrome://mozapps/skin/plugins/pluginBlocked-64.png);
 }
 
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 34
 .popup-notification-icon[popupid="plugins-not-found"] {
   list-style-image: url(chrome://browser/skin/pluginInstall-64.png);
 }
@@ -1647,17 +1643,11 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   list-style-image: url(chrome://global/skin/icons/webapps-64.png);
 }
 
-%if APP_VERSION == 33
-.popup-notification-icon[popupid="mixed-content-blocked"] {
-  list-style-image: url(chrome://browser/skin/mixed-content-blocked-64.png);
-}
-%else
 .popup-notification-icon[popupid="bad-content"] {
   list-style-image: url(chrome://browser/skin/bad-content-blocked-64.png);
 }
-%endif
 
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 34
 .popup-notification-icon[popupid="bad-content"][mixedblockdisabled],
 .popup-notification-icon[popupid="bad-content"][trackingblockdisabled] {
   list-style-image: url(chrome://browser/skin/bad-content-unblocked-64.png);
@@ -1821,7 +1811,7 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   list-style-image: url(chrome://symbolic-icons/skin/plugin-blocked.svg);
 }
 
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 34
 #plugin-install-notification-icon {
   list-style-image: url(chrome://symbolic-icons/skin/plugin-install.svg);
 }
@@ -1847,12 +1837,6 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   }
 }
 
-%if APP_VERSION == 33
-.mixed-content-blocked-notification-icon,
-#mixed-content-blocked-notification-icon {
-  list-style-image: url(chrome://symbolic-icons/skin/mixed-content-blocked.svg);
-}
-%else
 .bad-content-blocked-notification-icon,
 #bad-content-blocked-notification-icon {
   /*
@@ -1866,7 +1850,6 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   /* FIXME */
   list-style-image: url(chrome://browser/skin/bad-content-unblocked-16.png);
 }
-%endif
 
 .webRTC-shareDevices-notification-icon,
 #webRTC-shareDevices-notification-icon {
@@ -1971,7 +1954,6 @@ notification[value="translation"][state="translating"] .messageImage {
   }
 }
 
-%if APP_VERSION != 33
 .translation-welcome-panel {
   width: 305px;
 }
@@ -1996,7 +1978,6 @@ notification[value="translation"][state="translating"] .messageImage {
   padding: 1em 0;
   margin: 0 0;
 }
-%endif
 
 /* */
 
@@ -2016,7 +1997,7 @@ richlistitem[selected="true"] .ac-result-type-bookmark,
 }
 
 .ac-result-type-keyword,
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 34
 .autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage) {
 %else
 .autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage),
@@ -2027,7 +2008,7 @@ richlistitem[type~="action"][actiontype="searchengine"] > .ac-title-box > .ac-si
   height: 16px;
 }
 richlistitem[selected="true"] .ac-result-type-keyword,
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 34
 .autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage, selected) {
 %else
 .autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage, selected),
@@ -2956,7 +2937,7 @@ toolbarbutton.chevron {
   list-style-image: url("chrome://global/skin/toolbar/chevron.gif") !important;
 }
 
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 34
 toolbar[brighttext] toolbarbutton.chevron:not(:hover):not([open="true"]) {
   list-style-image: url("chrome://global/skin/toolbar/chevron-inverted.png") !important;
 }
@@ -3312,7 +3293,6 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   background-image: url("chrome://browser/skin/devtools/responsive-se-resizer.png");
 }
 
-%if APP_VERSION != 33
 /* FxOS custom mode with additional buttons and phone look'n feel */
 
 /* Hide devtools manual resizer */
@@ -3411,7 +3391,6 @@ toolbarbutton.chevron > .toolbarbutton-icon {
 .devtools-responsiveui-volume-down-button {
   border-bottom-left-radius: 12px;
 }
-%endif
 
 @media (min-resolution: 2dppx) {
   .devtools-responsiveui-resizebarV {
@@ -3839,7 +3818,6 @@ notification.pluginVulnerable .messageImage {
   list-style-image: url("chrome://browser/skin/notification-pluginBlocked.png");
 }
 
-%if APP_VERSION != 33
 .popup-notification-item-title[popupid="bad-content"] {
   font-weight: bold;
 }
@@ -3848,7 +3826,7 @@ notification.pluginVulnerable .messageImage {
   width: 17em;
 }
 
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 34
 .popup-notification-item-message[popupid="bad-content"][mixedblockdisabled]:not(.popup-notification-item-message-critical),
 .popup-notification-item-message[popupid="bad-content"][trackingblockdisabled]:not(.popup-notification-item-message-critical) {
   color: GrayText;
@@ -3863,7 +3841,6 @@ notification.pluginVulnerable .messageImage {
 .popup-notification-footer[popupid="bad-content"] {
   padding-top: 1em;
 }
-%endif
 
 /*** Status and progress indicator ***/
 
@@ -4073,7 +4050,7 @@ notification.pluginVulnerable .messageImage {
   display: none;
 }
 
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 34
 .toolbarbutton-badge-container {
   margin: 5px 3px;
   position: relative;
@@ -4195,19 +4172,11 @@ toolbar[iconsize="small"] .toolbarbutton-badge-container {
 .chat-toolbarbutton {
   -moz-appearance: none;
   border: none;
-%if APP_VERSION == 33
-  padding: 0;
-%else
   padding: 0 3px;
-%endif
   margin: 0;
   background: none;
-%if APP_VERSION == 33
-  width: 16px;
-%endif
 }
 
-%if APP_VERSION != 33
 .chat-toolbarbutton:hover {
   background-color: rgba(255,255,255,.35);
 }
@@ -4215,128 +4184,16 @@ toolbar[iconsize="small"] .toolbarbutton-badge-container {
 .chat-toolbarbutton:hover:active {
   background-color: rgba(255,255,255,.5);
 }
-%endif
 
 .chat-toolbarbutton > .toolbarbutton-text {
   display: none;
 }
 
 .chat-toolbarbutton > .toolbarbutton-icon {
-%if APP_VERSION == 33
-  width: inherit;
-%else
   width: 16px;
   height: 16px;
-%endif
 }
 
-%if APP_VERSION == 33
-.chat-close-button {
-  list-style-image: url('chrome://browser/skin/social/chat-icons.png');
-  -moz-image-region: rect(0, 16px, 16px, 0);
-}
-
-.chat-close-button:hover {
-  -moz-image-region: rect(0, 32px, 16px, 16px);
-}
-
-.chat-close-button:hover:active {
-  -moz-image-region: rect(0, 48px, 16px, 32px);
-}
-
-.chat-minimize-button {
-  list-style-image: url('chrome://browser/skin/social/chat-icons.png');
-  -moz-image-region: rect(16px, 16px, 32px, 0);
-}
-
-.chat-minimize-button:hover {
-  -moz-image-region: rect(16px, 32px, 32px, 16px);
-}
-
-.chat-minimize-button:hover:active {
-  -moz-image-region: rect(16px, 48px, 32px, 32px);
-}
-
-.chat-swap-button {
-  list-style-image: url('chrome://browser/skin/social/chat-icons.png');
-  -moz-image-region: rect(48px, 16px, 64px, 0);
-}
-
-.chat-swap-button:hover {
-  -moz-image-region: rect(48px, 32px, 64px, 16px);
-}
-
-.chat-swap-button:hover:active {
-  -moz-image-region: rect(48px, 48px, 64px, 32px);
-}
-
-chatbar > chatbox > .chat-titlebar > .chat-swap-button {
-  list-style-image: url('chrome://browser/skin/social/chat-icons.png');
-  -moz-image-region: rect(32px, 16px, 48px, 0);
-}
-
-chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover {
-  -moz-image-region: rect(32px, 32px, 48px, 16px);
-}
-
-chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover:active {
-  -moz-image-region: rect(32px, 48px, 48px, 32px);
-}
-
-@media (min-resolution: 2dppx) {
-  .chat-close-button {
-    list-style-image: url('chrome://browser/skin/social/chat-icons@2x.png');
-    -moz-image-region: rect(0, 32px, 32px, 0);
-  }
-
-  .chat-close-button:hover {
-    -moz-image-region: rect(0, 64px, 32px, 32px);
-  }
-
-  .chat-close-button:hover:active {
-    -moz-image-region: rect(0, 96px, 32px, 64px);
-  }
-
-  .chat-minimize-button {
-    list-style-image: url('chrome://browser/skin/social/chat-icons@2x.png');
-    -moz-image-region: rect(32px, 32px, 64px, 0);
-  }
-
-  .chat-minimize-button:hover {
-    -moz-image-region: rect(32px, 64px, 64px, 32px);
-  }
-
-  .chat-minimize-button:hover:active {
-    -moz-image-region: rect(32px, 96px, 64px, 64px);
-  }
-
-  .chat-swap-button {
-    list-style-image: url('chrome://browser/skin/social/chat-icons@2x.png');
-    -moz-image-region: rect(96px, 32px, 128px, 0);
-  }
-
-  .chat-swap-button:hover {
-    -moz-image-region: rect(96px, 64px, 128px, 32px);
-  }
-
-  .chat-swap-button:hover:active {
-    -moz-image-region: rect(96px, 96px, 128px, 64px);
-  }
-
-  chatbar > chatbox > .chat-titlebar > .chat-swap-button {
-    list-style-image: url('chrome://browser/skin/social/chat-icons@2x.png');
-    -moz-image-region: rect(64px, 32px, 96px, 0);
-  }
-
-  chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover {
-    -moz-image-region: rect(64px, 64px, 96px, 32px);
-  }
-
-  chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover:active {
-    -moz-image-region: rect(64px, 96px, 96px, 64px);
-  }
-}
-%else
 .chat-close-button {
   list-style-image: url("chrome://browser/skin/social/chat-icons.svg#close");
 }
@@ -4365,7 +4222,6 @@ chatbar > chatbox > .chat-titlebar > .chat-swap-button:hover:active {
 chatbar > chatbox > .chat-titlebar > .chat-swap-button {
   transform: none;
 }
-%endif
 
 .chat-title {
   font-weight: bold;
@@ -4375,21 +4231,11 @@ chatbar > chatbox > .chat-titlebar > .chat-swap-button {
 }
 
 .chat-titlebar {
-%if APP_VERSION == 33
-  height: 20px;
-  min-height: 20px;
-%else
   height: 30px;
   min-height: 30px;
-%endif
   width: 100%;
   margin: 0;
-%if APP_VERSION == 33
-  padding: 2px;
-  -moz-padding-start: 6px;
-%else
   padding: 7px 6px;
-%endif
   border: none;
   border-bottom: 1px solid #ccc;
   cursor: pointer;
@@ -4411,7 +4257,6 @@ chatbar > chatbox > .chat-titlebar > .chat-swap-button {
   background-position: 0 -10px;
 }
 
-%if APP_VERSION != 33
 chatbox[dark=true] > .chat-titlebar,
 chatbox[dark=true] > .chat-titlebar[selected] {
   border-bottom: none;
@@ -4423,7 +4268,6 @@ chatbox[dark=true] > .chat-titlebar > hbox > .chat-title {
   font-weight: normal;
   color: #c1c1c1;
 }
-%endif
 
 .chat-frame {
   padding: 0;
@@ -4631,14 +4475,6 @@ chatbox {
 }
 
 #customization-header {
-%if APP_VERSION == 33
-  font-size: 1.5em;
-  line-height: 1.5em;
-  color: rgb(64,100,128);
-  font-weight: 300;
-  margin-bottom: 1em;
-  padding: 25px 25px 0;
-%else
   font-size: 1.75em;
   line-height: 1.75em;
   color: #666;
@@ -4646,7 +4482,6 @@ chatbox {
   margin: 25px 25px 12px;
   padding-bottom: 12px;
   border-bottom: 1px solid #e5e5e5;
-%endif
 }
 
 #customization-panel-container {
@@ -4676,7 +4511,7 @@ chatbox {
   -moz-appearance: none;
 }
 
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 34
 #customization-titlebar-visibility-button[checked],
 #customization-devedition-theme-button[checked] {
   background-color: rgb(218, 218, 218);
@@ -4722,7 +4557,7 @@ chatbox {
 
 #customization-titlebar-visibility-button[checked] {
   -moz-image-region: rect(0, 48px, 24px, 24px);
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 34
   background-color: rgb(218, 218, 218);
   border-color: rgb(168, 168, 168);
   text-shadow: 0 1px rgb(236, 236, 236);
@@ -4774,24 +4609,16 @@ toolbarpaletteitem[notransition][place="panel"] {
 }
 
 toolbarpaletteitem > toolbarbutton > .toolbarbutton-icon,
-%if APP_VERSION != 33
 toolbarpaletteitem > toolbarbutton > .toolbarbutton-badge-container > .toolbarbutton-icon,
-%endif
 toolbarpaletteitem > toolbaritem.panel-wide-item,
 toolbarpaletteitem > toolbarbutton[type="menu-button"] {
   transition: transform .3s cubic-bezier(.6, 2, .75, 1.5) !important;
 }
 
-%if APP_VERSION == 33
-toolbarpaletteitem[mousedown] > toolbarbutton > .toolbarbutton-icon {
-  transform: scale(1.3);
-}
-%else
 toolbarpaletteitem[mousedown] > toolbarbutton > .toolbarbutton-icon,
 toolbarpaletteitem[mousedown] > toolbarbutton > .toolbarbutton-badge-container > .toolbarbutton-icon {
   transform: scale(1.3);
 }
-%endif
 
 toolbarpaletteitem[mousedown] > toolbaritem.panel-wide-item,
 toolbarpaletteitem[mousedown] > toolbarbutton[type="menu-button"] {
@@ -4853,7 +4680,6 @@ toolbarpaletteitem[place="toolbar"] {
   margin-right: 0;
 }
 
-%if APP_VERSION != 33
 #customization-lwtheme-menu > .panel-arrowcontainer > .panel-arrowcontent {
   -moz-box-orient: vertical;
   /* Make the panel padding uniform across all platforms due to the
@@ -4947,7 +4773,6 @@ toolbarpaletteitem[place="toolbar"] {
 .customization-lwtheme-menu-footeritem:first-child {
   -moz-border-end: 1px solid hsla(210,4%,10%,.15);
 }
-%endif
 
 #customization-tipPanel > .panel-arrowcontainer > .panel-arrowcontent {
   padding: 0;
@@ -5342,11 +5167,9 @@ toolbarpaletteitem[place="toolbar"] {
   margin: 7px;
 }
 
-%if APP_VERSION != 33
 #context-navigation {
   padding-top: 4px;
 }
-%endif
 
 #context-navigation > .menuitem-iconic > .menu-iconic-left {
   visibility: visible;

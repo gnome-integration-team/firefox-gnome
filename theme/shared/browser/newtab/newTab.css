@@ -154,7 +154,7 @@
   opacity: 1;
 }
 
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 34
 .newtab-thumbnail.enhanced-content:hover {
   opacity: 0;
 }

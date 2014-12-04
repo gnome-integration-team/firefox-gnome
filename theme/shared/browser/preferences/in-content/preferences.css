@@ -8,50 +8,11 @@
 dialog,
 window,
 prefwindow,
-%if APP_VERSION == 33
-page,
-%endif
 .windowDialog {
   -moz-appearance: none;
   background-color: #eaeaea;
   color: #424E5A;
 }
-
-%if APP_VERSION == 33
-* {
-  -moz-user-select: text;
-}
-
-treecol {
-  /* override the * rule to let the treecol be sortable */
-  -moz-user-select: none;
-}
-
-caption {
-  -moz-appearance: none;
-  margin: 0;
-}
-
-caption > label {
-  font-size: 1.1rem;
-  font-weight: bold;
-  line-height: 20px;
-  margin: 0 !important;
-}
-
-.main-content {
-  background: #efefef;
-  -moz-border-start: 2px solid;
-  overflow: auto;
-  padding: 40px 48px 48px;
-}
-.main-content:-moz-locale-dir(ltr) {
-  -moz-border-left-colors: #dbdbdb #fafafa;
-}
-.main-content:-moz-locale-dir(rtl) {
-  -moz-border-right-colors: #dbdbdb #fafafa;
-}
-%endif
 
 prefpane {
   max-width: 800px;
@@ -61,7 +22,7 @@ prefpane {
   line-height: 20px;
 }
 
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 34
 * {
   -moz-user-select: text;
 }
@@ -73,474 +34,7 @@ treecol {
 }
 %endif
 
-%if APP_VERSION == 33
-prefpane > .content-box {
-  overflow: visible;
-}
-
-/* groupboxes */
-
-groupbox {
-  -moz-appearance: none;
-  border: none;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  -moz-margin-end: 0;
-  -moz-padding-start: 0;
-  -moz-padding-end: 0;
-  font-size: 1.0rem;
-}
-
-groupbox label {
-  /* !important needed to override toolkit !important rule */
-  -moz-margin-start: 0 !important;
-  -moz-margin-end: 0 !important;
-}
-
-/* tabpanels and tabs */
-
-tabpanels {
-  -moz-appearance: none;
-  font-size: 1.0rem;
-  line-height: 20px;
-  color: #424E5A;
-  border: none;
-  padding: 0;
-  background-color: transparent;
-}
-
-tabs {
-  margin-bottom: 10px;
-  border-top: 1px solid #c1c1c1;
-  border-bottom: 1px solid #c1c1c1;
-  background-color: #fbfbfb;
-}
-
-.tabs-left,
-.tabs-right {
-  border-bottom: none;
-}
-
-tab {
-  -moz-appearance: none;
-  margin-top: 0;
-  padding: 0 20px;
-  min-height: 44px;
-  color: #424f5a;
-  background-color: #fbfbfb;
-  border-width: 0;
-  transition: background-color 50ms ease 0s;
-}
-
-tab:hover {
-  background-color: #ebebeb;
-}
-
-tab[selected] {
-  background-color: #ebebeb;
-  box-shadow: inset 0 -4px 0 0 #ff9500;
-}
-
-.tab-text {
-  font-size: 1.2rem;
-  line-height: 20px;
-}
-
-/* buttons and menulists */
-
-button,
-%if APP_VERSION != 33
-colorpicker[type="button"],
-%endif
-menulist {
-  -moz-appearance: none;
-  height: 30px;
-  color: #333333;
-  line-height: 20px;
-  text-shadow: 0 1px 1px #FEFFFE;
-  border: 1px solid #C1C1C1;
-  -moz-border-top-colors: none !important;
-  -moz-border-right-colors: none !important;
-  -moz-border-bottom-colors: none !important;
-  -moz-border-left-colors: none !important;
-  border-radius: 2px;
-  background-color: #FBFBFB;
-}
-
-button:not([disabled="true"]):hover,
-%if APP_VERSION != 33
-colorpicker[type="button"]:not([disabled="true"]):hover,
-%endif
-menulist:not([disabled="true"]):hover {
-  background-color: #EBEBEB;
-}
-
-button:not([disabled="true"]):hover:active,
-%if APP_VERSION != 33
-colorpicker[type="button"]:not([disabled="true"]):hover:active,
-%endif
-menulist[open="true"]:not([disabled="true"]) {
-  background-color: #DADADA;
-}
-
-button[disabled="true"],
-%if APP_VERSION != 33
-colorpicker[type="button"][disabled="true"],
-%endif
-menulist[disabled="true"] {
-  opacity: 0.5;
-}
-
-%if APP_VERSION != 33
-colorpicker[type="button"] {
-  padding: 6px;
-  width: 50px;
-}
-%endif
-
-button > .button-box,
-menulist > .menulist-label-box {
-  padding-right: 10px !important;
-  padding-left: 10px !important;
-}
-
-button[type="menu"] > .button-box > .button-menu-dropmarker {
-  -moz-appearance: none;
-  margin: 1px 0;
-  -moz-margin-start: 10px;
-  padding: 0;
-  width: 10px;
-  height: 16px;
-  border: none;
-  background-color: transparent;
-  list-style-image: url("chrome://browser/skin/preferences/in-content/dropdown.png");
-}
-
-.help-button {
-  min-width: 30px;
-  border-radius: 2px;
-  border: 1px solid #C1C1C1;
-  background-color: #FFCB00;
-  background-image: none;
-  box-shadow: none;
-}
-
-.help-button:not([disabled="true"]):hover {
-  background-color: #F4C200;
-  background-image: none;
-}
-
-.help-button:not([disabled="true"]):hover:active {
-  background-color: #EABA00;
-  background-image: none;
-}
-
-.close-icon > .button-box,
-.help-button > .button-box {
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-right: 0 !important;
-  padding-left: 0 !important;
-}
-
-.help-button > .button-box > .button-icon {
-  width: 26px;
-  height: 26px;
-  background-image: url("chrome://browser/skin/preferences/in-content/help-glyph.png");
-  background-position: center;
-}
-
-@media (min-resolution: 2dppx) {
-  .help-button > .button-box > .button-icon {
-    background-size: 26px 26px;
-    background-image: url("chrome://browser/skin/preferences/in-content/help-glyph@2x.png");
-  }
-}
-
-.help-button > .button-box > .button-text {
-  display: none;
-}
-
-.spinbuttons-button {
-  -moz-margin-start: 10px !important;
-  -moz-margin-end: 2px !important;
-}
-
-.spinbuttons-up {
-  margin-top: 2px !important;
-  border-radius: 1px 1px 0 0;
-}
-
-.spinbuttons-down  {
-  margin-bottom: 2px !important;
-  border-radius: 0 0 1px 1px;
-}
-
-.spinbuttons-button > .button-box {
-  padding: 1px 5px 2px !important;
-}
-
-.spinbuttons-up > .button-box > .button-icon {
-  list-style-image: url("chrome://global/skin/arrow/arrow-up.gif");
-}
-
-.spinbuttons-up[disabled="true"] > .button-box > .button-icon {
-  list-style-image: url("chrome://global/skin/arrow/arrow-up-dis.gif");
-}
-
-.spinbuttons-down > .button-box > .button-icon {
-  list-style-image: url("chrome://global/skin/arrow/arrow-dn.gif");
-}
-
-.spinbuttons-down[disabled="true"] > .button-box > .button-icon {
-  list-style-image: url("chrome://global/skin/arrow/arrow-dn-dis.gif");
-}
-
-menulist:not([editable="true"]) > .menulist-dropmarker {
-  -moz-appearance: none;
-  -moz-margin-end: 10px;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  list-style-image: url("chrome://browser/skin/preferences/in-content/dropdown.png")
-}
-
-menulist[disabled="true"]:not([editable="true"]) > .menulist-dropmarker {
-  list-style-image: url("chrome://browser/skin/preferences/in-content/dropdown-disabled.png")
-}
-
-@media (min-resolution: 2dppx) {
-  menulist:not([editable="true"]) > .menulist-dropmarker,
-  button[type="menu"] > .button-box > .button-menu-dropmarker {
-    list-style-image: url("chrome://browser/skin/preferences/in-content/dropdown@2x.png");
-  }
-
-  menulist[disabled="true"]:not([editable="true"]) > .menulist-dropmarker {
-    list-style-image: url("chrome://browser/skin/preferences/in-content/dropdown-disabled@2x.png")
-  }
-
-  menulist:not([editable="true"]) > .menulist-dropmarker > .dropmarker-icon,
-  button[type="menu"] > .button-box > .button-menu-dropmarker > .dropmarker-icon {
-    width: 10px;
-    height: 16px;
-  }
-}
-
-menulist > menupopup,
-button[type="menu"] > menupopup {
-  -moz-appearance: none;
-  border: 1px solid rgba(23,50,77,0.4);
-  border-radius: 2px;
-  background-color: #FFFFFF;
-}
-
-menulist > menupopup menu,
-menulist > menupopup menuitem,
-button[type="menu"] > menupopup menu,
-button[type="menu"] > menupopup menuitem {
-  -moz-appearance: none;
-  font-size: 1.0rem;
-  line-height: 20px;
-  height: 40px;
-  color: #333333;
-  -moz-padding-start: 10px;
-  -moz-padding-end: 30px;
-}
-
-menulist > menupopup > menu[_moz-menuactive="true"],
-menulist > menupopup > menuitem[_moz-menuactive="true"],
-button[type="menu"] > menupopup > menu[_moz-menuactive="true"],
-button[type="menu"] > menupopup > menuitem[_moz-menuactive="true"] {
-  color: #333333;
-  background-color: transparent;
-  background-image: linear-gradient(rgba(76,177,255,0.25), rgba(23,146,229,0.25));
-}
-
-menulist > menupopup > menu[selected="true"],
-menulist > menupopup > menuitem[selected="true"],
-button[type="menu"] > menupopup > menu[selected="true"],
-button[type="menu"] > menupopup > menuitem[selected="true"] {
-  color: #fff;
-  background-image: linear-gradient(#4CB1FF, #1792E5);
-}
-
-menulist > menupopup menuseparator,
-button[type="menu"] > menupopup menuseparator {
-  -moz-appearance: none;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  padding: 0;
-  border-top: 1px solid rgba(23,50,77,0.4);
-  border-bottom: none;
-}
-
-/* textboxes */
-
-textbox {
-  -moz-appearance: none;
-  height: 30px;
-  color: #333333;
-  line-height: 20px;
-  text-shadow: 0 1px 1px #FEFFFE;
-  padding-right: 10px;
-  padding-left: 10px;
-  border: 1px solid #C1C1C1;
-  -moz-border-top-colors: none !important;
-  -moz-border-right-colors: none !important;
-  -moz-border-bottom-colors: none !important;
-  -moz-border-left-colors: none !important;
-  border-radius: 2px;
-  background-color: #FFF;
-}
-
-textbox[focused] {
-  border-color: #0095DD;
-}
-
-textbox[disabled="true"] {
-  opacity: 0.5;
-}
-
-/* Links */
-
-.text-link,
-.inline-link,
-html|a.inline-link {
-  font-size: 1.0rem;
-  line-height: 20px;
-  color: #0095DD;
-}
-
-.text-link:hover,
-.inline-link:hover {
-  color: #4CB1FF;
-  text-decoration: none;
-}
-
-.text-link:hover:active,
-.inline-link:hover:active {
-  color: #FF9500;
-  text-decoration: none;
-}
-
-/* Checkboxes and radio buttons */
-
-checkbox {
-  -moz-margin-start: 0;
-}
-
-.checkbox-check {
-  -moz-appearance: none;
-  width: 23px;
-  height: 23px;
-  border-radius: 2px;
-  border: 1px solid #C1C1C1;
-  -moz-margin-end: 10px;
-  background-color: #f1f1f1;
-  background-image: linear-gradient(#ffffff, rgba(255,255,255,0.8));
-  background-position: center center;
-  background-repeat: no-repeat;
-  box-shadow: 0 1px 1px 0 #ffffff, inset 0 2px 0 0 rgba(0,0,0,0.03);
-}
-
-checkbox:not([disabled="true"]):hover > .checkbox-check {
-  border-color: #0095DD;
-}
-
-.checkbox-check[checked] {
-  background-image: url("chrome://browser/skin/preferences/in-content/check.png"),
-                    /* !important needed to override toolkit !important rule */
-                    linear-gradient(#ffffff, rgba(255,255,255,0.8)) !important;
-}
-
-checkbox[disabled="true"] > .checkbox-check {
-  opacity: 0.5;
-}
-
-.checkbox-label-box {
-  -moz-margin-start: -1px; /* negative margin for the transparent border */
-  -moz-padding-start: 0;
-}
-
-@media (min-resolution: 2dppx) {
-  .checkbox-check[checked] {
-    background-size: 12px 12px, auto;
-    background-image: url("chrome://browser/skin/preferences/in-content/check@2x.png"),
-                      linear-gradient(#ffffff, rgba(255,255,255,0.8)) !important;
-  }
-}
-
-.radio-check {
-  -moz-appearance: none;
-  width: 23px;
-  height: 23px;
-  border: 1px solid #C1C1C1;
-  border-radius: 50%;
-  -moz-margin-end: 10px;
-  background-color: #f1f1f1;
-  background-image: linear-gradient(#ffffff, rgba(255,255,255,0.80));
-  box-shadow: 0 1px 1px 0 #ffffff, inset 0 2px 0 0 rgba(0,0,0,0.03);
-}
-
-radio:not([disabled="true"]):hover > .radio-check {
-  border-color: #0095DD;
-}
-
-.radio-check[selected] {
-  background-image: radial-gradient(circle, rgb(23,146,229),
-                    rgb(76,177,255) 5.5px, rgba(76,177,255,0.2) 6px,
-                    transparent 6px),
-                    linear-gradient(rgb(255,255,255), rgba(255,255,255,0.8));
-}
-
-radio[disabled="true"] > .radio-check {
-  opacity: 0.5;
-}
-
-.radio-label-box {
-  -moz-margin-start: -1px; /* negative margin for the transparent border */
-  -moz-margin-end: 10px;
-  -moz-padding-start: 0;
-}
-%endif
-
 /* Category List */
-
-%if APP_VERSION == 33
-#categories {
-  -moz-appearance: none;
-  background-color: transparent;
-  padding-top: 55px;
-  margin: 0;
-}
-
-.category {
-  -moz-appearance: none;
-  color: #606060;
-  margin: 8px 0 0 0;
-  border: 0;
-  -moz-border-start: 1px solid transparent;
-  padding: 5px 0 4px 0;
-  -moz-padding-start: 16px;
-  -moz-padding-end: 42px;
-}
-
-.category[selected] {
-  background: #7487e4;
-  background-clip: padding-box;
-  border-color: #bdc9e8;
-  color: #fff;
-}
-
-#categories[keyboard-navigation="true"]:-moz-focusring > .category[current] {
-  outline: 1px dotted #fff;
-  outline-offset: -5px;
-}
-
-.category-name {
-  font-size: 1.03em;
-}
-%endif
 
 .category-icon {
   display: none;
@@ -548,41 +42,14 @@ radio[disabled="true"] > .radio-check {
 
 /* header */
 
-%if APP_VERSION == 33
-.header {
-  margin-bottom: 10px;
-%if APP_VERSION != 33
-  border-bottom: 1px solid #c8c8c8;
-  padding-bottom: 10px;
-%endif
-}
-%endif
-
-%if APP_VERSION == 33
-.header-icon {
-  display: none;
-}
-%endif
-
-%if APP_VERSION != 33
 #header-advanced {
   border-bottom: none;
   padding-bottom: 0;
 }
-%endif
-
-%if APP_VERSION == 33
-.header-name {
-  font-size: 2.0rem;
-  font-weight: normal;
-  line-height: 32px;
-  margin: 0;
-}
-%endif
 
 /* General Pane */
 
-%if APP_VERSION != 33 && APP_VERSION != 34
+%if APP_VERSION != 34
 #useFirefoxSync {
   font-size: 90%;
   -moz-margin-end: 8px !important;
@@ -593,55 +60,9 @@ radio[disabled="true"] > .radio-check {
 }
 %endif
 
-%if APP_VERSION != 33
 #isNotDefaultLabel {
   font-weight: bold;
 }
-%endif
-
-%if APP_VERSION == 33
-filefield {
-  -moz-appearance: none;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-}
-
-.fileFieldContentBox {
-  background-color: transparent;
-}
-
-.fileFieldIcon {
-  -moz-margin-start: 10px;
-  -moz-margin-end: 0;
-}
-
-.fileFieldLabel {
-  -moz-margin-start: -26px;
-  -moz-padding-start: 36px;
-}
-
-textbox:-moz-locale-dir(rtl),
-.fileFieldLabel:-moz-locale-dir(rtl),
-textbox + button:-moz-locale-dir(ltr),
-filefield + button:-moz-locale-dir(ltr) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-textbox:-moz-locale-dir(ltr),
-.fileFieldLabel:-moz-locale-dir(ltr),
-textbox + button:-moz-locale-dir(rtl),
-filefield + button:-moz-locale-dir(rtl) {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-textbox + button,
-filefield + button {
-  -moz-border-start: none;
-}
-%endif
 
 #downloadFolder {
   -moz-margin-start: 0;
@@ -670,13 +91,11 @@ filefield + button {
   height: 500px;
 }
 
-%if APP_VERSION != 33
 #handlersView > listheader {
   -moz-appearance: none;
   border: 0;
   padding: 0;
 }
-%endif
 
 #typeColumn,
 #actionColumn {
@@ -718,11 +137,7 @@ filefield + button {
 #typeColumn > .treecol-sortdirection[sortDirection=descending],
 #actionColumn > .treecol-sortdirection[sortDirection=descending] {
   -moz-appearance: none;
-%if APP_VERSION == 33
-  list-style-image: url("chrome://browser/skin/preferences/in-content/sorter.png");
-%else
   list-style-image: url("chrome://global/skin/in-content/sorter.png");
-%endif
 }
 
 #typeColumn > .treecol-sortdirection[sortDirection=descending],
@@ -737,11 +152,7 @@ filefield + button {
   #actionColumn > .treecol-sortdirection[sortDirection=descending] {
     width: 12px;
     height: 8px;
-%if APP_VERSION == 33
-    list-style-image: url("chrome://browser/skin/preferences/in-content/sorter@2x.png");
-%else
     list-style-image: url("chrome://global/skin/in-content/sorter@2x.png");
-%endif
   }
 }
 
@@ -799,12 +210,8 @@ description > html|a {
 #weavePrefsDeck > vbox > description,
 #weavePrefsDeck > vbox > #pairDevice > label,
 #weavePrefsDeck > #needsUpdate > hbox > #loginError,
-%if APP_VERSION != 33
 #weavePrefsDeck > #hasFxaAccount > hbox:not(#tosPP-normal) > label,
 #weavePrefsDeck > #hasFxaAccount > hbox:not(#tosPP-small) > label {
-%else
-#weavePrefsDeck > #hasFxaAccount > hbox:not(#tosPP) > label {
-%endif
   /* no margin-start for elements at the begin of a line */
   -moz-margin-start: 0;
 }
@@ -846,18 +253,12 @@ description > html|a {
   padding-left: 6px;
 }
 
-%if APP_VERSION == 33
-#dialogTitle {
-  -moz-margin-start: 5px !important;
-}
-%else
 #dialogBox[resizable="true"] {
   resize: both;
   overflow: hidden;
   min-height: 30em;
   min-width: 66ch;
 }
-%endif
 
 .close-icon {
   background-color: transparent !important;
@@ -873,91 +274,25 @@ description > html|a {
   padding: 0;
 }
 
-%if APP_VERSION != 33
 #dialogFrame {
   -moz-box-flex: 1;
   /* Default dialog dimensions */
   height: 30em;
   width: 66ch;
 }
-%else
-#dialogFrame {
-  /* Default dialog dimensions */
-  height: 20em;
-  width: 66ch;
-}
-%endif
-
-%if APP_VERSION == 33
-/* needs to be removed with bug 1035625 */
-:-moz-any(dialog, window, prefwindow) resizer {
-  display: none;
-}
-%endif
 
 tree:not(#rejectsTree) {
   min-height: 15em;
 }
 
-%if APP_VERSION != 33
 :-moz-any(dialog, window, prefwindow) groupbox {
   -moz-margin-start: 8px;
   -moz-margin-end: 8px;
 }
-%endif
 
 /**
  * End sub-dialog
  */
-
-%if APP_VERSION == 33
-tab[selected] {
-  /* Override styles for tab[selected] from
-     toolkit/themes/linux/global/tabbox.css */
-  margin-bottom: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-button > .button-box,
-menulist > .menulist-label-box {
-  -moz-appearance: none;
-}
-
-button[type="menu"] > .button-box > .button-menu-dropmarker {
-  -moz-appearance: none !important;
-}
-
-.help-button > .button-box > .button-icon {
-  -moz-margin-end: 0;
-}
-
-menulist:not([editable="true"]) > .menulist-dropmarker {
-  display: -moz-box;
-  margin-top: 6px;
-  margin-bottom: 6px;
-}
-
-checkbox {
-  -moz-binding: url("chrome://global/content/bindings/checkbox.xml#checkbox");
-  -moz-box-align: center;
-}
-
-radio {
-  -moz-binding: url("chrome://global/content/bindings/radio.xml#radio");
-  -moz-box-align: center;
-  -moz-margin-start: 0;
-}
-
-.radio-label-box {
-  -moz-appearance: none;
-}
-
-.numberbox-input-box {
-  -moz-appearance: none;
-  border-width: 0;
-}
-%endif
 
 spinbuttons {
   -moz-appearance: none;
@@ -989,7 +324,6 @@ menulist.actionsMenu > .menulist-dropmarker {
   margin-bottom: 11px;
 }
 
-%if APP_VERSION != 33
 textbox + button,
 filefield + button {
   -moz-margin-start: -4px;
@@ -1003,4 +337,3 @@ filefield + button {
   margin-right: 8px !important;
   margin-left: 8px !important;
 }
-%endif

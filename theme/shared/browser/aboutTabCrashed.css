@@ -30,7 +30,7 @@ p {
   display: none;
 }
 
-%if APP_VERSION == 33 || APP_VERSION == 34
+%if APP_VERSION == 34
 .crashDumpAvaible #report-box {
   display: block;
 }
