@@ -5212,9 +5212,9 @@ toolbarpaletteitem[place="toolbar"] {
 }
 
 #context-navigation > .menuitem-iconic > .menu-iconic-left > .menu-iconic-icon {
-  width: 16px;
-  height: 16px;
-  margin: 7px;
+  width: 20px;
+  height: 20px;
+  margin: 3px;
 }
 
 #context-navigation {
