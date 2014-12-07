@@ -71,6 +71,10 @@
   background-color: #a1a1a1;
 }
 
+#main-window@darkTheme@ #navigator-toolbox::after {
+  background-color: #1c1f1f;
+}
+
 /* Toolbars */
 
 #toolbar-menubar {
@@ -2416,6 +2420,10 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   right: 0;
   z-index: 0;
   border-bottom: 1px solid #a1a1a1;
+}
+
+#TabsToolbar@darkTheme@::after {
+  border-bottom-color: #1c1f1f;
 }
 
 /*
