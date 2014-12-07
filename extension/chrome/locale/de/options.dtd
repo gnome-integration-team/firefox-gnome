@@ -1,0 +1,13 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY reliefbuttons.label           "Hervorgehobene Schaltflächen in der Symbolleiste">
+<!ENTITY inactivestate.label           "Anderer Stil für inaktives Fenster">
+<!ENTITY maxtabwidth.label             "Maximale Tab-Breite">
+<!ENTITY default.label                 "Standard">
+<!ENTITY small.label                   "Klein">
+<!ENTITY normal.label                  "Normal">
+<!ENTITY large.label                   "Groß">
+<!ENTITY stretch.label                 "Ausdehnen">
+<!ENTITY urlbarhistorydropmarker.label "Dropdown-Pfeil in der Adressleiste ausblenden">
