@@ -1,0 +1,54 @@
+%if 0
+/* Pushbullet
+ * id: jid1-BYcQOfYfmBMd9A@jetpack
+ * URL: https://addons.mozilla.org/firefox/addon/pushbullet/ */
+%endif
+
+%include ../variables.inc.css
+
+/* Toolbar */
+
+/* remove original icon */
+toolbarbutton[label="Pushbullet"] .toolbarbutton-icon {
+  display: none;
+}
+
+/* invisible label, used only for background-image */
+toolbarbutton[label="Pushbullet"] .toolbarbutton-text {
+  color: rgba(0, 0, 0, 0.0);
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url(chrome://symbolic-icons/skin/extensions/pushbullet.svg) center no-repeat !important;
+}
+
+#main-window@darkTheme@ toolbarbutton[label="Pushbullet"][cui-areatype="toolbar"] .toolbarbutton-text {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
+}
+
+/* Panel */
+
+toolbarbutton[label="Pushbullet"][cui-areatype="menu-panel"] .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] > toolbarbutton[label="Pushbullet"] .toolbarbutton-icon {
+  display: block !important;
+  visibility: collapse !important;
+}
+
+toolbarbutton[label="Pushbullet"][cui-areatype="menu-panel"] .toolbarbutton-text,
+toolbarpaletteitem[place="palette"] > toolbarbutton[label="Pushbullet"] .toolbarbutton-text {
+  opacity: 0.6;
+  width: 32px;
+  height: 32px;
+  background-size: 32px 32px !important;
+}
+
+/* label alignement wrong because of .toolbarbutton-icon hack */
+toolbarbutton[label="Pushbullet"][cui-areatype="menu-panel"] .toolbarbutton-multiline-text,
+toolbarpaletteitem[place="palette"] > toolbarbutton[label="Pushbullet"] .toolbarbutton-multiline-text {
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+}
+
+#main-window@darkThemeFull@ toolbarbutton[label="Pushbullet"][cui-areatype="menu-panel"] .toolbarbutton-text {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
+}

@@ -221,4 +221,14 @@ notification .messageImage:-moz-window-inactive {
   color: #2e3436 !important;
 }
 
+/* ::::: browser/extensions/pushbullet.css ::::: */
+
+/* Pushbullet
+ * id: jid1-BYcQOfYfmBMd9A@jetpack
+ * URL: https://addons.mozilla.org/firefox/addon/pushbullet/ */
+
+toolbarbutton[label="Pushbullet"]:-moz-window-inactive .toolbarbutton-text {
+  opacity: 0.5;
+}
+
 }
