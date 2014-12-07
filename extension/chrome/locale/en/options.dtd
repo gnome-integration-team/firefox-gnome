@@ -4,6 +4,7 @@
 
 <!ENTITY reliefbuttons.label           "Relief buttons on the navigation toolbar">
 <!ENTITY inactivestate.label           "Enable different style for unfocused windows">
+<!ENTITY e10sdisableunderline.label    "Disable the underline on e10s tabs">
 <!ENTITY maxtabwidth.label             "Maximum tab width">
 <!ENTITY default.label                 "Default">
 <!ENTITY small.label                   "Small">

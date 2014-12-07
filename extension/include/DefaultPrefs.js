@@ -5,6 +5,7 @@
 const DefaultPrefs = {
     "tab-max-width": 0,
     "relief-buttons": false,
+    "e10s-disable-underline": false,
     "inactive-state": false,
     "tabs-on-top": false,
     "urlbar-history-dropmarker": false,

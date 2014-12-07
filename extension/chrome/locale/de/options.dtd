@@ -4,6 +4,7 @@
 
 <!ENTITY reliefbuttons.label           "Hervorgehobene Schaltflächen in der Symbolleiste">
 <!ENTITY inactivestate.label           "Anderer Stil für inaktives Fenster">
+<!ENTITY e10sdisableunderline.label    "Disable the underline on e10s tabs">
 <!ENTITY maxtabwidth.label             "Maximale Tab-Breite">
 <!ENTITY default.label                 "Standard">
 <!ENTITY small.label                   "Klein">

@@ -4,6 +4,7 @@
 
 <!ENTITY reliefbuttons.label           "Объемные кнопки на панели навигации">
 <!ENTITY inactivestate.label           "Включить отдельный стиль для неактивных окон">
+<!ENTITY e10sdisableunderline.label    "Удалить подчёркивание для e10s-вкладок">
 <!ENTITY maxtabwidth.label             "Максимальная ширина вкладки">
 <!ENTITY default.label                 "По умолчанию">
 <!ENTITY small.label                   "Малый">

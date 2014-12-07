@@ -11,6 +11,8 @@
            type="bool" title="&reliefbuttons.label;"/>
   <setting pref="extensions.gnome-theme-tweak.inactive-state"
            type="bool" title="&inactivestate.label;"/>
+  <setting pref="extensions.gnome-theme-tweak.e10s-disable-underline"
+           type="bool" title="&e10sdisableunderline.label;"/>
 
   <setting pref="extensions.gnome-theme-tweak.tab-max-width"
            type="radio" title="&maxtabwidth.label;">
