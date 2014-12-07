@@ -5058,7 +5058,6 @@ toolbarpaletteitem[place="toolbar"] {
   background-color: rgb(105,173,61);
 }
 
-%if APP_VERSION == 34
 .SearchHighlight {
   -moz-margin-end: 6px;
   font-size: 110%;
@@ -5106,7 +5105,6 @@ toolbarpaletteitem[place="toolbar"] {
     background-image: -moz-image-rect(url("chrome://browser/skin/dots@2x.png"), 0, 14, 100%, 0);
   }
 }
-%endif
 
 #UITourHighlight {
   /* Below are some fixes for people without an X compositor on Linux.

@@ -114,7 +114,6 @@ menuitem[cmd="cmd_clearhistory"][disabled] {
   list-style-image: url(moz-icon://stock/gtk-clear?size=menu&state=disabled);
 }
 
-%if APP_VERSION == 34
 .searchbar-search-button-container {
   -moz-box-align: center;
   padding: 2px 3px;
@@ -151,6 +150,7 @@ searchbar[oneoffui] .search-go-button:hover:active {
 searchbar[oneoffui] .search-go-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
   transform: scaleX(-1);
 }
+
 
 .search-panel-current-engine {
   border-top: none !important;
@@ -286,4 +286,3 @@ searchbar[oneoffui] .searchbar-engine-image {
   background-color: #d3d3d3;
   border-top-color: #bdbebe;
 }
-%endif
