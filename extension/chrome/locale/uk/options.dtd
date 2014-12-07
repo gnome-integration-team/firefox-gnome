@@ -5,6 +5,7 @@
 <!ENTITY reliefbuttons.label           "Об’ємний стиль кнопок панелі навігації">
 <!ENTITY inactivestate.label           "Змінювати стиль для неактивних вікон">
 <!ENTITY e10sdisableunderline.label    "Disable the underline on e10s tabs">
+<!ENTITY tabboldlabel.label            "Bold tab label">
 <!ENTITY maxtabwidth.label             "Максимальна ширина вкладок">
 <!ENTITY default.label                 "За замовчуванням">
 <!ENTITY small.label                   "Мала">
