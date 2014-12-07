@@ -38,6 +38,13 @@ var Tweaks = {
         }
     },
 
+    tabsOnTop: {
+        key: "tabs-on-top",
+        type: "attribute",
+        elements: ["navigator-toolbox", "nav-bar", "TabsToolbar"],
+        attributeName: "tabsontop"
+    },
+
     urlbarHistoryDropmarker: {
         key: "urlbar-history-dropmarker",
         type: "attribute",

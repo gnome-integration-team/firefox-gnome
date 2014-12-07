@@ -85,6 +85,10 @@
   -moz-box-ordinal-group: 100;
 }
 
+#TabsToolbar[tabsontop="true"] {
+  -moz-box-ordinal-group: 10;
+}
+
 #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#nav-bar):not(#TabsToolbar) {
   -moz-box-ordinal-group: 50;
 }
@@ -109,7 +113,7 @@
 #main-window:not([customizing]) #toolbar-menubar:not([autohide="true"]) {
   -moz-binding: url(chrome://browser/content/customizableui/toolbar.xml#toolbar-drag);
 }
-#main-window:not([customizing]) #nav-bar {
+#main-window:not([customizing]) #nav-bar:not([tabsontop="true"]) {
   -moz-binding: url("chrome://browser/skin/gnomeBindings.xml#tabs-on-bottom") !important;
 }
 
