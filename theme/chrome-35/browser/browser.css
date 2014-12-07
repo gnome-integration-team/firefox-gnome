@@ -1474,11 +1474,11 @@ window:not([chromehidden~="toolbar"]) #urlbar-wrapper:not(:hover) > #forward-but
                                             hsla(92,81%,16%,.2) 35%,
                                             hsla(92,81%,16%,.2) 65%,
                                             hsla(92,81%,16%,0));
-  --identity-box-chrome-color: rgb(51,30,84);
-  --identity-box-chrome-background-image: linear-gradient(rgba(51,30,84,0),
-                                    rgba(51,30,84,.5) 35%,
-                                    rgba(51,30,84,.5) 65%,
-                                    rgba(51,30,84,0));
+  --identity-box-chrome-color: rgb(229,115,0);
+  --identity-box-chrome-background-image: linear-gradient(rgba(229,114,0,0),
+                                    rgba(229,114,0,.5) 35%,
+                                    rgba(229,114,0,.5) 65%,
+                                    rgba(229,114,0,0));
 }
 
 #urlbar[pageproxystate="valid"] > #identity-box.chromeUI,
@@ -4932,6 +4932,54 @@ toolbarpaletteitem[place="toolbar"] {
 
 #UITourTooltipButtons > button.button-primary:not(:active):hover {
   background-color: rgb(105,173,61);
+}
+
+.SearchHighlight {
+  -moz-margin-end: 6px;
+  font-size: 110%;
+  width: 225px;
+}
+
+.SearchHighlight label,
+.SearchHighlight description {
+  color: #535353;
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+
+.SearchHighlightTitle {
+  font-weight: bold;
+}
+
+.SearchHighlight .dot {
+  width: 7px;
+  height: 7px;
+  background-image: -moz-image-rect(url("chrome://browser/skin/dots.png"), 0, 100%, 100%, 9);
+  background-size: 7px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -moz-margin-end: 2px;
+}
+
+.SearchHighlight .dot.filled {
+  background-image: -moz-image-rect(url("chrome://browser/skin/dots.png"), 0, 7, 100%, 0);
+}
+
+.SearchHighlight button {
+  margin: 0;
+  /* On some platforms clicking the button will steal focus from the search box
+     causing the popup to close. */
+  -moz-user-focus: ignore;
+}
+
+@media not all and (max-resolution: 1dppx) {
+  .SearchHighlight .dot {
+    background-image: -moz-image-rect(url("chrome://browser/skin/dots@2x.png"), 0, 100%, 100%, 18);
+  }
+
+  .SearchHighlight .dot.filled {
+    background-image: -moz-image-rect(url("chrome://browser/skin/dots@2x.png"), 0, 14, 100%, 0);
+  }
 }
 
 #UITourHighlight {

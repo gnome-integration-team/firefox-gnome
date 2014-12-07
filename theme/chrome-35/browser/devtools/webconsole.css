@@ -128,7 +128,7 @@ a {
 
 .message-flex-body > .message-body {
   display: block;
-  flex: 1 1 main-size;
+  flex: 1 1 auto;
   vertical-align: middle;
 }
 
@@ -255,7 +255,7 @@ a {
 }
 
 .message[category=network]:not(.navigation-marker) .url {
-  flex: 1 1 main-size;
+  flex: 1 1 auto;
   /* Make sure the URL is very small initially, let flex change width as needed. */
   width: 100px;
   min-width: 5em;
@@ -473,7 +473,7 @@ a {
 
 .stacktrace .function {
   display: block;
-  flex: 1 1 main-size;
+  flex: 1 1 auto;
 }
 
 .cm-s-mozilla a[class] {
