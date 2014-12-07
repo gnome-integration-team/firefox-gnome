@@ -26,13 +26,6 @@ toolbarbutton[label="Pushbullet"] .toolbarbutton-text {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
 
-/* couldn't get it to work in inactive-state.css */
-/*
-toolbarbutton[label="Pushbullet"]:-moz-window-inactive .toolbarbutton-text {
-  opacity: 0.5;
-}
-*/
-
 /* Panel */
 
 toolbarbutton[label="Pushbullet"][cui-areatype="menu-panel"] .toolbarbutton-icon,
