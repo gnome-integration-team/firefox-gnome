@@ -36,4 +36,5 @@ toolbarbutton[label="Pushbullet"][cui-areatype="menu-panel"] .toolbarbutton-icon
 toolbarbutton[label="Pushbullet"][cui-areatype="menu-panel"] .toolbarbutton-icon {
   filter: grayscale(1);
   opacity: 0.9;
-} %ifend
+}
+%endif
