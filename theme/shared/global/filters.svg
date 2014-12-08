@@ -14,4 +14,7 @@
     <feGaussianBlur result="Shadow" in="offOut" stdDeviation="0" />
     <feBlend in="WhiteIcon" in2="Shadow" mode="normal" />
   </filter>
+  <filter id="greyscale">
+    <feColorMatrix type="saturate" values="0"/>
+  </filter>
 </svg>

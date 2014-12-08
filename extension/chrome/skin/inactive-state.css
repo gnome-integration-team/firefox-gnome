@@ -169,7 +169,7 @@ notification .messageImage:-moz-window-inactive {
 
 #main-window:-moz-window-inactive .tab-throbber,
 #main-window:-moz-window-inactive .tab-icon-image {
-  filter: url(chrome://mozapps/skin/extensions/extensions.svg#greyscale);
+  filter: url(chrome://global/skin/filters.svg#greyscale);
   opacity: 0.5;
 }
 
@@ -184,7 +184,7 @@ notification .messageImage:-moz-window-inactive {
 /* ::::: browser/searchbar.css ::::: */
 
 .searchbar-engine-image:-moz-window-inactive {
-  filter: url(chrome://mozapps/skin/extensions/extensions.svg#greyscale);
+  filter: url(chrome://global/skin/filters.svg#greyscale);
   opacity: 0.5;
 }
 
