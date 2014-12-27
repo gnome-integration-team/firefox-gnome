@@ -6,15 +6,17 @@
 
 %include ../variables.inc.css
 
+%define pushbulletButton #toggle-button--jid1-bycqofyfmbmd9ajetpack-pushbullet-widget
+
 /* Toolbar */
 
 /* remove original icon */
-toolbarbutton[label="Pushbullet"][cui-areatype="toolbar"] .toolbarbutton-icon {
+@pushbulletButton@[cui-areatype="toolbar"] .toolbarbutton-icon {
   display: none;
 }
 
 /* invisible label, used only for background-image */
-toolbarbutton[label="Pushbullet"][cui-areatype="toolbar"] .toolbarbutton-text {
+@pushbulletButton@[cui-areatype="toolbar"] .toolbarbutton-text {
   color: rgba(0, 0, 0, 0.0);
   display: block;
   width: 1em;
@@ -22,19 +24,6 @@ toolbarbutton[label="Pushbullet"][cui-areatype="toolbar"] .toolbarbutton-text {
   background: url(chrome://symbolic-icons/skin/extensions/pushbullet.svg) center no-repeat !important;
 }
 
-#main-window@darkTheme@ toolbarbutton[label="Pushbullet"][cui-areatype="toolbar"] .toolbarbutton-text {
+#main-window@darkTheme@ @pushbulletButton@[cui-areatype="toolbar"] .toolbarbutton-text {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
-
-/* Panel */
-
-%if APP_VERSION == 34
-toolbarbutton[label="Pushbullet"][cui-areatype="menu-panel"] .toolbarbutton-icon {
-  filter: url(chrome://mozapps/skin/extensions/extensions.svg#greyscale);
-}
-%else
-toolbarbutton[label="Pushbullet"][cui-areatype="menu-panel"] .toolbarbutton-icon {
-  filter: grayscale(1);
-  opacity: 0.9;
-}
-%endif

@@ -227,7 +227,7 @@ notification .messageImage:-moz-window-inactive {
  * id: jid1-BYcQOfYfmBMd9A@jetpack
  * URL: https://addons.mozilla.org/firefox/addon/pushbullet/ */
 
-toolbarbutton[label="Pushbullet"]:-moz-window-inactive .toolbarbutton-text {
+#toggle-button--jid1-bycqofyfmbmd9ajetpack-pushbullet-widget:-moz-window-inactive .toolbarbutton-text {
   opacity: 0.5;
 }
 
