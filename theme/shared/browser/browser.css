@@ -1588,8 +1588,8 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
 }
 
 #identity-popup-button-container {
-  background-color: hsla(210,4%,10%,.07);
-  border-top: 1px solid hsla(210,4%,10%,.14);
+  background-color: hsla(180,20%,10%,.07);
+  border-top: 1px solid hsla(180,20%,10%,.14);
   padding: 10px;
   margin-top: 5px;
 }
@@ -3803,8 +3803,8 @@ html|*#gcli-output-frame {
 }
 
 .click-to-play-plugins-notification-button-container {
-  background-color: hsla(210,4%,10%,.07);
-  border-top: 1px solid hsla(210,4%,10%,.14);
+  background-color: hsla(180,20%,10%,.07);
+  border-top: 1px solid hsla(180,20%,10%,.14);
   padding: 10px;
   margin-top: 5px;
 }
@@ -4732,13 +4732,13 @@ toolbarpaletteitem[place="toolbar"] {
 
 .customization-lwtheme-menu-theme[active="true"],
 .customization-lwtheme-menu-theme:hover {
-  background-color: hsla(210,4%,10%,.08);
-  border-color: hsla(210,4%,10%,.11);
+  background-color: hsla(180,20%,10%,.08);
+  border-color: hsla(180,20%,10%,.11);
 }
 
 .customization-lwtheme-menu-theme[active="true"],
 .customization-lwtheme-menu-theme:hover:active {
-  background-color: hsla(210,4%,10%,.15);
+  background-color: hsla(180,20%,10%,.15);
 }
 
 .customization-lwtheme-menu-theme > .toolbarbutton-icon {
@@ -4758,7 +4758,7 @@ toolbarpaletteitem[place="toolbar"] {
 #customization-lwtheme-menu-header,
 #customization-lwtheme-menu-recommended,
 #customization-lwtheme-menu-footer {
-  background-color: hsla(210,4%,10%,.05);
+  background-color: hsla(180,20%,10%,.05);
   color: hsl(0,0%,50%);
   margin-right: -10px;
   margin-left: -10px;
@@ -4766,17 +4766,17 @@ toolbarpaletteitem[place="toolbar"] {
 
 #customization-lwtheme-menu-header {
   margin-top: -10px;
-  border-bottom: 1px solid hsla(210,4%,10%,.05);
+  border-bottom: 1px solid hsla(180,20%,10%,.05);
 }
 
 #customization-lwtheme-menu-recommended {
-  border-top: 1px solid hsla(210,4%,10%,.05);
-  border-bottom: 1px solid hsla(210,4%,10%,.05);
+  border-top: 1px solid hsla(180,20%,10%,.05);
+  border-bottom: 1px solid hsla(180,20%,10%,.05);
 }
 
 #customization-lwtheme-menu-footer {
-  background: linear-gradient(hsla(210,4%,10%,.05) 60%, hsla(210,4%,10%,0)) border-box;
-  border-top: 1px solid hsla(210,4%,10%,.05);
+  background: linear-gradient(hsla(180,20%,10%,.05) 60%, hsla(180,20%,10%,0)) border-box;
+  border-top: 1px solid hsla(180,20%,10%,.05);
   margin-bottom: -10px;
 }
 
@@ -4791,11 +4791,11 @@ toolbarpaletteitem[place="toolbar"] {
 }
 
 .customization-lwtheme-menu-footeritem:hover {
-  background: linear-gradient(hsla(210,4%,10%,.08) 40%, hsla(210,4%,10%,0)) padding-box;
+  background: linear-gradient(hsla(180,20%,10%,.08) 40%, hsla(180,20%,10%,0)) padding-box;
 }
 
 .customization-lwtheme-menu-footeritem:first-child {
-  -moz-border-end: 1px solid hsla(210,4%,10%,.15);
+  -moz-border-end: 1px solid hsla(180,20%,10%,.15);
 }
 
 #customization-tipPanel > .panel-arrowcontainer > .panel-arrowcontent {
@@ -5014,8 +5014,8 @@ toolbarpaletteitem[place="toolbar"] {
 
 #UITourTooltipButtons {
   -moz-box-pack: end;
-  background-color: hsla(210,4%,10%,.07);
-  border-top: 1px solid hsla(210,4%,10%,.14);
+  background-color: hsla(180,20%,10%,.07);
+  border-top: 1px solid hsla(180,20%,10%,.14);
   margin: 24px -16px -16px;
   padding: 2em 15px;
 }
@@ -5051,9 +5051,9 @@ toolbarpaletteitem[place="toolbar"] {
 }
 
 #UITourTooltipButtons > button:not(.button-link):not(:active):hover {
-  background-color: hsla(210,4%,10%,.15);
-  border-color: hsla(210,4%,10%,.15);
-  box-shadow: 0 1px 0 0 hsla(210,4%,10%,.05) inset;
+  background-color: hsla(180,20%,10%,.15);
+  border-color: hsla(180,20%,10%,.15);
+  box-shadow: 0 1px 0 0 hsla(180,20%,10%,.05) inset;
 }
 
 #UITourTooltipButtons > button.button-link {

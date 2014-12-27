@@ -100,9 +100,9 @@
 .panel-subviews {
   padding: 4px;
   background-clip: padding-box;
-  border-left: 1px solid hsla(210,4%,10%,.3);
-  box-shadow: 0 3px 5px hsla(210,4%,10%,.1),
-              0 0 7px hsla(210,4%,10%,.1);
+  border-left: 1px solid hsla(180,20%,10%,.3);
+  box-shadow: 0 3px 5px hsla(180,20%,10%,.1),
+              0 0 7px hsla(180,20%,10%,.1);
   -moz-margin-start: 38px;
 }
 
@@ -143,9 +143,9 @@ panelmultiview[nosubviews=true] > .panel-viewcontainer > .panel-viewstack > .pan
 .panel-subview-header {
   margin: -4px -4px 4px;
 %if APP_VERSION == 34
-  background-color: hsla(210,4%,10%,.05);
+  background-color: hsla(180,20%,10%,.05);
 %endif
-  box-shadow: 0 -1px 0 hsla(210,4%,10%,.05) inset;
+  box-shadow: 0 -1px 0 hsla(180,20%,10%,.05) inset;
 %if APP_VERSION == 34
   color: hsl(0,0%,50%);
 %else
@@ -346,7 +346,7 @@ toolbarbutton[sdk-button="true"][cui-areatype="menu-panel"] > .toolbarbutton-ico
 }
 
 .panelUI-grid .toolbarbutton-1:not([buttonover]):not(:-moz-any([disabled],[open],:active)):hover > .toolbarbutton-menubutton-dropmarker {
-  background-color: hsla(210,4%,10%,.1) !important;
+  background-color: hsla(180,20%,10%,.1) !important;
   border-radius: 0 0 0 2px;
 }
 
@@ -373,7 +373,7 @@ toolbaritem[cui-areatype="menu-panel"][sdkstylewidget="true"] > iframe {
 }
 
 #PanelUI-multiView[viewtype="subview"] > .panel-viewcontainer > .panel-viewstack > .panel-mainview >  #PanelUI-mainView {
-  background-color: hsla(210,4%,10%,.1);
+  background-color: hsla(180,20%,10%,.1);
 }
 
 #PanelUI-multiView[viewtype="subview"] #PanelUI-mainView > #PanelUI-contents-scroller > #PanelUI-contents > .panel-wide-item,
@@ -469,14 +469,14 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
   display: flex;
   flex-shrink: 0;
   flex-direction: column;
-  background-color: hsla(210,4%,10%,.07);
+  background-color: hsla(180,20%,10%,.07);
   padding: 0;
   margin: 0;
 }
 
 #PanelUI-footer-inner {
   display: flex;
-  border-top: 1px solid hsla(210,4%,10%,.14);
+  border-top: 1px solid hsla(180,20%,10%,.14);
 }
 
 #PanelUI-multiView[viewtype="subview"] #PanelUI-footer-inner {
@@ -485,7 +485,7 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
 
 #PanelUI-footer-inner > toolbarseparator {
   border: 0;
-  border-left: 1px solid hsla(210,4%,10%,.14);
+  border-left: 1px solid hsla(180,20%,10%,.14);
   margin: 7px 0 7px;
   -moz-appearance: none;
 }
@@ -518,7 +518,7 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
 #PanelUI-update-status,
 %endif
 #PanelUI-fxa-status {
-  border-top: 1px solid hsla(210,4%,10%,.14);
+  border-top: 1px solid hsla(180,20%,10%,.14);
   border-bottom: 1px solid transparent;
   margin-bottom: -1px;
 }
@@ -636,17 +636,17 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
 #PanelUI-help:not([disabled]):hover,
 #PanelUI-customize:hover,
 #PanelUI-quit:not([disabled]):hover {
-  outline: 1px solid hsla(210,4%,10%,.07);
-  background-color: hsla(210,4%,10%,.07);
+  outline: 1px solid hsla(180,20%,10%,.07);
+  background-color: hsla(180,20%,10%,.07);
 }
 
 #PanelUI-fxa-status:not([disabled]):hover:active,
 #PanelUI-help:not([disabled]):hover:active,
 #PanelUI-customize:hover:active,
 #PanelUI-quit:not([disabled]):hover:active {
-  outline: 1px solid hsla(210,4%,10%,.12);
-  background-color: hsla(210,4%,10%,.12);
-  box-shadow: 0 1px 0 hsla(210,4%,10%,.05) inset;
+  outline: 1px solid hsla(180,20%,10%,.12);
+  background-color: hsla(180,20%,10%,.12);
+  box-shadow: 0 1px 0 hsla(180,20%,10%,.05) inset;
 }
 
 #PanelUI-fxa-status:not([disabled]):hover,
@@ -665,7 +665,7 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
 
 #PanelUI-update-status[update-status="succeeded"]:not([disabled]):hover:active {
   background-color: hsla(96, 65%, 75%, 0.6);
-  box-shadow: 0 1px 0 hsla(210,4%,10%,.05) inset;
+  box-shadow: 0 1px 0 hsla(180,20%,10%,.05) inset;
 }
 
 #PanelUI-update-status[update-status="failed"] {
@@ -678,7 +678,7 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
 
 #PanelUI-update-status[update-status="failed"]:not([disabled]):hover:active {
   background-color: hsla(359, 69%, 84%, 0.6);
-  box-shadow: 0 1px 0 hsla(210,4%,10%,.05) inset;
+  box-shadow: 0 1px 0 hsla(180,20%,10%,.05) inset;
 }
 %endif
 
@@ -720,10 +720,10 @@ panelview .toolbarbutton-1,
 .toolbaritem-combined-buttons:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true]) > toolbarbutton {
   -moz-appearance: none;
   padding: 0 6px;
-  background-color: hsla(210,4%,10%,0);
+  background-color: hsla(180,20%,10%,0);
   border-radius: 2px;
   border-style: solid;
-  border-color: hsla(210,4%,10%,0);
+  border-color: hsla(180,20%,10%,0);
 }
 
 panelview .toolbarbutton-1,
@@ -807,12 +807,12 @@ menu.subviewbutton:not(:-moz-any([disabled],:active))[_moz-menuactive],
 menuitem.subviewbutton:not(:-moz-any([disabled],:active))[_moz-menuactive],
 .widget-overflow-list .toolbarbutton-1:not(:-moz-any([disabled],[open],:active)):hover,
 .toolbaritem-combined-buttons:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true]) > toolbarbutton:not(:-moz-any([disabled],[open],:active)):hover {
-  background-color: hsla(210,4%,10%,.08);
-  border-color: hsla(210,4%,10%,.11);
+  background-color: hsla(180,20%,10%,.09);
+  border-color: transparent;
 }
 
 .toolbaritem-combined-buttons:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true]):not(:-moz-any([disabled],[open],:active)):hover {
-  border-color: hsla(210,4%,10%,.11);
+  border-color: hsla(180,20%,10%,.09);
 }
 
 panelview .toolbarbutton-1:-moz-any(:not([disabled]):-moz-any([open],:hover:active),[checked=true]),
@@ -821,30 +821,28 @@ menu.subviewbutton:not([disabled])[_moz-menuactive]:active,
 menuitem.subviewbutton:not([disabled])[_moz-menuactive]:active,
 .widget-overflow-list .toolbarbutton-1:not([disabled]):-moz-any([open],:hover:active),
 .toolbaritem-combined-buttons:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true]) > toolbarbutton:not([disabled]):-moz-any([open],:hover:active) {
-  background-color: hsla(210,4%,10%,.12);
-  border-color: hsla(210,4%,10%,.14);
-  box-shadow: 0 1px 0 hsla(210,4%,10%,.03) inset;
+  background-color: hsla(180,20%,10%,.09);
 }
 
 .subviewbutton.panel-subview-footer {
   margin: 4px -4px -4px;
-  background-color: hsla(210,4%,10%,.07);
-  border-top: 1px solid hsla(210,4%,10%,.14);
+  background-color: hsla(180,20%,10%,.07);
+  border-top: 1px solid hsla(180,20%,10%,.14);
   border-radius: 0;
   color: inherit;
 }
 
 menuitem.panel-subview-footer:not(:-moz-any([disabled],:active))[_moz-menuactive],
 .subviewbutton.panel-subview-footer:not(:-moz-any([disabled],[open],:active)):hover {
-  background-color: hsla(210,4%,10%,.15);
-  border-top: 1px solid hsla(210,4%,10%,.14);
+  background-color: hsla(180,20%,10%,.15);
+  border-top: 1px solid hsla(180,20%,10%,.14);
 }
 
 menuitem.panel-subview-footer:not([disabled])[_moz-menuactive]:active,
 .subviewbutton.panel-subview-footer:not([disabled]):-moz-any([open],:hover:active) {
-  background-color: hsla(210,4%,10%,.19);
-  border-top: 1px solid hsla(210,4%,10%,.14);
-  box-shadow: 0 1px 0 hsla(210,4%,10%,.05) inset;
+  background-color: hsla(180,20%,10%,.19);
+  border-top: 1px solid hsla(180,20%,10%,.14);
+  box-shadow: 0 1px 0 hsla(180,20%,10%,.05) inset;
 }
 
 #BMB_bookmarksPopup .subviewbutton {
@@ -892,7 +890,7 @@ menuitem.panel-subview-footer:not([disabled])[_moz-menuactive]:active,
 .cui-widget-panelview menuseparator {
   -moz-appearance: none;
   min-height: 0;
-  border-top: 1px solid hsla(210,4%,10%,.15);
+  border-top: 1px solid hsla(180,20%,10%,.15);
   margin: 6px 0;
   padding: 0;
 }
@@ -1004,11 +1002,11 @@ toolbarpaletteitem[place="palette"] > #search-container {
 }
 
 .toolbaritem-combined-buttons:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true]) {
-  background-color: hsla(210,4%,10%,0);
+  background-color: hsla(180,20%,10%,0);
   border-radius: 2px;
   border: 1px solid;
-  border-color: hsla(210,4%,10%,0);
-  border-bottom-color: hsla(210,4%,10%,.1);
+  border-color: hsla(180,20%,10%,0);
+  border-bottom-color: hsla(180,20%,10%,.1);
   padding: 0;
   transition-property: background-color, border-color;
   transition-duration: 150ms;
@@ -1086,7 +1084,7 @@ toolbarpaletteitem[haswideitem][place="panel"] + toolbarpaletteitem[haswideitem]
   margin: .5em 0;
   width: 1px;
   height: auto;
-  background: hsla(210,4%,10%,.15);
+  background: hsla(180,20%,10%,.15);
   transition-property: margin;
   transition-duration: 10ms;
   transition-timing-function: ease;
@@ -1256,24 +1254,22 @@ menuitem[checked="true"].subviewbutton > .menu-iconic-left {
   -moz-box-align: center;
   padding: 1px;
   margin: 0 0 2px;
-  background-color: hsla(210,4%,10%,0);
+  background-color: hsla(180,20%,10%,0);
   border-radius: 2px;
   border-width: 1px;
   border-style: solid;
-  border-color: hsla(210,4%,10%,0);
+  border-color: hsla(180,20%,10%,0);
 }
 
 .subviewradio:not(:-moz-any([disabled],[open],:active)):hover {
-  background-color: hsla(210,4%,10%,.08);
-  border-color: hsla(210,4%,10%,.11);
+  background-color: hsla(180,20%,10%,.09);
+  border-color: transparent;
 }
 
 .subviewradio[selected],
 .subviewradio[selected]:hover,
 .subviewradio:not([disabled]):-moz-any([open],:hover:active) {
-  background-color: hsla(210,4%,10%,.12);
-  border-color: hsla(210,4%,10%,.14);
-  box-shadow: 0 1px 0 hsla(210,4%,10%,.03) inset;
+  background-color: hsla(180,20%,10%,.09);
 }
 
 .subviewradio > .radio-check {

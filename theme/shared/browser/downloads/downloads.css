@@ -49,22 +49,22 @@
 
 #downloadsHistory,
 #downloadsSummary {
-  background-color: hsla(210,4%,10%,.07);
+  background-color: hsla(180,20%,10%,.07);
   border-top: 1px solid !important;
-  border-top-color: hsla(210,4%,10%,.14) !important;
+  border-top-color: hsla(180,20%,10%,.14) !important;
 }
 
 #downloadsHistory:hover,
 #downloadsSummary:hover {
-  background-color: hsla(210,4%,10%,.15);
-  border-top-color: hsla(210,4%,10%,.14) !important;
+  background-color: hsla(180,20%,10%,.15);
+  border-top-color: hsla(180,20%,10%,.14) !important;
 }
 
 #downloadsHistory:hover:active,
 #downloadsSummary:hover:active {
-  background-color: hsla(210,4%,10%,.19);
-  border-top-color: hsla(210,4%,10%,.14) !important;
-  box-shadow: 0 1px 0 hsla(210,4%,10%,.05) inset;
+  background-color: hsla(180,20%,10%,.19);
+  border-top-color: hsla(180,20%,10%,.14) !important;
+  box-shadow: 0 1px 0 hsla(180,20%,10%,.05) inset;
 }
 
 /*** Downloads Summary and List items ***/
@@ -160,14 +160,8 @@ richlistitem[type="download"][selected] {
 /*** Highlighted list items ***/
 
 #downloadsPanel:not([keyfocus]) > #downloadsListBox > richlistitem[type="download"][state="1"][exists]:hover {
-  background-color: hsla(210,4%,10%,.08) !important;
-  border-color: hsla(210,4%,10%,.11);
-}
-
-#downloadsPanel:not([keyfocus]) > #downloadsListBox > richlistitem[type="download"][state="1"][exists]:hover:active {
-  background-color: hsla(210,4%,10%,.12) !important;
-  border-color: hsla(210,4%,10%,.14);
-  box-shadow: 0 1px 0 hsla(210,4%,10%,.03) inset;
+  background-color: hsla(180,20%,10%,.09) !important;
+  border-color: transparent;
 }
 
 /*** Inline buttons ***/
