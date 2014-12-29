@@ -46,6 +46,7 @@
 % P
 %include pinboard-extension.inc.css
 %include pocket.inc.css
+%include pushbullet.inc.css
 
 % R
 %include requestpolicy.inc.css
