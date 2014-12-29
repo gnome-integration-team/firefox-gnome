@@ -1,8 +1,9 @@
 content  gnome-theme-tweak               chrome/content/
 skin     gnome-theme-tweak  classic/1.0  chrome/skin/
 
-locale   gnome-theme-tweak  de           chrome/locale/de/
 locale   gnome-theme-tweak  en           chrome/locale/en/
+locale   gnome-theme-tweak  de           chrome/locale/de/
+locale   gnome-theme-tweak  fr           chrome/locale/fr/
 locale   gnome-theme-tweak  pl           chrome/locale/pl/
 locale   gnome-theme-tweak  ru           chrome/locale/ru/
 locale   gnome-theme-tweak  uk           chrome/locale/uk/

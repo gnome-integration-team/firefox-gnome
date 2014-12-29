@@ -1,0 +1,15 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY reliefbuttons.label           "Boutons en relief sur la barre de navigation">
+<!ENTITY inactivestate.label           "Activer un style différent pour les fenêtres non actives">
+<!ENTITY e10sdisableunderline.label    "Désactiver le soulignage des onglets e10s">
+<!ENTITY tabboldlabel.label            "Texte d'onglet en gras">
+<!ENTITY maxtabwidth.label             "Largeur maximale d'onglet">
+<!ENTITY default.label                 "Défaut">
+<!ENTITY small.label                   "Petit">
+<!ENTITY normal.label                  "Normal">
+<!ENTITY large.label                   "Large">
+<!ENTITY stretch.label                 "Étendre">
+<!ENTITY urlbarhistorydropmarker.label "Cacher l'historique dans le menu déroulant de la barre d'adresse">
