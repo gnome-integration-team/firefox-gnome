@@ -21,6 +21,13 @@
     </em:localized>
 
     <em:localized>
+      <Description em:locale="fr">
+        <em:name>GNOME Theme Tweak</em:name>
+        <em:description>Extension pour customiser le thème GNOME.</em:description>
+      </Description>
+    </em:localized>
+
+    <em:localized>
       <Description em:locale="pl">
         <em:name>GNOME Theme Tweak</em:name>
         <em:description>Rozszerzenie do dostosowywania motywu GNOME.</em:description>
