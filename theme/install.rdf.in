@@ -33,6 +33,13 @@
         <em:description>GNOME Theme für Firefox</em:description>
       </Description>
     </em:localized>
+    
+    <em:localized>
+      <Description em:locale="fr">
+        <em:name>GNOME</em:name>
+        <em:description>Thème GNOME pour Firefox</em:description>
+      </Description>
+    </em:localized>
 
     <em:localized>
       <Description em:locale="pl">
