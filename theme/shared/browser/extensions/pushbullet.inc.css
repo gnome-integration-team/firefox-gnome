@@ -8,8 +8,6 @@
 
 %define pushbulletButton #toggle-button--jid1-bycqofyfmbmd9ajetpack-pushbullet-widget
 
-/* Toolbar */
-
 /* remove original icon */
 @pushbulletButton@[cui-areatype="toolbar"] .toolbarbutton-icon {
   display: none;
@@ -22,6 +20,7 @@
   width: 1em;
   height: 1em;
   background: url(chrome://symbolic-icons/skin/extensions/pushbullet.svg) center no-repeat !important;
+  text-shadow: none;
 }
 
 #main-window@darkTheme@ @pushbulletButton@[cui-areatype="toolbar"] .toolbarbutton-text {
