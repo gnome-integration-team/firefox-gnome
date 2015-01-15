@@ -2,7 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-%if APP_VERSION != 34
 /*
 :root {
   --panel-ui-button-background-image:
@@ -14,7 +13,6 @@
   --panel-ui-button-background-repeat: no-repeat;
 }
 */
-%endif
 
 #PanelUI-popup #PanelUI-contents:empty {
   height: 128px;
@@ -142,16 +140,9 @@ panelmultiview[nosubviews=true] > .panel-viewcontainer > .panel-viewstack > .pan
 
 .panel-subview-header {
   margin: -4px -4px 4px;
-%if APP_VERSION == 34
-  background-color: hsla(180,20%,10%,.05);
-%endif
   box-shadow: 0 -1px 0 hsla(180,20%,10%,.05) inset;
-%if APP_VERSION == 34
-  color: hsl(0,0%,50%);
-%else
   color: GrayText;
   font-variant: small-caps;
-%endif
 }
 
 .cui-widget-panelview .panel-subview-header {
@@ -379,9 +370,7 @@ toolbaritem[cui-areatype="menu-panel"][sdkstylewidget="true"] > iframe {
 #PanelUI-multiView[viewtype="subview"] #PanelUI-mainView > #PanelUI-contents-scroller > #PanelUI-contents > .panel-wide-item,
 #PanelUI-multiView[viewtype="subview"] #PanelUI-mainView > #PanelUI-contents-scroller > #PanelUI-contents > .toolbarbutton-1:not([panel-multiview-anchor="true"]),
 #PanelUI-multiView[viewtype="subview"] #PanelUI-mainView > #PanelUI-footer > #PanelUI-fxa-status,
-%if APP_VERSION != 34
 #PanelUI-multiView[viewtype="subview"] #PanelUI-mainView > #PanelUI-footer > #PanelUI-update-status,
-%endif
 #PanelUI-multiView[viewtype="subview"] #PanelUI-mainView > #PanelUI-footer > #PanelUI-footer-inner > toolbarseparator,
 #PanelUI-multiView[viewtype="subview"] #PanelUI-mainView > #PanelUI-footer > #PanelUI-footer-inner > #PanelUI-customize,
 #PanelUI-multiView[viewtype="subview"] #PanelUI-mainView > #PanelUI-footer > #PanelUI-footer-inner > #PanelUI-help:not([panel-multiview-anchor="true"]) {
@@ -494,9 +483,7 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
   margin: 0;
 }
 
-%if APP_VERSION != 34
 #PanelUI-update-status,
-%endif
 #PanelUI-help,
 #PanelUI-fxa-status,
 #PanelUI-customize,
@@ -514,18 +501,14 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
   -moz-box-orient: horizontal;
 }
 
-%if APP_VERSION != 34
 #PanelUI-update-status,
-%endif
 #PanelUI-fxa-status {
   border-top: 1px solid hsla(180,20%,10%,.14);
   border-bottom: 1px solid transparent;
   margin-bottom: -1px;
 }
 
-%if APP_VERSION != 34
 #PanelUI-update-status > .toolbarbutton-text,
-%endif
 #PanelUI-fxa-status > .toolbarbutton-text {
   width: 0; /* Fancy cropping solution for flexbox. */
 }
@@ -535,9 +518,7 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
   min-width: 46px;
 }
 
-%if APP_VERSION != 34
 #PanelUI-update-status > .toolbarbutton-text,
-%endif
 #PanelUI-fxa-status > .toolbarbutton-text,
 #PanelUI-customize > .toolbarbutton-text {
   margin: 0;
@@ -550,9 +531,7 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
   display: none;
 }
 
-%if APP_VERSION != 34
 #PanelUI-update-status > .toolbarbutton-icon,
-%endif
 #PanelUI-fxa-status > .toolbarbutton-icon,
 #PanelUI-customize > .toolbarbutton-icon,
 #PanelUI-help > .toolbarbutton-icon,
@@ -567,7 +546,6 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
   -moz-border-start-style: none;
 }
 
-%if APP_VERSION != 34
 #PanelUI-update-status {
   width: calc(22.35em + 30px);
   -moz-padding-start: 15px;
@@ -577,7 +555,6 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
 #PanelUI-update-status {
   list-style-image: url(chrome://branding/content/icon16.png);
 }
-%endif
 
 #PanelUI-fxa-status {
   list-style-image: url(chrome://browser/skin/sync-horizontalbar.png);
@@ -654,7 +631,6 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
   outline: none;
 }
 
-%if APP_VERSION != 34
 #PanelUI-update-status[update-status="succeeded"] {
   background-color: hsla(96, 65%, 75%, 0.1);
 }
@@ -680,7 +656,6 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
   background-color: hsla(359, 69%, 84%, 0.6);
   box-shadow: 0 1px 0 hsla(180,20%,10%,.05) inset;
 }
-%endif
 
 #PanelUI-quit:not([disabled]):hover {
   background-color: #d94141;
@@ -774,11 +749,7 @@ panelview .toolbarbutton-1,
 .PanelUI-subView .subviewbutton[shortcut]::after {
   content: attr(shortcut);
   float: right;
-%if APP_VERSION == 34
-  color: hsl(0,0%,50%);
-%else
   color: GrayText;
-%endif
 }
 
 .PanelUI-subView.cui-widget-panelview .subviewbutton[shortcut]::after {
@@ -916,11 +887,7 @@ menuitem.panel-subview-footer:not([disabled])[_moz-menuactive]:active,
   -moz-box-pack: start;
   -moz-margin-start: 10px;
   -moz-margin-end: auto;
-%if APP_VERSION == 34
-  color: hsl(0,0%,50%);
-%else
   color: GrayText;
-%endif
 }
 
 #PanelUI-historyItems > toolbarbutton {
@@ -1172,20 +1139,6 @@ menuitem[checked="true"].subviewbutton > .menu-iconic-left {
   visibility: hidden;
 }
 
-%if APP_VERSION == 34
-#customizationui-widget-multiview[mainViewId="PanelUI-panicView"] > .panel-viewcontainer,
-#customizationui-widget-multiview[mainViewId="PanelUI-panicView"] > .panel-viewcontainer > .panel-viewstack,
-#customizationui-widget-multiview[mainViewId="PanelUI-panicView"] > .panel-viewcontainer > .panel-viewstack > .panel-mainview,
-/* NB: currentsubview attribute is temporary as a safe workaround for a layout problem with this
- * panel. Do not rely on it, it *will* go away again. */
-#PanelUI-multiView[currentsubview="PanelUI-panicView"] > .panel-viewcontainer > .panel-viewstack > .panel-subviews,
-#PanelUI-panicView > .panel-subview-body,
-#PanelUI-panicView {
-  overflow: visible;
-}
-%endif
-
-%if APP_VERSION != 34
 .panel-mainview[panelid=customizationui-widget-panel],
 #customizationui-widget-multiview > .panel-viewcontainer,
 #customizationui-widget-multiview > .panel-viewcontainer > .panel-viewstack,
@@ -1193,7 +1146,6 @@ menuitem[checked="true"].subviewbutton > .menu-iconic-left {
 #PanelUI-panicView {
   overflow: visible;
 }
-%endif
 
 #PanelUI-panicView.cui-widget-panelview {
   min-width: 280px;

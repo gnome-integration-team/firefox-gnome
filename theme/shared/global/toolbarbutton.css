@@ -101,7 +101,6 @@ toolbarbutton[type="menu-button"][disabled="true"]:hover:active {
   -moz-box-orient: vertical;
 }
 
-%if APP_VERSION != 34
 /* ::::: toolbarbutton badged ::::: */
 
 .toolbarbutton-badge {
@@ -135,7 +134,6 @@ toolbarbutton[type="menu-button"][disabled="true"]:hover:active {
 .toolbarbutton-badge-container {
   position: relative;
 }
-%endif
 
 /* .......... dropmarker .......... */
 

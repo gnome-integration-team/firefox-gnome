@@ -30,15 +30,9 @@ p {
   display: none;
 }
 
-%if APP_VERSION == 34
-.crashDumpAvaible #report-box {
-  display: block;
-}
-%else
 .crashDumpAvailable #report-box {
   display: block;
 }
-%endif
 
 #button-box {
   text-align: center;

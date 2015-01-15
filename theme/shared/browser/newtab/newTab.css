@@ -154,15 +154,9 @@
   opacity: 1;
 }
 
-%if APP_VERSION == 34
-.newtab-thumbnail.enhanced-content:hover {
-  opacity: 0;
-}
-%else
 .newtab-site:hover .newtab-thumbnail.enhanced-content {
   opacity: 0;
 }
-%endif
 
 .newtab-site[type=affiliate] .newtab-thumbnail,
 .newtab-site[type=enhanced] .newtab-thumbnail,

@@ -14,17 +14,10 @@
 
 %define nestedButtons #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button
 
-%define primaryToolbarButtons #back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button
-
-%if APP_VERSION == 34
-%define primaryToolbarButtons @primaryToolbarButtons@, #e10s-button, #panic-button
-%else
-%define primaryToolbarButtons @primaryToolbarButtons@, #e10s-button, #panic-button, #web-apps-button, #webide-button
-%endif
+%define primaryToolbarButtons #back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #e10s-button, #panic-button, #web-apps-button, #webide-button
 
 %define primaryToolbarButtons @primaryToolbarButtons@, @nestedButtons@
 
-%if APP_VERSION != 34
 /*
 :root {
   --toolbarbutton-hover-background: hsla(0,0%,100%,.3) linear-gradient(hsla(0,0%,100%,.7), hsla(0,0%,100%,.2));
@@ -43,7 +36,6 @@
   --verified-identity-box-backgroundcolor: #fff;
 }
 */
-%endif
 
 #menubar-items {
   -moz-box-orient: vertical; /* for flex hack */
@@ -628,11 +620,7 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
 
 /* ... */
 
-%if APP_VERSION == 34
-toolbarbutton[type="badged"] > .toolbarbutton-badge-container > .toolbarbutton-icon,
-%else
 toolbarbutton.badged-button > .toolbarbutton-badge-container > .toolbarbutton-icon,
-%endif
 toolbarbutton[type="socialmark"] > .toolbarbutton-icon {
   max-width: 32px !important;
 }
@@ -850,7 +838,6 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
   transform: scaleX(-1);
 }
 
-%if APP_VERSION != 34
 #web-apps-button[cui-areatype="toolbar"] {
   list-style-image: url(chrome://symbolic-icons/skin/moz-apps.svg);
 }
@@ -859,7 +846,6 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
   list-style-image: url(chrome://browser/skin/Toolbar.png);
   -moz-image-region: rect(0, 738px, 18px, 720px);
 }
-%endif
 
 #loop-button-throttled > .toolbarbutton-badge-container {
   list-style-image: url(chrome://browser/skin/loop/toolbar.png);
@@ -1038,7 +1024,6 @@ toolbarpaletteitem[place="palette"] > #panic-button {
   list-style-image: url(chrome://symbolic-icons/skin/forget.svg);
 }
 
-%if APP_VERSION != 34
 #web-apps-button[cui-areatype="menu-panel"],
 toolbarpaletteitem[place="palette"] > #web-apps-button {
   list-style-image: url(chrome://symbolic-icons/skin/moz-apps.svg);
@@ -1049,7 +1034,6 @@ toolbarpaletteitem[place="palette"] > #webide-button {
   list-style-image: url(chrome://browser/skin/menuPanel.png);
   -moz-image-region: rect(0px, 960px, 32px, 928px);
 }
-%endif
 
 toolbaritem[sdkstylewidget="true"] > toolbarbutton {
   /* FIXME */
@@ -1119,12 +1103,10 @@ toolbarpaletteitem[place="palette"] > #zoom-controls > #zoom-in-button {
   list-style-image: url(chrome://symbolic-icons/skin/zoom-in.svg);
 }
 
-%if APP_VERSION != 34
 #add-share-provider {
   list-style-image: url(chrome://browser/skin/menuPanel-small.png);
   -moz-image-region: rect(0px, 96px, 16px, 80px);
 }
-%endif
 
 /* */
 
@@ -1315,11 +1297,7 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   -moz-margin-end: 3px;
 }
 
-%if APP_VERSION == 34
-#urlbar-display {
-%else
 .urlbar-display {
-%endif
   margin-top: 0;
   margin-bottom: 0;
   -moz-margin-start: 0;
@@ -1624,12 +1602,6 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   list-style-image: url(chrome://mozapps/skin/plugins/pluginBlocked-64.png);
 }
 
-%if APP_VERSION == 34
-.popup-notification-icon[popupid="plugins-not-found"] {
-  list-style-image: url(chrome://browser/skin/pluginInstall-64.png);
-}
-%endif
-
 .popup-notification-icon[popupid="web-notifications"] {
   list-style-image: url(chrome://browser/skin/notification-64.png);
 }
@@ -1655,12 +1627,10 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   list-style-image: url(chrome://browser/skin/bad-content-blocked-64.png);
 }
 
-%if APP_VERSION != 34
 .popup-notification-icon[popupid="bad-content"][mixedblockdisabled],
 .popup-notification-icon[popupid="bad-content"][trackingblockdisabled] {
   list-style-image: url(chrome://browser/skin/bad-content-unblocked-64.png);
 }
-%endif
 
 .popup-notification-icon[popupid="webRTC-sharingDevices"],
 .popup-notification-icon[popupid="webRTC-shareDevices"] {
@@ -1818,12 +1788,6 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
 #plugins-notification-icon.plugin-blocked {
   list-style-image: url(chrome://symbolic-icons/skin/plugin-blocked.svg);
 }
-
-%if APP_VERSION == 34
-#plugin-install-notification-icon {
-  list-style-image: url(chrome://symbolic-icons/skin/plugin-install.svg);
-}
-%endif
 
 #notification-popup-box[hidden] {
   /* Override display:none to make the pluginBlockedNotification animation work
@@ -2005,23 +1969,15 @@ richlistitem[selected="true"] .ac-result-type-bookmark,
 }
 
 .ac-result-type-keyword,
-%if APP_VERSION == 34
-.autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage) {
-%else
 .autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage),
 richlistitem[type~="action"][actiontype="searchengine"] > .ac-title-box > .ac-site-icon {
-%endif
   list-style-image: url(chrome://symbolic-icons/skin/autocomplete-icons.svg#keyword);
   width: 16px;
   height: 16px;
 }
 richlistitem[selected="true"] .ac-result-type-keyword,
-%if APP_VERSION == 34
-.autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage, selected) {
-%else
 .autocomplete-treebody::-moz-tree-image(keyword, treecolAutoCompleteImage, selected),
 richlistitem[type~="action"][actiontype="searchengine"][selected="true"] > .ac-title-box > .ac-site-icon {
-%endif
   list-style-image: url(chrome://symbolic-icons/skin/autocomplete-icons.svg#keyword-active);
 }
 
@@ -2961,11 +2917,9 @@ toolbarbutton.chevron {
   list-style-image: url("chrome://global/skin/toolbar/chevron.gif") !important;
 }
 
-%if APP_VERSION != 34
 toolbar[brighttext] toolbarbutton.chevron:not(:hover):not([open="true"]) {
   list-style-image: url("chrome://global/skin/toolbar/chevron-inverted.png") !important;
 }
-%endif
 
 toolbarbutton.chevron:-moz-locale-dir(rtl) > .toolbarbutton-icon {
   transform: scaleX(-1);
@@ -3850,12 +3804,10 @@ notification.pluginVulnerable .messageImage {
   width: 17em;
 }
 
-%if APP_VERSION != 34
 .popup-notification-item-message[popupid="bad-content"][mixedblockdisabled]:not(.popup-notification-item-message-critical),
 .popup-notification-item-message[popupid="bad-content"][trackingblockdisabled]:not(.popup-notification-item-message-critical) {
   color: GrayText;
 }
-%endif
 
 .popup-notification-item-message-critical[popupid="bad-content"] {
   color: #d74345;
@@ -4073,37 +4025,6 @@ notification.pluginVulnerable .messageImage {
 #social-provider-button > .toolbarbutton-menu-dropmarker {
   display: none;
 }
-
-%if APP_VERSION == 34
-.toolbarbutton-badge-container {
-  margin: 5px 3px;
-  position: relative;
-}
-
-toolbar[iconsize="small"] .toolbarbutton-badge-container {
-  margin: 0;
-}
-
-.toolbarbutton-badge[badge]:not([badge=""])::after {
-  /* The |content| property is set in the content stylesheet. */
-  font-size: 9px;
-  font-weight: bold;
-  padding: 0 1px;
-  color: #fff;
-  background-color: rgb(240,61,37);
-  border: 1px solid rgb(216,55,34);
-  border-radius: 2px;
-  box-shadow: 0 1px 0 rgba(0,39,121,0.77);
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.toolbarbutton-badge[badge]:not([badge=""]):-moz-locale-dir(rtl)::after {
-  left: 2px;
-  right: auto;
-}
-%endif
 
 .popup-notification-icon[popupid="servicesInstall"] {
   list-style-image: url(chrome://browser/skin/social/services-64.png);
@@ -4535,7 +4456,6 @@ chatbox {
   -moz-appearance: none;
 }
 
-%if APP_VERSION != 34
 #customization-titlebar-visibility-button[checked],
 #customization-devedition-theme-button[checked] {
   background-color: rgb(218, 218, 218);
@@ -4544,7 +4464,6 @@ chatbox {
   box-shadow: 0 1px rgba(255, 255, 255, 0.5),
               inset 0 1px rgb(196, 196, 196);
 }
-%endif
 
 .customizationmode-button[disabled="true"] {
   opacity: .5;
@@ -4581,13 +4500,6 @@ chatbox {
 
 #customization-titlebar-visibility-button[checked] {
   -moz-image-region: rect(0, 48px, 24px, 24px);
-%if APP_VERSION == 34
-  background-color: rgb(218, 218, 218);
-  border-color: rgb(168, 168, 168);
-  text-shadow: 0 1px rgb(236, 236, 236);
-  box-shadow: 0 1px rgba(255, 255, 255, 0.5),
-              inset 0 1px rgb(196, 196, 196);
-%endif
 }
 
 #main-window[customize-entered] #customization-panel-container {

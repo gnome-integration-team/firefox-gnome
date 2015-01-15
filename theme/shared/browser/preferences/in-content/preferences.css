@@ -22,7 +22,6 @@ prefpane {
   line-height: 20px;
 }
 
-%if APP_VERSION != 34
 * {
   -moz-user-select: text;
 }
@@ -32,7 +31,6 @@ treecol {
   /* override the * rule */
   -moz-user-select: none;
 }
-%endif
 
 /* Category List */
 
@@ -49,7 +47,6 @@ treecol {
 
 /* General Pane */
 
-%if APP_VERSION != 34
 #useFirefoxSync {
   font-size: 90%;
   -moz-margin-end: 8px !important;
@@ -58,7 +55,6 @@ treecol {
 #getStarted {
   font-size: 90%;
 }
-%endif
 
 #isNotDefaultLabel {
   font-weight: bold;

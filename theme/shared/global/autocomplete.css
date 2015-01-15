@@ -117,7 +117,6 @@ treechildren.autocomplete-treebody::-moz-tree-cell-text(selected) {
   color: MenuText;
 }
 
-%if APP_VERSION != 34
 .ac-url-box {
   /* When setting a vertical margin here, half of that needs to be added
      .ac-title-box's translateY for when .ac-url-box is hidden (see below). */
@@ -139,13 +138,6 @@ treechildren.autocomplete-treebody::-moz-tree-cell-text(selected) {
      including vertical margins (if any). */
   transform: translateY(.5em);
 }
-%endif
-
-%if APP_VERSION == 34
-.ac-url-box {
-  margin-top: 1px;
-}
-%endif
 
 .ac-site-icon {
   width: 16px; 

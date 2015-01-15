@@ -250,13 +250,9 @@ searchbar[oneoffui] .searchbar-engine-button {
 }
 
 .search-panel-tree > .autocomplete-treebody::-moz-tree-cell {
-%if APP_VERSION == 34
-  -moz-padding-start: 16px;
-%endif
   border-top: none !important;
 }
 
-%if APP_VERSION != 34
 .search-panel-tree > .autocomplete-treebody::-moz-tree-cell-text {
   -moz-padding-start: 4px;
 }
@@ -274,7 +270,6 @@ searchbar[oneoffui] .searchbar-engine-button {
 .search-panel-tree > .autocomplete-treebody::-moz-tree-image(fromhistory, selected) {
   list-style-image: url("chrome://browser/skin/search-history-icon.svg#search-history-icon-active");
 }
-%endif
 
 searchbar[oneoffui] .searchbar-engine-image {
   -moz-margin-start: -1px;

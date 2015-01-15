@@ -107,12 +107,7 @@ tooltip[titletip="true"] {
 
 /* rules for popups associated with menulists */
 
-%if APP_VERSION == 34
-menulist > menupopup,
-.menulist-menupopup {
-%else
 menulist > menupopup {
-%endif
   padding: 0px;
   min-width: 0px;
 }
