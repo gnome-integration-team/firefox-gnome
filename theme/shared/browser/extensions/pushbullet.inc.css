@@ -15,11 +15,11 @@
 
 /* invisible label, used only for background-image */
 @pushbulletButton@[cui-areatype="toolbar"] .toolbarbutton-text {
-  color: rgba(0, 0, 0, 0.0);
+  color: transparent;
   display: block;
   width: 1em;
   height: 1em;
-  background: url(chrome://symbolic-icons/skin/extensions/pushbullet.svg) center no-repeat !important;
+  background: url(chrome://symbolic-icons/skin/extensions/pushbullet.svg) center no-repeat;
   text-shadow: none;
 }
 
