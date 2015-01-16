@@ -169,7 +169,7 @@ notification .messageImage:-moz-window-inactive {
 
 #main-window:-moz-window-inactive .tab-throbber,
 #main-window:-moz-window-inactive .tab-icon-image {
-  filter: url(chrome://mozapps/skin/extensions/extensions.svg#greyscale);
+  filter: grayscale(1);
   opacity: 0.5;
 }
 
@@ -179,13 +179,6 @@ notification .messageImage:-moz-window-inactive {
 
 :-moz-any(#minimize-button, #restore-button, #close-button):-moz-window-inactive > .toolbarbutton-icon {
   opacity: .38 !important;
-}
-
-/* ::::: browser/searchbar.css ::::: */
-
-.searchbar-engine-image:-moz-window-inactive {
-  filter: url(chrome://mozapps/skin/extensions/extensions.svg#greyscale);
-  opacity: 0.5;
 }
 
 /* ::::: browser/extensions/flagfox.css ::::: */
@@ -198,7 +191,7 @@ notification .messageImage:-moz-window-inactive {
  * change when window loses focus should be enough */
 
 #flagfox-button > #flagfox-icon:-moz-window-inactive {
-  filter: url(chrome://mozapps/skin/extensions/extensions.svg#greyscale);
+  filter: grayscale(1);
   opacity: 0.5;
 }
 
