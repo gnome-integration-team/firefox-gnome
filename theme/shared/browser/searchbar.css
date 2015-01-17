@@ -131,6 +131,15 @@ menuitem[cmd="cmd_clearhistory"][disabled] {
   min-width: 26px;
   padding: 5px;
 }
+
+%if APP_VERSION != 35
+.searchbar-search-button[addengines="true"] {
+/* FIXME: Symbolic icon
+  list-style-image: url("chrome://browser/skin/search-indicator-badge-add.png");
+*/
+}
+%endif
+
 #main-window@darkTheme@ .searchbar-search-button {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
@@ -231,9 +240,22 @@ menuitem[cmd="cmd_clearhistory"][disabled] {
   color: HighlightText;
 }
 
+%if APP_VERSION == 35
 .addengine-item > .button-box > .button-icon {
   width: 16px;
 }
+%else
+.addengine-icon {
+  width: 16px;
+}
+
+.addengine-badge {
+  width: 16px;
+  height: 16px;
+  margin: -7px -9px 7px 9px;
+  list-style-image: url("chrome://browser/skin/badge-add-engine.png");
+}
+%endif
 
 .addengine-item > .button-box > .button-text {
   -moz-box-flex: 1;

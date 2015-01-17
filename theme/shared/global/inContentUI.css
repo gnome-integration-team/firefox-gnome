@@ -19,6 +19,15 @@
   color: WindowText;
 }
 
+%if APP_VERSION != 35
+/* Use the new in-content colors for #contentAreaDownloadsView. After landing
+   of bug 989469 the colors can be moved to *|*:root */
+*|*#contentAreaDownloadsView {
+  background: #f1f1f1;
+  color: #424e5a;
+}
+%endif
+
 html|html {
   font: message-box;
 }
