@@ -65,20 +65,19 @@ notification .messageImage:-moz-window-inactive {
 /* ::::: browser/browser.css ::::: */
 
 #main-menubar:-moz-window-inactive > * {
-  color: #a7aba7 !important;
+  color: #8d9091 !important;
 }
 
 #navigator-toolbox .toolbarbutton-1:-moz-window-inactive,
 #navigator-toolbox .toolbarbutton-1:-moz-window-inactive:hover {
   background: transparent !important;
-  color: #a7aba7 !important;
+  color: #8d9091 !important;
 }
 
 #navigator-toolbox .toolbarbutton-1:-moz-window-inactive[checked="true"] {
-  background: rgba(100,110,100,0.5) !important;
+  background: rgba(90,90,90,0.2) !important;
   border-color: transparent !important;
-  color: #eaeaea !important;
-  text-shadow: 0 0 0 #ffffff;
+  color: #8f9293 !important;
 }
 
 #navigator-toolbox .toolbarbutton-1:not([checked="true"]):-moz-window-inactive .toolbarbutton-icon,
@@ -96,7 +95,7 @@ notification .messageImage:-moz-window-inactive {
 
 #nav-bar[darkvariant] :-moz-any(#back-button, #forward-button):-moz-window-inactive,
 #nav-bar[reliefbuttons="true"][darkvariant] .toolbarbutton-1:-moz-window-inactive {
-  border-color: #545959 !important;
+  border-color: #a8a8a8 !important;
 }
 
 :-moz-any(
@@ -113,7 +112,8 @@ notification .messageImage:-moz-window-inactive {
 }
 
 #main-window:-moz-window-inactive #TabsToolbar {
-  border-top-color: #caccca !important;
+  border-top-color: #a8a8a8 !important;
+  box-shadow: none !important;
 }
 
 #main-window:-moz-window-inactive #TabsToolbar[darkvariant] {
@@ -121,9 +121,9 @@ notification .messageImage:-moz-window-inactive {
 }
 
 #main-window:-moz-window-inactive textbox {
-  background: #f8f8f6 !important;
+  background: #fcfcfc !important;
   box-shadow: none !important;
-  color: #6a6f6e !important;
+  color: #323232 !important;
 }
 
 #main-window:-moz-window-inactive #urlbar:-moz-lwtheme,
@@ -156,15 +156,19 @@ notification .messageImage:-moz-window-inactive {
 }
 
 #main-window:-moz-window-inactive .tabbrowser-tab {
-  color: #a7aba7 !important;
+  color: #aaabac !important;
+}
+#main-window:-moz-window-inactive .tabbrowser-tab[selected=true] {
+  color: #8d9091 !important;
 }
 
 #main-window:-moz-window-inactive .tabbrowser-tab[selected=true] .tab-background-middle {
-  -moz-border-bottom-colors: #caccca !important;
+  background: #ededed !important;
+  box-shadow: none !important;
 }
 
 #main-window:-moz-window-inactive #TabsToolbar[darkvariant] .tabbrowser-tab[selected=true] .tab-background-middle {
-  -moz-border-bottom-colors: #464c4c !important;
+  background: #393f3f !important;
 }
 
 #main-window:-moz-window-inactive .tab-throbber,
