@@ -4,24 +4,45 @@
  * URL: https://addons.mozilla.org/firefox/addon/adblock-plus/ */
 %endif
 
-#abp-toolbarbutton {
-  list-style-image: url(chrome://symbolic-icons/skin/extensions/adblock-plus.svg) !important;
-  -moz-image-region: auto !important;
+/* Default */
+#abp-toolbarbutton .toolbarbutton-icon {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/adblock-plus.svg#default);
+  -moz-image-region: auto;
 }
 
+#abp-toolbarbutton[cui-areatype="menu-panel"] .toolbarbutton-icon {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/adblock-plus.svg#default-panel);
+  -moz-image-region: auto;
+}
+
+#main-window[darkvariant="toolbar"] #abp-toolbarbutton[cui-areatype="toolbar"] .toolbarbutton-icon,
+#main-window[darkvariant="full"] #abp-toolbarbutton .toolbarbutton-icon {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/adblock-plus.svg#default-bright);
+  -moz-image-region: auto;
+}
+
+/* Stopped */
 #abp-toolbarbutton[abpstate="disabled"] .toolbarbutton-icon,
 #abp-toolbarbutton[abpstate="whitelisted"] .toolbarbutton-icon {
-  list-style-image: url(chrome://symbolic-icons/skin/extensions/adblock-plus-stopped.svg) !important;
-  -moz-image-region: auto !important;
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/adblock-plus.svg#stopped);
+  -moz-image-region: auto;
 }
 
-#abp-toolbarbutton[cui-areatype="menu-panel"] .toolbarbutton-icon,
+#abp-toolbarbutton[abpstate="disabled"][cui-areatype="menu-panel"] .toolbarbutton-icon,
+#abp-toolbarbutton[abpstate="whitelisted"][cui-areatype="menu-panel"] .toolbarbutton-icon {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/adblock-plus.svg#stopped-panel);
+  -moz-image-region: auto;
+}
+
+#main-window[darkvariant="toolbar"] #abp-toolbarbutton:-moz-any([abpstate="disabled"], [abpstate="whitelisted"])[cui-areatype="toolbar"] .toolbarbutton-icon,
+#main-window[darkvariant="full"] #abp-toolbarbutton:-moz-any([abpstate="disabled"], [abpstate="whitelisted"]) .toolbarbutton-icon {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/adblock-plus.svg#stopped-bright);
+  -moz-image-region: auto;
+}
+
+/* Palette */
 toolbarpaletteitem[place="palette"] > #abp-toolbarbutton .toolbarbutton-icon {
-  opacity: .6;
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/adblock-plus.svg#default-panel) !important;
+  -moz-image-region: auto;
 }
 
-#abp-toolbarbutton:-moz-any([abpstate="disabled"], [abpstate="whitelisted"])[cui-areatype="menu-panel"] .toolbarbutton-icon,
-toolbarpaletteitem[place="palette"] > #abp-toolbarbutton:-moz-any([abpstate="disabled"], [abpstate="whitelisted"]) .toolbarbutton-icon {
-  list-style-image: url(chrome://symbolic-icons/skin/extensions/adblock-plus-stopped-menuPanel.svg) !important;
-  opacity: 1;
-}
