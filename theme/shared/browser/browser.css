@@ -624,8 +624,8 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
 
 /* ... */
 
-toolbarbutton.badged-button > .toolbarbutton-badge-container > .toolbarbutton-icon,
-toolbarbutton[type="socialmark"] > .toolbarbutton-icon {
+toolbarbutton.badged-button[cui-areatype="toolbar"] > .toolbarbutton-badge-container > .toolbarbutton-icon,
+toolbarbutton[type="socialmark"][cui-areatype="toolbar"] > .toolbarbutton-icon {
   max-width: 16px !important;
 }
 
