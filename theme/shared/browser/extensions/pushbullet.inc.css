@@ -26,3 +26,8 @@
 #main-window@darkTheme@ @pushbulletButton@[cui-areatype="toolbar"] .toolbarbutton-text {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
+
+/* JS created panel is always last, we match arrow's color to panel (#6EC07C) */
+#main-window > #mainPopupSet > panel:last-child .panel-arrow[side="top"] {
+  list-style-image: url("chrome://global/skin/arrow/panelarrow-vertical-color.svg#green");
+}
