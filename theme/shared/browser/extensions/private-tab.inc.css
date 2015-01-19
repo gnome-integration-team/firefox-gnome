@@ -8,12 +8,16 @@
   list-style-image: url(chrome://symbolic-icons/skin/extensions/private-tab.svg) !important;
 }
 
+#main-window[darkvariant] #privateTab-toolbar-openNewPrivateTab[cui-areatype="toolbar"] > .toolbarbutton-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
+}
+
 #privateTab-toolbar-openNewPrivateTab[cui-areatype="menu-panel"] > .toolbarbutton-icon,
 toolbarpaletteitem[place="palette"] > #privateTab-toolbar-openNewPrivateTab > .toolbarbutton-icon {
   opacity: 0.6;
 }
 
-#main-window[darkvariant] #privateTab-toolbar-openNewPrivateTab[cui-areatype="toolbar"] > .toolbarbutton-icon,
 #main-window[darkvariant="full"] #privateTab-toolbar-openNewPrivateTab[cui-areatype="menu-panel"] > .toolbarbutton-icon {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
+  opacity: 0.8;
 }
