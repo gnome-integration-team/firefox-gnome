@@ -1,0 +1,19 @@
+%if 0
+/* Private Tab
+ * id: privateTab@infocatcher
+ * URL: https://addons.mozilla.org/firefox/addon/private-tab/ */
+%endif
+
+#privateTab-toolbar-openNewPrivateTab > .toolbarbutton-icon {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/private-tab.svg) !important;
+}
+
+#privateTab-toolbar-openNewPrivateTab[cui-areatype="menu-panel"] > .toolbarbutton-icon,
+toolbarpaletteitem[place="palette"] > #privateTab-toolbar-openNewPrivateTab > .toolbarbutton-icon {
+  opacity: 0.6;
+}
+
+#main-window[darkvariant] #privateTab-toolbar-openNewPrivateTab[cui-areatype="toolbar"] > .toolbarbutton-icon,
+#main-window[darkvariant="full"] #privateTab-toolbar-openNewPrivateTab[cui-areatype="menu-panel"] > .toolbarbutton-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
+}
