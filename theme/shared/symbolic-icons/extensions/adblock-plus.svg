@@ -21,12 +21,16 @@
         fill: #2e3436;
       }
 
-      .bright {
+      .white {
         fill: #ffffff;
       }
       
-      .translucent {
+      .light-theme {
         opacity: 0.6;
+      }
+      
+      .dark-theme {
+        opacity: 0.8;
       }
       
       .green {
@@ -54,21 +58,28 @@
     <use xlink:href="#full-sign" class="generic"/>
   </g>
   <g id="default-panel">
-    <use xlink:href="#full-sign" class="generic translucent"/>
+    <use xlink:href="#full-sign" class="generic light-theme"/>
   </g>
   <g id="default-bright">
-    <use xlink:href="#full-sign" class="bright"/>
+    <use xlink:href="#full-sign" class="white"/>
+  </g>
+  <g id="default-panel-bright">
+    <use xlink:href="#full-sign" class="white dark-theme"/>
   </g>
   <g id="stopped">
     <use xlink:href="#cut-sign" class="generic"/>
     <use xlink:href="#dot" class="green"/>
   </g>
   <g id="stopped-panel">
-    <use xlink:href="#cut-sign" class="generic translucent"/>
+    <use xlink:href="#cut-sign" class="generic light-theme"/>
     <use xlink:href="#dot" class="green"/>
   </g>
   <g id="stopped-bright">
-    <use xlink:href="#cut-sign" class="bright"/>
+    <use xlink:href="#cut-sign" class="white"/>
+    <use xlink:href="#dot" class="green"/>
+  </g>
+  <g id="stopped-panel-bright">
+    <use xlink:href="#cut-sign" class="white dark-theme"/>
     <use xlink:href="#dot" class="green"/>
   </g>
 

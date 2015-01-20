@@ -15,9 +15,13 @@
   -moz-image-region: auto;
 }
 
-#main-window[darkvariant="toolbar"] #abp-toolbarbutton[cui-areatype="toolbar"] .toolbarbutton-icon,
-#main-window[darkvariant="full"] #abp-toolbarbutton .toolbarbutton-icon {
+#main-window[darkvariant] #abp-toolbarbutton[cui-areatype="toolbar"] .toolbarbutton-icon {
   list-style-image: url(chrome://symbolic-icons/skin/extensions/adblock-plus.svg#default-bright);
+  -moz-image-region: auto;
+}
+
+#main-window[darkvariant="full"] #abp-toolbarbutton[cui-areatype="menu-panel"] .toolbarbutton-icon {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/adblock-plus.svg#default-panel-bright);
   -moz-image-region: auto;
 }
 
@@ -34,9 +38,13 @@
   -moz-image-region: auto;
 }
 
-#main-window[darkvariant="toolbar"] #abp-toolbarbutton:-moz-any([abpstate="disabled"], [abpstate="whitelisted"])[cui-areatype="toolbar"] .toolbarbutton-icon,
-#main-window[darkvariant="full"] #abp-toolbarbutton:-moz-any([abpstate="disabled"], [abpstate="whitelisted"]) .toolbarbutton-icon {
+#main-window[darkvariant] #abp-toolbarbutton:-moz-any([abpstate="disabled"], [abpstate="whitelisted"])[cui-areatype="toolbar"] .toolbarbutton-icon {
   list-style-image: url(chrome://symbolic-icons/skin/extensions/adblock-plus.svg#stopped-bright);
+  -moz-image-region: auto;
+}
+
+#main-window[darkvariant="full"] #abp-toolbarbutton:-moz-any([abpstate="disabled"], [abpstate="whitelisted"])[cui-areatype="menu-panel"] .toolbarbutton-icon {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/adblock-plus.svg#stopped-panel-bright);
   -moz-image-region: auto;
 }
 
