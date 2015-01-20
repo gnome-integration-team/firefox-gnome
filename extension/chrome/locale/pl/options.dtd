@@ -4,7 +4,7 @@
 
 <!ENTITY reliefbuttons.label           "Wypukłe przyciski na pasku narzędziowym nawigacji">
 <!ENTITY inactivestate.label           "Inny wygląd nieaktywnych okien">
-<!ENTITY e10sdisableunderline.label    "Wyłączenie podkreślenie na kartach e10s">
+<!ENTITY e10sdisableunderline.label    "Wyłączenie podkreślenia na kartach e10s">
 <!ENTITY tabboldlabel.label            "Pogrubione etykiety kart">
 <!ENTITY maxtabwidth.label             "Maksymalna szerokość kart">
 <!ENTITY default.label                 "Domyślna">
