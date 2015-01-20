@@ -134,9 +134,7 @@ menuitem[cmd="cmd_clearhistory"][disabled] {
 
 %if APP_VERSION != 35
 .searchbar-search-button[addengines="true"] {
-/* FIXME: Symbolic icon
-  list-style-image: url("chrome://browser/skin/search-indicator-badge-add.png");
-*/
+  list-style-image: url(chrome://symbolic-icons/skin/search-field.svg);
 }
 %endif
 
