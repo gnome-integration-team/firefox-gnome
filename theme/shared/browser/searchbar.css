@@ -4,6 +4,12 @@
 
 %include variables.inc.css
 
+%if APP_VERSION != 35
+#PopupSearchAutoComplete {
+  -moz-margin-start: -24px;
+}
+%endif
+
 .searchbar-textbox {
   min-height: 22px;
   background-color: -moz-field;
@@ -278,7 +284,11 @@ searchbar[oneoffui] .searchbar-engine-button {
 }
 
 .search-panel-tree > .autocomplete-treebody::-moz-tree-image {
+%if APP_VERSION == 35
   -moz-padding-start: 6px;
+%else
+  -moz-padding-start: 5px;
+%endif
   width: 14px;
   height: 14px;
 }
