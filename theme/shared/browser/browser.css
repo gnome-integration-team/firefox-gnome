@@ -14,11 +14,7 @@
 
 %define nestedButtons #zoom-out-button, #zoom-reset-button, #zoom-in-button, #cut-button, #copy-button, #paste-button
 
-%define primaryToolbarButtons #back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #e10s-button, #panic-button, #web-apps-button, #webide-button
-
-%if APP_VERSION != 35
-%define primaryToolbarButtons @primaryToolbarButtons@, #loop-button
-%endif
+%define primaryToolbarButtons #back-button, #forward-button, #home-button, #print-button, #downloads-button, #bookmarks-menu-button, #new-tab-button, #new-window-button, #fullscreen-button, #sync-button, #feed-button, #tabview-button, #social-share-button, #open-file-button, #find-button, #developer-button, #preferences-button, #privatebrowsing-button, #save-page-button, #add-ons-button, #history-panelmenu, #nav-bar-overflow-button, #PanelUI-menu-button, #characterencoding-button, #email-link-button, #sidebar-button, #e10s-button, #panic-button, #web-apps-button, #webide-button, #loop-button
 
 %define primaryToolbarButtons @primaryToolbarButtons@, @nestedButtons@
 
@@ -851,41 +847,6 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
   -moz-image-region: rect(0, 738px, 18px, 720px);
 }
 
-%if APP_VERSION == 35
-#loop-button-throttled > .toolbarbutton-badge-container {
-  list-style-image: url(chrome://browser/skin/loop/toolbar.png);
-  -moz-image-region: rect(0, 18px, 18px, 0);
-}
-
-toolbar[brighttext] #loop-button-throttled > .toolbarbutton-badge-container {
-  list-style-image: url(chrome://browser/skin/loop/toolbar-inverted.png);
-}
-
-#loop-button-throttled[state="disabled"] > .toolbarbutton-badge-container,
-#loop-button-throttled[disabled="true"] > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 36px, 18px, 18px);
-}
-
-#loop-button-throttled:not([disabled="true"])[state="error"] > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 54px, 18px, 36px);
-}
-
-#loop-button-throttled:not([disabled="true"])[state="action"] > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 72px, 18px, 54px);
-}
-
-#loop-button-throttled:not([disabled="true"])[state="action"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 90px, 18px, 72px);
-}
-
-#loop-button-throttled:not([disabled="true"])[state="active"] > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 108px, 18px, 90px);
-}
-
-#loop-button-throttled:not([disabled="true"])[state="active"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 126px, 18px, 108px);
-}
-%else
 #loop-button > .toolbarbutton-badge-container {
   list-style-image: url(chrome://browser/skin/loop/toolbar.png);
   -moz-image-region: rect(0, 18px, 18px, 0);
@@ -919,7 +880,6 @@ toolbar[brighttext] #loop-button > .toolbarbutton-badge-container {
 #loop-button:not([disabled="true"])[state="active"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container {
   -moz-image-region: rect(0, 126px, 18px, 108px);
 }
-%endif
 
 #main-window@darkTheme@ :-moz-any(#window-controls, .window-controls) .toolbarbutton-icon,
 #main-window@darkTheme@ :-moz-any(#back-button, #forward-button, #nav-bar-overflow-button, #PanelUI-menu-button) > .toolbarbutton-icon,
@@ -1080,43 +1040,6 @@ toolbaritem[sdkstylewidget="true"] > toolbarbutton {
   -moz-image-region: rect(0, 832px, 32px, 800px);
 }
 
-%if APP_VERSION == 35
-#loop-button-throttled[cui-areatype="menu-panel"] > .toolbarbutton-badge-container,
-toolbarpaletteitem[place="palette"] > #loop-button-throttled > .toolbarbutton-badge-container {
-  list-style-image: url(chrome://browser/skin/loop/menuPanel.png);
-  -moz-image-region: rect(0, 32px, 32px, 0);
-}
-
-/* Make sure that the state icons are not shown in the customization palette. */
-toolbarpaletteitem[place="palette"] > #loop-button-throttled > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 32px, 32px, 0) !important;
-}
-
-#loop-button-throttled[cui-areatype="menu-panel"][state="disabled"] > .toolbarbutton-badge-container,
-#loop-button-throttled[cui-areatype="menu-panel"][disabled="true"] > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 64px, 32px, 32px);
-}
-
-#loop-button-throttled[cui-areatype="menu-panel"]:not([disabled="true"])[state="error"] > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 96px, 32px, 64px);
-}
-
-#loop-button-throttled[cui-areatype="menu-panel"]:not([disabled="true"])[state="action"] > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 128px, 32px, 96px);
-}
-
-#loop-button-throttled[cui-areatype="menu-panel"]:not([disabled="true"])[state="action"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 160px, 32px, 128px);
-}
-
-#loop-button-throttled[cui-areatype="menu-panel"]:not([disabled="true"])[state="active"] > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 192px, 32px, 160px);
-}
-
-#loop-button-throttled[cui-areatype="menu-panel"]:not([disabled="true"])[state="active"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container {
-  -moz-image-region: rect(0, 224px, 32px, 192px);
-}
-%else
 #loop-button[cui-areatype="menu-panel"] > .toolbarbutton-badge-container,
 toolbarpaletteitem[place="palette"] > #loop-button > .toolbarbutton-badge-container {
   list-style-image: url(chrome://browser/skin/loop/menuPanel.png);
@@ -1152,7 +1075,6 @@ toolbarpaletteitem[place="palette"] > #loop-button > .toolbarbutton-badge-contai
 #loop-button[cui-areatype="menu-panel"]:not([disabled="true"])[state="active"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container {
   -moz-image-region: rect(0, 224px, 32px, 192px);
 }
-%endif
 
 /* Wide panel control icons */
 
@@ -2203,13 +2125,6 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   list-style-image: url(chrome://symbolic-icons/skin/info.svg);
   opacity: .5;
 }
-
-%if APP_VERSION == 35
-/* Loop */
-#loop-button-throttled {
-  list-style-image: url(chrome://symbolic-icons/skin/call-start.svg);
-}
-%endif
 
 /* social share panel */
 
@@ -3464,136 +3379,6 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   }
 }
 
-%if APP_VERSION == 35
-/* Box model highlighter */
-
-svg|g.box-model-container {
-  opacity: 0.4;
-}
-
-svg|polygon.box-model-content {
-  fill: #80d4ff;
-}
-
-svg|polygon.box-model-padding {
-  fill: #66cc52;
-}
-
-svg|polygon.box-model-border {
-  fill: #ffe431;
-}
-
-svg|polygon.box-model-margin {
-  fill: #d89b28;
-}
-
-svg|polygon.box-model-content,
-svg|polygon.box-model-padding,
-svg|polygon.box-model-border,
-svg|polygon.box-model-margin {
-  stroke: none;
-}
-
-svg|line.box-model-guide-top,
-svg|line.box-model-guide-right,
-svg|line.box-model-guide-bottom,
-svg|line.box-model-guide-left {
-  stroke: #08C;
-  stroke-dasharray: 5 3;
-  shape-rendering: crispEdges;
-}
-
-/* Highlighter - Node Infobar */
-
-.highlighter-nodeinfobar {
-  color: hsl(216,33%,97%);
-  border-radius: 3px;
-  background: hsl(214,13%,24%) no-repeat padding-box;
-  padding: 5px;
-  /* Avoid cases where the infobar is smaller than the arrow, when the text is
-  short */
-  min-width: 75px;
-   /* Avoid a shadow with lightweight themes - Bug 1037908 */
-  text-shadow: none;
-}
-
-/* Highlighter - Node Infobar - text */
-
-.highlighter-nodeinfobar-text {
-  text-align: center;
-  /* 100% - size of the buttons and margins */
-  max-width: calc(100% - 2 * (26px + 6px));
-  padding-bottom: 1px;
-}
-
-html|*.highlighter-nodeinfobar-tagname {
-  color: hsl(285,100%,75%);
-}
-
-html|*.highlighter-nodeinfobar-id {
-  color: hsl(103,46%,54%);
-}
-
-html|*.highlighter-nodeinfobar-classes,
-html|*.highlighter-nodeinfobar-pseudo-classes {
-  color: hsl(200,74%,57%);
-}
-
-html|*.highlighter-nodeinfobar-dimensions {
-  color: hsl(210,30%,85%);
-  -moz-border-start: 1px solid #5a6169;
-  -moz-margin-start: 6px;
-  -moz-padding-start: 6px;
-}
-
-/* Highlighter - Node Infobar - box & arrow */
-
-.highlighter-nodeinfobar-arrow {
-  width: 14px;
-  height: 14px;
-  -moz-margin-start: calc(50% - 7px);
-  transform: rotate(-45deg);
-  background-clip: padding-box;
-  background-repeat: no-repeat;
-}
-
-.highlighter-nodeinfobar-arrow-top {
-  margin-bottom: -8px;
-  margin-top: 8px;
-  background-image: linear-gradient(to top right, transparent 50%, hsl(210,2%,22%) 50%);
-}
-
-.highlighter-nodeinfobar-arrow-bottom {
-  margin-top: -8px;
-  margin-bottom: 8px;
-  background-image: linear-gradient(to bottom left, transparent 50%, hsl(210,2%,22%) 50%);
-}
-
-.highlighter-nodeinfobar-container[hide-arrow] > .highlighter-nodeinfobar {
-  margin: 7px 0;
-}
-
-/* Css transform highlighter */
-
-svg|polygon.css-transform-transformed {
-  fill: #80d4ff;
-  opacity: 0.8;
-}
-
-svg|polygon.css-transform-untransformed {
-  fill: #66cc52;
-  opacity: 0.8;
-}
-
-svg|polygon.css-transform-transformed,
-svg|polygon.css-transform-untransformed,
-svg|line.css-transform-line {
-  stroke: #08C;
-  stroke-dasharray: 5 3;
-  stroke-width: 2;
-}
-%endif
-
 /* Developer toolbar */
 
 #developer-toolbar {
@@ -4099,17 +3884,6 @@ notification.pluginVulnerable .messageImage {
 
 /* Social toolbar item */
 
-%if APP_VERSION == 35
-#social-provider-button {
-  -moz-image-region: rect(0, 16px, 16px, 0);
-  list-style-image: url(chrome://browser/skin/social/services-16.png);
-}
-
-#social-provider-button > .toolbarbutton-menu-dropmarker {
-  display: none;
-}
-%endif
-
 .popup-notification-icon[popupid="servicesInstall"] {
   list-style-image: url(chrome://browser/skin/social/services-64.png);
 }
@@ -4280,11 +4054,7 @@ chatbar > chatbox > .chat-titlebar > .chat-swap-button {
 }
 
 .chat-titlebar[activity] {
-%if APP_VERSION == 35
-  background-image: radial-gradient(ellipse closest-side at center, rgb(255,255,255), rgba(255,255,255,0));
-%else
   background-image: radial-gradient(ellipse closest-side at center, rgb(255,255,255), transparent);
-%endif
   background-repeat: no-repeat;
   background-size: 100% 20px;
   background-position: 0 -10px;
@@ -4374,11 +4144,7 @@ window > chatbox {
 
 .chat-titlebar {
   background-color: #d9d9d9;
-%if APP_VERSION == 35
-  background-image: linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
-%else
   background-image: linear-gradient(rgba(255,255,255,.3), transparent);
-%endif
 }
 
 .chat-titlebar[selected] {
@@ -4388,11 +4154,7 @@ window > chatbox {
 .chatbar-button {
   -moz-appearance: none;
   background-color: #d9d9d9;
-%if APP_VERSION == 35
-  background-image: linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
-%else
   background-image: radial-gradient(circle farthest-corner at center 3px, rgb(233,242,252) 3%, rgba(172,206,255,0.75) 40%, rgba(87,151,201,0.5) 80%, transparent);
-%endif
 }
 
 .chatbar-button > .toolbarbutton-icon {
@@ -4783,11 +4545,7 @@ toolbarpaletteitem[place="toolbar"] {
 }
 
 #customization-lwtheme-menu-footer {
-%if APP_VERSION == 35
-  background: linear-gradient(hsla(180,20%,10%,.05) 60%, hsla(180,20%,10%,0)) border-box;
-%else
   background: linear-gradient(hsla(180,20%,10%,.05) 60%, transparent) border-box;
-%endif
   border-top: 1px solid hsla(180,20%,10%,.05);
   margin-bottom: -10px;
 }
@@ -4803,11 +4561,7 @@ toolbarpaletteitem[place="toolbar"] {
 }
 
 .customization-lwtheme-menu-footeritem:hover {
-%if APP_VERSION == 35
-  background: linear-gradient(hsla(180,20%,10%,.08) 40%, hsla(180,20%,10%,0)) padding-box;
-%else
   background: linear-gradient(hsla(180,20%,10%,.08) 40%, transparent) padding-box;
-%endif
 }
 
 .customization-lwtheme-menu-footeritem:first-child {

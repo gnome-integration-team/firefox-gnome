@@ -93,11 +93,7 @@
 }
 
 
-%if APP_VERSION == 35
-.controlBar[audio-only] > .volumeStack {
-%else
 .controlBar[fullscreen-unavailable] > .volumeStack {
-%endif
   /* This value is duplicated in the videocontrols.xml adjustControlSize function. */
   -moz-margin-end: 8px;
 }

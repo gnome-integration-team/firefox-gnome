@@ -11,7 +11,7 @@
 }
 
 .theme-dark .splitview-nav-container {
-  background-color: #343c45; /* Toolbars */
+  background-color: var(--theme-toolbar-background);
 }
 
 .splitview-nav {

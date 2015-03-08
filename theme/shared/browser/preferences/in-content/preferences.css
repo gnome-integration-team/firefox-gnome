@@ -4,23 +4,7 @@
 
 @namespace html "http://www.w3.org/1999/xhtml";
 
-%if APP_VERSION == 35
-#dialogBox,
-dialog,
-window,
-prefwindow,
-.windowDialog {
-  -moz-appearance: none;
-  background-color: #eaeaea;
-  color: #424E5A;
-}
-%endif
-
-%if APP_VERSION == 35
-prefpane {
-%else
 #mainPrefPane {
-%endif
   max-width: 800px;
   padding: 0;
   font: message-box;
@@ -238,7 +222,6 @@ description > html|a {
   -moz-margin-start: 33px;
 }
 
-%if APP_VERSION != 35
 #trackingProtectionImage {
   width: 16px;
   height: 16px;
@@ -250,7 +233,6 @@ description > html|a {
     list-style-image: url(chrome://browser/skin/bad-content-blocked-16@2x.png);
   }
 }
-%endif
 
 /**
  * Dialog
@@ -262,37 +244,23 @@ description > html|a {
 }
 
 #dialogBox {
-%if APP_VERSION == 35
-  border: 1px solid #666;
-%else
   background-color: #fbfbfb;
   color: #424e5a;
   font-size: 14px;
   border-radius: 2.5px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
-%endif
   display: -moz-box;
   margin: 0;
-%if APP_VERSION == 35
-  padding-right: 6px;
-  padding-left: 6px;
-%else
   padding: 0;
-%endif
 }
 
 #dialogBox[resizable="true"] {
   resize: both;
   overflow: hidden;
-%if APP_VERSION == 35
-  min-height: 30em;
-%else
   min-height: 20em;
-%endif
   min-width: 66ch;
 }
 
-%if APP_VERSION != 35
 #dialogBox > .groupbox-title {
   padding: 3.5px 0;
   background-color: #f1f1f1;
@@ -302,7 +270,6 @@ description > html|a {
 #dialogTitle {
   text-align: center;
 }
-%endif
 
 .close-icon {
   background-color: transparent !important;
@@ -315,34 +282,15 @@ description > html|a {
 
 #dialogBox > .groupbox-body {
   -moz-appearance: none;
-%if APP_VERSION == 35
-  padding: 0;
-%else
   padding: 20px;
-%endif
 }
 
 #dialogFrame {
   -moz-box-flex: 1;
   /* Default dialog dimensions */
-%if APP_VERSION == 35
-  height: 30em;
-%else
   height: 20em;
-%endif
   width: 66ch;
 }
-
-%if APP_VERSION == 35
-tree:not(#rejectsTree) {
-  min-height: 15em;
-}
-
-:-moz-any(dialog, window, prefwindow) groupbox {
-  -moz-margin-start: 8px;
-  -moz-margin-end: 8px;
-}
-%endif
 
 /**
  * End Dialog
@@ -383,16 +331,6 @@ filefield + button {
   -moz-margin-start: -4px;
 }
 
-%if APP_VERSION == 35
-#dialogTitle {
-  -moz-margin-start: 12px !important;
-}
-
-.actionButtons {
-  margin-right: 8px !important;
-  margin-left: 8px !important;
-}
-%else
 /**
  * Dialog
  */
@@ -400,4 +338,3 @@ filefield + button {
 #dialogTitle {
   font-size: 1em;
 }
-%endif

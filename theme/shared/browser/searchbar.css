@@ -4,11 +4,9 @@
 
 %include variables.inc.css
 
-%if APP_VERSION != 35
 #PopupSearchAutoComplete {
   -moz-margin-start: -24px;
 }
-%endif
 
 .searchbar-textbox {
   min-height: 22px;
@@ -138,11 +136,9 @@ menuitem[cmd="cmd_clearhistory"][disabled] {
   padding: 5px;
 }
 
-%if APP_VERSION != 35
 .searchbar-search-button[addengines="true"] {
   list-style-image: url(chrome://symbolic-icons/skin/search-field.svg);
 }
-%endif
 
 #main-window@darkTheme@ .searchbar-search-button {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
@@ -244,11 +240,6 @@ menuitem[cmd="cmd_clearhistory"][disabled] {
   color: HighlightText;
 }
 
-%if APP_VERSION == 35
-.addengine-item > .button-box > .button-icon {
-  width: 16px;
-}
-%else
 .addengine-icon {
   width: 16px;
 }
@@ -259,7 +250,6 @@ menuitem[cmd="cmd_clearhistory"][disabled] {
   margin: -7px -9px 7px 9px;
   list-style-image: url("chrome://browser/skin/badge-add-engine.png");
 }
-%endif
 
 .addengine-item > .button-box > .button-text {
   -moz-box-flex: 1;
@@ -284,11 +274,7 @@ searchbar[oneoffui] .searchbar-engine-button {
 }
 
 .search-panel-tree > .autocomplete-treebody::-moz-tree-image {
-%if APP_VERSION == 35
-  -moz-padding-start: 6px;
-%else
   -moz-padding-start: 5px;
-%endif
   width: 14px;
   height: 14px;
 }

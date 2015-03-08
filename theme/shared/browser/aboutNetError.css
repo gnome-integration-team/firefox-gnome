@@ -99,7 +99,6 @@ button:disabled {
   cursor: pointer;
 }
 
-%if APP_VERSION != 35
 div#certificateErrorReporting {
   display: none;
   float:right;
@@ -171,7 +170,6 @@ button#reportCertificateErrorRetry {
   position: relative;
   display: none;
 }
-%endif
 
 /* ::::: File not found, <...> pages ::::: */
 

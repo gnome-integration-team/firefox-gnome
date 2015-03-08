@@ -10,11 +10,7 @@
     background-image: url("chrome://global/skin/media/imagedoc-darknoise.png");
   }
 
-%if APP_VERSION == 35
-  img.decoded {
-%else
   img.transparent {
-%endif
     background: hsl(0,0%,90%) url("chrome://global/skin/media/imagedoc-lightnoise.png");
     color: #222;
   }

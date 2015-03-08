@@ -136,11 +136,7 @@ xul|tabpanels {
   border: none;
   padding: 0;
   background-color: transparent;
-%if APP_VERSION == 35
-  color: #424E5A;
-%else
   color: inherit;
-%endif
 }
 
 xul|tabs {
@@ -158,11 +154,7 @@ xul|*.tabs-right {
 xul|tab {
   -moz-appearance: none;
   margin-top: 0;
-%if APP_VERSION == 35
-  padding: 0 20px;
-%else
   padding: 4px 20px;
-%endif
   min-height: 44px;
   color: #424f5a;
   background-color: #fbfbfb;
@@ -176,12 +168,8 @@ xul|tab:hover {
 
 xul|tab[selected] {
   background-color: #ebebeb;
-%if APP_VERSION == 35
-  box-shadow: inset 0 -4px 0 0 #ff9500;
-%else
   padding-bottom: 0; /* compensate the 4px border */
   border-bottom: 4px solid #ff9500;
-%endif
 }
 
 xul|*.tab-text {
@@ -204,9 +192,6 @@ xul|menulist {
   height: 30px;
   color: #333;
   line-height: 20px;
-%if APP_VERSION == 35
-  text-shadow: 0 1px 1px #fefefe;
-%endif
   border: 1px solid #c1c1c1;
   -moz-border-top-colors: none !important;
   -moz-border-right-colors: none !important;
@@ -262,11 +247,7 @@ xul|button[type="menu"] > xul|*.button-box > xul|*.button-menu-dropmarker {
   height: 16px;
   border: none;
   background-color: transparent;
-%if APP_VERSION == 35
-  list-style-image: url("chrome://global/skin/in-content/dropdown.png");
-%else
   list-style-image: url("chrome://global/skin/in-content/dropdown.svg#dropdown");
-%endif
 }
 
 xul|*.help-button {
@@ -276,9 +257,7 @@ xul|*.help-button {
   background-color: #ffcb00;
   background-image: none;
   box-shadow: none;
-%if APP_VERSION != 35
   list-style-image: url("chrome://global/skin/in-content/help-glyph.svg");
-%endif
 }
 
 xul|*.help-button:not([disabled="true"]):hover {
@@ -299,26 +278,10 @@ xul|*.help-button > xul|*.button-box {
   padding-left: 0 !important;
 }
 
-%if APP_VERSION == 35
-xul|*.help-button > xul|*.button-box > xul|*.button-icon {
-  width: 26px;
-  height: 26px;
-  background-image: url("chrome://global/skin/in-content/help-glyph.png");
-  background-position: center;
-}
-
-@media (min-resolution: 2dppx) {
-  xul|*.help-button > xul|*.button-box > xul|*.button-icon {
-    background-size: 26px 26px;
-    background-image: url("chrome://global/skin/in-content/help-glyph@2x.png");
-  }
-}
-%else
 xul|*.help-button > xul|*.button-box > xul|*.button-icon {
   width: 18px;
   height: 18px;
 }
-%endif
 
 xul|*.help-button > xul|*.button-box > xul|*.button-text {
   display: none;
@@ -361,43 +324,13 @@ xul|*.spinbuttons-down[disabled="true"] > xul|*.button-box > xul|*.button-icon {
 
 xul|menulist:not([editable="true"]) > xul|*.menulist-dropmarker {
   -moz-appearance: none;
-%if APP_VERSION == 35
-  -moz-margin-end: 10px;
-%else
   -moz-margin-end: 4px;
-%endif
   padding: 0;
   border: none;
   background-color: transparent;
-%if APP_VERSION == 35
-  list-style-image: url("chrome://global/skin/in-content/dropdown.png");
-%else
   list-style-image: url("chrome://global/skin/in-content/dropdown.svg#dropdown");
-%endif
 }
 
-%if APP_VERSION == 35
-xul|menulist[disabled="true"]:not([editable="true"]) > xul|*.menulist-dropmarker {
-  list-style-image: url("chrome://global/skin/in-content/dropdown-disabled.png")
-}
-
-@media (min-resolution: 2dppx) {
-  xul|menulist:not([editable="true"]) > xul|*.menulist-dropmarker,
-  xul|button[type="menu"] > xul|*.button-box > xul|*.button-menu-dropmarker {
-    list-style-image: url("chrome://global/skin/in-content/dropdown@2x.png");
-  }
-
-  xul|menulist[disabled="true"]:not([editable="true"]) > xul|*.menulist-dropmarker {
-    list-style-image: url("chrome://global/skin/in-content/dropdown-disabled@2x.png")
-  }
-
-  xul|menulist:not([editable="true"]) > xul|*.menulist-dropmarker > xul|*.dropmarker-icon,
-  xul|button[type="menu"] > xul|*.button-box > xul|*.button-menu-dropmarker > xul|*.dropmarker-icon {
-    width: 10px;
-    height: 16px;
-  }
-}
-%else
 xul|menulist:not([editable="true"]) > xul|*.menulist-dropmarker > xul|*.dropmarker-icon {
   width: 18px;
   height: 18px;
@@ -406,7 +339,6 @@ xul|menulist:not([editable="true"]) > xul|*.menulist-dropmarker > xul|*.dropmark
 xul|menulist[disabled="true"]:not([editable="true"]) > xul|*.menulist-dropmarker {
   list-style-image: url("chrome://global/skin/in-content/dropdown.svg#dropdown-disabled");
 }
-%endif
 
 xul|menulist > xul|menupopup,
 xul|button[type="menu"] > xul|menupopup {
@@ -421,17 +353,10 @@ xul|menulist > xul|menupopup xul|menuitem,
 xul|button[type="menu"] > xul|menupopup xul|menu,
 xul|button[type="menu"] > xul|menupopup xul|menuitem {
   -moz-appearance: none;
-%if APP_VERSION == 35
-  font-size: 1.0rem;
-  line-height: 20px;
-  height: 40px;
-  color: #333;
-%else
   font-size: 1em;
   color: #333;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
-%endif
   -moz-padding-start: 10px;
   -moz-padding-end: 30px;
 }
@@ -441,12 +366,7 @@ xul|menulist > xul|menupopup > xul|menuitem[_moz-menuactive="true"],
 xul|button[type="menu"] > xul|menupopup > xul|menu[_moz-menuactive="true"],
 xul|button[type="menu"] > xul|menupopup > xul|menuitem[_moz-menuactive="true"] {
   color: #333;
-%if APP_VERSION == 35
-  background-color: transparent;
-  background-image: linear-gradient(rgba(76,177,255,0.25), rgba(23,146,229,0.25));
-%else
   background-color: rgba(0,149,221,0.25);
-%endif
 }
 
 xul|menulist > xul|menupopup > xul|menu[selected="true"],
@@ -454,11 +374,7 @@ xul|menulist > xul|menupopup > xul|menuitem[selected="true"],
 xul|button[type="menu"] > xul|menupopup > xul|menu[selected="true"],
 xul|button[type="menu"] > xul|menupopup > xul|menuitem[selected="true"] {
   color: #fff;
-%if APP_VERSION == 35
-  background-image: linear-gradient(#4cb1ff, #1792e5);
-%else
   background-color: #0095DD;
-%endif
 }
 
 xul|menulist > xul|menupopup xul|menuseparator,
