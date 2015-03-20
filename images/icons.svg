@@ -85,11 +85,11 @@
      borderopacity="1"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.9999998"
-     inkscape:cx="717.66295"
-     inkscape:cy="160.05412"
+     inkscape:zoom="31.035714"
+     inkscape:cx="758.64705"
+     inkscape:cy="183.10952"
      inkscape:document-units="px"
-     inkscape:current-layer="g5793"
+     inkscape:current-layer="g7293-8"
      showgrid="true"
      showborder="false"
      inkscape:showpageshadow="false"
@@ -2517,6 +2517,39 @@
          id="rect4986"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
+      <rect
+         style="opacity:0;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 1;stroke-dashoffset:0.5;stroke-opacity:1"
+         id="rect6484"
+         width="16"
+         height="16"
+         x="496"
+         y="940.36218" />
+    </g>
+    <g
+       id="g7293-8"
+       transform="translate(575.96185,16.012775)">
+      <g
+         id="g4986">
+        <rect
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0;fill:#fafaf7;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6;marker:none;enable-background:accumulate"
+           id="rect7291-2"
+           width="16"
+           height="16"
+           x="176"
+           y="272"
+           transform="translate(-256,652.3622)" />
+        <g
+           id="g5898-0"
+           transform="matrix(1.0463216,0,0,1.0211104,-23.310624,-149.22886)">
+          <path
+             sodipodi:nodetypes="cccccccccccczcccccczcccc"
+             inkscape:connector-curvature="0"
+             id="path5906-9"
+             transform="matrix(0.9557291,0,0,0.97932604,-772.85151,769.33727)"
+             d="M 757.08789,289.01367 753,292.81055 l 0,5.39257 4.08789,3.79688 5.78711,0 4.08594,-3.79688 0,-5.39257 -4.08594,-3.79688 z M 758,292 l 1,0 0,3 c 0,0 0.34209,0.32221 1,0.32221 0.65791,0 1,-0.32221 1,-0.32221 l 0,-3 1,0 0,5 -1,0 0,-1 c 0,0 -0.32598,0.33832 -1,0.32221 C 759.32598,296.3061 759,296 759,296 l 0,3 -1,0 z"
+             style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.03363919" />
+        </g>
+      </g>
     </g>
   </g>
 </svg>
