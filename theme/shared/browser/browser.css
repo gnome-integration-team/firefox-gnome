@@ -164,6 +164,10 @@ toolbarbutton.bookmark-item:not(.subviewbutton),
   padding: 2px 3px;
 }
 
+toolbarbutton.bookmark-item:not(.subviewbutton):not(:hover):not(:active):not([open]) {
+  color: inherit;
+}
+
 toolbarbutton.bookmark-item:not(.subviewbutton):hover:active,
 toolbarbutton.bookmark-item[open="true"] {
   padding-top: 3px;
@@ -2129,46 +2133,47 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 /* social share panel */
 
 .social-share-frame {
-  background: linear-gradient(to bottom, rgba(242,242,242,.99), rgba(242,242,242,.95));
-  border-left: 1px solid #f8f8f8;
-  width: 330px;
+  border-top: 1px solid #f8f8f8;
+  width: 756px;
   height: 150px;
-  /* we resize our panels dynamically, make it look nice */
-  transition: height 100ms ease-out, width 100ms ease-out;
+}
+
+#share-container {
+  min-width: 756px;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#share-container[loading] {
+  background-image: url(chrome://browser/skin/tabbrowser/pendingpaint.png);
+}
+#share-container > browser {
+  transition: opacity 150ms ease-in-out;
+  opacity: 1;
+}
+#share-container[loading] > browser {
+  opacity: 0;
 }
 
 .social-share-toolbar {
-  border-right: 1px solid #dedede;
-  background: linear-gradient(to bottom, rgba(247,247,247,.99), rgba(247,247,247,.95));
+  border-bottom: 1px solid #dedede;
+  padding: 2px;
 }
 
 #social-share-provider-buttons {
-  border-right: 1px solid #fbfbfb;
-  padding: 6px;
-}
-
-#social-share-provider-buttons > .share-provider-button {
-  padding: 6px;
+  padding: 0;
   margin: 0;
-  border: none;
-  border-radius: 2px;
 }
 
-#social-share-provider-buttons > .share-provider-button[checked],
-#social-share-provider-buttons > .share-provider-button:active {
+.share-provider-button {
   padding: 5px;
-  border: 1px solid #b5b5b8;
-  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
+  margin: 2px;
 }
 
-#social-share-provider-buttons > .share-provider-button[checked] {
-  background: linear-gradient(to bottom, #d9d9d9, #e3e3e3);
-}
-
-#social-share-provider-buttons > .share-provider-button > .toolbarbutton-text {
+.share-provider-button > .toolbarbutton-text {
   display: none;
 }
-#social-share-provider-buttons > .share-provider-button > .toolbarbutton-icon {
+.share-provider-button > .toolbarbutton-icon {
   width: 16px;
   min-height: 16px;
   max-height: 16px;
@@ -2616,6 +2621,15 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   -moz-margin-end: 3px;
   list-style-image: url(chrome://mozapps/skin/places/defaultFavicon.png);
 }
+
+/* Handle a case where the last separator in a customized tab bar with a
+   separated new tab button causes the width of the tab to extend and causes
+   jittering with a small tab curve width (Bug 1111091). */
+/*
+#TabsToolbar[currentset]:not([currentset*="tabbrowser-tabs,new-tab-button"]) #tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
+  -moz-margin-start: -3px;
+  -moz-margin-end: 0;
+*/
 
 .tab-throbber[busy] {
   list-style-image: url(chrome://browser/skin/tabbrowser/connecting.png);
@@ -3936,21 +3950,24 @@ notification.pluginVulnerable .messageImage {
   padding: 3px;
 }
 
+#manage-share-providers,
+#social-sidebar-button {
+  list-style-image: url("chrome://browser/skin/Toolbar.png");
+  -moz-image-region: rect(0, 468px, 18px, 450px);
+}
+
 #social-sidebar-button {
   -moz-appearance: none;
-  list-style-image: url(chrome://browser/skin/social/gear_default.png);
   border: none;
   padding: 0;
   margin: 2px;
 }
+#manage-share-providers > .toolbarbutton-icon,
 #social-sidebar-button > .toolbarbutton-icon {
-  min-height: 16px;
-  min-width: 16px;
+  min-height: 18px;
+  min-width: 18px;
 }
-#social-sidebar-button:hover,
-#social-sidebar-button:hover:active {
-  list-style-image: url(chrome://browser/skin/social/gear_clicked.png);
-}
+
 #social-sidebar-button > .toolbarbutton-menu-dropmarker {
   display: none;
 }
@@ -4173,6 +4190,17 @@ window > chatbox {
 chatbox {
   border-top-left-radius: 2.5px;
   border-top-right-radius: 2.5px;
+}
+
+/* EME notifications */
+
+.popup-notification-icon[popupid="drmContentPlaying"],
+#eme-notification-icon {
+  list-style-image: url("chrome://browser/skin/drm-icon.svg#chains");
+}
+
+#eme-notification-icon:hover:active {
+  list-style-image: url("chrome://browser/skin/drm-icon.svg#chains-pressed");
 }
 
 /* Customization mode */
@@ -4466,6 +4494,10 @@ toolbarpaletteitem[place="toolbar"] {
 #wrapper-personal-bookmarks:not([place="toolbar"]) > #personal-bookmarks {
   -moz-box-pack: center;
   min-height: 48px;
+}
+
+#personal-bookmarks[cui-areatype="toolbar"]:not([overflowedItem=true]) > #bookmarks-toolbar-placeholder > .toolbarbutton-icon {
+  -moz-margin-end: 5px;
 }
 
 #customization-palette > toolbarpaletteitem > label {
@@ -4900,6 +4932,110 @@ toolbarpaletteitem[place="toolbar"] {
   }
 }
 
+/* Notification overrides for Heartbeat UI */
+
+notification.heartbeat {
+  background-color: #F1F1F1;
+  box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.35);
+}
+
+@keyframes pulse-onshow {
+ 0% {
+   opacity: 0;
+   transform: scale(1.0);
+ }
+ 25% {
+   opacity: 1;
+   transform: scale(1.1);
+ }
+ 50% {
+   transform: scale(1.0);
+ }
+ 75% {
+   transform: scale(1.1);
+ }
+ 100% {
+   transform: scale(1.0);
+ }
+}
+
+@keyframes pulse-twice {
+ 0% {
+   transform: scale(1.1);
+ }
+ 50% {
+   transform: scale(0.8);
+ }
+ 100% {
+   transform: scale(1);
+ }
+}
+
+.messageText.heartbeat {
+  color: #333333;
+  font-weight: normal;
+  font-family: "Lucida Grande", Segoe, Ubuntu;
+  font-size: 14px;
+  line-height: 16px;
+  text-shadow: none;
+}
+
+.messageImage.heartbeat {
+  width: 36px;
+  height: 36px;
+  -moz-margin-end: 10px;
+}
+
+.messageImage.heartbeat.pulse-onshow {
+  animation-name: pulse-onshow;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(.7,1.8,.9,1.1);
+}
+
+.messageImage.heartbeat.pulse-twice {
+  animation-name: pulse-twice;
+  animation-duration: 1s;
+  animation-iteration-count: 2;
+  animation-timing-function: linear;
+}
+
+/* Heartbeat UI Rating Star Classes */
+.heartbeat > #star-rating-container {
+  display: -moz-box;
+}
+
+.heartbeat > #star-rating-container > #star5 {
+  -moz-box-ordinal-group: 5;
+}
+
+.heartbeat > #star-rating-container > #star4 {
+  -moz-box-ordinal-group: 4;
+}
+
+.heartbeat > #star-rating-container > #star3 {
+  -moz-box-ordinal-group: 3;
+}
+
+.heartbeat > #star-rating-container > #star2 {
+  -moz-box-ordinal-group: 2;
+}
+
+.heartbeat > #star-rating-container > .star-x  {
+  background: url("chrome://browser/skin/heartbeat-star-off.svg");
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.heartbeat > #star-rating-container > .star-x:hover,
+.heartbeat > #star-rating-container > .star-x:hover ~ .star-x {
+  background: url("chrome://browser/skin/heartbeat-star-lit.svg");
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
 #UITourHighlight {
   /* Below are some fixes for people without an X compositor on Linux.
      This is why we can't have nice things: */
@@ -5011,6 +5147,10 @@ toolbarpaletteitem[place="toolbar"] {
 
 #context-navigation {
   padding-top: 4px;
+}
+
+#context-media-eme-learnmore {
+  list-style-image: url("chrome://browser/skin/drm-icon.svg#chains");
 }
 
 #context-navigation > .menuitem-iconic > .menu-iconic-left {

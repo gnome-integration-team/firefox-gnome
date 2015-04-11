@@ -33,6 +33,11 @@ notification[type="critical"] {
   margin: 0 8px !important;
 }
 
+.messageText > .text-link {
+  color: inherit !important;
+  text-decoration: underline;
+}
+
 .messageImage {
   width: 16px;
   height: 16px;
