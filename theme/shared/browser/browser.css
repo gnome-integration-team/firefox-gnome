@@ -885,8 +885,15 @@ toolbar[brighttext] #loop-button > .toolbarbutton-badge-container {
   -moz-image-region: rect(0, 126px, 18px, 108px);
 }
 
+%if APP_VERSION == 37 || APP_VERSION == 38
+#main-window@darkTheme@ #PanelUI-menu-button > .toolbarbutton-icon,
+%endif
+#main-window@darkTheme@ #PanelUI-menu-button > .toolbarbutton-badge-container > .toolbarbutton-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
+}
+
 #main-window@darkTheme@ :-moz-any(#window-controls, .window-controls) .toolbarbutton-icon,
-#main-window@darkTheme@ :-moz-any(#back-button, #forward-button, #nav-bar-overflow-button, #PanelUI-menu-button) > .toolbarbutton-icon,
+#main-window@darkTheme@ :-moz-any(#back-button, #forward-button, #nav-bar-overflow-button) > .toolbarbutton-icon,
 #main-window@darkTheme@ :-moz-any(#edit-controls, #zoom-controls)[cui-areatype="toolbar"] > .toolbarbutton-1 > .toolbarbutton-icon {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
