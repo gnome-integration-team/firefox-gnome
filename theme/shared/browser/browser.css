@@ -2363,8 +2363,8 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 
 #TabsToolbar@darkTheme@ {
-  background: #363b3b;
-  border-top-color: transparent;
+  background: #303535;
+  border-top-color: #1c1f1f;
   box-shadow: inset 0 2px 3px -1px hsla(0,0%,0%,.15);
 }
 
@@ -2505,8 +2505,8 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 
 #TabsToolbar@darkTheme@ .tabbrowser-tab[selected=true] .tab-background-middle {
-  background: #393f3f;
-  -moz-border-bottom-colors: #346099;
+  background: #343939;
+  -moz-border-bottom-colors: #215d9c;
 }
 
 #main-window[privatebrowsingmode=temporary] .tabbrowser-tab[selected=true] .tab-background-middle {
@@ -2523,8 +2523,8 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 
 #TabsToolbar@darkTheme@ .tabbrowser-tab:not([selected=true]):hover .tab-background-middle {
-  background: #373d3d;
-  -moz-border-bottom-colors: #292e31;
+  background: #313636;
+  -moz-border-bottom-colors: #1c1f1f;
 }
 
 .tab-background-start,
@@ -2547,8 +2547,8 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 
 #TabsToolbar@darkTheme@ .tab-background-start[selected=true],
 #TabsToolbar@darkTheme@ .tab-background-end[selected=true] {
-  background: #2a3033;
-  background-image: linear-gradient(to top, #346099, #2a3033 2px, #2a3033);
+  background: #282b2b;
+  background-image: linear-gradient(to top, #346099, #282b2b 2px, #282b2b);
 }
 
 #main-window[privatebrowsingmode=temporary]@darkTheme@ .tab-background-start[selected=true],
@@ -2564,7 +2564,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 
 #TabsToolbar@darkTheme@ .tabbrowser-tab:hover .tab-background-start:not([selected=true]),
 #TabsToolbar@darkTheme@ .tabbrowser-tab:hover .tab-background-end:not([selected=true]) {
-  background: #2c3235;
+  background: #2a2f2f;
 }
 
 .tab-background {
