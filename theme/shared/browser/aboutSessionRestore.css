@@ -1,43 +1,12 @@
 
-html {
-  height: 100%;
-}
-
-body {
-  height: 100%;
-  text-align: center;
-}
-
-#errorPageContainer {
-/*  background-image: url("moz-icon://stock/gtk-dialog-warning?size=dialog");*/
-  display: -moz-box;
-  width: -moz-available;
-  height: 70%;
-  -moz-box-orient: vertical;
-  text-align: start;
-}
-
-#errorShortDesc > p {
-  margin-top: 0.4em;
-  margin-bottom: 0;
-}
-
-#errorLongContent, #errorTrailerDesc {
-  display: -moz-box;
-  -moz-box-flex: 1;
-  -moz-box-orient: vertical;
-}
-
-#tabList {
-  margin-top: 2.5em;
-  width: 100%;
-  min-height: 12em;
+.title {
+  background-image: url("chrome://browser/skin/session-restore.svg");
 }
 
 treechildren::-moz-tree-image(icon),
 treechildren::-moz-tree-image(noicon) {
   padding-right: 2px;
-  margin: 0px 2px;
+  margin: 0 2px;
   width: 16px;
   height: 16px;
 }
@@ -48,33 +17,17 @@ treechildren::-moz-tree-image(noicon) {
 treechildren::-moz-tree-image(container, noicon) {
   list-style-image: url("chrome://browser/skin/aboutSessionRestore-window-icon.png");
 }
+
 treechildren::-moz-tree-image(checked) {
-  list-style-image: url("chrome://global/skin/checkbox/cbox-check.gif");
+  list-style-image: url("chrome://global/skin/in-content/check.svg#check");
 }
+treechildren::-moz-tree-image(checked, selected) {
+  list-style-image: url("chrome://global/skin/in-content/check.svg#check-inverted");
+}
+
 treechildren::-moz-tree-image(partial) {
-  list-style-image: url("chrome://global/skin/checkbox/cbox-check-dis.gif");
+  list-style-image: url("chrome://global/skin/in-content/check-partial.svg#check-partial");
 }
-
-/* undo odd row highlighting from tree.css */
-treechildren::-moz-tree-row(odd) {
-  background-color: transparent;
-}
-treechildren::-moz-tree-row(odd, selected, focus) {
-  background-color: Highlight;
-}
-
-/* highlight "windows" instead */
-treechildren::-moz-tree-row(alternate) {
-  background-color: -moz-oddtreerow;
-}
-treechildren::-moz-tree-row(alternate, selected) {
-  background-color: Highlight;
-}
-
-#buttons {
-  -moz-margin-start: 80px; /* same as #errorLongContent in netError.css */
-}
-#buttons > button {
-  margin-top: 2em;
-  -moz-margin-start: 5px;
+treechildren::-moz-tree-image(partial, selected) {
+  list-style-image: url("chrome://global/skin/in-content/check-partial.svg#check-partial-inverted");
 }

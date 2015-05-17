@@ -28,12 +28,6 @@ treecol {
   display: none;
 }
 
-@media (max-width: 800px) {
-  .category-name {
-    display: none;
-  }
-}
-
 /* header */
 
 #header-advanced {
@@ -42,6 +36,44 @@ treecol {
 }
 
 /* General Pane */
+
+#startupTable {
+  border-collapse: collapse;
+}
+
+#startupTable > tr > td {
+  padding: 0; /* remove the padding from html.css */
+}
+
+#startupTable > tr:not(:first-child) > td {
+  padding-top: 0.5em; /* add a spacing between the rows */
+}
+
+#startupTable > tr > .label-cell {
+  text-align: end;
+  width: 0; /* make the column as small as possible */
+>>>>>>> 3ba06d9... Upgrade to Firefox 38.0.1
+}
+
+#startupTable > tr > .label-cell > label {
+  white-space: nowrap;
+}
+
+#startupTable > tr > .content-cell > menulist,
+#startupTable > tr > .content-cell > textbox {
+  width: calc(100% - 8px);
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+#startupTable > tr > .homepage-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#startupTable > tr > .homepage-buttons > .content-cell-item {
+  flex-grow: 1;
+}
 
 #useFirefoxSync {
   font-size: 90%;
@@ -77,6 +109,10 @@ treecol {
   -moz-margin-start: 0;
 }
 
+#handlersView {
+  height: 25em;
+}
+
 #handlersView > richlistitem {
   min-height: 36px !important;
 }
@@ -103,6 +139,20 @@ treecol {
   -moz-margin-end: 8px !important;
 }
 
+/* Collapse the non-active vboxes in decks to use only the height the
+   active vbox needs */
+#historyPane:not([selectedIndex="1"]) > #historyDontRememberPane,
+#historyPane:not([selectedIndex="2"]) > #historyCustomPane,
+#weavePrefsDeck:not([selectedIndex="1"]) > #hasAccount,
+#weavePrefsDeck:not([selectedIndex="2"]) > #needsUpdate,
+#weavePrefsDeck:not([selectedIndex="3"]) > #fxaDeterminingStatus,
+#weavePrefsDeck:not([selectedIndex="4"]) > #noFxaAccount,
+#weavePrefsDeck:not([selectedIndex="5"]) > #hasFxaAccount,
+#fxaLoginStatus:not([selectedIndex="1"]) > #fxaLoginUnverified,
+#fxaLoginStatus:not([selectedIndex="2"]) > #fxaLoginRejected {
+  visibility: collapse;
+}
+
 /* XXX This style is for bug 740213 and should be removed once that
    bug has a solution. */
 description > html|a {
@@ -126,21 +176,23 @@ description > html|a {
   -moz-margin-start: 0;
 }
 
-#advancedPrefs {
-  padding-bottom: 0; /* no padding needed in inContent prefs */
-}
-
 #tabsElement {
   -moz-margin-end: 4px; /* add the 4px end-margin of other elements */
 }
 
+<<<<<<< HEAD
 #encryptionPanel {
   margin-top: 10px;
 }
 
+=======
+>>>>>>> 3ba06d9... Upgrade to Firefox 38.0.1
 #telemetryLearnMore,
 #FHRLearnMore,
 #crashReporterLearnMore {
+  /* provide some margin between the links and the label text */
+  /* !important is needed to override the rules defined in common.css */
+  -moz-margin-start: 20px !important;
   /* center the links */
   margin-top: 8px;
   margin-bottom: 8px;
@@ -160,6 +212,10 @@ description > html|a {
   #trackingProtectionImage {
     list-style-image: url(chrome://browser/skin/bad-content-blocked-16@2x.png);
   }
+}
+
+#showUpdateHistory {
+  -moz-margin-start: 0;
 }
 
 /**
@@ -229,9 +285,25 @@ description > html|a {
   width: 66ch;
 }
 
+.largeDialogContainer.doScroll {
+  overflow-y: auto;
+  -moz-box-flex: 1;
+}
+
 /**
  * End Dialog
  */
+
+/**
+ * Font dialog menulist fixes
+ */
+
+#defaultFontType,
+#serif,
+#sans-serif,
+#monospace {
+  min-width: 30ch;
+}
 
 /**
  * Sync migration

@@ -197,6 +197,7 @@ richlistitem[type="download"][selected] {
 
 /*** Button icons ***/
 
+.downloadButton.downloadConfirmBlock,
 .downloadButton.downloadCancel {
   list-style-image: url("chrome://symbolic-icons/skin/close.svg");
 }

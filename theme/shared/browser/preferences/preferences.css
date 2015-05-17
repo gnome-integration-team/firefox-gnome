@@ -47,6 +47,7 @@ radio[pane=paneSync] {
   list-style-image: url("chrome://browser/skin/preferences/Options-sync.png") !important;
 }
 
+/* These lines should be removed as part of fixing bug 1140495 */
 label.small {
   font-size: smaller;
 }

@@ -2,9 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-@import url("chrome://global/skin/");
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-
 #warningScreen {
   font: 11pt cantarell;
   background-color: #f6f6f4;
@@ -47,16 +44,18 @@
   margin-top: 1.9em;
 }
 
+#filterRow {
+  margin-top: 5px;
+}
+
 #showWarningNextTime {
   margin-top: 0.6em;
   color: grey;
 }
 
-#exclam {
-  /*
-  list-style-image: url("moz-icon://stock/gtk-dialog-warning?size=dialog");
-  -moz-margin-end: 3em;
-  */
+#configTree {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 #configTreeBody::-moz-tree-cell-text(user) {
@@ -65,13 +64,4 @@
 
 #configTreeBody::-moz-tree-cell-text(locked) {
   font-style: italic;
-}
-
-#configTree {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-#filterRow {
-  margin-top: 5px;
 }

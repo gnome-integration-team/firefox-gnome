@@ -581,6 +581,11 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
   list-style-image: url("chrome://browser/skin/places/unsortedBookmarks.png");
 }
 
+#menu_readingList,
+#BMB_readingList {
+  list-style-image: url("chrome://browser/skin/readinglist/readinglist-icon.svg");
+}
+
 #menu_openDownloads {
   list-style-image: url("chrome://browser/skin/Toolbar-small.png");
   -moz-image-region: rect(0px 16px 16px 0px);
@@ -596,6 +601,7 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
   list-style-image: url("moz-icon://stock/gtk-info?size=menu");
 }
 
+#placesContext_open\:newprivatewindow,
 #privateBrowsingItem {
   list-style-image: url("chrome://browser/skin/Privacy-16.png");
 }
@@ -1618,7 +1624,6 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
 }
 
 .popup-notification-icon[popupid="indexedDB-permissions-prompt"],
-.popup-notification-icon[popupid="indexedDB-quota-prompt"],
 .popup-notification-icon[popupid*="offline-app-requested"],
 .popup-notification-icon[popupid="offline-app-usage"] {
   list-style-image: url(chrome://global/skin/icons/question-64.png);
@@ -1964,6 +1969,16 @@ notification[value="translation"][state="translating"] .messageImage {
 
 /* */
 
+/* Loop/ Hello browser styles */
+
+notification[value="loop-sharing-notification"] .button-menubutton-button {
+  min-width: 0;
+}
+
+notification[value="loop-sharing-notification"] .messageImage {
+  list-style-image: url(chrome://browser/skin/webRTC-shareScreen-16.png);
+}
+
 #treecolAutoCompleteImage {
   max-width: 36px;
 }
@@ -2135,6 +2150,58 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 #page-report-button {
   list-style-image: url(chrome://symbolic-icons/skin/info.svg);
   opacity: .5;
+}
+
+/* Reading List button */
+
+#urlbar:not([focused]):not(:hover) #readinglist-addremove-button {
+  opacity: 0;
+  width: 0px;
+}
+
+#readinglist-addremove-button {
+  list-style-image: url("chrome://browser/skin/readinglist/icons.svg#addpage");
+  -moz-image-region: rect(0, 14px, 14px, 0);
+  transition: width 150ms ease-in-out, opacity 150ms ease-in-out 150ms;
+  opacity: 1;
+  width: 20px;
+}
+
+#readinglist-addremove-button:hover {
+  list-style-image: url("chrome://browser/skin/readinglist/icons.svg#addpage-hover");
+}
+
+#readinglist-addremove-button:active {
+  list-style-image: url("chrome://browser/skin/readinglist/icons.svg#addpage-active");
+}
+
+#readinglist-addremove-button[already-added="true"] {
+  list-style-image: url("chrome://browser/skin/readinglist/icons.svg#alreadyadded");
+}
+
+#readinglist-addremove-button[already-added="true"]:hover {
+  list-style-image: url("chrome://browser/skin/readinglist/icons.svg#alreadyadded-hover");
+}
+
+#readinglist-addremove-button[already-added="true"]:active {
+  list-style-image: url("chrome://browser/skin/readinglist/icons.svg#alreadyadded-active");
+}
+
+/* Reader mode button */
+
+#reader-mode-button {
+  list-style-image: url("chrome://browser/skin/readerMode.svg");
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+#reader-mode-button:hover,
+#reader-mode-button[readeractive]:hover {
+  -moz-image-region: rect(0, 32px, 16px, 16px);
+}
+
+#reader-mode-button:hover:active,
+#reader-mode-button[readeractive] {
+  -moz-image-region: rect(0, 48px, 16px, 32px);
 }
 
 /* social share panel */
@@ -2396,16 +2463,16 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 */
 
-#TabsToolbar toolbarbutton {
-  -moz-appearance: none;
-  margin-bottom: 2px;
+/*
+:root {
+  --tab-toolbar-navbar-overlap: 1px;
+  --tab-min-height: 31px;
 }
 
-#TabsToolbar > toolbarbutton toolbarbutton {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
+#tabbrowser-tabs {
+  min-height: var(--tab-min-height);
 }
+*/
 
 .tabbrowser-tabs {
   -moz-margin-start: 0;
@@ -2415,6 +2482,17 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   min-height: 35px;
   /* override the global style to allow the selected tab to be above the nav-bar */
   z-index: auto;
+}
+
+#TabsToolbar toolbarbutton {
+  -moz-appearance: none;
+  margin-bottom: 2px;
+}
+
+#TabsToolbar > toolbarbutton toolbarbutton {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* put some space between the newtab-button and regular tabs and align it vetically with the close button*/
@@ -2629,14 +2707,18 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   list-style-image: url(chrome://mozapps/skin/places/defaultFavicon.png);
 }
 
-/* Handle a case where the last separator in a customized tab bar with a
-   separated new tab button causes the width of the tab to extend and causes
-   jittering with a small tab curve width (Bug 1111091). */
-/*
-#TabsToolbar[currentset]:not([currentset*="tabbrowser-tabs,new-tab-button"]) #tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
-  -moz-margin-start: -3px;
-  -moz-margin-end: 0;
-*/
+.tab-icon-overlay {
+  width: 16px;
+  height: 16px;
+  margin-top: 10px;
+  -moz-margin-start: -16px;
+  display: none;
+}
+
+.tab-icon-overlay[crashed] {
+  display: -moz-box;
+  list-style-image: url("chrome://browser/skin/tabbrowser/crashed.svg");
+}
 
 .tab-throbber[busy] {
   list-style-image: url(chrome://browser/skin/tabbrowser/connecting.png);
@@ -2842,46 +2924,6 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 #TabsToolbar@darkTheme@ :-moz-any(.scrollbutton-up, .scrollbutton-down) > .toolbarbutton-icon {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
-
-/* Tab Overflow */
-
-/*
-.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-start-indicator:not([collapsed]),
-.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-end-indicator:not([collapsed]) {
-  background-image: url(chrome://browser/skin/tabbrowser/tab-overflow-indicator.png);
-  background-size: 100% 100%;
-  width: 14px;
-  margin-bottom: 1px;
-  pointer-events: none;
-  position: relative;
-  z-index: 3;
-}
-
-.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-start-indicator:-moz-locale-dir(rtl),
-.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-end-indicator:-moz-locale-dir(ltr) {
-  transform: scaleX(-1);
-}
-
-.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-start-indicator:not([collapsed]) {
-  -moz-margin-start: -2px;
-  -moz-margin-end: -12px;
-}
-
-.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-end-indicator:not([collapsed]) {
-  -moz-margin-start: -12px;
-  -moz-margin-end: -2px;
-}
-
-.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-start-indicator[collapsed],
-.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-end-indicator[collapsed] {
-  opacity: 0;
-}
-
-.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-start-indicator,
-.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-end-indicator {
-  transition: opacity 150ms ease;
-}
-*/
 
 /* */
 
@@ -4210,6 +4252,17 @@ chatbox {
   list-style-image: url("chrome://browser/skin/drm-icon.svg#chains-pressed");
 }
 
+#eme-notification-icon[firstplay=true] {
+  animation: emeTeachingMoment 0.2s linear 0s 5 normal;
+}
+
+@keyframes emeTeachingMoment {
+  0% {transform: translateX(0); }
+  25% {transform: translateX(3px) }
+  75% {transform: translateX(-3px) }
+  100% { transform: translateX(0); }
+}
+
 /* Customization mode */
 
 #main-window[customizing] #navigator-toolbox {
@@ -4891,60 +4944,16 @@ toolbarpaletteitem[place="toolbar"] {
   background-color: rgb(105,173,61);
 }
 
-.SearchHighlight {
-  -moz-margin-end: 6px;
-  font-size: 110%;
-  width: 225px;
-}
-
-.SearchHighlight label,
-.SearchHighlight description {
-  color: #535353;
-  margin: 0 0 8px 0;
-  padding: 0;
-}
-
-.SearchHighlightTitle {
-  font-weight: bold;
-}
-
-.SearchHighlight .dot {
-  width: 7px;
-  height: 7px;
-  background-image: -moz-image-rect(url("chrome://browser/skin/dots.png"), 0, 100%, 100%, 9);
-  background-size: 7px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  -moz-margin-end: 2px;
-}
-
-.SearchHighlight .dot.filled {
-  background-image: -moz-image-rect(url("chrome://browser/skin/dots.png"), 0, 7, 100%, 0);
-}
-
-.SearchHighlight button {
-  margin: 0;
-  /* On some platforms clicking the button will steal focus from the search box
-     causing the popup to close. */
-  -moz-user-focus: ignore;
-}
-
-@media not all and (max-resolution: 1dppx) {
-  .SearchHighlight .dot {
-    background-image: -moz-image-rect(url("chrome://browser/skin/dots@2x.png"), 0, 100%, 100%, 18);
-  }
-
-  .SearchHighlight .dot.filled {
-    background-image: -moz-image-rect(url("chrome://browser/skin/dots@2x.png"), 0, 14, 100%, 0);
-  }
-}
-
 /* Notification overrides for Heartbeat UI */
 
 notification.heartbeat {
   background-color: #F1F1F1;
-  box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.35);
+  border-bottom: 1px solid #C1C1C1;
+  height: 40px;
 }
+
+/* In themes/osx/global/notification.css the close icon is inverted because notifications
+   on OSX are usually dark. Heartbeat is light, so override that behaviour. */
 
 @keyframes pulse-onshow {
  0% {
@@ -4980,17 +4989,17 @@ notification.heartbeat {
 
 .messageText.heartbeat {
   color: #333333;
-  font-weight: normal;
-  font-family: "Lucida Grande", Segoe, Ubuntu;
-  font-size: 14px;
-  line-height: 16px;
   text-shadow: none;
+  -moz-margin-start: 0px;
+  /* The !important is required to override OSX default style. */
+  -moz-margin-end: 12px !important;
 }
 
 .messageImage.heartbeat {
-  width: 36px;
-  height: 36px;
-  -moz-margin-end: 10px;
+  width: 24px;
+  height: 24px;
+  -moz-margin-start: 8px;
+  -moz-margin-end: 8px;
 }
 
 .messageImage.heartbeat.pulse-onshow {
@@ -5007,9 +5016,25 @@ notification.heartbeat {
   animation-timing-function: linear;
 }
 
+/* Learn More link styles */
+.heartbeat > .text-link {
+  color: #0095DD;
+  -moz-margin-start: 0px;
+}
+
+.heartbeat > .text-link:hover {
+  color: #008ACB;
+  text-decoration: none;
+}
+
+.heartbeat > .text-link:hover:active {
+  color: #006B9D;
+}
+
 /* Heartbeat UI Rating Star Classes */
 .heartbeat > #star-rating-container {
   display: -moz-box;
+  margin-bottom: 4px;
 }
 
 .heartbeat > #star-rating-container > #star5 {
@@ -5031,16 +5056,15 @@ notification.heartbeat {
 .heartbeat > #star-rating-container > .star-x  {
   background: url("chrome://browser/skin/heartbeat-star-off.svg");
   cursor: pointer;
-  width: 24px;
-  height: 24px;
+  /* Overrides the -moz-margin-end for all platforms defined in the .plain class */
+  -moz-margin-end: 4px !important;
+  width: 16px;
+  height: 16px;
 }
 
 .heartbeat > #star-rating-container > .star-x:hover,
 .heartbeat > #star-rating-container > .star-x:hover ~ .star-x {
   background: url("chrome://browser/skin/heartbeat-star-lit.svg");
-  cursor: pointer;
-  width: 24px;
-  height: 24px;
 }
 
 #UITourHighlight {
