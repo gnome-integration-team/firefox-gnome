@@ -271,8 +271,8 @@
 #nav-bar[reliefbuttons="true"] .toolbarbutton-1[disabled="true"] {
   background: #f4f4f4;
   border-color: #a8a8a8;
-  box-shadow: inset 0 1px rgba(255,255,255,0),
-              0 1px rgba(255,255,255,0);
+  box-shadow: inset 0 1px transparent,
+              0 1px transparent;
   text-shadow: none;
 }
 
@@ -289,8 +289,8 @@
 #nav-bar@darkTheme@[reliefbuttons="true"] .toolbarbutton-1[disabled="true"] {
   background: #323636;
   border-color: #1e2222;
-  box-shadow: inset 0 1px rgba(255,255,255,0),
-              0 1px rgba(238,238,236,0);
+  box-shadow: inset 0 1px transparent,
+              0 1px transparent;
   text-shadow: none;
 }
 

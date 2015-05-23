@@ -81,9 +81,9 @@
 
 #PanelUI-button {
   /*
-  background-image: linear-gradient(to bottom, hsla(0,0%,100%,0), hsla(0,0%,100%,.3) 30%, hsla(0,0%,100%,.3) 70%, hsla(0,0%,100%,0)),
-                    linear-gradient(to bottom, hsla(210,54%,20%,0), hsla(210,54%,20%,.3) 30%, hsla(210,54%,20%,.3) 70%, hsla(210,54%,20%,0)),
-                    linear-gradient(to bottom, hsla(0,0%,100%,0), hsla(0,0%,100%,.3) 30%, hsla(0,0%,100%,.3) 70%, hsla(0,0%,100%,0));
+  background-image: linear-gradient(to bottom, transparent, hsla(0,0%,100%,.3) 30%, hsla(0,0%,100%,.3) 70%, transparent),
+                    linear-gradient(to bottom, transparent, hsla(210,54%,20%,.3) 30%, hsla(210,54%,20%,.3) 70%, transparent),
+                    linear-gradient(to bottom, transparent, hsla(0,0%,100%,.3) 30%, hsla(0,0%,100%,.3) 70%, transparent);
   background-size: 1px calc(100% - 1px), 1px calc(100% - 1px), 1px  calc(100% - 1px) !important;
   background-position: 0px 0px, 1px 0px, 2px 0px;
   background-repeat: no-repeat;
@@ -709,10 +709,10 @@ panelview .toolbarbutton-1,
 .toolbaritem-combined-buttons:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true]) > toolbarbutton {
   -moz-appearance: none;
   padding: 0 6px;
-  background-color: hsla(180,20%,10%,0);
+  background-color: transparent;
   border-radius: 2px;
   border-style: solid;
-  border-color: hsla(180,20%,10%,0);
+  border-color: transparent;
 }
 
 panelview .toolbarbutton-1,
@@ -986,10 +986,10 @@ toolbarpaletteitem[place="palette"] > #search-container {
 }
 
 .toolbaritem-combined-buttons:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true]) {
-  background-color: hsla(180,20%,10%,0);
+  background-color: transparent;
   border-radius: 2px;
   border: 1px solid;
-  border-color: hsla(180,20%,10%,0);
+  border-color: transparent;
   border-bottom-color: hsla(180,20%,10%,.1);
   padding: 0;
   transition-property: background-color, border-color;
@@ -1223,11 +1223,11 @@ menuitem[checked="true"].subviewbutton > .menu-iconic-left {
   -moz-box-align: center;
   padding: 1px;
   margin: 0 0 2px;
-  background-color: hsla(180,20%,10%,0);
+  background-color: transparent;
   border-radius: 2px;
   border-width: 1px;
   border-style: solid;
-  border-color: hsla(180,20%,10%,0);
+  border-color: transparent;
 }
 
 .subviewradio:not(:-moz-any([disabled],[open],:active)):hover {
