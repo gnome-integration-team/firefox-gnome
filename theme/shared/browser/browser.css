@@ -21,6 +21,9 @@
 /* ::::: Colors ::::: */
 
 :root {
+  --toolbar-background: transparent;
+  --toolbar-border-color: #a1a1a1;
+
   --tab-hover-background-color: #dadada;
   --tab-hover-bottom-line-color: #a1a1a1;
   --tab-selected-background-color: #e1e1e1;
@@ -33,10 +36,16 @@
 }
 
 #main-window@darkTheme@ {
+  --toolbar-border-color: #1c1f1f;
+
   --tab-hover-background-color: #313636;
   --tab-hover-bottom-line-color: #1c1f1f;
   --tab-selected-background-color: #343939;
   --tab-selected-bottom-line-color: #215d9c;
+}
+
+#main-window@darkThemeToolbar@ {
+  --toolbar-background: #393f3f;
 }
 
 #main-window[privatebrowsingmode=temporary] {
@@ -72,12 +81,8 @@
 
 #navigator-toolbox {
   -moz-appearance: none;
-  background-color: transparent;
+  background-color: var(--toolbar-background);
   border-top: none;
-}
-
-#main-window@darkThemeToolbar@ #navigator-toolbox {
-  background-color: #393f3f;
 }
 
 #navigator-toolbox::after {
@@ -85,11 +90,7 @@
   display: -moz-box;
   -moz-box-ordinal-group: 101;
   height: 1px;
-  background-color: #a1a1a1;
-}
-
-#main-window@darkTheme@ #navigator-toolbox::after {
-  background-color: #1c1f1f;
+  background-color: var(--toolbar-border-color);
 }
 
 /* Toolbars */
@@ -2454,7 +2455,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 #TabsToolbar {
   -moz-appearance: none;
   background: #d6d6d6;
-  border-top: 1px solid #a1a1a1;
+  border-top: 1px solid var(--toolbar-border-color);
   border-bottom: 0;
   box-shadow: 0 -1px #d9d9d9,
               inset 0 2px 3px -1px hsla(0,0%,0%,.15);
@@ -2473,7 +2474,6 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 
 #TabsToolbar@darkTheme@ {
   background: #303535;
-  border-top-color: #1c1f1f;
   box-shadow: inset 0 2px 3px -1px hsla(0,0%,0%,.15);
 }
 
@@ -2491,11 +2491,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   left: 0;
   right: 0;
   z-index: 0;
-  border-bottom: 1px solid #a1a1a1;
-}
-
-#TabsToolbar@darkTheme@::after {
-  border-bottom-color: #1c1f1f;
+  border-bottom: 1px solid var(--toolbar-border-color);
 }
 
 /*
