@@ -18,6 +18,31 @@
 
 %define primaryToolbarButtons @primaryToolbarButtons@, @nestedButtons@
 
+/* ::::: Colors ::::: */
+
+:root {
+  --tab-hover-background-color: #dadada;
+  --tab-hover-bottom-line-color: #a1a1a1;
+  --tab-selected-background-color: #e1e1e1;
+  --tab-selected-bottom-line-color: Highlight;
+}
+
+#main-window:-moz-lwtheme {
+  --tab-hover-background-color: hsla(0,0%,100%,.15);
+  --tab-selected-background-color: hsla(0,0%,100%,.38);
+}
+
+#main-window@darkTheme@ {
+  --tab-hover-background-color: #313636;
+  --tab-hover-bottom-line-color: #1c1f1f;
+  --tab-selected-background-color: #343939;
+  --tab-selected-bottom-line-color: #215d9c;
+}
+
+#main-window[privatebrowsingmode=temporary] {
+  --tab-selected-bottom-line-color: #bc52ff;
+}
+
 /*
 :root {
   --toolbarbutton-hover-background: hsla(0,0%,100%,.3) linear-gradient(hsla(0,0%,100%,.7), hsla(0,0%,100%,.2));
@@ -2590,36 +2615,14 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   box-shadow: inset 0 3px hsla(0,0%,0%,.01), inset 0 2px hsla(0,0%,0%,.01), inset 0 1px hsla(0,0%,0%,.01);
 }
 
+.tabbrowser-tab:hover .tab-background-middle {
+  background: var(--tab-hover-background-color);
+  -moz-border-bottom-colors: var(--tab-hover-background-color);
+}
+
 .tabbrowser-tab[selected=true] .tab-background-middle {
-  background: #e1e1e1;
-  -moz-border-bottom-colors: Highlight;
-}
-
-.tabbrowser-tab[selected=true] .tab-background-middle:-moz-lwtheme {
-  background: hsla(0,0%,100%,.38);
-}
-
-#TabsToolbar@darkTheme@ .tabbrowser-tab[selected=true] .tab-background-middle {
-  background: #343939;
-  -moz-border-bottom-colors: #215d9c;
-}
-
-#main-window[privatebrowsingmode=temporary] .tabbrowser-tab[selected=true] .tab-background-middle {
-  -moz-border-bottom-colors: #bc52ff;
-}
-
-.tabbrowser-tab:not([selected=true]):hover .tab-background-middle {
-  background: #dadada;
-  -moz-border-bottom-colors: #a1a1a1;
-}
-
-.tabbrowser-tab:not([selected=true]):hover .tab-background-middle:-moz-lwtheme {
-  background: hsla(0,0%,100%,.15);
-}
-
-#TabsToolbar@darkTheme@ .tabbrowser-tab:not([selected=true]):hover .tab-background-middle {
-  background: #313636;
-  -moz-border-bottom-colors: #1c1f1f;
+  background: var(--tab-selected-background-color);
+  -moz-border-bottom-colors: var(--tab-selected-bottom-line-color);
 }
 
 .tab-background-start,
@@ -2631,25 +2634,13 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 .tab-background-start[selected=true],
 .tab-background-end[selected=true] {
   background: #c0c0c0;
-  background-image: linear-gradient(to top, Highlight, #c0c0c0 2px, #c0c0c0);
-}
-
-#main-window[privatebrowsingmode=temporary] .tab-background-start[selected=true],
-#main-window[privatebrowsingmode=temporary] .tab-background-end[selected=true] {
-  background: #c0c0c0;
-  background-image: linear-gradient(to top, #bc52ff, #c0c0c0 2px, #c0c0c0);
+  background-image: linear-gradient(to top, var(--tab-selected-bottom-line-color), #c0c0c0 2px, #c0c0c0);
 }
 
 #TabsToolbar@darkTheme@ .tab-background-start[selected=true],
 #TabsToolbar@darkTheme@ .tab-background-end[selected=true] {
   background: #282b2b;
-  background-image: linear-gradient(to top, #346099, #282b2b 2px, #282b2b);
-}
-
-#main-window[privatebrowsingmode=temporary]@darkTheme@ .tab-background-start[selected=true],
-#main-window[privatebrowsingmode=temporary]@darkTheme@ .tab-background-end[selected=true] {
-  background: #c0c0c0;
-  background-image: linear-gradient(to top, #bc52ff, #2a3033 2px, #2a3033);
+  background-image: linear-gradient(to top, var(--tab-selected-bottom-line-color), #282b2b 2px, #282b2b);
 }
 
 .tabbrowser-tab:hover .tab-background-start:not([selected=true]),
