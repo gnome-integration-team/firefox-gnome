@@ -510,7 +510,7 @@ toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton {
   min-height: 40px;
   -moz-appearance: none;
   box-shadow: none;
-  border: none;  
+  border: none;
   border-radius: 0;
   transition: background-color;
   -moz-box-orient: horizontal;
@@ -801,7 +801,7 @@ panelview .toolbarbutton-1:not(:-moz-any([disabled],[open],:active)):hover,
 toolbarbutton.subviewbutton:not(:-moz-any([disabled],[open],:active)):hover,
 menu.subviewbutton:not(:-moz-any([disabled],:active))[_moz-menuactive],
 menuitem.subviewbutton:not(:-moz-any([disabled],:active))[_moz-menuactive],
-.share-provider-button:not(:-moz-any([disabled],[open],:active)):hover,
+.share-provider-button:not(:-moz-any([disabled],[open],:active)):hover:not([checked="true"]),
 .widget-overflow-list .toolbarbutton-1:not(:-moz-any([disabled],[open],:active)):hover,
 .toolbaritem-combined-buttons:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true]) > toolbarbutton:not(:-moz-any([disabled],[open],:active)):hover {
   background-color: hsla(180,20%,10%,.09);

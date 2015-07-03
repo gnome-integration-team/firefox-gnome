@@ -280,6 +280,10 @@ label[disabled="true"] {
 
 %include notificationButton.inc.css
 
+popupnotificationcontent {
+  margin-top: .5em;
+}
+
 /* :::::: autoscroll popup ::::: */
 
 .autoscroller {

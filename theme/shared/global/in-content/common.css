@@ -705,6 +705,7 @@ xul|tree {
   -moz-appearance: none;
   font-size: 1em;
   border: 1px solid #c1c1c1;
+  margin: 0;
 }
 
 xul|tree:-moz-focusring,
@@ -766,7 +767,7 @@ xul|treechildren::-moz-tree-cell-text(selected) {
   color: #fff;
 }
 
-xul|tab[selected] {
+xul|tab[visuallyselected] {
   /* Override styles for tab[selected] from
      toolkit/themes/linux/global/tabbox.css */
   margin-bottom: 0;

@@ -158,16 +158,16 @@ notification .messageImage:-moz-window-inactive {
 #main-window:-moz-window-inactive .tabbrowser-tab {
   color: #aaabac !important;
 }
-#main-window:-moz-window-inactive .tabbrowser-tab[selected=true] {
+#main-window:-moz-window-inactive .tabbrowser-tab[visuallyselected="true"] {
   color: #8d9091 !important;
 }
 
-#main-window:-moz-window-inactive .tabbrowser-tab[selected=true] .tab-background-middle {
+#main-window:-moz-window-inactive .tabbrowser-tab[visuallyselected="true"] .tab-background-middle {
   background: #ededed !important;
   box-shadow: none !important;
 }
 
-#main-window:-moz-window-inactive #TabsToolbar[darkvariant] .tabbrowser-tab[selected=true] .tab-background-middle {
+#main-window:-moz-window-inactive #TabsToolbar[darkvariant] .tabbrowser-tab[visuallyselected="true"] .tab-background-middle {
   background: #393f3f !important;
 }
 
@@ -211,10 +211,10 @@ notification .messageImage:-moz-window-inactive {
   background: transparent !important;
 }
 
-#main-window:-moz-window-inactive #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[selected="true"] {
+#main-window:-moz-window-inactive #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[visuallyselected="true"] {
   background: #e2e2e2 !important;
 }
-#main-window:-moz-window-inactive #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[selected="true"] > .tab-stack {
+#main-window:-moz-window-inactive #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[visuallyselected="true"] > .tab-stack {
   color: #2e3436 !important;
 }
 

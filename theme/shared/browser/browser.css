@@ -1004,6 +1004,10 @@ toolbarpaletteitem[place="palette"] > #feed-button {
   list-style-image: url(chrome://symbolic-icons/skin/rss.svg);
 }
 
+#feed-button[cui-areatype="menu-panel"][panel-multiview-anchor=true] {
+  -moz-image-region: rect(32px, 416px, 64px, 384px);
+}
+
 #social-share-button[cui-areatype="menu-panel"],
 toolbarpaletteitem[place="palette"] > #social-share-button {
   list-style-image: url(chrome://symbolic-icons/skin/emblem-shared.svg);
@@ -1632,11 +1636,6 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   margin-top: 5px;
 }
 
-/* Notification popup */
-#notification-popup {
-  min-width: 280px;
-}
-
 .popup-notification-icon {
   width: 64px;
   height: 64px;
@@ -1649,13 +1648,23 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
 
 .popup-notification-icon[popupid="xpinstall-disabled"],
 .popup-notification-icon[popupid="addon-progress"],
-.popup-notification-icon[popupid="addon-install-cancelled"],
 .popup-notification-icon[popupid="addon-install-blocked"],
 .popup-notification-icon[popupid="addon-install-failed"],
+.popup-notification-icon[popupid="addon-install-confirmation"],
 .popup-notification-icon[popupid="addon-install-complete"] {
   list-style-image: url(chrome://mozapps/skin/extensions/extensionGeneric.png);
   width: 32px;
   height: 32px;
+}
+
+.popup-notification-description[popupid="addon-progress"],
+.popup-notification-description[popupid="addon-install-confirmation"] {
+  width: 27em;
+  max-width: 27em;
+}
+
+.addon-install-confirmation-name {
+  font-weight: bold;
 }
 
 .popup-notification-icon[popupid="click-to-play-plugins"] {
@@ -1672,8 +1681,7 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   list-style-image: url(chrome://global/skin/icons/question-64.png);
 }
 
-.popup-notification-icon[popupid="password-save"],
-.popup-notification-icon[popupid="password-change"] {
+.popup-notification-icon[popupid="password"] {
   list-style-image: url(chrome://mozapps/skin/passwordmgr/key-64.png);
 }
 
@@ -2577,22 +2585,22 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   max-width: 0.1px;
 }
 
-.tabbrowser-tab[selected=true] {
+.tabbrowser-tab[visuallyselected=true] {
   position: relative;
   z-index: 2;
 }
 
-.tabbrowser-tab:not([selected=true]) {
+.tabbrowser-tab:not([visuallyselected=true]) {
   color: #8d9091;
 }
-#TabsToolbar@darkTheme@ .tabbrowser-tab:not([selected=true]) {
+#TabsToolbar@darkTheme@ .tabbrowser-tab:not([visuallyselected=true]) {
   color: #a6a8a7;
 }
 
-.tabbrowser-tab:not([selected=true]):hover {
+.tabbrowser-tab:not([visuallyselected=true]):hover {
   color: #5d6263;
 }
-#TabsToolbar@darkTheme@ .tabbrowser-tab:not([selected=true]):hover {
+#TabsToolbar@darkTheme@ .tabbrowser-tab:not([visuallyselected=true]):hover {
   color: #d3d4d2;
 }
 
@@ -2603,11 +2611,11 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   border-bottom: 3px solid transparent;
 }
 
-.tabbrowser-tab:-moz-any([selected=true], :hover) .tab-background-middle {
+.tabbrowser-tab:-moz-any([visuallyselected=true], :hover) .tab-background-middle {
   box-shadow: inset 0 3px hsla(0,0%,0%,.025), inset 0 2px hsla(0,0%,0%,.025), inset 0 1px hsla(0,0%,0%,.025);
 }
 
-.tabbrowser-tab:-moz-any([selected=true], :hover) .tab-background-middle:-moz-lwtheme {
+.tabbrowser-tab:-moz-any([visuallyselected=true], :hover) .tab-background-middle:-moz-lwtheme {
   box-shadow: inset 0 3px hsla(0,0%,0%,.01), inset 0 2px hsla(0,0%,0%,.01), inset 0 1px hsla(0,0%,0%,.01);
 }
 
@@ -2616,7 +2624,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   -moz-border-bottom-colors: var(--tab-hover-background-color);
 }
 
-.tabbrowser-tab[selected=true] .tab-background-middle {
+.tabbrowser-tab[visuallyselected=true] .tab-background-middle {
   background: var(--tab-selected-background-color);
   -moz-border-bottom-colors: var(--tab-selected-bottom-line-color);
 }
@@ -2627,25 +2635,25 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   width: 1px;
 }
 
-.tab-background-start[selected=true],
-.tab-background-end[selected=true] {
+.tab-background-start[visuallyselected=true],
+.tab-background-end[visuallyselected=true] {
   background: #c0c0c0;
   background-image: linear-gradient(to top, var(--tab-selected-bottom-line-color), #c0c0c0 2px, #c0c0c0);
 }
 
-#TabsToolbar@darkTheme@ .tab-background-start[selected=true],
-#TabsToolbar@darkTheme@ .tab-background-end[selected=true] {
+#TabsToolbar@darkTheme@ .tab-background-start[visuallyselected=true],
+#TabsToolbar@darkTheme@ .tab-background-end[visuallyselected=true] {
   background: #282b2b;
   background-image: linear-gradient(to top, var(--tab-selected-bottom-line-color), #282b2b 2px, #282b2b);
 }
 
-.tabbrowser-tab:hover .tab-background-start:not([selected=true]),
-.tabbrowser-tab:hover .tab-background-end:not([selected=true]) {
+.tabbrowser-tab:hover .tab-background-start:not([visuallyselected=true]),
+.tabbrowser-tab:hover .tab-background-end:not([visuallyselected=true]) {
   background: hsla(0,0%,68%,.3); /* #c9c9c9 */
 }
 
-#TabsToolbar@darkTheme@ .tabbrowser-tab:hover .tab-background-start:not([selected=true]),
-#TabsToolbar@darkTheme@ .tabbrowser-tab:hover .tab-background-end:not([selected=true]) {
+#TabsToolbar@darkTheme@ .tabbrowser-tab:hover .tab-background-start:not([visuallyselected=true]),
+#TabsToolbar@darkTheme@ .tabbrowser-tab:hover .tab-background-end:not([visuallyselected=true]) {
   background: #2a2f2f;
 }
 
@@ -2687,7 +2695,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   -moz-padding-start: 7px;
 }
 
-.tabbrowser-tab[titlechanged]:not([selected="true"]) > .tab-stack > .tab-content {
+.tabbrowser-tab[titlechanged]:not([visuallyselected="true"]) > .tab-stack > .tab-content {
   background-image: radial-gradient(ellipse 30px 6px at 50% 100%, rgba(255,255,255,1), rgba(255,255,255,1) 5%, rgba(187,201,217,1) 30%, rgba(187,201,217,0.1) 70%);
   background-repeat: no-repeat;
 }
@@ -2696,7 +2704,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   transition: color 200ms ease-out;
 }
 
-.tabbrowser-tab:-moz-any([selected="true"], :hover) .tab-label {
+.tabbrowser-tab:-moz-any([visuallyselected="true"], :hover) .tab-label {
   transition-timing-function: ease-in;
 }
 
@@ -2832,12 +2840,12 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   background-image: -moz-image-rect(url(chrome://browser/skin/tabbrowser/close-dark.svg), 0, 32, 16, 16);
 }
 
-#TabsToolbar .tabbrowser-tab:not(:hover):not([selected="true"]) .tab-close-button > .toolbarbutton-icon {
+#TabsToolbar .tabbrowser-tab:not(:hover):not([visuallyselected="true"]) .tab-close-button > .toolbarbutton-icon {
   background-image: -moz-image-rect(url(chrome://browser/skin/tabbrowser/close.svg), 0, 16, 16, 0);
   opacity: .1;
   transition-timing-function: ease-out;
 }
-#TabsToolbar@darkTheme@ .tabbrowser-tab:not(:hover):not([selected="true"]) .tab-close-button > .toolbarbutton-icon {
+#TabsToolbar@darkTheme@ .tabbrowser-tab:not(:hover):not([visuallyselected="true"]) .tab-close-button > .toolbarbutton-icon {
   background-image: -moz-image-rect(url(chrome://browser/skin/tabbrowser/close-dark.svg), 0, 16, 16, 0);
 }
 
@@ -4436,12 +4444,24 @@ chatbox {
 #customization-titlebar-visibility-button {
   list-style-image: url("chrome://browser/skin/customizableui/customize-titleBar-toggle.png");
   -moz-image-region: rect(0, 24px, 24px, 0);
+}
+
+#customization-lwtheme-button,
+#customization-titlebar-visibility-button  {
   padding: 2px 7px;
 }
 
+#customization-lwtheme-button > .box-inherit > .box-inherit > .button-text,
 #customization-titlebar-visibility-button > .button-box > .button-text {
   /* Sadly, button.css thinks its margins are perfect for everyone. */
   -moz-margin-start: 6px !important;
+}
+
+#customization-lwtheme-button > .box-inherit > .box-inherit > .button-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  background-size: contain;
 }
 
 #customization-titlebar-visibility-button > .button-box > .button-icon {

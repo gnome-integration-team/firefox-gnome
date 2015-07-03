@@ -147,6 +147,15 @@ div#certificateErrorReportingPanel:-moz-dir(rtl) {
   right: 0;
 }
 
+#errorStatePanel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: flex-start;
+}
+
 span#hostname {
   font-weight: bold;
 }
@@ -155,27 +164,14 @@ span#hostname {
   cursor: pointer;
 }
 
-#reportingState {
-  padding-left: 150px;
-}
-
 #reportSendingMessage {
-  position: relative;
-  display: none;
+  /* adjust the line-height to match the link */
+  line-height: 22px;
 }
 
 #reportSentMessage {
-  position: relative;
-  display: none;
-}
-
-button#reportCertificateError {
-  position: relative;
-}
-
-button#reportCertificateErrorRetry {
-  position: relative;
-  display: none;
+  /* adjust the line-height to match the link */
+  line-height: 22px;
 }
 
 /* ::::: File not found, <...> pages ::::: */
