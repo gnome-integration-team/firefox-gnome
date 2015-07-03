@@ -1,7 +1,7 @@
 {
   "version": "35.1",
   "min-version": "38.0",
-  "max-version": "41.0a1",
+  "max-version": "42.0a1",
   "theme": {
     "xpi": "gnome-firefox-theme.xpi"
   },
