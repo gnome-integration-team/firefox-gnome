@@ -2621,7 +2621,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 
 .tabbrowser-tab:hover .tab-background-middle {
   background: var(--tab-hover-background-color);
-  -moz-border-bottom-colors: var(--tab-hover-background-color);
+  -moz-border-bottom-colors: var(--tab-hover-bottom-line-color);
 }
 
 .tabbrowser-tab[visuallyselected=true] .tab-background-middle {
