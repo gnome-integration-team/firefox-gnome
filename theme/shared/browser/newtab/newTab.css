@@ -185,20 +185,28 @@
   text-align: center;
 }
 
+.newtab-cell:hover .newtab-title {
+  background-image: none;
+  background-color: rgba(0,0,0,0.8);
+  color: rgba(255,255,255,0.8);
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+}
+
 #newtab-intro-what,
 .newtab-sponsored,
 .newtab-suggested {
   color: rgba(0,0,0,0.55);
 }
 
-.newtab-suggested:hover {
-  color: #588FE4;
-  border: 1px solid #588FE4;
+.newtab-sponsored {
+  bottom: 0;
+  margin-bottom: 3px;
+  margin-right: 2px;
 }
 
-.newtab-suggested[active] {
-  background-color: rgba(51, 51, 51, 0.95);
-  border: 0;
+.newtab-sponsored:-moz-any(:hover, [active]),
+.newtab-cell:hover .newtab-sponsored {
+  background-color: #3a72b1;
   color: white;
 }
 
@@ -206,11 +214,15 @@
   background-color: white;
 }
 
-.newtab-cell:hover .newtab-title {
-  background-image: none;
-  background-color: rgba(0,0,0,0.8);
-  color: rgba(255,255,255,0.8);
-  text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+.newtab-suggested:hover {
+  color: #588FE4;
+  border-color: #588FE4;
+}
+
+.newtab-suggested[active] {
+  background-color: rgba(51, 51, 51, 0.95);
+  border-color: transparent;
+  color: white;
 }
 
 /*
