@@ -205,17 +205,24 @@ notification .messageImage:-moz-window-inactive {
  * id: treestyletab@piro.sakura.ne.jp
  * URL: https://addons.mozilla.org/firefox/addon/tree-style-tab/ */
 
-#main-window:-moz-window-inactive #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab > .tab-stack {
-  border: none !important;
-  box-shadow: none !important;
-  background: transparent !important;
+#main-window:-moz-window-inactive #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[selected] {
+  background: #929292 !important;
 }
 
-#main-window:-moz-window-inactive #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[visuallyselected="true"] {
-  background: #e2e2e2 !important;
+#main-window:-moz-window-inactive[darkvariant] #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[selected] {
+  background: #5e5e5e !important;
 }
-#main-window:-moz-window-inactive #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[visuallyselected="true"] > .tab-stack {
-  color: #2e3436 !important;
+
+#main-window:-moz-window-inactive #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab > .tab-stack {
+  color: #adafb0 !important;
+}
+
+#main-window:-moz-window-inactive #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"][darkvariant] .tabbrowser-tab > .tab-stack {
+  color: #7b7f7f !important;
+}
+
+#main-window:-moz-window-inactive #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[selected] > .tab-stack {
+  color: HighlightText !important;
 }
 
 /* ::::: browser/extensions/pushbullet.css ::::: */
