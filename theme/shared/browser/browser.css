@@ -2700,14 +2700,6 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   background-repeat: no-repeat;
 }
 
-.tab-label {
-  transition: color 200ms ease-out;
-}
-
-.tabbrowser-tab:-moz-any([visuallyselected="true"], :hover) .tab-label {
-  transition-timing-function: ease-in;
-}
-
 .tab-throbber,
 .tab-icon-image {
   width: 18px;
@@ -2798,7 +2790,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   margin: 0;
 }
 
-/* In-tab close button */
+/* Tab close button */
 #TabsToolbar .tab-close-button {
   -moz-appearance: none;
   margin: 1px 0;
@@ -2838,15 +2830,6 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 #TabsToolbar@darkTheme@ .tab-close-button > .toolbarbutton-icon {
   background-image: -moz-image-rect(url(chrome://browser/skin/tabbrowser/close-dark.svg), 0, 32, 16, 16);
-}
-
-#TabsToolbar .tabbrowser-tab:not(:hover):not([visuallyselected="true"]) .tab-close-button > .toolbarbutton-icon {
-  background-image: -moz-image-rect(url(chrome://browser/skin/tabbrowser/close.svg), 0, 16, 16, 0);
-  opacity: .1;
-  transition-timing-function: ease-out;
-}
-#TabsToolbar@darkTheme@ .tabbrowser-tab:not(:hover):not([visuallyselected="true"]) .tab-close-button > .toolbarbutton-icon {
-  background-image: -moz-image-rect(url(chrome://browser/skin/tabbrowser/close-dark.svg), 0, 16, 16, 0);
 }
 
 #TabsToolbar .tab-close-button:hover > .toolbarbutton-icon {
