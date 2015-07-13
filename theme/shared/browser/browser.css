@@ -2714,8 +2714,9 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 .tab-icon-overlay {
   width: 16px;
   height: 16px;
-  margin-top: 10px;
-  -moz-margin-start: -16px;
+  margin-top: -10px;
+  -moz-margin-start: -12px;
+  -moz-margin-end: -4px;
   display: none;
 }
 
