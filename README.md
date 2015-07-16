@@ -1,4 +1,4 @@
-# GNOME theme for Firefox
+# GNOME theme for Firefox (Go fuck yourself)
 
 The latest stable version is always available from [Mozilla's Add-ons](https://addons.mozilla.org/firefox/addon/adwaita/).
 
