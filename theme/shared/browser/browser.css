@@ -2695,11 +2695,6 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   -moz-padding-start: 7px;
 }
 
-.tabbrowser-tab[titlechanged]:not([visuallyselected="true"]) > .tab-stack > .tab-content {
-  background-image: radial-gradient(ellipse 30px 6px at 50% 100%, rgba(255,255,255,1), rgba(255,255,255,1) 5%, rgba(187,201,217,1) 30%, rgba(187,201,217,0.1) 70%);
-  background-repeat: no-repeat;
-}
-
 .tab-throbber,
 .tab-icon-image {
   width: 18px;
@@ -2723,6 +2718,11 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 .tab-icon-overlay[crashed] {
   display: -moz-box;
   list-style-image: url("chrome://browser/skin/tabbrowser/crashed.svg");
+}
+
+.tabbrowser-tab[pinned][titlechanged]:not([visuallyselected="true"]) .tab-icon-overlay:not([crashed]) {
+  display: -moz-box;
+  list-style-image: url("chrome://browser/skin/tabbrowser/titlechanged.svg");
 }
 
 .tab-throbber[busy] {
