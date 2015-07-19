@@ -28,7 +28,8 @@
         <radio value="3" label="&large.label;"/>
       </vbox>
       <vbox>
-        <radio value="4" label="&stretch.label;"/>
+        <radio value="4" label="&stretch.label;"
+               disabled="true" tooltiptext="&deprecated.label;"/>
       </vbox>
     </radiogroup>
   </setting>

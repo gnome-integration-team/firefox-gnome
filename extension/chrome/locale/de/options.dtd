@@ -2,6 +2,8 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
+<!ENTITY deprecated.label              "Deprecated">
+
 <!ENTITY reliefbuttons.label           "Hervorgehobene Schaltflächen in der Symbolleiste">
 <!ENTITY inactivestate.label           "Anderer Stil für inaktives Fenster">
 <!ENTITY e10sdisableunderline.label    "Unterstreichung von e10s-Tabs deaktivieren">

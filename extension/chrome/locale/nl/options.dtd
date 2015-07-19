@@ -2,6 +2,8 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
+<!ENTITY deprecated.label              "Deprecated">
+
 <!ENTITY reliefbuttons.label           "Geef knoppen op navigatiebalk reliëf">
 <!ENTITY inactivestate.label           "Gebruik andere stijl voor niet-actieve vensters">
 <!ENTITY e10sdisableunderline.label    "Zet onderstrepen van e10s-tabbladen uit">
