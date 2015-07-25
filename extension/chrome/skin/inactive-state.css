@@ -93,8 +93,8 @@ notification .messageImage:-moz-window-inactive {
   box-shadow: none !important;
 }
 
-#nav-bar[darkvariant] :-moz-any(#back-button, #forward-button):-moz-window-inactive,
-#nav-bar[reliefbuttons="true"][darkvariant] .toolbarbutton-1:-moz-window-inactive {
+#nav-bar[brighttext] :-moz-any(#back-button, #forward-button):-moz-window-inactive,
+#nav-bar[reliefbuttons="true"][brighttext] .toolbarbutton-1:-moz-window-inactive {
   border-color: #a8a8a8 !important;
 }
 
@@ -116,7 +116,7 @@ notification .messageImage:-moz-window-inactive {
   box-shadow: none !important;
 }
 
-#main-window:-moz-window-inactive #TabsToolbar[darkvariant] {
+#main-window:-moz-window-inactive #TabsToolbar[brighttext] {
   border-top-color: #464c4c !important;
 }
 
@@ -131,8 +131,8 @@ notification .messageImage:-moz-window-inactive {
   background: rgba(255,255,255,0.5) !important;
 }
 
-#main-window:-moz-window-inactive #navigator-toolbox[darkvariant] #urlbar,
-#main-window:-moz-window-inactive #navigator-toolbox[darkvariant] .searchbar-textbox {
+#main-window:-moz-window-inactive #navigator-toolbox toolbar[brighttext] #urlbar,
+#main-window:-moz-window-inactive #navigator-toolbox toolbar[brighttext] .searchbar-textbox {
   background: #333333 !important;
   border-color: #545959 !important;
   color: #c9c9c7 !important;
@@ -167,7 +167,7 @@ notification .messageImage:-moz-window-inactive {
   box-shadow: none !important;
 }
 
-#main-window:-moz-window-inactive #TabsToolbar[darkvariant] .tabbrowser-tab[visuallyselected="true"] .tab-background-middle {
+#main-window:-moz-window-inactive #TabsToolbar[brighttext] .tabbrowser-tab[visuallyselected="true"] .tab-background-middle {
   background: #393f3f !important;
 }
 
@@ -209,7 +209,7 @@ notification .messageImage:-moz-window-inactive {
   background: #929292 !important;
 }
 
-#main-window:-moz-window-inactive[darkvariant] #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"] .tabbrowser-tab[selected] {
+#main-window:-moz-window-inactive #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"][brighttext] .tabbrowser-tab[selected] {
   background: #5e5e5e !important;
 }
 
@@ -217,7 +217,7 @@ notification .messageImage:-moz-window-inactive {
   color: #adafb0 !important;
 }
 
-#main-window:-moz-window-inactive #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"][darkvariant] .tabbrowser-tab > .tab-stack {
+#main-window:-moz-window-inactive #TabsToolbar.treestyletab-tabbar-toolbar[orient="vertical"][brighttext] .tabbrowser-tab > .tab-stack {
   color: #7b7f7f !important;
 }
 

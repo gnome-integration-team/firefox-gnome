@@ -14,9 +14,9 @@
       </rdf:RDF>
    </metadata>
    <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="g6502">
-      <g transform="translate(-624,-732.3622)" id="g7450" style="fill:#2e3436;fill-opacity:1">
-         <rect transform="translate(-256,652.3622)" y="80" x="880" height="16" width="16" id="rect7439" style="opacity:0;color:black;fill:#2e3436;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-         <path sodipodi:nodetypes="cccccccccccccc" inkscape:connector-curvature="0" id="rect7441" d="m 626,735.3622 5,5 -5,5 3,0 5,-5 -5,-5 z m 5,0 5,5 -5,5 3,0 5,-5 -5,-5 z" style="color:black;fill:#2e3436;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <g transform="translate(-624,-732.3622)" id="g7450" style="fill:ButtonText;fill-opacity:1">
+         <rect transform="translate(-256,652.3622)" y="80" x="880" height="16" width="16" id="rect7439" style="opacity:0;color:black;fill:ButtonText;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+         <path sodipodi:nodetypes="cccccccccccccc" inkscape:connector-curvature="0" id="rect7441" d="m 626,735.3622 5,5 -5,5 3,0 5,-5 -5,-5 z m 5,0 5,5 -5,5 3,0 5,-5 -5,-5 z" style="color:black;fill:ButtonText;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
       </g>
    </g>
 </svg>

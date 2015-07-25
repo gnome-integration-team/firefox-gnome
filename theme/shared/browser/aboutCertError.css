@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   font: 11pt cantarell;
-  color: #2e3436;
+  color: ButtonText;
   padding: 20px 20px 0 20px;
   background-color: #f6f6f4;
   background-image: linear-gradient(to bottom, #eeeeec, #f6f6f4);
@@ -44,7 +44,7 @@ p > b {
   background-image: url(chrome://browser/skin/about-pages/connection-untrusted.svg);
   background-repeat: no-repeat;
   background-position: 56px 51px;
-  color: #2e3436;
+  color: ButtonText;
 }
 
 #errorPageContainer:-moz-dir(rtl) {

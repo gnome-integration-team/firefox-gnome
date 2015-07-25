@@ -14,9 +14,9 @@
       </rdf:RDF>
    </metadata>
    <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="g6502">
-      <g id="g7210" transform="translate(-480,-684.3682)" style="fill:#2e3436;fill-opacity:1">
-         <rect transform="translate(-256,652.3622)" y="32" x="736" height="16" width="16" id="rect7208" style="opacity:0;color:black;fill:#2e3436;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-         <path sodipodi:nodetypes="ssssssccccsss" inkscape:connector-curvature="0" id="rect6683-9" d="m 482,688.3682 c -0.64632,0 -1,0.44 -1,0.994 l 0,6 c 0,0.554 0.35368,1.006 1,1.006 l 8,0 c 0.64632,0 1,-0.446 1,-1 l 0,-2 4,1.9944 0,-6 -4,2.0056 0,-2 c 0,-0.554 -0.35368,-1 -1,-1 z" style="color:black;fill:#2e3436;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <g id="g7210" transform="translate(-480,-684.3682)" style="fill:ButtonText;fill-opacity:1">
+         <rect transform="translate(-256,652.3622)" y="32" x="736" height="16" width="16" id="rect7208" style="opacity:0;color:black;fill:ButtonText;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+         <path sodipodi:nodetypes="ssssssccccsss" inkscape:connector-curvature="0" id="rect6683-9" d="m 482,688.3682 c -0.64632,0 -1,0.44 -1,0.994 l 0,6 c 0,0.554 0.35368,1.006 1,1.006 l 8,0 c 0.64632,0 1,-0.446 1,-1 l 0,-2 4,1.9944 0,-6 -4,2.0056 0,-2 c 0,-0.554 -0.35368,-1 -1,-1 z" style="color:black;fill:ButtonText;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
       </g>
    </g>
 </svg>

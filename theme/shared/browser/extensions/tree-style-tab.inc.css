@@ -110,7 +110,7 @@ tabbrowser[treestyletab-tabbar-position="right"] .treestyletab-splitter[orient="
   display: none !important;
 }
 
-#main-window@darkTheme@ .treestyletab-splitter {
+toolbar[brighttext] .treestyletab-splitter {
   background: #454c4c;
   border-color: #1e2222 !important;
 }

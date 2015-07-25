@@ -35,17 +35,14 @@
   --tab-selected-background-color: hsla(0,0%,100%,.38);
 }
 
-#main-window@darkTheme@ {
+toolbar[brighttext] {
+  --toolbar-background: #393f3f;
   --toolbar-border-color: #1c1f1f;
 
   --tab-hover-background-color: #313636;
   --tab-hover-bottom-line-color: #1c1f1f;
   --tab-selected-background-color: #343939;
   --tab-selected-bottom-line-color: #215d9c;
-}
-
-#main-window@darkThemeToolbar@ {
-  --toolbar-background: #393f3f;
 }
 
 #main-window[privatebrowsingmode=temporary] {
@@ -150,10 +147,6 @@
 
 #nav-bar ~ toolbar {
   background: transparent;
-}
-
-#navigator-toolbox@darkTheme@ #main-menubar > menu:not([open]) {
-  color: #eeeeec;
 }
 
 #nav-bar {
@@ -283,10 +276,6 @@ toolbarpaletteitem[place="palette"] > #personal-bookmarks > #bookmarks-toolbar-p
   visibility: hidden;
 }
 
-#main-window@darkTheme@ #bookmarked-notification-dropmarker-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
-}
-
 #bookmarked-notification-anchor[notification="finish"] > #bookmarked-notification {
   background-image: url("chrome://browser/skin/places/bookmarks-notification-finish.png");
   animation: animation-bookmarkAdded 800ms;
@@ -405,10 +394,6 @@ menuitem.bookmark-item {
 .bookmark-item[cutting] > .toolbarbutton-text,
 .bookmark-item[cutting] > .menu-iconic-left > .menu-iconic-text {
   opacity: 0.7;
-}
-
-#main-window@darkTheme@ .bookmark-item:-moz-any([container], [container][livemark], [container][query]:not([tagContainer]):not([dayContainer]), [query][hostContainer]) .toolbarbutton-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
 
 /* Stock icons for the menu bar items */
@@ -919,29 +904,12 @@ toolbar[brighttext] #loop-button > .toolbarbutton-badge-container {
   -moz-image-region: rect(0, 126px, 18px, 108px);
 }
 
-#main-window@darkTheme@ #PanelUI-menu-button > .toolbarbutton-icon,
-#main-window@darkTheme@ #PanelUI-menu-button > .toolbarbutton-badge-container > .toolbarbutton-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
-}
-
 #pocket-button[cui-areatype="toolbar"] {
   list-style-image: url(chrome://symbolic-icons/skin/extensions/pocket.svg);
 }
 
 #pocket-button[cui-areatype="toolbar"][open] {
   list-style-image: url(chrome://symbolic-icons/skin/extensions/pocket-added.svg);
-}
-
-#main-window@darkTheme@ :-moz-any(#window-controls, .window-controls) .toolbarbutton-icon,
-#main-window@darkTheme@ :-moz-any(#back-button, #forward-button, #nav-bar-overflow-button) > .toolbarbutton-icon,
-#main-window@darkTheme@ :-moz-any(#edit-controls, #zoom-controls)[cui-areatype="toolbar"] > .toolbarbutton-1 > .toolbarbutton-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
-}
-
-#main-window@darkTheme@ :-moz-any(@primaryToolbarButtons@)[cui-areatype="toolbar"] > .toolbarbutton-icon,
-#main-window@darkTheme@ :-moz-any(@primaryToolbarButtons@)[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon,
-#main-window@darkTheme@ :-moz-any(@primaryToolbarButtons@)[cui-areatype="toolbar"] > .toolbarbutton-menubutton-button > .toolbarbutton-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
 
 /* Menu panel and palette styles */
@@ -1172,12 +1140,6 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   opacity: .6;
 }
 
-#main-window@darkThemeFull@ :-moz-any(@primaryToolbarButtons@)[cui-areatype="menu-panel"] .toolbarbutton-icon,
-#main-window@darkThemeFull@ :-moz-any(#edit-controls, #zoom-controls)[cui-areatype="menu-panel"] .toolbarbutton-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
-  opacity: .8;
-}
-
 :-moz-any(@primaryToolbarButtons@)[cui-areatype="menu-panel"][panel-multiview-anchor=true] .toolbarbutton-icon {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
   opacity: 1;
@@ -1206,7 +1168,7 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   -moz-padding-start: 7px;
 }
 
-#main-window@darkTheme@ :-moz-any(#window-controls, .window-controls) {
+toolbar[brighttext] :-moz-any(#window-controls, .window-controls) {
   background-image: linear-gradient(transparent, rgba(41,46,46,0.9) 18%, rgba(41,46,46,1), rgba(41,46,46,0.9) 82%, transparent),
                     linear-gradient(rgba(255,255,255,0.02), rgba(255,255,255,0.1), rgba(255,255,255,0.02));
 }
@@ -1278,7 +1240,7 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   border-color: #b2b6b2 #b8bbb8 #bdbfbd;
   border-radius: 3px;
   box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 0 0 rgba(255,255,255,0.37);
-  color: #2e3436;
+  color: ButtonText;
   margin: 0px 3px;
   min-height: 28px;
   overflow: hidden;
@@ -1288,20 +1250,23 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   transition-duration: 200ms;
 }
 
-#urlbar:-moz-lwtheme, .searchbar-textbox:-moz-lwtheme {
+#urlbar:-moz-lwtheme,
+.searchbar-textbox:-moz-lwtheme {
   background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.8));
   border-color: rgba(50,50,50,.4);
   box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 0 0 rgba(255,255,255,0.15);
 }
 
-#main-window@darkTheme@ :-moz-any(#urlbar, .searchbar-textbox) {
+toolbar[brighttext] #urlbar,
+toolbar[brighttext] .searchbar-textbox {
   background: linear-gradient(to bottom, rgba(50,50,50,0.5), rgba(50,50,50,0.8));
   border-color: rgba(30,30,30,.4);
   box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 0 0 rgba(255,255,255,0.1);
   color: #fff;
 }
 
-#urlbar[focused="true"], .searchbar-textbox[focused="true"] {
+#urlbar[focused="true"],
+.searchbar-textbox[focused="true"] {
   border-color: #729fcf;
   box-shadow: 0 1px 0 rgba(255,255,255,0.6), inset 0 1px 2px 0 rgba(0,106,221,0.3);
 }
@@ -1386,8 +1351,8 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   background: linear-gradient(to bottom, #d1d1d1, #fff);
   box-shadow: inset 0 1px 1px -1px hsla(0,0%,0%,.15);
 }
-#identity-box@darkTheme@:-moz-any(:hover:active, [open="true"]),
-#identity-box@darkTheme@:-moz-any(:hover:active, [open="true"]):before {
+toolbar[brighttext] #identity-box:-moz-any(:hover:active, [open="true"]),
+toolbar[brighttext] #identity-box:-moz-any(:hover:active, [open="true"]):before {
   background-image: linear-gradient(to bottom, #272727, #333333);
 }
 
@@ -1396,8 +1361,8 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
 #urlbar[pageproxystate="valid"] > #identity-box.chromeUI:before {
   background: hsla(0,0%,78%,.15);
 }
-#urlbar[pageproxystate="valid"] > #identity-box.chromeUI@darkTheme@,
-#urlbar[pageproxystate="valid"] > #identity-box.chromeUI@darkTheme@:before {
+toolbar[brighttext] #urlbar[pageproxystate="valid"] > #identity-box.chromeUI,
+toolbar[brighttext] #urlbar[pageproxystate="valid"] > #identity-box.chromeUI:before {
   background: hsla(0,0%,100%,.05);
 }
 
@@ -1405,7 +1370,7 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   -moz-border-end: 1px solid hsla(0,0%,39%,.25);
   -moz-margin-end: 4px;
 }
-#urlbar[pageproxystate="valid"] > #identity-box.chromeUI@darkTheme@ {
+toolbar[brighttext] #urlbar[pageproxystate="valid"] > #identity-box.chromeUI {
   -moz-border-end: 1px solid hsla(0,0%,0%,.25);
 }
 
@@ -1414,8 +1379,8 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   background: linear-gradient(to bottom, #d1d1d1, #fff);
   box-shadow: inset 0 1px 1px -1px hsla(0,0%,0%,.15);
 }
-#urlbar[pageproxystate="valid"] > #identity-box.chromeUI@darkTheme@:-moz-any(:hover:active, [open="true"]),
-#urlbar[pageproxystate="valid"] > #identity-box.chromeUI@darkTheme@:-moz-any(:hover:active, [open="true"]):before {
+toolbar[brighttext] #urlbar[pageproxystate="valid"] > #identity-box.chromeUI:-moz-any(:hover:active, [open="true"]),
+toolbar[brighttext] #urlbar[pageproxystate="valid"] > #identity-box.chromeUI:-moz-any(:hover:active, [open="true"]):before {
   background-image: linear-gradient(to bottom, #272727, #333333);
 }
 
@@ -1424,8 +1389,8 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:before {
   background: hsla(90,81%,45%,.15);
 }
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity@darkTheme@,
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity@darkTheme@:before {
+toolbar[brighttext] #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity,
+toolbar[brighttext] #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:before {
   background: hsla(0,0%,100%,.05);
 }
 
@@ -1434,7 +1399,7 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   color: #00aa00;
   -moz-margin-end: 4px;
 }
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity@darkTheme@ {
+toolbar[brighttext] #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity {
   -moz-border-end: 1px solid hsla(0,0%,0%,.25);
   color: inherit;
 }
@@ -1443,8 +1408,8 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:-moz-any(:hover:active, [open="true"]):before {
   background: linear-gradient(to bottom, hsla(90,81%,45%,.25), hsla(90,81%,45%,.05));
 }
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity@darkTheme@:-moz-any(:hover:active, [open="true"]),
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity@darkTheme@:-moz-any(:hover:active, [open="true"]):before {
+toolbar[brighttext] #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:-moz-any(:hover:active, [open="true"]),
+toolbar[brighttext] #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:-moz-any(:hover:active, [open="true"]):before {
   background-image: linear-gradient(to bottom, #272727, #333333);
   box-shadow: inset 0 1px 1px -1px hsla(0,0%,0%,.15);
 }
@@ -1462,7 +1427,7 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   opacity: 0.35;
 }
 
-@darkTheme@ > #page-proxy-favicon {
+toolbar[brighttext] #page-proxy-favicon {
   list-style-image: url(chrome://symbolic-icons/skin/identity-icons.svg#generic-bright);
   opacity: 0.2;
 }
@@ -1470,14 +1435,14 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
 .chromeUI > #page-proxy-favicon[pageproxystate="valid"] {
   list-style-image: url(chrome://symbolic-icons/skin/identity-icons.svg#brand);
 }
-.chromeUI@darkTheme@ > #page-proxy-favicon[pageproxystate="valid"] {
+toolbar[brighttext] .chromeUI > #page-proxy-favicon[pageproxystate="valid"] {
   list-style-image: url(chrome://symbolic-icons/skin/identity-icons.svg#brand-bright);
 }
 
 .verifiedDomain > #page-proxy-favicon[pageproxystate="valid"] {
   list-style-image: url(chrome://symbolic-icons/skin/identity-icons.svg#https);
 }
-.verifiedDomain@darkTheme@ > #page-proxy-favicon[pageproxystate="valid"] {
+toolbar[brighttext] .verifiedDomain > #page-proxy-favicon[pageproxystate="valid"] {
   list-style-image: url(chrome://symbolic-icons/skin/identity-icons.svg#https-bright);
 }
 
@@ -1496,8 +1461,8 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   list-style-image: url(chrome://symbolic-icons/skin/identity-icons.svg#https-mixed-display);
   opacity: 0.5;
 }
-.mixedDisplayContent@darkTheme@ > #page-proxy-favicon[pageproxystate="valid"],
-.mixedDisplayContentLoadedActiveBlocked@darkTheme@ > #page-proxy-favicon[pageproxystate="valid"] {
+toolbar[brighttext] .mixedDisplayContent > #page-proxy-favicon[pageproxystate="valid"],
+toolbar[brighttext] .mixedDisplayContentLoadedActiveBlocked > #page-proxy-favicon[pageproxystate="valid"] {
   list-style-image: url(chrome://symbolic-icons/skin/identity-icons.svg#https-mixed-display-bright);
 }
 
@@ -1762,7 +1727,7 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   z-index: 1;
 }
 
-#notification-popup-box@darkTheme@ {
+toolbar[brighttext] #notification-popup-box {
   background-color: hsla(0,0%,100%,.05);
   border-image: url(chrome://browser/skin/urlbar-arrow-dark.svg) 0 8 0 0 fill;
 }
@@ -2050,25 +2015,8 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   list-style-image: url(chrome://symbolic-icons/skin/translate.svg);
 }
 
-#notification-popup-box@darkTheme@ .notification-anchor-icon {
+toolbar[brighttext] #notification-popup-box .notification-anchor-icon {
   opacity: 0.4;
-}
-
-#notification-popup-box@darkTheme@ :-moz-any(
-    #addons-notification-icon, #pointerLock-notification-icon,
-    #password-notification-icon, #webapps-notification-icon,
-    #plugins-notification-icon, #plugin-install-notification-icon,
-    .default-notification-icon, #default-notification-icon,
-    .identity-notification-icon, #identity-notification-icon,
-    .geo-notification-icon, #geo-notification-icon,
-    .indexedDB-notification-icon, #indexedDB-notification-icon,
-    .mixed-content-blocked-notification-icon, #mixed-content-blocked-notification-icon,
-    .webRTC-shareDevices-notification-icon, #webRTC-shareDevices-notification-icon,
-    .webRTC-sharingDevices-notification-icon, #webRTC-sharingDevices-notification-icon,
-    .web-notifications-notification-icon, #web-notifications-notification-icon,
-    .translate-notification-icon, #translate-notification-icon,
-    .translated-notification-icon, #translated-notification-icon) {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
 
 /* Translation infobar */
@@ -2362,7 +2310,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.15) !important;
 }
 
-#urlbar@darkTheme@ > toolbarbutton:not([disabled="true"]):active {
+toolbar[brighttext] #urlbar > toolbarbutton:not([disabled="true"]):active {
   background-image: linear-gradient(to bottom, #272727, #333333) !important;
 }
 
@@ -2399,12 +2347,11 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   opacity: .35;
 }
 
-#main-window@darkTheme@ :-moz-any(#urlbar-go-button, #urlbar-stop-button, #urlbar-reload-button, .urlbar-history-dropmarker):not(:hover) {
+toolbar[brighttext] #urlbar-go-button:not(:hover),
+toolbar[brighttext] #urlbar-stop-button:not(:hover),
+toolbar[brighttext] #urlbar-reload-button:not(:hover),
+toolbar[brighttext] .urlbar-history-dropmarker:not(:hover) {
   opacity: .2;
-}
-#main-window@darkTheme@ :-moz-any(#urlbar-go-button, #urlbar-stop-button, #urlbar-reload-button) > .toolbarbutton-icon,
-#main-window@darkTheme@ .urlbar-history-dropmarker {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
 
 /* Adjust opacity of the URL bar icons on hover */
@@ -2646,7 +2593,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 
 #sidebar-header {
   font-weight: bold;
-  color: #2e3436;
+  color: ButtonText;
   padding: 10px 11px 10px 17px;
   margin: 0;
 }
@@ -2699,7 +2646,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
               inset 0 2px 3px -1px hsla(0,0%,0%,.15);
 }
 
-#TabsToolbar@darkTheme@ {
+#TabsToolbar[brighttext] {
   background: #303535;
   box-shadow: inset 0 2px 3px -1px hsla(0,0%,0%,.15);
 }
@@ -2760,7 +2707,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   background: transparent;
   border: none;
 /*  color: inherit;*/
-  color: #2e3436;
+  color: ButtonText;
   margin: 0;
   padding: 0;
 
@@ -2772,7 +2719,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   text-shadow: none;
 }
 
-#TabsToolbar@darkTheme@ .tabbrowser-tab {
+#TabsToolbar[brighttext] .tabbrowser-tab {
   color: #eeeeec;
 }
 
@@ -2801,14 +2748,14 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 .tabbrowser-tab:not([visuallyselected=true]) {
   color: #8d9091;
 }
-#TabsToolbar@darkTheme@ .tabbrowser-tab:not([visuallyselected=true]) {
+#TabsToolbar[brighttext] .tabbrowser-tab:not([visuallyselected=true]) {
   color: #a6a8a7;
 }
 
 .tabbrowser-tab:not([visuallyselected=true]):hover {
   color: #5d6263;
 }
-#TabsToolbar@darkTheme@ .tabbrowser-tab:not([visuallyselected=true]):hover {
+#TabsToolbar[brighttext] .tabbrowser-tab:not([visuallyselected=true]):hover {
   color: #d3d4d2;
 }
 
@@ -2849,8 +2796,8 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   background-image: linear-gradient(to top, var(--tab-selected-bottom-line-color), #c0c0c0 2px, #c0c0c0);
 }
 
-#TabsToolbar@darkTheme@ .tab-background-start[visuallyselected=true],
-#TabsToolbar@darkTheme@ .tab-background-end[visuallyselected=true] {
+#TabsToolbar[brighttext] .tab-background-start[visuallyselected=true],
+#TabsToolbar[brighttext] .tab-background-end[visuallyselected=true] {
   background: #282b2b;
   background-image: linear-gradient(to top, var(--tab-selected-bottom-line-color), #282b2b 2px, #282b2b);
 }
@@ -2860,8 +2807,8 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   background: hsla(0,0%,68%,.3); /* #c9c9c9 */
 }
 
-#TabsToolbar@darkTheme@ .tabbrowser-tab:hover .tab-background-start:not([visuallyselected=true]),
-#TabsToolbar@darkTheme@ .tabbrowser-tab:hover .tab-background-end:not([visuallyselected=true]) {
+#TabsToolbar[brighttext] .tabbrowser-tab:hover .tab-background-start:not([visuallyselected=true]),
+#TabsToolbar[brighttext] .tabbrowser-tab:hover .tab-background-end:not([visuallyselected=true]) {
   background: #2a2f2f;
 }
 
@@ -2941,11 +2888,11 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   list-style-image: url(chrome://browser/skin/tabbrowser/loading.png);
 }
 
-#TabsToolbar@darkTheme@ .tab-throbber {
+#TabsToolbar[brighttext] .tab-throbber {
   list-style-image: url(chrome://browser/skin/tabbrowser/connecting-inverted.png);
 }
 
-#TabsToolbar@darkTheme@ .tab-throbber[progress] {
+#TabsToolbar[brighttext] .tab-throbber[progress] {
   list-style-image: url(chrome://browser/skin/tabbrowser/loading-inverted.png);
 }
 
@@ -3037,7 +2984,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 
   transition: opacity 200ms ease-in;
 }
-#TabsToolbar@darkTheme@ .tab-close-button > .toolbarbutton-icon {
+#TabsToolbar[brighttext] .tab-close-button > .toolbarbutton-icon {
   background-image: -moz-image-rect(url(chrome://browser/skin/tabbrowser/close-dark.svg), 0, 32, 16, 16);
 }
 
@@ -3046,7 +2993,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   opacity: 1;
   transition-timing-function: ease-in;
 }
-#TabsToolbar@darkTheme@ .tab-close-button:hover > .toolbarbutton-icon {
+#TabsToolbar[brighttext] .tab-close-button:hover > .toolbarbutton-icon {
   background-image: -moz-image-rect(url(chrome://browser/skin/tabbrowser/close-dark.svg), 0, 48, 16, 32);
 }
 
@@ -3062,10 +3009,6 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   margin: 0;
   -moz-margin-end: -1px;
   padding: 0 5px;
-}
-
-#TabsToolbar@darkTheme@ .tabs-newtab-button > .toolbarbutton-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
 
 /* Tabbrowser arrowscrollbox arrows */
@@ -3089,11 +3032,11 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   -moz-border-start-color: #c0c0c0 !important;
 }
 
-#TabsToolbar@darkTheme@ .tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled]):not(:active) {
+#TabsToolbar[brighttext] .tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled]):not(:active) {
   -moz-border-end-color: hsla(0,0%,0%,.1) !important;
 }
 
-#TabsToolbar@darkTheme@ .tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled]):not(:active) {
+#TabsToolbar[brighttext] .tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled]):not(:active) {
   -moz-border-start-color: hsla(0,0%,0%,.1) !important;
 }
 
@@ -3125,10 +3068,6 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   opacity: .18;
 }
 
-#TabsToolbar@darkTheme@ :-moz-any(.scrollbutton-up, .scrollbutton-down) > .toolbarbutton-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
-}
-
 /* */
 
 /*
@@ -3151,10 +3090,6 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 #alltabs-button[type="menu"] > .toolbarbutton-icon {
   list-style-image: url(chrome://symbolic-icons/skin/go-down.svg);
-}
-
-#TabsToolbar@darkTheme@ #alltabs-button > .toolbarbutton-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
 
 /* All tabs menupopup */
@@ -4025,19 +3960,11 @@ notification.pluginVulnerable .messageImage {
   min-height: 16px;
 }
 
-#navigator-toolbox@darkTheme@ #downloads-button > #downloads-indicator-anchor {
-  filter: none;
-}
-
 /*** Main indicator icon ***/
 
 #downloads-button[cui-areatype="toolbar"] > #downloads-indicator-anchor > #downloads-indicator-icon {
   background: -moz-image-rect(url(chrome://symbolic-icons/skin/download.svg),
                               0, 16, 16, 0) center no-repeat;
-}
-
-#navigator-toolbox@darkTheme@ #downloads-button[cui-areatype="toolbar"]:not([attention]) > #downloads-indicator-anchor > #downloads-indicator-icon {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
 
 #downloads-button[cui-areatype="toolbar"][attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
@@ -4056,10 +3983,6 @@ notification.pluginVulnerable .messageImage {
   background: -moz-image-rect(url(chrome://symbolic-icons/skin/download.svg),
                               0, 16, 16, 0) center no-repeat;
   background-size: 12px;
-}
-
-#navigator-toolbox@darkTheme@ #downloads-button:not([counter]):not([attention]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
-  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }
 
 #downloads-button:not([counter])[attention] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
@@ -4116,15 +4039,11 @@ notification.pluginVulnerable .messageImage {
 #downloads-indicator-counter {
   height: 10px;
   margin: 0;
-  color: hsl(0,0%,30%);
+  color: ButtonText;
   text-shadow: 0 1px 0 hsla(0,0%,100%,.5);
   font-size: 10px;
   line-height: 10px;
   text-align: center;
-}
-
-#navigator-toolbox@darkTheme@ #downloads-indicator-counter {
-  color: #eeeeec;
 }
 
 #downloads-indicator-progress {
@@ -4150,7 +4069,7 @@ notification.pluginVulnerable .messageImage {
   border-radius: 2px 0 0 2px;
 }
 
-#navigator-toolbox@darkTheme@ #downloads-indicator-progress > .progress-bar {
+toolbar[brighttext] #downloads-indicator-progress > .progress-bar {
   border-color: hsla(0,0%,100%,.2);
 }
 
@@ -4165,7 +4084,7 @@ notification.pluginVulnerable .messageImage {
   border-radius: 0 2px 2px 0;
 }
 
-#navigator-toolbox@darkTheme@ #downloads-indicator-progress > .progress-remainder {
+toolbar[brighttext] #downloads-indicator-progress > .progress-remainder {
   border-color: hsla(0,0%,100%,.2);
 }
 
@@ -4490,9 +4409,6 @@ chatbox {
 
 #main-window[customizing] #navigator-toolbox {
   background: Window;
-}
-#main-window[customizing]@darkTheme@ #navigator-toolbox {
-  background: #393f3f;
 }
 
 #main-window:-moz-any([customize-entering],[customize-entered]) #browser-bottombox {
@@ -5019,10 +4935,6 @@ toolbarpaletteitem[place="toolbar"] {
 #main-window[customize-entered] #navigator-toolbox {
   border-top: 3px solid hsla(0,0%,0%,.1);
   -moz-border-top-colors: hsla(0,0%,0%,.05) hsla(0,0%,0%,.1) hsla(0,0%,0%,.2);
-}
-
-#main-window[customize-entered] #navigator-toolbox@darkTheme@ {
-  background-clip: content-box !important; /* FIXME: padding-box */
 }
 
 #main-window[customize-entered] #browser-bottombox {

@@ -16,7 +16,7 @@
       </rdf:RDF>
    </metadata>
    <g id="layer1" inkscape:label="Layer 1" inkscape:groupmode="layer">
-      <path style="fill:#2e3436" d="M 3.7142857,2 C 2.7645714,2 2,2.7645714 2,3.7142857 L 2,12.285714 C 2,13.235429 2.7645629,14 3.7142857,14 l 8.5714283,0 C 13.235429,14 14,13.235429 14,12.285714 L 14,3.7142857 C 14,2.7645714 13.235437,2 12.285714,2 z" sodipodi:nodetypes="sssssssss" inkscape:connector-curvature="0" id="path8327" />
+      <path style="fill:ButtonText" d="M 3.7142857,2 C 2.7645714,2 2,2.7645714 2,3.7142857 L 2,12.285714 C 2,13.235429 2.7645629,14 3.7142857,14 l 8.5714283,0 C 13.235429,14 14,13.235429 14,12.285714 L 14,3.7142857 C 14,2.7645714 13.235437,2 12.285714,2 z" sodipodi:nodetypes="sssssssss" inkscape:connector-curvature="0" id="path8327" />
       <path style="fill:#ffffff;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1" d="m 7,4 2,0 0,8 -2,0 z" id="path3773" inkscape:connector-curvature="0" />
       <path style="fill:#ffffff;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1" d="m 4,7 0,2 8,0 0,-2 z" id="path3775" inkscape:connector-curvature="0" />
    </g>

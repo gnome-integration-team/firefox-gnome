@@ -150,7 +150,7 @@ statusbar {
   background-image: linear-gradient(to bottom, #f7f7f7, #dbdbdb);
   border: 1px solid rgba(0,0,0,.25);
   border-radius: 3px;
-  color: #2e3436;
+  color: ButtonText;
   padding: 0px 3px;
   margin: 0px 3px;
   min-height: 28px;

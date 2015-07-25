@@ -73,21 +73,4 @@ var Tweaks = {
         elements: ["nav-bar", "bookmarked-notification-anchor"],
         attributeName: "reliefbuttons"
     },
-
-    darkVariant: {
-        key: "dark-variant",
-        type: "attribute",
-        elements: ["main-window", "navigator-toolbox",
-                   "TabsToolbar", "nav-bar", "PersonalToolbar",
-                   "urlbar", "identity-box", "notification-popup-box"],
-        attributeName: "darkvariant",
-        attributeValue: function() {
-            switch (GNOMEThemeTweak.prefs.getIntPref(this.key)) {
-                case 2:
-                    return "full";
-                default:
-                    return "toolbar";
-            }
-        }
-    },
 }

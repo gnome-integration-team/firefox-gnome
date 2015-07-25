@@ -14,6 +14,6 @@
       </rdf:RDF>
    </metadata>
    <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="g6502">
-      <path style="color:black;fill:#2e3436;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" d="M 1.9375,2.81245 C 1.71586,2.79575 1.81634,3.05326 2.09375,3.74995 L 5.375,12.7187 c 0.41485,1.1405 0.32445,1.04355 0.84375,-0.0312 L 7.59375,10 11.3125,13.71875 C 11.49346,13.89971 11.72386,14 12,14 c 0.55228,0 1,-0.44772 1,-1 0,-0.27615 -0.10029,-0.50654 -0.28125,-0.6875 L 9,8.5937 11.71875,7.2187 c 1.02329,-0.5116 1.16912,-0.5013 0,-0.875 l -9,-3.25 C 2.31073,2.94208 2.07049,2.82245 1.9375,2.81245 z" id="path6346" inkscape:connector-curvature="0" />
+      <path style="color:black;fill:ButtonText;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" d="M 1.9375,2.81245 C 1.71586,2.79575 1.81634,3.05326 2.09375,3.74995 L 5.375,12.7187 c 0.41485,1.1405 0.32445,1.04355 0.84375,-0.0312 L 7.59375,10 11.3125,13.71875 C 11.49346,13.89971 11.72386,14 12,14 c 0.55228,0 1,-0.44772 1,-1 0,-0.27615 -0.10029,-0.50654 -0.28125,-0.6875 L 9,8.5937 11.71875,7.2187 c 1.02329,-0.5116 1.16912,-0.5013 0,-0.875 l -9,-3.25 C 2.31073,2.94208 2.07049,2.82245 1.9375,2.81245 z" id="path6346" inkscape:connector-curvature="0" />
    </g>
 </svg>

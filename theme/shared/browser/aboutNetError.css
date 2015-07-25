@@ -34,7 +34,7 @@ h1 {
 #errorPageContainer {
   background-position: 35px 15px;
   background-repeat: no-repeat;
-  color: #2e3436;
+  color: ButtonText;
   position: relative;
   min-width: 280px;
   width: 610px;

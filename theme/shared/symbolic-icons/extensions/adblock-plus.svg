@@ -18,7 +18,7 @@
       }
       
       .generic {
-        fill: #2e3436;
+        fill: ButtonText;
       }
 
       .white {

@@ -23,6 +23,6 @@
   text-shadow: none;
 }
 
-#main-window@darkTheme@ @pushbulletButton@[cui-areatype="toolbar"] .toolbarbutton-text {
+toolbar[brighttext] @pushbulletButton@[cui-areatype="toolbar"] .toolbarbutton-text {
   filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
 }

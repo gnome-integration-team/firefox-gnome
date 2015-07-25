@@ -14,11 +14,11 @@
 </metadata>
 <g inkscape:label="Layer 1" inkscape:groupmode="layer">
 <g transform="translate(-14.37)">
-<path d="m21.152 11.956c-2.2091 0-4 0.8008-4 1.7886 0 0.4867 0.44841 0.9158 1.1538 1.2382h5.3077c0.12719 0 0.24023 0.01 0.35897 0.017 0.72386-0.3236 1.1795-0.7615 1.1795-1.2554 0-0.9878-1.7909-1.7886-4-1.7886z" inkscape:connector-curvature="0" fill="#2e3436"/>
-<path stroke-linejoin="round" d="m19.152 12.956-2-7 4-1.956" sodipodi:nodetypes="ccc" inkscape:connector-curvature="0" stroke="#2e3436" stroke-linecap="round" stroke-width="1.5" fill="none"/>
-<path sodipodi:rx="3.90625" sodipodi:ry="1.90625" sodipodi:type="arc" d="m-119.47 273.64a3.9062 1.9062 0 1 1 -7.8125 0 3.9062 1.9062 0 1 1 7.8125 0z" stroke-linejoin="round" stroke-linecap="round" transform="matrix(.86603 -.5 .5 .86603 -6.6223 -293.27)" stroke="#2e3436" sodipodi:cy="273.64343" sodipodi:cx="-123.375" stroke-miterlimit="3.3" fill="none"/>
-<path d="m21.734 2.5946c-2.1224 1.2254-3.2057 3.3226-2.411 4.6991 0.25953 0.4495 0.69197 0.7525 1.2233 0.9312-0.058-0.053-0.12632-0.094-0.16535-0.1614-0.46839-0.8112-0.0816-2.5609 2.2536-3.9092 2.3352-1.3482 4.0439-0.8083 4.5122 0 0.039 0.068 0.0398 0.147 0.0571 0.2239 0.11082-0.5495 0.0647-1.0754-0.19486-1.525-0.79472-1.3765-3.1526-1.4869-5.275-0.2615z" sodipodi:nodetypes="sscszscss" inkscape:connector-curvature="0" fill="#2e3436"/>
-<rect ry=".70202" rx=".70202" transform="rotate(-30)" height="2.1245" width="2.1612" y="11.649" x="16.445" fill="#2e3436"/>
+<path d="m21.152 11.956c-2.2091 0-4 0.8008-4 1.7886 0 0.4867 0.44841 0.9158 1.1538 1.2382h5.3077c0.12719 0 0.24023 0.01 0.35897 0.017 0.72386-0.3236 1.1795-0.7615 1.1795-1.2554 0-0.9878-1.7909-1.7886-4-1.7886z" inkscape:connector-curvature="0" fill="ButtonText"/>
+<path stroke-linejoin="round" d="m19.152 12.956-2-7 4-1.956" sodipodi:nodetypes="ccc" inkscape:connector-curvature="0" stroke="ButtonText" stroke-linecap="round" stroke-width="1.5" fill="none"/>
+<path sodipodi:rx="3.90625" sodipodi:ry="1.90625" sodipodi:type="arc" d="m-119.47 273.64a3.9062 1.9062 0 1 1 -7.8125 0 3.9062 1.9062 0 1 1 7.8125 0z" stroke-linejoin="round" stroke-linecap="round" transform="matrix(.86603 -.5 .5 .86603 -6.6223 -293.27)" stroke="ButtonText" sodipodi:cy="273.64343" sodipodi:cx="-123.375" stroke-miterlimit="3.3" fill="none"/>
+<path d="m21.734 2.5946c-2.1224 1.2254-3.2057 3.3226-2.411 4.6991 0.25953 0.4495 0.69197 0.7525 1.2233 0.9312-0.058-0.053-0.12632-0.094-0.16535-0.1614-0.46839-0.8112-0.0816-2.5609 2.2536-3.9092 2.3352-1.3482 4.0439-0.8083 4.5122 0 0.039 0.068 0.0398 0.147 0.0571 0.2239 0.11082-0.5495 0.0647-1.0754-0.19486-1.525-0.79472-1.3765-3.1526-1.4869-5.275-0.2615z" sodipodi:nodetypes="sscszscss" inkscape:connector-curvature="0" fill="ButtonText"/>
+<rect ry=".70202" rx=".70202" transform="rotate(-30)" height="2.1245" width="2.1612" y="11.649" x="16.445" fill="ButtonText"/>
 </g>
 </g>
 </svg>

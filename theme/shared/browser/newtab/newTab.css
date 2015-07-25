@@ -318,5 +318,5 @@
 /* SEARCH */
 #newtab-search-text,
 #newtab-search-submit {
-  color: #2e3436; /* see bug1038607 */
+  color: ButtonText; /* see bug1038607 */
 }

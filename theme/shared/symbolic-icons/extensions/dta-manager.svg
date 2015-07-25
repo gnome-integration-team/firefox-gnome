@@ -15,13 +15,13 @@
    </sodipodi:namedview>
    <title id="title9010">Gnome Symbolic Icon Theme</title>
    <g inkscape:label="actions" transform="translate(-220 -606)" inkscape:groupmode="layer" id="g9012">
-      <g id="g3166" transform="translate(214,-430.36219)" style="fill:#2e3436;fill-opacity:1">
-         <g id="g3185" transform="translate(6,0)" style="fill:#2e3436;fill-opacity:1">
-            <path style="fill:#2e3436;fill-opacity:1;stroke:none" d="m 13,1047.3622 -2,0 0,-1 -6,0 0,1 -2,0 L 8,1050.3622 Z" id="path3107" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" />
-            <rect y="1044.3622" x="5" height="1.9999826" width="6" id="rect3138" style="opacity:0.8;fill:#2e3436;fill-opacity:1;stroke:none" />
-            <rect style="opacity:0.5;fill:#2e3436;fill-opacity:1;stroke:none" id="rect3140" width="6" height="1.9999826" x="5" y="1042.3622" />
-            <rect y="1040.3622" x="5" height="1.9998302" width="6" id="rect3142" style="opacity:0.2;fill:#2e3436;fill-opacity:1;stroke:none" />
-            <rect style="opacity:0.1;fill:#2e3436;fill-opacity:1;stroke:none" id="rect3144" width="6" height="1.9998302" x="5" y="1038.3622" />
+      <g id="g3166" transform="translate(214,-430.36219)" style="fill:ButtonText;fill-opacity:1">
+         <g id="g3185" transform="translate(6,0)" style="fill:ButtonText;fill-opacity:1">
+            <path style="fill:ButtonText;fill-opacity:1;stroke:none" d="m 13,1047.3622 -2,0 0,-1 -6,0 0,1 -2,0 L 8,1050.3622 Z" id="path3107" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" />
+            <rect y="1044.3622" x="5" height="1.9999826" width="6" id="rect3138" style="opacity:0.8;fill:ButtonText;fill-opacity:1;stroke:none" />
+            <rect style="opacity:0.5;fill:ButtonText;fill-opacity:1;stroke:none" id="rect3140" width="6" height="1.9999826" x="5" y="1042.3622" />
+            <rect y="1040.3622" x="5" height="1.9998302" width="6" id="rect3142" style="opacity:0.2;fill:ButtonText;fill-opacity:1;stroke:none" />
+            <rect style="opacity:0.1;fill:ButtonText;fill-opacity:1;stroke:none" id="rect3144" width="6" height="1.9998302" x="5" y="1038.3622" />
          </g>
       </g>
    </g>

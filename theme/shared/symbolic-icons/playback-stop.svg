@@ -14,6 +14,6 @@
 </sodipodi:namedview>
 <title>Gnome Symbolic Icon Theme</title>
 <g inkscape:label="actions" transform="translate(-140 -606)" inkscape:groupmode="layer">
-<path style="color:#2e3436;text-transform:none;text-indent:0pt" inkscape:connector-curvature="0" fill="#2e3436" d="m144 610v8h8v-8h-8z" sodipodi:nodetypes="ccccc"/>
+<path style="color:ButtonText;text-transform:none;text-indent:0pt" inkscape:connector-curvature="0" fill="ButtonText" d="m144 610v8h8v-8h-8z" sodipodi:nodetypes="ccccc"/>
 </g>
 </svg>

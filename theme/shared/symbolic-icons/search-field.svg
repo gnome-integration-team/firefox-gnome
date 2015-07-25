@@ -97,7 +97,7 @@
      inkscape:label="places"
      transform="translate(-501.0002,-195)">
     <path
-       style="opacity:1;fill:#2e3436;fill-opacity:1;stroke:none;stroke-width:12.03663445;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:ButtonText;fill-opacity:1;stroke:none;stroke-width:12.03663445;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 12.5 1 A 3.5000079 3.5000079 0 0 0 9 4.5 A 3.5000079 3.5000079 0 0 0 12.5 8 A 3.5000079 3.5000079 0 0 0 16 4.5 A 3.5000079 3.5000079 0 0 0 12.5 1 z M 12.007812 2.4863281 L 13.005859 2.4902344 L 13.005859 3.9941406 L 14.515625 3.9902344 L 14.509766 4.9960938 L 13 5 L 13.005859 6.5019531 L 12.007812 6.5 L 12.001953 4.9960938 L 10.498047 4.9960938 L 10.503906 3.9902344 L 12.007812 3.9902344 L 12.007812 2.4863281 z "
        transform="translate(501.0002,195)"
        id="path8621" />
@@ -119,11 +119,11 @@
            sodipodi:cy="652.5"
            sodipodi:cx="146.48495"
            sodipodi:type="arc"
-           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#2e3436;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:new"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:ButtonText;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:new"
            id="path27918" />
         <path
            inkscape:connector-curvature="0"
-           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#2e3436;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:new"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:ButtonText;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:new"
            d="m 149.98894,656.00001 4.00455,4"
            id="path27941"
            sodipodi:nodetypes="cc" />

@@ -33,7 +33,7 @@ html|h1 {
     background-image: url(chrome://browser/skin/about-pages/private-browsing.svg);
     background-position: 35px 15px;
     background-repeat: no-repeat;
-    color: #2e3436;
+    color: ButtonText;
     min-width: 280px !important;
     width: 610px !important;
     max-width: 610px !important;

@@ -10,5 +10,4 @@ const DefaultPrefs = {
     "tab-bold-label": false,
     "tabs-on-top": false,
     "urlbar-history-dropmarker": false,
-    "dark-variant": 0,
 }

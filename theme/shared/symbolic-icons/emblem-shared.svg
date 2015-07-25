@@ -13,7 +13,7 @@
 <inkscape:grid visible="true" enabled="true" originy="164px" originx="-280px" spacingy="1px" spacingx="1px" snapvisiblegridlinesonly="true" type="xygrid" empspacing="2"/>
 </sodipodi:namedview>
 <title>Gnome Symbolic Icon Theme</title>
-<g transform="translate(-521 -381)" inkscape:groupmode="layer" inkscape:label="emblems" fill="#2e3436">
+<g transform="translate(-521 -381)" inkscape:groupmode="layer" inkscape:label="emblems" fill="ButtonText">
 <path sodipodi:rx="1.96875" sodipodi:ry="1.96875" style="color:#000000;enable-background:new" sodipodi:type="arc" d="m291 178.03a1.9688 1.9688 0 1 1 -3.9375 0 1.9688 1.9688 0 1 1 3.9375 0z" transform="matrix(1.5079 0 0 1.5079 88.16 120.51)" sodipodi:cy="178.03125" sodipodi:cx="289.03125"/>
 <path sodipodi:rx="1.96875" sodipodi:ry="1.96875" style="color:#000000;enable-background:new" sodipodi:type="arc" d="m291 178.03a1.9688 1.9688 0 1 1 -3.9375 0 1.9688 1.9688 0 1 1 3.9375 0z" transform="matrix(1.5079 0 0 1.5079 98.128 125.51)" sodipodi:cy="178.03125" sodipodi:cx="289.03125"/>
 <path sodipodi:rx="1.96875" sodipodi:ry="1.96875" style="color:#000000;enable-background:new" sodipodi:type="arc" d="m291 178.03a1.9688 1.9688 0 1 1 -3.9375 0 1.9688 1.9688 0 1 1 3.9375 0z" transform="matrix(1.5079 0 0 1.5079 98.128 115.51)" sodipodi:cy="178.03125" sodipodi:cx="289.03125"/>

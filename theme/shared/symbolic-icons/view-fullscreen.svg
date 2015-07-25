@@ -14,7 +14,7 @@
       <inkscape:grid visible="true" enabled="true" spacingy="1px" spacingx="1px" snapvisiblegridlinesonly="true" type="xygrid" empspacing="2" id="grid8341" />
    </sodipodi:namedview>
    <title id="title8343">Gnome Symbolic Icon Theme</title>
-   <g inkscape:label="actions" transform="translate(-40.984 -647.02)" inkscape:groupmode="layer" fill="#2e3436" id="g8345">
+   <g inkscape:label="actions" transform="translate(-40.984 -647.02)" inkscape:groupmode="layer" fill="ButtonText" id="g8345">
       <g transform="translate(40.984 -389.35)" id="g8369">
          <path transform="translate(0 1036.4)" d="m9 2c-0.5523 0-1 0.4477-1 1s0.4477 1 1 1h1.562l-2.2808 2.2812 1.4376 1.4063 2.2812-2.2813v1.5938c0 0.55228 0.44772 1 1 1s1-0.44772 1-1v-5h-5z" inkscape:connector-curvature="0" id="path8371" />
          <path transform="translate(0 1036.4)" d="m3 8c-0.5523 0-1 0.4477-1 1v5h5c0.5523 0 1-0.448 1-1s-0.4477-1-1-1h-1.5938l2.3126-2.3125-0.7188-0.6875-0.7188-0.7188-2.2812 2.2808v-1.562c0-0.5523-0.4477-1-1-1z" inkscape:connector-curvature="0" id="path8373" />

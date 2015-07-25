@@ -14,11 +14,11 @@
       </rdf:RDF>
    </metadata>
    <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="g6909">
-      <g transform="translate(1.1607091e-7,-1035.376)" id="g8628" style="stroke:#2e3436;stroke-opacity:1">
-         <path transform="matrix(0.83332657,0,0,0.83333272,2.3334279,1038.8622)" d="M 14,6 C 14,7.6568542 12.656854,9 11,9 9.3431458,9 8,7.6568542 8,6 8,4.3431458 9.3431458,3 11,3 c 1.656854,0 3,1.3431458 3,3 z" sodipodi:ry="3" sodipodi:rx="3" sodipodi:cy="6" sodipodi:cx="11" id="path6972" style="color:black;fill:none;stroke:#2e3436;stroke-width:2.40001082;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" sodipodi:type="arc" />
-         <path sodipodi:nodetypes="cc" inkscape:connector-curvature="0" id="path6974" d="m 7.674073,1043.8622 -5.1721522,0" style="fill:none;stroke:#2e3436;stroke-width:3;stroke-linecap:square;stroke-linejoin:miter;stroke-opacity:1" />
-         <path inkscape:connector-curvature="0" id="path7744" d="m 2.500035,1044.414 0,2.9787" style="fill:none;stroke:#2e3436;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-         <path sodipodi:nodetypes="cc" style="fill:none;stroke:#2e3436;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 4.500035,1044.737 0,1.6341" id="path7746" inkscape:connector-curvature="0" />
+      <g transform="translate(1.1607091e-7,-1035.376)" id="g8628" style="stroke:ButtonText;stroke-opacity:1">
+         <path transform="matrix(0.83332657,0,0,0.83333272,2.3334279,1038.8622)" d="M 14,6 C 14,7.6568542 12.656854,9 11,9 9.3431458,9 8,7.6568542 8,6 8,4.3431458 9.3431458,3 11,3 c 1.656854,0 3,1.3431458 3,3 z" sodipodi:ry="3" sodipodi:rx="3" sodipodi:cy="6" sodipodi:cx="11" id="path6972" style="color:black;fill:none;stroke:ButtonText;stroke-width:2.40001082;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" sodipodi:type="arc" />
+         <path sodipodi:nodetypes="cc" inkscape:connector-curvature="0" id="path6974" d="m 7.674073,1043.8622 -5.1721522,0" style="fill:none;stroke:ButtonText;stroke-width:3;stroke-linecap:square;stroke-linejoin:miter;stroke-opacity:1" />
+         <path inkscape:connector-curvature="0" id="path7744" d="m 2.500035,1044.414 0,2.9787" style="fill:none;stroke:ButtonText;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         <path sodipodi:nodetypes="cc" style="fill:none;stroke:ButtonText;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 4.500035,1044.737 0,1.6341" id="path7746" inkscape:connector-curvature="0" />
       </g>
    </g>
 </svg>

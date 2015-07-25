@@ -14,6 +14,6 @@
       </rdf:RDF>
    </metadata>
    <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="g6502">
-      <path style="color:black;fill:#2e3436;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" d="M 8,2 C 6.34315,2 5,3.34314 5,5 5,6.65685 6.34315,8 8,8 9.65685,8 11,6.65685 11,5 11,3.34314 9.65685,2 8,2 z M 4,7 C 3.13258,7.73261 2,9.77052 2,11 l 0,4 2,0 0,-3 1,0 0,3 1,0 4,0 1,0 0,-3 1,0 0,3 2,0 0,-4 C 14,9.77052 12.86742,7.73261 12,7 12,9 10.07107,10 8,10 5.92893,10 4,9 4,7 z" id="rect6402" inkscape:connector-curvature="0" sodipodi:nodetypes="ssssscsccccccccccccscsc" />
+      <path style="color:black;fill:ButtonText;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" d="M 8,2 C 6.34315,2 5,3.34314 5,5 5,6.65685 6.34315,8 8,8 9.65685,8 11,6.65685 11,5 11,3.34314 9.65685,2 8,2 z M 4,7 C 3.13258,7.73261 2,9.77052 2,11 l 0,4 2,0 0,-3 1,0 0,3 1,0 4,0 1,0 0,-3 1,0 0,3 2,0 0,-4 C 14,9.77052 12.86742,7.73261 12,7 12,9 10.07107,10 8,10 5.92893,10 4,9 4,7 z" id="rect6402" inkscape:connector-curvature="0" sodipodi:nodetypes="ssssscsccccccccccccscsc" />
    </g>
 </svg>

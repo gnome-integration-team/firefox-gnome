@@ -12,9 +12,9 @@
 </cc:Work>
 </rdf:RDF>
 </metadata>
-<g fill="#2e3436" inkscape:label="Layer 1" inkscape:groupmode="layer">
-<path stroke-linejoin="round" d="m4.75 5.25c-1.0414-1.5-0.9998-1.5-0.9998-1.5" inkscape:connector-curvature="0" stroke="#2e3436" stroke-linecap="round" stroke-width="1.5"/>
-<path stroke-linejoin="round" d="m11.25 5.25c1.0414-1.5 0.99977-1.5 0.99977-1.5" inkscape:connector-curvature="0" stroke="#2e3436" stroke-linecap="round" stroke-width="1.5"/>
+<g fill="ButtonText" inkscape:label="Layer 1" inkscape:groupmode="layer">
+<path stroke-linejoin="round" d="m4.75 5.25c-1.0414-1.5-0.9998-1.5-0.9998-1.5" inkscape:connector-curvature="0" stroke="ButtonText" stroke-linecap="round" stroke-width="1.5"/>
+<path stroke-linejoin="round" d="m11.25 5.25c1.0414-1.5 0.99977-1.5 0.99977-1.5" inkscape:connector-curvature="0" stroke="ButtonText" stroke-linecap="round" stroke-width="1.5"/>
 <path style="color:#000000" d="m344.36-43.751c0 3.3195-2.691 6.0104-6.0104 6.0104-3.3195 0-6.0104-2.691-6.0104-6.0104 0-3.3195 2.691-6.0104 6.0104-6.0104s6.0104 2.691 6.0104 6.0104zm18.031 0c0 3.3195 2.691 6.0104 6.0104 6.0104 3.3195 0 6.0104-2.691 6.0104-6.0104 0-3.3195-2.691-6.0104-6.0104-6.0104s-6.0104 2.691-6.0104 6.0104zm-9.0156-26.045c-19.644 0-35.611 21.435-36.062 48.083h72.125c-0.45157-26.648-16.418-48.083-36.062-48.083z" fill-rule="evenodd" transform="matrix(-.16638 0 0 .12478 66.794 12.709)"/>
 <path style="color:#000000" d="m14 14v-3h-12v3z" fill-rule="evenodd" sodipodi:nodetypes="ccccc" inkscape:connector-curvature="0"/>
 </g>

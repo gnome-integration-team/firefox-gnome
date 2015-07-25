@@ -8,13 +8,12 @@
 
 :-moz-any(#TabsToolbar, #nav-bar) .toolbarbutton-1,
 :-moz-any(#window-controls, .window-controls) > toolbarbutton,
-#PersonalToolbar@darkThemeToolbar@ :-moz-any(toolbarbutton.bookmark-item:not(.subviewbutton), .toolbarbutton-1),
 .tabs-closebutton {
   -moz-appearance: none;
   background: transparent;
   border: 1px solid transparent;
   border-radius: 3px;
-  color: #2e3436;
+  color: ButtonText;
   text-shadow: none;
   transition-property: background, border, box-shadow;
   transition-duration: 200ms, 200ms, 0ms;
@@ -22,15 +21,6 @@
 
 :-moz-any(#TabsToolbar, #nav-bar) .toolbarbutton-1 > .toolbarbutton-menubutton-button {
   -moz-appearance: none;
-}
-
-:-moz-any(#TabsToolbar, #nav-bar)@darkTheme@ .toolbarbutton-1,
-#PersonalToolbar@darkThemeToolbar@ :-moz-any(toolbarbutton.bookmark-item:not(.subviewbutton), .toolbarbutton-1) {
-  color: #eeeeec;
-}
-
-#PersonalToolbar@darkThemeToolbar@ :-moz-any(toolbarbutton.bookmark-item:not(.subviewbutton), .toolbarbutton-1) {
-  padding: 2px 6px;
 }
 
 /* :hover */
@@ -53,9 +43,8 @@
               0 1px 0 rgba(255,255,255,.15),;
 }
 
-:-moz-any(#TabsToolbar, #nav-bar)@darkTheme@ .toolbarbutton-1:not([disabled="true"]):hover,
-#main-window@darkTheme@ :-moz-any(#window-controls, .window-controls) > toolbarbutton:hover,
-#PersonalToolbar@darkThemeToolbar@ :-moz-any(toolbarbutton.bookmark-item:not(.subviewbutton), .toolbarbutton-1):not([disabled="true"]):hover {
+:-moz-any(#TabsToolbar, #nav-bar)[brighttext] .toolbarbutton-1:not([disabled="true"]):hover,
+toolbar[brighttext] :-moz-any(#window-controls, .window-controls) > toolbarbutton:hover {
   background-image: linear-gradient(to bottom, #5b6464, #434a4a 40%, #393f3f);
   border-color: #1c1f1f;
   box-shadow: inset 0 1px 0 rgba(255,255,255,.1),
@@ -91,16 +80,12 @@
               0 1px 0 rgba(255,255,255,0.15);
 }
 
-:-moz-any(#TabsToolbar, #nav-bar)@darkTheme@ .toolbarbutton-1:not([disabled="true"]):active:hover,
-:-moz-any(#TabsToolbar, #nav-bar)@darkTheme@ .toolbarbutton-1[open="true"],
-:-moz-any(#TabsToolbar, #nav-bar)@darkTheme@ .toolbarbutton-1[open="true"]:hover,
-:-moz-any(#TabsToolbar, #nav-bar)@darkTheme@ .toolbarbutton-1[checked="true"],
-:-moz-any(#TabsToolbar, #nav-bar)@darkTheme@ .toolbarbutton-1[checked="true"]:hover,
-#main-window@darkTheme@ :-moz-any(#window-controls, .window-controls) > toolbarbutton:active:hover,
-#PersonalToolbar@darkThemeToolbar@ :-moz-any(toolbarbutton.bookmark-item:not(.subviewbutton), .toolbarbutton-1):not([disabled="true"]):active:hover,
-#PersonalToolbar@darkThemeToolbar@ :-moz-any(toolbarbutton.bookmark-item:not(.subviewbutton), .toolbarbutton-1)[open="true"],
-#PersonalToolbar@darkThemeToolbar@ :-moz-any(toolbarbutton.bookmark-item:not(.subviewbutton), .toolbarbutton-1)[open="true"]:hover,
-#PersonalToolbar@darkThemeToolbar@ :-moz-any(toolbarbutton.bookmark-item:not(.subviewbutton), .toolbarbutton-1)[checked="true"] {
+:-moz-any(#TabsToolbar, #nav-bar)[brighttext] .toolbarbutton-1:not([disabled="true"]):active:hover,
+:-moz-any(#TabsToolbar, #nav-bar)[brighttext] .toolbarbutton-1[open="true"],
+:-moz-any(#TabsToolbar, #nav-bar)[brighttext] .toolbarbutton-1[open="true"]:hover,
+:-moz-any(#TabsToolbar, #nav-bar)[brighttext] .toolbarbutton-1[checked="true"],
+:-moz-any(#TabsToolbar, #nav-bar)[brighttext] .toolbarbutton-1[checked="true"]:hover,
+toolbar[brighttext] :-moz-any(#window-controls, .window-controls) > toolbarbutton:active:hover {
   background-image: linear-gradient(to bottom, #232727, #2d3232);
   border-color: #1c1f1f;
   box-shadow: inset 0 1px rgba(0,0,0,.07),
@@ -149,10 +134,10 @@
   -moz-border-right-colors: rgba(255,255,255,0.45) rgba(0,0,0,0.08);
 }
 
-:-moz-any(#TabsToolbar, #nav-bar)@darkTheme@ .toolbarbutton-1:not([open="true"]):not([buttondown="true"]):hover > .toolbarbutton-menubutton-dropmarker:-moz-locale-dir(ltr) {
+:-moz-any(#TabsToolbar, #nav-bar)[brighttext] .toolbarbutton-1:not([open="true"]):not([buttondown="true"]):hover > .toolbarbutton-menubutton-dropmarker:-moz-locale-dir(ltr) {
   -moz-border-left-colors: rgba(0,0,0,0.2) rgba(255,255,255,0.05);
 }
-:-moz-any(#TabsToolbar, #nav-bar)@darkTheme@ .toolbarbutton-1:not([open="true"]):not([buttondown="true"]):hover > .toolbarbutton-menubutton-dropmarker:-moz-locale-dir(rtl) {
+:-moz-any(#TabsToolbar, #nav-bar)[brighttext] .toolbarbutton-1:not([open="true"]):not([buttondown="true"]):hover > .toolbarbutton-menubutton-dropmarker:-moz-locale-dir(rtl) {
   -moz-border-right-colors: rgba(255,255,255,0.05) rgba(0,0,0,0.2);
 }
 
@@ -180,10 +165,6 @@
 #main-window:not([customizing]) :-moz-any(#TabsToolbar, #nav-bar) .toolbarbutton-1[disabled="true"] > .toolbarbutton-menubutton-dropmarker,
 #main-window:not([customizing]) :-moz-any(#TabsToolbar, #nav-bar) .toolbarbutton-1[disabled="true"] > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
 #main-window:not([customizing]) :-moz-any(#TabsToolbar, #nav-bar) .toolbarbutton-1 > .toolbarbutton-menubutton-button[disabled="true"] > .toolbarbutton-icon {
-  opacity: .5;
-}
-
-#main-window:not([customizing]) #PersonalToolbar@darkThemeToolbar@ :-moz-any(toolbarbutton.bookmark-item:not(.subviewbutton), .toolbarbutton-1)[disabled="true"] .toolbarbutton-icon {
   opacity: .5;
 }
 
@@ -236,9 +217,9 @@
   border-color: rgba(50,50,50,.4);
 }
 
-#nav-bar@darkTheme@ :-moz-any(#urlbar-container, #edit-controls, #zoom-controls):hover > .toolbarbutton-1:not(:hover):not([open="true"]):not([disabled="true"]),
-#nav-bar@darkTheme@ :-moz-any(#back-button, #forward-button):not(:hover):not([open="true"]):not([disabled="true"]),
-#nav-bar@darkTheme@[reliefbuttons="true"] .toolbarbutton-1:not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]) {
+#nav-bar[brighttext] :-moz-any(#urlbar-container, #edit-controls, #zoom-controls):hover > .toolbarbutton-1:not(:hover):not([open="true"]):not([disabled="true"]),
+#nav-bar[brighttext] :-moz-any(#back-button, #forward-button):not(:hover):not([open="true"]):not([disabled="true"]),
+#nav-bar[brighttext][reliefbuttons="true"] .toolbarbutton-1:not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]) {
   background-image: linear-gradient(to bottom, #454c4c, #393f3f 40%, #2d3232);
   border-color: #1c1f1f;
   text-shadow: 0 -1px rgba(0,0,0,.81);
@@ -258,9 +239,9 @@
               inset 0 1px 0 rgba(255,255,255,0.3);
 }
 
-#nav-bar@darkTheme@ :-moz-any(#urlbar-container, #edit-controls, #zoom-controls):hover > .toolbarbutton-1:not(:hover):not([open="true"]):not([disabled="true"]),
-#nav-bar@darkTheme@ :-moz-any(#back-button, #forward-button):not(:hover):not([open="true"]):not([disabled="true"]),
-#nav-bar@darkTheme@[reliefbuttons="true"] .toolbarbutton-1:not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]) {
+#nav-bar[brighttext] :-moz-any(#urlbar-container, #edit-controls, #zoom-controls):hover > .toolbarbutton-1:not(:hover):not([open="true"]):not([disabled="true"]),
+#nav-bar[brighttext] :-moz-any(#back-button, #forward-button):not(:hover):not([open="true"]):not([disabled="true"]),
+#nav-bar[brighttext][reliefbuttons="true"] .toolbarbutton-1:not(:hover):not([open="true"]):not([checked="true"]):not([disabled="true"]) {
   box-shadow: inset 0 1px rgba(255,255,255,.1),
               0 1px rgba(238,238,236,.1);
 }
@@ -284,9 +265,9 @@
   text-shadow: none;
 }
 
-#nav-bar@darkTheme@ :-moz-any(#back-button, #forward-button)[disabled="true"],
-#nav-bar@darkTheme@ :-moz-any(#edit-controls, #zoom-controls):hover > .toolbarbutton-1[disabled="true"],
-#nav-bar@darkTheme@[reliefbuttons="true"] .toolbarbutton-1[disabled="true"] {
+#nav-bar[brighttext] :-moz-any(#back-button, #forward-button)[disabled="true"],
+#nav-bar[brighttext] :-moz-any(#edit-controls, #zoom-controls):hover > .toolbarbutton-1[disabled="true"],
+#nav-bar[brighttext][reliefbuttons="true"] .toolbarbutton-1[disabled="true"] {
   background: #323636;
   border-color: #1e2222;
   box-shadow: inset 0 1px transparent,
@@ -311,10 +292,10 @@
   -moz-border-right-colors: rgba(255,255,255,0.45) rgba(0,0,0,0.08) !important;
 }
 
-#nav-bar[reliefbuttons="true"]@darkTheme@ .toolbarbutton-1:not([open="true"]):not([buttondown="true"]) > .toolbarbutton-menubutton-dropmarker:-moz-locale-dir(ltr) {
+#nav-bar[reliefbuttons="true"][brighttext] .toolbarbutton-1:not([open="true"]):not([buttondown="true"]) > .toolbarbutton-menubutton-dropmarker:-moz-locale-dir(ltr) {
   -moz-border-left-colors: rgba(0,0,0,0.2) rgba(255,255,255,0.05) !important;
 }
-#nav-bar[reliefbuttons="true"]@darkTheme@ .toolbarbutton-1:not([open="true"]):not([buttondown="true"]) > .toolbarbutton-menubutton-dropmarker:-moz-locale-dir(rtl) {
+#nav-bar[reliefbuttons="true"][brighttext] .toolbarbutton-1:not([open="true"]):not([buttondown="true"]) > .toolbarbutton-menubutton-dropmarker:-moz-locale-dir(rtl) {
   -moz-border-right-colors: rgba(255,255,255,0.05) rgba(0,0,0,0.2) !important;
 }
 
@@ -344,8 +325,8 @@
               inset -1px 0 0 rgba(0,0,0,0.08);
 }
 
-#nav-bar@darkTheme@[reliefbuttons="true"] :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:not(:first-of-type):not(:last-of-type):-moz-any(:not(:hover), :hover:not(:active)):not([disabled="true"]),
-#nav-bar@darkTheme@ :-moz-any(#edit-controls, #zoom-controls):hover > .toolbarbutton-1:not(:first-of-type):not(:last-of-type):-moz-any(:not(:hover), :hover:not(:active)):not([disabled="true"]) {
+#nav-bar[brighttext][reliefbuttons="true"] :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:not(:first-of-type):not(:last-of-type):-moz-any(:not(:hover), :hover:not(:active)):not([disabled="true"]),
+#nav-bar[brighttext] :-moz-any(#edit-controls, #zoom-controls):hover > .toolbarbutton-1:not(:first-of-type):not(:last-of-type):-moz-any(:not(:hover), :hover:not(:active)):not([disabled="true"]) {
   box-shadow: 0 1px 0 rgba(255,255,255,0.1),
               inset 0 1px 0 rgba(255,255,255,0.05),
               inset 1px 0 0 rgba(255,255,255,0.02),
@@ -377,12 +358,12 @@
               inset -1px 0 0 rgba(0,0,0,0.08);
 }
 
-#nav-bar@darkTheme@:-moz-locale-dir(ltr) #back-button:-moz-any(:not(:hover), :hover:not(:active)):not([disabled="true"]),
-#nav-bar@darkTheme@:-moz-locale-dir(rtl) #forward-button:-moz-any(:not(:hover), :hover:not(:active)):not([disabled="true"]),
-#nav-bar@darkTheme@:-moz-locale-dir(ltr)[reliefbuttons="true"] :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:first-of-type:-moz-any(:not(:hover), :hover:not(:active)):not([disabled="true"]),
-#nav-bar@darkTheme@:-moz-locale-dir(rtl)[reliefbuttons="true"] :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:last-of-type:-moz-any(:not(:hover), :hover:not(:active)):not([disabled="true"]),
-#nav-bar@darkTheme@:-moz-locale-dir(ltr) :-moz-any(#edit-controls, #zoom-controls):hover > .toolbarbutton-1:first-of-type:-moz-any(:not(:hover), :hover:not(:active)):not([disabled="true"]),
-#nav-bar@darkTheme@:-moz-locale-dir(rtl) :-moz-any(#edit-controls, #zoom-controls):hover > .toolbarbutton-1:last-of-type:-moz-any(:not(:hover), :hover:not(:active)):not([disabled="true"]) {
+#nav-bar[brighttext]:-moz-locale-dir(ltr) #back-button:-moz-any(:not(:hover), :hover:not(:active)):not([disabled="true"]),
+#nav-bar[brighttext]:-moz-locale-dir(rtl) #forward-button:-moz-any(:not(:hover), :hover:not(:active)):not([disabled="true"]),
+#nav-bar[brighttext]:-moz-locale-dir(ltr)[reliefbuttons="true"] :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:first-of-type:-moz-any(:not(:hover), :hover:not(:active)):not([disabled="true"]),
+#nav-bar[brighttext]:-moz-locale-dir(rtl)[reliefbuttons="true"] :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:last-of-type:-moz-any(:not(:hover), :hover:not(:active)):not([disabled="true"]),
+#nav-bar[brighttext]:-moz-locale-dir(ltr) :-moz-any(#edit-controls, #zoom-controls):hover > .toolbarbutton-1:first-of-type:-moz-any(:not(:hover), :hover:not(:active)):not([disabled="true"]),
+#nav-bar[brighttext]:-moz-locale-dir(rtl) :-moz-any(#edit-controls, #zoom-controls):hover > .toolbarbutton-1:last-of-type:-moz-any(:not(:hover), :hover:not(:active)):not([disabled="true"]) {
   box-shadow: 0 1px 0 rgba(255,255,255,0.1),
               inset 0 1px 0 rgba(255,255,255,0.05),
               inset 1px 0 0 rgba(255,255,255,0.01),
@@ -399,12 +380,12 @@
   box-shadow: inset -1px 0 0 rgba(0,0,0,0.08);
 }
 
-#nav-bar@darkTheme@:-moz-locale-dir(ltr) #back-button[disabled="true"],
-#nav-bar@darkTheme@:-moz-locale-dir(rtl) #forward-button[disabled="true"],
-#nav-bar@darkTheme@:-moz-locale-dir(ltr)[reliefbuttons="true"] :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:not(:last-of-type)[disabled="true"],
-#nav-bar@darkTheme@:-moz-locale-dir(rtl)[reliefbuttons="true"] :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:not(:first-of-type)[disabled="true"],
-#nav-bar@darkTheme@:-moz-locale-dir(ltr) :-moz-any(#edit-controls, #zoom-controls):hover > .toolbarbutton-1:not(:last-of-type)[disabled="true"],
-#nav-bar@darkTheme@:-moz-locale-dir(rtl) :-moz-any(#edit-controls, #zoom-controls):hover > .toolbarbutton-1:not(:first-of-type)[disabled="true"] {
+#nav-bar[brighttext]:-moz-locale-dir(ltr) #back-button[disabled="true"],
+#nav-bar[brighttext]:-moz-locale-dir(rtl) #forward-button[disabled="true"],
+#nav-bar[brighttext]:-moz-locale-dir(ltr)[reliefbuttons="true"] :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:not(:last-of-type)[disabled="true"],
+#nav-bar[brighttext]:-moz-locale-dir(rtl)[reliefbuttons="true"] :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:not(:first-of-type)[disabled="true"],
+#nav-bar[brighttext]:-moz-locale-dir(ltr) :-moz-any(#edit-controls, #zoom-controls):hover > .toolbarbutton-1:not(:last-of-type)[disabled="true"],
+#nav-bar[brighttext]:-moz-locale-dir(rtl) :-moz-any(#edit-controls, #zoom-controls):hover > .toolbarbutton-1:not(:first-of-type)[disabled="true"] {
   box-shadow: 0 1px 0 rgba(255,255,255,0.1),
               inset -1px 0 0 rgba(0,0,0,0.08);
 }
@@ -434,12 +415,12 @@
               inset -1px 0 0 rgba(255,255,255,0.2);
 }
 
-#nav-bar@darkTheme@:-moz-locale-dir(ltr) #forward-button:not(:hover):not(:active):not([disabled="true"]),
-#nav-bar@darkTheme@:-moz-locale-dir(rtl) #back-button:not(:hover):not(:active):not([disabled="true"]),
-#nav-bar@darkTheme@:-moz-locale-dir(ltr)[reliefbuttons="true"] :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:last-of-type:not(:hover):not(:active):not([disabled="true"]),
-#nav-bar@darkTheme@:-moz-locale-dir(rtl)[reliefbuttons="true"] :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:first-of-type:not(:hover):not(:active):not([disabled="true"]),
-#nav-bar@darkTheme@:-moz-locale-dir(ltr) :-moz-any(#edit-controls, #zoom-controls):hover > .toolbarbutton-1:last-of-type:not(:hover):not(:active):not([disabled="true"]),
-#nav-bar@darkTheme@:-moz-locale-dir(rtl) :-moz-any(#edit-controls, #zoom-controls):hover > .toolbarbutton-1:first-of-type:not(:hover):not(:active):not([disabled="true"]) {
+#nav-bar[brighttext]:-moz-locale-dir(ltr) #forward-button:not(:hover):not(:active):not([disabled="true"]),
+#nav-bar[brighttext]:-moz-locale-dir(rtl) #back-button:not(:hover):not(:active):not([disabled="true"]),
+#nav-bar[brighttext]:-moz-locale-dir(ltr)[reliefbuttons="true"] :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:last-of-type:not(:hover):not(:active):not([disabled="true"]),
+#nav-bar[brighttext]:-moz-locale-dir(rtl)[reliefbuttons="true"] :-moz-any(#edit-controls, #zoom-controls) > .toolbarbutton-1:first-of-type:not(:hover):not(:active):not([disabled="true"]),
+#nav-bar[brighttext]:-moz-locale-dir(ltr) :-moz-any(#edit-controls, #zoom-controls):hover > .toolbarbutton-1:last-of-type:not(:hover):not(:active):not([disabled="true"]),
+#nav-bar[brighttext]:-moz-locale-dir(rtl) :-moz-any(#edit-controls, #zoom-controls):hover > .toolbarbutton-1:first-of-type:not(:hover):not(:active):not([disabled="true"]) {
   box-shadow: 0 1px 0 rgba(255,255,255,0.1),
               inset 0 1px 0 rgba(255,255,255,0.05),
               inset 1px 0 0 rgba(255,255,255,0.02),
@@ -532,11 +513,11 @@
   background: hsla(0,0%,100%,.15);
 }
 
-#TabsToolbar@darkTheme@ .toolbarbutton-1:hover,
-#TabsToolbar@darkTheme@ .tabs-newtab-button:hover,
-#TabsToolbar@darkTheme@ .tabs-closebutton:hover,
-#TabsToolbar@darkTheme@ .tabbrowser-arrowscrollbox > .scrollbutton-up:hover,
-#TabsToolbar@darkTheme@ .tabbrowser-arrowscrollbox > .scrollbutton-down:hover {
+#TabsToolbar[brighttext] .toolbarbutton-1:hover,
+#TabsToolbar[brighttext] .tabs-newtab-button:hover,
+#TabsToolbar[brighttext] .tabs-closebutton:hover,
+#TabsToolbar[brighttext] .tabbrowser-arrowscrollbox > .scrollbutton-up:hover,
+#TabsToolbar[brighttext] .tabbrowser-arrowscrollbox > .scrollbutton-down:hover {
   background: #373d3d;
   border-color: #2c3235;
 }
@@ -559,11 +540,11 @@
   background: hsla(0,0%,0%,.15);
 }
 
-#TabsToolbar@darkTheme@ .toolbarbutton-1:-moz-any(:active:hover, [checked="true"]),
-#TabsToolbar@darkTheme@ .tabs-newtab-button:active:hover,
-#TabsToolbar@darkTheme@ .tabs-closebutton:active:hover,
-#TabsToolbar@darkTheme@ .tabbrowser-arrowscrollbox > .scrollbutton-up:active:hover,
-#TabsToolbar@darkTheme@ .tabbrowser-arrowscrollbox > .scrollbutton-down:active:hover {
+#TabsToolbar[brighttext] .toolbarbutton-1:-moz-any(:active:hover, [checked="true"]),
+#TabsToolbar[brighttext] .tabs-newtab-button:active:hover,
+#TabsToolbar[brighttext] .tabs-closebutton:active:hover,
+#TabsToolbar[brighttext] .tabbrowser-arrowscrollbox > .scrollbutton-up:active:hover,
+#TabsToolbar[brighttext] .tabbrowser-arrowscrollbox > .scrollbutton-down:active:hover {
   background: #2d3030;
   border-color: transparent;
 }
@@ -582,9 +563,9 @@
   background: hsla(0,0%,100%,.38);
 }
 
-#TabsToolbar@darkTheme@ .toolbarbutton-1[open="true"],
-#TabsToolbar@darkTheme@ .toolbarbutton-1[open="true"]:active,
-#TabsToolbar@darkTheme@ .toolbarbutton-1[open="true"]:active:hover {
+#TabsToolbar[brighttext] .toolbarbutton-1[open="true"],
+#TabsToolbar[brighttext] .toolbarbutton-1[open="true"]:active,
+#TabsToolbar[brighttext] .toolbarbutton-1[open="true"]:active:hover {
   background: #333333;
   border-color: #333333;
 }

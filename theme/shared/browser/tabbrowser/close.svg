@@ -16,11 +16,11 @@
       /* X Glyph Styles */
 
       .glyphShape-style-background {
-        fill: #2e3436;
+        fill: ButtonText;
       }
 
       .glyphShape-style-default {
-        fill: #2e3436;
+        fill: ButtonText;
       }
 
       .glyphShape-style-default-shadow {
@@ -29,7 +29,7 @@
       }
 
       .glyphShape-style-hover {
-        fill: #2e3436;
+        fill: ButtonText;
       }
 
       .glyphShape-style-hover-shadow {

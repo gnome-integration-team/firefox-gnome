@@ -14,7 +14,7 @@
       <inkscape:grid visible="true" enabled="true" spacingy="1px" spacingx="1px" snapvisiblegridlinesonly="true" type="xygrid" empspacing="2" id="grid6657" />
    </sodipodi:namedview>
    <title id="title6659">Gnome Symbolic Icon Theme</title>
-   <g inkscape:label="actions" transform="translate(-101 -647)" inkscape:groupmode="layer" fill="#2e3436" id="g6661">
+   <g inkscape:label="actions" transform="translate(-101 -647)" inkscape:groupmode="layer" fill="ButtonText" id="g6661">
       <g id="g6537" transform="translate(101,646.97382)">
          <g style="display:inline" id="layer9" transform="translate(-223.0002,-647)" inkscape:label="status" />
          <g id="layer10" transform="translate(-223.0002,-647)" inkscape:label="devices" />
@@ -32,7 +32,7 @@
                <g id="layer12-0" transform="translate(-62,-740)" />
                <g id="layer13-8" transform="translate(-62,-740)" />
                <g style="fill:#bebebe;fill-opacity:1" id="layer14-85" transform="translate(-62,-740)">
-                  <path style="color:#bebebe;fill:#2e3436;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" d="m 858,81.000007 c -2.19262,0 -4.06633,0 -7,0 -0.6325,0.0455 -1,0.468794 -1,1 0.003,4.24996 0,8.777507 0,13.000001 0.057,0.62486 0.34479,0.999992 1,0.999992 3.4,8e-6 6.93755,0.03127 10,8e-6 0.64225,0 1,-0.310956 1,-1 -0.004,-3.25599 0.0152,-6.74439 0,-10 0,-0.53125 -0.56235,-0.937358 -1.0625,-1.437508 -0.80258,-0.78917 -1.55462,-1.60576 -2.375,-2.375 -0.24523,-0.151565 -0.27793,-0.183747 -0.5625,-0.187493 z m -3,5.000001 2,0 0,5 2,0 -3,3 -3,-3 2,0 z" transform="matrix(1,0,0,1.0016368,-786,659.91271)" id="path4387" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccccccccccccccccc" />
+                  <path style="color:#bebebe;fill:ButtonText;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" d="m 858,81.000007 c -2.19262,0 -4.06633,0 -7,0 -0.6325,0.0455 -1,0.468794 -1,1 0.003,4.24996 0,8.777507 0,13.000001 0.057,0.62486 0.34479,0.999992 1,0.999992 3.4,8e-6 6.93755,0.03127 10,8e-6 0.64225,0 1,-0.310956 1,-1 -0.004,-3.25599 0.0152,-6.74439 0,-10 0,-0.53125 -0.56235,-0.937358 -1.0625,-1.437508 -0.80258,-0.78917 -1.55462,-1.60576 -2.375,-2.375 -0.24523,-0.151565 -0.27793,-0.183747 -0.5625,-0.187493 z m -3,5.000001 2,0 0,5 2,0 -3,3 -3,-3 2,0 z" transform="matrix(1,0,0,1.0016368,-786,659.91271)" id="path4387" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccccccccccccccccc" />
                   <g style="fill:#bebebe;fill-opacity:1;display:inline" id="g4956-09" transform="matrix(0,1,-1,0,375.43749,722.03155)" />
                </g>
                <g id="layer15-6" transform="translate(-62,-740)" />

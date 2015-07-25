@@ -7,7 +7,7 @@
 body {
   font: 11pt Cantarell;
   font-weight: normal;
-  color: #2e3436;
+  color: ButtonText;
   margin: 0;
   background-color: #f6f6f4;
   background-image: linear-gradient(to bottom, #eeeeec, #f6f6f4);
@@ -33,7 +33,7 @@ h1 {
   #errorPageContainer {
     background-position: 35px 15px;
     background-repeat: no-repeat;
-    color: #2e3436;
+    color: ButtonText;
     min-width: 280px !important;
     width: 610px !important;
     max-width: 610px !important;

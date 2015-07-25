@@ -13,8 +13,8 @@
 <inkscape:grid visible="true" enabled="true" spacingy="1px" spacingx="1px" snapvisiblegridlinesonly="true" type="xygrid" empspacing="2"/>
 </sodipodi:namedview>
 <title>Gnome Symbolic Icon Theme</title>
-<g inkscape:label="actions" transform="translate(-321 -667)" inkscape:groupmode="layer" fill="#2e3436">
+<g inkscape:label="actions" transform="translate(-321 -667)" inkscape:groupmode="layer" fill="ButtonText">
 <path style="block-progression:tb;color:#000000;text-transform:none;text-indent:0" d="m325 673v2h6.5c0.84027 0 1.5 0.65973 1.5 1.5s-0.65973 1.5-1.5 1.5h-0.5v2h0.5c1.9212 0 3.5-1.5788 3.5-3.5s-1.5788-3.5-3.5-3.5h-6.5z" inkscape:connector-curvature="0"/>
-<path style="block-progression:tb;color:#2e3436;text-transform:none;text-indent:0" inkscape:connector-curvature="0" d="m328 670.02v1c0 0.25689-0.12983 0.52846-0.3125 0.71875l-2.2812 2.2812 2.2812 2.2812c0.18267 0.19029 0.3125 0.46186 0.3125 0.71875v1h-1c-0.30945 0-0.55232-0.0903-0.75-0.28125l-3.6562-3.7188 3.6562-3.7188c0.19768-0.19095 0.44055-0.28125 0.75-0.28125z" sodipodi:nodetypes="ccccccccccccc"/>
+<path style="block-progression:tb;color:ButtonText;text-transform:none;text-indent:0" inkscape:connector-curvature="0" d="m328 670.02v1c0 0.25689-0.12983 0.52846-0.3125 0.71875l-2.2812 2.2812 2.2812 2.2812c0.18267 0.19029 0.3125 0.46186 0.3125 0.71875v1h-1c-0.30945 0-0.55232-0.0903-0.75-0.28125l-3.6562-3.7188 3.6562-3.7188c0.19768-0.19095 0.44055-0.28125 0.75-0.28125z" sodipodi:nodetypes="ccccccccccccc"/>
 </g>
 </svg>

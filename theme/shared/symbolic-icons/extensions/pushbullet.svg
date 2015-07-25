@@ -14,10 +14,10 @@
       </rdf:RDF>
    </metadata>
    <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="g7399">
-      <g transform="translate(-432,-940.3622)" id="g6549" style="fill:#2e3436;fill-opacity:1">
-         <rect transform="translate(-256,652.3622)" y="288" x="688" height="16" width="16" id="rect6547" style="opacity:0;color:black;fill:#2e3436;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-         <path sodipodi:nodetypes="ccsssc" inkscape:connector-curvature="0" id="rect6540" d="m 436,942.3622 0,12 5.15,0 c 3.2409,0 5.85,-2.7591 5.85,-6 0,-3.2409 -2.6091,-6 -5.85,-6 z" style="color:black;fill:#2e3436;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-         <rect transform="translate(-256,652.3622)" y="290" x="689" height="12" width="2" id="rect6545" style="color:black;fill:#2e3436;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <g transform="translate(-432,-940.3622)" id="g6549" style="fill:ButtonText;fill-opacity:1">
+         <rect transform="translate(-256,652.3622)" y="288" x="688" height="16" width="16" id="rect6547" style="opacity:0;color:black;fill:ButtonText;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+         <path sodipodi:nodetypes="ccsssc" inkscape:connector-curvature="0" id="rect6540" d="m 436,942.3622 0,12 5.15,0 c 3.2409,0 5.85,-2.7591 5.85,-6 0,-3.2409 -2.6091,-6 -5.85,-6 z" style="color:black;fill:ButtonText;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+         <rect transform="translate(-256,652.3622)" y="290" x="689" height="12" width="2" id="rect6545" style="color:black;fill:ButtonText;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
       </g>
    </g>
 </svg>
