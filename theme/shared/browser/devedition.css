@@ -21,6 +21,7 @@
   --chrome-nav-bar-separator-color: rgba(0,0,0,.2);
   --chrome-nav-buttons-background: #252C33;
   --chrome-nav-buttons-hover-background: #1B2127;
+  --chrome-nav-bar-controls-border-color: #1D2328;
   --chrome-selection-color: #fff;
   --chrome-selection-background-color: #074D75;
 
@@ -78,11 +79,12 @@
 
   --chrome-background-color: #E3E4E6;
   --chrome-color: #18191a;
-  --chrome-secondary-background-color: #f0f1f2;
+  --chrome-secondary-background-color: #f5f6f7;
   --chrome-navigator-toolbox-separator-color: #cccccc;
   --chrome-nav-bar-separator-color: #B6B6B8;
-  --chrome-nav-buttons-background: #f0f1f2;
+  --chrome-nav-buttons-background: #fcfcfc;
   --chrome-nav-buttons-hover-background: #DADBDB;
+  --chrome-nav-bar-controls-border-color: #ccc;
   --chrome-selection-color: #f5f7fa;
   --chrome-selection-background-color: #4c9ed9;
 
@@ -98,13 +100,13 @@
 
 
   /* Toolbar buttons */
-  --toolbarbutton-hover-background: #D7D7D8;
+  --toolbarbutton-hover-background: #eaeaea;
   --toolbarbutton-hover-boxshadow: none;
   --toolbarbutton-hover-bordercolor: rgba(0,0,0,0.1);
-  --toolbarbutton-active-background: rgba(76,158,217,.5) linear-gradient(rgba(76,158,217,.5), rgba(76,158,217,.5)) border-box
+  --toolbarbutton-active-background: #d7d7d8 border-box;
   --toolbarbutton-active-boxshadow: none;
-  --toolbarbutton-active-bordercolor: rgba(0,0,0,0.3);
-  --toolbarbutton-checkedhover-backgroundcolor: rgba(0,0,0,0.2);
+  --toolbarbutton-active-bordercolor: rgba(0,0,0,0.15);
+  --toolbarbutton-checkedhover-backgroundcolor: #d7d7d8;
   --toolbarbutton-combined-boxshadow: none;
   --toolbarbutton-combined-backgroundimage: linear-gradient(rgba(0,0,0,0.1) 0, rgba(0,0,0,0.1) 18px);
 
@@ -185,6 +187,11 @@
   background-image: none;
 }
 
+.browserContainer > .findbar-textbox {
+  background-color: var(--url-and-searchbar-background-color) !important;
+  color: var(--url-and-searchbar-color);
+}
+
 /* Default findbar text color doesn't look good - Bug 1125677 */
 .browserContainer > findbar .findbar-find-status,
 .browserContainer > findbar .found-matches {
@@ -210,15 +217,18 @@ toolbar[brighttext] #downloads-indicator-counter {
 }
 
 /* URL bar and search bar*/
-/* XXX :root[devtoolstheme="dark"] is a workaround for bug 1096413 on the findbar. */
 #urlbar,
-#navigator-toolbox .searchbar-textbox,
-:root[devtoolstheme="dark"] .browserContainer > findbar .findbar-textbox {
+#navigator-toolbox .searchbar-textbox {
   background-color: var(--url-and-searchbar-background-color) !important;
   background-image: none !important;
-  color: var(--url-and-searchbar-color);
-  border: none !important;
+  color: var(--url-and-searchbar-color) !important;
+  border: 1px solid var(--chrome-nav-bar-controls-border-color) !important;
   box-shadow: none !important;
+}
+
+#urlbar {
+  -moz-border-start: none !important;
+  opacity: 1 !important;
 }
 
 window:not([chromehidden~="toolbar"]) #urlbar-wrapper {
@@ -271,6 +281,7 @@ searchbar:not([oneoffui]) .search-go-button {
 .tabbrowser-tab:not([visuallyselected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
 #tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([visuallyselected]):not([beforehovered]):not(:hover)::after {
   background: var(--tab-separator-color);
+  opacity: 1;
   width: 1px;
   -moz-margin-start: 0;
   -moz-margin-end: -1px;
@@ -354,13 +365,17 @@ searchbar:not([oneoffui]) .search-go-button {
 }
 
 /* Square back and forward buttons */
-#back-button:not(:-moz-lwtheme) > .toolbarbutton-icon,
-#forward-button:not(:-moz-lwtheme) > .toolbarbutton-icon {
+#back-button > .toolbarbutton-icon,
+#forward-button > .toolbarbutton-icon {
   margin: 0;
-  border: none;
-  padding: 2px 6px;
+  border: 1px solid var(--chrome-nav-bar-controls-border-color);
+  padding: 2px 5px;
   background: var(--chrome-nav-buttons-background);
   box-shadow: none !important;
+}
+
+#forward-button > .toolbarbutton-icon {
+  -moz-border-start: none;
 }
 
 /* Override a box shadow for disabled back button */

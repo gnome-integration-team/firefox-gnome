@@ -668,7 +668,8 @@ toolbarbutton[type="socialmark"][cui-areatype="toolbar"] > .toolbarbutton-icon {
 }
 
 /* Help SDK icons fit: */
-toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
+toolbarbutton[constrain-size="true"][cui-areatype="toolbar"] > .toolbarbutton-icon,
+toolbarbutton[constrain-size="true"][cui-areatype="toolbar"] > .toolbarbutton-badge-container > .toolbarbutton-icon {
   width: 16px;
 }
 
@@ -884,11 +885,6 @@ toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
   list-style-image: url(chrome://symbolic-icons/skin/moz-apps.svg);
 }
 
-#webide-button[cui-areatype="toolbar"] {
-  list-style-image: url(chrome://browser/skin/Toolbar.png);
-  -moz-image-region: rect(0, 738px, 18px, 720px);
-}
-
 #loop-button > .toolbarbutton-badge-container {
   list-style-image: url(chrome://browser/skin/loop/toolbar.png);
   -moz-image-region: rect(0, 18px, 18px, 0);
@@ -1002,10 +998,6 @@ toolbarpaletteitem[place="palette"] > #sync-button {
 #feed-button[cui-areatype="menu-panel"],
 toolbarpaletteitem[place="palette"] > #feed-button {
   list-style-image: url(chrome://symbolic-icons/skin/rss.svg);
-}
-
-#feed-button[cui-areatype="menu-panel"][panel-multiview-anchor=true] {
-  -moz-image-region: rect(32px, 416px, 64px, 384px);
 }
 
 #social-share-button[cui-areatype="menu-panel"],
@@ -1139,8 +1131,6 @@ toolbarpaletteitem[place="palette"] > #loop-button > .toolbarbutton-badge-contai
 #loop-button[cui-areatype="menu-panel"]:not([disabled="true"])[state="active"]:-moz-any(:hover,:hover:active,[open]) > .toolbarbutton-badge-container {
   -moz-image-region: rect(0, 224px, 32px, 192px);
 }
-
-/* Wide panel control icons */
 
 #edit-controls:-moz-any(:not([cui-areatype="toolbar"]), [overflowedItem=true]) > #cut-button,
 toolbarpaletteitem[place="palette"] > #edit-controls > #cut-button {
@@ -1602,7 +1592,7 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   border: none;
   background: none;
   min-width: 0;
-  list-style-image: url("chrome://global/skin/icons/question-16.png");
+  list-style-image: url("moz-icon://stock/gtk-dialog-question?size=16");
   cursor: pointer;
 }
 
@@ -1646,6 +1636,10 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   list-style-image: url(chrome://browser/skin/Geolocation-64.png);
 }
 
+.popup-notification-icon[popupid="push"] {
+  list-style-image: url(chrome://browser/skin/Push-64.png);
+}
+
 .popup-notification-icon[popupid="xpinstall-disabled"],
 .popup-notification-icon[popupid="addon-progress"],
 .popup-notification-icon[popupid="addon-install-blocked"],
@@ -1655,16 +1649,6 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   list-style-image: url(chrome://mozapps/skin/extensions/extensionGeneric.png);
   width: 32px;
   height: 32px;
-}
-
-.popup-notification-description[popupid="addon-progress"],
-.popup-notification-description[popupid="addon-install-confirmation"] {
-  width: 27em;
-  max-width: 27em;
-}
-
-.addon-install-confirmation-name {
-  font-weight: bold;
 }
 
 .popup-notification-icon[popupid="click-to-play-plugins"] {
@@ -1712,6 +1696,24 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
 .popup-notification-icon[popupid="webRTC-sharingScreen"],
 .popup-notification-icon[popupid="webRTC-shareScreen"] {
   list-style-image: url(chrome://browser/skin/webRTC-shareScreen-64.png);
+}
+
+@media (min-resolution: 1.1dppx) {
+  .popup-notification-icon[popupid="webRTC-sharingDevices"],
+  .popup-notification-icon[popupid="webRTC-shareDevices"] {
+    list-style-image: url(chrome://browser/skin/webRTC-shareDevice-64@2x.png);
+  }
+
+  .popup-notification-icon[popupid="webRTC-sharingMicrophone"],
+  .popup-notification-icon[popupid="webRTC-shareMicrophone"] {
+    list-style-image: url(chrome://browser/skin/webRTC-shareMicrophone-64@2x.png);
+  }
+
+  .popup-notification-icon[popupid="webRTC-sharingScreen"],
+  .popup-notification-icon[popupid="webRTC-shareScreen"] {
+    list-style-image: url(chrome://browser/skin/webRTC-shareScreen-64@2x.png);
+  }
+
 }
 
 .popup-notification-icon[popupid="pointerLock"] {
@@ -1800,10 +1802,17 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
 }
 
 .notification-anchor-icon {
+  list-style-image: url(moz-icon://stock/gtk-dialog-info?size=16);
   width: 16px;
   height: 16px;
   opacity: 0.5;
   margin: 0 2px;
+}
+
+@media (min-resolution: 1.1dppx) {
+  .notification-anchor-icon {
+    list-style-image: url(moz-icon://stock/gtk-dialog-info?size=dialog);
+  }
 }
 
 .notification-anchor-icon:-moz-focusring {
@@ -1825,6 +1834,10 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   list-style-image: url(chrome://symbolic-icons/skin/geolocation.svg);
 }
 
+#push-notification-icon {
+  list-style-image: url(chrome://browser/skin/Push-16.png);
+}
+
 #addons-notification-icon {
   list-style-image: url(chrome://symbolic-icons/skin/addon.svg);
 }
@@ -1838,6 +1851,7 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   list-style-image: url(chrome://symbolic-icons/skin/key.svg);
 }
 
+.webapps-notification-icon,
 #webapps-notification-icon {
   /** FIXME **/
   /*
@@ -1849,9 +1863,11 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
 #plugins-notification-icon {
   list-style-image: url(chrome://symbolic-icons/skin/plugin.svg);
 }
+
 #plugins-notification-icon.plugin-hidden {
   list-style-image: url(chrome://symbolic-icons/skin/plugin-alert.svg);
 }
+
 #plugins-notification-icon.plugin-blocked {
   list-style-image: url(chrome://symbolic-icons/skin/plugin-blocked.svg);
 }
@@ -1920,14 +1936,105 @@ toolbarpaletteitem[place="palette"] > :-moz-any(#edit-controls, #zoom-controls) 
   list-style-image: url(chrome://browser/skin/webRTC-sharingScreen-16.png);
 }
 
+@media (min-resolution: 1.1dppx) {
+  .webRTC-shareMicrophone-notification-icon,
+  #webRTC-shareMicrophone-notification-icon {
+    list-style-image: url(chrome://browser/skin/webRTC-shareMicrophone-16@2x.png);
+  }
+
+  .webRTC-sharingMicrophone-notification-icon,
+  #webRTC-sharingMicrophone-notification-icon {
+    list-style-image: url(chrome://browser/skin/webRTC-sharingMicrophone-16@2x.png);
+  }
+
+  .webRTC-shareScreen-notification-icon,
+  #webRTC-shareScreen-notification-icon {
+    list-style-image: url(chrome://browser/skin/webRTC-shareScreen-16@2x.png);
+  }
+
+  .webRTC-sharingScreen-notification-icon,
+  #webRTC-sharingScreen-notification-icon {
+    list-style-image: url(chrome://browser/skin/webRTC-sharingScreen-16@2x.png);
+  }
+}
+
 .web-notifications-notification-icon,
 #web-notifications-notification-icon {
   list-style-image: url(chrome://symbolic-icons/skin/notification.svg);
 }
 
+.pointerLock-notification-icon,
 #pointerLock-notification-icon {
   list-style-image: url(chrome://symbolic-icons/skin/pointer-lock.svg);
 }
+
+.translate-notification-icon,
+#translate-notification-icon {
+  list-style-image: url(chrome://browser/skin/translation-16.png);
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+.translated-notification-icon,
+#translated-notification-icon {
+  list-style-image: url(chrome://browser/skin/translation-16.png);
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+.popup-notification-icon[popupid="servicesInstall"] {
+  list-style-image: url(chrome://browser/skin/social/services-64.png);
+}
+#servicesInstall-notification-icon {
+  list-style-image: url(chrome://browser/skin/social/services-16.png);
+}
+
+/* EME notifications */
+
+.popup-notification-icon[popupid="drmContentPlaying"],
+#eme-notification-icon {
+  list-style-image: url("chrome://browser/skin/drm-icon.svg#chains");
+}
+
+#eme-notification-icon:hover:active {
+  list-style-image: url("chrome://browser/skin/drm-icon.svg#chains-pressed");
+}
+
+#eme-notification-icon[firstplay=true] {
+  animation: emeTeachingMoment 0.2s linear 0s 5 normal;
+}
+
+@keyframes emeTeachingMoment {
+  0% {transform: translateX(0); }
+  25% {transform: translateX(3px) }
+  75% {transform: translateX(-3px) }
+  100% { transform: translateX(0); }
+}
+
+.popup-notification-body[popupid="addon-progress"],
+.popup-notification-body[popupid="addon-install-confirmation"] {
+  width: 28em;
+  max-width: 28em;
+}
+
+.addon-install-confirmation-name {
+  font-weight: bold;
+}
+
+/* Notification icon box */
+#notification-popup-box {
+  border-radius: 2.5px 0 0 2.5px;
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
+
+.notification-anchor-icon:-moz-focusring {
+  outline: 1px dotted -moz-DialogText;
+}
+
+.indexedDB-notification-icon,
+#indexedDB-notification-icon {
+  list-style-image: url(moz-icon://stock/gtk-dialog-question?size=16);
+}
+
 #pointerLock-cancel {
   margin: 0px;
 }
@@ -1993,6 +2100,49 @@ notification[value="translation"][state="translating"] .messageImage {
   }
 }
 
+notification[value="translation"] hbox[anonid="details"] {
+  overflow: hidden;
+}
+
+notification[value="translation"] button,
+notification[value="translation"] menulist {
+  -moz-appearance: none;
+  border-width: 1px;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-radius: 2px;
+  min-width: 0;
+  box-shadow: 0 1px rgba(255, 255, 255, 0.5), 0 1px rgba(255, 255, 255, 0.5) inset;
+}
+
+notification[value="translation"] menulist > .menulist-dropmarker {
+  -moz-appearance: toolbarbutton-dropdown;
+  border: none;
+  background-color: transparent;
+  margin: auto;
+  padding: 5px 0;
+}
+
+.translation-menupopup arrowscrollbox {
+  padding-bottom: 0;
+}
+
+.translation-attribution {
+  cursor: pointer;
+  -moz-box-align: end;
+  font-size: small;
+}
+
+.translation-attribution > label {
+  margin-bottom: 0;
+}
+
+.translation-attribution > image {
+  width: 70px;
+}
+
 .translation-welcome-panel {
   width: 305px;
 }
@@ -2019,6 +2169,75 @@ notification[value="translation"][state="translating"] .messageImage {
 }
 
 /* */
+notification[value="translation"] {
+  min-height: 40px;
+}
+
+notification[value="translation"],
+notification[value="translation"] button,
+notification[value="translation"] menulist {
+  min-height: 30px;
+  color: #5A5959;
+}
+
+notification[value="translation"] {
+  background-color: #F2F1F0;
+}
+
+notification[value="translation"] button,
+notification[value="translation"] menulist {
+  -moz-padding-end: 1ch;
+}
+
+notification[value="translation"] menulist {
+  border: 1px solid #C1C1C1;
+  background-color: #FFF;
+}
+
+notification[value="translation"] button {
+  border: 1px solid #C1C1C1;
+  background-color: #F2F1F0;
+}
+
+notification[value="translation"] button,
+notification[value="translation"] menulist,
+notification[value="translation"] menulist > .menulist-label-box {
+  -moz-margin-start: 1ch;
+  -moz-margin-end: 1ch;
+}
+
+notification[value="translation"] button:hover,
+notification[value="translation"] button:active,
+notification[value="translation"] menulist:hover,
+notification[value="translation"] menulist:active {
+  background-color: #E2E1E0;
+}
+
+notification[value="translation"] button[anonid="translate"] {
+  color: #FFF;
+  background-image: linear-gradient(#9FB938, #8DA726);
+  box-shadow: none;
+  border: 1px solid #829C1C;
+}
+
+notification[value="translation"] button[anonid="translate"]:hover,
+notification[value="translation"] button[anonid="translate"]:active {
+  background-image: linear-gradient(#8DA726, #8DA726);
+}
+
+notification[value="translation"] button > .button-box,
+notification[value="translation"] button[type="menu"] > .button-box > .button-menu-dropmarker {
+  padding: 0;
+  -moz-margin-start: 3ch;
+}
+
+notification[value="translation"] button:not([type="menu"]) > .button-box {
+  -moz-margin-end: 3ch;
+}
+
+notification[value="translation"] menulist > .menulist-dropmarker {
+  display: block;
+}
 
 /* Loop/ Hello browser styles */
 
@@ -2506,17 +2725,6 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 #toolbar-menubar:not([autohide="true"]):not(:-moz-lwtheme):-moz-system-metric(menubar-drag),
 #TabsToolbar:not(:-moz-lwtheme):-moz-system-metric(menubar-drag) {
   -moz-binding: url("chrome://browser/content/customizableui/toolbar.xml#toolbar-drag");
-}
-*/
-
-/*
-:root {
-  --tab-toolbar-navbar-overlap: 1px;
-  --tab-min-height: 31px;
-}
-
-#tabbrowser-tabs {
-  min-height: var(--tab-min-height);
 }
 */
 
@@ -3258,7 +3466,7 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   list-style-image: url("chrome://browser/skin/devtools/responsiveui-rotate.png");
 }
 
-@media (min-resolution: 2dppx) {
+@media (min-resolution: 1.25dppx) {
   .devtools-responsiveui-close {
     list-style-image: url("chrome://browser/skin/devtools/close@2x.png");
   }
@@ -3277,7 +3485,7 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   -moz-image-region: rect(0px,32px,16px,16px);
 }
 
-@media (min-resolution: 2dppx) {
+@media (min-resolution: 1.25dppx) {
   .devtools-responsiveui-touch {
     list-style-image: url("chrome://browser/skin/devtools/responsiveui-touch@2x.png");
     -moz-image-region: rect(0px,32px,32px,0px);
@@ -3292,7 +3500,7 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   list-style-image: url("chrome://browser/skin/devtools/responsiveui-screenshot.png");
 }
 
-@media (min-resolution: 2dppx) {
+@media (min-resolution: 1.25dppx) {
   .devtools-responsiveui-screenshot {
     list-style-image: url("chrome://browser/skin/devtools/responsiveui-screenshot@2x.png");
   }
@@ -3424,7 +3632,7 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   border-bottom-left-radius: 12px;
 }
 
-@media (min-resolution: 2dppx) {
+@media (min-resolution: 1.25dppx) {
   .devtools-responsiveui-resizebarV {
     background-image: url("chrome://browser/skin/devtools/responsive-vertical-resizer@2x.png");
   }
@@ -3440,13 +3648,35 @@ toolbarbutton.chevron > .toolbarbutton-icon {
 
 /* Developer toolbar */
 
+/* NOTE: THESE NEED TO STAY IN SYNC WITH LIGHT-THEME.CSS AND DARK-THEME.CSS.
+   We are copy/pasting variables from light-theme and dark-theme,
+   since they aren't loaded in this context (within browser.css). */
+:root[devtoolstheme="light"] #developer-toolbar {
+  --gcli-background-color: #ebeced; /* --theme-tab-toolbar-background */
+  --gcli-input-background: #f0f1f2; /* --theme-toolbar-background */
+  --gcli-input-focused-background: #f7f7f7; /* --theme-sidebar-background */
+  --gcli-input-color: #18191a; /* --theme-body-color */
+  --gcli-border-color: #aaaaaa; /* --theme-splitter-color */
+  --selection-background: #4c9ed9; /* --theme-selection-background */
+  --selection-color: #f5f7fa; /* --theme-selection-color */
+}
+
+:root[devtoolstheme="dark"] #developer-toolbar {
+  --gcli-background-color: #343c45; /* --theme-toolbar-background */
+  --gcli-input-background: rgba(37, 44, 51, .6); /* --theme-tab-toolbar-background */
+  --gcli-input-focused-background: #252c33; /* --theme-tab-toolbar-background */
+  --gcli-input-color: #b6babf; /* --theme-body-color-alt */
+  --gcli-border-color: black; /* --theme-splitter-color */
+  --selection-background: #1d4f73; /* --theme-selection-background */
+  --selection-color: #f5f7fa; /* --theme-selection-color */
+}
+
 #developer-toolbar {
   -moz-appearance: none;
   padding: 0;
   min-height: 32px;
-  background-color: #343C45; /* Toolbars */
-  border-top: 1px solid #060a0d;
-  box-shadow: 0 1px 0 hsla(204,45%,98%,.05) inset, 0 -1px 0 hsla(206,37%,4%,.1) inset;
+  background-color: var(--gcli-background-color);
+  border-top: 1px solid var(--gcli-border-color);
 }
 
 #developer-toolbar > toolbarbutton {
@@ -3460,6 +3690,11 @@ toolbarbutton.chevron > .toolbarbutton-icon {
 
 .developer-toolbar-button > image {
   margin: auto 10px;
+}
+
+:root[devtoolstheme="light"] #developer-toolbar > toolbarbutton:not([checked=true]) > image,
+:root[devtoolstheme="light"] .gclitoolbar-input-node:not([focused=true])::before  {
+  filter: url("chrome://browser/skin/devtools/filters.svg#invert");
 }
 
 .developer-toolbar-button > .toolbarbutton-icon,
@@ -3489,7 +3724,7 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   -moz-image-region: rect(0px, 64px, 16px, 48px);
 }
 
-@media (min-resolution: 2dppx) {
+@media (min-resolution: 1.25dppx) {
   #developer-toolbar-toolbox-button {
     list-style-image: url("chrome://browser/skin/devtools/toggle-tools@2x.png");
     -moz-image-region: rect(0px, 32px, 32px, 0px);
@@ -3518,7 +3753,7 @@ toolbarbutton.chevron > .toolbarbutton-icon {
   opacity: 0.6;
 }
 
-@media (min-resolution: 2dppx) {
+@media (min-resolution: 1.25dppx) {
   #developer-toolbar-closebutton {
     list-style-image: url("chrome://browser/skin/devtools/close@2x.png");
   }
@@ -3569,24 +3804,25 @@ html|*#gcli-output-frame {
   box-shadow: none;
   border-width: 0;
   background-color: transparent;
+  border-radius: 0;
 }
 
 .gclitoolbar-input-node {
   -moz-appearance: none;
-  color: hsl(210,30%,85%);
-  background-color: #242b33;
+  color: var(--gcli-input-color);
+  background-color: var(--gcli-input-background);
   background-repeat: no-repeat;
   background-position: 4px center;
-  box-shadow: 0 1px 1px hsla(206,37%,4%,.2) inset,
-              1px 0 0 hsla(206,37%,4%,.2) inset,
-              -1px 0 0 hsla(206,37%,4%,.2) inset;
+  box-shadow: 1px 0 0 var(--gcli-border-color) inset,
+              -1px 0 0 var(--gcli-border-color) inset;
+
   line-height: 32px;
   outline-style: none;
   padding: 0;
 }
 
 .gclitoolbar-input-node[focused="true"] {
-  background-color: #232e38;
+  background-color: var(--gcli-input-focused-background);
 }
 
 .gclitoolbar-input-node::before {
@@ -3605,15 +3841,15 @@ html|*#gcli-output-frame {
   background-position: -16px center;
 }
 
-@media (min-resolution: 2dppx) {
+@media (min-resolution: 1.25dppx) {
   .gclitoolbar-input-node::before {
     background-image: url("chrome://browser/skin/devtools/commandline-icon@2x.png");
   }
 }
 
 .gclitoolbar-input-node > .textbox-input-box > html|*.textbox-input::-moz-selection {
-  background-color: hsl(210,30%,85%);
-  color: hsl(210,24%,16%);
+  background-color: var(--selection-background);
+  color: var(--selection-color);
   text-shadow: none;
 }
 
@@ -3742,6 +3978,25 @@ notification.pluginVulnerable .messageImage {
 
 .popup-notification-footer[popupid="bad-content"] {
   padding-top: 1em;
+}
+#login-fill-testing {
+  color: #b33;
+  font-weight: bold;
+}
+
+#login-fill-list {
+  border: 1px solid black;
+  max-height: 20em;
+}
+
+.login-hostname {
+  margin: 4px;
+  font-weight: bold;
+}
+
+.login-username {
+  margin: 4px;
+  color: #888;
 }
 
 /*** Status and progress indicator ***/
@@ -3943,12 +4198,6 @@ notification.pluginVulnerable .messageImage {
 
 /* Social toolbar item */
 
-.popup-notification-icon[popupid="servicesInstall"] {
-  list-style-image: url(chrome://browser/skin/social/services-64.png);
-}
-#servicesInstall-notification-icon {
-  list-style-image: url(chrome://browser/skin/social/services-16.png);
-}
 #social-undoactivation-button {
   -moz-margin-start: 0; /* override default label margin to match description margin */
 }
@@ -4237,28 +4486,6 @@ chatbox {
   border-top-right-radius: 2.5px;
 }
 
-/* EME notifications */
-
-.popup-notification-icon[popupid="drmContentPlaying"],
-#eme-notification-icon {
-  list-style-image: url("chrome://browser/skin/drm-icon.svg#chains");
-}
-
-#eme-notification-icon:hover:active {
-  list-style-image: url("chrome://browser/skin/drm-icon.svg#chains-pressed");
-}
-
-#eme-notification-icon[firstplay=true] {
-  animation: emeTeachingMoment 0.2s linear 0s 5 normal;
-}
-
-@keyframes emeTeachingMoment {
-  0% {transform: translateX(0); }
-  25% {transform: translateX(3px) }
-  75% {transform: translateX(-3px) }
-  100% { transform: translateX(0); }
-}
-
 /* Customization mode */
 
 #main-window[customizing] #navigator-toolbox {
@@ -4454,6 +4681,17 @@ chatbox {
 
 #customization-titlebar-visibility-button[checked] {
   -moz-image-region: rect(0, 48px, 24px, 24px);
+}
+
+@media (min-resolution: 1.1dppx) {
+  #customization-titlebar-visibility-button {
+    list-style-image: url("chrome://browser/skin/customizableui/customize-titleBar-toggle@2x.png");
+    -moz-image-region: rect(0, 48px, 48px, 0);
+  }
+
+  #customization-titlebar-visibility-button[checked] {
+    -moz-image-region: rect(0, 96px, 48px, 48px);
+  }
 }
 
 #main-window[customize-entered] #customization-panel-container {
