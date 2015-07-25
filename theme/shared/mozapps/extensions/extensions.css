@@ -9,6 +9,10 @@
   padding: 0;
 }
 
+#nav-header {
+  background: none;
+}
+
 /*** global warnings ***/
 
 .global-warning-text {
@@ -37,7 +41,7 @@
 }
 
 #categories > .category:first-of-type {
-  margin-top: 55px;
+  margin-top: 24px;
 }
 
 .category {
@@ -56,6 +60,7 @@
 
 .category:not([disabled]) {
   height: auto;
+  min-height: 0;
 }
 
 .category[selected] {
@@ -270,6 +275,7 @@
 
 .addon[selected] {
   background: #e3e3e3;
+  -moz-border-start: none;
   -moz-border-top-colors: none;
   border-image: none;
   border-bottom-color: #d1d1d1;
@@ -464,24 +470,30 @@ menuitem.addon-control:hover {
   box-shadow: none;
 }
 
+.addon-control.preferences {
+  list-style-image: url(chrome://symbolic-icons/skin/emblem-system.svg);
+  border-radius: 50%;
+  height: 34px;
+  width: 34px;
+  max-height: 34px;
+  max-width: 34px;
+  padding: 6px;
+  margin-top: -1px;
+  margin-bottom: 0;
+}
+
+.addon-control.preferences > .button-box {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 .addon-control.preferences .button-icon {
   display: -moz-box !important;
-  -moz-margin-end: 0;
+  margin: 0;
 }
 
 .addon-control.preferences .button-text {
   display: none;
-}
-
-.addon-control.preferences {
-  list-style-image: url(chrome://symbolic-icons/skin/emblem-system.svg);
-  border-radius: 50%;
-  min-width: 30px;
-  height: 30px;
-  width: 30px;
-  padding: 6px;
-  margin-top: 0;
-  margin-bottom: 1px;
 }
 
 .addon-control:-moz-any(.enable, .disable) {
