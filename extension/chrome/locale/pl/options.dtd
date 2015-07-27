@@ -2,7 +2,7 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
-<!ENTITY deprecated.label              "Deprecated">
+<!ENTITY deprecated.label              "Przestarzałe">
 
 <!ENTITY reliefbuttons.label           "Wypukłe przyciski na pasku narzędziowym nawigacji">
 <!ENTITY inactivestate.label           "Inny wygląd nieaktywnych okien">
