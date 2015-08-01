@@ -259,16 +259,9 @@ tabbrowser[treestyletab-tabbar-position="right"] .treestyletab-splitter[orient="
 
 /* ====== Tab Notification Bubble ====== */
 
-@treeDefault@ .tabbrowser-tab[titlechanged] .tab-background::after {
-  margin: 10px 12px;
-}
-@treeDefault@[treestyletab-tab-contents-inverted] .tabbrowser-tab[titlechanged] .tab-background::after {
-  margin: 10px 45px;
-}
-@treeDefault@ .tabbrowser-tab[titlechanged][pinned] .tab-background::after {
-  margin: -2px -5px;
-}
-@treeDefault@ .tabbrowser-tab[titlechanged]:hover .tab-background::after {
-  display: none;
+.tab-icon-overlay {
+  margin-top: -10px !important;
+  -moz-margin-start: -12px !important;
+  -moz-margin-end: -4px !important;
 }
 
