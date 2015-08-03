@@ -92,14 +92,15 @@
 .treestyletab-splitter[orient="horizontal"] {
   -moz-appearance: none !important;
   background: #fafafa;
-  border-right: 1px solid #a7aba7;
   min-width: 4px;
   width: 4px;
+  border-right: 1px solid;
+  border-color: #a7aba7 !important;
 }
 
 tabbrowser[treestyletab-tabbar-position="right"] .treestyletab-splitter[orient="horizontal"] {
   border-right: none;
-  border-left: 1px solid #a7aba7
+  border-left: 1px solid;
 }
 
 .treestyletab-splitter[orient="horizontal"]:hover {
@@ -111,6 +112,7 @@ tabbrowser[treestyletab-tabbar-position="right"] .treestyletab-splitter[orient="
 
 #main-window@darkTheme@ .treestyletab-splitter {
   background: #454c4c;
+  border-color: #1e2222 !important;
 }
 
 /* ====== Tab ====== */
@@ -136,7 +138,7 @@ tabbrowser[treestyletab-tabbar-position="right"] .treestyletab-splitter[orient="
   outline-offset: -3px;
 }
 
-@treeDefault@ .tabbrowser-tab[selected]:hover,
+@treeDefault@ .tabbrowser-tab[visuallyselected]:hover,
 @treeDefault@[darkvariant] .tabbrowser-tab:hover,
 @treeDefault@[darkvariant] .tabs-newtab-button:hover, 
 @treeDefault@[darkvariant] #new-tab-button:hover {
@@ -154,7 +156,7 @@ tabbrowser[treestyletab-tabbar-position="right"] .treestyletab-splitter[orient="
   display: none;
 }
 
-@treeDefault@ .tab-content .tab-text {
+@treeDefault@ .tabbrowser-tab:not([pinned]) .tab-content .tab-text {
   margin: 0 4px;
 }
 
@@ -178,12 +180,12 @@ tabbrowser[treestyletab-tabbar-position="right"] .treestyletab-splitter[orient="
 
 /* ====== Close Button ====== */
 
-@treeDefault@ .tab-close-button {
+@treeDefault@[treestyletab-narrow-scrollbar] .tab-close-button {
   display: none;
 }
 
 @treeDefault@ .tabbrowser-tab:hover .tab-close-button,
-@treeDefault@ .tabbrowser-tab[selected] .tab-close-button {
+@treeDefault@ .tabbrowser-tab[visuallyselected] .tab-close-button {
   display: block;
 }
 
@@ -191,7 +193,7 @@ tabbrowser[treestyletab-tabbar-position="right"] .treestyletab-splitter[orient="
   display: none;
 }
 
-@treeDefault@ .tabbrowser-tab[selected] .tab-close-button {
+@treeDefault@ .tabbrowser-tab[visuallyselected] .tab-close-button {
   list-style-image: url(chrome://symbolic-icons/skin/close_white.svg) !important;
 }
 
@@ -200,22 +202,22 @@ tabbrowser[treestyletab-tabbar-position="right"] .treestyletab-splitter[orient="
 @tree@ .tabbrowser-tab:hover .tab-background-start,
 @tree@ .tabbrowser-tab:hover .tab-background-middle,
 @tree@ .tabbrowser-tab:hover .tab-background-end,
-@tree@ .tabbrowser-tab[selected] .tab-background-start,
-@tree@ .tabbrowser-tab[selected] .tab-background-middle,
-@tree@ .tabbrowser-tab[selected] .tab-background-end {
+@tree@ .tabbrowser-tab[visuallyselected] .tab-background-start,
+@tree@ .tabbrowser-tab[visuallyselected] .tab-background-middle,
+@tree@ .tabbrowser-tab[visuallyselected] .tab-background-end {
   display: none;
 }
 
-@treeDefault@ .tabbrowser-tab[selected] {
+@treeDefault@ .tabbrowser-tab[visuallyselected] {
   border-radius: 0;
   background: Highlight;
 }
 
-@treeDefault@[darkvariant] .tabbrowser-tab[selected] {
+@treeDefault@[darkvariant] .tabbrowser-tab[visuallyselected] {
   background: #215d9c;
 }
 
-@treeDefault@ .tabbrowser-tab[selected] > .tab-stack {
+@treeDefault@ .tabbrowser-tab[visuallyselected] > .tab-stack {
   color: HighlightText;
 }
 
@@ -248,20 +250,24 @@ tabbrowser[treestyletab-tabbar-position="right"] .treestyletab-splitter[orient="
 }
 
 /* Selected or Dark theme*/
-@treeDefault@@modernBlack@ .tabbrowser-tab[selected] .treestyletab-twisty,
+@treeDefault@@modernBlack@ .tabbrowser-tab[visuallyselected] .treestyletab-twisty,
 @treeDefault@@modernBlack@[darkvariant] .treestyletab-twisty {
   list-style-image: url("chrome://symbolic-icons/skin/extensions/twisty-adwaita-white-l.png") !important;
 }
-@treeDefault@@modernBlack@[treestyletab-tab-contents-inverted] .tabbrowser-tab[selected] .treestyletab-twisty,
+@treeDefault@@modernBlack@[treestyletab-tab-contents-inverted] .tabbrowser-tab[visuallyselected] .treestyletab-twisty,
 @treeDefault@@modernBlack@[darkvariant][treestyletab-tab-contents-inverted] .treestyletab-twisty {
   list-style-image: url("chrome://symbolic-icons/skin/extensions/twisty-adwaita-white-r.png") !important;
 }
 
 /* ====== Tab Notification Bubble ====== */
 
-.tab-icon-overlay {
+@treeDefault@ .tab-icon-overlay {
   margin-top: -10px !important;
   -moz-margin-start: -12px !important;
   -moz-margin-end: -4px !important;
+}
+@treeDefault@[treestyletab-tab-contents-inverted] .tab-icon-overlay {
+  -moz-margin-start: -16px !important;
+  -moz-margin-end: 0 !important;
 }
 
