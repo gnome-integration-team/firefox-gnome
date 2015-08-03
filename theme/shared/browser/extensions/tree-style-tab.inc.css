@@ -156,26 +156,19 @@ tabbrowser[treestyletab-tabbar-position="right"] .treestyletab-splitter[orient="
   display: none;
 }
 
-@treeDefault@ .tabbrowser-tab:not([pinned]) .tab-content .tab-text {
+@treeDefault@ .tab-content .tab-text {
   margin: 0 4px;
 }
 
 /* Invert indentation (right aligned) */
 @treeDefault@[treestyletab-tab-inverted] .tab-content .tab-text {
-  margin-right: 4px !important;
   text-align: right;
 }
 
 /* Invert content (icon on the right) */
-@treeDefault@[treestyletab-tab-contents-inverted] .tab-content .tab-icon-image {
-  margin-left: 2px;
-}
-,
-@treeDefault@[treestyletab-tab-contents-inverted] .tab-content .tab-text {
-  margin: 0 20px !important;
-}
+@treeDefault@[treestyletab-tab-contents-inverted] .tab-content .tab-icon-image,
 @treeDefault@[treestyletab-tab-contents-inverted] .tab-close-button {
-  margin: 0 4px;
+  margin: 0 2px;
 }
 
 /* ====== Close Button ====== */
@@ -223,20 +216,24 @@ tabbrowser[treestyletab-tabbar-position="right"] .treestyletab-splitter[orient="
 
 /* ====== Pinned Tabs ====== */
 
-@treeDefault@ .tabbrowser-tab[pinned] .tab-icon-image {
-  width: 18px;
-  height: 18px;
-  margin-left: -3px;
-}
-
 @treeDefault@ .tabbrowser-tab[pinned] {
   padding-bottom: 30px;
   padding-right: 30px;
+  min-width: 34px;
+}
+
+@treeDefault@ .tabbrowser-tab[pinned] .tab-stack {
+  margin: 0 4px;
 }
 
 @treeDefault@ .tabbrowser-tab[pinned] .tab-content {
-  padding-left: 0;
-  margin-left: 11px;
+  margin: 0 4px !important;
+}
+
+@treeDefault@ .tabbrowser-tab[pinned] .tab-icon-image {
+  width: 18px;
+  height: 18px;
+  margin: 0 4px !important;
 }
 
 /* ====== Expander Icon ====== */
@@ -263,11 +260,11 @@ tabbrowser[treestyletab-tabbar-position="right"] .treestyletab-splitter[orient="
 
 @treeDefault@ .tab-icon-overlay {
   margin-top: -10px !important;
-  -moz-margin-start: -12px !important;
-  -moz-margin-end: -4px !important;
-}
-@treeDefault@[treestyletab-tab-contents-inverted] .tab-icon-overlay {
   -moz-margin-start: -16px !important;
   -moz-margin-end: 0 !important;
+}
+@treeDefault@[treestyletab-tab-contents-inverted] .tab-icon-overlay {
+  -moz-margin-start: -8px !important;
+  -moz-margin-end: -8px !important;
 }
 
