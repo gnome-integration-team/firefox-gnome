@@ -13,21 +13,6 @@
   background: none;
 }
 
-/*** notification icons ***/
-
-.warning-icon {
-  list-style-image: url(chrome://symbolic-icons/skin/important.svg);
-}
-
-.error-icon {
-  list-style-image: url(chrome://symbolic-icons/skin/error.svg);
-}
-
-.pending-icon,
-.info-icon {
-  list-style-image: url(chrome://symbolic-icons/skin/information.svg);
-}
-
 /*** category selector ***/
 
 #categories {
@@ -70,36 +55,6 @@
 
 .category-icon {
   display: none;
-}
-
-/*** header ***/
-
-#back-btn:-moz-locale-dir(ltr),
-#forward-btn:-moz-locale-dir(rtl) {
-  list-style-image: url(chrome://symbolic-icons/skin/go-previous.svg) !important;
-}
-
-#back-btn:-moz-locale-dir(rtl),
-#forward-btn:-moz-locale-dir(ltr) {
-  list-style-image: url(chrome://symbolic-icons/skin/go-next.svg) !important;
-}
-
-#back-btn[disabled="true"] > .toolbarbutton-icon,
-#forward-btn[disabled="true"] > .toolbarbutton-icon {
-  opacity: 0.5;
-}
-
-#header-utils-btn > .toolbarbutton-icon {
-  list-style-image: url(chrome://symbolic-icons/skin/preferences-system.svg);
- -moz-margin-end: 0;
-}
-
-#header-utils-btn > .toolbarbutton-menu-dropmarker {
-  display: none;
-}
-
-#header-utils-btn:-moz-focusring > .button-box {
-  border: none;
 }
 
 /*** sorters ***/
