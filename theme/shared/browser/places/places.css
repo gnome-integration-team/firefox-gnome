@@ -6,7 +6,7 @@
   -moz-appearance: none;
   background-color: Window;
   border-top: none;
-  border-bottom: 1px solid #a7aba7 !important;
+  border-bottom: 1px solid ThreeDShadow !important;
   -moz-binding: url(chrome://global/content/bindings/general.xml#windowdragbox);
   padding: 4px 3px;
 }

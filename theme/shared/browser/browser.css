@@ -2580,7 +2580,7 @@ toolbar[brighttext] .urlbar-history-dropmarker:not(:hover) {
 
 #sidebar-splitter {
   -moz-appearance: none;
-  border-right: 1px solid #a7aba7;
+  border-right: 1px solid ThreeDShadow;
   min-width: 4px !important;
   width: 4px !important;
 }
