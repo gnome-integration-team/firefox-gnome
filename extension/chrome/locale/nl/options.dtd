@@ -2,13 +2,12 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
-<!ENTITY deprecated.label              "Deprecated">
-
 <!ENTITY reliefbuttons.label           "Geef knoppen op navigatiebalk reliëf">
 <!ENTITY inactivestate.label           "Gebruik andere stijl voor niet-actieve vensters">
 <!ENTITY e10sdisableunderline.label    "Zet onderstrepen van e10s-tabbladen uit">
 <!ENTITY tabboldlabel.label            "Geef tabbladen vetgedrukt label">
 <!ENTITY maxtabwidth.label             "Maximum tabbladbreedte">
+<!ENTITY maxtabwidth.desc              "Stretch option has known issues. Please use it at one's own risk">
 <!ENTITY default.label                 "Default">
 <!ENTITY small.label                   "Klein">
 <!ENTITY normal.label                  "Normaal">

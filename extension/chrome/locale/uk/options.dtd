@@ -2,13 +2,12 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
-<!ENTITY deprecated.label              "Deprecated">
-
 <!ENTITY reliefbuttons.label           "Об’ємний стиль кнопок панелі навігації">
 <!ENTITY inactivestate.label           "Змінювати стиль для неактивних вікон">
 <!ENTITY e10sdisableunderline.label    "Disable the underline on e10s tabs">
 <!ENTITY tabboldlabel.label            "Bold tab label">
 <!ENTITY maxtabwidth.label             "Максимальна ширина вкладок">
+<!ENTITY maxtabwidth.desc              "Stretch option has known issues. Please use it at one's own risk">
 <!ENTITY default.label                 "За замовчуванням">
 <!ENTITY small.label                   "Мала">
 <!ENTITY normal.label                  "Середня">

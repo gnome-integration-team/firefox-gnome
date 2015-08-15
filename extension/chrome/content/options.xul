@@ -17,7 +17,7 @@
            type="bool" title="&tabboldlabel.label;"/>
 
   <setting pref="extensions.gnome-theme-tweak.tab-max-width"
-           type="radio" title="&maxtabwidth.label;">
+           type="radio" title="&maxtabwidth.label;" desc="&maxtabwidth.desc;">
     <radiogroup>
       <vbox>
         <radio value="0" label="&default.label;"/>
@@ -28,8 +28,7 @@
         <radio value="3" label="&large.label;"/>
       </vbox>
       <vbox>
-        <radio value="4" label="&stretch.label;"
-               disabled="true" tooltiptext="&deprecated.label;"/>
+        <radio value="4" label="&stretch.label;"/>
       </vbox>
     </radiogroup>
   </setting>

@@ -2,13 +2,12 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
-<!ENTITY deprecated.label              "Deprecated">
-
 <!ENTITY reliefbuttons.label           "Объемные кнопки на панели навигации">
 <!ENTITY inactivestate.label           "Включить отдельный стиль для неактивных окон">
 <!ENTITY e10sdisableunderline.label    "Удалить подчёркивание для e10s-вкладок">
 <!ENTITY tabboldlabel.label            "Использовать жирный шрифт для заголовка вкладок">
 <!ENTITY maxtabwidth.label             "Максимальная ширина вкладки">
+<!ENTITY maxtabwidth.desc              "Опция «во всю ширину» имеет известные проблемы. Используйте её на свой страх и риск">
 <!ENTITY default.label                 "По умолчанию">
 <!ENTITY small.label                   "Малый">
 <!ENTITY normal.label                  "Нормальный">

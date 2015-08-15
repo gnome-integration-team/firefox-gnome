@@ -2,13 +2,12 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
-<!ENTITY deprecated.label              "Deprecated">
-
 <!ENTITY reliefbuttons.label           "Boutons en relief sur la barre de navigation">
 <!ENTITY inactivestate.label           "Activer un style différent pour les fenêtres non actives">
 <!ENTITY e10sdisableunderline.label    "Désactiver le soulignage des onglets e10s">
 <!ENTITY tabboldlabel.label            "Texte d'onglet en gras">
 <!ENTITY maxtabwidth.label             "Largeur maximale d'onglet">
+<!ENTITY maxtabwidth.desc              "Stretch option has known issues. Please use it at one's own risk">
 <!ENTITY default.label                 "Défaut">
 <!ENTITY small.label                   "Petit">
 <!ENTITY normal.label                  "Normal">
