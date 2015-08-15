@@ -13,4 +13,5 @@
 <!ENTITY normal.label                  "Normal">
 <!ENTITY large.label                   "Groß">
 <!ENTITY stretch.label                 "Ausdehnen">
+<!ENTITY disabletabanimation.label     "Disable tab animation">
 <!ENTITY urlbarhistorydropmarker.label "Dropdown-Pfeil in der Adressleiste ausblenden">

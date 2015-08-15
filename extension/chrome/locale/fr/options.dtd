@@ -13,4 +13,5 @@
 <!ENTITY normal.label                  "Normal">
 <!ENTITY large.label                   "Large">
 <!ENTITY stretch.label                 "Étendre">
+<!ENTITY disabletabanimation.label     "Disable tab animation">
 <!ENTITY urlbarhistorydropmarker.label "Cacher l'historique dans le menu déroulant de la barre d'adresse">

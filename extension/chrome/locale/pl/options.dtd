@@ -13,4 +13,5 @@
 <!ENTITY normal.label                  "Zwykła">
 <!ENTITY large.label                   "Duża">
 <!ENTITY stretch.label                 "Rozciąganie">
+<!ENTITY disabletabanimation.label     "Disable tab animation">
 <!ENTITY urlbarhistorydropmarker.label "Ukrywanie przycisku rozwijania paska adresu">

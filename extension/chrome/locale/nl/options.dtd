@@ -13,4 +13,5 @@
 <!ENTITY normal.label                  "Normaal">
 <!ENTITY large.label                   "Groot">
 <!ENTITY stretch.label                 "Uitrekken">
+<!ENTITY disabletabanimation.label     "Disable tab animation">
 <!ENTITY urlbarhistorydropmarker.label "Verberg de geschiedenisdropmarker in de adresbalk">

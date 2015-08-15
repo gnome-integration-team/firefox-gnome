@@ -13,4 +13,5 @@
 <!ENTITY normal.label                  "Нормальный">
 <!ENTITY large.label                   "Большой">
 <!ENTITY stretch.label                 "Во всю ширину">
+<!ENTITY disabletabanimation.label     "Отключить анимацию вкладок">
 <!ENTITY urlbarhistorydropmarker.label "Скрыть кнопку показа истории в поле ввода адреса">

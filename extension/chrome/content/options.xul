@@ -33,6 +33,8 @@
     </radiogroup>
   </setting>
 
+  <setting pref="browser.tabs.animate" inverted="true"
+           type="bool" title="&disabletabanimation.label;"/>
   <setting pref="extensions.gnome-theme-tweak.urlbar-history-dropmarker"
            type="bool" title="&urlbarhistorydropmarker.label;"/>
 </vbox>

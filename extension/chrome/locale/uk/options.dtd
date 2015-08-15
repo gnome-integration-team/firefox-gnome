@@ -13,4 +13,5 @@
 <!ENTITY normal.label                  "Середня">
 <!ENTITY large.label                   "Велика">
 <!ENTITY stretch.label                 "У всю ширину">
+<!ENTITY disabletabanimation.label     "Disable tab animation">
 <!ENTITY urlbarhistorydropmarker.label "Сховати кнопку випадаючої історії в полі вводу адреси">
