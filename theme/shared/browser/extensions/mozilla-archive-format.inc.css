@@ -1,0 +1,27 @@
+%if 0
+/* Mozilla Archive Format
+ * id: {7f57cf46-4467-4c2d-adfa-0cba7c507e54}
+ * URL: https://addons.mozilla.org/firefox/addon/mozilla-archive-format/ */
+%endif
+
+/* ::::: global/notification.css ::::: */
+
+notification[value="maf-original-info"] .text-link {
+  color: inherit !important;
+  text-decoration: underline;
+}
+
+notification[value="maf-original-info"] .messageImage {
+  background: no-repeat center !important;
+  filter: url(chrome://global/skin/filters.svg#notification-icon);
+  min-width: 16px !important;
+  max-width: 16px !important;
+  min-height: 16px !important;
+  -moz-padding-start: 16px !important;
+  overflow: hidden !important;
+}
+
+notification[value="maf-original-info"] .messageImage {
+  background-image: url(chrome://symbolic-icons/skin/information.svg) !important;
+}
+
