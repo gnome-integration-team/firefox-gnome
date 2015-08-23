@@ -7,11 +7,11 @@
 <!ENTITY e10sdisableunderline.label    "Wyłączenie podkreślenia na kartach e10s">
 <!ENTITY tabboldlabel.label            "Pogrubione etykiety kart">
 <!ENTITY maxtabwidth.label             "Maksymalna szerokość kart">
-<!ENTITY maxtabwidth.desc              "Stretch option has known issues. Please use it at one's own risk">
+<!ENTITY maxtabwidth.desc              "Opcja rozciągania posiada znane błędy. Prosimy używać jej na własne ryzyko">
 <!ENTITY default.label                 "Domyślna">
 <!ENTITY small.label                   "Mała">
 <!ENTITY normal.label                  "Zwykła">
 <!ENTITY large.label                   "Duża">
 <!ENTITY stretch.label                 "Rozciąganie">
-<!ENTITY disabletabanimation.label     "Disable tab animation">
+<!ENTITY disabletabanimation.label     "Wyłączenie animacji kart">
 <!ENTITY urlbarhistorydropmarker.label "Ukrywanie przycisku rozwijania paska adresu">
