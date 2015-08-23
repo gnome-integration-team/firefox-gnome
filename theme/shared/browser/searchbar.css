@@ -145,7 +145,7 @@ menuitem[cmd="cmd_clearhistory"][disabled] {
   -moz-box-align: center;
 }
 
-.search-panel-current-engine:not([showonlysettings]) {
+.search-panel-current-engine {
   border-bottom: 1px solid #ccc;
 }
 
@@ -157,8 +157,17 @@ menuitem[cmd="cmd_clearhistory"][disabled] {
   color: #666;
 }
 
+.search-panel-tree[collapsed=true] + .search-panel-header {
+  border-top: none;
+}
+
+.search-panel-header > label {
+  margin-top: 2px !important;
+  margin-bottom: 1px !important;
+}
+
 .search-panel-current-input > label {
-  margin: 0 0 !important;
+  margin: 2px 0 1px !important;
 }
 
 .search-panel-input-value {
@@ -185,7 +194,7 @@ menuitem[cmd="cmd_clearhistory"][disabled] {
 }
 
 .searchbar-engine-one-off-item:not(.last-row) {
-  box-sizing: padding-box;
+  box-sizing: content-box;
   border-bottom: 1px solid #ccc;
 }
 

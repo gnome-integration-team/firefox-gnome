@@ -1470,6 +1470,11 @@ toolbar[brighttext] .mixedDisplayContentLoadedActiveBlocked > #page-proxy-favico
   opacity: 0.3;
 }
 
+/* FIXME */
+#urlbar[actiontype="searchengine"] > #identity-box > #page-proxy-favicon {
+  list-style-image: url(chrome://global/skin/icons/autocomplete-search.svg#search-icon);
+}
+
 #identity-popup.chromeUI > #identity-popup-container > #identity-popup-icon {
   list-style-image: url("chrome://branding/content/icon64.png");
 }
@@ -1491,106 +1496,6 @@ toolbar[brighttext] .mixedDisplayContentLoadedActiveBlocked > #page-proxy-favico
 
 /* ::::: Identity popup icons ::::: */
 
-#identity-popup-icon {
-  height: 64px;
-  width: 64px;
-  padding: 0;
-  list-style-image: url("chrome://browser/skin/identity.png");
-  -moz-image-region: rect(0px, 64px, 64px, 0px);
-}
-
-#identity-popup.verifiedDomain > #identity-popup-container > #identity-popup-icon {
-  -moz-image-region: rect(64px, 64px, 128px, 0px);
-}
-
-#identity-popup.verifiedIdentity > #identity-popup-container > #identity-popup-icon {
-  -moz-image-region: rect(128px, 64px, 192px, 0px);
-}
-
-/* ::::: Identity popup body text ::::: */
-
-.identity-popup-description {
-  white-space: pre-wrap;
-  -moz-padding-start: 15px;
-  margin: 2px 0 4px;
-}
-
-.identity-popup-label {
-  white-space: pre-wrap;
-  -moz-padding-start: 15px;
-  margin: 0;
-}
-
-#identity-popup-content-host ,
-#identity-popup-content-owner {
-  font-weight: bold;
-  max-width: 300px;
-}
-
-#identity-popup-content-host ,
-#identity-popup-content-box.verifiedIdentity > #identity-popup-content-owner {
-  font-size: 140%;
-}
-
-#identity-popup-content-owner {
-  margin-bottom: 0 !important;
-}
-
-#identity-popup-content-verifier {
-  margin: 4px 0 2px;
-}
-
-#identity-popup-content-box.verifiedIdentity > #identity-popup-encryption ,
-#identity-popup-content-box.verifiedDomain > #identity-popup-encryption {
-  margin-top: 10px;
-  -moz-margin-start: -18px;
-}
-
-#identity-popup-content-box.verifiedIdentity > #identity-popup-encryption > vbox > #identity-popup-encryption-icon ,
-#identity-popup-content-box.verifiedDomain > #identity-popup-encryption > vbox > #identity-popup-encryption-icon {
-  list-style-image: url("chrome://symbolic-icons/skin/secure.svg");
-}
-
-#identity-popup-help-icon {
-  -moz-appearance: none;
-  margin-left: 0px;
-  border: none;
-  background: none;
-  min-width: 0;
-  list-style-image: url("moz-icon://stock/gtk-dialog-question?size=16");
-  cursor: pointer;
-}
-
-#identity-popup-help-icon > .button-box > .button-text {
-  display: none;
-}
-
-#identity-popup-help-icon > .button-box > .button-icon {
-  height: 16px;
-  width: 16px;
-}
-
-#identity-popup-help-icon:-moz-focusring {
-  outline: 1px dotted;
-  outline-offset: 1px;
-}
-
-#identity-popup > .panel-arrowcontainer > .panel-arrowcontent {
-  padding: 0;
-}
-
-#identity-popup-container {
-  min-width: 280px;
-  padding: 10px;
-}
-
-#identity-popup-button-container {
-  background-color: hsla(180,20%,10%,.07);
-  border-top: 1px solid hsla(180,20%,10%,.14);
-  padding: 10px;
-  margin-top: 5px;
-}
-
 .popup-notification-icon {
   width: 64px;
   height: 64px;
@@ -1606,14 +1511,32 @@ toolbar[brighttext] .mixedDisplayContentLoadedActiveBlocked > #page-proxy-favico
 }
 
 .popup-notification-icon[popupid="xpinstall-disabled"],
-.popup-notification-icon[popupid="addon-progress"],
-.popup-notification-icon[popupid="addon-install-blocked"],
-.popup-notification-icon[popupid="addon-install-failed"],
-.popup-notification-icon[popupid="addon-install-confirmation"],
+.popup-notification-icon[popupid="addon-install-blocked"] {
+  list-style-image: url(chrome://browser/skin/addons/addon-install-blocked.svg);
+}
+
+.popup-notification-icon[popupid="addon-progress"] {
+  list-style-image: url(chrome://browser/skin/addons/addon-install-downloading.svg);
+}
+
+.popup-notification-icon[popupid="addon-install-failed"] {
+  list-style-image: url(chrome://browser/skin/addons/addon-install-error.svg);
+}
+
+.popup-notification-icon[popupid="addon-install-confirmation"] {
+  list-style-image: url(chrome://browser/skin/addons/addon-install-confirm.svg);
+}
+
+#addon-install-confirmation-notification[warning] .popup-notification-icon[popupid="addon-install-confirmation"] {
+  list-style-image: url(chrome://browser/skin/addons/addon-install-warning.svg);
+}
+
 .popup-notification-icon[popupid="addon-install-complete"] {
-  list-style-image: url(chrome://mozapps/skin/extensions/extensionGeneric.png);
-  width: 32px;
-  height: 32px;
+  list-style-image: url(chrome://browser/skin/addons/addon-install-installed.svg);
+}
+
+.popup-notification-icon[popupid="addon-install-restart"] {
+  list-style-image: url(chrome://browser/skin/addons/addon-install-restart.svg);
 }
 
 .popup-notification-icon[popupid="click-to-play-plugins"] {
@@ -1685,6 +1608,10 @@ toolbar[brighttext] .mixedDisplayContentLoadedActiveBlocked > #page-proxy-favico
   list-style-image: url(chrome://browser/skin/pointerLock-64.png);
 }
 
+.popup-notification-icon[popupid="servicesInstall"] {
+  list-style-image: url(chrome://browser/skin/social/services-64.png);
+}
+
 .addon-progress-description {
   width: 350px;
   max-width: 350px;
@@ -1732,29 +1659,11 @@ toolbar[brighttext] #notification-popup-box {
   border-image: url(chrome://browser/skin/urlbar-arrow-dark.svg) 0 8 0 0 fill;
 }
 
-#identity-box {
-  position: relative;
-}
-
-#notification-popup-box:not([hidden]) + #identity-box {
-  border-radius: 0;
-}
-
-#identity-box:before {
-  clip-path: url(chrome://browser/skin/identity-box.svg#arrow-clip-path);
-  content: "";
+#notification-popup-box[hidden] {
+  /* Override display:none to make the pluginBlockedNotification animation work
+     when showing the notification repeatedly. */
   display: -moz-box;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 8px;
-  margin: 0;
-  -moz-margin-start: -8px;
-}
-#identity-box:-moz-locale-dir(rtl):before {
-  right: 0;
-  transform: scaleX(-1);
+  visibility: collapse;
 }
 
 #notification-popup-box:-moz-locale-dir(rtl),
@@ -1782,6 +1691,35 @@ toolbar[brighttext] #notification-popup-box {
 
 .notification-anchor-icon:-moz-focusring {
   outline: 1px dotted -moz-DialogText;
+}
+
+toolbar[brighttext] #notification-popup-box .notification-anchor-icon {
+  opacity: 0.4;
+}
+
+#identity-box {
+  position: relative;
+}
+
+#notification-popup-box:not([hidden]) + #identity-box {
+  border-radius: 0;
+}
+
+#identity-box:before {
+  clip-path: url(chrome://browser/skin/identity-box.svg#arrow-clip-path);
+  content: "";
+  display: -moz-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 8px;
+  margin: 0;
+  -moz-margin-start: -8px;
+}
+#identity-box:-moz-locale-dir(rtl):before {
+  right: 0;
+  transform: scaleX(-1);
 }
 
 .default-notification-icon,
@@ -1816,6 +1754,12 @@ toolbar[brighttext] #notification-popup-box {
   list-style-image: url(chrome://symbolic-icons/skin/key.svg);
 }
 
+#login-fill-notification-icon {
+  /* Temporary icon until the capture and fill doorhangers are unified. */
+  list-style-image: url(chrome://symbolic-icons/skin/key.svg);
+  transform: scaleX(-1);
+}
+
 .webapps-notification-icon,
 #webapps-notification-icon {
   /** FIXME **/
@@ -1835,13 +1779,6 @@ toolbar[brighttext] #notification-popup-box {
 
 #plugins-notification-icon.plugin-blocked {
   list-style-image: url(chrome://symbolic-icons/skin/plugin-blocked.svg);
-}
-
-#notification-popup-box[hidden] {
-  /* Override display:none to make the pluginBlockedNotification animation work
-     when showing the notification repeatedly. */
-  display: -moz-box;
-  visibility: collapse;
 }
 
 #plugins-notification-icon.plugin-blocked[showing] {
@@ -1933,21 +1870,6 @@ toolbar[brighttext] #notification-popup-box {
   list-style-image: url(chrome://symbolic-icons/skin/pointer-lock.svg);
 }
 
-.translate-notification-icon,
-#translate-notification-icon {
-  list-style-image: url(chrome://browser/skin/translation-16.png);
-  -moz-image-region: rect(0px, 16px, 16px, 0px);
-}
-
-.translated-notification-icon,
-#translated-notification-icon {
-  list-style-image: url(chrome://browser/skin/translation-16.png);
-  -moz-image-region: rect(0px, 32px, 16px, 16px);
-}
-
-.popup-notification-icon[popupid="servicesInstall"] {
-  list-style-image: url(chrome://browser/skin/social/services-64.png);
-}
 #servicesInstall-notification-icon {
   list-style-image: url(chrome://browser/skin/social/services-16.png);
 }
@@ -1984,24 +1906,9 @@ toolbar[brighttext] #notification-popup-box {
   font-weight: bold;
 }
 
-/* Notification icon box */
-#notification-popup-box {
-  border-radius: 2.5px 0 0 2.5px;
-  margin-top: -1px;
-  margin-bottom: -1px;
-}
-
-.notification-anchor-icon:-moz-focusring {
-  outline: 1px dotted -moz-DialogText;
-}
-
 .indexedDB-notification-icon,
 #indexedDB-notification-icon {
   list-style-image: url(moz-icon://stock/gtk-dialog-question?size=16);
-}
-
-#pointerLock-cancel {
-  margin: 0px;
 }
 
 .translate-notification-icon,
@@ -2013,10 +1920,6 @@ toolbar[brighttext] #notification-popup-box {
 .translated-notification-icon,
 #translated-notification-icon {
   list-style-image: url(chrome://symbolic-icons/skin/translate.svg);
-}
-
-toolbar[brighttext] #notification-popup-box .notification-anchor-icon {
-  opacity: 0.4;
 }
 
 /* Translation infobar */
@@ -3914,6 +3817,41 @@ notification.pluginVulnerable .messageImage {
 .popup-notification-footer[popupid="bad-content"] {
   padding-top: 1em;
 }
+#notification-popup[popupid="login-fill"] > .panel-arrowcontainer > .panel-arrowcontent {
+  /* Since we display a sliding subview that extends to the border, we cannot
+   * keep the default padding of arrow panels. We use the same padding in the
+   * individual content views instead. Since we removed the padding, we also
+   * have to ensure the contents are clipped to the border box. */
+  padding: 0;
+  overflow: hidden;
+}
+
+#login-fill-mainview,
+#login-fill-details {
+  padding: var(--panel-arrowcontent-padding);
+}
+
+#login-fill-doorhanger[inDetailView] > #login-fill-mainview {
+  transform: translateX(-14px);
+}
+
+#login-fill-mainview,
+#login-fill-details {
+  transition: transform 150ms;
+}
+
+#login-fill-doorhanger:not([inDetailView]) > #login-fill-details {
+  transform: translateX(105%);
+}
+
+#login-fill-doorhanger:not([inDetailView]) > #login-fill-details:-moz-locale-dir(rtl) {
+  transform: translateX(-105%);
+}
+
+#login-fill-doorhanger[inDetailView] > #login-fill-clickcapturer {
+  background-color: hsla(180,20%,10%,.1);
+}
+
 #login-fill-testing {
   color: #b33;
   font-weight: bold;
@@ -3924,14 +3862,39 @@ notification.pluginVulnerable .messageImage {
   max-height: 20em;
 }
 
+.login-fill-item[disabled] {
+  color: #888;
+  background-color: #fff;
+}
+
+.login-fill-item[disabled][selected] {
+  background-color: #eef;
+}
+
 .login-hostname {
   margin: 4px;
   font-weight: bold;
 }
 
+.login-fill-item.different-hostname > .login-hostname {
+  color: #888;
+  font-style: italic;
+}
+
 .login-username {
   margin: 4px;
   color: #888;
+}
+
+#login-fill-details {
+  padding: 4px;
+  background: var(--panel-arrowcontent-background);
+  color: var(--panel-arrowcontent-color);
+  background-clip: padding-box;
+  border-left: 1px solid hsla(180,20%,10%,.3);
+  box-shadow: 0 3px 5px hsla(180,20%,10%,.1),
+              0 0 7px hsla(180,20%,10%,.1);
+  -moz-margin-start: 38px;
 }
 
 /*** Status and progress indicator ***/
@@ -4116,10 +4079,6 @@ toolbar[brighttext] #downloads-indicator-progress > .progress-remainder {
 }
 
 /* Social toolbar item */
-
-#social-undoactivation-button {
-  -moz-margin-start: 0; /* override default label margin to match description margin */
-}
 
 .social-activation-icon {
   width: auto;
@@ -4350,7 +4309,6 @@ chatbox[dark=true] > .chat-titlebar > hbox > .chat-title {
 
 .chatbar-innerbox {
   background: transparent;
-  margin: -285px 0 0;
   overflow: hidden;
 }
 
@@ -5320,6 +5278,18 @@ notification.heartbeat {
 
 #context-bookmarkpage[disabled=true] {
   list-style-image: url("chrome://browser/skin/content-contextmenu.svg#bookmark-disabled");
+}
+
+#context-bookmarkpage[starred=true] {
+  list-style-image: url("chrome://browser/skin/content-contextmenu.svg#bookmarked");
+}
+
+#context-bookmarkpage[starred=true][_moz-menuactive=true] {
+  list-style-image: url("chrome://browser/skin/content-contextmenu.svg#bookmarked-active");
+}
+
+#context-bookmarkpage[starred=true][disabled=true] {
+  list-style-image: url("chrome://browser/skin/content-contextmenu.svg#bookmarked-disabled");
 }
 
 #context-back:-moz-locale-dir(rtl),

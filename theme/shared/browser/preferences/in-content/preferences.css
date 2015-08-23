@@ -170,7 +170,7 @@ description > html|a {
   border-radius: 50%;
   border-width: 5px;
   border-color: red;
-  background-image: url(chrome://browser/skin/preferences/in-content/default-profile-image.svg);
+  background-image: url(chrome://browser/skin/fxa/default-profile-image.svg);
   background-size: contain;
   cursor: pointer;
   -moz-margin-end: 15px;
@@ -201,13 +201,6 @@ description > html|a {
   -moz-margin-end: 4px; /* add the 4px end-margin of other elements */
 }
 
-<<<<<<< HEAD
-#encryptionPanel {
-  margin-top: 10px;
-}
-
-=======
->>>>>>> 3ba06d9... Upgrade to Firefox 38.0.1
 #telemetryLearnMore,
 #FHRLearnMore,
 #crashReporterLearnMore {
@@ -253,16 +246,11 @@ description > html|a {
   background-clip: content-box;
   color: #424e5a;
   font-size: 14px;
-<<<<<<< HEAD
-  border-radius: 2.5px;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
-=======
   /* `transparent` will use the dialogText color in high-contrast themes and
      when page colors are disabled */
   border: 1px solid transparent;
   border-radius: 3.5px;
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.3);
->>>>>>> e1a3751... Rebase on 37.0.1 version
   display: -moz-box;
   margin: 0;
   padding: 0;
@@ -283,15 +271,17 @@ description > html|a {
 
 #dialogTitle {
   text-align: center;
+  -moz-user-select: none;
 }
 
 .close-icon {
   background-color: transparent !important;
   border: none;
   box-shadow: none;
-  height: 18px;
   padding: 0;
-  min-width: 18px;
+  height: auto;
+  min-height: 16px;
+  min-width: 0;
 }
 
 #dialogBox > .groupbox-body {
@@ -346,6 +336,19 @@ description > html|a {
 @keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
+}
+
+/**
+ * Sync
+ */
+
+#fxaDeviceName {
+  margin: 14px 0px;
+}
+
+#fxaSyncComputerName.plain {
+  background-color: transparent;
+  opacity: 1;
 }
 
 .treecol-sortdirection {

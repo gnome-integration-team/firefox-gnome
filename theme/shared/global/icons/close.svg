@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<svg version="1.1"
-     id="icon-close"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     x="0px"
-     y="0px"
-     width="96px"
-     height="16px"
-     viewBox="0 0 96 16">
-
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96px" height="16px" viewBox="0 0 96 16">
   <defs>
-    <style type="text/css"><![CDATA[
+    <style>
       /* X Glyph Styles */
-
       .glyphShape-style-foreground {
         fill: #888a85;
       }
-
       .glyphShape-style-background {
         fill: #fff;
       }
-
       .glyphShape-style-hover {
         fill: #fff;
       }
@@ -29,23 +19,19 @@
       .glyphShape-style-hover-active {
         fill: #fff;
       }
-
       .glyphShape-style-LWT-bright {
         fill: #fff;
         fill-opacity: .8;
       }
-
       .glyphShape-style-LWT-dark {
         fill: #000;
         fill-opacity: .8;
       }
 
       /* Close Button Background Styles */
-
       .icon-background-hover {
         fill: #babdb6;
       }
-
       .icon-background-hover-active {
         fill: #888a85;
       }
@@ -54,31 +40,24 @@
     <path id="glyphShape-close" d="m4,4l1,0c0.010368,-0.000122 0.02079,-0.000488 0.03125,0c0.254951,0.01123 0.509869,0.128601 0.6875,0.3125l2.280998,2.280029l2.312,-2.280029c0.266003,-0.22998 0.447002,-0.299988 0.688,-0.309998l1,0l0,1c0,0.286438 -0.03434,0.550659 -0.25,0.75l-2.281197,2.281189l2.25,2.25c0.188,0.190002 0.280998,0.450012 0.280998,0.720032l0,1l-1,0c-0.265301,-0.000061 -0.53059,-0.09314 -0.71875,-0.28125l-2.280998,-2.280029l-2.281002,2.280029c-0.188,0.190002 -0.453999,0.279968 -0.718998,0.279968l-1,0l0,-1c0,-0.265259 0.09306,-0.530579 0.28125,-0.71875l2.281197,-2.25l-2.280998,-2.279968c-0.209999,-0.190002 -0.303001,-0.470032 -0.280998,-0.75l0,-1l-0.000252,-0.003723z"/>
     <circle id="glyphShape-background" cx="8" cy="8" r="8" />
   </defs>
-
   <g id="icon-closeForeground-default">
     <use xlink:href="#glyphShape-close" class="glyphShape-style-foreground" />
   </g>
-
   <g id="icon-close-hover" transform="translate(16)">
     <use xlink:href="#glyphShape-background" class="icon-background-hover" />
     <use xlink:href="#glyphShape-close" class="glyphShape-style-hover" />
   </g>
-
   <g id="icon-close-hover-active" transform="translate(32)">
     <use xlink:href="#glyphShape-background" class="icon-background-hover-active" />
     <use xlink:href="#glyphShape-close" class="glyphShape-style-hover-active" />
   </g>
-
   <g id="icon-closeBackground-default" transform="translate(48)">
     <use xlink:href="#glyphShape-close" class="glyphShape-style-background" />
   </g>
-
   <g id="icon-close-LWT-bright" transform="translate(64)">
     <use xlink:href="#glyphShape-close" class="glyphShape-style-LWT-bright" />
   </g>
-
   <g id="icon-close-LWT-dark" transform="translate(80)">
     <use xlink:href="#glyphShape-close" class="glyphShape-style-LWT-dark" />
   </g>
-
 </svg>

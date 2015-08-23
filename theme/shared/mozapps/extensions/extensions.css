@@ -32,6 +32,10 @@
   min-height: 0;
 }
 
+.category[selected="true"]:hover {
+  background-color: var(--in-content-category-background-active);
+}
+
 @media (max-width: 800px) {
   .category-name {
     display: -moz-box;
