@@ -28,6 +28,8 @@
   --tab-hover-bottom-line-color: #a1a1a1;
   --tab-selected-background-color: #e1e1e1;
   --tab-selected-bottom-line-color: Highlight;
+
+  --panel-separator-color: hsla(210,4%,10%,.14); /* ThreeDShadow */
 }
 
 #main-window:-moz-lwtheme {
@@ -1511,7 +1513,8 @@ toolbar[brighttext] .mixedDisplayContentLoadedActiveBlocked > #page-proxy-favico
 }
 
 .popup-notification-icon[popupid="xpinstall-disabled"],
-.popup-notification-icon[popupid="addon-install-blocked"] {
+.popup-notification-icon[popupid="addon-install-blocked"],
+.popup-notification-icon[popupid="addon-install-origin-blocked"] {
   list-style-image: url(chrome://browser/skin/addons/addon-install-blocked.svg);
 }
 
