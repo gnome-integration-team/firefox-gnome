@@ -30,6 +30,10 @@
   --tab-selected-bottom-line-color: Highlight;
 
   --panel-separator-color: hsla(210,4%,10%,.14); /* ThreeDShadow */
+
+  /*
+  --urlbar-separator-color: hsla(0,0%,16%,.2);
+  */
 }
 
 #main-window:-moz-lwtheme {
