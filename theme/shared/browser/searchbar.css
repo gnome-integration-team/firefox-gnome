@@ -9,11 +9,6 @@
   padding: 1px;
 }
 
-.searchbar-textbox {
-  min-height: 22px;
-  background-color: -moz-field;
-}
-
 .autocomplete-textbox-container {
   -moz-box-align: stretch;
 }

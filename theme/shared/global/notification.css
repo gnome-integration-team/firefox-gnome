@@ -14,10 +14,21 @@ notification {
   color: white;
   font-weight: bold;
   text-shadow: 0px 1px hsla(0,0%,0%,.2);
+/*
+  color: -moz-gtk-info-bar-text;
+  background-color: InfoBackground;
+  -moz-appearance: -moz-gtk-info-bar;
+  text-shadow: none;
+*/
 }
 
 notification[type="info"] {
   background-color: #4a90d9;
+/*
+  color: -moz-DialogText;
+  background-color: -moz-Dialog;
+  -moz-appearance: none;
+*/
 }
 
 notification[type="critical"] {
