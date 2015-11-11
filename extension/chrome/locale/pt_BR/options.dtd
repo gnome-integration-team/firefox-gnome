@@ -1,0 +1,17 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY reliefbuttons.label           "Botões em relevo na barra de navegação">
+<!ENTITY inactivestate.label           "Ativar estilos diferentes para as janelas sem foco">
+<!ENTITY e10sdisableunderline.label    "Desativar o sublinhado em abas e10s">
+<!ENTITY tabboldlabel.label            "Negrito no rótulo da aba">
+<!ENTITY maxtabwidth.label             "Largura máxima da aba">
+<!ENTITY maxtabwidth.desc              "A opção esticado possui problemas conhecidos. Por favor, use-a por conta própria">
+<!ENTITY default.label                 "Padrão">
+<!ENTITY small.label                   "Pequeno">
+<!ENTITY normal.label                  "Normal">
+<!ENTITY large.label                   "Grande">
+<!ENTITY stretch.label                 "Esticado">
+<!ENTITY disabletabanimation.label     "Desabilitar aba de animação">
+<!ENTITY urlbarhistorydropmarker.label "Esconder o histórico do dropmaker na barra de URL">
