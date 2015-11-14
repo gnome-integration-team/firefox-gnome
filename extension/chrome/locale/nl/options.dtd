@@ -7,11 +7,11 @@
 <!ENTITY e10sdisableunderline.label    "Zet onderstrepen van e10s-tabbladen uit">
 <!ENTITY tabboldlabel.label            "Geef tabbladen vetgedrukt label">
 <!ENTITY maxtabwidth.label             "Maximum tabbladbreedte">
-<!ENTITY maxtabwidth.desc              "Stretch option has known issues. Please use it at one's own risk">
+<!ENTITY maxtabwidth.desc              "Optie 'Uitrekken' kan voor problemen zorgen. Gebruik op eigen risico">
 <!ENTITY default.label                 "Default">
 <!ENTITY small.label                   "Klein">
 <!ENTITY normal.label                  "Normaal">
 <!ENTITY large.label                   "Groot">
 <!ENTITY stretch.label                 "Uitrekken">
-<!ENTITY disabletabanimation.label     "Disable tab animation">
+<!ENTITY disabletabanimation.label     "Schakel tabbladanimatie uit">
 <!ENTITY urlbarhistorydropmarker.label "Verberg de geschiedenisdropmarker in de adresbalk">
