@@ -201,6 +201,8 @@ xul|tab {
   color: var(--in-content-tab-color);
   background-color: var(--in-content-page-background);
   border-width: 0;
+  /* !important overrides tabbox.css RTL and visuallyselected rules */
+  border-radius: 0 !important;
   transition: background-color 50ms ease 0s;
 }
 
@@ -231,7 +233,7 @@ html|button {
 xul|colorpicker[type="button"],
 xul|menulist {
   -moz-appearance: none;
-  height: 30px;
+  min-height: 30px;
   color: var(--in-content-text-color);
   border: 1px solid var(--in-content-box-border-color);
   -moz-border-top-colors: none !important;
@@ -345,6 +347,7 @@ xul|*.help-button > xul|*.button-box > xul|*.button-text {
 }
 
 xul|*.spinbuttons-button {
+  min-height: initial;
   -moz-margin-start: 10px !important;
   -moz-margin-end: 2px !important;
 }
@@ -519,7 +522,7 @@ xul|*.inline-link:-moz-focusring {
 
 /* Hide the actual checkbox */
 html|input[type="checkbox"] {
-  opacity: 0;
+  visibility: hidden;
   position: absolute;
 }
 
@@ -617,7 +620,7 @@ xul|*.radio-label-box {
 
 /* Category List */
 
-xul|*#categories {
+*|*#categories {
   -moz-appearance: none;
   background-color: var(--in-content-category-background);
   padding-top: 55px;
@@ -625,7 +628,7 @@ xul|*#categories {
   border-width: 0;
 }
 
-xul|*.category {
+*|*.category {
   -moz-appearance: none;
   color: var(--in-content-category-text);
   margin: 8px 0 0 0;
@@ -636,14 +639,14 @@ xul|*.category {
   -moz-padding-end: 42px;
 }
 
-xul|*.category[selected] {
+*|*.category[selected] {
   background: var(--in-content-category-background-active);
   background-clip: padding-box;
   border-color: #bdc9e8;
   color: var(--in-content-category-text-selected);
 }
 
-xul|*#categories[keyboard-navigation="true"]:-moz-focusring > xul|*.category[current] {
+*|*#categories[keyboard-navigation="true"]:-moz-focusring > *|*.category[current] {
   outline: var(--in-content-category-border-focus);
   outline-offset: -5px;
 }

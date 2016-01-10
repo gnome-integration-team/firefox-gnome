@@ -19,25 +19,7 @@
   padding-bottom: 3px;
 }
 
-.searchbar-engine-menuitem[selected="true"] > .menu-iconic-text {
-  font-weight: bold;
-}
-
 /* Engine button */
-
-.searchbar-engine-button {
-  -moz-appearance: none;
-  min-width: 0;
-  margin: 0;
-  border: 0;
-  border-radius: 0;
-  -moz-box-align: center;
-  background: transparent;
-  box-shadow: none;
-  height: 26px;
-  min-width: 26px;
-  padding: 5px;
-}
 
 .searchbar-engine-image {
   height: 16px;
@@ -260,10 +242,6 @@ menuitem[cmd="cmd_clearhistory"][disabled] {
   list-style-image: url("chrome://browser/skin/search-engine-placeholder.png");
 }
 
-searchbar[oneoffui] .searchbar-engine-button {
-  display: none;
-}
-
 .search-panel-tree > .autocomplete-treebody::-moz-tree-cell {
   border-top: none !important;
 }
@@ -284,10 +262,6 @@ searchbar[oneoffui] .searchbar-engine-button {
 
 .search-panel-tree > .autocomplete-treebody::-moz-tree-image(fromhistory, selected) {
   list-style-image: url("chrome://browser/skin/search-history-icon.svg#search-history-icon-active");
-}
-
-searchbar[oneoffui] .searchbar-engine-image {
-  -moz-margin-start: -1px;
 }
 
 .search-setting-button {
