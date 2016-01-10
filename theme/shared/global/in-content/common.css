@@ -11,7 +11,7 @@
   --in-content-text-color: #333;
   --in-content-selected-text: #fff;
   --in-content-header-border-color: #c8c8c8;
-  --in-content-box-background: #fff;
+  --in-content-box-background: #fbfbfb;
   --in-content-box-background-odd: #f3f6fa;
   --in-content-box-background-hover: #ebebeb;
   --in-content-box-background-active: #dadada;
@@ -241,7 +241,7 @@ xul|menulist {
   -moz-border-bottom-colors: none !important;
   -moz-border-left-colors: none !important;
   border-radius: 2px;
-  background-color: var(--in-content-page-background);
+  background-color: var(--in-content-box-background);
 }
 
 html|button:enabled:hover,
