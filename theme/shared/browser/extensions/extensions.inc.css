@@ -43,6 +43,9 @@
 % M
 %include mozilla-archive-format.inc.css
 
+% N
+%include noscript.inc.css
+
 % O
 %include omnibar.inc.css
 
