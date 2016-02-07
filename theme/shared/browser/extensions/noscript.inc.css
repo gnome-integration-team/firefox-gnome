@@ -1,0 +1,30 @@
+%if 0
+/* NoScript
+ * id: {73a6fe31-595d-460b-a920-fcc0f8843232}
+ * URL: https://addons.mozilla.org/firefox/addon/noscript/ */
+%endif
+
+/* Blocked */
+
+.noscript-no,
+#noscript-tbb.noscript-no,
+#noscript-statusIcon.noscript-no,
+.noscript-forbid {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/noscript-blocked.svg) !important;
+}
+
+/* Partially blocked */
+.noscript-prt,
+#noscript-tbb.noscript-prt,
+#noscript-statusIcon.noscript-prt {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/noscript-partial.svg) !important;
+}
+
+/* Allowed */
+.noscript-yes,
+#noscript-tbb.noscript-yes,
+#noscript-statusIcon.noscript-yes,
+.noscript-allow,
+.noscript-allow-from {
+  list-style-image: url(chrome://symbolic-icons/skin/extensions/noscript-allowed.svg) !important;
+}
