@@ -2,19 +2,15 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-html {
-}
+@import url("chrome://global/skin/in-content/common.css");
 
 body {
-  margin: 0;
-  padding: 0;
-  font: 11pt cantarell;
-  color: ButtonText;
-  padding: 20px 20px 0 20px;
-  background-color: #f6f6f4;
-  background-image: linear-gradient(to bottom, #eeeeec, #f6f6f4);
-  background-size: 100% 5em;
-  background-repeat: no-repeat;
+  display: flex;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 0 48px;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
@@ -75,25 +71,30 @@ p > b {
   text-shadow: none;
 }
 
-.expander > button {
-  -moz-padding-start: 20px;
-  background: url(chrome://symbolic-icons/skin/go-down.svg) left center no-repeat;
-  border: none;
-  font: inherit;
-  color: inherit;
-  cursor: pointer;
+#buttonContainer {
+  display: flex;
+  flex-flow: row wrap;
 }
 
-.expander > button:-moz-dir(rtl) {
-  background-position: right center;
+#buttonSpacer {
+  flex: 1;
 }
 
-.expander[collapsed] > button {
-  background-image: url(chrome://symbolic-icons/skin/go-next.svg)
+/* Advanced section is hidden via inline styles until the link is clicked */
+#advancedPanel {
+  background-color: white;
+  color: var(--in-content-text-color);
+  border: 1px lightgray solid;
+  /* Don't use top padding because the default p style has top padding, and it
+   * makes the overall div look uneven */
+  padding: 0 12px 10px;
+  margin-top: 10px;
+  box-shadow: 0 0 4px #ddd;
+  font-size: 0.9em;
 }
 
-.expander[collapsed] > button:-moz-dir(rtl) {
-  background-image: url(chrome://symbolic-icons/skin/go-previous.svg)
+.hostname {
+  font-weight: bold;
 }
 
 #exceptionDialogButton,

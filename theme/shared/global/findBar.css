@@ -25,6 +25,11 @@ findbar[hidden] {
   transition-delay: 0s, 0s, 150ms;
 }
 
+findbar[noanim] {
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+}
+
 /* Buttons */
 
 findbar toolbarbutton {
