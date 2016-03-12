@@ -17,7 +17,6 @@ notification {
 /*
   color: -moz-gtk-info-bar-text;
   -moz-appearance: -moz-gtk-info-bar;
-  /* We need the background-color set explicitly for gtk2 */
   background-color: InfoBackground;
   text-shadow: none;
 */
