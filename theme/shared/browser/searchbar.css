@@ -79,7 +79,7 @@ toolbar[brighttext] .searchbar-search-button-container:active {
 /* Search go button */
 
 .search-go-button {
-  list-style-image: url(chrome://symbolic-icons/skin/edit-find.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/go-next.svg);
   height: 26px;
   min-width: 26px;
   padding: 5px;
