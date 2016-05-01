@@ -12,7 +12,7 @@
 /* ::::: scrollbar ::::: */
 
 scrollbar {
-  -moz-appearance: scrollbartrack-horizontal;
+  -moz-appearance: scrollbar-horizontal;
   -moz-binding: url("chrome://global/content/bindings/scrollbar.xml#scrollbar");
   cursor: default;
   background: url("chrome://global/skin/scrollbar/slider.gif") scrollbar;
@@ -32,7 +32,7 @@ scrollbar[root="true"] {
 }
 
 scrollbar[orient="vertical"] {
-  -moz-appearance: scrollbartrack-vertical;
+   -moz-appearance: scrollbar-vertical;
 }
 
 /* ::::: borders for thumb and buttons ::::: */
@@ -45,6 +45,15 @@ scrollbarbutton {
   -moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
   -moz-border-left-colors: ThreeDLightShadow ThreeDHighlight;
   background-color: -moz-Dialog;
+}
+
+/* ::::: slider - a thumb is inside  ::::: */
+slider {
+  -moz-appearance: scrollbartrack-horizontal;
+}
+
+slider[orient="vertical"] {
+  -moz-appearance: scrollbartrack-vertical;
 }
 
 /* ::::: thumb (horizontal) ::::: */
@@ -132,7 +141,7 @@ scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"][disabled="true"
   /* ::::: scrollbar ::::: */
 
   html|div scrollbar {
-    -moz-appearance: scrollbartrack-horizontal;
+    -moz-appearance: scrollbar-horizontal;
     -moz-binding: url("chrome://global/content/bindings/scrollbar.xml#scrollbar");
     cursor: default;
     background: url("chrome://global/skin/scrollbar/slider.gif") scrollbar;
@@ -140,7 +149,7 @@ scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"][disabled="true"
 
   html|div scrollbar[orient="vertical"] 
   {
-     -moz-appearance: scrollbartrack-vertical;
+     -moz-appearance: scrollbar-vertical;
   }
 
   /* ::::: borders for thumb and buttons ::::: */

@@ -122,3 +122,10 @@ p > b {
 #getMeOutOfHereButton {
   -moz-margin-start: 17px;
 }
+
+#reportCertificateErrorRetry,
+#certificateErrorReporting,
+#reportSendingMessage,
+#reportSentMessage {
+  display: none;
+}
