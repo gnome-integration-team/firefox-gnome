@@ -1,0 +1,13 @@
+%if 0
+/* Classic Theme Restorer
+ * id: {ClassicThemeRestorer@ArisT2Noia4dev}
+ * URL: https://addons.mozilla.org/en-US/firefox/addon/classicthemerestorer */
+%endif
+
+#ctraddon_stop-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://symbolic-icons/skin/process-stop.svg);
+}
+
+#ctraddon_reload-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://symbolic-icons/skin/view-refresh.svg);
+}

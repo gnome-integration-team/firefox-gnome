@@ -10,6 +10,7 @@
 %include all-in-one-sidebar.inc.css
 
 % C
+%include classic-theme-restorer.inc.css
 %include clearly.inc.css
 %include colorzilla.inc.css
 
