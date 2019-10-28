@@ -1,32 +1,7 @@
-# GNOME theme for Firefox
+# Notice
 
-The latest stable version is always available from [Mozilla's Add-ons](https://addons.mozilla.org/firefox/addon/adwaita/).
+Due to fundamental changes in Firefox in 2017, theme support was dropped from the browser. Only "lightweight" wallpaper & color themes remain.
 
-Bleeding-edge releases are usually made available on [Launchpad](https://launchpad.net/gnome-integration/firefox-gnome/firefox-gnome-releases) and early-access builds are also on [our GitHub releases page](https://github.com/gnome-integration-team/firefox-gnome/releases).
+Reskinning Firefox now requires local CSS overrides.
 
-List of current issues is available at our [bug tracker](https://github.com/gnome-integration-team/firefox-gnome/issues).
-
-Help & feedback are both appreciated! ;-)
-
-## How to build
-
-You can use __make-xpi.py__ script to build xpi and clean temporary files:
-
-```Bash
-$ ./make-xpi.py [TARGET]
-$ python3 make-xpi.py [TARGET]
-```
-
-Available targets: _all_, _theme_, _extension_ and _clean_. Default is _all_.
-
-For more details please check [this page](https://github.com/seleznev/firefox-complete-theme-build-system#firefox-complete-theme-build-system).
-
-## Screenshots
-
-Default:
-
-![Screenshot: default](screenshots/screenshot-theme.png)
-
-With some tweaks, made available by [GNOME Theme Tweak](https://addons.mozilla.org/firefox/addon/gnome-theme-tweak/), Firefox can even look close to native on GNOME 3.12+:
-
-![Screenshot with tweaks](screenshots/screenshot-tweaks.png)
+We recommend using https://github.com/rafaelmardojai/firefox-gnome-theme for the best GNOME-like appearance.
